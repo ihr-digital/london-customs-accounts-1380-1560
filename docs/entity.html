@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
     <style>
         /* ── Design tokens ── */
         :root {
@@ -31,8 +31,18 @@
             display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
         }
         .site-header h1 {
-            font-family: 'UnifrakturCook', cursive;
+            /* Maguntia has one weight only; an h1's default bold would be
+               synthesised and smear the blackletter. */
+            font-family: 'UnifrakturMaguntia', cursive;
+            font-weight: 400;
             font-size: 1.55rem; margin: 0; line-height: 1.2;
+        }
+        /* The dates in a roman of the same period: blackletter figures are the
+           one part of the title nobody can read at a glance, and the date range
+           is the thing the title is for. */
+        .site-header h1 .date-range {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 1.12em;
         }
         .site-header h1 a { color: inherit; text-decoration: none; }
         .site-header h1 a:hover { text-decoration: underline; }
@@ -173,7 +183,7 @@
 <body>
     <!-- ── Site header (common branding) ── -->
     <header class="site-header">
-        <h1><a href="index.html">London Customs Accounts, 1380–1560</a></h1>
+        <h1><a href="index.html">London Customs Accounts, <span class="date-range">1380–1560</span></a></h1>
         <span class="subtitle">edited by Stuart Jenks
             <span class="badge-dev">Under Development</span>
         </span>
@@ -213,11 +223,15 @@
         return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
     }
 
+    // Coerce rather than assume. These are called with whatever the data holds,
+    // and an annotation carrying a numeric label was enough to take the whole
+    // page down with "s.replace is not a function" -- on the page every w3id
+    // identifier resolves to for a human reader.
     function escAttr(s) {
-        return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        return String(s ?? '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
     function escHtml(s) {
-        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
 
     function parseHash() {
@@ -276,7 +290,7 @@
 
     function buildAnnotationTooltip(ann, footnotes) {
         if (ann.type === 'footnote') {
-            return (footnotes || {})[ann.label] || 'No label';
+            return String((footnotes || {})[ann.label] ?? 'No label');
         }
         if (ann.type === 'pence') {
             return (ann.label || '') + ' pence';
@@ -314,7 +328,9 @@
             }
             return out;
         }
-        return ann.label || ann.type;
+        // A label is not always a string: some carry a number, and returning it
+        // raw is what reached escAttr.
+        return String(ann.label ?? ann.type ?? '');
     }
 
     function applyAnnotations(text, annotations, footnotes) {

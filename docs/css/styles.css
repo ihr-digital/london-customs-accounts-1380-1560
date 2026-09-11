@@ -41,7 +41,21 @@
 }
 
 h1 {
-    font-family: 'UnifrakturCook', serif;
+    /* UnifrakturMaguntia in place of UnifrakturCook: Cook is a heavy 19th-century
+       Fraktur revival, and German. Maguntia is lighter and closer to the textura
+       an English press of the period would have used. It ships one weight, so the
+       h1 default bold has to be turned off or the browser synthesises it and the
+       letterforms smear. */
+    font-family: 'UnifrakturMaguntia', serif;
+    font-weight: 400;
+}
+
+/* The date range in a roman of the same century. Blackletter figures are the one
+   part of this title nobody can read at a glance, and the dates are what the
+   title is chiefly telling you. */
+h1 .date-range {
+    font-family: 'IM Fell English SC', serif;
+    font-size: 1.12em;
 }
 
 #textFilter, #personSearchWrap {
