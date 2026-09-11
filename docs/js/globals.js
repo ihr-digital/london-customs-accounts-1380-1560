@@ -18,7 +18,8 @@ var yearRange = globalRange; // Default range if not set
 var datelessLadings = [];
 
 // General constants
-const MAX_TABLE_ROWS = 5000;
+// MAX_TABLE_ROWS is gone: the table no longer builds rows it will not show, so
+// there is nothing to cap. The whole filtered set is browsable.
 const abbrIsoDow = [null, 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 var customsTypes = [

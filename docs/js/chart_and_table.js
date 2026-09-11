@@ -49,42 +49,11 @@ function renderCargosList(cargosListElement, cargos) {
 const $ladingTableTbody = $("#ladingTable tbody");
 const $resultCountSpan = $("#resultCount");
 
-function renderTable(data, undatedHeldBack = 0) {
-    // 1. Clear tbody once
-    $ladingTableTbody.empty();
+// One row of the table, lifted out of renderTable so the virtual window can
+// build the twenty rows it is about to show instead of the five thousand it
+// is not.
+function ladingRowHtml(v, shortToColour, isSingleLading) {
 
-    const shortToColour = customsTypes.reduce((acc, type) => {
-        acc[type.short] = type.colour;
-        return acc;
-    }, {});
-
-    const resultCount = data.length;
-    // The count, and — when the date filter is holding some back — what it is not
-    // showing and a way to see it. A table that silently reported 33,415 of 33,548 was
-    // the complaint in #41; a count that admits the gap is the answer to it.
-    let countHtml = `(${plurals(resultCount, 'lading', 'ladings')})`;
-    if (filterState.showUndated) {
-        countHtml += ` <span class="undated-note">&mdash; undated only. `
-            + `<a href="#" id="showDatedLink">Back to dated ladings</a></span>`;
-    } else if (undatedHeldBack > 0) {
-        countHtml += ` <span class="undated-note" data-bs-toggle="tooltip"`
-            + ` title="These ladings match your filters but carry no usable date`
-            + ` — either none at all or the 0000-01-01 placeholder — so no year range`
-            + ` can include them.">&mdash; ${undatedHeldBack.toLocaleString()} undated not shown`
-            + ` (<a href="#" id="showUndatedLink">show</a>)</span>`;
-    }
-    $resultCountSpan.html(countHtml);
-
-    let displayData = data;
-    const truncated = data.length > MAX_TABLE_ROWS;
-    if (truncated) {
-        displayData = data.slice(0, MAX_TABLE_ROWS);
-    }
-
-    let tableHtml = '';
-    const isSingleLading = displayData.length === 1;
-
-    displayData.forEach(v => {
         const date = v.date?.dates ? formatDate(v.date.dates[0]) : "";
         const dowNum = v.date?.dow?.[0];
         const dow = dowNum ? `${abbrIsoDow[dowNum]}, ` : "";
@@ -106,7 +75,7 @@ function renderTable(data, undatedHeldBack = 0) {
             "";
 
         // Build the HTML string for the row
-        tableHtml += `
+        let tableHtml = `
             <tr data-id="${v.lading_id}" data-date="${date}" data-type="${v.customs_type}">
                 <td class="text-end">
                     <div class="justify-content-between align-items-center w-100">
@@ -143,26 +112,195 @@ function renderTable(data, undatedHeldBack = 0) {
                 </td>
             </tr>
         `;
+    return tableHtml;
+}
+
+// ---------------------------------------------------------------------------
+// Virtual table.
+//
+// Rows are not all in the document: only those near the viewport, with a spacer
+// row above and below standing in for the rest. Five thousand ladings were
+// 90,517 DOM nodes; a window is a few hundred.
+//
+// Heights vary -- a lading's text wraps to as many lines as it needs, and an
+// expanded row carries its cargos -- so this cannot assume a fixed row height
+// the way the concepts list does. Heights are estimated, then measured as rows
+// are drawn, and the spacers are corrected from the measurements.
+// ---------------------------------------------------------------------------
+let VT = null;
+let _vtRaf = 0;
+
+function startVirtualTable(items, shortToColour) {
+    const box = document.getElementById('tableScrollContainer');
+    const keepExpanded = (VT && VT.expanded) || new Set();
+    VT = {
+        items,
+        shortToColour,
+        single: items.length === 1,
+        heights: new Float64Array(items.length).fill(48),  // replaced on first measure
+        est: 48,
+        // Which rows are open, by lading_id rather than by DOM node: a row that
+        // scrolls out of the window loses its element, and must come back open.
+        expanded: keepExpanded,
+        offsets: null,
+        dirty: true,
+        start: 0,
+        end: 0,
+    };
+    if (box && !box._vtBound) {
+        box.addEventListener('scroll', () => {
+            if (_vtRaf) return;
+            _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
+        }, {passive: true});
+        // Scroll anchoring fights a resizing spacer: without this one wheel nudge
+        // flings the list to the far end. Learned from the concepts list.
+        box.style.overflowAnchor = 'none';
+        box._vtBound = true;
+    }
+    if (box) box.scrollTop = 0;
+    drawTableWindow();
+}
+
+function vtOffsets() {
+    if (!VT.offsets || VT.dirty) {
+        const n = VT.items.length;
+        const off = new Float64Array(n + 1);
+        for (let i = 0; i < n; i++) off[i + 1] = off[i] + VT.heights[i];
+        VT.offsets = off;
+        VT.dirty = false;
+    }
+    return VT.offsets;
+}
+
+function vtSpacer(px) {
+    return '<tr class="vt-spacer" aria-hidden="true"><td colspan="3" style="padding:0;border:0;height:'
+        + Math.max(0, Math.round(px)) + 'px"></td></tr>';
+}
+
+function drawTableWindow() {
+    if (!VT || !$ladingTableTbody) return;
+    const box = document.getElementById('tableScrollContainer');
+    const tbody = $ladingTableTbody[0];
+    if (!tbody) return;
+    const n = VT.items.length;
+
+    if (!n) {
+        tbody.innerHTML = '<tr><td colspan="3" class="text-center">'
+            + '<i class="fas fa-info-circle text-danger"></i>&nbsp;&nbsp;'
+            + 'No ladings match the current filters.</td></tr>';
+        return;
+    }
+
+    const off = vtOffsets();
+    const scrollTop = box ? box.scrollTop : 0;
+    const viewH = (box && box.clientHeight) || 600;
+    const OVER = 6;
+
+    // First row whose bottom edge is below the top of the viewport.
+    let lo = 0, hi = n;
+    while (lo < hi) {
+        const mid = (lo + hi) >> 1;
+        if (off[mid + 1] <= scrollTop) lo = mid + 1; else hi = mid;
+    }
+    const start = Math.max(0, lo - OVER);
+    let end = lo;
+    const limit = scrollTop + viewH;
+    while (end < n && off[end] < limit) end++;
+    end = Math.min(n, end + OVER);
+
+    let html = vtSpacer(off[start]);
+    for (let i = start; i < end; i++) {
+        html += ladingRowHtml(VT.items[i], VT.shortToColour, VT.single);
+    }
+    html += vtSpacer(off[n] - off[end]);
+    tbody.innerHTML = html;
+    VT.start = start;
+    VT.end = end;
+
+    measureWindow();
+    restoreExpanded();
+}
+
+// Rows are the size the browser made them, not the size we guessed. Correct the
+// record, and the spacers with it, or the scrollbar lies by more and more the
+// further down the list you go.
+function measureWindow() {
+    const tbody = $ladingTableTbody[0];
+    const rows = tbody.querySelectorAll('tr[data-id]');
+    let changed = false;
+    rows.forEach((tr, k) => {
+        const i = VT.start + k;
+        const h = tr.offsetHeight;
+        if (h && Math.abs(h - VT.heights[i]) > 0.5) { VT.heights[i] = h; changed = true; }
     });
+    if (!changed) return;
+    // The first honest measurement is a better estimate for everything unmeasured
+    // than the guess it replaces.
+    if (VT.est === 48 && rows.length) {
+        VT.est = VT.heights[VT.start];
+        for (let i = 0; i < VT.heights.length; i++) {
+            if (i < VT.start || i >= VT.end) VT.heights[i] = VT.est;
+        }
+    }
+    VT.dirty = true;
+    const off = vtOffsets();
+    const spacers = tbody.querySelectorAll('tr.vt-spacer td');
+    if (spacers.length === 2) {
+        spacers[0].style.height = Math.max(0, Math.round(off[VT.start])) + 'px';
+        spacers[1].style.height = Math.max(0, Math.round(off[VT.items.length] - off[VT.end])) + 'px';
+    }
+}
 
-    tableHtml += truncated ? `
-            <tr>
-                <td colspan="3" class="truncation-message-cell">
-                    <i class="fas fa-exclamation-triangle text-danger"></i>&nbsp;&nbsp;<em>Displaying only the first ${MAX_TABLE_ROWS.toLocaleString()} of ${resultCount.toLocaleString()} ladings. Use filters to narrow down results.</em>
-                </td>
-            </tr>
-        ` : '';
+// A row that was open when it scrolled away comes back open.
+async function restoreExpanded() {
+    if (!VT.expanded.size) return;
+    const tbody = $ladingTableTbody[0];
+    for (const tr of tbody.querySelectorAll('tr[data-id]')) {
+        const id = tr.getAttribute('data-id');
+        if (!VT.expanded.has(id)) continue;
+        const $list = $(tr).find('ul.cargos-list');
+        if (!$list.length || $list.is(':visible')) continue;
+        const cargos = await db.cargos.where('lading_id').equals(id).toArray();
+        $list.data('footnotes', $(tr).find('.toggleCargosBtn').data('footnotes'));
+        renderCargosList($list, cargos);
+        $list.show();
+        $(tr).find('.toggleCargosBtn').removeClass('btn-success').addClass('btn-danger');
+    }
+    measureWindow();
+}
 
-    tableHtml += data.length === 0 ? `
-            <tr>
-                <td colspan="3" class="text-center">
-                    <i class="fas fa-info-circle text-danger"></i>&nbsp;&nbsp;No ladings match the current filters.
-                </td>
-            </tr>
-        ` : '';
+function renderTable(data, undatedHeldBack = 0) {
+    // 1. Clear tbody once
+    $ladingTableTbody.empty();
 
-    // Append all rows at once
-    $ladingTableTbody.html(tableHtml);
+    const shortToColour = customsTypes.reduce((acc, type) => {
+        acc[type.short] = type.colour;
+        return acc;
+    }, {});
+
+    const resultCount = data.length;
+    // The count, and — when the date filter is holding some back — what it is not
+    // showing and a way to see it. A table that silently reported 33,415 of 33,548 was
+    // the complaint in #41; a count that admits the gap is the answer to it.
+    let countHtml = `(${plurals(resultCount, 'lading', 'ladings')})`;
+    if (filterState.showUndated) {
+        countHtml += ` <span class="undated-note">&mdash; undated only. `
+            + `<a href="#" id="showDatedLink">Back to dated ladings</a></span>`;
+    } else if (undatedHeldBack > 0) {
+        countHtml += ` <span class="undated-note" data-bs-toggle="tooltip"`
+            + ` title="These ladings match your filters but carry no usable date`
+            + ` — either none at all or the 0000-01-01 placeholder — so no year range`
+            + ` can include them.">&mdash; ${undatedHeldBack.toLocaleString()} undated not shown`
+            + ` (<a href="#" id="showUndatedLink">show</a>)</span>`;
+    }
+    $resultCountSpan.html(countHtml);
+
+    const displayData = data;
+
+    // Hand the rows to the virtual window rather than building them all. The
+    // cap existed because five thousand rows was already ninety thousand DOM
+    // nodes; with only the visible ones in the document there is nothing to cap.
+    startVirtualTable(displayData, shortToColour);
 
     $resultCountSpan.off('click', '#showUndatedLink, #showDatedLink')
         .on('click', '#showUndatedLink, #showDatedLink', function (e) {
@@ -208,17 +346,22 @@ function renderTable(data, undatedHeldBack = 0) {
         const footnotes = cargosButton.data("footnotes");
         cargosList.data("footnotes", footnotes); // Pass footnotes to cargo list
 
+        const ladingId = String(cargosButton.closest('tr').data('id'));
+
         if (cargosList.is(":visible")) {
             cargosList.hide();
             cargosButton.removeClass("btn-danger").addClass("btn-success");
+            if (VT) VT.expanded.delete(ladingId);
         } else {
-            // Need to retrieve lading_id from the parent row
-            const ladingId = cargosButton.closest('tr').data('id');
             const cargos = await db.cargos.where("lading_id").equals(ladingId).toArray();
             renderCargosList(cargosList, cargos);
             cargosList.show();
             cargosButton.removeClass("btn-success").addClass("btn-danger");
+            // Remembered by id: the row's element will not survive a scroll.
+            if (VT) VT.expanded.add(ladingId);
         }
+        // The row just changed height; the spacers have to follow.
+        if (VT) measureWindow();
     });
 
     // Trigger click if only one lading (delegated event)
