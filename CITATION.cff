@@ -1,0 +1,61 @@
+# Citation metadata for this repository.
+#
+# GitHub renders this as the "Cite this repository" panel. Zenodo does NOT read
+# it: Zenodo reads .zenodo.json, which is authoritative for the deposited record
+# and carries the contributor roles this format has no field for. Keep the two
+# in step — the author list here and the creators list there must match.
+#
+# After the first release, add the concept DOI (the "all versions" one, which
+# always resolves to the newest release) as `doi:` below, and update `version:`
+# and `date-released:` with each release.
+
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+type: dataset
+title: "London Customs Accounts, 1380-1560: machine-readable data and research tools"
+abstract: >-
+  Machine-readable data and browser-based research tools for the particular
+  customs accounts of the port of London, 1380-1560, produced by the project
+  "Unlocking Upcycled Medieval Data: North Sea Networks, People, and Commodities
+  in the London Customs Accounts 1380-1560". Comprises 33,548 ladings across 46
+  account-book files, a curated glossary of 3,333 commodity headwords aligned to
+  Getty AAT and Wikidata, and 246,008 person mentions grouped for identity
+  matching.
+authors:
+  - family-names: Colson
+    given-names: Justin
+    affiliation: "Institute of Historical Research, University of London"
+    orcid: "https://orcid.org/0000-0002-4352-2154"
+  - family-names: Scheltjens
+    given-names: Werner
+    affiliation: "Otto-Friedrich-Universität Bamberg"
+    orcid: "https://orcid.org/0000-0002-5209-9052"
+  - family-names: Benbow
+    given-names: Eliot
+    affiliation: "Institute of Historical Research, University of London"
+    orcid: "https://orcid.org/0000-0003-2795-4210"
+  - family-names: Gadd
+    given-names: Stephen
+    affiliation: "Institute of Historical Research, University of London"
+    orcid: "https://orcid.org/0000-0003-3060-0181"
+  - family-names: Grove-Gordillo
+    given-names: María
+    affiliation: "Otto-Friedrich-Universität Bamberg"
+    orcid: "https://orcid.org/0000-0001-7840-1611"
+repository-code: "https://github.com/ihr-digital/london-customs-accounts-1380-1560"
+url: "https://www.history.ac.uk/research/centre-history-people-place-community/unlocking-upcycled-medieval-data"
+license: CC-BY-4.0
+keywords:
+  - customs accounts
+  - medieval trade
+  - London
+  - North Sea
+  - Hanse
+  - economic history
+  - maritime history
+  - digital humanities
+  - linked open data
+  - record linkage
+  - corpus annotation
+  - Medieval Latin
+  - Middle English
