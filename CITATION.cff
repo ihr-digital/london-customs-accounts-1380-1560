@@ -5,13 +5,17 @@
 # and carries the contributor roles this format has no field for. Keep the two
 # in step — the author list here and the creators list there must match.
 #
-# After the first release, add the concept DOI (the "all versions" one, which
-# always resolves to the newest release) as `doi:` below, and update `version:`
-# and `date-released:` with each release.
+# At each release, set `version:` and `date-released:` to match the tag. After the
+# FIRST release, add the concept DOI (the "all versions" one, which always resolves
+# to the newest release) as `doi:` below — it does not exist until then.
+#
+#   doi: "10.5281/zenodo.XXXXXXX"
+#   date-released: "YYYY-MM-DD"
 
 cff-version: 1.2.0
 message: "If you use this data, please cite it as below."
 type: dataset
+version: 0.1.0
 title: "London Customs Accounts, 1380-1560: machine-readable data and research tools"
 abstract: >-
   Machine-readable data and browser-based research tools for the particular
