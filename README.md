@@ -88,6 +88,21 @@ The structured data derives from transcripts and editions prepared by earlier
 scholarship, and from reference works consulted under their own terms of use. Full
 source acknowledgements and rights statements accompany the data as it is released.
 
+## Citation
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22709785.svg)](https://doi.org/10.5281/zenodo.22709785)
+
+Every release is archived on Zenodo. The DOI above is the *concept* DOI: it always
+resolves to the most recent version, and it is the one to cite unless you need to
+pin a specific release.
+
+> Colson, J., Scheltjens, W., Benbow, E., Gadd, S., & Grove-Gordillo, M.
+> *London Customs Accounts, 1380–1560: machine-readable data and research tools*
+> [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22709785
+
+`CITATION.cff` carries the same metadata in machine-readable form; GitHub's
+**Cite this repository** button reads it.
+
 ## Data licensing
 
 Every data file must have its rights position settled before it is published here.
