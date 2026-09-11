@@ -2,7 +2,7 @@ London Customs Accounts — Documentation
 ========================================
 
 This is the documentation sidecar for the
-`London Customs Accounts <https://docuracy.github.io/London_Customs_Accounts/>`_
+`London Customs Accounts <https://ihr-digital.github.io/london-customs-accounts-1380-1560/>`_
 project: a digital humanities edition of medieval London customs accounts
 (1380–1560).
 

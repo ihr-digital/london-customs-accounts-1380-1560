@@ -7,7 +7,7 @@ structured JSON, then layers on name-matching and commodity-annotation
 pipelines. A GitHub Pages site provides browser-based editors and
 visualisations.
 
-- **Main site:** <https://docuracy.github.io/London_Customs_Accounts/>
+- **Main site:** <https://ihr-digital.github.io/london-customs-accounts-1380-1560/>
 - **Linked Data namespace:** <https://w3id.org/mlca/>
 - **Repository:** <https://github.com/docuracy/London_Customs_Accounts>
 

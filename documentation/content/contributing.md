@@ -5,7 +5,7 @@ The documentation lives in the
 directory of the main repository. Every push to `main` that touches anything
 under that directory triggers the GitHub Pages workflow, which rebuilds the
 site and republishes it at
-<https://docuracy.github.io/London_Customs_Accounts/documentation/> within
+<https://ihr-digital.github.io/london-customs-accounts-1380-1560/documentation/> within
 a couple of minutes.
 
 You don't need to install anything to contribute — every step described

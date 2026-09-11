@@ -5,7 +5,7 @@ auto-converted to Markdown and added to the site.
 
 See **Contributing → Uploading Word documents** in the site documentation
 for the full workflow:
-<https://docuracy.github.io/London_Customs_Accounts/documentation/content/contributing.html#uploading-word-documents>
+<https://ihr-digital.github.io/london-customs-accounts-1380-1560/documentation/content/contributing.html#uploading-word-documents>
 
 This `README.md` itself is excluded from the Sphinx build and just keeps
 the folder visible in git when it would otherwise be empty.

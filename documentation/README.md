@@ -1,7 +1,7 @@
 # London Customs Accounts — Documentation
 
 Sphinx source for the documentation sidecar served at
-<https://docuracy.github.io/London_Customs_Accounts/documentation/>.
+<https://ihr-digital.github.io/london-customs-accounts-1380-1560/documentation/>.
 
 The site is built and deployed automatically by
 `.github/workflows/deploy-pages.yml` on every push to `main` that touches
@@ -18,7 +18,7 @@ within a couple of minutes of each push.
 Word documents can be uploaded to
 [`_drafts/`](https://github.com/docuracy/London_Customs_Accounts/tree/main/documentation/_drafts);
 the workflow auto-converts them to Markdown. See the
-[Contributing](https://docuracy.github.io/London_Customs_Accounts/documentation/content/contributing.html)
+[Contributing](https://ihr-digital.github.io/london-customs-accounts-1380-1560/documentation/content/contributing.html)
 page for details.
 
 ## Editing locally
