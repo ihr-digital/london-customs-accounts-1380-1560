@@ -129,6 +129,55 @@ function collectNegated(ast, out = []) {
 // This allows subsequent calls to `applyFilters` to abort previous ones.
 let currentFilterAbortController = null;
 
+// How many slices to cut the year range into. Twenty gives a percentage that
+// moves often enough to read without multiplying the index lookups to a point
+// where they show up in the timings.
+const LADING_READ_SLICES = 20;
+
+// Cached because the count is an index scan of its own -- 443ms, worth paying
+// once for an honest denominator, not on every filter change.
+let _ladingRangeCounts = new Map();
+
+async function countLadingsByYear(minYear, maxYear, signal) {
+    const key = minYear + ':' + maxYear;
+    if (_ladingRangeCounts.has(key)) return _ladingRangeCounts.get(key);
+    const n = await db.ladings.where('customs_year').between(minYear, maxYear).count();
+    if (!signal || !signal.aborted) _ladingRangeCounts.set(key, n);
+    return n;
+}
+
+async function readLadingsByYear(minYear, maxYear, passes, signal) {
+    const total = await countLadingsByYear(minYear, maxYear, signal);
+    if (signal && signal.aborted) return [];
+    const span = Math.max(1, maxYear - minYear + 1);
+    const step = Math.max(1, Math.ceil(span / LADING_READ_SLICES));
+    const out = [];
+    let read = 0;
+    for (let y = minYear; y <= maxYear; y += step) {
+        const hi = Math.min(y + step - 1, maxYear);
+        const slice = await db.ladings.where('customs_year')
+            .between(y, hi, true, true).toArray({ signal });
+        if (signal && signal.aborted) return [];
+        read += slice.length;
+        for (const v of slice) if (passes(v)) out.push(v);
+        setLoadingProgress(total ? read / total : 1,
+            read.toLocaleString() + ' of ' + total.toLocaleString() + ' ladings read');
+        // Hand the frame back so the label actually paints; without this the
+        // percentage is computed and never seen.
+        await new Promise(r => setTimeout(r, 0));
+    }
+    setLoadingProgress(1, 'building the table\u2026');
+    return out;
+}
+
+// The spinner already says "Loading..."; give it something that changes.
+function setLoadingProgress(fraction, label) {
+    const el = document.querySelector('#loadingSpinner .spinner-label');
+    if (!el) return;
+    const pct = Math.round(Math.max(0, Math.min(1, fraction)) * 100);
+    el.textContent = label ? pct + '% \u2014 ' + label : pct + '%';
+}
+
 async function applyFilters() {
     // 1. Abort any previous ongoing operation
     if (currentFilterAbortController) {
@@ -193,11 +242,18 @@ async function applyFilters() {
                     ((v.export === undefined || v.export === null) && showImports && showExports) // Include ladings with no export info
                 );
 
-            let baseFilteredLadings = await db.ladings
-                .where('customs_year')
-                .between(minYear, maxYear)
-                .and(passesTypeAndDirection)
-                .toArray({ signal });
+            // Read the range in slices rather than one toArray, so the wait can
+            // be reported. This is where the time goes: 33,415 ladings averaging
+            // 10kB each is 330MB of objects to deserialise, six seconds on a warm
+            // database and half a minute on a cold one -- against 0.2s to build
+            // the table HTML from them and 0.3s to insert it. The silence after
+            // the download progress bar clears is THIS, not rendering.
+            //
+            // Slicing costs nothing: measured at 6,394ms in twenty slices against
+            // 6,550ms in one, which is noise. The yield between slices is what
+            // lets the label repaint.
+            let baseFilteredLadings = await readLadingsByYear(
+                minYear, maxYear, passesTypeAndDirection, signal);
 
             // THE UNDATED JOIN THE PIPELINE HERE AND LEAVE IT AT THE END. They cannot
             // come from the range query — a null customs_year is not indexed — but
