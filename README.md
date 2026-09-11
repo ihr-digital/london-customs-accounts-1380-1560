@@ -98,10 +98,17 @@ arrives with its rights position stated.
 
 This repository is under active development ahead of first release.
 
-- **Site code** (JavaScript, HTML, CSS under `docs/`) — MIT.
-- **Project-authored data** — CC BY 4.0.
+- **Site code** (JavaScript, HTML, CSS under `docs/`) — MIT: [`LICENSE-MIT`](LICENSE-MIT).
+- **Project-authored data** — CC BY 4.0: [`LICENSE`](LICENSE). Attribute as
+  *Unlocking Upcycled Medieval Data (IHR / Universität Bamberg)*, citing the DOI of
+  the release used.
 - **Everything else** — not yet cleared. Until a file is published here with its
   rights position stated, no permission to reuse it is granted or implied.
+
+`LICENSE` at the root is the licence for the project's own data, which is what
+GitHub and Zenodo will report for the repository as a whole. It does not override
+either of the other two positions above: the code is MIT, and material deriving from
+earlier editions and reference works carries no permission until one is stated.
 
 ## Contact
 
