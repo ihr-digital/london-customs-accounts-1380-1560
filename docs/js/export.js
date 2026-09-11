@@ -52,7 +52,7 @@ function initializeExportButtons() {
     $exportButtonsContainer.html(buttonsHtml);
 
     // --- Event Delegation for all button actions ---
-    $exportButtonsContainer.on('click contextmenu', '.export', function (event) {
+    $exportButtonsContainer.on('click contextmenu', '.export', async function (event) {
         // Prevent default browser context menu for right-clicks
         if (event.type === 'contextmenu') {
             event.preventDefault();
@@ -88,10 +88,29 @@ function initializeExportButtons() {
 
                 const includeAnnotations = (action === 'export-json' && event.type === 'contextmenu');
 
+                // Cargos live in their own store and are no longer kept inside the
+                // lading -- that duplicate copy was 89% of every record and the whole
+                // reason a filter change took seconds. Fetch them for the filtered set
+                // in one query, the same way the PDF export below does, so the exported
+                // file still carries what it always carried.
+                const cargoRows = await db.cargos
+                    .where('lading_id').anyOf(jsonData.map(v => v.lading_id)).toArray();
+                const cargosByLading = new Map();
+                cargoRows.forEach(c => {
+                    if (!cargosByLading.has(c.lading_id)) cargosByLading.set(c.lading_id, []);
+                    // Back to the shape the source data had: {text, annotations}.
+                    cargosByLading.get(c.lading_id).push({
+                        text: c.cargo, annotations: c.annotations || []
+                    });
+                });
+                const withCargos = jsonData.map(v => ({
+                    ...v, cargos: cargosByLading.get(v.lading_id) || []
+                }));
+
                 // Filter to remove annotations/footnotes/internal fields if not requested
                 const exportData = includeAnnotations
-                    ? jsonData // If annotations are included, export raw data
-                    : jsonData.map(entry => {
+                    ? withCargos // If annotations are included, export raw data
+                    : withCargos.map(entry => {
                         // Destructure to remove specific fields and keep the rest
                         const {annotations, footnotes, date_list, primary_date, ...rest} = entry;
 

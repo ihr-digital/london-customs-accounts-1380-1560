@@ -504,6 +504,25 @@ db.version(89).stores({
     }
 });
 
+db.version(90).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // Stored ladings carry a duplicate copy of their cargos, which is 89% of
+    // each record and the reason a filter change takes seconds. The population
+    // loop no longer writes it, so the ladings have to be rebuilt: clearing
+    // them is what makes that happen. The cargos store already holds every one
+    // of them and is left alone.
+    console.warn("DB v90 — clearing ladings to rebuild them without the duplicated cargos");
+    try {
+        await trans.table("ladings").clear();
+    } catch (error) {
+        console.error("Error clearing data on v90 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -634,6 +653,20 @@ async function preloadAllLadings() {
                             };
                         }));
                     }
+
+                    // The cargos have just been written to their own store, keyed by
+                    // lading_id; keeping a second copy inside the lading made every
+                    // record 6,868 bytes where 740 would do -- 89% of it cargo text
+                    // that the filter never reads. That copy was the whole cost of the
+                    // wait after the download bar clears: 229MB deserialised out of
+                    // IndexedDB on each filter change, six seconds warm and half a
+                    // minute cold, against 0.2s to build the table from it.
+                    //
+                    // Everything that wants a lading's cargos already asks the store:
+                    // the cargos button, the text search, the commodity filter, the
+                    // annotations panel, the PDF export. `groups` is computed just
+                    // above precisely so the commodity filter need not fetch them.
+                    delete v.cargos;
                 });
 
                 await db.ladings.bulkAdd(ladings, {allKeys: true, chunked: true, chunkSize: 100});
