@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Commodity Glossary</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/glossary-public.css" rel="stylesheet">
+    <link href="css/glossary-visuals.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-main">
+                    <h1>
+                        <img src="favicon.ico" alt="" class="h1-favicon" width="32" height="32">
+                        Historical Commodity Glossary
+                    </h1>
+                    <p class="subtitle">Medieval and Early Modern Trade Terminology from London Customs Accounts</p>
+                    <p class="attribution">Based on Stuart Jenks's transcriptions of the Books of Rates and London Customs Accounts</p>
+                </div>
+                <div class="header-actions">
+                    <button onclick="saveGlossaryToFile()" class="save-btn" title="Save glossary data to file">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <div class="vis-tabs">
+            <button class="vis-tab active" onclick="switchTab('glossary', event)">Glossary</button>
+            <button class="vis-tab" onclick="switchTab('visualisations', event)">Groupings</button>
+            <button class="vis-tab" onclick="switchTab('commodities', event)">Commodities</button>
+        </div>
+
+        <!-- Glossary Tab -->
+        <div id="tab-glossary" class="vis-tab-content active">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-row">
+                        <div class="search-box">
+                            <input type="text"
+                                   id="search-input"
+                                   placeholder="Search terms, forms, or descriptions..."
+                                   aria-label="Search glossary">
+                            <button id="search-clear" onclick="clearSearch()" title="Clear search" aria-label="Clear search">×</button>
+                        </div>
+                        <div class="search-options">
+                            <label class="exact-search-label">
+                                <input type="checkbox" id="exact-search" onchange="handleSearch()">
+                                <span>Exact headword match only</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Filter by grouping:</label>
+                        <select id="category-filter" multiple size="8" onchange="applyFilters()" aria-label="Filter by grouping">
+                        </select>
+                        <div class="filter-help-text">
+                            <span>Hold Ctrl/Cmd to select multiple groupings</span>
+                            <button type="button" id="clear-grouping-filter" onclick="clearGroupingFilter()" class="clear-filter-btn" hidden>Clear selection</button>
+                        </div>
+                    </div>
+                    <div class="filter-stats">
+                        <span id="results-count">Loading...</span>
+                        <button id="download-csv" onclick="downloadFilteredCSV()" class="download-csv-btn" title="Download filtered results as CSV">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download CSV
+                        </button>
+                    </div>
+                </div>
+
+                <!-- A–Z navigation will be injected here when multiple entries are visible -->
+                <div id="az-bar" class="az-bar" style="display:none; padding: 8px 0;">
+                </div>
+            </div>
+
+            <div id="glossary-content" class="glossary-content">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading glossary...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Tab -->
+        <div id="tab-visualisations" class="vis-tab-content">
+            <div class="visualisations-container">
+                <div class="vis-info-box">
+                    <p>Explore visual patterns in the glossary data, including grouping distributions, temporal evolution, and relationships between commodity groupings.</p>
+                </div>
+
+                <!-- Summary Statistics -->
+                <div class="vis-stats">
+                    <div class="vis-stat-card blue">
+                        <div class="vis-stat-value" id="stat-total-terms">-</div>
+                        <div class="vis-stat-label">Total Terms</div>
+                    </div>
+                    <div class="vis-stat-card green">
+                        <div class="vis-stat-value" id="stat-total-categories">-</div>
+                        <div class="vis-stat-label">Groupings</div>
+                    </div>
+                    <div class="vis-stat-card orange">
+                        <div class="vis-stat-value" id="stat-year-range">-</div>
+                        <div class="vis-stat-label">Year Range</div>
+                    </div>
+                    <div class="vis-stat-card purple">
+                        <div class="vis-stat-value" id="stat-total-sources">-</div>
+                        <div class="vis-stat-label">Sources</div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="vis-controls">
+                    <h3>Filter Groupings</h3>
+                    <div class="vis-filter-row">
+                        <div class="vis-filter-group">
+                            <label for="vis-category-filter">Select groupings:</label>
+                            <select id="vis-category-filter" multiple size="6" onchange="updateVisualisationsFromUI()">
+                            </select>
+                            <div class="filter-help-text">Hold Ctrl/Cmd to select multiple</div>
+                        </div>
+                        <div class="vis-filter-group">
+                            <label for="vis-year-start">Start Year:</label>
+                            <select id="vis-year-start"></select>
+                        </div>
+                        <div class="vis-filter-group">
+                            <label for="vis-year-end">End Year:</label>
+                            <select id="vis-year-end"></select>
+                        </div>
+                        <div class="vis-filter-group">
+                            <label title="Apply moving average smoothing to reduce spikes caused by gaps in historical documentation">
+                                <input type="checkbox" id="vis-smooth-data" onchange="updateVisualisationsFromUI()">
+                                <span>Smooth temporal gaps</span>
+                            </label>
+                        </div>
+                        <button id="vis-update">Update Charts</button>
+                    </div>
+                </div>
+
+                <h3 class="vis-section-title">Grouping Overview</h3>
+
+                <!-- Category Distribution Charts -->
+                <div class="vis-grid">
+                    <div class="vis-card">
+                        <div class="chart-container">
+                            <canvas id="vis-category-dist"></canvas>
+                        </div>
+                    </div>
+                    <div class="vis-card">
+                        <div class="chart-container">
+                            <canvas id="vis-bar-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="vis-section-title">Temporal Analysis</h3>
+
+                <!-- Timeline Charts -->
+                <div class="vis-card-full">
+                    <div class="chart-container-tall">
+                        <canvas id="vis-timeline"></canvas>
+                    </div>
+                </div>
+
+                <div class="vis-card-full">
+                    <div class="chart-container-tall">
+                        <canvas id="vis-stacked"></canvas>
+                    </div>
+                </div>
+
+                <h3 class="vis-section-title">Grouping Relationships</h3>
+
+                <!-- Network Visualization -->
+                <div class="vis-card-full">
+                    <h4>Grouping Co-occurrence Network</h4>
+                    <p style="text-align: center; color: #718096; font-size: 0.9rem; margin-bottom: 15px;">
+                        Groupings are connected when they appear together on the same terms.
+                        Node size represents term count. Click and drag to explore.
+                    </p>
+                    <div id="vis-network"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commodities Tab -->
+        <div id="tab-commodities" class="vis-tab-content">
+            <div class="visualisations-container">
+                <div class="vis-info-box">
+                    <p>Explore patterns in individual commodity terms, including frequency distributions, temporal attestations, and form variations.</p>
+                </div>
+
+                <!-- Commodity Controls -->
+                <div class="vis-controls">
+                    <h3>Commodity Analysis Controls</h3>
+                    <div class="vis-filter-row">
+                        <div class="vis-filter-group">
+                            <label for="commodity-year-start">Start Year:</label>
+                            <select id="commodity-year-start"></select>
+                        </div>
+                        <div class="vis-filter-group">
+                            <label for="commodity-year-end">End Year:</label>
+                            <select id="commodity-year-end"></select>
+                        </div>
+                        <button id="commodity-update">Update Charts</button>
+                    </div>
+                </div>
+
+                <h3 class="vis-section-title">Attestation Analysis</h3>
+
+                <!-- Commodity Charts -->
+                <div class="vis-card-full">
+                    <div class="chart-container-tall">
+                        <canvas id="commodity-freq-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="vis-grid">
+                    <div class="vis-card">
+                        <div class="chart-container">
+                            <canvas id="commodity-forms-dist"></canvas>
+                        </div>
+                    </div>
+                    <div class="vis-card">
+                        <div class="chart-container">
+                            <canvas id="commodity-category-dist"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="vis-section-title">Temporal Patterns</h3>
+
+                <div class="vis-card-full">
+                    <div class="chart-container-tall">
+                        <canvas id="commodity-timeline"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Libraries for visualisations -->
+    <script src="js/libs/chart.umd.min.js"></script>
+    <script src="js/libs/cytoscape.min.js"></script>
+
+    <!-- Gzip decompression library -->
+
+    <script src="js/qualifiers.js"></script>
+    <script src="js/glossary-public.js"></script>
+    <script src="js/glossary-visuals.js"></script>
+
+    <script>
+        // Tab switching function
+        function switchTab(tabName, event) {
+
+            // Hide all tab contents
+            document.querySelectorAll('.vis-tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Deactivate all tabs
+            document.querySelectorAll('.vis-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById('tab-' + tabName).classList.add('active');
+
+            // Activate selected tab
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+
+            // Initialise visualisations when tab is first opened
+            if (tabName === 'visualisations' && window.state && window.state.glossary && !window.visualisationsInitialised) {
+                initialiseVisualisationsTab();
+            }
+
+            // Initialise commodities when tab is first opened
+            if (tabName === 'commodities' && window.state && window.state.glossary && !window.commoditiesInitialised) {
+                initialiseCommoditiesTab();
+            }
+        }
+
+        // Initialise visualisations tab
+        function initialiseVisualisationsTab() {
+            if (!window.state || !window.state.glossary) {
+                return;
+            }
+
+            const glossary = window.state.glossary;
+
+            // Update stats
+            const totalTerms = Object.keys(glossary.entries || {}).length;
+            const categoriesSet = new Set();
+            Object.values(glossary.entries || {}).forEach(entry => {
+                if (entry.groups) entry.groups.forEach(cat => categoriesSet.add(cat));
+            });
+
+            document.getElementById('stat-total-terms').textContent = totalTerms.toLocaleString();
+            document.getElementById('stat-total-categories').textContent = categoriesSet.size;
+            document.getElementById('stat-total-sources').textContent =
+                (glossary.metadata?.source_registry?.sources?.length || 0).toLocaleString();
+
+            // Calculate year range
+            const sources = glossary.metadata?.source_registry?.sources || [];
+            let minYear = Infinity, maxYear = -Infinity;
+            sources.forEach(src => {
+                const fromMatch = String(src.date_from || '').match(/^(\d{4})/);
+                const toMatch = String(src.date_to || '').match(/^(\d{4})/);
+                if (fromMatch) minYear = Math.min(minYear, parseInt(fromMatch[1]));
+                if (toMatch) maxYear = Math.max(maxYear, parseInt(toMatch[1]));
+            });
+
+            if (minYear !== Infinity && maxYear !== -Infinity) {
+                document.getElementById('stat-year-range').textContent = `${minYear}–${maxYear}`;
+            } else {
+                document.getElementById('stat-year-range').textContent = 'N/A';
+            }
+
+            // Initialise visualisations
+            if (typeof window.initGlossaryVisualisations === 'function') {
+                window.initGlossaryVisualisations(glossary);
+                window.visualisationsInitialised = true;
+            }
+        }
+
+        // Initialise commodities tab
+        function initialiseCommoditiesTab() {
+            if (!window.state || !window.state.glossary) {
+                return;
+            }
+
+            const glossary = window.state.glossary;
+
+            // Initialise commodity visualisations
+            if (typeof window.initCommodityVisualisations === 'function') {
+                window.initCommodityVisualisations(glossary);
+                window.commoditiesInitialised = true;
+            }
+        }
+
+        // Global function for updating visualisations from UI
+        function updateVisualisationsFromUI() {
+            if (typeof window.refreshGlossaryVisualisations === 'function') {
+                window.refreshGlossaryVisualisations();
+            }
+        }
+    </script>
+</body>
+</html>

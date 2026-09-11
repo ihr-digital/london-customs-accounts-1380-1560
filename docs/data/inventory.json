@@ -1,0 +1,1764 @@
+[
+    {
+        "reference": "I-4",
+        "from": 1380,
+        "to": 1385,
+        "title": "Richard II (1380/81) \u2013 8 Richard II (1384/85)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_i_4.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_4R2_71_4.doc",
+            "2_blue_tp_8R2_71_8.doc",
+            "3_blue_wfwl_8R2_71_9.doc",
+            "Index of people and places I 4.doc",
+            "Index of subjects I 4.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_4R2_71_4.html",
+                "3_blue_wfwl_8R2_71_9.html"
+            ],
+            "tunnage": [
+                "2_blue_tp_8R2_71_8.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places I 4.html"
+            ],
+            "subjects": [
+                "Index of subjects I 4.html"
+            ]
+        }
+    },
+    {
+        "reference": "I-5",
+        "from": 1390,
+        "to": 1390,
+        "title": "13/14 Richard II (1390)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_i_5.pdf",
+        "folder_exists": true,
+        "doc": [
+            "Index of people and places I 5.doc",
+            "Index of subjects I 5.doc",
+            "_tp_71_13.doc"
+        ],
+        "indices": {
+            "people_places": [
+                "Index of people and places I 5.html"
+            ],
+            "subjects": [
+                "Index of subjects I 5.html"
+            ]
+        },
+        "customs": {
+            "tunnage": [
+                "_tp_71_13.html"
+            ]
+        }
+    },
+    {
+        "reference": "I-6",
+        "from": 1390,
+        "to": 1398,
+        "title": "14 Richard II (1390/91) \u2013 21 Richard II (1397/98)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_i_6.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_14R2_71_16.doc",
+            "2_blue_pc_16R2_71_17.doc",
+            "3_blue_wfwl_20R2_71_20.doc",
+            "4_blue_wfwl_21R2_71_23.doc",
+            "5_blue_wfwl_21R2_71_25.doc",
+            "Index of people and places I 6.doc",
+            "Index of subjects I 6.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_14R2_71_16.html",
+                "2_blue_pc_16R2_71_17.html"
+            ],
+            "wool": [
+                "3_blue_wfwl_20R2_71_20.html",
+                "4_blue_wfwl_21R2_71_23.html",
+                "5_blue_wfwl_21R2_71_25.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places I 6.html"
+            ],
+            "subjects": [
+                "Index of subjects I 6.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-1",
+        "from": 1400,
+        "to": 1421,
+        "title": "2 Henry IV (1400/01) \u2013 8 Henry V (1420/21)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_1.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_2H4_72_2.doc",
+            "2_blue_pc_2H4_72_4.doc",
+            "3_blue_tp_2H4_161_28.doc",
+            "4_blue_wfwl_4H4_72_40.doc",
+            "5_blue_wfwl_5_6H4_72_8.doc",
+            "6_blue_wfwl_6_7H4_71_6.doc",
+            "7_blue_wfwl_7H4_177_23.doc",
+            "8_blue_wfwl_11H4_72_27.doc",
+            "9_blue_pc_11H4_76_32.doc",
+            "Index_of_people_and_places_II_1.doc",
+            "Index_of_subjects_II_1.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_2H4_72_2.html",
+                "4_blue_wfwl_4H4_72_40.html",
+                "5_blue_wfwl_5_6H4_72_8.html",
+                "6_blue_wfwl_6_7H4_71_6.html",
+                "7_blue_wfwl_7H4_177_23.html",
+                "8_blue_wfwl_11H4_72_27.html"
+            ],
+            "petty": [
+                "2_blue_pc_2H4_72_4.html",
+                "9_blue_pc_11H4_76_32.html"
+            ],
+            "tunnage": [
+                "3_blue_tp_2H4_161_28.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_II_1.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_1.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-2",
+        "from": 1412,
+        "to": 1427,
+        "title": "13 Henry IV (1412) \u2013 5 Henry VI (1426/27)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_2.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_13H4_72_64.doc",
+            "2_blue_8H5_pc_72_17.doc",
+            "3_blue_wfwl_1H6_76_2.doc",
+            "4_blue_1H6_pc_161_1.doc",
+            "5_blue_tp_3H6_I_76_11.doc",
+            "6_blue_tp_3H6_II_76_13.doc",
+            "7_blue_wfwl_4H6_76_14.doc",
+            "8_blue_pc_5H6_76_17.doc",
+            "9_blue_pc_5H6_II_161_4.doc",
+            "Index_of_People_and_Places_II_2.doc",
+            "Index_of_subjects_II_2.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_13H4_72_64.html",
+                "3_blue_wfwl_1H6_76_2.html",
+                "7_blue_wfwl_4H6_76_14.html"
+            ],
+            "petty": [
+                "2_blue_8H5_pc_72_17.html",
+                "4_blue_1H6_pc_161_1.html",
+                "8_blue_pc_5H6_76_17.html",
+                "9_blue_pc_5H6_II_161_4.html"
+            ],
+            "tunnage": [
+                "5_blue_tp_3H6_I_76_11.html",
+                "6_blue_tp_3H6_II_76_13.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_People_and_Places_II_2.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_2.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-3",
+        "from": 1428,
+        "to": 1430,
+        "title": "7 Henry VI (1428/29) \u2013 8 Henry VI (1429/30)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_3.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_7H6_74_11.doc",
+            "2_blue_76_25_wfwl_7H6.doc",
+            "3_blue_pc_8H6_161_11.doc",
+            "Index_of_people_and_places_II_3.doc",
+            "Index_of_subjects_II_3.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_7H6_74_11.html"
+            ],
+            "wool": [
+                "2_blue_76_25_wfwl_7H6.html"
+            ],
+            "petty": [
+                "3_blue_pc_8H6_161_11.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_II_3.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_3.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-4",
+        "from": 1431,
+        "to": 1433,
+        "title": "10 Henry VI (1431/32) \u2013 11 Henry VI (1432/33)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_4.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_10H6_77_1.doc",
+            "2_blue_pc_10H6_76_31.doc",
+            "3_blue_tp_11H6_73_6_5_old_2005.doc",
+            "4_blue_pc_11H6_203_1.doc",
+            "Index of ships by name.doc",
+            "Index_of_people_and_places_II_4.doc",
+            "Index_of_subjects_II_4.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_10H6_77_1.html",
+                "3_blue_tp_11H6_73_6_5_old_2005.html"
+            ],
+            "petty": [
+                "2_blue_pc_10H6_76_31.html",
+                "4_blue_pc_11H6_203_1.html"
+            ]
+        },
+        "indices": {
+            "ship_names": [
+                "Index of ships by name.html"
+            ],
+            "people_places": [
+                "Index_of_people_and_places_II_4.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_4.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-5",
+        "from": 1434,
+        "to": 1438,
+        "title": "13 Henry VI (1434/35) \u2013 16 Henry VI (1437/38)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_5_002_.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_wfwl_13H6_76_33.doc",
+            "2_pc_14H6_76_34.doc",
+            "3_wfwl_16H6_73_9.doc",
+            "4_pc_16H6_77_3.doc",
+            "Index of ships by name and home port.doc",
+            "Index_of_People_and_Places_II_5.doc",
+            "Index_of_Subjects_II_5.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_wfwl_13H6_76_33.html",
+                "3_wfwl_16H6_73_9.html"
+            ],
+            "petty": [
+                "2_pc_14H6_76_34.html",
+                "4_pc_16H6_77_3.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by name and home port.html"
+            ],
+            "people_places": [
+                "Index_of_People_and_Places_II_5.html"
+            ],
+            "subjects": [
+                "Index_of_Subjects_II_5.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-6",
+        "from": 1438,
+        "to": 1439,
+        "title": "17 Henry VI (1438/39)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_6_002_.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_exp_17H6_73_12.doc",
+            "2_blue_pc_imp_17H6_73_10.doc",
+            "3_blue_wfwl_17H6_73_11.doc",
+            "Index of ships by home port II 6.doc",
+            "Index of ships by name II 6.doc",
+            "Index_of_People_and_Places_II_6.doc",
+            "Index_of_Subjects_II_6.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_exp_17H6_73_12.html",
+                "2_blue_pc_imp_17H6_73_10.html"
+            ],
+            "wool": [
+                "3_blue_wfwl_17H6_73_11.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by home port II 6.html"
+            ],
+            "ship_names": [
+                "Index of ships by name II 6.html"
+            ],
+            "people_places": [
+                "Index_of_People_and_Places_II_6.html"
+            ],
+            "subjects": [
+                "Index_of_Subjects_II_6.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-7",
+        "from": 1439,
+        "to": 1440,
+        "title": "18 Henry VI (1439/40)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_7.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_18H7_203_2.doc",
+            "2_blue_wfwl_18H6_76_39.doc",
+            "Index_of_people_and_places_II_7.doc",
+            "Index_of_ships_by_home_port_II_7.doc",
+            "Index_of_ships_by_name_II_7.doc",
+            "Index_of_subjects_II_7.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_18H7_203_2.html"
+            ],
+            "wool": [
+                "2_blue_wfwl_18H6_76_39.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_II_7.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_II_7.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name_II_7.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_7.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-8",
+        "from": 1442,
+        "to": 1445,
+        "title": "21 Henry VI (1442/43) - 23 Henry VI (1444/45)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/lca_ii_8.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_21H6_77_4.doc",
+            "2_blue_wfwl_23H6_73_19.doc",
+            "Index of ships by name_and_home_port.doc",
+            "Index_of_people_and_places_II_8.doc",
+            "Index_of_subjects_II_8.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_21H6_77_4.html"
+            ],
+            "wool": [
+                "2_blue_wfwl_23H6_73_19.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by name_and_home_port.html"
+            ],
+            "people_places": [
+                "Index_of_people_and_places_II_8.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_II_8.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-9",
+        "from": 1445,
+        "to": 1446,
+        "title": "24 Henry VI (1445/46)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/lca_ii_9_vorwort_und_inhalt.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_w_76_40.doc",
+            "2_pc_73_20_druck.doc",
+            "3_pc_73_20_pt_2_druck.doc",
+            "4_tp_203_3.doc",
+            "Index personarum et locorum.doc",
+            "index navium (ships by port).doc",
+            "index rerum.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_w_76_40.html"
+            ],
+            "petty": [
+                "2_pc_73_20_druck.html",
+                "3_pc_73_20_pt_2_druck.html"
+            ],
+            "tunnage": [
+                "4_tp_203_3.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index personarum et locorum.html"
+            ],
+            "ship_ports": [
+                "index navium (ships by port).html"
+            ],
+            "subjects": [
+                "index rerum.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-10",
+        "from": 1446,
+        "to": 1450,
+        "title": "25 Henry VI (1446/47) - 28 Henry VI (1449/50)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/lca_ii_10.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_25H6_76_41.doc",
+            "2_blue_tp_25H6_74_27.doc",
+            "3_blue_tp_27H6_73_23.doc",
+            "4_blue_wfwl_28H6_73_26.doc",
+            "5_blue_tp_28H6_73_25.doc",
+            "Index of Subjects II 10.doc",
+            "Index of people and places II 10.doc",
+            "Index of ships by home port II 10.doc",
+            "Index of ships by name II 10.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_25H6_76_41.html",
+                "4_blue_wfwl_28H6_73_26.html"
+            ],
+            "tunnage": [
+                "2_blue_tp_25H6_74_27.html",
+                "3_blue_tp_27H6_73_23.html",
+                "5_blue_tp_28H6_73_25.html"
+            ]
+        },
+        "indices": {
+            "subjects": [
+                "Index of Subjects II 10.html"
+            ],
+            "people_places": [
+                "Index of people and places II 10.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port II 10.html"
+            ],
+            "ship_names": [
+                "Index of ships by name II 10.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-11",
+        "from": 1450,
+        "to": 1456,
+        "title": "29 Henry VI (1450/1) - 34 Henry VI (1455/6)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_11.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_29H6_73_28.doc",
+            "2_blue_wfwl_31H6_75_47.doc",
+            "3_blue_wfwl_33H6_76_46.doc",
+            "4_blue_tp_33H6_76_47.doc",
+            "5_blue_wfwl_34H6_213_8.doc",
+            "Index of ships by home port II 11.doc",
+            "Index of ships by name II 11.doc",
+            "Index of subjects II 11.doc",
+            "Index_of_People_and_Places_II_11.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_29H6_73_28.html",
+                "2_blue_wfwl_31H6_75_47.html",
+                "3_blue_wfwl_33H6_76_46.html",
+                "5_blue_wfwl_34H6_213_8.html"
+            ],
+            "tunnage": [
+                "4_blue_tp_33H6_76_47.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by home port II 11.html"
+            ],
+            "ship_names": [
+                "Index of ships by name II 11.html"
+            ],
+            "subjects": [
+                "Index of subjects II 11.html"
+            ],
+            "people_places": [
+                "Index_of_People_and_Places_II_11.html"
+            ]
+        }
+    },
+    {
+        "reference": "II-12",
+        "from": 1456,
+        "to": 1461,
+        "title": "35 Henry VI (1456/57) - 39 Henry VI (1461)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_ii_12.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_imp_35H6_203_4.doc",
+            "2_blue_tp_exp_35H6_161_32.doc",
+            "3_blue_wfwl_36H6_74_37_w.doc",
+            "4_blue_pc_37H6_76_42.doc",
+            "5_blue_wfwl_39H6_73_32.doc",
+            "Index of people and places II 12.doc",
+            "Index of ships by home port II 12.doc",
+            "Index of ships by name II 12.doc",
+            "Index of subjects II 12.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_imp_35H6_203_4.html",
+                "2_blue_tp_exp_35H6_161_32.html"
+            ],
+            "wool": [
+                "3_blue_wfwl_36H6_74_37_w.html",
+                "5_blue_wfwl_39H6_73_32.html"
+            ],
+            "petty": [
+                "4_blue_pc_37H6_76_42.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places II 12.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port II 12.html"
+            ],
+            "ship_names": [
+                "Index of ships by name II 12.html"
+            ],
+            "subjects": [
+                "Index of subjects II 12.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-1",
+        "from": 1461,
+        "to": 1465,
+        "title": "1 Edward IV (1461/2) \u2013 4 Edward IV (1464/65)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_1.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_194_11_pc_kr.doc",
+            "2_blue_2E4_73_35_w.doc",
+            "3_blue_2E4_194_12_pc.doc",
+            "4_blue_2E4_194_14_tp.doc",
+            "5_blue_3E4_pc_194_15.doc",
+            "6_blue_3E4_tp_194_16.doc",
+            "7_76_36_w.doc",
+            "8_blue_4E4_76_37_w.doc",
+            "Index of people and places.doc",
+            "Index_of_ships_by_home_port.doc",
+            "Index_of_subjects_III_1.doc",
+            "index of ships by name.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_194_11_pc_kr.html",
+                "3_blue_2E4_194_12_pc.html",
+                "5_blue_3E4_pc_194_15.html"
+            ],
+            "wool": [
+                "2_blue_2E4_73_35_w.html",
+                "7_76_36_w.html",
+                "8_blue_4E4_76_37_w.html"
+            ],
+            "tunnage": [
+                "4_blue_2E4_194_14_tp.html",
+                "6_blue_3E4_tp_194_16.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_III_1.html"
+            ],
+            "ship_names": [
+                "index of ships by name.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-2",
+        "from": 1465,
+        "to": 1472,
+        "title": "5 Edward IV (1465/66) \u2013 11 Edward IV (1471/72)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_2.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_5E4_194_18.doc",
+            "2_blue_tp_6E4_194_17.doc",
+            "3_blue_wfwl_7E4_79_2_kr.doc",
+            "4_blue_wfwl_8E4_162_1_za.doc",
+            "5_blue_wfwl_9E4_203_5_za.doc",
+            "6_blue_pc_73_33.doc",
+            "7_blue_pc_11E4_194_19.doc",
+            "Index of ships by home port III 2.doc",
+            "Index of ships by name III 2.doc",
+            "index of people and places III 2.doc",
+            "index of subjects III 2.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_5E4_194_18.html",
+                "2_blue_tp_6E4_194_17.html"
+            ],
+            "wool": [
+                "3_blue_wfwl_7E4_79_2_kr.html",
+                "4_blue_wfwl_8E4_162_1_za.html",
+                "5_blue_wfwl_9E4_203_5_za.html"
+            ],
+            "petty": [
+                "6_blue_pc_73_33.html",
+                "7_blue_pc_11E4_194_19.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by home port III 2.html"
+            ],
+            "ship_names": [
+                "Index of ships by name III 2.html"
+            ],
+            "people_places": [
+                "index of people and places III 2.html"
+            ],
+            "subjects": [
+                "index of subjects III 2.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-3",
+        "from": 1472,
+        "to": 1477,
+        "title": "12 Edward IV (1472/73) \u2013 16 Edward IV (1476/77)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_3.pdf",
+        "folder_exists": true,
+        "doc": [
+            "01_blue_194_20_pc_12E4.doc",
+            "02_blue_162_8_pc_kr_13E4.doc",
+            "03_blue_194_21_w_kr_16E4.doc",
+            "Index_of_people_and_places_III_3.doc",
+            "Index_of_ships_by_name_and_home_port_III_3.doc",
+            "Index_of_subjects_III_3.doc"
+        ],
+        "customs": {
+            "petty": [
+                "01_blue_194_20_pc_12E4.html",
+                "02_blue_162_8_pc_kr_13E4.html"
+            ],
+            "wool": [
+                "03_blue_194_21_w_kr_16E4.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_III_3.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_name_and_home_port_III_3.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_III_3.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-4",
+        "from": 1477,
+        "to": 1479,
+        "title": "17 Edward IV (1477/78) \u2013 18 Edward IV (1478/79)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_4.pdf",
+        "folder_exists": true,
+        "doc": [
+            "01_blue_17E4_pc_194_22_neu.doc",
+            "02_blue_18E4_73_40_w_za.doc",
+            "Index of ships by home port_III_4.doc",
+            "Index of ships by name_III_4.doc",
+            "Index_of_People_and_Places_III_4.doc",
+            "Index_of_Subjects_III_4.doc"
+        ],
+        "customs": {
+            "petty": [
+                "01_blue_17E4_pc_194_22_neu.html"
+            ],
+            "wool": [
+                "02_blue_18E4_73_40_w_za.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by home port_III_4.html"
+            ],
+            "ship_names": [
+                "Index of ships by name_III_4.html"
+            ],
+            "people_places": [
+                "Index_of_People_and_Places_III_4.html"
+            ],
+            "subjects": [
+                "Index_of_Subjects_III_4.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-5",
+        "from": 1480,
+        "to": 1481,
+        "title": "20 Edward IV (1480/81)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_5.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_20E4_pc_194_25.doc",
+            "Index_of_people_and_places_III_5.doc",
+            "Index_of_ships_by_home_port_III_5.doc",
+            "Index_of_ships_by_name_III_5.doc",
+            "Index_of_subjects_III_5.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_20E4_pc_194_25.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_III_5.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_III_5.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name_III_5.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_III_5.html"
+            ]
+        }
+    },
+    {
+        "reference": "III-6",
+        "from": 1483,
+        "to": 1485,
+        "title": "23 Edward IV (1483) \u2013 3 Richard III (1485)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iii_6.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_23E4_73_41_pc.doc",
+            "2_blue_1E5_78_2_w_kr.doc",
+            "3_blue_3R2_78_3_pc.doc",
+            "Index_of_People_and_Places_III_6.doc",
+            "Index_of_ships_by_home_port_III_6.doc",
+            "Index_of_ships_by_name_III_6.doc",
+            "Index_of_subjects_III_6.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_23E4_73_41_pc.html",
+                "3_blue_3R2_78_3_pc.html"
+            ],
+            "wool": [
+                "2_blue_1E5_78_2_w_kr.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_People_and_Places_III_6.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_III_6.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name_III_6.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_III_6.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-1",
+        "from": 1487,
+        "to": 1490,
+        "title": "3 Henry VII (1487/88) \u2013 5 Henry VII (1489/90)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_1.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_w_.doc",
+            "2_blue_tp_3H7_78_7.doc",
+            "3_blue_wfwl_5H7_78_8.doc",
+            "Index of Subjects_IV_1.doc",
+            "Index of people and places_IV_1.doc",
+            "Index of ships by home port IV_1.doc",
+            "Index of ships by name IV 1.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_w_.html",
+                "3_blue_wfwl_5H7_78_8.html"
+            ],
+            "tunnage": [
+                "2_blue_tp_3H7_78_7.html"
+            ]
+        },
+        "indices": {
+            "subjects": [
+                "Index of Subjects_IV_1.html"
+            ],
+            "people_places": [
+                "Index of people and places_IV_1.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV_1.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 1.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-2",
+        "from": 1490,
+        "to": 1492,
+        "title": "6 Henry VII (1490/91) \u2013 7 Henry VII (1491/92)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_2_003_.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_78_9.doc",
+            "2_blue_78_10_wool.doc",
+            "3_blue_79_3_wool.doc",
+            "Index of subjects_IV_2.doc",
+            "Index_of_people_and_places_IV_2.doc",
+            "Index_of_ships_by_home_port_IV_2.doc",
+            "Index_of_ships_by_name.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_78_9.html"
+            ],
+            "wool": [
+                "2_blue_78_10_wool.html",
+                "3_blue_79_3_wool.html"
+            ]
+        },
+        "indices": {
+            "subjects": [
+                "Index of subjects_IV_2.html"
+            ],
+            "people_places": [
+                "Index_of_people_and_places_IV_2.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_IV_2.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-3",
+        "from": 1493,
+        "to": 1495,
+        "title": "9 Henry VII (1493/94) \u2013 10 Henry VII (1494/95)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_3.pdf",
+        "folder_exists": true,
+        "doc": [
+            "01_blue_9H7_wfwl_73_4.doc",
+            "02_blue_10H7_tp_79_5.doc",
+            "Index_of_people_and_places_iV_3.doc",
+            "Index_of_ships_by_home_port_IV_3.doc",
+            "Index_of_ships_by_name_IV_3.doc",
+            "Index_of_subjects_IV_3.doc"
+        ],
+        "customs": {
+            "wool": [
+                "01_blue_9H7_wfwl_73_4.html"
+            ],
+            "tunnage": [
+                "02_blue_10H7_tp_79_5.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index_of_people_and_places_iV_3.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_IV_3.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name_IV_3.html"
+            ],
+            "subjects": [
+                "Index_of_subjects_IV_3.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-4",
+        "from": 1495,
+        "to": 1502,
+        "title": "11 Henry VII (1495/96) \u2013 17 Henry VII (1501/02)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_4.pdf",
+        "folder_exists": true,
+        "doc": [
+            "01_blue_11H7_wfwl_203_6.doc",
+            "02_blue_17H7_wfwl_79_9.doc",
+            "Index_of_Subjects_IV_4.doc",
+            "Index_of_people_and_places_IV_4.doc",
+            "Index_of_ships_by_home_port_IV_4.doc",
+            "Index_of_ships_by_name_IV_4.doc"
+        ],
+        "customs": {
+            "wool": [
+                "01_blue_11H7_wfwl_203_6.html",
+                "02_blue_17H7_wfwl_79_9.html"
+            ]
+        },
+        "indices": {
+            "subjects": [
+                "Index_of_Subjects_IV_4.html"
+            ],
+            "people_places": [
+                "Index_of_people_and_places_IV_4.html"
+            ],
+            "ship_ports": [
+                "Index_of_ships_by_home_port_IV_4.html"
+            ],
+            "ship_names": [
+                "Index_of_ships_by_name_IV_4.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-5",
+        "from": 1502,
+        "to": 1503,
+        "title": "18 Henry VII (1502/03)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_5.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_18H7_80_2.doc",
+            "Index of subjects IV 5.doc",
+            "Index_of_people_and_places_IV_5.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_18H7_80_2.html"
+            ]
+        },
+        "indices": {
+            "subjects": [
+                "Index of subjects IV 5.html"
+            ],
+            "people_places": [
+                "Index_of_people_and_places_IV_5.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-6",
+        "from": 1505,
+        "to": 1506,
+        "title": "21 Henry VII (1505/06)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_6.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_21H7_79_14.doc",
+            "2_blue_pc_21H7_79_12.doc",
+            "Index of people and places IV 6.doc",
+            "Index of ships by name and home port.doc",
+            "index of subjects IV 6.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_21H7_79_14.html"
+            ],
+            "petty": [
+                "2_blue_pc_21H7_79_12.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 6.html"
+            ],
+            "ship_ports": [
+                "Index of ships by name and home port.html"
+            ],
+            "subjects": [
+                "index of subjects IV 6.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-7",
+        "from": 1506,
+        "to": 1507,
+        "title": "22 Henry VII (1506/07)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_7.pdf",
+        "folder_exists": true,
+        "doc": [
+            "Index of Subjects IV 7.doc",
+            "Index of people and places IV 7.doc",
+            "blue_pc_22H7_80_4.doc"
+        ],
+        "indices": {
+            "subjects": [
+                "Index of Subjects IV 7.html"
+            ],
+            "people_places": [
+                "Index of people and places IV 7.html"
+            ]
+        },
+        "customs": {
+            "petty": [
+                "blue_pc_22H7_80_4.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-8",
+        "from": 1507,
+        "to": 1508,
+        "title": "23 Henry VII (1507/08)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_8.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_79_17.doc",
+            "2_blue_pc_23H7_80_5.doc",
+            "Index of people and places IV 8.doc",
+            "Index of ships by home port  IV 8.doc",
+            "Index of ships by name IV 8.doc",
+            "Index of subjects IV 8.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_79_17.html"
+            ],
+            "petty": [
+                "2_blue_pc_23H7_80_5.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 8.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port  IV 8.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 8.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 8.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-9",
+        "from": 1509,
+        "to": 1510,
+        "title": "24 Henry VII/1 Henry VIII (1509) - 1 Henry VIII (1509/10)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_9.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_1H8_81_1.doc",
+            "2_blue_wfwl_1H8_204_1.doc",
+            "3_bluel_24H7_79_18_wool.doc",
+            "Index of people and places IV 9.doc",
+            "index of ships by home port  IV 9.doc",
+            "index of ships by name IV 9.doc",
+            "index of subjects IV 9.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_1H8_81_1.html"
+            ],
+            "wool": [
+                "2_blue_wfwl_1H8_204_1.html",
+                "3_bluel_24H7_79_18_wool.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 9.html"
+            ],
+            "ship_ports": [
+                "index of ships by home port  IV 9.html"
+            ],
+            "ship_names": [
+                "index of ships by name IV 9.html"
+            ],
+            "subjects": [
+                "index of subjects IV 9.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-10",
+        "from": 1512,
+        "to": 1513,
+        "title": "4 Henry VIII (1512/13)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_10.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_4H8_204_2.doc",
+            "2_blue_4H8_pc_82_2.doc",
+            "Index of people and places IV 10.doc",
+            "Index of ships by home port IV 10.doc",
+            "Index of ships by name IV 10.doc",
+            "index of subjects IV 10.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_4H8_204_2.html"
+            ],
+            "petty": [
+                "2_blue_4H8_pc_82_2.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 10.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 10.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 10.html"
+            ],
+            "subjects": [
+                "index of subjects IV 10.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-11",
+        "from": 1513,
+        "to": 1514,
+        "title": "5 Henry VIII (1513/14)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_11.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_pc_5H8_82_3_pc.doc",
+            "2_blue tp 5H8 162_6.doc",
+            "Index of people and places IV 11.doc",
+            "Index of subjects IV 11.doc",
+            "index of ships by home port IV 11.doc",
+            "index of ships by name IV 11.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_pc_5H8_82_3_pc.html"
+            ],
+            "tunnage": [
+                "2_blue tp 5H8 162_6.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 11.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 11.html"
+            ],
+            "ship_ports": [
+                "index of ships by home port IV 11.html"
+            ],
+            "ship_names": [
+                "index of ships by name IV 11.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-12",
+        "from": 1516,
+        "to": 1518,
+        "title": "8 Henry VIII (1516/17) - 9 Henry VIII (1517/18)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_12.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 blue wfwl 8H8 204_3.doc",
+            "2 blue wfwl 9H8 83_3.doc",
+            "Index of people and places IV 12.doc",
+            "Index of ships by home port  IV 12.doc",
+            "Index of ships by name IV 12.doc",
+            "index of subjects IV 12.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1 blue wfwl 8H8 204_3.html",
+                "2 blue wfwl 9H8 83_3.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 12.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port  IV 12.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 12.html"
+            ],
+            "subjects": [
+                "index of subjects IV 12.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-13",
+        "from": 1519,
+        "to": 1520,
+        "title": "11 Henry VIII (1519/20)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_13.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_tp_11H8_81_8_tp.doc",
+            "Index of people and places IV 13.doc",
+            "Index of ships by home port.doc",
+            "Index of ships by name.doc",
+            "Index of subjects IV 13.doc"
+        ],
+        "customs": {
+            "tunnage": [
+                "1_blue_tp_11H8_81_8_tp.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 13.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port.html"
+            ],
+            "ship_names": [
+                "Index of ships by name.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 13.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-14",
+        "from": 1520,
+        "to": 1524,
+        "title": "12 Henry VIII (1520/21) - 15 Henry VIII (1523/24)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_14.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_12H8_204_4_w.doc",
+            "2_blue_pc_12H8_81_9.doc",
+            "3_blue_wfwl_13H8_82_5.doc",
+            "4_blue_tp_13H8_83_5_tp.doc",
+            "5_blue_wfwl_14H8_81_10.doc",
+            "6_blue_wfwl_15H8_204_5.doc",
+            "Index of people and places IV 14.doc",
+            "Index of ships by home port  IV 14.doc",
+            "Index of ships by name IV 14.doc",
+            "Index of subjects IV 14.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_12H8_204_4_w.html",
+                "3_blue_wfwl_13H8_82_5.html",
+                "5_blue_wfwl_14H8_81_10.html",
+                "6_blue_wfwl_15H8_204_5.html"
+            ],
+            "petty": [
+                "2_blue_pc_12H8_81_9.html"
+            ],
+            "tunnage": [
+                "4_blue_tp_13H8_83_5_tp.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 14.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port  IV 14.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 14.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 14.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-15",
+        "from": 1525,
+        "to": 1531,
+        "title": "17 Henry VIII (1525/26) - 22 Henry VIII (1530/31)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_15.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_wfwl_17H8_81_11.doc",
+            "2_blue_wfwl_18H8_81_4.doc",
+            "3_blue_wfwl_22H8_81_13.doc",
+            "Index of people and places IV 15.doc",
+            "Index of ships by home port IV 15.doc",
+            "Index of ships by name IV 15.doc",
+            "Index of subjects IV 15.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1_blue_wfwl_17H8_81_11.html",
+                "2_blue_wfwl_18H8_81_4.html",
+                "3_blue_wfwl_22H8_81_13.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 15.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 15.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 15.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 15.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-16",
+        "from": 1531,
+        "to": 1533,
+        "title": "23 Henry VIII (1531/32) - 24 Henry VIII (1532/33)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_16.pdf",
+        "folder_exists": true,
+        "doc": [
+            "01-204_6_w_23H8_final.doc",
+            "02-83_4B_tp_23H8_final.doc",
+            "03-81_14_w_24h8_final.doc"
+        ],
+        "customs": {
+            "wool": [
+                "01-204_6_w_23H8_final.html",
+                "03-81_14_w_24h8_final.html"
+            ],
+            "tunnage": [
+                "02-83_4B_tp_23H8_final.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 16.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 16.html"
+            ],
+            "ship_ports": [
+                "index of ships by home port IV 16.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-17",
+        "from": 1533,
+        "to": 1535,
+        "title": "25 Henry VIII (1533/34) - 26 Henry VIII (1534/35)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_17.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 blue wfwl 25H8 204_7.doc",
+            "2 & 3 blue wfwl 26H8 83_8_w.doc",
+            "4 82_7_pc_26H8.doc",
+            "Index of people and places IV 17.doc",
+            "Index of ships by home port IV 17.doc",
+            "Index of ships by name IV 17.doc",
+            "Index of subjects IV 17.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1 blue wfwl 25H8 204_7.html",
+                "2 & 3 blue wfwl 26H8 83_8_w.html"
+            ],
+            "petty": [
+                "4 82_7_pc_26H8.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 17.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 17.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 17.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 17.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-18",
+        "from": 1536,
+        "to": 1540,
+        "title": "28 Henry VIII (1536/37) - 31 Henry VIII (1539/40)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_18.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1_blue_81_18_pc_28H8.doc",
+            "2_blue_wfwl_31H8_204_8.doc",
+            "Index of people and places IV 18.doc",
+            "Index of ships by home port IV 18.doc",
+            "Index of ships by name.doc",
+            "Index of subjects IV 18.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1_blue_81_18_pc_28H8.html"
+            ],
+            "wool": [
+                "2_blue_wfwl_31H8_204_8.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 18.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 18.html"
+            ],
+            "ship_names": [
+                "Index of ships by name.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 18.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-19",
+        "from": 1541,
+        "to": 1545,
+        "title": "33 Henry VIII (1541/42) - 36 Henry VIII (1544/45)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_19.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 204_9_w_33H8.doc",
+            "2 81_40_pc_exp_arbeitsheft.doc",
+            "3 81_32A_tp_36H8.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1 204_9_w_33H8.html"
+            ],
+            "petty": [
+                "2 81_40_pc_exp_arbeitsheft.html"
+            ],
+            "tunnage": [
+                "3 81_32A_tp_36H8.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 19.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port  IV 19.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 19.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 19.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-20",
+        "from": 1545,
+        "to": 1547,
+        "title": "37 Henry VIII (1545/46) - 38 Henry VIII/1 Edw. VI (1546/47)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_20.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 E101 347 15 pc 37H8.doc",
+            "2 E101 347 16 packers book ind 38H8.doc",
+            "3 85_2_w_38H8_1E6_kr.doc",
+            "4 85_3_tp_sr_38H8_1E6.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1 E101 347 15 pc 37H8.html"
+            ],
+            "miscellaneous": [
+                "2 E101 347 16 packers book ind 38H8.html"
+            ],
+            "wool": [
+                "3 85_2_w_38H8_1E6_kr.html"
+            ],
+            "tunnage": [
+                "4 85_3_tp_sr_38H8_1E6.html"
+            ]
+        },
+        "indices": {
+            "ship_ports": [
+                "Index of ships by home port IV 20.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 20.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 20.html"
+            ],
+            "people_places": [
+                "index of people and places IV 20.html"
+            ]
+        },
+        "warnings": [
+            "Warning: 2 E101 347 16 packers book ind 38H8.html is of miscellaneous type."
+        ]
+    },
+    {
+        "reference": "IV-21",
+        "from": 1547,
+        "to": 1548,
+        "title": "1 Edw. VI (1547/48)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_21.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 84_3_w_1E6_kr.doc",
+            "2 167_1_pc_exp_1E6.doc",
+            "3 167_1_pc_exp_1E6_licences.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1 84_3_w_1E6_kr.html"
+            ],
+            "petty": [
+                "2 167_1_pc_exp_1E6.html",
+                "3 167_1_pc_exp_1E6_licences.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 21.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 21.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 21.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 21.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-22",
+        "from": 1548,
+        "to": 1550,
+        "title": "2 Edward VI (1548/49) - 3 Edward VI (1549/50)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_22.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 85_11_pc_exp.doc",
+            "2 85_7_pc_2E6.doc",
+            "3 E122_85_9_pc_3E6_imp.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1 85_11_pc_exp.html",
+                "2 85_7_pc_2E6.html",
+                "3 E122_85_9_pc_3E6_imp.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 22.html"
+            ],
+            "subjects": [
+                "index of subjects IV 22.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-23",
+        "from": 1550,
+        "to": 1553,
+        "title": "4 Edward VI (1550/51) - 6 Edward VI (1552/53)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_23.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 195_27_w_p_acct_4E6.doc",
+            "2 84_8_pc_4E6.doc",
+            "3 84 9_tp_imp za 1551 52.doc",
+            "4 84_12_pc_6E6_1M.doc"
+        ],
+        "customs": {
+            "wool": [
+                "1 195_27_w_p_acct_4E6.html"
+            ],
+            "petty": [
+                "2 84_8_pc_4E6.html",
+                "4 84_12_pc_6E6_1M.html"
+            ],
+            "tunnage": [
+                "3 84 9_tp_imp za 1551 52.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 23.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port  IV 23.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 23.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 23.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-24",
+        "from": 1553,
+        "to": 1555,
+        "title": "1 Mary (1553/54) - 2 & 3 Philip & Mary (1554/55)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_24.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 87_4_pc_1_p&m.doc",
+            "2 86_2 tp 1 p&m.doc",
+            "3 87_7_w_1_p&m.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1 87_4_pc_1_p&m.html"
+            ],
+            "tunnage": [
+                "2 86_2 tp 1 p&m.html"
+            ],
+            "wool": [
+                "3 87_7_w_1_p&m.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 24.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 24.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 24.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 24.html"
+            ]
+        }
+    },
+    {
+        "reference": "IV-25",
+        "from": 1556,
+        "to": 1559,
+        "title": "3 & 4 Philip and Mary (1556/57) - 5 & 6 Philip and Mary / 1 Elizabeth (1558/59)",
+        "pdf_link": "https://www.hansischergeschichtsverein.de/file/jenks_lca_iv_25.pdf",
+        "folder_exists": true,
+        "doc": [
+            "1 86 7_pc_exp.doc",
+            "2 86 8 pc kr imp.doc",
+            "3 86_6_tp_SR 3-4 PM.doc",
+            "4 88 4_wfwl_comp 1 liz.doc",
+            "Index of people and places IV 25.doc"
+        ],
+        "customs": {
+            "petty": [
+                "1 86 7_pc_exp.html",
+                "2 86 8 pc kr imp.html"
+            ],
+            "tunnage": [
+                "3 86_6_tp_SR 3-4 PM.html"
+            ],
+            "wool": [
+                "4 88 4_wfwl_comp 1 liz.html"
+            ]
+        },
+        "indices": {
+            "people_places": [
+                "Index of people and places IV 25.html"
+            ],
+            "ship_ports": [
+                "Index of ships by home port IV 25.html"
+            ],
+            "ship_names": [
+                "Index of ships by name IV 25.html"
+            ],
+            "subjects": [
+                "Index of subjects IV 25.html"
+            ]
+        }
+    }
+]

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>London Customs Accounts</title>
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/jquery-ui.css">
+    <link rel="stylesheet" href="css/libs/fontawesome.min.css"/>
+    <link rel="stylesheet" href="css/libs/solid.min.css"/>
+    <link rel="stylesheet" href="css/libs/regular.min.css"/>
+    <link rel="stylesheet" href="css/libs/brands.min.css"/>
+    <link href="css/libs/maplibre-gl.css" rel="stylesheet"/>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.bundle.min.js"></script>
+    <script src="js/libs/dexie.min.js"></script>
+    <script src="js/libs/chart.js"></script>
+    <script src="js/libs/moment.min.js"></script>
+    <script src="js/libs/chartjs-adapter-moment.js"></script>
+    <script src="js/libs/chartjs-plugin-zoom.min.js"></script>
+    <script src="js/libs/jquery-ui.min.js"></script>
+    <script src="js/libs/maplibre-gl.js"></script>
+    <script src="js/libs/pmtiles.js"></script>
+
+    <script src="js/globals.js" defer></script>
+    <script src="js/db_operations.js" defer></script>
+    <script src="js/ui_helpers.js" defer></script>
+    <script src="js/chart_and_table.js" defer></script>
+    <script src="js/filter_and_sort.js" defer></script>
+    <script src="js/qualifiers.js" defer></script>
+    <script src="js/annotations.js" defer></script>
+    <script src="js/name-picker.js" defer></script>
+    <script src="js/commodity_filter.js" defer></script>
+    <script src="js/export.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/map_utils.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body class="container py-4">
+
+<h1 class="mb-0">London Customs Accounts, 1380-1560</h1>
+<p class="text-muted fst-italic mb-0">edited by Stuart Jenks <span
+        class="badge bg-warning text-dark ms-2 align-baseline"
+        style="position: relative; top: -2px;">Under Development</span>
+</p>
+
+<div id="loadingSpinner">
+    <div class="spinner-border text-primary me-2" role="status"><span class="visually-hidden">Loading...</span>
+    </div>
+    <strong class="spinner-label">Loading...</strong>
+</div>
+
+<!-- Tabs Navigation -->
+<ul class="nav nav-tabs justify-content-end" id="viewTabs" role="tablist">
+    <li class="nav-item d-flex align-items-center" role="presentation">
+        <div id="exportButtons" aria-label="Export options" class="me-3"></div>
+        <a class="nav-link active d-flex align-items-center justify-content-between"
+           id="table-tab" data-bs-toggle="tab" data-bs-target="#tablePane" type="button"
+           role="tab" aria-controls="tablePane" aria-selected="true">
+            <span>Table</span>
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chartPane" type="button"
+                role="tab">Chart
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="map-tab" data-bs-toggle="tab" data-bs-target="#mapPane" type="button" role="tab">
+            Map
+        </button>
+    </li>
+    <li class="nav-item dropdown" role="presentation">
+        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown"
+           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item" href="glossary.html">Glossary</a></li>
+            <li><a class="dropdown-item" href="officials.html">Customs Officials</a></li>
+            <li><a class="dropdown-item" href="name-clusters.html">Name Clusters</a></li>
+            <li><a class="dropdown-item" href="customs-accounts.html">Particular Customs Accounts</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="documentation/">Documentation</a></li>
+        </ul>
+    </li>
+</ul>
+
+<!-- Tabs Content -->
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="tablePane" role="tabpanel">
+        <div class="position-relative">
+            <!-- Scroll-to-top button -->
+            <button id="scrollTbodyTopBtn"
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm position-absolute end-0 top-0 m-2 d-none"
+                    data-bs-toggle="tooltip"
+                    title="Scroll to top of table">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <!-- Scrollable table -->
+            <div id="tableScrollContainer" class="table-responsive">
+                <table class="table table-striped content-hidden" id="ladingTable">
+                    <thead>
+                    <tr>
+                        <th class="text-end">Dates</th>
+                        <th class="text-end">Categories</th>
+                        <th>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Ladings</span>
+                                <div id="modeSelector" class="btn-group btn-group-sm" role="group"
+                                     aria-label="Annotation mode">
+                                    <input type="radio" class="btn-check" name="annotationMode"
+                                           id="footnotesRadio" value="footnotes" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" for="footnotesRadio">Footnotes</label>
+                                    <input type="radio" class="btn-check" name="annotationMode"
+                                           id="annotationsRadio" value="annotations" autocomplete="off" checked>
+                                    <label class="btn btn-outline-secondary" for="annotationsRadio">Annotations</label>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th data-field="primary_date">
+                            <div id="dateSelectors" class="d-flex flex-column gap-1">
+                                <div class="d-flex align-items-center justify-content-end gap-1 flex-nowrap"
+                                     style="white-space: nowrap;">
+                                    <select id="yearStart" class="form-select form-select-sm year-list w-auto"
+                                            data-bs-toggle="tooltip"
+                                            title="Select the start year for filtered ladings."></select>
+                                    <button id="sortToggle" class="btn btn-outline-secondary btn-sm px-2"
+                                            data-bs-toggle="tooltip" title="Reverse sort order">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                    <select id="yearEnd" class="form-select form-select-sm year-list w-auto"
+                                            data-bs-toggle="tooltip"
+                                            title="Select the end year for filtered ladings."></select>
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="btn-groups-wrapper">
+                                <div id="customsTypes" class="btn-group btn-group-sm" role="group"
+                                     aria-label="Type toggles"></div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                <div class="d-flex align-items-center flex-grow-1 gap-2 flex-wrap">
+                                    <div id="directionControls" class="d-flex align-items-center btn-group btn-group-sm"
+                                         role="group"
+                                         aria-label="Direction toggles"></div>
+                                    <div id="personSearchWrap" class="input-group input-group-sm flex-grow-1 position-relative">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="search" id="personSearchInput" class="form-control"
+                                               placeholder="Filter by person (forename or surname)…"
+                                               spellcheck="false"
+                                               autocomplete="off"
+                                               data-bs-toggle="popover"
+                                               data-bs-trigger="hover"
+                                               data-bs-placement="top"
+                                               data-bs-html="true"
+                                               title="Filter by person"
+                                               data-bs-content="
+                                        <small>
+                                        Search a <strong>single forename</strong> <em>or</em> a <strong>single surname</strong> — forenames and surnames are indexed separately, so a <strong>full name</strong> (e.g. <code>Marten de Lazera</code>) will not match here.<br><br>
+                                        To search a full name, use <strong>Filter text</strong> instead, which searches the whole lading and cargo text.
+                                        </small>">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearPersonSearchBtn"
+                                                data-bs-toggle="tooltip"
+                                                title="Clear person search">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                        <div id="personSearchResults"></div>
+                                    </div>
+
+                                    <div id="textFilter" class="input-group input-group-sm flex-grow-1">
+                                        <input type="text" id="searchInput" class="form-control"
+                                               placeholder="Filter text (ladings+cargos)..."
+                                               spellcheck="false"
+                                               data-bs-toggle="popover"
+                                               data-bs-trigger="hover"
+                                               data-bs-placement="top"
+                                               data-bs-html="true"
+                                               data-bs-custom-class="popover-filter"
+                                               title="Filter Options"
+                                               data-bs-content="
+                                        <ul>
+                                        <small>
+                                          <li><strong>Wildcards</strong>:<br>
+                                              <code>*</code>: matches any number of characters.<br>
+                                              <code>?</code>: matches any single character.
+                                            <br>
+                                            Examples:<br>
+                                            <code>tim*</code>: matches <em>timber</em>, <em>Timothy</em>.<br>
+                                            <code>j?h*n*</code>: matches <em>John</em>, <em>Johannes</em>.<br>
+                                          </li>
+                                          <li><strong>Multiple words / phrases</strong>:<br>
+                                              Space-separated words match records that mention <em>all</em> of them.<br>
+                                              Wrap in quotes for an exact phrase.<br>
+                                            Examples:<br>
+                                            <code>Marten de Lazera</code>: matches records mentioning all three words.<br>
+                                            <code>&quot;de Lazera&quot;</code>: matches the exact phrase <em>de Lazera</em>.
+                                          </li>
+                                          <li><strong>Chaining</strong>:<br>
+                                              <code>&</code> or <code> AND </code>: matches records that mention both terms.<br>
+                                              <code>|</code> or <code> OR </code>: matches records that mention either term (or both terms).
+                                            <br>
+                                            Examples:<br>
+                                            <code>Antwerp &amp; barge</code>: matches records that mention both Antwerp and barge.<br>
+                                            <code>Jansson OR silver</code>: matches records that mention either Jansson or silver (or both).
+                                          </li>
+                                          <li><strong>Excluding</strong>:<br>
+                                              <code>!</code> or <code>NOT</code>: excludes records mentioning the term <em>anywhere</em> &mdash; in the lading heading or in any of its cargos.
+                                            <br>
+                                            Examples:<br>
+                                            <code>wool &amp; !Antwerp</code>: matches records mentioning wool but not Antwerp.<br>
+                                            <code>cloth NOT (Hansa | alienigena)</code>: matches cloth records mentioning neither.
+                                          </li>
+                                          <li><strong>Grouping</strong>:<br>
+                                            <code>(fish|salt) &amp; Yarm*th</code>: matches records mentioning Yarmouth and either fish or salt (or both).
+                                          </li>
+                                          <hr>
+                                          <li><strong>Lading ID</strong>:<br>
+                                            Enter a lading ID to filter by that specific record. All other filters will be ignored.
+                                            Example: <code>3-5-A-0485</code> will show only the lading with that ID.
+                                          </li>
+                                        </small>
+                                        </ul>
+                                        <i>Searching begins 1 second after you stop typing.</i>
+                                       ">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearSearchBtn"
+                                                data-bs-toggle="tooltip"
+                                                title="Clear filter text">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+
+                                    <div id="commodityFilter" class="dropdown">
+                                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                                                id="commodityFilterBtn"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                                                aria-expanded="false"
+                                                title="Filter by commodity group">
+                                            <i class="fas fa-boxes-stacked me-1"></i><span id="commodityFilterLabel">Commodities</span>
+                                        </button>
+                                        <div class="dropdown-menu p-2 commodity-filter-menu" aria-labelledby="commodityFilterBtn">
+                                            <div class="d-flex align-items-center justify-content-between mb-2 gap-2">
+                                                <div class="btn-group btn-group-sm" role="group" aria-label="Match mode">
+                                                    <input type="radio" class="btn-check" name="groupMatchMode"
+                                                           id="groupModeOR" value="OR" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-primary" for="groupModeOR"
+                                                           title="Keep ladings carrying ANY selected group">Any</label>
+                                                    <input type="radio" class="btn-check" name="groupMatchMode"
+                                                           id="groupModeAND" value="AND" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="groupModeAND"
+                                                           title="Keep only ladings carrying ALL selected groups">All</label>
+                                                </div>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"
+                                                        id="clearGroupsBtn">Clear</button>
+                                            </div>
+                                            <div id="commodityGroupTree" class="commodity-group-tree"></div>
+                                        </div>
+                                    </div>
+
+                                    <span id="resultCount" class="text-muted"></span>
+                                </div>
+                                <button id="clearAllFiltersBtn" class="btn btn-sm btn-outline-danger ms-auto"
+                                        data-bs-toggle="tooltip"
+                                        title="Clear all filters">
+                                    <i class="fas fa-filter-circle-xmark me-1"></i>
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr id="personFilterRow" class="d-none">
+                        <th colspan="3" class="py-1">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="small text-muted text-nowrap">
+                                    <i class="fas fa-user me-1"></i>People:
+                                </span>
+                                <div id="personFilterChips" class="d-flex flex-wrap"></div>
+                                <button type="button" id="clearPeopleBtn"
+                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
+                                        data-bs-toggle="tooltip"
+                                        title="Clear all selected people">
+                                    <i class="fas fa-user-slash me-1"></i>Clear people
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr id="commodityFilterRow" class="d-none">
+                        <th colspan="3" class="py-1">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="small text-muted text-nowrap">
+                                    <i class="fas fa-boxes-stacked me-1"></i>Commodities:
+                                </span>
+                                <div id="commodityFilterChips" class="d-flex flex-wrap"></div>
+                                <button type="button" id="clearCommoditiesBtn"
+                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
+                                        data-bs-toggle="tooltip"
+                                        title="Clear all selected commodity groups">
+                                    <i class="fas fa-eraser me-1"></i>Clear commodities
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade mt-3" id="chartPane" role="tabpanel">
+        <div id="chart-container" class="container content-hidden">
+            <div class="d-flex flex-wrap gap-1 justify-content-end">
+                <select id="dateStart" class="form-select form-select-sm w-auto" data-bs-toggle="tooltip"
+                        title="Select the start date of the accounting year.">
+                </select>
+                <select id="period" class="form-select form-select-sm w-auto" data-bs-toggle="tooltip"
+                        title="Select yearly, quarterly, or monthly aggregation.">
+                    <option value="month">monthly</option>
+                    <option value="quarter">quarterly</option>
+                    <option value="year" selected>yearly</option>
+                </select>
+                <button id="resetZoomButton" class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="popover"
+                        data-bs-placement="bottom"
+                        data-bs-title="Chart Zoom"
+                        data-bs-content="You can zoom the chart's time axis: Use your mouse wheel, click and drag a selection, or use a pinch gesture on touch devices. Click this button to reset the view."
+                        data-bs-trigger="hover focus"
+                        type="button">
+                    Reset Zoom
+                </button>
+            </div>
+            <canvas id="ladingChart"></canvas>
+            <div class="text-center mt-3">
+                <span class="fst-italic small text-secondary">
+                    *Enrolled Accounts Totals compiled from
+                    <a tabindex="0" class="text-decoration-underline" role="button"
+                       data-bs-toggle="popover"
+                       data-bs-trigger="focus"
+                       data-bs-html="true"
+                       title="Sources Used"
+                       data-bs-content="
+                           <ul class='ps-3 mb-0'>
+                                <li>Carus-Wilson, E. M., and O. Coleman. <i>England's Export Trade</i>. Oxford: Clarendon Press, 1963.</li>
+                                <li>Fischer, D. <i>The Development and Organisation of English Trade to Asia: 1553-1605</i>. PhD diss., SOAS University of London, 1970.</li>
+                                <li>Gould, J. D. <i>The Great Debasement: Currency and the Economy in Mid-Tudor England</i>. New York: Oxford University Press, 1970.</li>
+                                <li>Jenks, S. <i>List & Index Society</i>, vols. 348, 370.</li>
+                            </ul>
+                           <p class='mt-2'><em>Compiled by Maria Grove-Gordillo.</em></p>
+                           ">
+                       various sources</a>.
+                </span>
+                <a href="data/enrolled/MGG_Enrolled_Customs.xlsx" title="Download Excel file" data-bs-toggle="tooltip">
+                    <i class="fas fa-file-excel"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade mt-3" id="mapPane" role="tabpanel">
+        <div id="map"></div>
+    </div>
+</div>
+
+
+<div id="progressBarContainer" style="display:none; margin-top: 20px;">
+    <div class="progress">
+        <div id="overallProgressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

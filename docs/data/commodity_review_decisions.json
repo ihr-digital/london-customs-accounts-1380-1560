@@ -1,0 +1,1920 @@
+{
+ "_meta": {
+  "reviewer": "docuracy",
+  "updated": "2026-06-23T13:44:34.986Z",
+  "count": 245
+ },
+ "decisions": {
+  "fungiarum|form|stockfish": {
+   "decision": "accept",
+   "target": "stockfish",
+   "as": "form",
+   "ts": 1782061176090
+  },
+  "bovinorum|form|bovum parve pecie scisse de collis et ventribus": {
+   "decision": "reassign",
+   "target": "ox",
+   "as": "form",
+   "ts": 1782061233317
+  },
+  "patellarum|form|bowl": {
+   "decision": "accept",
+   "target": "bowl",
+   "as": "form",
+   "ts": 1782061251400
+  },
+  "ficuum|form|fig": {
+   "decision": "accept",
+   "target": "fig",
+   "as": "form",
+   "ts": 1782061275534
+  },
+  "hedclavorum|form|head nail": {
+   "decision": "accept",
+   "target": "head nail",
+   "as": "form",
+   "ts": 1782061280754
+  },
+  "sibi|form|tallow": {
+   "decision": "reject",
+   "target": "tallow",
+   "as": "form",
+   "ts": 1782061339406
+  },
+  "mala|form|malt": {
+   "decision": "reject",
+   "target": "malt",
+   "as": "form",
+   "ts": 1782061396112
+  },
+  "cacaborum|form|cacabus": {
+   "decision": "accept",
+   "target": "cacabus",
+   "as": "form",
+   "ts": 1782061505870
+  },
+  "lysens|form|list": {
+   "decision": "reject",
+   "target": "list",
+   "as": "form",
+   "ts": 1782061546873
+  },
+  "datum|form|date": {
+   "decision": "reject",
+   "target": "date",
+   "as": "form",
+   "ts": 1782061574233
+  },
+  "vermibus|form|verjuice": {
+   "decision": "reject",
+   "target": "verjuice",
+   "as": "form",
+   "ts": 1782061669260
+  },
+  "parte|qualifier|parve": {
+   "decision": "reject",
+   "target": "parve",
+   "as": "qualifier",
+   "ts": 1782061747432
+  },
+  "cirotecarum|form|glove": {
+   "decision": "accept",
+   "target": "glove",
+   "as": "form",
+   "ts": 1782061789959
+  },
+  "long|form|ling": {
+   "decision": "reject",
+   "target": "ling",
+   "as": "form",
+   "ts": 1782061857017
+  },
+  "lyssens|form|list": {
+   "decision": "reject",
+   "target": "list",
+   "as": "form",
+   "ts": 1782061881272
+  },
+  "auro|form|gold thread": {
+   "decision": "accept",
+   "target": "gold thread",
+   "as": "form",
+   "ts": 1782062025529
+  },
+  "est|form|vest": {
+   "decision": "reject",
+   "target": "vest",
+   "as": "form",
+   "ts": 1782062054922
+  },
+  "ymaginibus|form|image": {
+   "decision": "accept",
+   "target": "image",
+   "as": "form",
+   "ts": 1782062061132
+  },
+  "marcatore|form|mark": {
+   "decision": "reject",
+   "target": "mark",
+   "as": "form",
+   "ts": 1782062091447
+  },
+  "avellanarum|form|hazelnut": {
+   "decision": "accept",
+   "target": "hazelnut",
+   "as": "form",
+   "ts": 1782062096330
+  },
+  "prefatis|form|presais": {
+   "decision": "reject",
+   "target": "presais",
+   "as": "form",
+   "ts": 1782062122160
+  },
+  "termino|form|terlinge": {
+   "decision": "reject",
+   "target": "terlinge",
+   "as": "form",
+   "ts": 1782062136314
+  },
+  "palettorum|form|palette_2": {
+   "decision": "accept",
+   "target": "palette_2",
+   "as": "form",
+   "ts": 1782062151223
+  },
+  "archers|form|archis": {
+   "decision": "reject",
+   "target": "archis",
+   "as": "form",
+   "ts": 1782062221649
+  },
+  "quarum|form|quarry": {
+   "decision": "reject",
+   "target": "quarry",
+   "as": "form",
+   "ts": 1782062241255
+  },
+  "ap|form|ape": {
+   "decision": "reject",
+   "target": "ape",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Welsh patronymic name prefix",
+   "ts": 1782063521716
+  },
+  "cancellarii|form|candle holder": {
+   "decision": "reject",
+   "target": "candle holder",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782063567497
+  },
+  "son|form|girdle": {
+   "decision": "reject",
+   "target": "girdle",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Words that begin with \"...\" indicate illegibility, so should be ignored, not tagged.",
+   "ts": 1782063613524
+  },
+  "unciis|form|uncia": {
+   "decision": "accept",
+   "target": "uncia",
+   "as": "form",
+   "ts": 1782063621145
+  },
+  "schyp|form|schippond": {
+   "decision": "reject",
+   "target": "schippond",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "'hys aune schyp' means \"his own ship\"",
+   "ts": 1782063659124
+  },
+  "murenis|form|murrey": {
+   "decision": "reject",
+   "target": "murrey",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Could be either \"murrey\" or \"murena\" - something that could rely on the context of other cargo commodities for disambiguation, perhaps, though not entirely reliable. Can this kind of close ambiguity be flagged somehow with a certainty attribute?",
+   "ts": 1782063861409
+  },
+  "voluminibus|form|volumen": {
+   "decision": "accept",
+   "target": "volumen",
+   "as": "form",
+   "ts": 1782063886303
+  },
+  "capuciis|form|hood": {
+   "decision": "accept",
+   "target": "hood",
+   "as": "form",
+   "ts": 1782063895356
+  },
+  "cerotecarum|form|glove": {
+   "decision": "accept",
+   "target": "glove",
+   "as": "form",
+   "ts": 1782063898070
+  },
+  "besyde|form|besys": {
+   "decision": "reject",
+   "target": "besys",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782063954156
+  },
+  "avelanarum|form|hazelnut": {
+   "decision": "accept",
+   "target": "hazelnut",
+   "as": "form",
+   "ts": 1782063959166
+  },
+  "olivarum|form|pot": {
+   "decision": "reassign",
+   "target": "olive",
+   "as": "form",
+   "ts": 1782063971548
+  },
+  "garbis|form|girth": {
+   "decision": "reassign",
+   "target": "garba",
+   "as": "form",
+   "ts": 1782064014914
+  },
+  "botellorum|form|batella": {
+   "decision": "reassign",
+   "target": "bottle",
+   "as": "form",
+   "ts": 1782123567324
+  },
+  "mece|form|mace": {
+   "decision": "reject",
+   "target": "mace",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782123607389
+  },
+  "camisiarum|form|camisia": {
+   "decision": "accept",
+   "target": "camisia",
+   "as": "form",
+   "ts": 1782123627160
+  },
+  "murenarum|form|murena": {
+   "decision": "accept",
+   "target": "murena",
+   "as": "form",
+   "ts": 1782123690842
+  },
+  "platearum|form|platter": {
+   "decision": "accept",
+   "target": "platter",
+   "as": "form",
+   "ts": 1782123708347
+  },
+  "merser|form|mercery": {
+   "decision": "reject",
+   "target": "mercery",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782123908720
+  },
+  "nove|form|nave": {
+   "decision": "reject",
+   "target": "nave",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a qualifier meaning \"new\"",
+   "ts": 1782123934694
+  },
+  "egri|form|vinegar": {
+   "decision": "reject",
+   "target": "vinegar",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Need to add attestations to vinegar and beeregar to cover the two-word forms illustrated by these examples",
+   "ts": 1782123994702
+  },
+  "cot|form|coat": {
+   "decision": "reject",
+   "target": "coat",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782124027582
+  },
+  "wyth|form|lignum vitae": {
+   "decision": "reject",
+   "target": "lignum vitae",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "\"with\" is a joining word",
+   "ts": 1782124096028
+  },
+  "lambskyns|form|lamb": {
+   "decision": "accept",
+   "target": "lamb",
+   "as": "form",
+   "ts": 1782124145019
+  },
+  "serotecarum|form|glove": {
+   "decision": "accept",
+   "target": "glove",
+   "as": "form",
+   "ts": 1782124159801
+  },
+  "veteribus|form|vitry": {
+   "decision": "reject",
+   "target": "vitry",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a qualifier meaning \"old\"",
+   "ts": 1782124180952
+  },
+  "wyt|form|lignum vitae": {
+   "decision": "reject",
+   "target": "lignum vitae",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a qualifier meaning \"white\"",
+   "ts": 1782124205222
+  },
+  "baskettorum|form|basket": {
+   "decision": "accept",
+   "target": "basket",
+   "as": "form",
+   "ts": 1782124211216
+  },
+  "flory|form|flour": {
+   "decision": "reject",
+   "target": "flour",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "`florey` missing from glossary - see separate instruction.",
+   "ts": 1782124576957
+  },
+  "signo|form|signis": {
+   "decision": "reject",
+   "target": "signis",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "the \"cum signo\" combination should be detected and ignored",
+   "ts": 1782124633507
+  },
+  "cow|form|coop": {
+   "decision": "reject",
+   "target": "coop",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a concept which might be missing from the glossary",
+   "ts": 1782124668000
+  },
+  "poys|form|poiz": {
+   "decision": "reject",
+   "target": "poiz",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"doliis poy\" and \"pipa poys\" are quite common in the corpus but I don't see them defined in any of the indices of subjects. Can you resolved this?",
+   "ts": 1782124891976
+  },
+  "ligularum|form|ligula": {
+   "decision": "accept",
+   "target": "ligula",
+   "as": "form",
+   "ts": 1782124897488
+  },
+  "paccatoris|form|pocket": {
+   "decision": "reject",
+   "target": "pocket",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "When following \"signo\" this is obviously for exclusion",
+   "ts": 1782124939414
+  },
+  "scindularum|form|scindula": {
+   "decision": "accept",
+   "target": "scindula",
+   "as": "form",
+   "ts": 1782124942384
+  },
+  "fistularum|form|fistula": {
+   "decision": "accept",
+   "target": "fistula",
+   "as": "form",
+   "ts": 1782124983604
+  },
+  "arcuum|form|bow": {
+   "decision": "accept",
+   "target": "bow",
+   "as": "form",
+   "ts": 1782124991149
+  },
+  "confractis|form|comfit": {
+   "decision": "reject",
+   "target": "comfit",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "qualifier meaning \"broken up\", but seemingly used only when referring to an empty barrel",
+   "ts": 1782125083762
+  },
+  "albi|form|albiis": {
+   "decision": "reject",
+   "target": "albiis",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "qualifier = \"white\"",
+   "ts": 1782125111466
+  },
+  "stauro|form|stave": {
+   "decision": "reject",
+   "target": "stave",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"pro stauro\" is a qualifier, but Jenks's indices generally say its meaning is unknown in the cited contexts.",
+   "ts": 1782125230080
+  },
+  "duce|form|dice": {
+   "decision": "reject",
+   "target": "dice",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "=Duke",
+   "ts": 1782125242980
+  },
+  "plicis|form|plaice": {
+   "decision": "reassign",
+   "target": "plica",
+   "as": "form",
+   "ts": 1782125279258
+  },
+  "bysydes|form|bisilke": {
+   "decision": "reject",
+   "target": "bisilke",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"besides\"",
+   "ts": 1782125300318
+  },
+  "grando|form|grandes": {
+   "decision": "reject",
+   "target": "grandes",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This is somebody's surname - investigate why it has not been captured by the name parsing algorithm which precedes commodity parsing.",
+   "ts": 1782125392471
+  },
+  "pixide|form|box": {
+   "decision": "accept",
+   "target": "box",
+   "as": "form",
+   "ts": 1782125421797
+  },
+  "sirotecarum|form|glove": {
+   "decision": "accept",
+   "target": "glove",
+   "as": "form",
+   "ts": 1782125425952
+  },
+  "campanarum|form|bell": {
+   "decision": "accept",
+   "target": "bell",
+   "as": "form",
+   "ts": 1782125429230
+  },
+  "sagittarum|form|arrow": {
+   "decision": "accept",
+   "target": "arrow",
+   "as": "form",
+   "ts": 1782125460048
+  },
+  "felthattes|form|felt": {
+   "decision": "reject",
+   "target": "felt",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "hat>felt needs to be split off as a distinct concept (linked to \"hat\"): `felthattes` should be an additional attestation of it",
+   "ts": 1782125604004
+  },
+  "lancearum|form|lance": {
+   "decision": "accept",
+   "target": "lance",
+   "as": "form",
+   "ts": 1782125610965
+  },
+  "owne|form|aum": {
+   "decision": "reject",
+   "target": "aum",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "\"his owne\" should be detected and filtered",
+   "ts": 1782125658665
+  },
+  "ficorum|form|fig": {
+   "decision": "accept",
+   "target": "fig",
+   "as": "form",
+   "ts": 1782128753196
+  },
+  "brochadyd|form|brooch": {
+   "decision": "reject",
+   "target": "brooch",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This is a qualifier (often followed by \"cum auro\", but perhaps not always)",
+   "ts": 1782128814212
+  },
+  "ligatorum|form|ligula": {
+   "decision": "reject",
+   "target": "ligula",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Does it only appear in the phrase \"ligatorum et non ligatorum\"? If so, add an appropriate qualifier (\"bound and unbound\"?) for the phrase.",
+   "ts": 1782128892217
+  },
+  "ymaginum|form|image": {
+   "decision": "accept",
+   "target": "image",
+   "as": "form",
+   "ts": 1782128899395
+  },
+  "twentye|form|tent": {
+   "decision": "reject",
+   "target": "tent",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This is part of a number which should be better captured in the earlier parsing phase before commodities.",
+   "ts": 1782128956854
+  },
+  "loricis|form|hauberk": {
+   "decision": "accept",
+   "target": "hauberk",
+   "as": "form",
+   "ts": 1782128993971
+  },
+  "pilosis|form|pillow": {
+   "decision": "reject",
+   "target": "pillow",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=qualifier meaning something like \"hairy\"?",
+   "ts": 1782129105063
+  },
+  "dossons|form|dozen": {
+   "decision": "reject",
+   "target": "dozen",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "A \"dozen\" is a type of coarse kersey - is it missing in this sense (with multiple variants) from the glossary?",
+   "ts": 1782129237665
+  },
+  "dosons|form|dozen": {
+   "decision": "reject",
+   "target": "dozen",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "See other note about \"dozens\"",
+   "ts": 1782129258635
+  },
+  "manicarum|form|sleeve_2": {
+   "decision": "accept",
+   "target": "sleeve_2",
+   "as": "form",
+   "ts": 1782129264448
+  },
+  "breaks|form|brick": {
+   "decision": "reject",
+   "target": "brick",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782129272211
+  },
+  "piloto|form|pillow": {
+   "decision": "reject",
+   "target": "pillow",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782129284091
+  },
+  "dor|form|dory": {
+   "decision": "reject",
+   "target": "dory",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Part of name - adjust the name parser",
+   "ts": 1782129303644
+  },
+  "anguillarum|form|eel": {
+   "decision": "accept",
+   "target": "eel",
+   "as": "form",
+   "ts": 1782129316701
+  },
+  "equo|form|horse": {
+   "decision": "accept",
+   "target": "horse",
+   "as": "form",
+   "ts": 1782129322814
+  },
+  "cipho|form|goblet": {
+   "decision": "accept",
+   "target": "goblet",
+   "as": "form",
+   "ts": 1782129333066
+  },
+  "cado|form|cade": {
+   "decision": "accept",
+   "target": "cade",
+   "as": "form",
+   "ts": 1782129346889
+  },
+  "allis|form|garlic": {
+   "decision": "reject",
+   "target": "garlic",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "More usually \"aliis\", meaning other things",
+   "ts": 1782129377984
+  },
+  "tegulis|form|tile": {
+   "decision": "accept",
+   "target": "tile",
+   "as": "form",
+   "ts": 1782129384150
+  },
+  "comito|form|comfit": {
+   "decision": "reject",
+   "target": "comfit",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782129392227
+  },
+  "conent|form|comfit": {
+   "decision": "reject",
+   "target": "comfit",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "more usually \"continent'\" (containing)",
+   "ts": 1782129421837
+  },
+  "pondera|form|puntellum": {
+   "decision": "reassign",
+   "target": "pondus",
+   "as": "form",
+   "ts": 1782129449490
+  },
+  "maundarum|form|maund": {
+   "decision": "accept",
+   "target": "maund",
+   "as": "form",
+   "ts": 1782129453090
+  },
+  "ovinis|form|basan": {
+   "decision": "accept",
+   "target": "basan",
+   "as": "form",
+   "ts": 1782129466988
+  },
+  "libros|form|book": {
+   "decision": "accept",
+   "target": "book",
+   "as": "form",
+   "ts": 1782129469426
+  },
+  "duplici|form|doublet": {
+   "decision": "reject",
+   "target": "doublet",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "No, a \"double\" is a form of double cloth. Does it need a new concept? \"It is created by weaving two distinct layers of cloth simultaneously, which are then stitched together during the weaving process.\"",
+   "ts": 1782129582250
+  },
+  "tabularum|form|tablet": {
+   "decision": "accept",
+   "target": "tablet",
+   "as": "form",
+   "ts": 1782133496504
+  },
+  "tabillarum|form|table_2": {
+   "decision": "accept",
+   "target": "table_2",
+   "as": "form",
+   "ts": 1782133545517
+  },
+  "medelle|form|mede": {
+   "decision": "reject",
+   "target": "mede",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "In this context it is a qualifier as outlined here:\n\n<p>— <em>medelle</em> (<em>mydelle, middelle</em>) of middling quality\n90, 91, 137</p>\n\nPreceded by \"et\" it usually denotes a combination of qualifiers, but in the case of \"lubbes et medelle\" this is a confusing special case. We should add \"fungiis lubbes\" as an attestation of \"lob\" which should help.",
+   "ts": 1782133852789
+  },
+  "filo|form|file": {
+   "decision": "reject",
+   "target": "file",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This is usually \"thread\", but in one of the examples you gave - \"pro argheblastes\" - it is obviously a type of bowstring: there needs to be an attestation for this and similar cases on \"bowstring\" unless you can see a better solution.",
+   "ts": 1782134233749
+  },
+  "mistelbedes|form|maslin": {
+   "decision": "reassign",
+   "target": "mistelle",
+   "as": "form",
+   "ts": 1782134327755
+  },
+  "shyppyd|form|schippond": {
+   "decision": "reject",
+   "target": "schippond",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782134336335
+  },
+  "ful|form|leaf": {
+   "decision": "reject",
+   "target": "leaf",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=qualifier \"full\"",
+   "ts": 1782134372778
+  },
+  "fin|form|foin": {
+   "decision": "reject",
+   "target": "foin",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=qualifier \"fine\"",
+   "ts": 1782134388844
+  },
+  "carcatis|form|kersey": {
+   "decision": "reject",
+   "target": "kersey",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "indicates carriage",
+   "ts": 1782134408816
+  },
+  "precularum|form|precula": {
+   "decision": "accept",
+   "target": "precula",
+   "as": "form",
+   "ts": 1782141698295
+  },
+  "dowssens|form|dozen": {
+   "decision": "accept",
+   "target": "dozen",
+   "as": "form",
+   "ts": 1782134417990
+  },
+  "curtinarum|form|curtain": {
+   "decision": "accept",
+   "target": "curtain",
+   "as": "form",
+   "ts": 1782134425519
+  },
+  "goldsmythes|form|goldskin": {
+   "decision": "reject",
+   "target": "goldskin",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"pro goldsmythes\" is an occupational qualifier",
+   "ts": 1782134450817
+  },
+  "cloethez|form|cloth": {
+   "decision": "reject",
+   "target": "cloth",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Accept, but note that \"short cloethez\" is really an attestation of \"shortcloth\", which should have its own separate concept. Create that and see if there are other attestations which should be absorbed by it.",
+   "ts": 1782134625336
+  },
+  "seruris|form|ceruse": {
+   "decision": "reassign",
+   "target": "lock",
+   "as": "form",
+   "ts": 1782134662815
+  },
+  "pixidum|form|box": {
+   "decision": "accept",
+   "target": "box",
+   "as": "form",
+   "ts": 1782134668567
+  },
+  "sagittis|form|arrow": {
+   "decision": "accept",
+   "target": "arrow",
+   "as": "form",
+   "ts": 1782134671477
+  },
+  "lanciis|form|lance": {
+   "decision": "accept",
+   "target": "lance",
+   "as": "form",
+   "ts": 1782134677140
+  },
+  "signato|form|signet": {
+   "decision": "reject",
+   "target": "signet",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782134688742
+  },
+  "foliis|form|fother": {
+   "decision": "reject",
+   "target": "fother",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This seems usually to have the sense of \"foil\", but \"foliis percameni depicti\" is an exception - can you explain that and find a way to disambiguate the annotations?",
+   "ts": 1782134867987
+  },
+  "basanarum|form|basan": {
+   "decision": "accept",
+   "target": "basan",
+   "as": "form",
+   "ts": 1782134880197
+  },
+  "marginated|form|marten": {
+   "decision": "reject",
+   "target": "marten",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782134885672
+  },
+  "siccarum|form|sack": {
+   "decision": "reject",
+   "target": "sack",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a form of the qualifier \"siccus\"/\"dried\"",
+   "ts": 1782134915478
+  },
+  "specierum|form|spices": {
+   "decision": "accept",
+   "target": "spices",
+   "as": "form",
+   "ts": 1782134923008
+  },
+  "joyners|form|jointur": {
+   "decision": "reject",
+   "target": "jointur",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"pro joyners\" is an occupational qualifier",
+   "ts": 1782134947646
+  },
+  "confectarum|form|comfit": {
+   "decision": "reject",
+   "target": "comfit",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782134969374
+  },
+  "schype|qualifier|schepe": {
+   "decision": "reject",
+   "target": "schepe",
+   "as": "qualifier",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"ship\"",
+   "ts": 1782134993125
+  },
+  "che|form|cheese": {
+   "decision": "reject",
+   "target": "cheese",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "There should be a rule to ignore terms which begin with \"...\" or \"..\"",
+   "ts": 1782135128061
+  },
+  "feld|qualifier|fell": {
+   "decision": "reject",
+   "target": "fell",
+   "as": "qualifier",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "There should be a rule to ignore terms which begin with \"...\" or \"..\"",
+   "ts": 1782135130941
+  },
+  "pendente|form|pennete": {
+   "decision": "reject",
+   "target": "pennete",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=qualifier \"hanging\"",
+   "ts": 1782135155061
+  },
+  "myd|form|midde": {
+   "decision": "accept",
+   "target": "midde",
+   "as": "form",
+   "ts": 1782135184244
+  },
+  "see|form|seed": {
+   "decision": "reject",
+   "target": "seed",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Add \"see\" as a variant spelling of the \"marinus\" qualifier on \"coal\"",
+   "ts": 1782135266362
+  },
+  "blaudrellorum|form|blaundrell": {
+   "decision": "accept",
+   "target": "blaundrell",
+   "as": "form",
+   "ts": 1782135272700
+  },
+  "pluscularum|form|buckle": {
+   "decision": "accept",
+   "target": "buckle",
+   "as": "form",
+   "ts": 1782135281498
+  },
+  "grantyd|form|granum": {
+   "decision": "reject",
+   "target": "granum",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782135287130
+  },
+  "horseman|form|horsepack": {
+   "decision": "reject",
+   "target": "horsepack",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=occupational qualifier",
+   "ts": 1782135305723
+  },
+  "theis|form|thimble": {
+   "decision": "reject",
+   "target": "thimble",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"these\"",
+   "ts": 1782135323941
+  },
+  "cindularum|form|scindula": {
+   "decision": "accept",
+   "target": "scindula",
+   "as": "form",
+   "ts": 1782135333608
+  },
+  "viridium|form|glass_3": {
+   "decision": "reject",
+   "target": "glass_3",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "=qualifier \"green\"",
+   "ts": 1782135391936
+  },
+  "ford|form|form": {
+   "decision": "reject",
+   "target": "form",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "same \"...\" prefix as noted on another entry",
+   "ts": 1782135433847
+  },
+  "manicis|form|sleeve_2": {
+   "decision": "accept",
+   "target": "sleeve_2",
+   "as": "form",
+   "ts": 1782135443897
+  },
+  "compano|form|compass": {
+   "decision": "reject",
+   "target": "compass",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782135451861
+  },
+  "shoten|form|shuttle": {
+   "decision": "reject",
+   "target": "shuttle",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is a known qualifier of \"allecis\": the parser needs to recognise when qualifiers are joined with \"et\"",
+   "ts": 1782135619122
+  },
+  "playing|form|playne": {
+   "decision": "reject",
+   "target": "playne",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"playing table\" and \"playing card\" are pre-existing concepts which should be given attestations to match these examples.",
+   "ts": 1782135691408
+  },
+  "thes|form|frankincense": {
+   "decision": "reject",
+   "target": "frankincense",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782135701361
+  },
+  "sportarum|form|sport": {
+   "decision": "reject",
+   "target": "sport",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This seems to be a qualifier of \"dozen\". Add it.",
+   "ts": 1782135766724
+  },
+  "ulnarum|form|basan": {
+   "decision": "reject",
+   "target": "basan",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Reassign by adding as attestation to \"ell\"",
+   "ts": 1782136099841
+  },
+  "oynettarum|form|shallot": {
+   "decision": "accept",
+   "target": "shallot",
+   "as": "form",
+   "ts": 1782136104439
+  },
+  "capitaneo|form|capito": {
+   "decision": "reject",
+   "target": "capito",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782136110633
+  },
+  "gentille|form|gentian": {
+   "decision": "reject",
+   "target": "gentian",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782136117407
+  },
+  "vitellario|form|vitry": {
+   "decision": "reject",
+   "target": "vitry",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782136193309
+  },
+  "friyng|form|fringe": {
+   "decision": "reject",
+   "target": "fringe",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Add as attestation to \"friyng pannes\"",
+   "ts": 1782136246949
+  },
+  "ovibus|form|basan": {
+   "decision": "reject",
+   "target": "basan",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"campanis pro ovibus\" - bell concept, for sheep qualifier\n\n\"ex ovibus\" is in this case part of a verbose qualifier that can be ignored",
+   "ts": 1782136351140
+  },
+  "ande|form|end_2": {
+   "decision": "reject",
+   "target": "end_2",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"and\"",
+   "ts": 1782136364969
+  },
+  "bargam|form|bar": {
+   "decision": "reject",
+   "target": "bar",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "per or in imply by barge",
+   "ts": 1782136406392
+  },
+  "cetarum|form|cat fur": {
+   "decision": "reassign",
+   "target": "bristle",
+   "as": "form",
+   "ts": 1782136461226
+  },
+  "capitibus|form|capito": {
+   "decision": "reject",
+   "target": "capito",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this seems to be a form of \"caput\" = \"head\", possibly requiring new concepts depending on each context.",
+   "ts": 1782136547297
+  },
+  "lapidibus|form|millstone": {
+   "decision": "reject",
+   "target": "millstone",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"lapidibus molariis\" is millstone, but the other two cases seem to be stones in the decorative sense.",
+   "ts": 1782136616275
+  },
+  "retibus|form|reticule": {
+   "decision": "reject",
+   "target": "reticule",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "fili pro retibus is thread for fishnets",
+   "ts": 1782136642450
+  },
+  "papirorum|form|paper": {
+   "decision": "accept",
+   "target": "paper",
+   "as": "form",
+   "ts": 1782136648255
+  },
+  "pavyng|form|pavise": {
+   "decision": "reject",
+   "target": "pavise",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"pro pavyng\" and \"pavyng\" are qualifiers (\"paving\").",
+   "ts": 1782136694690
+  },
+  "suorum|form|sword": {
+   "decision": "reject",
+   "target": "sword",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782136702376
+  },
+  "pyloto|form|pillow": {
+   "decision": "reject",
+   "target": "pillow",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782136707746
+  },
+  "pound|form|puncheon_2": {
+   "decision": "reject",
+   "target": "puncheon_2",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "These should have been captured by the quantity+unit parser.",
+   "ts": 1782136764876
+  },
+  "decimo|form|dicker": {
+   "decision": "reject",
+   "target": "dicker",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782136773493
+  },
+  "packþrede|form|packthrede": {
+   "decision": "accept",
+   "target": "packthrede",
+   "as": "form",
+   "ts": 1782136777146
+  },
+  "fackter|form|face": {
+   "decision": "reject",
+   "target": "face",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782136789761
+  },
+  "submersi|qualifier|submersum": {
+   "decision": "reject",
+   "target": "submersum",
+   "as": "qualifier",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782137038809
+  },
+  "multis|qualifier|multonis": {
+   "decision": "reject",
+   "target": "multonis",
+   "as": "qualifier",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"many\"",
+   "ts": 1782137054199
+  },
+  "virgatis|qualifier|virgis": {
+   "decision": "accept",
+   "target": "virgis",
+   "as": "qualifier",
+   "ts": 1782137078897
+  },
+  "pur|form|purse": {
+   "decision": "reject",
+   "target": "purse",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "both of these examples =\"pro\", so qualifiers \"for hats\" and \"for fletchers\" (occupational).",
+   "ts": 1782137160896
+  },
+  "sua|form|swan": {
+   "decision": "reject",
+   "target": "swan",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782137170653
+  },
+  "mes|form|mais": {
+   "decision": "reject",
+   "target": "mais",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Accept \"mais\" for the first example, but the second is another \"..\" prefix which should be ignored.",
+   "ts": 1782137227195
+  },
+  "gom|form|gum": {
+   "decision": "accept",
+   "target": "gum",
+   "as": "form",
+   "ts": 1782137234202
+  },
+  "wer|form|glass_3": {
+   "decision": "reject",
+   "target": "glass_3",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Another \"..\" prefix to be ignored",
+   "ts": 1782137249741
+  },
+  "oke|form|ochre": {
+   "decision": "reject",
+   "target": "ochre",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Another \"..\" prefix to ignore",
+   "ts": 1782137262971
+  },
+  "mud|form|muid": {
+   "decision": "reject",
+   "target": "muid",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Two more attestations for \"mudfish\" (include the piscibus/piscium)",
+   "ts": 1782137314399
+  },
+  "our|form|oar": {
+   "decision": "reject",
+   "target": "oar",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782137320266
+  },
+  "nde|form|end_2": {
+   "decision": "reject",
+   "target": "end_2",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "ignore \"..\" prefix",
+   "ts": 1782137334342
+  },
+  "cathedrarum|form|cathedra": {
+   "decision": "accept",
+   "target": "cathedra",
+   "as": "form",
+   "ts": 1782137347252
+  },
+  "hunc|form|honey": {
+   "decision": "reject",
+   "target": "honey",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782137379230
+  },
+  "schaftele|form|shuttle": {
+   "decision": "reassign",
+   "target": "shaft eel",
+   "as": "form",
+   "ts": 1782137393315
+  },
+  "villa|form|file": {
+   "decision": "reject",
+   "target": "file",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782137402923
+  },
+  "chambres|form|shaffrons": {
+   "decision": "reject",
+   "target": "shaffrons",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"cum <x> chambres\" is a qualifier - add it to `gun` and `sling`.",
+   "ts": 1782140116585
+  },
+  "ard|form|yard": {
+   "decision": "reject",
+   "target": "yard",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"..\" filter",
+   "ts": 1782140132471
+  },
+  "old|form|woad": {
+   "decision": "reject",
+   "target": "woad",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"..\" filter",
+   "ts": 1782140144538
+  },
+  "provest|form|prune": {
+   "decision": "reject",
+   "target": "prune",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782140149154
+  },
+  "pownd|form|puncheon_2": {
+   "decision": "reject",
+   "target": "puncheon_2",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Add \"shepe pownd\" as an attestation of `schippond`.\n\nIn the other two examples I think it means \"weighing\"?",
+   "ts": 1782140375974
+  },
+  "chafyng|form|chain": {
+   "decision": "reject",
+   "target": "chain",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Add \"chafyng disshes\" as an attestation of `chafer`.",
+   "ts": 1782140425782
+  },
+  "sindularum|form|scindula": {
+   "decision": "accept",
+   "target": "scindula",
+   "as": "form",
+   "ts": 1782140436598
+  },
+  "curaciarum|form|cuirass": {
+   "decision": "accept",
+   "target": "cuirass",
+   "as": "form",
+   "ts": 1782140455799
+  },
+  "stuff|form|stub eel": {
+   "decision": "reject",
+   "target": "stub eel",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"stuff is quilted material worn under the\nmail (OED s.v. stuff n.<sup>1</sup> 1b)\". Make a new concept. Give it \"cloth\" AAT id, and close match \"stuffed quilting [300231107]\" maybe, or is there something better?",
+   "ts": 1782140676922
+  },
+  "lingni|form|lining": {
+   "decision": "reject",
+   "target": "lining",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Needs human curation",
+   "ts": 1782140795250
+  },
+  "ordinis|form|barley": {
+   "decision": "reject",
+   "target": "barley",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "part of expression meaning \"Order of the Garter\"",
+   "ts": 1782140838779
+  },
+  "stricti|form|strike": {
+   "decision": "reject",
+   "target": "strike",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"In medieval terminology, panni stricti (Latin for \"narrow cloths\") refers to a specific category of woollen textiles produced in the Middle Ages. Also known simply as \"straits,\" these cloths were only half the width of traditional statutory broadcloths and were widely used to manufacture more affordable everyday clothing\"\n\nSo I think this needs to be a qualifier, together with \"crude\", on `tele Westfale`",
+   "ts": 1782140981544
+  },
+  "ceruris|form|lock": {
+   "decision": "accept",
+   "target": "lock",
+   "as": "form",
+   "ts": 1782140991699
+  },
+  "lynsede|form|linsey-woolsey": {
+   "decision": "reject",
+   "target": "linsey-woolsey",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "The \"olei de\" and \"olei\" words together with \"lynsede\" should be attestations of \"linseed oil\"",
+   "ts": 1782141061690
+  },
+  "shippyd|form|schippond": {
+   "decision": "reject",
+   "target": "schippond",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782141107276
+  },
+  "contentt|form|counter_3": {
+   "decision": "reject",
+   "target": "counter_3",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"containing\"",
+   "ts": 1782141128118
+  },
+  "senieur|form|censer": {
+   "decision": "reject",
+   "target": "censer",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782141134313
+  },
+  "agulettorum|form|aglett": {
+   "decision": "accept",
+   "target": "aglett",
+   "as": "form",
+   "ts": 1782141142533
+  },
+  "fryeng|form|fringe": {
+   "decision": "reject",
+   "target": "fringe",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"fryeng pannez\" should be an attestation of \"frying pan\"",
+   "ts": 1782141179944
+  },
+  "chothes|form|chock": {
+   "decision": "reject",
+   "target": "chock",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "`schort chothes` and `chothers schortt` should be attestations of `shortcloth` - you might need to create that concept.",
+   "ts": 1782141295399
+  },
+  "blowynge|form|bloweyng horn": {
+   "decision": "reject",
+   "target": "bloweyng horn",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Yes, but the full attestation includes the horn-word too, \"blowynge hornes\"",
+   "ts": 1782141352662
+  },
+  "linguarum|form|salted ox-tongue": {
+   "decision": "reject",
+   "target": "salted ox-tongue",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Correct commodity, but make sure that the full context words are included in the attestation (bovium salsa(ta)rum)",
+   "ts": 1782141512907
+  },
+  "ponderantes|form|pondus": {
+   "decision": "reject",
+   "target": "pondus",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"weighing\" - I think the idea is handled elsewhere in parsing but without this form of the word",
+   "ts": 1782141750938
+  },
+  "me|form|muid": {
+   "decision": "reject",
+   "target": "muid",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Mix of non-commodity and should be ignored \"..\"",
+   "ts": 1782141796651
+  },
+  "di|form|dye": {
+   "decision": "reject",
+   "target": "dye",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "this is an abbreviation of \"dimidi\"/\"half\"",
+   "ts": 1782141832508
+  },
+  "sociorum|form|sack": {
+   "decision": "reject",
+   "target": "sack",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782141844209
+  },
+  "we|form|wey": {
+   "decision": "reject",
+   "target": "wey",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "ignore \"..\"",
+   "ts": 1782141874202
+  },
+  "ar|form|jar": {
+   "decision": "reject",
+   "target": "jar",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "ignore \"..\"",
+   "ts": 1782141878357
+  },
+  "kerverchef|form|kerchief": {
+   "decision": "accept",
+   "target": "kerchief",
+   "as": "form",
+   "ts": 1782141882692
+  },
+  "onis|form|onion": {
+   "decision": "reject",
+   "target": "onion",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "ignore \"..\"",
+   "ts": 1782141889660
+  },
+  "preyst|form|press": {
+   "decision": "reject",
+   "target": "press",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782141899185
+  },
+  "orke|form|orchil": {
+   "decision": "reject",
+   "target": "orchil",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "Uncapitalised surname",
+   "ts": 1782141946301
+  },
+  "mastar|form|mast": {
+   "decision": "reject",
+   "target": "mast",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782141955532
+  },
+  "kynges|form|ashes": {
+   "decision": "reject",
+   "target": "ashes",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782164401924
+  },
+  "liberate|form|pound": {
+   "decision": "reject",
+   "target": "pound",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782164410444
+  },
+  "balistrerio|form|crossbow": {
+   "decision": "reject",
+   "target": "crossbow",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782164426359
+  },
+  "kyngges|form|ashes": {
+   "decision": "reject",
+   "target": "ashes",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782164460470
+  },
+  "kinges|form|ashes": {
+   "decision": "reject",
+   "target": "ashes",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782164469500
+  },
+  "manibus|form|sleeve_2": {
+   "decision": "reject",
+   "target": "sleeve_2",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782164483795
+  },
+  "agniculorum|form|lamb": {
+   "decision": "accept",
+   "target": "lamb",
+   "as": "form",
+   "ts": 1782164527273
+  },
+  "bumbardario|form|bombard": {
+   "decision": "reject",
+   "target": "bombard",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": true,
+   "note": "",
+   "ts": 1782164664450
+  },
+  "pixidibus|form|box": {
+   "decision": "accept",
+   "target": "box",
+   "as": "form",
+   "ts": 1782202016461
+  },
+  "brod|form|broom": {
+   "decision": "reject",
+   "target": "broom",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This is an already-known qualifier of \"worsted\". Why is it not being picked up as such?",
+   "ts": 1782202259697
+  },
+  "dorsis|form|dorse": {
+   "decision": "reject",
+   "target": "dorse",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "This seems to be an as-yet not-existing concept \"back|dorse|dorsis\" meaning fur from the back of an animal, with qualifiers detailing the species. Can you construct a concept that will serve?",
+   "ts": 1782202524139
+  },
+  "furrurarum|form|fur": {
+   "decision": "accept",
+   "target": "fur",
+   "as": "form",
+   "ts": 1782202545259
+  },
+  "pecteners|form|comb": {
+   "decision": "reassign",
+   "target": "pecten_2",
+   "as": "form",
+   "ts": 1782202599559
+  },
+  "fullers|form|leaf": {
+   "decision": "reject",
+   "target": "leaf",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"fullers handles\" and \"handels pro fullers\" are both attestations of \"handles pro fullers\". Add them.",
+   "ts": 1782202692883
+  },
+  "blouinge|form|bloweyng horn": {
+   "decision": "reject",
+   "target": "bloweyng horn",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "Yes, but it is the combination of two words \"blouinge hornys\" which are the attestation of bloweyng horn.",
+   "ts": 1782202769415
+  },
+  "melyng|form|honey": {
+   "decision": "reject",
+   "target": "honey",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "\"melyng nigri\" and \"melyng nigrorum\" are both attestations of \"melyng niger\"",
+   "ts": 1782206624609
+  },
+  "bysyd|form|bisilke": {
+   "decision": "reject",
+   "target": "bisilke",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"besides [the wrapper|wrappers]\"",
+   "ts": 1782206662003
+  },
+  "fete|form|foot": {
+   "decision": "reject",
+   "target": "foot",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "`foot|feet|fete` needs to be a new commodity (distinct from the measure of length:\n\nfurniture feet [300233918]",
+   "ts": 1782216513178
+  },
+  "casula|form|case": {
+   "decision": "reject",
+   "target": "case",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "`pro una casula` should be a qualifer (meaning `chasule`)",
+   "ts": 1782216758408
+  },
+  "pyk|form|pike": {
+   "decision": "reassign",
+   "target": "pitch",
+   "as": "form",
+   "ts": 1782216815020
+  },
+  "gret|form|grey": {
+   "decision": "reject",
+   "target": "grey",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "`gret` is a qualifier meaning `big`. In the second example, a word seems to be missing. Figure out how we might handle things like this.",
+   "ts": 1782216952523
+  },
+  "partem|form|pair": {
+   "decision": "reject",
+   "target": "pair",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "These are all conversions of a previously-given volume. Suggest how to handle this.",
+   "ts": 1782217126944
+  },
+  "gosse|form|gusset": {
+   "decision": "reject",
+   "target": "gusset",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "=\"goes\" on another merchant's licence",
+   "ts": 1782217408157
+  },
+  "marinorum|form|marten": {
+   "decision": "reject",
+   "target": "marten",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "New concept `sea dog` with attestation `canum marinorum`. AAT `pelts`; description \"possibly walrus or seal\"",
+   "ts": 1782217646321
+  },
+  "contentes|form|counter_3": {
+   "decision": "reject",
+   "target": "counter_3",
+   "as": "form",
+   "not_commodity": true,
+   "person_qualifier": false,
+   "note": "",
+   "ts": 1782217672931
+  },
+  "utrium|form|vitar": {
+   "decision": "reject",
+   "target": "vitar",
+   "as": "form",
+   "not_commodity": false,
+   "person_qualifier": false,
+   "note": "New concept `uter` see https://logeion.uchicago.edu/uter with optional qualifier `de corio`",
+   "ts": 1782217829203
+  },
+  "niso|form|nist": {
+   "decision": "reassign",
+   "target": "nisus",
+   "as": "form",
+   "ts": 1782218247073
+  }
+ }
+}

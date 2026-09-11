@@ -1,0 +1,953 @@
+{
+ "_note": "Ambiguous tokens whose tagged sense disagrees with the index's per-page sense. Candidate disambiguation errors — review, not auto-applied.",
+ "items": [
+  {
+   "token": "paper",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 497,
+   "pages": [
+    "II-10:189",
+    "II-12:21",
+    "II-12:26",
+    "II-12:30",
+    "II-12:57",
+    "II-1:156",
+    "II-1:158",
+    "II-1:31",
+    "II-3:11",
+    "II-3:14",
+    "II-3:23",
+    "II-3:4"
+   ],
+   "examples": [
+    "10s, 9 dossenis calcarium 30s, 10 remes ⟦paper⟧ 20s, 10,000 pynnes 10s, 4 peciis sarge ",
+    "o 2 balis speculorum menutorum, 4 balis ⟦paper⟧. Precii £66 13s 4d cust' 16s 8d",
+    "De Janyn Sucate pro 33 balis ⟦paper⟧, 5½ balis zinziberis, 1 bala boge, 1 ba"
+   ]
+  },
+  {
+   "token": "plate",
+   "tagged": "plate",
+   "suggested": "plate_3",
+   "count": 134,
+   "pages": [
+    "II-10:17",
+    "II-10:19",
+    "II-10:193",
+    "II-10:197",
+    "II-10:198",
+    "II-10:202",
+    "II-10:216",
+    "II-10:40",
+    "II-12:26",
+    "II-12:30",
+    "II-12:4",
+    "II-12:45"
+   ],
+   "examples": [
+    "De Gerardo Knyght pro 3 barellis ⟦plate⟧. Precii £9 cust' 3s 3d",
+    "e Servoys Wadeleye pro 1 hoggeshede ... ⟦plate⟧. Precii £4 cust' 12d",
+    "De Peter Brewer pro 2 barellis ⟦plate⟧. Precii £6 cust' 18d"
+   ]
+  },
+  {
+   "token": "papers",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 114,
+   "pages": [
+    "II-10:189",
+    "II-12:26",
+    "III-1:173",
+    "III-1:205",
+    "III-1:211",
+    "IV-10:124",
+    "IV-10:198",
+    "IV-10:230",
+    "IV-13:147",
+    "IV-13:227",
+    "IV-13:230",
+    "IV-13:242"
+   ],
+   "examples": [
+    " 300 alnis tele lini Flandrie crude, 30 ⟦papers⟧ poyntes et diversis mercandisis. Precii",
+    "anne Stokdon pro 8 dossenis bankers, 21 ⟦papers⟧ poyntes, 5 peciis bustian, 3200 alnis t",
+    " spenall, 514 alnis tele lini Henaud, 3 ⟦papers⟧ laune, 22 peciis bokerams, 24 lb. fili "
+   ]
+  },
+  {
+   "token": "papiri",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 90,
+   "pages": [
+    "I-4:100",
+    "I-4:104",
+    "I-4:107",
+    "I-4:108",
+    "I-4:112",
+    "I-4:115",
+    "I-4:91",
+    "I-5:110",
+    "I-5:111",
+    "I-5:116",
+    "I-5:135",
+    "I-5:149"
+   ],
+   "examples": [
+    "De Ricardo Odiham pro 160 remes ⟦papiri⟧. Precii £16 13s 4d sb' 8s 4d",
+    "De Roberto Reynald pro 10 remes ⟦papiri⟧ spendable. Precii 22s sb' 6¾d",
+    "ro 311 lb. recins de Corence, 34 reemes ⟦papiri⟧ spendeable. Precii £8 11s 8d sb' 4s 3½d"
+   ]
+  },
+  {
+   "token": "papir",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 56,
+   "pages": [
+    "II-10:189",
+    "II-10:193",
+    "II-4:101",
+    "II-4:55",
+    "II-4:86",
+    "II-4:91",
+    "II-8:19",
+    "II-8:23",
+    "II-8:27",
+    "II-8:53",
+    "II-8:75",
+    "II-8:79"
+   ],
+   "examples": [
+    "De Roberto Baron pro 36 remes ⟦papir⟧, 892 alnis tele lini piteling, 1154 aln",
+    "De Thoma Osteriche pro 2 balis ⟦papir⟧, 1200 lb. canabis, 2 gros et 4 dossenis",
+    "ook pro 1 maunda cum 200 lb. canebis, 6 ⟦papir⟧ poyntes, 3 dossenis hattes, 2 dossenis "
+   ]
+  },
+  {
+   "token": "lokkes",
+   "tagged": "lock_2",
+   "suggested": "lock",
+   "count": 28,
+   "pages": [
+    "II-10:186",
+    "II-10:197",
+    "II-10:30",
+    "II-10:35",
+    "II-2:54",
+    "II-4:136",
+    "II-4:88",
+    "II-8:45",
+    "II-8:53",
+    "II-8:79",
+    "III-1:202",
+    "III-1:215"
+   ],
+   "examples": [
+    "ro 1 fardello, 1 barello cum 4 dossenis ⟦lokkes⟧, 2 dossenis rasours, 100 lb. lini et di",
+    "o 1 pipa olei, 1 sacco plumarum, 8 gros ⟦lokkes⟧, 40 dyker cultellorum, 2 gros belles, 1",
+    "lothes, 8 dossenis chappelettes, 3 gros ⟦lokkes⟧, 9 dossenis spores et diversis haberdas"
+   ]
+  },
+  {
+   "token": "iron",
+   "tagged": "iron",
+   "suggested": "iron_2",
+   "count": 24,
+   "pages": [
+    "III-5:88",
+    "III-5:91",
+    "III-6:102",
+    "III-6:90",
+    "IV-17:110",
+    "IV-17:114",
+    "IV-17:148",
+    "IV-17:150",
+    "IV-17:151",
+    "IV-17:159",
+    "IV-17:161"
+   ],
+   "examples": [
+    "sacco canabis et 2 barellis cum 20 mark ⟦iron⟧ ware, 12 lb. countours, 10,000 horne co",
+    "um 6000 pilis, 23 cases vitri, 3 shevis ⟦iron⟧, 1 basketto cum 950* lb. pak fili, 14 t",
+    ", 1 dossena bokles, 1 lb. croci, 3 mark ⟦iron⟧ ware, 1 dossena nedles, 2 gros brusshis"
+   ]
+  },
+  {
+   "token": "pipe",
+   "tagged": "pipe (instrument)",
+   "suggested": "pipe (weight)",
+   "count": 24,
+   "pages": [
+    "IV-18:15",
+    "IV-18:17",
+    "IV-18:26",
+    "IV-18:34",
+    "IV-18:36",
+    "IV-18:43",
+    "IV-18:48",
+    "IV-18:50",
+    "IV-18:53",
+    "IV-18:54",
+    "IV-18:57",
+    "IV-18:67"
+   ],
+   "examples": [
+    "De Elyarde Esik, Hans, pro 6 tones, uno ⟦pipe⟧ oyle. Precii £26 cust' 6s 6d",
+    "ena, pro 1 barrell, 1 bale, 1 loke, one ⟦pipe⟧ continentibus 49 dimidios peces fustyon",
+    "De Barnardo Tynbanke, alienigena, pro 1 ⟦pipe⟧ continente 6000 tennes bawles. ..."
+   ]
+  },
+  {
+   "token": "ter",
+   "tagged": "tar",
+   "suggested": "ter'",
+   "count": 22,
+   "pages": [
+    "II-8:35",
+    "II-8:36",
+    "II-8:42"
+   ],
+   "examples": [
+    " lasto ferri, 2 lastis cinerum, 1 lasto ⟦ter⟧. Precii £14",
+    "lasto osemond, 100 clapholt, 8 barellis ⟦ter⟧, 1 last cinerum. Precii £13 16s 8d",
+    "½ lastis lini, 750 waynescot, 3½ lastis ⟦ter⟧. Precii £19 3s 4d"
+   ]
+  },
+  {
+   "token": "cane",
+   "tagged": "cane_2",
+   "suggested": "caen stone",
+   "count": 22,
+   "pages": [
+    "III-5:34",
+    "III-5:37",
+    "IV-1:76",
+    "IV-5:51",
+    "IV-5:52",
+    "IV-5:53",
+    "IV-5:55",
+    "IV-5:59",
+    "IV-5:60",
+    "IV-5:64",
+    "IV-5:65",
+    "IV-5:66"
+   ],
+   "examples": [
+    " Roberto Dod, alienigena, pro 15 doliis ⟦Cane⟧ stone et 1 pipa cum pomis. Precii 53s 4",
+    "nne de Mayle, alienigena, pro 18 doliis ⟦Cane⟧ stone et 8 tykes. Precii £4",
+    "ohums magistro, indigena, pro 20 doliis ⟦Cane⟧ stone, 1 fardello canvas continente 100"
+   ]
+  },
+  {
+   "token": "counters",
+   "tagged": "counter",
+   "suggested": "counter_3",
+   "count": 21,
+   "pages": [
+    "II-12:64",
+    "III-4:25",
+    "III-4:3",
+    "III-4:48",
+    "III-4:49",
+    "III-4:50",
+    "III-4:51",
+    "III-4:52"
+   ],
+   "examples": [
+    "De Johanne Louth pro 2 ⟦counters⟧ cum 12 skok trenchours, 4 pannis depict",
+    "er, Hans, pro 10 last cinerum, uno nest ⟦counters⟧ et una cista cum 2 lb. ambir, uno tymbi",
+    "6000 lene trunes, 4000 poples, 4 nestes ⟦counters⟧ et uno packe cum 1200 ulnis tele lini p"
+   ]
+  },
+  {
+   "token": "glacys",
+   "tagged": "glass_3",
+   "suggested": "glass (measure)",
+   "count": 21,
+   "pages": [
+    "II-8:105",
+    "II-8:17",
+    "II-8:23",
+    "II-8:32",
+    "II-8:45",
+    "II-8:53",
+    "II-8:72",
+    "II-8:78",
+    "II-8:84",
+    "II-8:92"
+   ],
+   "examples": [
+    " Otte van Dorne pro 2 pipis cum 13 gros ⟦glacys⟧, 9 dossenis poudir boxes de corio, 23 l",
+    "van Arnebergh pro 2 barellis cum 7 gros ⟦glacys⟧, 4 gros lokkes, 3 dossenis bagpypes, 24",
+    "o 1 ciste vitri, 1 ciste, 1 barello cum ⟦glacys⟧ et 1 ymagine de sancta Maria. Precii 40"
+   ]
+  },
+  {
+   "token": "staple",
+   "tagged": "staple fish",
+   "suggested": "staple",
+   "count": 20,
+   "pages": [
+    "IV-16:133",
+    "IV-16:134",
+    "IV-16:135",
+    "IV-16:147",
+    "IV-16:148",
+    "IV-16:168",
+    "IV-16:171",
+    "IV-16:188",
+    "IV-16:194",
+    "IV-2:13"
+   ],
+   "examples": [
+    "gena, de navi Willelmi Johnson, pro 600 ⟦staple⟧ piscibus, 400 parvis piscibus et aliis.",
+    "gena, de navi Adriani Shomaker, pro 800 ⟦staple⟧ piscibus, 200 parvis piscibus. Precii £",
+    "hannis Wiliams, pro 6 last piscium, 100 ⟦staple⟧ piscibus et 50 piscibus. Precii £25 10s"
+   ]
+  },
+  {
+   "token": "mark",
+   "tagged": "mark_2",
+   "suggested": "mark",
+   "count": 15,
+   "pages": [
+    "I-5:61",
+    "I-5:74",
+    "I-6:31",
+    "I-6:40",
+    "I-6:60",
+    "I-6:75",
+    "II-12:21",
+    "II-12:57",
+    "II-4:91",
+    "III-5:18",
+    "III-5:2",
+    "III-5:98"
+   ],
+   "examples": [
+    "aribus paternosters de ambre 10s 2d, 83 ⟦mark⟧ forpicum £6 12s 9d. Summa £22 14s 9d sb",
+    "is 28s, 13 dossenis pancheres 17s 4d, 4 ⟦mark⟧ forpicum 5s 4d. Summa £27 10s 6½d sb' 1",
+    "is cum 1200 platis albis precii £7, 124 ⟦mark⟧ forpicum £10, 348 lb. fili de latone £6"
+   ]
+  },
+  {
+   "token": "last",
+   "tagged": "last",
+   "suggested": "last_6",
+   "count": 13,
+   "pages": [
+    "IV-13:116",
+    "IV-13:230",
+    "IV-14:143",
+    "IV-2:148",
+    "IV-6:1",
+    "IV-6:109",
+    "IV-6:93",
+    "IV-6:94",
+    "IV-6:96"
+   ],
+   "examples": [
+    " nave Coppyn Motes pro 9 vagis salis, 4 ⟦last⟧ barreld piscium. Precii £58 6s 8d sub'a",
+    "ena, de nave Henrici van Starre, pro 5½ ⟦last⟧ barellorum piscium, 800 staple piscibus",
+    "De Frauncisco Gutiers, alienigena, ½ ⟦last⟧ et quinque dacre corriorum bovium tanna"
+   ]
+  },
+  {
+   "token": "bordes",
+   "tagged": "board",
+   "suggested": "board_2",
+   "count": 12,
+   "pages": [
+    "II-2:55",
+    "III-3:100",
+    "IV-1:97",
+    "IV-2:2",
+    "IV-5:109",
+    "IV-5:23",
+    "IV-5:57",
+    "IV-5:76",
+    "IV-6:128"
+   ],
+   "examples": [
+    "arellis, ½ barello samonis, 100 skyvyng ⟦bordes⟧. Precii 31s",
+    "llis cepi multonis, 40 quernstonys, 100 ⟦bordes⟧, 3 vagis vitri, 2 parvis fardellis cum ",
+    "De Georgeo van Roo, alienigena, pro 100 ⟦bordes⟧ pro sutoribus. Precii 20s cust' 3d"
+   ]
+  },
+  {
+   "token": "mark",
+   "tagged": "branding iron",
+   "suggested": "mark",
+   "count": 12,
+   "pages": [
+    "III-3:134",
+    "III-3:143",
+    "III-3:150",
+    "III-3:173",
+    "III-3:182",
+    "III-3:86",
+    "III-3:97",
+    "III-5:88",
+    "III-5:91"
+   ],
+   "examples": [
+    " 1 mawnd cum 1700 ulnis telle nigre ... ⟦mark⟧ sheris, 1 cista cum 130 ulnis tele Hola",
+    "ours, 3 nestes cofirs, 1 barello cum 34 ⟦mark⟧ hardware, 100 waynskottes, 2 saccis hop",
+    "m 6 gros bedes ligni, 4 gros lokkes, 10 ⟦mark⟧ hardware, 3 gros ynkhornes, 12 gros lac"
+   ]
+  },
+  {
+   "token": "pipa",
+   "tagged": "pipe (instrument)",
+   "suggested": "pipe (weight)",
+   "count": 11,
+   "pages": [
+    "III-1:136",
+    "III-1:15",
+    "III-1:97",
+    "IV-10:264",
+    "IV-10:276",
+    "IV-10:301",
+    "IV-10:314",
+    "IV-2:7",
+    "IV-3:161"
+   ],
+   "examples": [
+    "eryk van Baren magistro pro 2 doliis, 1 ⟦pipa⟧ ponderis ferri, 6 barellis allecis albi",
+    "De Johanne Salmer pro 1 ⟦pipa⟧ batrie. Precii £10",
+    "hannis Saraste magistro pro 4 doliis, 1 ⟦pipa⟧ ponderis ferri, 2 saccis plumarum. Prec"
+   ]
+  },
+  {
+   "token": "papyr",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 9,
+   "pages": [
+    "II-8:19",
+    "II-8:23",
+    "IV-3:226",
+    "IV-3:229"
+   ],
+   "examples": [
+    "o 1 last sope, 1 corf, 1 barello cum 24 ⟦papyr⟧ poyntes, 800 glacys, 200 alnis tele lin",
+    "e Willelmo Irwylliam pro 1 cista cum 67 ⟦papyr⟧ poyntes, 22 gros lasyng poyntes, 6 lint",
+    "s cultellorum, 3 dossenis tyn sponys, 2 ⟦papyr⟧ poyntes et diversis haberdasshrie. Prec"
+   ]
+  },
+  {
+   "token": "copbordes",
+   "tagged": "cupboard",
+   "suggested": "cupboard_2",
+   "count": 7,
+   "pages": [
+    "II-4:46",
+    "II-5:158",
+    "II-5:160",
+    "II-5:176",
+    "II-5:184",
+    "II-5:188"
+   ],
+   "examples": [
+    " 600 nucibus, 4 parvis sackis hoppes, 2 ⟦copbordes⟧. Precii £7 3s 4d",
+    "bier pottes, 300 parvis crusis terre, 2 ⟦copbordes⟧, 1 hode hoppes, 1 pari dogstones. Preci",
+    "die, 200 barellis ceparum putridarum, 2 ⟦copbordes⟧. Precii in toto £21 6s 8d"
+   ]
+  },
+  {
+   "token": "plates",
+   "tagged": "plate",
+   "suggested": "plate_3",
+   "count": 6,
+   "pages": [
+    "II-10:193",
+    "II-3:121",
+    "III-1:135",
+    "III-2:33",
+    "IV-18:4"
+   ],
+   "examples": [
+    "Byfelde pro 2 barellis plate, 300 longe ⟦plates⟧, 16 barellis selesmolt, 1 lasto saponis",
+    "ellis cum 4 gros parvorum mirrourz, 150 ⟦plates⟧, 18 felttes. Precii 36s 8d",
+    "De Johanne Aldam pro 1 barello cum 600 ⟦plates⟧ nigris. Precii 48s"
+   ]
+  },
+  {
+   "token": "croppe",
+   "tagged": "crop_2",
+   "suggested": "crop",
+   "count": 5,
+   "pages": [
+    "IV-10:151",
+    "IV-10:159",
+    "IV-11:29",
+    "IV-11:43"
+   ],
+   "examples": [
+    " bagge gualdi continente 300 lb. et uno ⟦croppe⟧ batrie continente 675 lb.. Precii £14 c",
+    "De Johanne Gysz, alienigena, pro uno ⟦croppe⟧ batrie continente 650* lb., 4 saccis et",
+    "De Johanne Gyze, alienigena, pro 1 ⟦croppe⟧ batrie ponderante 800 lb., 1 parvo bask"
+   ]
+  },
+  {
+   "token": "gomme",
+   "tagged": "gum arabic",
+   "suggested": "gum",
+   "count": 4,
+   "pages": [
+    "I-6:96",
+    "II-5:156",
+    "IV-14:84",
+    "IV-7:48"
+   ],
+   "examples": [
+    "b. anys 37s 6d, 40 lb. mases £5, 60 lb. ⟦gomme⟧ de Arabye 10s, 30 lb. galyngalle £3 15s",
+    " Gylesson pro 10 skyve tasselles, 5 lb. ⟦gomme⟧. Precii 10s",
+    "obo de Gatailla, alienigena, pro 80 lb. ⟦gomme⟧ armonyak. Precii 26s 8d cus' 4d"
+   ]
+  },
+  {
+   "token": "pack",
+   "tagged": "pack",
+   "suggested": "poke",
+   "count": 4,
+   "pages": [
+    "II-8:75",
+    "II-8:89"
+   ],
+   "examples": [
+    "De Johanne Reykyn pro 1 corff, 1 mid ⟦pack⟧, 1 fardello cum 1600 alnis canvas, 2900",
+    "De Johanne Loke pro 1 mid ⟦pack⟧ cum 800 alnis tele lini crude, 12 quyss",
+    "De Johanne Harowe pro 1 mid ⟦pack⟧, 1 pipa cum 108 remes paper spendabilis"
+   ]
+  },
+  {
+   "token": "puncheon",
+   "tagged": "puncheon_2",
+   "suggested": "puncheon",
+   "count": 4,
+   "pages": [
+    "III-1:162",
+    "III-1:24"
+   ],
+   "examples": [
+    "De eodem pro 15 pipis pomorum, 1 ⟦puncheon⟧, 1 barello cum 10½ dossenis cardes vete",
+    "ohannis Martyn pro 4 dossenis cardes, 1 ⟦puncheon⟧, 2 hoggeshedes cum 24 dossenis cardes, ",
+    "De Johanne de Buke pro uno ⟦puncheon⟧ cum 2 dossenis hattes Colonie, 3 dossen"
+   ]
+  },
+  {
+   "token": "counter",
+   "tagged": "counter",
+   "suggested": "counter_3",
+   "count": 4,
+   "pages": [
+    "III-4:3",
+    "III-4:48",
+    "III-4:52",
+    "III-4:63"
+   ],
+   "examples": [
+    "m, 7½ last tarre, uno last trane et uno ⟦counter⟧ cum 1½ peciis tele lini et una pecia Bu",
+    "yn magistro, Hans, pro 100 fungiis et 1 ⟦counter⟧ et 1 packe cum 750 fungiis woxen. Preci",
+    "pehold, 75 orys, 4 nestes counters, uno ⟦counter⟧ et 1 cista cum 1 scocke trenchors. Prec"
+   ]
+  },
+  {
+   "token": "cakes",
+   "tagged": "cake",
+   "suggested": "cake_4",
+   "count": 3,
+   "pages": [
+    "I-6:70",
+    "IV-3:237",
+    "IV-3:260"
+   ],
+   "examples": [
+    "De Clais Talyn pro 1 mande cum 52 lb. ⟦cakes⟧ spisatorum 3s 1d, 12 lb. fili crudi 3s ",
+    "De Thoma Wale, indigena, pro 20 ⟦cakes⟧ ceppi moltonis continentibus 6 vagas ac",
+    "ntibus 80 dossenas lb., 1 barello cum 8 ⟦cakes⟧ ceppi moltonis continentibus 4 vagas, 2"
+   ]
+  },
+  {
+   "token": "bord",
+   "tagged": "board",
+   "suggested": "board_2",
+   "count": 3,
+   "pages": [
+    "II-2:55",
+    "II-6:141"
+   ],
+   "examples": [
+    "De ... 3 ⟦bord⟧ ...",
+    "re, 8 lastis cinerum, 200 remys, ½ last ⟦bord⟧ pro barellis, 7 barellis cepi moltonis.",
+    "De Clays Meller pro 3 lastis ⟦bord⟧ pro barellis. Precii £3 6s 8d cust' 10d"
+   ]
+  },
+  {
+   "token": "copbord",
+   "tagged": "cupboard",
+   "suggested": "cupboard_2",
+   "count": 3,
+   "pages": [
+    "II-5:158",
+    "II-5:63"
+   ],
+   "examples": [
+    "hanne Wyflete pro 19 skyve tasselles, 1 ⟦copbord⟧. Precii 23s 4d",
+    "De Petri Botsake pro 1 countour, 1 ⟦copbord⟧. Precii in toto 6s 8d",
+    "s, 100 sparres, 4 hodes hoppes, 1 parvo ⟦copbord⟧. Precii in toto 46s 8d"
+   ]
+  },
+  {
+   "token": "glas",
+   "tagged": "glass_3",
+   "suggested": "glass",
+   "count": 3,
+   "pages": [
+    "II-8:17",
+    "II-8:23"
+   ],
+   "examples": [
+    "mbre marteryns, 1 federbed, 1 cista cum ⟦glas⟧. Precii £16",
+    "lis cum 200 alheftes, 2 gros pipys, 200 ⟦glas⟧ bedys, 25 lb. bristilles, 550 glasys et",
+    " 1 gros gymelettes, 3000 ballys, 15,000 ⟦glas⟧ bedys et diversis haberdasshrie. Precii"
+   ]
+  },
+  {
+   "token": "glas",
+   "tagged": "glass_3",
+   "suggested": "glass (measure)",
+   "count": 3,
+   "pages": [
+    "II-8:105",
+    "II-8:53",
+    "II-8:84"
+   ],
+   "examples": [
+    "2 barellis cum 300 lb. canebis, 400,000 ⟦glas⟧ bedys, 300 lb. plate albe. Precii £5 3s",
+    "renchers, 16 gros glacys, 12 gros blake ⟦glas⟧ bedys. Precii £4 5s",
+    " corfes cum 8 fetherbeddys, 2½ dossenis ⟦glas⟧ botelles et diversis haberdasshrie. Pre"
+   ]
+  },
+  {
+   "token": "frise",
+   "tagged": "frys",
+   "suggested": "frise",
+   "count": 3,
+   "pages": [
+    "IV-1:163"
+   ],
+   "examples": [
+    "um 1000 goodis cotton russet, 12 rollis ⟦frise⟧ Wallie. Precii £33",
+    "o 340 goodis cotton russet et 23 rollis ⟦frise⟧ Wallie. Precii £24 10s",
+    "rico Messenger, indigena, pro 11 rollis ⟦frise⟧ Wallie. Precii £7 6s 8d"
+   ]
+  },
+  {
+   "token": "pauper",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 3,
+   "pages": [
+    "IV-3:111",
+    "IV-6:82",
+    "IV-6:83"
+   ],
+   "examples": [
+    "De Willelmo Bullok una bala ⟦pauper⟧. Precii 20s",
+    "cobo de Pount, alienigena, pro 15 balis ⟦pauper⟧. Precii £15 cust' 3s 9d",
+    "ro 1 cista cum 20 ulnis canvas, 3 remes ⟦pauper⟧, 1 pecia tele lini continente 8 ulnas, "
+   ]
+  },
+  {
+   "token": "marc",
+   "tagged": "mark_2",
+   "suggested": "mark",
+   "count": 2,
+   "pages": [
+    "II-4:54",
+    "II-4:97"
+   ],
+   "examples": [
+    " cum 20 dossenis hamours et pynsouns, 6 ⟦marc⟧ scheris et diversis habirdashrie. Preci",
+    "De Petro Bakker pro 1 barello cum 16 ⟦marc⟧ sherys, 10 lb. countours, 6 dossenis ha"
+   ]
+  },
+  {
+   "token": "coppebordes",
+   "tagged": "cupboard",
+   "suggested": "cupboard_2",
+   "count": 2,
+   "pages": [
+    "II-4:140",
+    "II-5:190"
+   ],
+   "examples": [
+    "nrico Gisbritsson pro 700 beerpottes, 4 ⟦coppebordes⟧, 1 barello salmonis, 1 lasto querenston",
+    "De Johanne Brower pro 1 cista cum 4 ⟦coppebordes⟧ in diversis peciis. Precii 20s"
+   ]
+  },
+  {
+   "token": "papirs",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 2,
+   "pages": [
+    "II-8:23",
+    "II-8:27"
+   ],
+   "examples": [
+    "0 alnis tele lini, 67 knottes naprie, 3 ⟦papirs⟧ tele Cambrik et diversis mercandisis. P",
+    "d, 800 alnis tele Guttynges et Buske, 4 ⟦papirs⟧ laune, 4 peciis longe bokeram et divers"
+   ]
+  },
+  {
+   "token": "panni",
+   "tagged": "cloth",
+   "suggested": "narrow",
+   "count": 2,
+   "pages": [
+    "IV-16:203"
+   ],
+   "examples": [
+    "o 6 pannis curtis sine grano, 18 peciis ⟦panni⟧ stricti albi. Precii £24",
+    " 2 pannis curtis sine grano et 9 virgis ⟦panni⟧ sine grano. Precii £10 20d"
+   ]
+  },
+  {
+   "token": "papyrs",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 2,
+   "pages": [
+    "IV-3:223"
+   ],
+   "examples": [
+    "Spodelle, pro 2 cistis continentibus 79 ⟦papyrs⟧ buckerams et 46 dimidias pecias Flemysh",
+    "rdello continente 32 pecias Gentish, 48 ⟦papyrs⟧ buckerams et 24 rollez buckerams, 22 di"
+   ]
+  },
+  {
+   "token": "paperis",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 2,
+   "pages": [
+    "IV-5:51",
+    "IV-6:110"
+   ],
+   "examples": [
+    "s cultellorum, 2 gros balence et 4 gros ⟦paperis⟧. Precii 20s cust' 3d",
+    "e, alienigena, pro 1½ dossenis parvorum ⟦paperis⟧ images, 10 dossenis drynkyng glasses, 7"
+   ]
+  },
+  {
+   "token": "elles",
+   "tagged": "eel",
+   "suggested": "ell",
+   "count": 1,
+   "pages": [
+    "II-1:48"
+   ],
+   "examples": [
+    "cii £4 13s 4d, 5000 pimpernellis et red ⟦elles⟧ £3 6s 8d. Summa £8 cust' 2s"
+   ]
+  },
+  {
+   "token": "mace",
+   "tagged": "mace (sceptre)",
+   "suggested": "mace",
+   "count": 1,
+   "pages": [
+    "II-12:52"
+   ],
+   "examples": [
+    "lis mader, 3 balis almondes, 2 balettis ⟦mace⟧ debilis. Precii £23 sb' 23s"
+   ]
+  },
+  {
+   "token": "garner",
+   "tagged": "garner",
+   "suggested": "garner_2",
+   "count": 1,
+   "pages": [
+    "II-2:221"
+   ],
+   "examples": [
+    " Lender pro 8 barellis rappe olei £8, 1 ⟦garner⟧ cum 300,000 nucibus £4, 1 sack lini 6s "
+   ]
+  },
+  {
+   "token": "stool",
+   "tagged": "stool",
+   "suggested": "stool_2",
+   "count": 1,
+   "pages": [
+    "II-6:159"
+   ],
+   "examples": [
+    "m 200 lb. canabis, 3 copbordes, 1 parvo ⟦stool⟧. Precii in toto £4 7s 2d cust' 13¼d"
+   ]
+  },
+  {
+   "token": "tale",
+   "tagged": "tale",
+   "suggested": "tale_2",
+   "count": 1,
+   "pages": [
+    "II-8:37"
+   ],
+   "examples": [
+    "De Gerrardi Hughson pro 4 ⟦tale⟧ parvis plays siccis, 1 fetherbed vetere"
+   ]
+  },
+  {
+   "token": "rasours",
+   "tagged": "razor",
+   "suggested": "raser",
+   "count": 1,
+   "pages": [
+    "III-1:24"
+   ],
+   "examples": [
+    "glasses, 4 dossenis pouchis, 4 dossenis ⟦rasours⟧. Precii £8"
+   ]
+  },
+  {
+   "token": "hornes",
+   "tagged": "inkhorn",
+   "suggested": "horn_3",
+   "count": 1,
+   "pages": [
+    "III-2:168"
+   ],
+   "examples": [
+    "igena, pro 1 fatt, 1 barello cum 6 gros ⟦hornes⟧ parvorum, 5 gros ruet hornes. Precii £4"
+   ]
+  },
+  {
+   "token": "bolt",
+   "tagged": "bolt_2",
+   "suggested": "bolt_3",
+   "count": 1,
+   "pages": [
+    "III-3:83"
+   ],
+   "examples": [
+    "ey wark cors, 2 furres calabre, 1 furre ⟦bolt⟧ wombis et 12 pellibus de otir. Precii £"
+   ]
+  },
+  {
+   "token": "bottom",
+   "tagged": "bottom",
+   "suggested": "bottom_2",
+   "count": 1,
+   "pages": [
+    "III-5:37"
+   ],
+   "examples": [
+    " barello cum 30 paribus wolle cardes, 1 ⟦bottom⟧ of a basyn, 1 barello wyne lyes, 1 bras"
+   ]
+  },
+  {
+   "token": "coborde",
+   "tagged": "cupboard",
+   "suggested": "cupboard_2",
+   "count": 1,
+   "pages": [
+    "IV-11:33"
+   ],
+   "examples": [
+    "De Derike Henrikson, alienigena, pro 1 ⟦coborde⟧ et aliis. Precii 20s"
+   ]
+  },
+  {
+   "token": "swan",
+   "tagged": "swan_2",
+   "suggested": "swan",
+   "count": 1,
+   "pages": [
+    "IV-17:116"
+   ],
+   "examples": [
+    "sbrand Arnoldson 2 pecis Holond et 4000 ⟦swan⟧ quilles. Precii 36s 8d"
+   ]
+  },
+  {
+   "token": "prest papers",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 1,
+   "pages": [
+    "IV-17:166"
+   ],
+   "examples": [
+    "De Jaques Foliat, alienigena, pro 500 ⟦prest papers⟧, 600 pressyng bourdes. Precii 16s 8d"
+   ]
+  },
+  {
+   "token": "borde",
+   "tagged": "board",
+   "suggested": "board_2",
+   "count": 1,
+   "pages": [
+    "IV-18:87"
+   ],
+   "examples": [
+    " 35 lyne bordes, one schok disches, one ⟦borde⟧, 36 ores. Precii £7 8s 4d cust' 22¼d"
+   ]
+  },
+  {
+   "token": "papar",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 1,
+   "pages": [
+    "IV-23:49"
+   ],
+   "examples": [
+    "nave Christian Cornelis, pro 100 reames ⟦papar⟧. Precii £6 13s 4d"
+   ]
+  },
+  {
+   "token": "paperes",
+   "tagged": "paper (measure)",
+   "suggested": "paper",
+   "count": 1,
+   "pages": [
+    "IV-5:47"
+   ],
+   "examples": [
+    "lienigena, pro 200 remes paper, 12 gros ⟦paperes⟧ de pectinibus. Precii £15 cust' 3s 9d"
+   ]
+  },
+  {
+   "token": "tassel",
+   "tagged": "tiercel",
+   "suggested": "tassel",
+   "count": 1,
+   "pages": [
+    "IV-7:14"
+   ],
+   "examples": [
+    "n Elst, alienigena, pro 1 goshawke et 5 ⟦tassel⟧. Precii 20s"
+   ]
+  },
+  {
+   "token": "cake",
+   "tagged": "cake",
+   "suggested": "cake_4",
+   "count": 1,
+   "pages": [
+    "IV-7:58"
+   ],
+   "examples": [
+    "bottes, alienigena, pro 1 parvo barello ⟦cake⟧ brede, 1 parvo basket cum 80 pomegarnet"
+   ]
+  }
+ ]
+}

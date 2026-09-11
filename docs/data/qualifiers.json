@@ -1,0 +1,8466 @@
+{
+  "schemaVersion": 1,
+  "_note": "Canonical qualifier store (rationalisation). Reviewed: colours, weaves/structure/pattern, sizes, quality/grade, materials (2026-06-24). Pending: provenance (places, needs WHG).",
+  "canonicals": {
+    "abhortorum": {
+      "label": "abhortorum",
+      "lang": "mul",
+      "forms": [
+        "abhortorum"
+      ],
+      "gloss": "Unknown qualifier for untanned leather",
+      "memo": "Unknown qualifier for tawed leather. Only appears once in 1450: 2-10-E-0124",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "acres": {
+      "label": "acres",
+      "lang": "mul",
+      "forms": [
+        "acres"
+      ],
+      "gloss": "Unknown type/place of production for linen cloth. ",
+      "memo": "\"tele lini de Acres\" an unknown variant of linen cloth. Appears once in 1442: 2-8-A-0057. The other \"de Acres\" and \"Acres\" will need removing as names.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "agninis": {
+      "label": "agninis",
+      "lang": "mul",
+      "forms": [
+        "agninis",
+        "agnorum"
+      ],
+      "gloss": "of lamb"
+    },
+    "agnorum nigrorum debilium": {
+      "label": "agnorum nigrorum debilium",
+      "lang": "mul",
+      "forms": [
+        "agnorum nigrorum debilium"
+      ],
+      "gloss": "(skins) of black lambs of low quality "
+    },
+    "alabaster": {
+      "label": "alabaster",
+      "lang": "mul",
+      "forms": [
+        "alabaster",
+        "alablaster"
+      ],
+      "gloss": "of alabaster "
+    },
+    "albertyn": {
+      "label": "albertyn",
+      "lang": "mul",
+      "forms": [
+        "albertyn"
+      ],
+      "gloss": "Unknown qualifier of pellis/pellibus",
+      "memo": "Unknown qualifier - undefined by Jenks. EB 12/08/2026. Clearly some kind of skin. Only appears in 1463. Lading ID 3-1-E-0124",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "alchemy": {
+      "label": "alchemy",
+      "lang": "mul",
+      "forms": [
+        "alkamy",
+        "alkamyn",
+        "de alkamyn",
+        "alchemy",
+        "alcumye"
+      ],
+      "gloss": "made of alchemy — a gold-imitation metal alloy (brass/latten); OED s.v. alchemy 2"
+    },
+    "all sortes": {
+      "label": "all sortes",
+      "lang": "mul",
+      "forms": [
+        "all sortes"
+      ],
+      "gloss": "all sorts or all kinds - as a qualifier of eels, fish etc. "
+    },
+    "almain": {
+      "label": "Almain",
+      "lang": "mul",
+      "forms": [
+        "almayn",
+        "almayne",
+        "almen",
+        "almene",
+        "almannie"
+      ],
+      "gloss": "of German (Almain) manufacture"
+    },
+    "almyn": {
+      "label": "Almyn",
+      "lang": "geo",
+      "gloss": "from Almyn",
+      "forms": [
+        "almyn"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "altar": {
+      "label": "altar",
+      "lang": "mul",
+      "forms": [
+        "auter"
+      ],
+      "gloss": "For an altar. ",
+      "memo": "Check that these should not be merged as part of concepts. EB 12/08/2026"
+    },
+    "amber": {
+      "label": "amber",
+      "lang": "mul",
+      "forms": [
+        "ambre",
+        "aumbre"
+      ],
+      "gloss": "of amber ",
+      "memo": "Some of these should be amber as a concept rather than a qualifier. Amber as a qualifier should be for amber beads etc. 12/08/2026."
+    },
+    "ammoniac": {
+      "label": "ammoniac",
+      "lang": "mul",
+      "forms": [
+        "armoniac",
+        "armoniake",
+        "armonyak",
+        "armonyake"
+      ],
+      "gloss": "gum ammoniac (medicinal gum)",
+      "memo": "\"sal armoneak\" and \"gumme armoniac\" should probably be concepts rather than separated qualifiers. "
+    },
+    "anjou": {
+      "label": "Anjou",
+      "lang": "geo",
+      "forms": [
+        "angeo",
+        "angew",
+        "angewe",
+        "aung"
+      ],
+      "gloss": "from Anjou"
+    },
+    "aperti": {
+      "label": "aperti",
+      "lang": "mul",
+      "forms": [
+        "aperte",
+        "aperti",
+        "apperti"
+      ],
+      "gloss": "open (open-weave, or unwrapped)"
+    },
+    "arabia": {
+      "label": "Arabia",
+      "lang": "geo",
+      "forms": [
+        "arabek",
+        "arabeke",
+        "arabekk",
+        "arabick",
+        "arabik",
+        "araby",
+        "arabyk"
+      ],
+      "gloss": "of Arabia / Arabic",
+      "geo": {
+        "id": "Q31945",
+        "wikidata": "https://www.wikidata.org/entity/Q31945",
+        "label": "Arabia",
+        "dataset": "wikidata",
+        "point": [
+          46,
+          23
+        ],
+        "hasPolygon": true,
+        "osm_relation": "5631846"
+      },
+      "memo": "Gum arabic should probably be a multi-compartment concept rather than concept + qualifier. EB 12/08/2026"
+    },
+    "archer": {
+      "label": "archer",
+      "lang": "occ",
+      "forms": [
+        "pro archers",
+        "archers"
+      ],
+      "gloss": "for archers' use"
+    },
+    "ardentis": {
+      "label": "ardentis",
+      "lang": "mul",
+      "forms": [
+        "ardentis"
+      ],
+      "gloss": "bright-colored thread"
+    },
+    "ares": {
+      "label": "ares",
+      "lang": "mul",
+      "forms": [
+        "ares",
+        "aries",
+        "arrys"
+      ],
+      "gloss": "arras, a rich tapestry fabric woven at Arras",
+      "memo": "Should be promoted to concept status and merged with \"Arras\" EB 12/08/2026"
+    },
+    "arming": {
+      "label": "arming",
+      "lang": "mul",
+      "forms": [
+        "armyng"
+      ],
+      "gloss": "arming (for armour) — e.g. arming hammer/nail/doublet"
+    },
+    "assize": {
+      "label": "assize",
+      "lang": "mul",
+      "forms": [
+        "assisa",
+        "assise",
+        "assize",
+        "de assisa"
+      ],
+      "gloss": "of assize (standard-sized English woollen)"
+    },
+    "augsburg": {
+      "label": "Augsburg",
+      "lang": "geo",
+      "forms": [
+        "osberous",
+        "osburgh"
+      ],
+      "gloss": "from Augsburg",
+      "geo": {
+        "id": "Q2749",
+        "wikidata": "https://www.wikidata.org/entity/Q2749",
+        "label": "Augsburg",
+        "dataset": "wikidata",
+        "point": [
+          10.89778,
+          48.36889
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62407"
+      }
+    },
+    "aussay": {
+      "label": "Aussay",
+      "lang": "geo",
+      "forms": [
+        "ossei"
+      ],
+      "gloss": "vin d'Aussay (from Alsace)"
+    },
+    "azores": {
+      "label": "Azores",
+      "lang": "geo",
+      "forms": [
+        "insula de surie",
+        "insula de surr’",
+        "surie"
+      ],
+      "gloss": "from the Azores (Insula de Surie) — a source of woad",
+      "memo": "Azores; needs WHG geo"
+    },
+    "azure": {
+      "label": "azure",
+      "lang": "mul",
+      "forms": [
+        "asuri"
+      ],
+      "gloss": "azure, bright blue",
+      "memo": "\"60 lb. asuri\" should be removed from this qualifier. EB 12/08/2026. However, they are connected."
+    },
+    "bajon": {
+      "label": "Bajon",
+      "lang": "geo",
+      "forms": [
+        "bajon",
+        "bajoun"
+      ],
+      "gloss": "from Bajon",
+      "memo": "provenance, possibly Bayonne; uncertain; needs WHG geo"
+    },
+    "bak": {
+      "label": "back",
+      "lang": "mul",
+      "forms": [
+        "back",
+        "backes",
+        "backs",
+        "baco",
+        "bak",
+        "bakes",
+        "bakke",
+        "bakkes"
+      ],
+      "gloss": "fur from the back of the animal",
+      "memo": "\"olei baco\" is will need to be removed from this qualifier set. EB 12/08/2026"
+    },
+    "baras": {
+      "label": "baras",
+      "lang": "mul",
+      "forms": [
+        "baras",
+        "bares",
+        "barras",
+        "barre"
+      ],
+      "gloss": "a coarse linen fabric imported the county of Bar (Hanham 263); OED s.v. barras1 'imported from Holland' is misleading)"
+    },
+    "barber": {
+      "label": "barber",
+      "lang": "occ",
+      "forms": [
+        "barbour"
+      ],
+      "gloss": "for barbers' use"
+    },
+    "barelled": {
+      "label": "barelled",
+      "lang": "mul",
+      "forms": [
+        "barelled",
+        "barreld"
+      ],
+      "gloss": "in barrels. "
+    },
+    "barge": {
+      "label": "barge",
+      "lang": "mul",
+      "forms": [
+        "barge"
+      ],
+      "gloss": "For barges. "
+    },
+    "barowe": {
+      "label": "barowe",
+      "lang": "geo",
+      "forms": [
+        "barowe"
+      ],
+      "gloss": "of Bergen-op-Zoom (Regularly spelled \"Barowe\" in Middle English)"
+    },
+    "basan": {
+      "label": "basan",
+      "lang": "mul",
+      "forms": [
+        "basell",
+        "basells",
+        "basen",
+        "basene",
+        "basens",
+        "basille",
+        "bazell"
+      ],
+      "gloss": "basil — bark-tanned sheepskin leather"
+    },
+    "bastard": {
+      "label": "bastard",
+      "lang": "mul",
+      "forms": [
+        "bastard",
+        "bastardes",
+        "bastardum",
+        "bastardus"
+      ],
+      "gloss": "inferior or mixed quality"
+    },
+    "bay": {
+      "label": "bay",
+      "lang": "mul",
+      "forms": [
+        "baie",
+        "bay",
+        "baye",
+        "bayes"
+      ],
+      "gloss": "Bay salt, from the Baye de Bourgneuf"
+    },
+    "beatemarie": {
+      "label": "beate marie",
+      "lang": "mul",
+      "forms": [
+        "beate marie"
+      ],
+      "gloss": "of the Virgin Mary ",
+      "memo": "Several of these will need sifting as non qualifiers: \"factore et attornato prioris monasterii beate Marie et sancti Martini Dovorrie\" EB 12/08/2026.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "beaten": {
+      "label": "beaten",
+      "lang": "mul",
+      "forms": [
+        "betyn",
+        "bet"
+      ],
+      "gloss": ""
+    },
+    "beaver": {
+      "label": "beaver",
+      "lang": "mul",
+      "forms": [
+        "bever"
+      ],
+      "gloss": "",
+      "memo": "Some of these will need sifting as composite concepts. EB 12/08/2026."
+    },
+    "bed": {
+      "label": "for beds",
+      "lang": "mul",
+      "forms": [
+        "pro lectis",
+        "lecti"
+      ],
+      "gloss": "for beds / bed-hangings",
+      "memo": "Some of these will need sifting as concepts - i.e. bedcovers. \"lectis enbroudatis\" etc. \"lectis de worsted.\" EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "belandine": {
+      "label": "belandine",
+      "lang": "mul",
+      "forms": [
+        "belandyn",
+        "belendyn",
+        "belendyne"
+      ],
+      "gloss": "belandine — ginger 'from the countryside'"
+    },
+    "belgrave": {
+      "label": "Belgrave",
+      "lang": "mul",
+      "forms": [
+        "belgrave"
+      ],
+      "gloss": "Unknown - clearly a type of silk but provenance unclear. ",
+      "memo": "An unknown qualifier of silk. Jenks does not define it. Only appears once in 1547: Lading ID 4-20-D-0207."
+    },
+    "benker": {
+      "label": "benker",
+      "lang": "mul",
+      "forms": [
+        "benker"
+      ],
+      "gloss": "Unknown qualifier of bolting cloth. ",
+      "helpWanted": true,
+      "reviewed": false,
+      "memo": "Unknown qualifier of bolting cloth. Jenks does not define. Only appears in 1390. https://docuracy.github.io/London_Customs_Accounts/?types=tunnage%2Cpetty&range=1380%2C1557&sort=primary_date%2Casc&q=bultelli*+%26+benker*&mode=annotations"
+    },
+    "benshille": {
+      "label": "benshille",
+      "lang": "mul",
+      "forms": [
+        "benshille"
+      ],
+      "gloss": "Type of cloth of an unknown location. ",
+      "memo": "Clearly a type of cloth - location unknown. Jenks does not identify. EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "berfflete": {
+      "label": "Berfflete",
+      "lang": "geo",
+      "gloss": "from Berfflete",
+      "forms": [
+        "berfflete"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "berflete": {
+      "label": "Berflete",
+      "lang": "mul",
+      "forms": [
+        "barflet",
+        "barflete",
+        "berflet",
+        "berflete",
+        "berflette"
+      ],
+      "gloss": "from Berflete in Flanders/Zeeland"
+    },
+    "bernycat": {
+      "label": "bernycat",
+      "lang": "geo",
+      "forms": [
+        "bernycat",
+        "burnygate"
+      ],
+      "gloss": "Unknown type of saffron [croci]",
+      "memo": "Only seen twice: 1 in 1508: Lading ID 4-8-B-0530 [bernycat]",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bilbao": {
+      "label": "Bilbao",
+      "lang": "geo",
+      "forms": [
+        "bilbow",
+        "bilbo",
+        "bylbow",
+        "belbow"
+      ],
+      "gloss": "from Bilbao",
+      "geo": {
+        "id": "Q8692",
+        "wikidata": "https://www.wikidata.org/entity/Q8692",
+        "label": "Bilbao",
+        "dataset": "wikidata",
+        "point": [
+          -2.935,
+          43.26306
+        ],
+        "hasPolygon": true,
+        "osm_relation": "339549"
+      },
+      "memo": "\"vicinis ville de Bilbao in comitatu Byskaye\" will need removing from this qualifier. EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "binding": {
+      "label": "binding",
+      "lang": "mul",
+      "forms": [
+        "binding",
+        "bindyng",
+        "bynding",
+        "byndyng"
+      ],
+      "gloss": "for binding (probably equivalent to binding twine)"
+    },
+    "black": {
+      "label": "black",
+      "lang": "mul",
+      "forms": [
+        "black",
+        "blacke",
+        "blacks",
+        "blak",
+        "blake",
+        "blaks",
+        "get",
+        "gete",
+        "niger",
+        "nigers",
+        "nigr",
+        "nigra",
+        "nigras",
+        "nigre",
+        "nigri",
+        "nigris",
+        "nigro",
+        "nigrorum",
+        "nigrum",
+        "nigrus",
+        "noires"
+      ],
+      "gloss": "black in color",
+      "aat": {
+        "specific": "300130920",
+        "label": "black (color)"
+      }
+    },
+    "blackened": {
+      "label": "blackened",
+      "lang": "mul",
+      "forms": [
+        "nigrata",
+        "nigrato",
+        "nigratorum",
+        "blackened"
+      ],
+      "gloss": "blackened — a leather treatment (corium nigratum), distinct from the colour black"
+    },
+    "bleked": {
+      "label": "bleked",
+      "lang": "mul",
+      "forms": [
+        "bleked",
+        "blekked"
+      ],
+      "gloss": "bleached"
+    },
+    "blekid": {
+      "label": "blekid",
+      "lang": "mul",
+      "forms": [
+        "bleched",
+        "blekid"
+      ],
+      "gloss": "bleached"
+    },
+    "blue": {
+      "label": "blue",
+      "lang": "mul",
+      "forms": [
+        "asuree",
+        "bleu",
+        "blew",
+        "blewe",
+        "blodii",
+        "blodium",
+        "blodius"
+      ],
+      "gloss": "blue in color",
+      "aat": {
+        "specific": "300129361",
+        "label": "blue (color)"
+      }
+    },
+    "boarded": {
+      "label": "boarded",
+      "lang": "mul",
+      "forms": [
+        "borded",
+        "bonded"
+      ],
+      "gloss": "bound with boards"
+    },
+    "boisleduc": {
+      "label": "'s-Hertogenbosch",
+      "lang": "geo",
+      "forms": [
+        "busk",
+        "buske",
+        "bussch"
+      ],
+      "gloss": "from 's-Hertogenbosch",
+      "geo": {
+        "id": "Q2766547",
+        "wikidata": "https://www.wikidata.org/entity/Q2766547",
+        "label": "'s-Hertogenbosch",
+        "dataset": "wikidata",
+        "point": [
+          5.31667,
+          51.7
+        ],
+        "hasPolygon": true,
+        "osm_relation": "162798"
+      }
+    },
+    "bollen": {
+      "label": "Bollen",
+      "lang": "geo",
+      "gloss": "from Bologna",
+      "forms": [
+        "bollen"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'bologna' — review/merge in the editor."
+    },
+    "bologna": {
+      "label": "Bologna",
+      "lang": "geo",
+      "forms": [
+        "bolone",
+        "bullen",
+        "bulleyn"
+      ],
+      "gloss": "from Bologna",
+      "geo": {
+        "id": "Q1891",
+        "wikidata": "https://www.wikidata.org/entity/Q1891",
+        "label": "Bologna",
+        "dataset": "wikidata",
+        "point": [
+          11.34278,
+          44.49389
+        ],
+        "hasPolygon": true,
+        "osm_relation": "43172"
+      }
+    },
+    "bolt": {
+      "label": "bolt",
+      "lang": "mul",
+      "forms": [
+        "bolt",
+        "bolte",
+        "bolter",
+        "bultelli",
+        "bultellum"
+      ],
+      "gloss": "cloth for sifting flour (bolting-cloth)"
+    },
+    "bond et unbond": {
+      "label": "bond et unbond",
+      "lang": "mul",
+      "forms": [
+        "bond et unbond"
+      ],
+      "gloss": "bound and unbound"
+    },
+    "bone": {
+      "label": "bone",
+      "lang": "mul",
+      "forms": [
+        "boan",
+        "boane",
+        "bon",
+        "bone",
+        "bones",
+        "bonne",
+        "bonys",
+        "osseo",
+        "ossi",
+        "ossis",
+        "ossium",
+        "boon"
+      ],
+      "gloss": "made of bone",
+      "aat": {
+        "specific": "300011798",
+        "label": "bone (material)"
+      },
+      "memo": "\"cotille bones\" may need removing as \"cuttle bone\" here. EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bordeaux": {
+      "label": "Bordeaux",
+      "lang": "geo",
+      "forms": [
+        "bordeus",
+        "burdeoux",
+        "burdeus",
+        "burdox"
+      ],
+      "gloss": "of Bordeaux",
+      "geo": {
+        "id": "Q1479",
+        "wikidata": "https://www.wikidata.org/entity/Q1479",
+        "label": "Bordeaux",
+        "dataset": "wikidata",
+        "point": [
+          -0.57944,
+          44.83778
+        ],
+        "hasPolygon": true,
+        "osm_relation": "105270"
+      }
+    },
+    "bound": {
+      "label": "bound",
+      "lang": "mul",
+      "forms": [
+        "bound",
+        "bounde",
+        "bownd",
+        "legatis",
+        "ligata",
+        "ligati",
+        "ligatis",
+        "ligatorum",
+        "ligatus",
+        "non ligatorum",
+        "inligati"
+      ],
+      "gloss": "bound ",
+      "memo": "This needs sifting. Some will be merged into the \"bound/unbound\" some are bound kettles/vessels etc. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bovini": {
+      "label": "bovini",
+      "lang": "mul",
+      "forms": [
+        "bovini"
+      ],
+      "gloss": "of cows ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bower": {
+      "label": "bower",
+      "lang": "mul",
+      "forms": [
+        "bower"
+      ],
+      "gloss": "for the use of bowyers.",
+      "memo": "\"Wyllyam Bower\" needs removing here as a name. Bower knives only appear once in 1481. Lading ID 3-5-A-0205",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "box": {
+      "label": "box",
+      "lang": "mul",
+      "forms": [
+        "box",
+        "boxe"
+      ],
+      "gloss": "Made of boxwood "
+    },
+    "brabant": {
+      "label": "Brabant",
+      "lang": "geo",
+      "forms": [
+        "braban",
+        "brabancia",
+        "brabancie",
+        "braband",
+        "brabande",
+        "brabandes",
+        "brabane",
+        "brabans",
+        "brabant",
+        "brabantie",
+        "brabyn",
+        "de brabancia",
+        "ripland",
+        "rippland"
+      ],
+      "gloss": "manufactured in Brabant",
+      "geo": {
+        "id": "Q159856",
+        "wikidata": "https://www.wikidata.org/entity/Q159856",
+        "label": "Duchy of Brabant",
+        "dataset": "wikidata",
+        "point": [
+          4.3,
+          50.8
+        ],
+        "hasPolygon": false
+      }
+    },
+    "brak": {
+      "label": "Brak",
+      "lang": "mul",
+      "forms": [
+        "brak"
+      ],
+      "gloss": "Cloth of an unknown type/location. ",
+      "memo": "\"brak nailles\" will need removing from this concept. Brak as an unknown example of cloth. Only appears once in 1442: Lading ID 2-8-A-0011 EB 12/08/2026. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "branch": {
+      "label": "branch",
+      "lang": "mul",
+      "forms": [
+        "branches de"
+      ],
+      "gloss": "branch (i,e, piece) of coral ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "brass": {
+      "label": "brass",
+      "lang": "mul",
+      "forms": [
+        "bras",
+        "brase",
+        "brass",
+        "brasse",
+        "enea",
+        "enei",
+        "eneo",
+        "eneum",
+        "eneus",
+        "ennee",
+        "enneum"
+      ],
+      "gloss": "made of brass",
+      "aat": {
+        "specific": "300010946",
+        "label": "brass (alloy)"
+      }
+    },
+    "brazil": {
+      "label": "brazil",
+      "lang": "mul",
+      "forms": [
+        "brasel",
+        "brasell",
+        "brasil",
+        "brasill",
+        "brasille",
+        "brassel",
+        "brassell",
+        "bresel",
+        "bresell"
+      ],
+      "gloss": "brazilwood — a red dyewood",
+      "memo": "Check attestations here. EB 12/08/2026. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "brewyng": {
+      "label": "brewyng",
+      "lang": "mul",
+      "forms": [
+        "brewyng",
+        "brewing"
+      ],
+      "gloss": "for brewing ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bridgwater": {
+      "label": "Bridgwater",
+      "lang": "geo",
+      "forms": [
+        "bridgewaters",
+        "briggewater",
+        "brygwater",
+        "brygwaters"
+      ],
+      "gloss": "from Bridgwater",
+      "geo": {
+        "id": "Q914015",
+        "wikidata": "https://www.wikidata.org/entity/Q914015",
+        "label": "Bridgwater",
+        "dataset": "wikidata",
+        "point": [
+          -2.993,
+          51.128
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2707123"
+      }
+    },
+    "brielle": {
+      "label": "Brielle",
+      "lang": "mul",
+      "forms": [
+        "brele"
+      ],
+      "gloss": "Made in Brielle, NL ",
+      "memo": "\"Johanne van Brele\" will need removing from this qualifier EB 12/08/2026. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "brigandyn": {
+      "label": "brigandyn",
+      "lang": "mul",
+      "forms": [
+        "brigandyn"
+      ],
+      "gloss": "nails for brigandines (armour)."
+    },
+    "bristol": {
+      "label": "Bristol",
+      "lang": "geo",
+      "forms": [
+        "bristo",
+        "bristow",
+        "bristowe"
+      ],
+      "gloss": "from Bristol",
+      "geo": {
+        "id": "Q23154",
+        "wikidata": "https://www.wikidata.org/entity/Q23154",
+        "label": "Bristol",
+        "dataset": "wikidata",
+        "point": [
+          -2.5975,
+          51.45361
+        ],
+        "hasPolygon": true,
+        "osm_relation": "5746665"
+      }
+    },
+    "brittany": {
+      "label": "Brittany",
+      "lang": "geo",
+      "forms": [
+        "bretannie",
+        "bretishe",
+        "brettys",
+        "bretyshe",
+        "britain",
+        "britan",
+        "britannia",
+        "britannie",
+        "britnes",
+        "britt",
+        "brittan",
+        "brittene",
+        "brittyshe",
+        "brytone",
+        "brytten",
+        "brytten de filo",
+        "bryttone",
+        "brytyshe",
+        "crese",
+        "britten",
+        "brettyn",
+        "breton",
+        "bryttysh"
+      ],
+      "gloss": "from Brittany",
+      "geo": {
+        "id": "Q12130",
+        "wikidata": "https://www.wikidata.org/entity/Q12130",
+        "label": "Brittany",
+        "dataset": "wikidata",
+        "point": [
+          -3,
+          48
+        ],
+        "hasPolygon": true,
+        "osm_relation": "102740"
+      }
+    },
+    "broad": {
+      "label": "broad",
+      "lang": "mul",
+      "forms": [
+        "breide",
+        "broadcloth",
+        "brod",
+        "brode",
+        "brodes",
+        "larga",
+        "large",
+        "largi",
+        "largis",
+        "largo",
+        "largos",
+        "largum",
+        "largus",
+        "lata",
+        "latis"
+      ],
+      "gloss": "broad (width of cloth)"
+    },
+    "broche cum auro": {
+      "label": "broche cum auro",
+      "lang": "mul",
+      "forms": [
+        "broche cum auro",
+        "broche cum auro fino",
+        "broche cum auro venesie",
+        "brochid cum auro"
+      ],
+      "gloss": "embroidered with gold thread ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "broken": {
+      "label": "broken",
+      "lang": "mul",
+      "forms": [
+        "brok",
+        "broke",
+        "broken",
+        "brokene",
+        "brokes",
+        "brokin",
+        "brokyn",
+        "confractis",
+        "fracto",
+        "fractum",
+        "fractus",
+        "pell",
+        "repp",
+        "sheff"
+      ],
+      "gloss": "broken / damaged"
+    },
+    "browderers": {
+      "label": "browderers",
+      "lang": "mul",
+      "forms": [
+        "browderers"
+      ],
+      "gloss": "for embroiderers "
+    },
+    "brown": {
+      "label": "brown",
+      "lang": "mul",
+      "forms": [
+        "broun",
+        "broune",
+        "brown",
+        "browne"
+      ],
+      "gloss": "brown ",
+      "aat": {
+        "specific": "300127490",
+        "label": "brown (color)"
+      }
+    },
+    "bruges": {
+      "label": "Bruges",
+      "lang": "geo",
+      "forms": [
+        "bredges",
+        "breges",
+        "bridges",
+        "briges",
+        "brigges",
+        "briggis",
+        "bruges",
+        "bruges coper gold",
+        "bruges cum copper auri",
+        "bruges pirled cum copper auro",
+        "brugga",
+        "brugges",
+        "brugis",
+        "brydges",
+        "bryges"
+      ],
+      "gloss": "from Bruges",
+      "geo": {
+        "id": "Q12994",
+        "wikidata": "https://www.wikidata.org/entity/Q12994",
+        "label": "Bruges",
+        "dataset": "wikidata",
+        "point": [
+          3.22417,
+          51.20889
+        ],
+        "hasPolygon": true,
+        "osm_relation": "562654"
+      },
+      "memo": "Couple of things need sifting from this \"bredes\" needs removing and connecting to \"pax\" as example of paxboards. EB 12/08/2026. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "brunswick": {
+      "label": "Brunswick",
+      "lang": "geo",
+      "forms": [
+        "bronswichis",
+        "bronswyke",
+        "brouneswyk",
+        "brouneswyke",
+        "brounswik",
+        "brounswyk",
+        "brounswyke",
+        "browneswyche",
+        "brownswik",
+        "brownswyk",
+        "bruneswyk",
+        "brunswik",
+        "brunswyk",
+        "browneswik"
+      ],
+      "gloss": "from Brunswick",
+      "geo": {
+        "id": "Q2773",
+        "wikidata": "https://www.wikidata.org/entity/Q2773",
+        "label": "Brunswick",
+        "dataset": "wikidata",
+        "point": [
+          10.52111,
+          52.26917
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62531"
+      }
+    },
+    "brussels": {
+      "label": "City of Brussels",
+      "lang": "geo",
+      "forms": [
+        "brissyll",
+        "brissylle",
+        "brusele",
+        "brusell",
+        "bruselle",
+        "bruselles",
+        "brushelles",
+        "brushille",
+        "brussel",
+        "brusselle",
+        "brusselles",
+        "brusshell",
+        "brusshelle",
+        "brusshelles",
+        "brussille",
+        "brusylle",
+        "brysele",
+        "bryselle",
+        "brysselle",
+        "brissell"
+      ],
+      "gloss": "from City of Brussels",
+      "geo": {
+        "id": "Q239",
+        "wikidata": "https://www.wikidata.org/entity/Q239",
+        "label": "City of Brussels",
+        "dataset": "wikidata",
+        "point": [
+          4.35167,
+          50.84667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "58274"
+      }
+    },
+    "bryklanz": {
+      "label": "bryklanz",
+      "lang": "mul",
+      "forms": [
+        "bryklanz"
+      ],
+      "gloss": "Unknown qualifier for lamb skin. ",
+      "helpWanted": true,
+      "reviewed": false,
+      "memo": "Check also \"mesanz\" here which is identified under the qualifier of Messina - which seems unlikely for this export. "
+    },
+    "bryskhold": {
+      "label": "bryskhold",
+      "lang": "mul",
+      "forms": [
+        "bryskhold"
+      ],
+      "gloss": "Unknown place of origin for cloth. ",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "buf": {
+      "label": "buff",
+      "lang": "mul",
+      "forms": [
+        "boff",
+        "boffes",
+        "buf",
+        "bufe",
+        "buff",
+        "buffe"
+      ],
+      "gloss": "buff — stout ox-hide leather dressed with oil"
+    },
+    "bugille": {
+      "label": "bugille",
+      "lang": "mul",
+      "forms": [
+        "bugille",
+        "bugull",
+        "bugyll"
+      ],
+      "gloss": "bugle bead of blown glass "
+    },
+    "bullene": {
+      "label": "Bullene",
+      "lang": "geo",
+      "gloss": "from Bullene",
+      "forms": [
+        "bullene"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'bologna' — review/merge in the editor.",
+      "helpWanted": false,
+      "reviewed": false
+    },
+    "bumbasyne": {
+      "label": "bumbasyne",
+      "lang": "mul",
+      "forms": [
+        "bumbasyne"
+      ],
+      "gloss": "clearly some kind of fustian, but exact meaning unknown"
+    },
+    "burgundy": {
+      "label": "Burgundy",
+      "lang": "geo",
+      "forms": [
+        "borgon",
+        "borgonian",
+        "borgonie",
+        "burgayn",
+        "burgayne",
+        "burgeis",
+        "burgenc",
+        "burgon",
+        "burgondian",
+        "burgone",
+        "burgonia",
+        "burgonian",
+        "burgonie",
+        "burgonie album",
+        "burgonie crudum",
+        "burgoyne",
+        "burgundie"
+      ],
+      "gloss": "from Burgundy",
+      "geo": {
+        "id": "Q1173",
+        "wikidata": "https://www.wikidata.org/entity/Q1173",
+        "label": "Burgundy",
+        "dataset": "wikidata",
+        "point": [
+          4.5,
+          47
+        ],
+        "hasPolygon": true,
+        "osm_relation": "27768"
+      }
+    },
+    "burnt": {
+      "label": "burnt",
+      "lang": "mul",
+      "forms": [
+        "burnt"
+      ],
+      "gloss": "calcined lead, lead monoxide used in ointments.",
+      "helpWanted": false,
+      "reviewed": false
+    },
+    "butcher": {
+      "label": "butcher",
+      "lang": "mul",
+      "forms": [
+        "bocher"
+      ],
+      "gloss": "for butchers ",
+      "memo": "\"Johanne Bocher\" and \"Henrico Bocher\" etc. will need sifting from this qualifier. EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "bye": {
+      "label": "bye",
+      "lang": "mul",
+      "forms": [
+        "bye",
+        "by"
+      ],
+      "gloss": "clearly some kind of thread, but exact meaning unknown"
+    },
+    "bys": {
+      "label": "bis",
+      "lang": "mul",
+      "forms": [
+        "bys",
+        "byse",
+        "clawark",
+        "graywerk",
+        "lucewerke",
+        "rusken",
+        "ruskin",
+        "ruskyn",
+        "ruswerk",
+        "smoleyn",
+        "smoleyns",
+        "swetheswark",
+        "swethewerke",
+        "trounys"
+      ],
+      "gloss": "bis — a squirrel-fur trade grade",
+      "memo": "Check the logic of including these very diverse terms together seems to be a confusion? EB 12/08/2026",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "calaber": {
+      "label": "calaber",
+      "lang": "mul",
+      "forms": [
+        "calaber",
+        "calaberorum",
+        "calabre",
+        "calabri",
+        "calabris",
+        "calabrorum",
+        "calibre"
+      ],
+      "gloss": "calabre — dark grey squirrel fur"
+    },
+    "calais": {
+      "label": "Calais",
+      "lang": "geo",
+      "forms": [
+        "callis"
+      ],
+      "gloss": "from Calais",
+      "geo": {
+        "id": "Q6454",
+        "wikidata": "https://www.wikidata.org/entity/Q6454",
+        "label": "Calais",
+        "dataset": "wikidata",
+        "point": [
+          1.85556,
+          50.9475
+        ],
+        "hasPolygon": true,
+        "osm_relation": "286380"
+      }
+    },
+    "cambrai": {
+      "label": "Cambrai",
+      "lang": "geo",
+      "forms": [
+        "cambrik",
+        "camera",
+        "camerik",
+        "camery",
+        "cameryk",
+        "cameryke"
+      ],
+      "gloss": "from Cambrai",
+      "geo": {
+        "id": "Q181285",
+        "wikidata": "https://www.wikidata.org/entity/Q181285",
+        "label": "Cambrai",
+        "dataset": "wikidata",
+        "point": [
+          3.23472,
+          50.17583
+        ],
+        "hasPolygon": true,
+        "osm_relation": "55938"
+      }
+    },
+    "canary": {
+      "label": "Canary Islands",
+      "lang": "geo",
+      "forms": [
+        "canari",
+        "canary"
+      ],
+      "gloss": "from the Canary Islands",
+      "geo": {
+        "id": "Q5813",
+        "wikidata": "https://www.wikidata.org/entity/Q5813",
+        "label": "Canary Islands",
+        "dataset": "wikidata",
+        "point": [
+          -15.75,
+          28
+        ],
+        "hasPolygon": true,
+        "osm_relation": "349048"
+      }
+    },
+    "candied": {
+      "label": "candy",
+      "lang": "mul",
+      "forms": [
+        "candi",
+        "candy",
+        "candye"
+      ],
+      "gloss": "crystallized / candied sugar"
+    },
+    "cap": {
+      "label": "cap",
+      "lang": "occ",
+      "forms": [
+        "cap",
+        "cape",
+        "cappe",
+        "capper"
+      ],
+      "gloss": "cap paper (a grade/size)"
+    },
+    "cappers": {
+      "label": "cappers",
+      "lang": "occ",
+      "forms": [
+        "cappers",
+        "capper"
+      ],
+      "gloss": "for cappers ",
+      "memo": "Peter Capper needs to be removed from this set - the teasels will be for the use of cappers and thus merged in with \"cappers\" EB 12/08/2026"
+    },
+    "carpynter": {
+      "label": "carpynter",
+      "lang": "mul",
+      "forms": [
+        "carpynter"
+      ],
+      "gloss": "for carpenters "
+    },
+    "carved": {
+      "label": "carved",
+      "lang": "mul",
+      "forms": [
+        "carved",
+        "karved",
+        "kervyd"
+      ],
+      "gloss": "carved"
+    },
+    "casdok": {
+      "label": "casdok",
+      "lang": "mul",
+      "forms": [
+        "casdock",
+        "casdok",
+        "casduk",
+        "casduke",
+        "casedoke"
+      ],
+      "gloss": "casduk cloth (Westphalian)"
+    },
+    "cased": {
+      "label": "cased",
+      "lang": "mul",
+      "forms": [
+        "cased"
+      ],
+      "gloss": "in cases "
+    },
+    "castell": {
+      "label": "castell",
+      "lang": "mul",
+      "forms": [
+        "castell",
+        "castelle",
+        "castile"
+      ],
+      "gloss": "obviously some kind of canvas, but exact meaning unknown"
+    },
+    "castile": {
+      "label": "Castile soap",
+      "lang": "mul",
+      "forms": [
+        "castell",
+        "castelle",
+        "castile",
+        "castill"
+      ],
+      "gloss": "Castile soap (fine olive-oil soap)"
+    },
+    "cat": {
+      "label": "cat",
+      "lang": "mul",
+      "forms": [
+        "cates",
+        "catorum",
+        "cattes",
+        "catteswombes"
+      ],
+      "gloss": "made of cat fur"
+    },
+    "celure": {
+      "label": "celure",
+      "lang": "mul",
+      "forms": [
+        "celour",
+        "celours",
+        "celure",
+        "cilour",
+        "selours"
+      ],
+      "gloss": "with a celure (bed canopy)"
+    },
+    "chambered": {
+      "label": "chambered",
+      "lang": "mul",
+      "forms": [
+        "chambres",
+        "cum chambres",
+        "chambered"
+      ],
+      "gloss": "with chambers (e.g. a gun with separate chambers)"
+    },
+    "champagne": {
+      "label": "Champagne",
+      "lang": "geo",
+      "forms": [
+        "champan",
+        "champayn",
+        "champayne",
+        "champeyn",
+        "champeyne",
+        "champpayn"
+      ],
+      "gloss": "from Champagne",
+      "geo": {
+        "id": "Q1075351",
+        "wikidata": "https://www.wikidata.org/entity/Q1075351",
+        "label": "Champagne",
+        "dataset": "wikidata",
+        "point": [
+          1.5697,
+          48.7633
+        ],
+        "hasPolygon": true,
+        "osm_relation": "383692"
+      }
+    },
+    "changeable": {
+      "label": "changeable",
+      "lang": "mul",
+      "forms": [
+        "chaungeabill"
+      ],
+      "gloss": "showing different colors under different aspects; 'shot', changing-coloured (OED s.v. changeable a. 3a)"
+    },
+    "checked": {
+      "label": "checked",
+      "lang": "mul",
+      "forms": [
+        "checked",
+        "checkyd",
+        "chekers",
+        "chekid",
+        "chekked",
+        "chekkid"
+      ],
+      "gloss": "checked, decorated with crossing lines in coloured squares"
+    },
+    "childrens": {
+      "label": "children’s",
+      "lang": "mul",
+      "forms": [
+        "childern",
+        "childerns",
+        "children",
+        "childrens",
+        "chyldren",
+        "pro pueris",
+        "childer"
+      ],
+      "gloss": "children’s (ready-made)"
+    },
+    "chopping": {
+      "label": "chopping",
+      "lang": "mul",
+      "forms": [
+        "chopping"
+      ],
+      "gloss": "for chopping "
+    },
+    "cirian": {
+      "label": "Cirian",
+      "lang": "geo",
+      "gloss": "from Cirian",
+      "forms": [
+        "cirian"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "citrilli": {
+      "label": "citrilli",
+      "lang": "mul",
+      "forms": [
+        "citrilli",
+        "citrulli"
+      ],
+      "gloss": "qualifier of seed (seminis citrilli); meaning uncertain (Jenks)"
+    },
+    "civile": {
+      "label": "Civile",
+      "lang": "geo",
+      "gloss": "from Civile",
+      "forms": [
+        "civile",
+        "civille"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "coal": {
+      "label": "coal",
+      "lang": "mul",
+      "forms": [
+        "cole",
+        "carbonis"
+      ],
+      "gloss": "made of sea-coal "
+    },
+    "coarse": {
+      "label": "coarse",
+      "lang": "mul",
+      "forms": [
+        "coars",
+        "coarse",
+        "cores",
+        "cors",
+        "corse",
+        "corsse",
+        "cours",
+        "course",
+        "courses",
+        "coursse",
+        "courz",
+        "curse",
+        "debile",
+        "debiles",
+        "debili",
+        "debilibus",
+        "debilis",
+        "debilium",
+        "gros",
+        "grose",
+        "gross",
+        "grossa",
+        "grosse",
+        "grossi",
+        "grossum",
+        "grossus",
+        "refuse",
+        "refutz"
+      ],
+      "gloss": "coarse / of low quality"
+    },
+    "cogware": {
+      "label": "cogware",
+      "lang": "mul",
+      "forms": [
+        "cogware"
+      ],
+      "gloss": "coarse cloth made of inferior wool"
+    },
+    "colchester": {
+      "label": "Colchester",
+      "lang": "mul",
+      "forms": [
+        "colchestre"
+      ],
+      "gloss": "from Colchester (Essex)"
+    },
+    "cologne": {
+      "label": "Cologne",
+      "lang": "geo",
+      "forms": [
+        "colen",
+        "colene",
+        "colenie",
+        "coleyn",
+        "coleyne",
+        "collen",
+        "collene",
+        "colleyn",
+        "collone",
+        "collonie",
+        "colon",
+        "colone",
+        "colonia",
+        "colonie",
+        "colonie album",
+        "colyn",
+        "colyne",
+        "cones",
+        "coollen",
+        "cullen",
+        "cullene",
+        "colayn"
+      ],
+      "gloss": "manufactured in Cologne",
+      "geo": {
+        "id": "Q365",
+        "wikidata": "https://www.wikidata.org/entity/Q365",
+        "label": "Cologne",
+        "dataset": "wikidata",
+        "point": [
+          6.95778,
+          50.94222
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62578"
+      }
+    },
+    "columbine": {
+      "label": "columbine",
+      "lang": "mul",
+      "forms": [
+        "columbyne",
+        "cullumbynes"
+      ],
+      "gloss": "dove-coloured / columbine",
+      "aat": {
+        "specific": "300130811",
+        "label": "gray (color)",
+        "broader": true
+      }
+    },
+    "comfect": {
+      "label": "comfect",
+      "lang": "mul",
+      "forms": [
+        "comfect"
+      ],
+      "gloss": "a sweetmeat (dates etc.) preserved in sugar"
+    },
+    "comines": {
+      "label": "Comines",
+      "lang": "geo",
+      "forms": [
+        "comys"
+      ],
+      "gloss": "from Comines",
+      "geo": {
+        "id": "Q626537",
+        "wikidata": "https://www.wikidata.org/entity/Q626537",
+        "label": "Comines",
+        "dataset": "wikidata",
+        "point": [
+          3.00778,
+          50.76111
+        ],
+        "hasPolygon": true,
+        "osm_relation": "59971"
+      }
+    },
+    "commune": {
+      "label": "commune",
+      "lang": "mul",
+      "forms": [
+        "commune",
+        "communis"
+      ],
+      "gloss": "ordinary, usual, normal (Latham, Dictionary s.v. communis 9)"
+    },
+    "complete": {
+      "label": "complete",
+      "lang": "mul",
+      "forms": [
+        "complet",
+        "complete",
+        "complett"
+      ],
+      "gloss": "complete (full suit of armour)"
+    },
+    "constance": {
+      "label": "Constance",
+      "lang": "geo",
+      "forms": [
+        "constance",
+        "costans",
+        "custance",
+        "custans",
+        "custaunce"
+      ],
+      "gloss": "from Constance",
+      "geo": {
+        "id": "Q3834",
+        "wikidata": "https://www.wikidata.org/entity/Q3834",
+        "label": "Constance",
+        "dataset": "wikidata",
+        "point": [
+          9.17528,
+          47.66333
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2784842"
+      }
+    },
+    "cooper": {
+      "label": "cooper",
+      "lang": "occ",
+      "forms": [
+        "cooper",
+        "coopers",
+        "couper",
+        "coupere",
+        "coupers",
+        "cowper",
+        "cowperes",
+        "cowpers",
+        "for copers",
+        "for cowpers",
+        "pro copers"
+      ],
+      "gloss": "for/used by coopers (makers of casks and barrels)",
+      "aat": {
+        "specific": "300025375",
+        "label": "coopers"
+      }
+    },
+    "coper": {
+      "label": "coper",
+      "lang": "mul",
+      "forms": [
+        "coper",
+        "copers",
+        "copir",
+        "copper",
+        "copre",
+        "cupri",
+        "cupro"
+      ],
+      "gloss": "copper",
+      "aat": {
+        "specific": "300011020",
+        "label": "copper (metal)"
+      }
+    },
+    "cordwainer": {
+      "label": "cordwainer",
+      "lang": "occ",
+      "forms": [
+        "cordyners"
+      ],
+      "gloss": "for/used by cordwainers (leather shoemakers)"
+    },
+    "cornwall": {
+      "label": "Cornwall",
+      "lang": "geo",
+      "forms": [
+        "cornish",
+        "cornishe",
+        "cornubie",
+        "cornubii",
+        "cornych",
+        "cornyche",
+        "cornysche"
+      ],
+      "gloss": "from Cornwall",
+      "geo": {
+        "id": "Q23148",
+        "wikidata": "https://www.wikidata.org/entity/Q23148",
+        "label": "Cornwall",
+        "dataset": "wikidata",
+        "point": [
+          -4.9,
+          50.3
+        ],
+        "hasPolygon": true,
+        "osm_relation": "8508381"
+      }
+    },
+    "corrupt": {
+      "label": "corrupt",
+      "lang": "mul",
+      "forms": [
+        "corrupt",
+        "corruptum",
+        "corupti"
+      ],
+      "gloss": "rancid / impure"
+    },
+    "corwyn": {
+      "label": "cordovan",
+      "lang": "mul",
+      "forms": [
+        "cordewayne",
+        "cordeweyn",
+        "cordewyn",
+        "cordwayn",
+        "cordwayne",
+        "cordweyne",
+        "cordwyn",
+        "corwyn"
+      ],
+      "gloss": "cordwain / cordovan leather"
+    },
+    "cot": {
+      "label": "cot",
+      "lang": "mul",
+      "forms": [
+        "cot"
+      ],
+      "gloss": "a numbered grade (de 1/2/3 cot), chiefly of sugar; meaning uncertain (Jenks gives no explanation)"
+    },
+    "cotton": {
+      "label": "cotton",
+      "lang": "mul",
+      "forms": [
+        "coton",
+        "cotone",
+        "cotoni",
+        "cotono",
+        "cotten",
+        "cotton",
+        "cottoni"
+      ],
+      "gloss": "made of cotton",
+      "aat": {
+        "specific": "300183670",
+        "label": "cotton (fiber)"
+      }
+    },
+    "counterfeit": {
+      "label": "counterfeit",
+      "lang": "mul",
+      "forms": [
+        "conterfait",
+        "conterfaitt",
+        "conterfet",
+        "conterfete",
+        "contrefet",
+        "contrefette",
+        "counterfait",
+        "counterfet",
+        "counterfete",
+        "counterfett",
+        "counterfette",
+        "countrefet",
+        "countrefete",
+        "countrefette",
+        "countrefettes",
+        "cownterfet",
+        "cowterfet"
+      ],
+      "gloss": "counterfeit / imitation"
+    },
+    "coventry": {
+      "label": "Coventry",
+      "lang": "geo",
+      "forms": [
+        "coventre",
+        "coventrie",
+        "covintre",
+        "covyntre"
+      ],
+      "gloss": "from Coventry",
+      "geo": {
+        "id": "Q6225",
+        "wikidata": "https://www.wikidata.org/entity/Q6225",
+        "label": "Coventry",
+        "dataset": "wikidata",
+        "point": [
+          -1.51667,
+          52.41667
+        ],
+        "hasPolygon": false
+      }
+    },
+    "covered": {
+      "label": "covered",
+      "lang": "mul",
+      "forms": [
+        "close",
+        "coverd",
+        "coverde",
+        "covered"
+      ],
+      "gloss": "covered / with a lid"
+    },
+    "cowhide": {
+      "label": "cowhide",
+      "lang": "mul",
+      "forms": [
+        "boum",
+        "bovina",
+        "bovis",
+        "bovium",
+        "bovum",
+        "steris",
+        "vaccarum",
+        "vaccinis"
+      ],
+      "gloss": "cattle / ox hide"
+    },
+    "cream": {
+      "label": "cream",
+      "lang": "mul",
+      "forms": [
+        "cremy"
+      ],
+      "gloss": "cream-colored",
+      "aat": {
+        "specific": "300266242",
+        "label": "cream (color)"
+      }
+    },
+    "cremelle": {
+      "label": "cremelle",
+      "lang": "mul",
+      "forms": [
+        "cremelle",
+        "cremelles"
+      ],
+      "gloss": "cotton cloth (OED s.v. cotton n.1 4) with borders, meaning, apparently, open work or lace, or perhaps even a fringe (OED s.v. cremil); however use here indicates a kind of textile, being counted in dozens or individual pieces (cf. MED s.v. crimel n. & adj.)"
+    },
+    "cremil": {
+      "label": "cremil",
+      "lang": "mul",
+      "forms": [
+        "crinibus",
+        "de crinibus",
+        "cremil"
+      ],
+      "gloss": "made of cremil — open work, lace, or perhaps a fringe, on textile borders (OED s.v. cremil)"
+    },
+    "crimson": {
+      "label": "crimson",
+      "lang": "mul",
+      "forms": [
+        "cremesyn",
+        "cremez",
+        "cremisin",
+        "cremsin",
+        "cremsyn",
+        "cremysen",
+        "cremysin",
+        "cremyson",
+        "cremysyn",
+        "crimesan",
+        "crimisen",
+        "crimsen",
+        "crimson",
+        "crymesyn",
+        "crymsen",
+        "crymsin",
+        "crymson",
+        "crymsyn",
+        "crymysen"
+      ],
+      "gloss": "crimson",
+      "aat": {
+        "specific": "300311345",
+        "label": "crimson (color)"
+      }
+    },
+    "croppe": {
+      "label": "crop",
+      "lang": "mul",
+      "forms": [
+        "croppe",
+        "croppis"
+      ],
+      "gloss": "fur from the heads of animals (squirrel)"
+    },
+    "crossbow": {
+      "label": "crossbow",
+      "lang": "mul",
+      "forms": [
+        "crosbow",
+        "crosbowe",
+        "crosbowes",
+        "for a crosbowe",
+        "for crosbowes",
+        "pro alblasters",
+        "pro alblastris",
+        "pro arblasters",
+        "pro arblastes",
+        "pro arblastis",
+        "pro balistis",
+        "pro crosbowe tillers",
+        "pro crosbowes",
+        "pro crosbowez",
+        "pro crosbowis",
+        "pro crosbows",
+        "pro crosbowys",
+        "pro crossbowys",
+        "pro crossebowe",
+        "pro crossebowes"
+      ],
+      "gloss": "for crossbows / crossbow-making (purpose)",
+      "aat": {
+        "specific": "300037000",
+        "label": "crossbows"
+      }
+    },
+    "crul": {
+      "label": "crul",
+      "lang": "mul",
+      "forms": [
+        "cruell",
+        "cruelle",
+        "crul",
+        "crule",
+        "crull"
+      ],
+      "gloss": "thin worsted yarn, (according to Bailey) of two threads, used for tapestry and embroidery; also formerly for making fringes, laces, vestments, hosiery, etc. These yarns, being produced in different colors and used in combination in the making of one article, are often spoken of in the plural (OED crewel, n.1)"
+    },
+    "currants": {
+      "label": "currants",
+      "lang": "mul",
+      "forms": [
+        "corance",
+        "corans",
+        "coranse",
+        "coraunce",
+        "corauns"
+      ],
+      "gloss": "currants"
+    },
+    "cushin": {
+      "label": "cushin",
+      "lang": "mul",
+      "forms": [
+        "cushin"
+      ],
+      "gloss": "for cushions"
+    },
+    "cute": {
+      "label": "cute",
+      "lang": "mul",
+      "forms": [
+        "cute",
+        "cutes"
+      ],
+      "gloss": "cute — new wine boiled down and sweetened"
+    },
+    "cyprus": {
+      "label": "Cyprus",
+      "lang": "geo",
+      "forms": [
+        "ciperis",
+        "cipers",
+        "ciperses",
+        "cipre",
+        "cipres",
+        "cipris",
+        "cipro",
+        "cypers",
+        "cypres",
+        "de cipro",
+        "siper",
+        "siperes",
+        "siperis",
+        "sipers",
+        "sipirs",
+        "sipre",
+        "sipres",
+        "sipro",
+        "sypera",
+        "syperes",
+        "sypers",
+        "syperys",
+        "sypres",
+        "syprys"
+      ],
+      "gloss": "of Cyprus (a fine cloth)",
+      "geo": {
+        "id": "Q229",
+        "wikidata": "https://www.wikidata.org/entity/Q229",
+        "label": "Cyprus",
+        "dataset": "wikidata",
+        "point": [
+          33,
+          35
+        ],
+        "hasPolygon": true,
+        "osm_relation": "3263726"
+      }
+    },
+    "damask": {
+      "label": "damask",
+      "lang": "mul",
+      "forms": [
+        "damasc",
+        "damask",
+        "damaske"
+      ],
+      "gloss": "made of damask",
+      "aat": {
+        "specific": "300163295",
+        "label": "damask"
+      }
+    },
+    "danzig": {
+      "label": "Gdańsk",
+      "lang": "geo",
+      "forms": [
+        "dansk"
+      ],
+      "gloss": "from Gdańsk",
+      "geo": {
+        "id": "Q1792",
+        "wikidata": "https://www.wikidata.org/entity/Q1792",
+        "label": "Gdańsk",
+        "dataset": "wikidata",
+        "point": [
+          18.65402,
+          54.34829
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2597485"
+      }
+    },
+    "decorated": {
+      "label": "decorated",
+      "lang": "mul",
+      "forms": [
+        "decorated",
+        "garnished",
+        "garnysshed",
+        "garnyshed"
+      ],
+      "gloss": "decorated, garnished"
+    },
+    "demy": {
+      "label": "demy",
+      "lang": "mul",
+      "forms": [
+        "demy"
+      ],
+      "gloss": "half the usual size"
+    },
+    "denaunt": {
+      "label": "Denaunt",
+      "lang": "geo",
+      "gloss": "from Denaunt",
+      "forms": [
+        "denant",
+        "denaunt"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "desanctacruce": {
+      "label": "de sancta cruce",
+      "lang": "mul",
+      "forms": [
+        "de sancta cruce"
+      ],
+      "gloss": ""
+    },
+    "desanctamaria": {
+      "label": "de sancta maria",
+      "lang": "mul",
+      "forms": [
+        "de sancta maria"
+      ],
+      "gloss": ""
+    },
+    "devon": {
+      "label": "Devon",
+      "lang": "geo",
+      "forms": [
+        "daincher",
+        "densher",
+        "denshere",
+        "densheres",
+        "devon",
+        "devonie",
+        "devonis",
+        "devonsher",
+        "devynsheyre",
+        "devynshyer"
+      ],
+      "gloss": "from Devon",
+      "geo": {
+        "id": "Q23156",
+        "wikidata": "https://www.wikidata.org/entity/Q23156",
+        "label": "Devon",
+        "dataset": "wikidata",
+        "point": [
+          -3.8,
+          50.7
+        ],
+        "hasPolygon": true,
+        "osm_relation": "57538"
+      }
+    },
+    "diaper": {
+      "label": "diaper",
+      "lang": "mul",
+      "forms": [
+        "diaper",
+        "dyaper",
+        "dyapre"
+      ],
+      "gloss": "diaper: small diamond-wise woven pattern",
+      "aat": {
+        "specific": "300231169",
+        "label": "diaper"
+      }
+    },
+    "diest": {
+      "label": "Diest",
+      "lang": "geo",
+      "forms": [
+        "dist",
+        "dyst"
+      ],
+      "gloss": "from Diest",
+      "geo": {
+        "id": "Q743236",
+        "wikidata": "https://www.wikidata.org/entity/Q743236",
+        "label": "Diest",
+        "dataset": "wikidata",
+        "point": [
+          5.0514,
+          50.9847
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1172633"
+      }
+    },
+    "diverse": {
+      "label": "diverse",
+      "lang": "mul",
+      "forms": [
+        "divers",
+        "diverse",
+        "diversis",
+        "diversorum",
+        "diversorum colorum",
+        "diversos",
+        "various"
+      ],
+      "gloss": "various; divers; diverse"
+    },
+    "dogfish": {
+      "label": "dogfish",
+      "lang": "mul",
+      "forms": [
+        "dogfisch",
+        "houndefisch"
+      ],
+      "gloss": "dogfish (shark) skin"
+    },
+    "dordrecht": {
+      "label": "Dordrecht",
+      "lang": "geo",
+      "forms": [
+        "dordreyght",
+        "dordreyt",
+        "durdret",
+        "durdright"
+      ],
+      "gloss": "from Dordrecht",
+      "geo": {
+        "id": "Q26421",
+        "wikidata": "https://www.wikidata.org/entity/Q26421",
+        "label": "Dordrecht",
+        "dataset": "wikidata",
+        "point": [
+          4.67833,
+          51.79583
+        ],
+        "hasPolygon": true,
+        "osm_relation": "309478"
+      }
+    },
+    "double": {
+      "label": "double",
+      "lang": "mul",
+      "forms": [
+        "double",
+        "doubles",
+        "doublis",
+        "douple",
+        "dowble",
+        "duble",
+        "duple",
+        "duplex",
+        "duplicata",
+        "duplicato",
+        "duplicatus",
+        "duplicem",
+        "duplici",
+        "duplicis",
+        "duplicus"
+      ],
+      "gloss": "double"
+    },
+    "dresed": {
+      "label": "dresed",
+      "lang": "mul",
+      "forms": [
+        "dresed",
+        "dressed"
+      ],
+      "gloss": "dressed, finished"
+    },
+    "dried": {
+      "label": "dried",
+      "lang": "mul",
+      "forms": [
+        "dre",
+        "dri",
+        "drie",
+        "dried",
+        "dry",
+        "drye",
+        "dryed",
+        "dryeds",
+        "dryes",
+        "drys",
+        "duris",
+        "sicca",
+        "siccarum",
+        "sicci",
+        "siccis",
+        "siccus",
+        "aridi"
+      ],
+      "gloss": "dried"
+    },
+    "drinking": {
+      "label": "for drinking",
+      "lang": "mul",
+      "forms": [
+        "bibendo",
+        "bibentis",
+        "drenkyng",
+        "drincking",
+        "drinckyng",
+        "drinkeng",
+        "drinking",
+        "drinkyng",
+        "drynking",
+        "drynkyng",
+        "drynkynge",
+        "dryngkyng"
+      ],
+      "gloss": "for drinking (a drinking vessel)"
+    },
+    "dulce": {
+      "label": "sweet",
+      "lang": "mul",
+      "forms": [
+        "ducis",
+        "dulce",
+        "dulcis"
+      ],
+      "gloss": "sweet (Mediterranean) wine"
+    },
+    "dun": {
+      "label": "dun",
+      "lang": "mul",
+      "forms": [
+        "helva",
+        "helvida"
+      ],
+      "gloss": "dun / dull yellowish-grey-brown cloth (Latin helvus/helva, with variant declension helvida)",
+      "aat": {
+        "specific": "300130811",
+        "label": "gray (color)",
+        "broader": true
+      }
+    },
+    "dye": {
+      "label": "dye",
+      "lang": "mul",
+      "forms": [
+        "alfhere",
+        "biskin",
+        "bruselles",
+        "calymerwerk",
+        "colerid",
+        "collors",
+        "coloratum",
+        "coloratus",
+        "colord",
+        "colored",
+        "colores",
+        "coloribus",
+        "colorid",
+        "coloris",
+        "colorum",
+        "colour",
+        "coloured",
+        "cullered",
+        "died",
+        "dye",
+        "dyed",
+        "edorum",
+        "frisid",
+        "orchelle",
+        "pessantz",
+        "slawter",
+        "tincto",
+        "tinctum",
+        "tinctus"
+      ],
+      "gloss": "dyed"
+    },
+    "earthenware": {
+      "label": "earthenware",
+      "lang": "mul",
+      "forms": [
+        "earthen",
+        "eartyn",
+        "erth",
+        "erthe",
+        "erthen",
+        "erthin",
+        "erthines",
+        "erthyn",
+        "terra",
+        "terre",
+        "yerthen"
+      ],
+      "gloss": "made of earthenware / fired clay",
+      "aat": {
+        "specific": "300140803",
+        "label": "earthenware"
+      }
+    },
+    "embroidered": {
+      "label": "embroidered",
+      "lang": "mul",
+      "forms": [
+        "brochadyd",
+        "brochys",
+        "brodry",
+        "embraudato",
+        "embraudatus",
+        "embroudati",
+        "embroudato",
+        "embroudatum",
+        "embroudatus",
+        "embrouddatum",
+        "embrouded",
+        "enbraudatus",
+        "enbrodred",
+        "enbroudata",
+        "enbroudato",
+        "enbroudatus",
+        "enbrouded",
+        "pirld",
+        "pirled",
+        "prilled",
+        "stiched",
+        "broche",
+        "brodred",
+        "broderd"
+      ],
+      "gloss": "embroidered",
+      "aat": {
+        "specific": "300264024",
+        "label": "embroidery",
+        "broader": true
+      }
+    },
+    "empty": {
+      "label": "empty",
+      "lang": "mul",
+      "forms": [
+        "empta",
+        "empti",
+        "empty",
+        "vacua",
+        "vacui",
+        "vacuis",
+        "vacuum",
+        "vacuus"
+      ],
+      "gloss": "empty"
+    },
+    "endeley": {
+      "label": "endeley",
+      "lang": "mul",
+      "forms": [
+        "endeley"
+      ],
+      "gloss": "from les Andelys (Normandy)"
+    },
+    "england": {
+      "label": "Kingdom of England",
+      "lang": "geo",
+      "forms": [
+        "anglie",
+        "cult",
+        "england",
+        "engleshe",
+        "englishe",
+        "englysshe",
+        "north",
+        "northen",
+        "northern",
+        "northirn",
+        "northron",
+        "strait collered",
+        "west",
+        "western",
+        "westren",
+        "westron"
+      ],
+      "gloss": "from Kingdom of England",
+      "geo": {
+        "id": "Q179876",
+        "wikidata": "https://www.wikidata.org/entity/Q179876",
+        "label": "Kingdom of England",
+        "dataset": "wikidata",
+        "point": [
+          -1.31667,
+          52.06667
+        ],
+        "hasPolygon": false
+      }
+    },
+    "enle": {
+      "label": "enle",
+      "lang": "mul",
+      "forms": [
+        "enle"
+      ],
+      "gloss": "from les Andelys (Normandy)"
+    },
+    "essex": {
+      "label": "Essex",
+      "lang": "geo",
+      "forms": [
+        "essex",
+        "essexie"
+      ],
+      "gloss": "from Essex",
+      "geo": {
+        "id": "Q67442940",
+        "wikidata": "https://www.wikidata.org/entity/Q67442940",
+        "label": "Essex",
+        "dataset": "wikidata",
+        "point": [
+          0.52839,
+          51.77729
+        ],
+        "hasPolygon": true,
+        "osm_relation": "8483370"
+      }
+    },
+    "faggot": {
+      "label": "faggot",
+      "lang": "mul",
+      "forms": [
+        "fagot"
+      ],
+      "gloss": "in faggots (iron rods bundled together)"
+    },
+    "fawn": {
+      "label": "fawn",
+      "lang": "mul",
+      "forms": [
+        "fawne",
+        "fawnskynnes"
+      ],
+      "gloss": "fawn-skin"
+    },
+    "feather": {
+      "label": "feather",
+      "lang": "mul",
+      "forms": [
+        "feders",
+        "federys",
+        "fedir",
+        "fedires"
+      ],
+      "gloss": "of feathers"
+    },
+    "feathered": {
+      "label": "feathered",
+      "lang": "mul",
+      "forms": [
+        "plumarum"
+      ],
+      "gloss": "of / stuffed with feathers"
+    },
+    "fecheus": {
+      "label": "fitch",
+      "lang": "mul",
+      "forms": [
+        "fecheus",
+        "fecheux",
+        "fechews",
+        "ficcheux",
+        "ficchews",
+        "ficheux",
+        "fichews",
+        "focheux"
+      ],
+      "gloss": "made of polecat (fitch) skins"
+    },
+    "ferri": {
+      "label": "ferri",
+      "lang": "mul",
+      "forms": [
+        "fere",
+        "ferri",
+        "ferriys",
+        "iron",
+        "yron",
+        "yrone",
+        "yrons"
+      ],
+      "gloss": "iron ‘thread’"
+    },
+    "ficuler": {
+      "label": "ficuler",
+      "lang": "mul",
+      "forms": [
+        "ficuler"
+      ],
+      "gloss": "clearly some kind of flax, but otherwise unknown (imported by a Hansard)"
+    },
+    "figured": {
+      "label": "figured",
+      "lang": "mul",
+      "forms": [
+        "branched",
+        "figur",
+        "figurati",
+        "figuratum",
+        "figury",
+        "fygured",
+        "vigorie"
+      ],
+      "gloss": "with (embroidered) figures | decorated with figures (OED s.v. figure n.)"
+    },
+    "file": {
+      "label": "file",
+      "lang": "mul",
+      "forms": [
+        "filatus",
+        "file",
+        "fili",
+        "filo",
+        "filum",
+        "foil",
+        "foille",
+        "foyle",
+        "foylle",
+        "fyle",
+        "thedyn",
+        "thread",
+        "threade",
+        "thred",
+        "thredd",
+        "thredde",
+        "thredden",
+        "threde",
+        "threden",
+        "threed",
+        "threede",
+        "þreden"
+      ],
+      "gloss": "cloth of thread (tela fili); exact sense uncertain"
+    },
+    "fine": {
+      "label": "fine",
+      "lang": "mul",
+      "forms": [
+        "fin",
+        "fine",
+        "fino",
+        "finum",
+        "fyn",
+        "fyne"
+      ],
+      "gloss": "fine / high quality"
+    },
+    "fitted": {
+      "label": "fitted",
+      "lang": "mul",
+      "forms": [
+        "apparatu",
+        "cum apparatu",
+        "fitted"
+      ],
+      "gloss": "with apparatus / fittings (cum apparatu)"
+    },
+    "flanders": {
+      "label": "County of Flanders",
+      "lang": "geo",
+      "forms": [
+        "fili flandrie",
+        "flanders",
+        "flandria",
+        "flandrie",
+        "flandrie album",
+        "flandrie vetus",
+        "flaunders",
+        "flaundres",
+        "flaundrie",
+        "flemish",
+        "flemishe",
+        "flemisshe",
+        "flemmysh",
+        "flemmyshe",
+        "flemysche",
+        "flemysh",
+        "flemyshe",
+        "flemysshe",
+        "in flandria",
+        "in partibus flandrie"
+      ],
+      "gloss": "from County of Flanders",
+      "geo": {
+        "id": "Q157070",
+        "wikidata": "https://www.wikidata.org/entity/Q157070",
+        "label": "County of Flanders",
+        "dataset": "wikidata",
+        "point": [
+          3.72,
+          51.06
+        ],
+        "hasPolygon": false
+      }
+    },
+    "florauns": {
+      "label": "florauns",
+      "lang": "mul",
+      "forms": [
+        "florauns",
+        "florence"
+      ],
+      "gloss": "Florence, a woollen woven fabric"
+    },
+    "floribus": {
+      "label": "floribus",
+      "lang": "mul",
+      "forms": [
+        "floribus"
+      ],
+      "gloss": "decorated with flowers (cum floribus)"
+    },
+    "forlaken": {
+      "label": "forlaken",
+      "lang": "mul",
+      "forms": [
+        "forlaken"
+      ],
+      "gloss": "napkin or curtain (Low German vorlaken); function uncertain"
+    },
+    "forte": {
+      "label": "forte",
+      "lang": "mul",
+      "forms": [
+        "forte"
+      ],
+      "gloss": "clearly a kind of satin, but exact meaning unknown"
+    },
+    "foxcase": {
+      "label": "fox-case",
+      "lang": "mul",
+      "forms": [
+        "cas",
+        "case",
+        "cases",
+        "casse",
+        "cassis",
+        "casys"
+      ],
+      "gloss": "fox skins stitched into a rectangular pack"
+    },
+    "foyne": {
+      "label": "foin",
+      "lang": "mul",
+      "forms": [
+        "foyne",
+        "foynes",
+        "foynez",
+        "foyns",
+        "foynys",
+        "funes",
+        "funys"
+      ],
+      "gloss": "fur of the stone marten (foin)"
+    },
+    "france": {
+      "label": "France",
+      "lang": "geo",
+      "forms": [
+        "france",
+        "franchie",
+        "fraunce",
+        "fraunche",
+        "french",
+        "frenche",
+        "frenches",
+        "frensh",
+        "frenssh",
+        "frensshe",
+        "galico",
+        "gallica",
+        "þe frenche makinge for hanginges",
+        "francie",
+        "frauncie"
+      ],
+      "gloss": "from France",
+      "geo": {
+        "id": "Q142",
+        "wikidata": "https://www.wikidata.org/entity/Q142",
+        "label": "France",
+        "dataset": "wikidata",
+        "point": [
+          2,
+          47
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2202162"
+      }
+    },
+    "fresh": {
+      "label": "fresh",
+      "lang": "mul",
+      "forms": [
+        "freshe",
+        "recencium",
+        "recenor",
+        "recens",
+        "recent",
+        "recentibus",
+        "resencibus"
+      ],
+      "gloss": "fresh"
+    },
+    "frise": {
+      "label": "frise",
+      "lang": "mul",
+      "forms": [
+        "fresed",
+        "fricii",
+        "frieze",
+        "frise",
+        "frisii",
+        "fryse"
+      ],
+      "gloss": "frieze, a rough woollen cloth with a nap"
+    },
+    "full": {
+      "label": "full",
+      "lang": "mul",
+      "forms": [
+        "ful",
+        "full"
+      ],
+      "gloss": "a full set/nest (e.g. ful kettylles = a set of kettles)"
+    },
+    "fuller": {
+      "label": "fuller",
+      "lang": "occ",
+      "forms": [
+        "pro fullonibus"
+      ],
+      "gloss": "for/used by fullers (cloth finishers)"
+    },
+    "furred": {
+      "label": "furred",
+      "lang": "mul",
+      "forms": [
+        "furde",
+        "furid",
+        "furred",
+        "furryd"
+      ],
+      "gloss": "lined or trimmed with fur"
+    },
+    "gaming": {
+      "label": "gaming",
+      "lang": "mul",
+      "forms": [
+        "lusorum",
+        "lusor"
+      ],
+      "gloss": "for play / gaming (e.g. playing cards)"
+    },
+    "garbled": {
+      "label": "garbled",
+      "lang": "mul",
+      "forms": [
+        "garbele",
+        "garbell",
+        "garbelle",
+        "garbelour",
+        "garbeloure",
+        "garbelur",
+        "garbelura",
+        "garbelure",
+        "garble"
+      ],
+      "gloss": "garbled — refuse, with extraneous matter removed"
+    },
+    "garding": {
+      "label": "garding",
+      "lang": "mul",
+      "forms": [
+        "garding",
+        "gardyng"
+      ],
+      "gloss": "for guarding, i.e. for ornamentation (e.g. of a garment) with 'guards' such as braid, lace etc. (OED s.v. guard v. 7)"
+    },
+    "gascony": {
+      "label": "Gascony",
+      "lang": "geo",
+      "forms": [
+        "gasconia",
+        "gasconie",
+        "gascoyne",
+        "gaskon",
+        "gaskonie",
+        "vascoigne",
+        "vasconie",
+        "vasconiensis"
+      ],
+      "gloss": "Gascon (wine)",
+      "geo": {
+        "id": "Q191085",
+        "wikidata": "https://www.wikidata.org/entity/Q191085",
+        "label": "Gascony",
+        "dataset": "wikidata",
+        "point": [
+          -0.5,
+          44
+        ],
+        "hasPolygon": false
+      }
+    },
+    "gemset": {
+      "label": "gemset",
+      "lang": "mul",
+      "forms": [
+        "cum lapidibus",
+        "lapidibus",
+        "set with stones"
+      ],
+      "gloss": "set with (precious) stones; jewelled"
+    },
+    "genoa": {
+      "label": "Genoa",
+      "lang": "geo",
+      "forms": [
+        "gean",
+        "janua",
+        "jeane",
+        "jene",
+        "jennes"
+      ],
+      "gloss": "from Genoa",
+      "geo": {
+        "id": "Q1449",
+        "wikidata": "https://www.wikidata.org/entity/Q1449",
+        "label": "Genoa",
+        "dataset": "wikidata",
+        "point": [
+          8.93398,
+          44.40719
+        ],
+        "hasPolygon": true,
+        "osm_relation": "44875"
+      }
+    },
+    "gent": {
+      "label": "Ghent",
+      "lang": "geo",
+      "forms": [
+        "de gaunt",
+        "gaunt",
+        "gent",
+        "gente",
+        "gentes",
+        "genti",
+        "gentis",
+        "gentish",
+        "gentishe",
+        "gentissh",
+        "gentisshe",
+        "gentysh",
+        "gentyshe",
+        "gentysshe"
+      ],
+      "gloss": "manufactured in Ghent",
+      "geo": {
+        "id": "Q1296",
+        "wikidata": "https://www.wikidata.org/entity/Q1296",
+        "label": "Ghent",
+        "dataset": "wikidata",
+        "point": [
+          3.72528,
+          51.05361
+        ],
+        "hasPolygon": true,
+        "osm_relation": "897671"
+      }
+    },
+    "gilt": {
+      "label": "gilt",
+      "lang": "mul",
+      "forms": [
+        "aureata",
+        "deaurata",
+        "deauratis",
+        "deaurato",
+        "deauratum",
+        "deauratus",
+        "gilt",
+        "guilte",
+        "gylt"
+      ],
+      "gloss": "gilded (gold-covered)",
+      "aat": {
+        "specific": "300379350",
+        "label": "gilding (material)"
+      }
+    },
+    "glass": {
+      "label": "glass",
+      "lang": "mul",
+      "forms": [
+        "de vitro",
+        "glace",
+        "glas",
+        "glase",
+        "glass",
+        "glasse",
+        "viter",
+        "vitrea",
+        "vitreus",
+        "vitri",
+        "vitro"
+      ],
+      "gloss": "made of glass",
+      "aat": {
+        "specific": "300010797",
+        "label": "glass (material)"
+      }
+    },
+    "glemsford": {
+      "label": "Glemsford",
+      "lang": "geo",
+      "forms": [
+        "glenssfordes"
+      ],
+      "gloss": "from Glemsford",
+      "geo": {
+        "id": "Q2524180",
+        "wikidata": "https://www.wikidata.org/entity/Q2524180",
+        "label": "Glemsford",
+        "dataset": "wikidata",
+        "point": [
+          0.67511,
+          52.10231
+        ],
+        "hasPolygon": true,
+        "osm_relation": "4610952"
+      }
+    },
+    "goat": {
+      "label": "goat",
+      "lang": "mul",
+      "forms": [
+        "caprarum"
+      ],
+      "gloss": "of goat"
+    },
+    "gold": {
+      "label": "gold",
+      "lang": "mul",
+      "forms": [
+        "aurea",
+        "auree",
+        "aurei",
+        "aureum",
+        "aureus",
+        "auri",
+        "auro",
+        "aurri",
+        "aurum",
+        "gold",
+        "golde",
+        "ore",
+        "sylver"
+      ],
+      "gloss": "cloth of gold; made of/decorated with gold",
+      "aat": {
+        "specific": "300011021",
+        "label": "gold (metal)"
+      }
+    },
+    "goldsmith": {
+      "label": "goldsmith",
+      "lang": "mul",
+      "forms": [
+        "for goldsmiths",
+        "goldesmythes",
+        "goldsmith",
+        "goldsmiths"
+      ],
+      "gloss": "for goldsmiths' use (occupational)"
+    },
+    "gomme": {
+      "label": "gomme",
+      "lang": "mul",
+      "forms": [
+        "gomme",
+        "gommes",
+        "gummes"
+      ],
+      "gloss": "gomme (needles) — meaning unknown (Jenks; gomme nedles / acuum)"
+    },
+    "gottingen": {
+      "label": "Göttingen",
+      "lang": "geo",
+      "forms": [
+        "gettyns",
+        "gotinges",
+        "gottynges",
+        "gotynges",
+        "gotyns",
+        "guttinges",
+        "guttynges",
+        "guttyngis"
+      ],
+      "gloss": "from Göttingen",
+      "geo": {
+        "id": "Q3033",
+        "wikidata": "https://www.wikidata.org/entity/Q3033",
+        "label": "Göttingen",
+        "dataset": "wikidata",
+        "point": [
+          9.93556,
+          51.53389
+        ],
+        "hasPolygon": true,
+        "osm_relation": "191361"
+      }
+    },
+    "green": {
+      "label": "green",
+      "lang": "mul",
+      "forms": [
+        "grene",
+        "vert",
+        "viride",
+        "viridis",
+        "viridium",
+        "gren"
+      ],
+      "gloss": "green",
+      "aat": {
+        "specific": "300128438",
+        "label": "green (color)"
+      }
+    },
+    "grey": {
+      "label": "grey",
+      "lang": "mul",
+      "forms": [
+        "byse",
+        "glauceum",
+        "gray",
+        "graye",
+        "grey",
+        "greys"
+      ],
+      "gloss": "grey (presumably undyed)",
+      "aat": {
+        "specific": "300130811",
+        "label": "gray (color)"
+      }
+    },
+    "grilse": {
+      "label": "grilse",
+      "lang": "mul",
+      "forms": [
+        "gerl",
+        "girl",
+        "girles",
+        "grille",
+        "gyrle"
+      ],
+      "gloss": "grilse — a young salmon on first return"
+    },
+    "guelders": {
+      "label": "Duchy of Guelders",
+      "lang": "geo",
+      "forms": [
+        "gelders"
+      ],
+      "gloss": "from Duchy of Guelders",
+      "geo": {
+        "id": "Q152420",
+        "wikidata": "https://www.wikidata.org/entity/Q152420",
+        "label": "Duchy of Guelders",
+        "dataset": "wikidata",
+        "point": [
+          6.33333,
+          51.51667
+        ],
+        "hasPolygon": false
+      }
+    },
+    "guildford": {
+      "label": "Guildford",
+      "lang": "geo",
+      "forms": [
+        "gildeford",
+        "gildeforde",
+        "gildford",
+        "gyldford"
+      ],
+      "gloss": "from Guildford",
+      "geo": {
+        "id": "Q213465",
+        "wikidata": "https://www.wikidata.org/entity/Q213465",
+        "label": "Guildford",
+        "dataset": "wikidata",
+        "point": [
+          -0.5746,
+          51.2354
+        ],
+        "hasPolygon": false
+      }
+    },
+    "haarlem": {
+      "label": "Haarlem",
+      "lang": "geo",
+      "forms": [
+        "harlam"
+      ],
+      "gloss": "from Haarlem",
+      "geo": {
+        "id": "Q9920",
+        "wikidata": "https://www.wikidata.org/entity/Q9920",
+        "label": "Haarlem",
+        "dataset": "wikidata",
+        "point": [
+          4.64056,
+          52.38028
+        ],
+        "hasPolygon": true,
+        "osm_relation": "47534"
+      }
+    },
+    "hainault": {
+      "label": "County of Hainaut",
+      "lang": "geo",
+      "forms": [
+        "henaud",
+        "henauth",
+        "henawde",
+        "henege",
+        "heneger",
+        "henego",
+        "henegoes",
+        "henegois",
+        "henegos",
+        "henegoys",
+        "henigo",
+        "hennaud",
+        "hennaude",
+        "hennauld",
+        "henogos",
+        "henoud",
+        "henoudes"
+      ],
+      "gloss": "from County of Hainaut",
+      "geo": {
+        "id": "Q309460",
+        "wikidata": "https://www.wikidata.org/entity/Q309460",
+        "label": "County of Hainaut",
+        "dataset": "wikidata",
+        "point": [
+          3.94927,
+          50.45432
+        ],
+        "hasPolygon": false
+      }
+    },
+    "hair": {
+      "label": "hair",
+      "lang": "mul",
+      "forms": [
+        "heire",
+        "hearre"
+      ],
+      "gloss": "made of hair (haircloth)"
+    },
+    "half": {
+      "label": "half",
+      "lang": "mul",
+      "forms": [
+        "di",
+        "dimidia",
+        "dimidie",
+        "dimidies",
+        "dimidii",
+        "dimidio",
+        "dimidios",
+        "dimidium",
+        "dimidius",
+        "half",
+        "halfe",
+        "halff",
+        "halffe",
+        "hallfe"
+      ],
+      "gloss": "double half-double"
+    },
+    "half-grain": {
+      "label": "half-grain",
+      "lang": "mul",
+      "forms": [
+        "de dimidio grano"
+      ],
+      "gloss": "half-dyed in kermes grain (part-scarlet)"
+    },
+    "hamburg": {
+      "label": "Hamburg",
+      "lang": "geo",
+      "forms": [
+        "hambrogh",
+        "hambrugh",
+        "hamburgh"
+      ],
+      "gloss": "from Hamburg",
+      "geo": {
+        "id": "Q1055",
+        "wikidata": "https://www.wikidata.org/entity/Q1055",
+        "label": "Hamburg",
+        "dataset": "wikidata",
+        "point": [
+          10,
+          53.55
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62782"
+      }
+    },
+    "hampshire": {
+      "label": "Hampshire",
+      "lang": "geo",
+      "forms": [
+        "hamshyre"
+      ],
+      "gloss": "from Hampshire",
+      "geo": {
+        "id": "Q67531563",
+        "wikidata": "https://www.wikidata.org/entity/Q67531563",
+        "label": "Hampshire",
+        "dataset": "wikidata",
+        "point": [
+          -1.29309,
+          51.02008
+        ],
+        "hasPolygon": false,
+        "osm_relation": "8495822"
+      }
+    },
+    "hanover": {
+      "label": "Hanover",
+      "lang": "geo",
+      "forms": [
+        "hannovers",
+        "hanovers",
+        "hennevers",
+        "hennoveres",
+        "hennovers",
+        "hennovors",
+        "henover",
+        "henovers"
+      ],
+      "gloss": "from Hanover",
+      "geo": {
+        "id": "Q1715",
+        "wikidata": "https://www.wikidata.org/entity/Q1715",
+        "label": "Hanover",
+        "dataset": "wikidata",
+        "point": [
+          9.73861,
+          52.37444
+        ],
+        "hasPolygon": true,
+        "osm_relation": "59418"
+      }
+    },
+    "harness": {
+      "label": "harness",
+      "lang": "mul",
+      "forms": [
+        "harnasio",
+        "harnays",
+        "harness",
+        "harneys"
+      ],
+      "gloss": "with/of harness (saddle tack)"
+    },
+    "hart": {
+      "label": "hart",
+      "lang": "mul",
+      "forms": [
+        "cervilium",
+        "cervium",
+        "cervorum",
+        "fawne",
+        "hart",
+        "hartes",
+        "hert",
+        "herte",
+        "hertes",
+        "herts",
+        "herttes",
+        "hynde",
+        "hyndecalfe",
+        "servorum"
+      ],
+      "gloss": "deer-skin (hart, hind)"
+    },
+    "hazebrouck": {
+      "label": "Hazebrouck",
+      "lang": "geo",
+      "forms": [
+        "haborugh",
+        "habrough",
+        "haburro",
+        "harbrough",
+        "hasbarrow",
+        "hasbarrowe",
+        "hasbero",
+        "hasberoe",
+        "hasberow",
+        "hasberowe",
+        "hasboro",
+        "hasborough",
+        "hasboroughe",
+        "hasborow",
+        "hasborowe",
+        "hasborowghe",
+        "hasborugh",
+        "hasbrok",
+        "hasbroke",
+        "hasbrough",
+        "hasbrowe",
+        "hasbrowgh",
+        "hasbrugh",
+        "hasburg",
+        "hasburgh",
+        "haspero",
+        "hasperowght",
+        "hazebrouck",
+        "hosburgh"
+      ],
+      "gloss": "from Hazebrouck",
+      "geo": {
+        "id": "Q11131",
+        "wikidata": "https://www.wikidata.org/entity/Q11131",
+        "label": "Hazebrouck",
+        "dataset": "wikidata",
+        "point": [
+          2.53833,
+          50.72444
+        ],
+        "hasPolygon": true,
+        "osm_relation": "78593"
+      }
+    },
+    "hechild": {
+      "label": "hechild",
+      "lang": "mul",
+      "forms": [
+        "hechild"
+      ],
+      "gloss": "dressed, hackled flax"
+    },
+    "hedlake": {
+      "label": "hedlake",
+      "lang": "mul",
+      "forms": [
+        "hedlake",
+        "hedlaken",
+        "hedlakyn"
+      ],
+      "gloss": "made of tow / refuse flax (Werg); headcloth"
+    },
+    "hemp": {
+      "label": "hemp",
+      "lang": "mul",
+      "forms": [
+        "canabis",
+        "canebis",
+        "canibi"
+      ],
+      "gloss": "made of hemp",
+      "aat": {
+        "specific": "300014043",
+        "label": "hemp (fiber)"
+      }
+    },
+    "herford": {
+      "label": "Herford",
+      "lang": "geo",
+      "forms": [
+        "harfordes",
+        "herefordes",
+        "herfford",
+        "herffordes",
+        "herford",
+        "herfordes",
+        "herrefordes"
+      ],
+      "gloss": "from Herford",
+      "geo": {
+        "id": "Q3971",
+        "wikidata": "https://www.wikidata.org/entity/Q3971",
+        "label": "Herford",
+        "dataset": "wikidata",
+        "point": [
+          8.67343,
+          52.11457
+        ],
+        "hasPolygon": true,
+        "osm_relation": "146654"
+      }
+    },
+    "hesigham": {
+      "label": "hesigham",
+      "lang": "mul",
+      "forms": [
+        "hesigham",
+        "isingham",
+        "isinghams",
+        "issyngham"
+      ],
+      "gloss": "unidentified term/place (meaning unknown); attested in the Book of Rates (Willan 35); place uncertain, possibly Isenhagen; cloth made in Izegem in Flanders (north of Kortrijk) (Thielemans 225-6); unidentified term/place attested in Book of Rates (meaning unknown)"
+    },
+    "history": {
+      "label": "history",
+      "lang": "mul",
+      "forms": [
+        "diversarum historiarum",
+        "diversarum istoriarum",
+        "historiarum",
+        "historie",
+        "histories",
+        "history",
+        "istoriarum"
+      ],
+      "gloss": "of histories / stories (content of a volume, e.g. voluminibus diversarum historiarum)"
+    },
+    "hod": {
+      "label": "hod",
+      "lang": "mul",
+      "forms": [
+        "hod",
+        "hodis",
+        "hood"
+      ],
+      "gloss": "cloth for making hoods"
+    },
+    "holland": {
+      "label": "Holland",
+      "lang": "geo",
+      "forms": [
+        "holand",
+        "holande",
+        "holandia",
+        "holandie",
+        "holands",
+        "holland",
+        "hollande",
+        "hollandes",
+        "hollandie",
+        "hollantes",
+        "hollaund",
+        "hollaundes",
+        "hollonde",
+        "holond",
+        "holonde",
+        "holondie",
+        "hoolandes"
+      ],
+      "gloss": "manufactured in Holland",
+      "geo": {
+        "id": "Q762943",
+        "wikidata": "https://www.wikidata.org/entity/Q762943",
+        "label": "County of Holland",
+        "dataset": "wikidata",
+        "point": [
+          4.53678,
+          52.16325
+        ],
+        "hasPolygon": false
+      }
+    },
+    "horse": {
+      "label": "horse",
+      "lang": "mul",
+      "forms": [
+        "hors"
+      ],
+      "gloss": "of / for horses"
+    },
+    "horsehide": {
+      "label": "horsehide",
+      "lang": "mul",
+      "forms": [
+        "equis",
+        "equorum"
+      ],
+      "gloss": "horse-hide"
+    },
+    "horsemen": {
+      "label": "horsemen",
+      "lang": "mul",
+      "forms": [
+        "for horsemen",
+        "horsemen"
+      ],
+      "gloss": "for horsemen (occupational)"
+    },
+    "horstaille": {
+      "label": "horstaille",
+      "lang": "mul",
+      "forms": [
+        "horstaille"
+      ],
+      "gloss": "a type of raw silk (sericum crudum horstaille); meaning uncertain (Jenks)"
+    },
+    "impressis": {
+      "label": "impressis",
+      "lang": "mul",
+      "forms": [
+        "impressis"
+      ],
+      "gloss": ""
+    },
+    "in_season": {
+      "label": "in season",
+      "lang": "mul",
+      "forms": [
+        "ceson",
+        "season",
+        "season ware",
+        "seasoned",
+        "seosened",
+        "sesned",
+        "seson",
+        "seson ware",
+        "sesone",
+        "sesoned"
+      ],
+      "gloss": "taken in season"
+    },
+    "inderland": {
+      "label": "inderland",
+      "lang": "mul",
+      "forms": [
+        "hinderlond",
+        "inderland",
+        "inderlond",
+        "ynderlande"
+      ],
+      "gloss": "hinderland linen (probably Prussian)"
+    },
+    "india": {
+      "label": "India",
+      "lang": "geo",
+      "gloss": "from India",
+      "forms": [
+        "india",
+        "yndea"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "ingrain": {
+      "label": "ingrain",
+      "lang": "mul",
+      "forms": [
+        "de integro grano",
+        "ingrain",
+        "ingrana",
+        "ingrano",
+        "ingrayne",
+        "integro",
+        "in grano"
+      ],
+      "gloss": "'whole grain' (ingrain): dyed with kermes whole-grain — an expensive, colourfast scarlet/grain dye from the Kermes insect, distinguishing such cloth from cheaper dyes"
+    },
+    "inoperatum": {
+      "label": "inoperatum",
+      "lang": "mul",
+      "forms": [
+        "inoperatum"
+      ],
+      "gloss": "undressed"
+    },
+    "insuladesurie": {
+      "label": "insula de surie",
+      "lang": "mul",
+      "forms": [
+        "insula de surie"
+      ],
+      "gloss": ""
+    },
+    "ireland": {
+      "label": "Ireland",
+      "lang": "geo",
+      "forms": [
+        "hibernia",
+        "hibernie",
+        "hybernie",
+        "irish",
+        "irisshe",
+        "irys",
+        "irysh",
+        "iryshe",
+        "irysshe",
+        "yresh",
+        "yryshe"
+      ],
+      "gloss": "from Ireland",
+      "geo": {
+        "id": "Q22890",
+        "wikidata": "https://www.wikidata.org/entity/Q22890",
+        "label": "Ireland",
+        "dataset": "wikidata",
+        "point": [
+          -7.921,
+          53.351
+        ],
+        "hasPolygon": true,
+        "osm_relation": "7681896"
+      }
+    },
+    "iron": {
+      "label": "iron",
+      "lang": "mul",
+      "forms": [
+        "fere",
+        "ferre",
+        "ferri",
+        "ferriys",
+        "ferro",
+        "ferrum",
+        "iorn",
+        "iron",
+        "irone",
+        "jeryne",
+        "yron",
+        "yrone",
+        "yrons"
+      ],
+      "gloss": "made of iron",
+      "aat": {
+        "specific": "300011002",
+        "label": "iron (metal)"
+      }
+    },
+    "islandia": {
+      "label": "Islandia",
+      "lang": "geo",
+      "gloss": "from Islandia",
+      "forms": [
+        "islandia"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'zeeland' — review/merge in the editor."
+    },
+    "ivory": {
+      "label": "ivory",
+      "lang": "mul",
+      "forms": [
+        "evory",
+        "ivere",
+        "iverie",
+        "ivery",
+        "iverye",
+        "ivore",
+        "ivory",
+        "yvere",
+        "yvery",
+        "yverye",
+        "yvore",
+        "yvory"
+      ],
+      "gloss": "made of ivory",
+      "aat": {
+        "specific": "300011857",
+        "label": "ivory (material)"
+      }
+    },
+    "jhesu": {
+      "label": "of Jesus",
+      "lang": "mul",
+      "forms": [
+        "de jhesu",
+        "jhesu",
+        "jhesus"
+      ],
+      "gloss": "(image subject) of Jesus / Christ — cf. the Beata Maria image-subject qualifiers"
+    },
+    "kampen": {
+      "label": "Kampen",
+      "lang": "geo",
+      "forms": [
+        "campe"
+      ],
+      "gloss": "from Kampen",
+      "geo": {
+        "id": "Q10014",
+        "wikidata": "https://www.wikidata.org/entity/Q10014",
+        "label": "Kampen",
+        "dataset": "wikidata",
+        "point": [
+          5.91972,
+          52.555
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2696270"
+      }
+    },
+    "kent": {
+      "label": "Kent",
+      "lang": "geo",
+      "forms": [
+        "kentyshe"
+      ],
+      "gloss": "from Kent",
+      "geo": {
+        "id": "Q23298",
+        "wikidata": "https://www.wikidata.org/entity/Q23298",
+        "label": "Kent",
+        "dataset": "wikidata",
+        "point": [
+          0.73,
+          51.19
+        ],
+        "hasPolygon": true,
+        "osm_relation": "88071"
+      }
+    },
+    "kid": {
+      "label": "kid",
+      "lang": "mul",
+      "forms": [
+        "ked",
+        "kiddes",
+        "kydd",
+        "kyddes",
+        "de cheverello"
+      ],
+      "gloss": "made of kid skins"
+    },
+    "knitted": {
+      "label": "knitted",
+      "lang": "mul",
+      "forms": [
+        "knet",
+        "knitt",
+        "knitte",
+        "knyt",
+        "knytte"
+      ],
+      "gloss": "knitted"
+    },
+    "kortrijk": {
+      "label": "Kortrijk",
+      "lang": "geo",
+      "forms": [
+        "curteryk",
+        "curtikes",
+        "curtrick",
+        "curtrik",
+        "curtryk"
+      ],
+      "gloss": "from Kortrijk",
+      "geo": {
+        "id": "Q12995",
+        "wikidata": "https://www.wikidata.org/entity/Q12995",
+        "label": "Kortrijk",
+        "dataset": "wikidata",
+        "point": [
+          3.26583,
+          50.8275
+        ],
+        "hasPolygon": true,
+        "osm_relation": "961284"
+      }
+    },
+    "kymering": {
+      "label": "kymering",
+      "lang": "mul",
+      "forms": [
+        "kymering"
+      ],
+      "gloss": "clearly some kind of thread, but exact meaning unknown"
+    },
+    "kynge": {
+      "label": "kynge",
+      "lang": "mul",
+      "forms": [
+        "kynge"
+      ],
+      "gloss": "trade-name for one of the classes into which fullers' teasels are sorted, kings are larger and coarser teasels and fitted only for the strongest kinds of cloth (OED king n. I.10)"
+    },
+    "lamb": {
+      "label": "lamb",
+      "lang": "mul",
+      "forms": [
+        "lamb",
+        "lambe",
+        "lame",
+        "lames"
+      ],
+      "gloss": "made of lambskins"
+    },
+    "lampadis": {
+      "label": "lampadis",
+      "lang": "mul",
+      "forms": [
+        "lampadis",
+        "lampedis"
+      ],
+      "gloss": "for lamps"
+    },
+    "large": {
+      "label": "large",
+      "lang": "mul",
+      "forms": [
+        "grand",
+        "great",
+        "greate",
+        "gret",
+        "grete",
+        "gretes",
+        "grets",
+        "gros",
+        "grossa",
+        "grosse",
+        "grossum",
+        "magna",
+        "magnae",
+        "magni",
+        "magnis",
+        "magnum",
+        "magnus",
+        "magne",
+        "magno",
+        "grett"
+      ],
+      "gloss": "large / great",
+      "aat": {
+        "specific": "300073756",
+        "label": "large"
+      }
+    },
+    "large-headed": {
+      "label": "large-headed",
+      "lang": "mul",
+      "forms": [
+        "capital",
+        "capitalis",
+        "hed"
+      ],
+      "gloss": "having a large head (of nails)"
+    },
+    "lasing": {
+      "label": "lasing",
+      "lang": "mul",
+      "forms": [
+        "lacing",
+        "lacyng",
+        "lasing",
+        "lasyng",
+        "lasynge"
+      ],
+      "gloss": "for lacing (lasing points)"
+    },
+    "latten": {
+      "label": "latten",
+      "lang": "mul",
+      "forms": [
+        "de latone",
+        "electri",
+        "ellectri",
+        "laten",
+        "latene",
+        "laton",
+        "latone",
+        "latones",
+        "latonis",
+        "latons",
+        "latten",
+        "lattens",
+        "latteyn",
+        "latton",
+        "lattone",
+        "lattones",
+        "latyn"
+      ],
+      "gloss": "made of latten (copper alloy)",
+      "aat": {
+        "specific": "300198675",
+        "label": "latten"
+      }
+    },
+    "leadweb": {
+      "label": "lead web",
+      "lang": "mul",
+      "forms": [
+        "web",
+        "webb",
+        "webbe",
+        "webbes"
+      ],
+      "gloss": "a sheet of lead (for roofing/glazing)"
+    },
+    "leather": {
+      "label": "leather",
+      "lang": "mul",
+      "forms": [
+        "coreata",
+        "coreatarum",
+        "coreatis",
+        "corei",
+        "coreo",
+        "coreum",
+        "corii",
+        "corio",
+        "corrio",
+        "de coreo",
+        "de corio",
+        "leather",
+        "ledder",
+        "leddir",
+        "leder",
+        "leders",
+        "ledir",
+        "ledre",
+        "lether",
+        "lethir",
+        "of lether"
+      ],
+      "gloss": "made of leather",
+      "aat": {
+        "specific": "300011845",
+        "label": "leather"
+      }
+    },
+    "lege": {
+      "label": "leg",
+      "lang": "mul",
+      "forms": [
+        "lege",
+        "leges",
+        "legge",
+        "legges",
+        "liege"
+      ],
+      "gloss": "fur from the legs of the animal"
+    },
+    "lemgo": {
+      "label": "Lemgo",
+      "lang": "geo",
+      "forms": [
+        "lemagois",
+        "lemegos",
+        "lemegowys"
+      ],
+      "gloss": "from Lemgo",
+      "geo": {
+        "id": "Q14817",
+        "wikidata": "https://www.wikidata.org/entity/Q14817",
+        "label": "Lemgo",
+        "dataset": "wikidata",
+        "point": [
+          8.9043,
+          52.02768
+        ],
+        "hasPolygon": true,
+        "osm_relation": "142624"
+      }
+    },
+    "letter": {
+      "label": "letter",
+      "lang": "mul",
+      "forms": [
+        "cum litteris",
+        "litteris",
+        "pro litteris"
+      ],
+      "gloss": "for/with letters (e.g. boxes pro litteris = letter-boxes)"
+    },
+    "levant": {
+      "label": "Levant",
+      "lang": "geo",
+      "forms": [
+        "levant"
+      ],
+      "gloss": "from Levant",
+      "geo": {
+        "id": "Q81483",
+        "wikidata": "https://www.wikidata.org/entity/Q81483",
+        "label": "Levant",
+        "dataset": "wikidata",
+        "point": [
+          36,
+          34
+        ],
+        "hasPolygon": false
+      }
+    },
+    "libethen": {
+      "label": "Libethen",
+      "lang": "geo",
+      "forms": [
+        "libiter"
+      ],
+      "gloss": "from Libethen, Hungary",
+      "geo": {
+        "id": "Q223477",
+        "wikidata": "https://www.wikidata.org/entity/Q223477",
+        "label": "Ľubietová (Libethen)",
+        "dataset": "wikidata",
+        "point": [
+          19.36667,
+          48.75
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2265337"
+      }
+    },
+    "lickes": {
+      "label": "lickes",
+      "lang": "mul",
+      "forms": [
+        "lickes"
+      ],
+      "gloss": "clearly some kind of hemp, but exact meaning unknown"
+    },
+    "linen": {
+      "label": "linen",
+      "lang": "mul",
+      "forms": [
+        "flaxen",
+        "linen",
+        "lineus",
+        "lini",
+        "linni",
+        "linum",
+        "linyn",
+        "lynen",
+        "lynnyn"
+      ],
+      "gloss": "made of linen",
+      "aat": {
+        "specific": "300014069",
+        "label": "linen (material)"
+      }
+    },
+    "lionis": {
+      "label": "Lionis",
+      "lang": "geo",
+      "gloss": "from Lionis",
+      "forms": [
+        "lionis"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "lions": {
+      "label": "lions",
+      "lang": "mul",
+      "forms": [
+        "lions",
+        "lyons"
+      ],
+      "gloss": "gilded silver thread, later gilded copper thread, used as a substitute for gold thread; attested in the Book of Rates thred called Lions thred (Willan 61)"
+    },
+    "loaf": {
+      "label": "loaf",
+      "lang": "mul",
+      "forms": [
+        "loaves",
+        "loffe",
+        "love",
+        "loves",
+        "lovez",
+        "lovys"
+      ],
+      "gloss": "sugar-loaf — refined sugar moulded into a loaf"
+    },
+    "london": {
+      "label": "London",
+      "lang": "geo",
+      "forms": [
+        "london",
+        "london de scarlet"
+      ],
+      "gloss": "from London",
+      "geo": {
+        "id": "Q84",
+        "wikidata": "https://www.wikidata.org/entity/Q84",
+        "label": "London",
+        "dataset": "wikidata",
+        "point": [
+          -0.1275,
+          51.50722
+        ],
+        "hasPolygon": true,
+        "osm_relation": "65606"
+      }
+    },
+    "long": {
+      "label": "long",
+      "lang": "mul",
+      "forms": [
+        "long",
+        "longe",
+        "longi",
+        "longis",
+        "longum",
+        "longus",
+        "lounge",
+        "lowng"
+      ],
+      "gloss": "long"
+    },
+    "longskeyn": {
+      "label": "longskeyn",
+      "lang": "mul",
+      "forms": [
+        "longskeyn"
+      ],
+      "gloss": "thread wound on a long skein, presumably a larger than usual quantity (OED s.v. skein n.1)"
+    },
+    "loos": {
+      "label": "loos",
+      "lang": "mul",
+      "forms": [
+        "loos",
+        "loose"
+      ],
+      "gloss": "not packed in a standard size package"
+    },
+    "lose": {
+      "label": "lose",
+      "lang": "mul",
+      "forms": [
+        "los",
+        "lose"
+      ],
+      "gloss": "not packed in a standard size package"
+    },
+    "lows": {
+      "label": "lows",
+      "lang": "mul",
+      "forms": [
+        "lows",
+        "lowse"
+      ],
+      "gloss": "not packed in a standard size package"
+    },
+    "lubik": {
+      "label": "Lubik",
+      "lang": "geo",
+      "gloss": "from Lubik",
+      "forms": [
+        "lubik",
+        "lubyk",
+        "lub"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "lucca": {
+      "label": "Lucca",
+      "lang": "geo",
+      "forms": [
+        "luca",
+        "lucca",
+        "luka",
+        "luke",
+        "lukes"
+      ],
+      "gloss": "from Lucca",
+      "geo": {
+        "id": "Q13373",
+        "wikidata": "https://www.wikidata.org/entity/Q13373",
+        "label": "Lucca",
+        "dataset": "wikidata",
+        "point": [
+          10.51667,
+          43.85
+        ],
+        "hasPolygon": true,
+        "osm_relation": "42659"
+      }
+    },
+    "ludlow": {
+      "label": "Ludlow",
+      "lang": "geo",
+      "forms": [
+        "lodlow"
+      ],
+      "gloss": "from Ludlow",
+      "geo": {
+        "id": "Q839811",
+        "wikidata": "https://www.wikidata.org/entity/Q839811",
+        "label": "Ludlow",
+        "dataset": "wikidata",
+        "point": [
+          -2.71667,
+          52.36667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "3795241"
+      }
+    },
+    "lumbardia": {
+      "label": "Lumbardia",
+      "lang": "geo",
+      "gloss": "from Lumbardia",
+      "forms": [
+        "lumbardia",
+        "lumbardie",
+        "lumbardy"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "madeira": {
+      "label": "Madeira",
+      "lang": "geo",
+      "forms": [
+        "madera"
+      ],
+      "gloss": "from Madeira",
+      "geo": {
+        "id": "Q26253",
+        "wikidata": "https://www.wikidata.org/entity/Q26253",
+        "label": "Madeira",
+        "dataset": "wikidata",
+        "point": [
+          -17,
+          32.75
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1629145"
+      }
+    },
+    "mail": {
+      "label": "mail",
+      "lang": "mul",
+      "forms": [
+        "maile",
+        "maill",
+        "maille",
+        "mayle",
+        "maylle"
+      ],
+      "gloss": "made of mail (armour)"
+    },
+    "malaga": {
+      "label": "Málaga",
+      "lang": "geo",
+      "forms": [
+        "malica",
+        "malice",
+        "malik",
+        "malyk"
+      ],
+      "gloss": "manufactured in Málaga, Andalusia",
+      "geo": {
+        "id": "Q8851",
+        "wikidata": "https://www.wikidata.org/entity/Q8851",
+        "label": "Málaga",
+        "dataset": "wikidata",
+        "point": [
+          -4.41667,
+          36.71667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "340746"
+      }
+    },
+    "malmsey": {
+      "label": "malmsey",
+      "lang": "mul",
+      "forms": [
+        "malmesei",
+        "malmesey",
+        "malmesies",
+        "malmesye",
+        "malveseis",
+        "malvesey",
+        "malveseys",
+        "malvessey",
+        "malvesy"
+      ],
+      "gloss": "malmsey — a strong sweet wine"
+    },
+    "marble": {
+      "label": "marble",
+      "lang": "mul",
+      "forms": [
+        "marbyll"
+      ],
+      "gloss": "marble-coloured, mottled like variegated marble"
+    },
+    "marten": {
+      "label": "marten",
+      "lang": "mul",
+      "forms": [
+        "marteron",
+        "marterone",
+        "marterones",
+        "marterons",
+        "marterynz",
+        "martrons",
+        "martrynes"
+      ],
+      "gloss": "made of marten skins"
+    },
+    "mecca": {
+      "label": "Mecca",
+      "lang": "geo",
+      "forms": [
+        "maykyn"
+      ],
+      "gloss": "Mecca — a grade of ginger",
+      "geo": {
+        "id": "Q5806",
+        "wikidata": "https://www.wikidata.org/entity/Q5806",
+        "label": "Mecca",
+        "dataset": "wikidata",
+        "point": [
+          39.82611,
+          21.4225
+        ],
+        "hasPolygon": false
+      }
+    },
+    "mechelen": {
+      "label": "Mechelen",
+      "lang": "geo",
+      "forms": [
+        "mekelyn"
+      ],
+      "gloss": "from Mechelen",
+      "geo": {
+        "id": "Q162022",
+        "wikidata": "https://www.wikidata.org/entity/Q162022",
+        "label": "Mechelen",
+        "dataset": "wikidata",
+        "point": [
+          4.48028,
+          51.02806
+        ],
+        "hasPolygon": true,
+        "osm_relation": "412864"
+      }
+    },
+    "medicinal": {
+      "label": "medicinal",
+      "lang": "mul",
+      "forms": [
+        "medecine",
+        "medicinal",
+        "medicine",
+        "pro medicina"
+      ],
+      "gloss": "medicinal; for medicine"
+    },
+    "medium": {
+      "label": "medium",
+      "lang": "mul",
+      "forms": [
+        "gudde",
+        "gude",
+        "medium",
+        "mydle gudde",
+        "mediis"
+      ],
+      "gloss": "of medium quality"
+    },
+    "mens": {
+      "label": "men's",
+      "lang": "mul",
+      "forms": [
+        "mens"
+      ],
+      "gloss": "men's (for men)"
+    },
+    "messina": {
+      "label": "Messina",
+      "lang": "geo",
+      "forms": [
+        "measans",
+        "mecena",
+        "mesan",
+        "mesana",
+        "mesande",
+        "mesane",
+        "mesanis",
+        "mesans",
+        "mesanus",
+        "mesanz",
+        "mesena",
+        "meson",
+        "messana",
+        "messans",
+        "messenense",
+        "messenensis",
+        "messyn",
+        "mesyn",
+        "myssena"
+      ],
+      "gloss": "from Messina (Sicily)",
+      "geo": {
+        "id": "Q13666",
+        "wikidata": "https://www.wikidata.org/entity/Q13666",
+        "label": "Messina",
+        "dataset": "wikidata",
+        "point": [
+          15.55417,
+          38.19361
+        ],
+        "hasPolygon": true,
+        "osm_relation": "39514"
+      }
+    },
+    "mid": {
+      "label": "mid",
+      "lang": "mul",
+      "forms": [
+        "medelle",
+        "mid",
+        "midd",
+        "middel",
+        "middeling",
+        "middelle",
+        "middil",
+        "middle",
+        "midille",
+        "midle",
+        "myddell",
+        "myddelle",
+        "mydelle",
+        "mydille",
+        "mydle",
+        "mydyl",
+        "mydyle"
+      ],
+      "gloss": "mid-sized"
+    },
+    "milan": {
+      "label": "Milan",
+      "lang": "geo",
+      "forms": [
+        "melane",
+        "melyon",
+        "milene",
+        "millen",
+        "myllayn",
+        "myllen",
+        "myllene",
+        "myllene counterfett",
+        "myllyn",
+        "myllyne",
+        "millene"
+      ],
+      "gloss": "from Milan",
+      "geo": {
+        "id": "Q490",
+        "wikidata": "https://www.wikidata.org/entity/Q490",
+        "label": "Milan",
+        "dataset": "wikidata",
+        "point": [
+          9.19,
+          45.46694
+        ],
+        "hasPolygon": true,
+        "osm_relation": "44915"
+      }
+    },
+    "mirror": {
+      "label": "for mirrors",
+      "lang": "mul",
+      "forms": [
+        "mirror",
+        "myrror",
+        "speculorum"
+      ],
+      "gloss": "for mirrors"
+    },
+    "mok": {
+      "label": "mok",
+      "lang": "mul",
+      "forms": [
+        "mok"
+      ],
+      "gloss": "imitation (mock) satin (OED s.v. mock a.)"
+    },
+    "montano": {
+      "label": "mountain",
+      "lang": "mul",
+      "forms": [
+        "montano",
+        "montanorum"
+      ],
+      "gloss": "mountain (wildcat) variety of fur"
+    },
+    "montivilliers": {
+      "label": "Montivilliers",
+      "lang": "geo",
+      "forms": [
+        "musterveler"
+      ],
+      "gloss": "from Montivilliers",
+      "geo": {
+        "id": "Q845991",
+        "wikidata": "https://www.wikidata.org/entity/Q845991",
+        "label": "Montivilliers",
+        "dataset": "wikidata",
+        "point": [
+          0.18806,
+          49.54611
+        ],
+        "hasPolygon": true,
+        "osm_relation": "109657"
+      }
+    },
+    "morkin": {
+      "label": "morkin",
+      "lang": "mul",
+      "forms": [
+        "moreyns",
+        "morkens",
+        "morkin",
+        "morkins",
+        "morkyn",
+        "morkyns",
+        "mortekyns",
+        "mortkyns"
+      ],
+      "gloss": "died of disease/accident, not slaughtered (of skins)"
+    },
+    "mortuis": {
+      "label": "mortuis",
+      "lang": "mul",
+      "forms": [
+        "mortuis",
+        "vocatis mortuis",
+        "vocata mortua"
+      ],
+      "gloss": ""
+    },
+    "motheten": {
+      "label": "motheten",
+      "lang": "mul",
+      "forms": [
+        "motheten"
+      ],
+      "gloss": "moth-eaten"
+    },
+    "mottled": {
+      "label": "mottled",
+      "lang": "mul",
+      "forms": [
+        "moteley",
+        "motle",
+        "motley",
+        "mottele",
+        "motteles",
+        "motteley"
+      ],
+      "gloss": "motley, variegated, particoloured, chequered"
+    },
+    "mull": {
+      "label": "mull",
+      "lang": "mul",
+      "forms": [
+        "mul",
+        "molle",
+        "mull"
+      ],
+      "gloss": "the lowest of the four grades of Dutch madder"
+    },
+    "munckys": {
+      "label": "munckys",
+      "lang": "mul",
+      "forms": [
+        "munckys"
+      ],
+      "gloss": "clearly some sort of satin, but exact meaning unknown"
+    },
+    "munster": {
+      "label": "Münster",
+      "lang": "geo",
+      "forms": [
+        "minsters",
+        "minstre",
+        "minstres",
+        "minstrys",
+        "minystre",
+        "munstre",
+        "mynster",
+        "mynsters",
+        "mynsterys",
+        "mynstre",
+        "mynstres",
+        "mynstrys"
+      ],
+      "gloss": "from Münster",
+      "geo": {
+        "id": "Q2742",
+        "wikidata": "https://www.wikidata.org/entity/Q2742",
+        "label": "Münster",
+        "dataset": "wikidata",
+        "point": [
+          7.62556,
+          51.9625
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62591"
+      }
+    },
+    "murrey": {
+      "label": "murrey",
+      "lang": "mul",
+      "forms": [
+        "murre"
+      ],
+      "gloss": "mulberry/murrey colour",
+      "aat": {
+        "specific": "300130257",
+        "label": "purple (color)",
+        "broader": true
+      }
+    },
+    "muscadel": {
+      "label": "muscadel",
+      "lang": "mul",
+      "forms": [
+        "muscadel",
+        "muscadell",
+        "muscadelle",
+        "muscadels",
+        "muscadells"
+      ],
+      "gloss": "muscadel — a sweet wine"
+    },
+    "mutton": {
+      "label": "mutton",
+      "lang": "mul",
+      "forms": [
+        "multonis",
+        "moltonis",
+        "molt"
+      ],
+      "gloss": "of sheep / mutton"
+    },
+    "naples": {
+      "label": "Naples",
+      "lang": "geo",
+      "forms": [
+        "anapes",
+        "anaple",
+        "anaples",
+        "anaps",
+        "anapulles",
+        "apis",
+        "aplus",
+        "napalles",
+        "naples",
+        "napull",
+        "napulles"
+      ],
+      "gloss": "from Naples",
+      "geo": {
+        "id": "Q2634",
+        "wikidata": "https://www.wikidata.org/entity/Q2634",
+        "label": "Naples",
+        "dataset": "wikidata",
+        "point": [
+          14.24861,
+          40.83583
+        ],
+        "hasPolygon": true,
+        "osm_relation": "40767"
+      }
+    },
+    "narrow": {
+      "label": "narrow",
+      "lang": "mul",
+      "forms": [
+        "naro",
+        "narow",
+        "narowe",
+        "narrow",
+        "narrowe",
+        "streight",
+        "streyte",
+        "streyttes",
+        "stricta",
+        "stricte",
+        "stricti",
+        "strictis",
+        "stricto",
+        "strictorum",
+        "strictum",
+        "strictus"
+      ],
+      "gloss": "narrow"
+    },
+    "necked": {
+      "label": "necked",
+      "lang": "mul",
+      "forms": [
+        "nect",
+        "neckid",
+        "neckyd",
+        "necte",
+        "single necte",
+        "sengle neckid"
+      ],
+      "gloss": "necked (neckid) — meaning uncertain (Jenks); cf. single necked"
+    },
+    "nekke": {
+      "label": "neck",
+      "lang": "mul",
+      "forms": [
+        "neckes",
+        "neckys",
+        "nekke",
+        "nekkes",
+        "throtes"
+      ],
+      "gloss": "neck hide / neck fur"
+    },
+    "new": {
+      "label": "new",
+      "lang": "mul",
+      "forms": [
+        "new",
+        "newe",
+        "nova",
+        "nove",
+        "novi",
+        "novis",
+        "novo",
+        "novorum",
+        "novum",
+        "novus"
+      ],
+      "gloss": "new"
+    },
+    "newcastle": {
+      "label": "Newcastle upon Tyne",
+      "lang": "geo",
+      "forms": [
+        "newcastelle",
+        "newcastre",
+        "novi castri"
+      ],
+      "gloss": "from Newcastle upon Tyne",
+      "geo": {
+        "id": "Q1425428",
+        "wikidata": "https://www.wikidata.org/entity/Q1425428",
+        "label": "Newcastle upon Tyne",
+        "dataset": "wikidata",
+        "point": [
+          -1.61333,
+          54.97778
+        ],
+        "hasPolygon": false
+      }
+    },
+    "newell": {
+      "label": "newell",
+      "lang": "mul",
+      "forms": [
+        "newell"
+      ],
+      "gloss": "clearly some kind of worsted, but meaning unknown"
+    },
+    "newlond": {
+      "label": "Newlond",
+      "lang": "geo",
+      "gloss": "from Newlond",
+      "forms": [
+        "newlond",
+        "newland"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "night": {
+      "label": "night",
+      "lang": "mul",
+      "forms": [
+        "pro noctibus",
+        "pro nocte"
+      ],
+      "gloss": "for night / night- (e.g. night-cap)"
+    },
+    "niperfeld": {
+      "label": "niperfeld",
+      "lang": "mul",
+      "forms": [
+        "niperfeld",
+        "niperfeldes",
+        "niperfeldis",
+        "niperfeldys",
+        "niperfild",
+        "nyperfeld",
+        "nyperfelles",
+        "nyperfild",
+        "nyperville"
+      ],
+      "gloss": "niperfeld cloth (German, probably Westphalian)"
+    },
+    "nivelles": {
+      "label": "Nivelles",
+      "lang": "geo",
+      "forms": [
+        "niffulles",
+        "nyfelles",
+        "nyfulle",
+        "nyfulles",
+        "nyvylle"
+      ],
+      "gloss": "from Nivelles",
+      "geo": {
+        "id": "Q319463",
+        "wikidata": "https://www.wikidata.org/entity/Q319463",
+        "label": "Nivelles",
+        "dataset": "wikidata",
+        "point": [
+          4.3236,
+          50.5964
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1149724"
+      }
+    },
+    "norfolk": {
+      "label": "Norfolk",
+      "lang": "geo",
+      "forms": [
+        "norff",
+        "norffolcie",
+        "norfolcie",
+        "norfolke",
+        "northffolke",
+        "northfolche",
+        "northfolcie",
+        "northfolke",
+        "northfolkie"
+      ],
+      "gloss": "from Norfolk",
+      "geo": {
+        "id": "Q67535211",
+        "wikidata": "https://www.wikidata.org/entity/Q67535211",
+        "label": "Norfolk",
+        "dataset": "wikidata",
+        "point": [
+          0.94867,
+          52.67272
+        ],
+        "hasPolygon": true,
+        "osm_relation": "8483422"
+      }
+    },
+    "normandy": {
+      "label": "Normandy",
+      "lang": "geo",
+      "forms": [
+        "normandi",
+        "normandie",
+        "normandy",
+        "normandy albus",
+        "normandye",
+        "tela lini normandy",
+        "white normandy",
+        "norman"
+      ],
+      "gloss": "from Normandy",
+      "geo": {
+        "id": "Q15878",
+        "wikidata": "https://www.wikidata.org/entity/Q15878",
+        "label": "Normandy",
+        "dataset": "wikidata",
+        "point": [
+          -0.43664,
+          49.12234
+        ],
+        "hasPolygon": false
+      }
+    },
+    "norway": {
+      "label": "Norway",
+      "lang": "geo",
+      "forms": [
+        "norway"
+      ],
+      "gloss": "from Norway",
+      "geo": {
+        "id": "Q20",
+        "wikidata": "https://www.wikidata.org/entity/Q20",
+        "label": "Norway",
+        "dataset": "wikidata",
+        "point": [
+          10.68333,
+          59.93333
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2978650"
+      }
+    },
+    "norwich": {
+      "label": "Norwich",
+      "lang": "geo",
+      "forms": [
+        "norwyche"
+      ],
+      "gloss": "from Norwich",
+      "geo": {
+        "id": "Q130191",
+        "wikidata": "https://www.wikidata.org/entity/Q130191",
+        "label": "Norwich",
+        "dataset": "wikidata",
+        "point": [
+          1.29278,
+          52.62861
+        ],
+        "hasPolygon": true,
+        "osm_relation": "172506"
+      }
+    },
+    "nuremberg": {
+      "label": "Nuremberg",
+      "lang": "geo",
+      "forms": [
+        "norbery",
+        "norborgh",
+        "norborough",
+        "norborugh",
+        "norburgh"
+      ],
+      "gloss": "of Nuremberg manufacture",
+      "geo": {
+        "id": "Q2090",
+        "wikidata": "https://www.wikidata.org/entity/Q2090",
+        "label": "Nuremberg",
+        "dataset": "wikidata",
+        "point": [
+          11.0775,
+          49.45389
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62780"
+      }
+    },
+    "of barrels": {
+      "label": "of barrels",
+      "lang": "mul",
+      "forms": [
+        "barellorum",
+        "barrellorum"
+      ],
+      "gloss": "reckoned in / of barrels"
+    },
+    "old": {
+      "label": "old",
+      "lang": "mul",
+      "forms": [
+        "old",
+        "olde",
+        "ollde",
+        "vetere",
+        "veteres",
+        "veteri",
+        "veteribus",
+        "veterie",
+        "veterum",
+        "veti",
+        "vetus",
+        "vetuss",
+        "veterys"
+      ],
+      "gloss": "old, second-hand"
+    },
+    "orliaunce": {
+      "label": "Orliaunce",
+      "lang": "geo",
+      "gloss": "from Orliaunce",
+      "forms": [
+        "orliaunce"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "osnabrck": {
+      "label": "Osnabrück",
+      "lang": "geo",
+      "forms": [
+        "osborugh",
+        "osborughes",
+        "osenbrigges",
+        "osenbrigis",
+        "osenbryges",
+        "osinbriges",
+        "osinbrigis",
+        "osinbruges",
+        "osingbrigges",
+        "osingbruges",
+        "osingbrugges",
+        "ossynbrug",
+        "osumbriges",
+        "osumbruges",
+        "osunbriges",
+        "osymbruges",
+        "osynbruges",
+        "osynburgh",
+        "osyngbruges"
+      ],
+      "gloss": "from Osnabrück",
+      "geo": {
+        "id": "Q2916",
+        "wikidata": "https://www.wikidata.org/entity/Q2916",
+        "label": "Osnabrück",
+        "dataset": "wikidata",
+        "point": [
+          8.04306,
+          52.27889
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62631"
+      }
+    },
+    "ostrich": {
+      "label": "ostrich",
+      "lang": "mul",
+      "forms": [
+        "castrige",
+        "eastrich",
+        "esterige",
+        "esteryche",
+        "estrech",
+        "estredge",
+        "estrege",
+        "estrich",
+        "estriche",
+        "estridge",
+        "estrige",
+        "estrydge",
+        "estryge",
+        "oesteridge",
+        "ostredge",
+        "ostrege",
+        "ostrich",
+        "ostriche",
+        "oysteriche",
+        "oystredge",
+        "oystrege",
+        "oystregge"
+      ],
+      "gloss": "ostrich feather"
+    },
+    "otnal": {
+      "label": "otnal",
+      "lang": "mul",
+      "forms": [
+        "otnal",
+        "otnall"
+      ],
+      "gloss": "a kind of linen thread of Flemish or Dutch origin, brown in color, originally from Oudenarde in Flanders"
+    },
+    "otter": {
+      "label": "otter",
+      "lang": "mul",
+      "forms": [
+        "otell",
+        "oter",
+        "oterys",
+        "otrys",
+        "ottell",
+        "otter"
+      ],
+      "gloss": "otter skin"
+    },
+    "oudenarde": {
+      "label": "Oudenaarde",
+      "lang": "geo",
+      "forms": [
+        "otnard",
+        "outenard",
+        "outenarde",
+        "outnard",
+        "owtenard",
+        "owtnar",
+        "owtnarde",
+        "owtner",
+        "utnall",
+        "utnalle",
+        "utnard",
+        "uwtnall"
+      ],
+      "gloss": "from Oudenaarde",
+      "geo": {
+        "id": "Q12992",
+        "wikidata": "https://www.wikidata.org/entity/Q12992",
+        "label": "Oudenaarde",
+        "dataset": "wikidata",
+        "point": [
+          3.6,
+          50.85
+        ],
+        "hasPolygon": true,
+        "osm_relation": "416207"
+      }
+    },
+    "out_of_season": {
+      "label": "out of season",
+      "lang": "mul",
+      "forms": [
+        "stache ware",
+        "stag",
+        "stage",
+        "stage ware",
+        "stages",
+        "stagge",
+        "staiche ware",
+        "stayche ware",
+        "unseason",
+        "unseasoned"
+      ],
+      "gloss": "taken out of season (stage)"
+    },
+    "outnall": {
+      "label": "outnall",
+      "lang": "mul",
+      "forms": [
+        "outnall",
+        "owtnall"
+      ],
+      "gloss": "a kind of linen thread of Flemish or Dutch origin, brown in color, originally from Oudenarde in Flanders"
+    },
+    "overseas": {
+      "label": "overseas",
+      "lang": "mul",
+      "forms": [
+        "foreign",
+        "forein",
+        "oultre mer",
+        "outre la miere",
+        "outre le mer",
+        "overseas",
+        "ultra mare"
+      ],
+      "gloss": "from overseas; foreign"
+    },
+    "owtenall": {
+      "label": "owtenall",
+      "lang": "mul",
+      "forms": [
+        "owtenall"
+      ],
+      "gloss": "a kind of linen thread of Flemish or Dutch origin, brown in colour, originally from Oudenarde in Flanders"
+    },
+    "pacc": {
+      "label": "pacc",
+      "lang": "mul",
+      "forms": [
+        "pacc"
+      ],
+      "gloss": "packthread"
+    },
+    "painted": {
+      "label": "painted",
+      "lang": "mul",
+      "forms": [
+        "depicta",
+        "depicti",
+        "depictorum",
+        "depictum",
+        "depictus",
+        "painted",
+        "paintid",
+        "paynted",
+        "payntid",
+        "peyntid",
+        "picto",
+        "pictum",
+        "pictus"
+      ],
+      "gloss": "painted / depicted"
+    },
+    "paradise": {
+      "label": "of paradise",
+      "lang": "mul",
+      "forms": [
+        "paradisi",
+        "paradisy",
+        "paradyse"
+      ],
+      "gloss": "grains of paradise (granum paradisi)"
+    },
+    "parchment": {
+      "label": "parchment",
+      "lang": "mul",
+      "forms": [
+        "parchement",
+        "perchement",
+        "pergameni"
+      ],
+      "gloss": "parchment / vellum"
+    },
+    "paris": {
+      "label": "Paris",
+      "lang": "geo",
+      "forms": [
+        "coloris paris",
+        "dipticorum",
+        "par",
+        "pares",
+        "parice",
+        "paris",
+        "parise",
+        "parres",
+        "parris",
+        "parrys",
+        "paryce",
+        "parys",
+        "paryse",
+        "paryshe",
+        "peris",
+        "perris"
+      ],
+      "gloss": "from Paris",
+      "geo": {
+        "id": "Q90",
+        "wikidata": "https://www.wikidata.org/entity/Q90",
+        "label": "Paris",
+        "dataset": "wikidata",
+        "point": [
+          2.35222,
+          48.85667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "7444"
+      }
+    },
+    "paslarge": {
+      "label": "passelarge",
+      "lang": "mul",
+      "forms": [
+        "paslarge",
+        "passelardes",
+        "passelarge",
+        "passelarges",
+        "passeram",
+        "passlades"
+      ],
+      "gloss": "passelarge — a size/quality grade"
+    },
+    "paste": {
+      "label": "paste",
+      "lang": "mul",
+      "forms": [
+        "past",
+        "paste"
+      ],
+      "gloss": "in paste form"
+    },
+    "pecing": {
+      "label": "pecing",
+      "lang": "mul",
+      "forms": [
+        "pecing",
+        "pecyng",
+        "pesyng",
+        "pesynge"
+      ],
+      "gloss": "thread for patching, mending or completing by joining pieces (OED s.v. piecing vbl.n.)"
+    },
+    "pendentium": {
+      "label": "pendentium",
+      "lang": "mul",
+      "forms": [
+        "pendente",
+        "pendentibus",
+        "pendentium"
+      ],
+      "gloss": "hanging (e.g. for wall-hangings)"
+    },
+    "pheasant": {
+      "label": "pheasant",
+      "lang": "mul",
+      "forms": [
+        "fesant",
+        "fesantz",
+        "fesaunt",
+        "pheasant"
+      ],
+      "gloss": "of pheasant (e.g. pheasant feathers)"
+    },
+    "pikling": {
+      "label": "pikling",
+      "lang": "mul",
+      "forms": [
+        "pechelyng",
+        "pichling",
+        "pighling",
+        "pightling",
+        "pightlinges",
+        "pightlyng",
+        "pightlynges",
+        "pikeling",
+        "pikelyng",
+        "pikling",
+        "pithelyng",
+        "pithlinges",
+        "pithlyng",
+        "pitlyng",
+        "pychlyng",
+        "pyghling",
+        "pyghlinges",
+        "pyghlyng",
+        "pykelinge",
+        "pyklyng",
+        "pythlynges"
+      ],
+      "gloss": "pightling/pithling linen (Elbe-region German, exported via Hamburg); precise origin uncertain"
+    },
+    "pilosis": {
+      "label": "pilosis",
+      "lang": "mul",
+      "forms": [
+        "pilosarum",
+        "pilosis"
+      ],
+      "gloss": "hairy"
+    },
+    "plain": {
+      "label": "plain",
+      "lang": "mul",
+      "forms": [
+        "plaine",
+        "playn",
+        "playne",
+        "playnes",
+        "pleine",
+        "plene"
+      ],
+      "gloss": "plain velvet"
+    },
+    "ploy": {
+      "label": "ploy",
+      "lang": "mul",
+      "forms": [
+        "employ",
+        "folded",
+        "ploy",
+        "ploye"
+      ],
+      "gloss": "folded (in the manner of packing/finishing)"
+    },
+    "plucked": {
+      "label": "plucked",
+      "lang": "mul",
+      "forms": [
+        "pelettis"
+      ],
+      "gloss": "plucked (of pelts)"
+    },
+    "pople": {
+      "label": "pople",
+      "lang": "mul",
+      "forms": [
+        "popilles",
+        "popillorum",
+        "pople",
+        "poplo",
+        "poplorum"
+      ],
+      "gloss": "summer fur of the squirrel"
+    },
+    "poppey": {
+      "label": "Poppey",
+      "lang": "geo",
+      "gloss": "from Poppey",
+      "forms": [
+        "poppey"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "porcorum": {
+      "label": "porcorum",
+      "lang": "mul",
+      "forms": [
+        "porcorum"
+      ],
+      "gloss": "of pig / pork"
+    },
+    "portugal": {
+      "label": "Portugal",
+      "lang": "geo",
+      "forms": [
+        "portingal",
+        "portingale",
+        "portingalia",
+        "portingall",
+        "portugal",
+        "portugalia",
+        "portugalie",
+        "portyngal",
+        "portyngale",
+        "portyngall",
+        "portyngalle"
+      ],
+      "gloss": "from Portugal",
+      "geo": {
+        "id": "Q45",
+        "wikidata": "https://www.wikidata.org/entity/Q45",
+        "label": "Portugal",
+        "dataset": "wikidata",
+        "point": [
+          -9.18333,
+          38.7
+        ],
+        "hasPolygon": true,
+        "osm_relation": "295480"
+      }
+    },
+    "pot": {
+      "label": "paw",
+      "lang": "mul",
+      "forms": [
+        "pootes",
+        "popes",
+        "pot",
+        "potes",
+        "pott",
+        "potte",
+        "pottes",
+        "powte",
+        "powtes"
+      ],
+      "gloss": "fur from the paws of the animal"
+    },
+    "potle": {
+      "label": "potle",
+      "lang": "mul",
+      "forms": [
+        "potel",
+        "potell",
+        "potelle",
+        "potelleres",
+        "potelles",
+        "pottelle",
+        "pottelleres"
+      ],
+      "gloss": "potle — a measure of two quarts"
+    },
+    "powdered": {
+      "label": "powdered",
+      "lang": "mul",
+      "forms": [
+        "dust",
+        "pouder",
+        "poundre",
+        "powder",
+        "powther",
+        "pulver",
+        "pulvere",
+        "pulveris",
+        "pulvis",
+        "powdre"
+      ],
+      "gloss": "in powdered form"
+    },
+    "prest": {
+      "label": "prest",
+      "lang": "mul",
+      "forms": [
+        "pressed",
+        "pressing",
+        "pressyng",
+        "prest",
+        "preste",
+        "priest"
+      ],
+      "gloss": "pressing paper, used in cloth manufacture or by bookbinders (OED s.v. pressing)"
+    },
+    "prewrynges": {
+      "label": "prewrynges",
+      "lang": "mul",
+      "forms": [
+        "prewrynges"
+      ],
+      "gloss": "clearly some sort of fustian, but meaning unknown"
+    },
+    "printed": {
+      "label": "printed",
+      "lang": "mul",
+      "forms": [
+        "emprinted",
+        "impressa",
+        "impressis",
+        "impressorum",
+        "printed",
+        "prynted",
+        "impressati",
+        "impressatum",
+        "printid"
+      ],
+      "gloss": "printed or stamped (with a pattern)"
+    },
+    "printing": {
+      "label": "printing",
+      "lang": "mul",
+      "forms": [
+        "printing",
+        "pryntyng"
+      ],
+      "gloss": "printing paper (counted in reams; OED s.v. printing)"
+    },
+    "prussia": {
+      "label": "Prussia",
+      "lang": "geo",
+      "forms": [
+        "prewes",
+        "prewis",
+        "pruce",
+        "prucia",
+        "prucie",
+        "prucie album",
+        "prucie crudum",
+        "prucie grossum",
+        "prucie grossus",
+        "pruse",
+        "prusie",
+        "prusie grossum",
+        "russe",
+        "spreuce",
+        "spreus",
+        "sprewce",
+        "sprewes",
+        "sprewis",
+        "sprews",
+        "spruce",
+        "sprucie",
+        "sprus",
+        "spruse",
+        "spruse wet",
+        "tela lini spruce"
+      ],
+      "gloss": "from Prussia",
+      "geo": {
+        "id": "Q918723",
+        "wikidata": "https://www.wikidata.org/entity/Q918723",
+        "label": "Prussia",
+        "dataset": "wikidata",
+        "point": [
+          20.81667,
+          53.85
+        ],
+        "hasPolygon": false
+      }
+    },
+    "pulverizata": {
+      "label": "pulverizata",
+      "lang": "mul",
+      "forms": [
+        "pulverizata",
+        "pulverizati",
+        "pulverizatus"
+      ],
+      "gloss": "spangled, strewn or sprinkled"
+    },
+    "puringes": {
+      "label": "puringes",
+      "lang": "mul",
+      "forms": [
+        "puringes",
+        "purynges"
+      ],
+      "gloss": "clearly some sort of fustian, but meaning unknown"
+    },
+    "purple": {
+      "label": "purple",
+      "lang": "mul",
+      "forms": [
+        "purpill",
+        "purpille",
+        "purple",
+        "purpull",
+        "purpulle",
+        "purpure",
+        "purpylle"
+      ],
+      "gloss": "purple in color",
+      "aat": {
+        "specific": "300130257",
+        "label": "purple (color)"
+      }
+    },
+    "putrid": {
+      "label": "putrid",
+      "lang": "mul",
+      "forms": [
+        "putrid",
+        "putrida",
+        "putride",
+        "putridis",
+        "putridum",
+        "putridus"
+      ],
+      "gloss": "putrid / rotten"
+    },
+    "quilted": {
+      "label": "quilted",
+      "lang": "mul",
+      "forms": [
+        "quilted",
+        "quylted",
+        "qwilted",
+        "qwylted"
+      ],
+      "gloss": "quilted"
+    },
+    "rabbit": {
+      "label": "rabbit",
+      "lang": "mul",
+      "forms": [
+        "conicullorum",
+        "coniculorum"
+      ],
+      "gloss": "made of rabbit (cony) skins"
+    },
+    "raised": {
+      "label": "raised",
+      "lang": "mul",
+      "forms": [
+        "raysed",
+        "rayside",
+        "reysyd"
+      ],
+      "gloss": "raised, with close-cut pile",
+      "aat": {
+        "specific": "300010354",
+        "label": "raised (form attribute)"
+      }
+    },
+    "rastow": {
+      "label": "rastow",
+      "lang": "mul",
+      "forms": [
+        "rastow"
+      ],
+      "gloss": "obviously some kind of canvas, but exact meaning unknown"
+    },
+    "raw": {
+      "label": "raw",
+      "lang": "mul",
+      "forms": [
+        "cruda",
+        "crudarum",
+        "crude",
+        "crudi",
+        "crudis",
+        "crudorum",
+        "crudum",
+        "crudus",
+        "oter",
+        "raw",
+        "rawe",
+        "rawes",
+        "rew",
+        "row",
+        "rowe",
+        "untaued",
+        "untawed",
+        "untawid",
+        "untawyd"
+      ],
+      "gloss": "unfinished / raw (undressed)",
+      "aat": {
+        "specific": "300221288",
+        "label": "unfinished"
+      }
+    },
+    "raynez": {
+      "label": "Raynez",
+      "lang": "geo",
+      "gloss": "from Raynez",
+      "forms": [
+        "raynez"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'rhineland' — review/merge in the editor."
+    },
+    "reading": {
+      "label": "Reading",
+      "lang": "geo",
+      "forms": [
+        "redyng"
+      ],
+      "gloss": "from Reading",
+      "geo": {
+        "id": "Q161491",
+        "wikidata": "https://www.wikidata.org/entity/Q161491",
+        "label": "Reading",
+        "dataset": "wikidata",
+        "point": [
+          -0.97306,
+          51.45417
+        ],
+        "hasPolygon": true,
+        "osm_relation": "115074"
+      }
+    },
+    "red": {
+      "label": "red",
+      "lang": "mul",
+      "forms": [
+        "brasell",
+        "brasille",
+        "brassell",
+        "bresell",
+        "red",
+        "redd",
+        "redde",
+        "rede",
+        "redes",
+        "reed",
+        "rubea",
+        "rubearum",
+        "rubeas",
+        "rubei",
+        "rubeis",
+        "rubeo",
+        "rubeorum",
+        "rubeum",
+        "rubeus",
+        "rubeuss"
+      ],
+      "gloss": "red in color",
+      "aat": {
+        "specific": "300126225",
+        "label": "red (color)"
+      }
+    },
+    "refuse": {
+      "label": "refuse",
+      "lang": "mul",
+      "forms": [
+        "reffutz",
+        "refuce",
+        "refuse",
+        "refute",
+        "refutz",
+        "refuz",
+        "trasshe"
+      ],
+      "gloss": "refuse / waste grade",
+      "aat": {
+        "specific": "300194439",
+        "label": "refuse"
+      }
+    },
+    "rennes": {
+      "label": "Rennes",
+      "lang": "geo",
+      "forms": [
+        "raynes",
+        "rayns",
+        "rayns single",
+        "regnes",
+        "reignes",
+        "renys",
+        "reynes",
+        "reyns",
+        "reynys",
+        "reynysshe"
+      ],
+      "gloss": "from Rennes",
+      "geo": {
+        "id": "Q647",
+        "wikidata": "https://www.wikidata.org/entity/Q647",
+        "label": "Rennes",
+        "dataset": "wikidata",
+        "point": [
+          -1.68083,
+          48.11417
+        ],
+        "hasPolygon": true,
+        "osm_relation": "54517"
+      }
+    },
+    "reval": {
+      "label": "Tallinn",
+      "lang": "geo",
+      "forms": [
+        "revelle",
+        "ryvelde"
+      ],
+      "gloss": "from Tallinn",
+      "geo": {
+        "id": "Q1770",
+        "wikidata": "https://www.wikidata.org/entity/Q1770",
+        "label": "Tallinn",
+        "dataset": "wikidata",
+        "point": [
+          24.745,
+          59.43722
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2164745"
+      }
+    },
+    "reynez": {
+      "label": "Reynez",
+      "lang": "geo",
+      "gloss": "from Reynez",
+      "forms": [
+        "reynez"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'rhineland' — review/merge in the editor."
+    },
+    "rhineland": {
+      "label": "Rhineland",
+      "lang": "geo",
+      "forms": [
+        "raine",
+        "ranishe",
+        "ranyshe",
+        "rayne",
+        "raynes",
+        "rayns",
+        "raynyshe",
+        "regnes",
+        "regni",
+        "reign",
+        "reigni",
+        "rene",
+        "reni",
+        "renishe",
+        "reno",
+        "renys",
+        "renyshe",
+        "reyna",
+        "reyne",
+        "reynes",
+        "reynesche",
+        "reynys",
+        "reynysshe",
+        "rine",
+        "ryne"
+      ],
+      "gloss": "Rhenish (Rhine wine)",
+      "geo": {
+        "id": "Q152243",
+        "wikidata": "https://www.wikidata.org/entity/Q152243",
+        "label": "Rhineland",
+        "dataset": "wikidata",
+        "point": [
+          6.86074,
+          50.27699
+        ],
+        "hasPolygon": false
+      }
+    },
+    "ribbed": {
+      "label": "ribbed",
+      "lang": "mul",
+      "forms": [
+        "ribbed",
+        "rybbyd"
+      ],
+      "gloss": "woven to have ribs or ridges (corresponds to Milanese cordollati and South German ripplect)",
+      "aat": {
+        "specific": "300417856",
+        "label": "rib weave",
+        "broader": true
+      }
+    },
+    "rijssel": {
+      "label": "Lille",
+      "lang": "geo",
+      "forms": [
+        "rissell",
+        "risselles",
+        "russolle",
+        "rysell",
+        "rysolle",
+        "rysselle",
+        "rysselles",
+        "ryssylle",
+        "ryssylles"
+      ],
+      "gloss": "from Lille",
+      "geo": {
+        "id": "Q648",
+        "wikidata": "https://www.wikidata.org/entity/Q648",
+        "label": "Lille",
+        "dataset": "wikidata",
+        "point": [
+          3.0575,
+          50.63194
+        ],
+        "hasPolygon": true,
+        "osm_relation": "58404"
+      }
+    },
+    "roan": {
+      "label": "roan",
+      "lang": "mul",
+      "forms": [
+        "roan",
+        "roane"
+      ],
+      "gloss": "roe-deer skin / roan"
+    },
+    "roane": {
+      "label": "roane",
+      "lang": "mul",
+      "forms": [
+        "roane"
+      ],
+      "gloss": "roe-deer skin / roan"
+    },
+    "rochelle": {
+      "label": "Rochelle",
+      "lang": "geo",
+      "gloss": "from La Rochelle",
+      "forms": [
+        "rochel",
+        "rochell",
+        "rochella",
+        "rochelle",
+        "rochelles",
+        "rochels"
+      ],
+      "geo": {
+        "id": "Q43919",
+        "wikidata": "https://www.wikidata.org/entity/Q43919",
+        "label": "La Rochelle",
+        "dataset": "wikidata",
+        "point": [
+          -1.15111,
+          46.16028
+        ],
+        "hasPolygon": false
+      }
+    },
+    "rock": {
+      "label": "rock",
+      "lang": "mul",
+      "forms": [
+        "roch",
+        "roche",
+        "roches",
+        "rock",
+        "rokk",
+        "rokke"
+      ],
+      "gloss": "rock (rock alum — a hard crystalline grade)"
+    },
+    "roe": {
+      "label": "roe",
+      "lang": "mul",
+      "forms": [
+        "de roo",
+        "roe",
+        "roo"
+      ],
+      "gloss": "made of the skin of a roe (a small deer, Capreolus capraea)"
+    },
+    "roe-full": {
+      "label": "roe-full",
+      "lang": "mul",
+      "forms": [
+        "plein",
+        "fule"
+      ],
+      "gloss": "(of herring) full of roe — the opposite of shotten"
+    },
+    "romeswale": {
+      "label": "Romeswale",
+      "lang": "geo",
+      "gloss": "from Romeswale",
+      "forms": [
+        "romeswale"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "romney": {
+      "label": "romney",
+      "lang": "mul",
+      "forms": [
+        "romeny",
+        "romney"
+      ],
+      "gloss": "romney — a sweet wine of Greek origin"
+    },
+    "romny": {
+      "label": "romny",
+      "lang": "mul",
+      "forms": [
+        "romny"
+      ],
+      "gloss": "a small fur used for lining garments"
+    },
+    "ronyche": {
+      "label": "ronyche",
+      "lang": "mul",
+      "forms": [
+        "ronyche"
+      ],
+      "gloss": "clearly some kind of hemp, but meaning unknown"
+    },
+    "roof": {
+      "label": "roof",
+      "lang": "mul",
+      "forms": [
+        "rof",
+        "roff",
+        "roof"
+      ],
+      "gloss": "for/of a roof (e.g. roof nail, roof tile)"
+    },
+    "rough": {
+      "label": "rough",
+      "lang": "mul",
+      "forms": [
+        "raw",
+        "rew",
+        "rough",
+        "row",
+        "rowe",
+        "rowes",
+        "rowgh",
+        "rowghe",
+        "rugh",
+        "rughe"
+      ],
+      "gloss": "rough / unsmoothed"
+    },
+    "round": {
+      "label": "round",
+      "lang": "mul",
+      "forms": [
+        "rotundis",
+        "round",
+        "rounde",
+        "roundtabil",
+        "rownd",
+        "rownde"
+      ],
+      "gloss": "round"
+    },
+    "royal": {
+      "label": "royal",
+      "lang": "mul",
+      "forms": [
+        "reallus",
+        "realus",
+        "riall",
+        "rialle",
+        "riallus",
+        "rialus",
+        "roiall",
+        "royall",
+        "royalle",
+        "ryall"
+      ],
+      "gloss": "royal (a paper grade/size)"
+    },
+    "rubbing": {
+      "label": "rubbing",
+      "lang": "mul",
+      "forms": [
+        "rubbing",
+        "rubbyng"
+      ],
+      "gloss": "for rubbing (e.g. rubbing brush)"
+    },
+    "rumeswale": {
+      "label": "Rumeswale",
+      "lang": "geo",
+      "gloss": "from Rumeswale",
+      "forms": [
+        "rumeswale"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "rumey": {
+      "label": "Rumey",
+      "lang": "geo",
+      "gloss": "from Rumey",
+      "forms": [
+        "rumey"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "ruptus": {
+      "label": "ruptus",
+      "lang": "mul",
+      "forms": [
+        "ruptus"
+      ],
+      "gloss": "probably irregular, non-standard pieces of canvas"
+    },
+    "ruskin": {
+      "label": "ruskin",
+      "lang": "mul",
+      "forms": [
+        "rusken",
+        "ruskin",
+        "ruskyn"
+      ],
+      "gloss": "ruskin — grey squirrel back fur"
+    },
+    "russet": {
+      "label": "russet",
+      "lang": "mul",
+      "forms": [
+        "russet",
+        "russetes",
+        "russett"
+      ],
+      "gloss": "russet in color",
+      "aat": {
+        "specific": "300127490",
+        "label": "brown (color)",
+        "broader": true
+      }
+    },
+    "rye": {
+      "label": "rye",
+      "lang": "mul",
+      "forms": [
+        "siliginis",
+        "rye"
+      ],
+      "gloss": "of rye (siligo)"
+    },
+    "saddler": {
+      "label": "saddler",
+      "lang": "occ",
+      "forms": [
+        "saddeler",
+        "sadelers",
+        "sadlars",
+        "sadler",
+        "sadlers"
+      ],
+      "gloss": "for/used by saddlers",
+      "aat": {
+        "specific": "300025420",
+        "label": "saddlers"
+      }
+    },
+    "sail": {
+      "label": "sail",
+      "lang": "mul",
+      "forms": [
+        "sail",
+        "saille",
+        "sayle",
+        "sayles",
+        "saylle",
+        "pro velis"
+      ],
+      "gloss": "thread used in sewing sails (OED s.v. sail n.1 11)"
+    },
+    "salisbury": {
+      "label": "Salisbury",
+      "lang": "geo",
+      "forms": [
+        "sarum"
+      ],
+      "gloss": "from Salisbury",
+      "geo": {
+        "id": "Q160642",
+        "wikidata": "https://www.wikidata.org/entity/Q160642",
+        "label": "Salisbury",
+        "dataset": "wikidata",
+        "point": [
+          -1.7936,
+          51.074
+        ],
+        "hasPolygon": true,
+        "osm_relation": "3404205"
+      }
+    },
+    "salted": {
+      "label": "salted",
+      "lang": "mul",
+      "forms": [
+        "salci",
+        "salcorum",
+        "salsa",
+        "salsarum",
+        "salsi",
+        "salsis",
+        "salso",
+        "salsos",
+        "salsum",
+        "salsus",
+        "salt",
+        "salte",
+        "salted",
+        "saltes",
+        "salts"
+      ],
+      "gloss": "salted / preserved in salt"
+    },
+    "salzwedel": {
+      "label": "Salzwedel",
+      "lang": "geo",
+      "forms": [
+        "saltewich",
+        "saltwiche",
+        "soltwichis",
+        "soltwyche",
+        "soltwychis",
+        "sowtwyche",
+        "sultwecis",
+        "sultwich",
+        "sultwiche",
+        "sultwitch",
+        "sultwych",
+        "sultwyche",
+        "sultwychis"
+      ],
+      "gloss": "from Salzwedel",
+      "geo": {
+        "id": "Q486985",
+        "wikidata": "https://www.wikidata.org/entity/Q486985",
+        "label": "Salzwedel",
+        "dataset": "wikidata",
+        "point": [
+          11.15,
+          52.85
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1285595"
+      }
+    },
+    "satinatum": {
+      "label": "satinatum",
+      "lang": "mul",
+      "forms": [
+        "satinatum"
+      ],
+      "gloss": "probably velvet upon satin, a patterned velvet and satin cloth (MED s.v. velvet 1a)"
+    },
+    "saxony": {
+      "label": "Electorate of Saxony",
+      "lang": "geo",
+      "forms": [
+        "saxonie"
+      ],
+      "gloss": "from Electorate of Saxony",
+      "geo": {
+        "id": "Q156199",
+        "wikidata": "https://www.wikidata.org/entity/Q156199",
+        "label": "Electorate of Saxony",
+        "dataset": "wikidata",
+        "point": [
+          13.73333,
+          51.03333
+        ],
+        "hasPolygon": false
+      }
+    },
+    "scarlet": {
+      "label": "scarlet",
+      "lang": "mul",
+      "forms": [
+        "scarlat",
+        "scarlet",
+        "scarleta",
+        "scarlete",
+        "scarlett",
+        "scarletta",
+        "scarlette",
+        "skarlet",
+        "skarlett"
+      ],
+      "gloss": "scarlet",
+      "aat": {
+        "specific": "300126225",
+        "label": "red (color)",
+        "broader": true
+      }
+    },
+    "scribable": {
+      "label": "scribable",
+      "lang": "mul",
+      "forms": [
+        "scribabile",
+        "scribabilis",
+        "scribable",
+        "scrivabilis",
+        "scrivabille",
+        "scrivabulle"
+      ],
+      "gloss": "writable (writing paper)"
+    },
+    "seal": {
+      "label": "seal",
+      "lang": "mul",
+      "forms": [
+        "de seel",
+        "seal",
+        "seel"
+      ],
+      "gloss": "of seal (sealskin pelt)"
+    },
+    "sengle": {
+      "label": "sengle",
+      "lang": "mul",
+      "forms": [
+        "sengle"
+      ],
+      "gloss": "single worsted"
+    },
+    "sewyng": {
+      "label": "sewyng",
+      "lang": "mul",
+      "forms": [
+        "sewyng"
+      ],
+      "gloss": "sewing thread"
+    },
+    "shanke": {
+      "label": "shank",
+      "lang": "mul",
+      "forms": [
+        "schankes",
+        "shanke",
+        "shankes",
+        "shankys"
+      ],
+      "gloss": "fur from the legs (shanks) of the animal"
+    },
+    "sheep": {
+      "label": "sheepskin",
+      "lang": "mul",
+      "forms": [
+        "gerks",
+        "lanutarum",
+        "schepe",
+        "sheepskin",
+        "shepe",
+        "shepys"
+      ],
+      "gloss": "made of sheepskin"
+    },
+    "shoemaker": {
+      "label": "shoemaker",
+      "lang": "occ",
+      "forms": [
+        "pro shomakers",
+        "pro sutoribus",
+        "pro uno cobler",
+        "shoemaker",
+        "shomaker",
+        "shomakers",
+        "showmakers",
+        "sutorum"
+      ],
+      "gloss": "for/used by shoemakers (also cobblers; Latin sutor)",
+      "aat": {
+        "specific": "300025294",
+        "label": "shoemakers"
+      }
+    },
+    "shomakers": {
+      "label": "shomakers",
+      "lang": "mul",
+      "forms": [
+        "shomakers"
+      ],
+      "gloss": "shoemaker’s thread"
+    },
+    "shorling": {
+      "label": "shorling",
+      "lang": "mul",
+      "forms": [
+        "shorlinges",
+        "shorlyng",
+        "shorlynges"
+      ],
+      "gloss": "skin of a recently shorn sheep"
+    },
+    "shorne": {
+      "label": "shorne",
+      "lang": "mul",
+      "forms": [
+        "shorne"
+      ],
+      "gloss": "clearly some sort of wrought flax, but exact meaning unknown"
+    },
+    "short": {
+      "label": "short",
+      "lang": "mul",
+      "forms": [
+        "chort",
+        "chorte",
+        "chortes",
+        "curt",
+        "curta",
+        "curtas",
+        "curti",
+        "curtis",
+        "curto",
+        "curtorum",
+        "curtos",
+        "curtum",
+        "curtus",
+        "schort",
+        "short",
+        "shortcloth",
+        "shorte",
+        "shortt"
+      ],
+      "gloss": "short"
+    },
+    "shot": {
+      "label": "shot",
+      "lang": "mul",
+      "forms": [
+        "schot"
+      ],
+      "gloss": "in shot / pellet form (of lead)"
+    },
+    "shotten": {
+      "label": "shotten",
+      "lang": "mul",
+      "forms": [
+        "shoten",
+        "shotton",
+        "shotyn",
+        "schotyn",
+        "shoton",
+        "schoten",
+        "schoton",
+        "skotton",
+        "shotin",
+        "shotten",
+        "schotton"
+      ],
+      "gloss": "shotten — (of herring) having spawned and so lean/inferior (opposite of full)"
+    },
+    "silk": {
+      "label": "silk",
+      "lang": "mul",
+      "forms": [
+        "cerici",
+        "cerico",
+        "cirici",
+        "cirico",
+        "serici",
+        "serico",
+        "sericus",
+        "silk",
+        "silke",
+        "sirici",
+        "sirico",
+        "siricus",
+        "sylk",
+        "sylke"
+      ],
+      "gloss": "made of silk",
+      "aat": {
+        "specific": "300243428",
+        "label": "silk (textile)"
+      }
+    },
+    "silver": {
+      "label": "silver",
+      "lang": "mul",
+      "forms": [
+        "argentea",
+        "argentearum",
+        "argenteus",
+        "argenti",
+        "argento",
+        "sillver",
+        "silver",
+        "sylver"
+      ],
+      "gloss": "made of/decorated with silver",
+      "aat": {
+        "specific": "300011029",
+        "label": "silver (metal)"
+      }
+    },
+    "sine grano": {
+      "label": "sine grano",
+      "lang": "mul",
+      "forms": [
+        "sine grano"
+      ],
+      "gloss": "without [kermes] grain — cloth not dyed in the costly scarlet grain (opposite of ingrain)"
+    },
+    "singelle": {
+      "label": "singelle",
+      "lang": "mul",
+      "forms": [
+        "singelle"
+      ],
+      "gloss": "clearly some kind of velvet, but exact meaning unknown"
+    },
+    "single": {
+      "label": "single",
+      "lang": "mul",
+      "forms": [
+        "sengell",
+        "sengill",
+        "sengille",
+        "sengle",
+        "sengylle",
+        "simple",
+        "simplex",
+        "simplice",
+        "simplici",
+        "simplicibus",
+        "simplicis",
+        "singile",
+        "single",
+        "symple",
+        "syngille",
+        "syngle"
+      ],
+      "gloss": "this probably refers to the thickness of the cloth"
+    },
+    "skenyd": {
+      "label": "skenyd",
+      "lang": "mul",
+      "forms": [
+        "skenyd"
+      ],
+      "gloss": "wound on a skein"
+    },
+    "skin": {
+      "label": "skin",
+      "lang": "mul",
+      "forms": [
+        "fell",
+        "furre",
+        "lether",
+        "pell",
+        "pelles",
+        "pellibus",
+        "pellis",
+        "pellisis",
+        "skin",
+        "skinn",
+        "skins",
+        "skyn",
+        "skynn",
+        "skynne",
+        "skynnes",
+        "skynnys",
+        "skyns"
+      ],
+      "gloss": "made of skin / hide"
+    },
+    "small": {
+      "label": "small",
+      "lang": "mul",
+      "forms": [
+        "litelle",
+        "litille",
+        "littill",
+        "lytelle",
+        "lyttell",
+        "lyttyl",
+        "lyttyll",
+        "lytyll",
+        "parva",
+        "parvae",
+        "parvarum",
+        "parvas",
+        "parvaz",
+        "parve",
+        "parvi",
+        "parvies",
+        "parvis",
+        "parviys",
+        "parvo",
+        "parvorum",
+        "parvos",
+        "parvum",
+        "parvus",
+        "parvuses",
+        "parvusis",
+        "parvuss",
+        "parvys",
+        "petit",
+        "smal",
+        "smale",
+        "smales",
+        "small",
+        "smalle",
+        "smalles",
+        "smallis",
+        "smalls",
+        "smaulle",
+        "litle"
+      ],
+      "gloss": "small",
+      "aat": {
+        "specific": "300073768",
+        "label": "small"
+      }
+    },
+    "soapashes": {
+      "label": "soap-ashes",
+      "lang": "mul",
+      "forms": [
+        "asches",
+        "ashes",
+        "asshes",
+        "asshis",
+        "cinerum",
+        "cinis"
+      ],
+      "gloss": "soap-ashes — wood ash for lye"
+    },
+    "southampton": {
+      "label": "Southampton",
+      "lang": "geo",
+      "forms": [
+        "southamptonie"
+      ],
+      "gloss": "from Southampton",
+      "geo": {
+        "id": "Q79848",
+        "wikidata": "https://www.wikidata.org/entity/Q79848",
+        "label": "Southampton",
+        "dataset": "wikidata",
+        "point": [
+          -1.40444,
+          50.90667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "127864"
+      }
+    },
+    "spain": {
+      "label": "Spain",
+      "lang": "geo",
+      "forms": [
+        "alygant",
+        "hisp",
+        "hispan",
+        "hispanie",
+        "hollock",
+        "ispania",
+        "ispanie",
+        "spanis",
+        "spanish",
+        "spanishe",
+        "spannysh",
+        "spannyshe",
+        "spanys",
+        "spanysh",
+        "spanyshe",
+        "spayne",
+        "spaynishe",
+        "spaynysche",
+        "spaynyshe",
+        "taintes",
+        "tent"
+      ],
+      "gloss": "from Spain",
+      "geo": {
+        "id": "Q29",
+        "wikidata": "https://www.wikidata.org/entity/Q29",
+        "label": "Spain",
+        "dataset": "wikidata",
+        "point": [
+          -3.5,
+          40.2
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1311341"
+      }
+    },
+    "spenal": {
+      "label": "spenal",
+      "lang": "mul",
+      "forms": [
+        "spenal",
+        "spenale",
+        "spenall",
+        "spenalle",
+        "spenas",
+        "spenel",
+        "spenell",
+        "spenelle",
+        "spenle",
+        "spinal",
+        "spinale",
+        "spinall",
+        "spinalle",
+        "spynal",
+        "spynalle"
+      ],
+      "gloss": "spinal / spenall yarn-cloth (German origin)"
+    },
+    "spendable": {
+      "label": "spendable",
+      "lang": "mul",
+      "forms": [
+        "spendabile",
+        "spendabilis",
+        "spendable"
+      ],
+      "gloss": "expendable (a grade of paper)"
+    },
+    "spike": {
+      "label": "spike",
+      "lang": "mul",
+      "forms": [
+        "spike"
+      ],
+      "gloss": "spike — probably spikenard (aromatic); uncertain"
+    },
+    "splint": {
+      "label": "splint",
+      "lang": "mul",
+      "forms": [
+        "splent",
+        "splente",
+        "splentes",
+        "splete",
+        "spleters",
+        "spletter",
+        "splint",
+        "split",
+        "splitte",
+        "splitter",
+        "splitters",
+        "splittes",
+        "splynttes"
+      ],
+      "gloss": "made of splint (flexible wood strips)"
+    },
+    "square": {
+      "label": "square",
+      "lang": "mul",
+      "forms": [
+        "quadrata",
+        "quatrata",
+        "square"
+      ],
+      "gloss": "square (measured as a square — square ell; or square-shaped — square plate)"
+    },
+    "squirrel": {
+      "label": "squirrel",
+      "lang": "mul",
+      "forms": [
+        "squerell",
+        "squerelle",
+        "squerelles",
+        "squyrell",
+        "squyrelle"
+      ],
+      "gloss": "made of squirrel skins"
+    },
+    "st omer": {
+      "label": "Saint-Omer",
+      "lang": "geo",
+      "forms": [
+        "omer",
+        "omers",
+        "saint omer",
+        "saint omers",
+        "saint thomas",
+        "saynt omers",
+        "saynt thomas",
+        "seint omers",
+        "seint thomas",
+        "sent",
+        "sent omers",
+        "sent thomars",
+        "sent thomas",
+        "seynt omers",
+        "tomers"
+      ],
+      "gloss": "from Saint-Omer",
+      "geo": {
+        "id": "Q208793",
+        "wikidata": "https://www.wikidata.org/entity/Q208793",
+        "label": "Saint-Omer",
+        "dataset": "wikidata",
+        "point": [
+          2.26083,
+          50.74833
+        ],
+        "hasPolygon": true,
+        "osm_relation": "94401"
+      }
+    },
+    "staminis": {
+      "label": "staminis",
+      "lang": "mul",
+      "forms": [
+        "staminis"
+      ],
+      "gloss": "made of stamin (a coarse worsted cloth)"
+    },
+    "starveling": {
+      "label": "starveling",
+      "lang": "mul",
+      "forms": [
+        "sterveling",
+        "stervelinges",
+        "stervelyng",
+        "storvelynges"
+      ],
+      "gloss": "from a starved/emaciated animal"
+    },
+    "stayned": {
+      "label": "stayned",
+      "lang": "mul",
+      "forms": [
+        "stayned",
+        "steyned"
+      ],
+      "gloss": "stained / ornamented with painted designs"
+    },
+    "stendal": {
+      "label": "Stendal",
+      "lang": "geo",
+      "forms": [
+        "stendal"
+      ],
+      "gloss": "from Stendal",
+      "geo": {
+        "id": "Q7082",
+        "wikidata": "https://www.wikidata.org/entity/Q7082",
+        "label": "Stendal",
+        "dataset": "wikidata",
+        "point": [
+          11.85,
+          52.6
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1284750"
+      }
+    },
+    "stoneware": {
+      "label": "stoneware",
+      "lang": "mul",
+      "forms": [
+        "lapidis",
+        "ston",
+        "stone",
+        "stones",
+        "stonne",
+        "stonys",
+        "stoone",
+        "terre"
+      ],
+      "gloss": "made of stone or stoneware"
+    },
+    "straw": {
+      "label": "straw",
+      "lang": "mul",
+      "forms": [
+        "stramine",
+        "straminis",
+        "straw",
+        "strawe",
+        "strawen",
+        "strawin"
+      ],
+      "gloss": "straw (e.g. straw hat)"
+    },
+    "string": {
+      "label": "string",
+      "lang": "mul",
+      "forms": [
+        "string",
+        "stringing",
+        "stringyng",
+        "stryng",
+        "strynges",
+        "strynging",
+        "stringes"
+      ],
+      "gloss": "thread to be used as the warp in weaving, or for drawing a pouch together (OED s.v. warp n.1 9 warp thread)"
+    },
+    "striped": {
+      "label": "striped",
+      "lang": "mul",
+      "forms": [
+        "radiati",
+        "radiatum",
+        "radiatus",
+        "raie",
+        "raied",
+        "raies",
+        "ray",
+        "rayd",
+        "rayed",
+        "rays",
+        "stragulatus",
+        "striped",
+        "stripped",
+        "stryped",
+        "strypid"
+      ],
+      "gloss": "striped"
+    },
+    "suffolk": {
+      "label": "Suffolk",
+      "lang": "geo",
+      "forms": [
+        "suffolcie",
+        "vesses"
+      ],
+      "gloss": "from Suffolk",
+      "geo": {
+        "id": "Q67574715",
+        "wikidata": "https://www.wikidata.org/entity/Q67574715",
+        "label": "Suffolk",
+        "dataset": "wikidata",
+        "point": [
+          1.07001,
+          52.22434
+        ],
+        "hasPolygon": true,
+        "osm_relation": "8483371"
+      }
+    },
+    "sweet": {
+      "label": "sweet",
+      "lang": "mul",
+      "forms": [
+        "sweet"
+      ],
+      "gloss": "sweet / mild-tasting (of oil or wine)"
+    },
+    "sword": {
+      "label": "sword",
+      "lang": "mul",
+      "forms": [
+        "gladiorum",
+        "sword",
+        "swerd",
+        "swurde"
+      ],
+      "gloss": "of swords / sword- (e.g. scindulis gladiorum = sword blades)"
+    },
+    "syvelle": {
+      "label": "Syvelle",
+      "lang": "geo",
+      "gloss": "from Syvelle",
+      "forms": [
+        "syvelle"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "taile": {
+      "label": "tail",
+      "lang": "mul",
+      "forms": [
+        "taile",
+        "tailis",
+        "taille",
+        "tailys",
+        "tayle",
+        "tayles",
+        "taylle",
+        "taylles"
+      ],
+      "gloss": "fur from the tail of the animal"
+    },
+    "tailor": {
+      "label": "tailor",
+      "lang": "occ",
+      "forms": [
+        "pro taylers",
+        "pro tayllours",
+        "pro taylours",
+        "tailer",
+        "tailers",
+        "taylers",
+        "tayllours",
+        "taylour",
+        "taylours"
+      ],
+      "gloss": "for/used by tailors",
+      "aat": {
+        "specific": "300025365",
+        "label": "tailors"
+      }
+    },
+    "talish": {
+      "label": "Talish",
+      "lang": "mul",
+      "forms": [
+        "talani",
+        "tallemie",
+        "tallony"
+      ],
+      "gloss": "silk from Talish on the Caspian Sea"
+    },
+    "talle": {
+      "label": "talle",
+      "lang": "mul",
+      "forms": [
+        "talle"
+      ],
+      "gloss": "large / big (MED s.v. tal adj.); uncertain"
+    },
+    "tanned": {
+      "label": "tanned",
+      "lang": "mul",
+      "forms": [
+        "basell",
+        "tannata",
+        "tannatarum",
+        "tannate",
+        "tannati",
+        "tannatis",
+        "tannatorum",
+        "tannatum",
+        "tannatus",
+        "tanned",
+        "tauatis",
+        "taureata",
+        "tavatis",
+        "tawatis",
+        "tawed"
+      ],
+      "gloss": "tanned (bark-tanned leather)"
+    },
+    "tapestry": {
+      "label": "tapestry",
+      "lang": "mul",
+      "forms": [
+        "tapeserie",
+        "tapesry",
+        "tapesseria",
+        "tapestry",
+        "tappystry",
+        "tapser",
+        "tapsery",
+        "tapssery",
+        "tapstre",
+        "tapstri",
+        "tapstry"
+      ],
+      "gloss": "made of tapestry",
+      "aat": {
+        "specific": "300061981",
+        "label": "tapestry (process)"
+      }
+    },
+    "tawed": {
+      "label": "tawed",
+      "lang": "mul",
+      "forms": [
+        "allute",
+        "tauatis",
+        "taued",
+        "tavatis",
+        "tawatis",
+        "tawde",
+        "tawed",
+        "tawid",
+        "tawyd",
+        "tewed",
+        "towid"
+      ],
+      "gloss": "tawed — (of leather) dressed without tanning"
+    },
+    "tawny": {
+      "label": "tawny",
+      "lang": "mul",
+      "forms": [
+        "tawney",
+        "tawny"
+      ],
+      "gloss": "tawny, a composite color, consisting of brown with a preponderance of yellow or orange; but formerly applied also to other shades of brown (OED s.v. tawny a. and n.)",
+      "aat": {
+        "specific": "300127490",
+        "label": "brown (color)",
+        "broader": true
+      }
+    },
+    "territorio": {
+      "label": "Territorio",
+      "lang": "geo",
+      "gloss": "from Territorio",
+      "forms": [
+        "territorio"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "thread": {
+      "label": "thread",
+      "lang": "mul",
+      "forms": [
+        "therd"
+      ],
+      "gloss": "made of thread"
+    },
+    "threden": {
+      "label": "threden",
+      "lang": "mul",
+      "forms": [
+        "threden"
+      ],
+      "gloss": "made of thread"
+    },
+    "thrum": {
+      "label": "thrum",
+      "lang": "mul",
+      "forms": [
+        "throm",
+        "throme",
+        "thromed",
+        "thromes",
+        "thromme",
+        "thromys",
+        "thrum",
+        "thrume",
+        "thrumyn",
+        "trommed"
+      ],
+      "gloss": "made of thrum (waste warp-threads)"
+    },
+    "tin": {
+      "label": "tin",
+      "lang": "mul",
+      "forms": [
+        "de stanno",
+        "pewter",
+        "stagni",
+        "stagno",
+        "stagnum",
+        "stanni",
+        "stanno",
+        "stannum",
+        "tin",
+        "tinne",
+        "tyn",
+        "tyne",
+        "tynne"
+      ],
+      "gloss": "made of tin",
+      "aat": {
+        "specific": "300133748",
+        "label": "tin (metal)"
+      }
+    },
+    "tinsel": {
+      "label": "tinsel",
+      "lang": "mul",
+      "forms": [
+        "tinsel",
+        "tinsell",
+        "tynsed",
+        "tynsel",
+        "tynseld",
+        "tynsell",
+        "tynsen"
+      ],
+      "gloss": "interwoven with metallic thread to glitter",
+      "aat": {
+        "specific": "300183933",
+        "label": "tinsel"
+      }
+    },
+    "tissue": {
+      "label": "tissue",
+      "lang": "mul",
+      "forms": [
+        "tisseu",
+        "tisshew",
+        "tissu",
+        "tissue",
+        "tyshew",
+        "tyshewe",
+        "tyshwe",
+        "tyssewe",
+        "tyssue"
+      ],
+      "gloss": "tissue: rich cloth interwoven with gold or silver thread"
+    },
+    "top": {
+      "label": "top",
+      "lang": "mul",
+      "forms": [
+        "top"
+      ],
+      "gloss": "top (a kind of brush — top brush); meaning uncertain (Jenks)"
+    },
+    "toucy": {
+      "label": "toucy",
+      "lang": "mul",
+      "forms": [
+        "toucy"
+      ],
+      "gloss": "clearly some kind of ribbon, but exact meaning unknown"
+    },
+    "toulouse": {
+      "label": "Toulouse",
+      "lang": "geo",
+      "forms": [
+        "tollowes",
+        "tollowis",
+        "tollows",
+        "toulouse",
+        "towlus"
+      ],
+      "gloss": "from Toulouse (esp. woad)",
+      "geo": {
+        "id": "Q7880",
+        "wikidata": "https://www.wikidata.org/entity/Q7880",
+        "label": "Toulouse",
+        "dataset": "wikidata",
+        "point": [
+          1.44333,
+          43.60444
+        ],
+        "hasPolygon": true,
+        "osm_relation": "35738"
+      }
+    },
+    "tournai": {
+      "label": "Tournai",
+      "lang": "geo",
+      "forms": [
+        "dornekes",
+        "dornex",
+        "dornexe",
+        "dornik",
+        "dornike",
+        "dornikes",
+        "dornix",
+        "dornixe",
+        "dornyk",
+        "dornykes",
+        "dornykkes",
+        "dornyx",
+        "thornyk",
+        "thride dornix",
+        "torney",
+        "turneye"
+      ],
+      "gloss": "from Tournai",
+      "geo": {
+        "id": "Q173219",
+        "wikidata": "https://www.wikidata.org/entity/Q173219",
+        "label": "Tournai",
+        "dataset": "wikidata",
+        "point": [
+          3.38806,
+          50.60556
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2162970"
+      }
+    },
+    "tower": {
+      "label": "tower",
+      "lang": "mul",
+      "forms": [
+        "tower",
+        "towers"
+      ],
+      "gloss": "some sort of sarsenet, meaning unknown"
+    },
+    "trimmed": {
+      "label": "trimmed",
+      "lang": "mul",
+      "forms": [
+        "trimmed",
+        "trymed",
+        "trymmed"
+      ],
+      "gloss": "trimmed (e.g. with velvet)"
+    },
+    "tukkid": {
+      "label": "tukkid",
+      "lang": "mul",
+      "forms": [
+        "tukkid"
+      ],
+      "gloss": "clearly some kind of hemp, but meaning unknown"
+    },
+    "turkey": {
+      "label": "Turkey",
+      "lang": "geo",
+      "forms": [
+        "turkey",
+        "turkeye"
+      ],
+      "gloss": "from Turkey",
+      "geo": {
+        "id": "Q43",
+        "wikidata": "https://www.wikidata.org/entity/Q43",
+        "label": "Turkey",
+        "dataset": "wikidata",
+        "point": [
+          36,
+          39
+        ],
+        "hasPolygon": true,
+        "osm_relation": "174737"
+      }
+    },
+    "uelzen": {
+      "label": "Uelzen",
+      "lang": "geo",
+      "forms": [
+        "ulsom",
+        "ulsome",
+        "ulson",
+        "ulsum"
+      ],
+      "gloss": "from Uelzen",
+      "geo": {
+        "id": "Q15989",
+        "wikidata": "https://www.wikidata.org/entity/Q15989",
+        "label": "Uelzen",
+        "dataset": "wikidata",
+        "point": [
+          10.56583,
+          52.96472
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1246442"
+      }
+    },
+    "ulcer": {
+      "label": "ulcer",
+      "lang": "mul",
+      "forms": [
+        "ulcer"
+      ],
+      "gloss": "unidentified kind of cloth, probably Low Country origin"
+    },
+    "ulm": {
+      "label": "Ulm",
+      "lang": "geo",
+      "forms": [
+        "holmys",
+        "olmer",
+        "ulme"
+      ],
+      "gloss": "from Ulm",
+      "geo": {
+        "id": "Q3012",
+        "wikidata": "https://www.wikidata.org/entity/Q3012",
+        "label": "Ulm",
+        "dataset": "wikidata",
+        "point": [
+          9.99111,
+          48.39861
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62495"
+      }
+    },
+    "unbound": {
+      "label": "unbound",
+      "lang": "mul",
+      "forms": [
+        "unbound",
+        "unbownd",
+        "unbownde",
+        "unbonde"
+      ],
+      "gloss": "unbound (of books)"
+    },
+    "uncovered": {
+      "label": "uncovered",
+      "lang": "mul",
+      "forms": [
+        "uncoverd",
+        "uncoverde",
+        "uncovered"
+      ],
+      "gloss": "uncovered (without a lid or cover)"
+    },
+    "undresed": {
+      "label": "undresed",
+      "lang": "mul",
+      "forms": [
+        "undresed",
+        "undressed",
+        "undrest"
+      ],
+      "gloss": "undressed, not given a nap or finish"
+    },
+    "ungilt": {
+      "label": "ungilt",
+      "lang": "mul",
+      "forms": [
+        "ungilt",
+        "ungilte",
+        "unguilt",
+        "unguilte",
+        "ungylt"
+      ],
+      "gloss": "not gilt"
+    },
+    "untanned": {
+      "label": "untanned",
+      "lang": "mul",
+      "forms": [
+        "untaued",
+        "untawed",
+        "untawid",
+        "untawyd",
+        "untewed"
+      ],
+      "gloss": "not tanned or tawed"
+    },
+    "unwaterd": {
+      "label": "unwaterd",
+      "lang": "mul",
+      "forms": [
+        "unwaterd"
+      ],
+      "gloss": "not having a wavy lustrous damask-like pattern or finish (OED s.v. watered ppl. a. 5a)"
+    },
+    "unwrought": {
+      "label": "unwrought",
+      "lang": "mul",
+      "forms": [
+        "unwrought"
+      ],
+      "gloss": "undressed flax"
+    },
+    "utrecht": {
+      "label": "Utrecht",
+      "lang": "geo",
+      "forms": [
+        "austret",
+        "austrett",
+        "awstright",
+        "de utright debilis",
+        "hauster",
+        "haustre",
+        "haustred",
+        "haustreight",
+        "haustret",
+        "houstre",
+        "howstre",
+        "howstrette",
+        "huster",
+        "hustere",
+        "hustre",
+        "ostred",
+        "oughstight",
+        "oughtright",
+        "oustright",
+        "owtright",
+        "stitish",
+        "stitishe",
+        "stitisshe",
+        "stitysshe",
+        "stytisch",
+        "utricht",
+        "utright",
+        "utryght"
+      ],
+      "gloss": "from Utrecht",
+      "geo": {
+        "id": "Q803",
+        "wikidata": "https://www.wikidata.org/entity/Q803",
+        "label": "Utrecht",
+        "dataset": "wikidata",
+        "point": [
+          5.12167,
+          52.09083
+        ],
+        "hasPolygon": true,
+        "osm_relation": "419203"
+      }
+    },
+    "valaunce": {
+      "label": "Valaunce",
+      "lang": "geo",
+      "gloss": "from Valaunce",
+      "forms": [
+        "valaunce"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "valencia": {
+      "label": "Valencia",
+      "lang": "geo",
+      "forms": [
+        "valence"
+      ],
+      "gloss": "from Valencia (Province of Valencia)",
+      "geo": {
+        "id": "Q54939",
+        "wikidata": "https://www.wikidata.org/entity/Q54939",
+        "label": "Province of Valencia",
+        "dataset": "wikidata",
+        "point": [
+          -0.37667,
+          39.47722
+        ],
+        "hasPolygon": true,
+        "osm_relation": "349000"
+      }
+    },
+    "valens": {
+      "label": "Valens",
+      "lang": "geo",
+      "gloss": "from Valens",
+      "forms": [
+        "valens"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "vallen": {
+      "label": "vallen",
+      "lang": "mul",
+      "forms": [
+        "vallen"
+      ],
+      "gloss": "a piece of drapery attached lengthways to a canopy, altar-cloth, or the like, so as to hang in a vertical position; border of drapery hanging round the canopy of a bed (OED s.v. valance n.1 1 & 2)"
+    },
+    "valwet": {
+      "label": "valwet",
+      "lang": "mul",
+      "forms": [
+        "valwet"
+      ],
+      "gloss": "provided with short, dense, piled surface (Latham, Dictionary s.v. veluetare)"
+    },
+    "veluto": {
+      "label": "veluto",
+      "lang": "mul",
+      "forms": [
+        "velutati",
+        "veluto",
+        "velutum"
+      ],
+      "gloss": "provided with a short, dense, piled surface (Latham, Dictionary s.v. veluetare)"
+    },
+    "velvet": {
+      "label": "velvet",
+      "lang": "mul",
+      "forms": [
+        "vellet",
+        "vellett",
+        "velut",
+        "velutati",
+        "veluti",
+        "veluto",
+        "velutum"
+      ],
+      "gloss": "made of velvet",
+      "aat": {
+        "specific": "300133711",
+        "label": "velvet (fabric weave)"
+      }
+    },
+    "venice": {
+      "label": "Venice",
+      "lang": "geo",
+      "forms": [
+        "aurum et argentum",
+        "reband",
+        "venecie",
+        "venes",
+        "venesie",
+        "venice",
+        "venicie",
+        "venis",
+        "venise",
+        "venishe",
+        "venisie",
+        "vennis",
+        "venous",
+        "venyce",
+        "venys",
+        "venyse"
+      ],
+      "gloss": "from Venice",
+      "geo": {
+        "id": "Q641",
+        "wikidata": "https://www.wikidata.org/entity/Q641",
+        "label": "Venice",
+        "dataset": "wikidata",
+        "point": [
+          12.33194,
+          45.43972
+        ],
+        "hasPolygon": true,
+        "osm_relation": "44741"
+      }
+    },
+    "violet": {
+      "label": "violet",
+      "lang": "mul",
+      "forms": [
+        "viollet",
+        "vyolet"
+      ],
+      "gloss": "violet",
+      "aat": {
+        "specific": "300130602",
+        "label": "violet (color)"
+      }
+    },
+    "vitre": {
+      "label": "vitry",
+      "lang": "mul",
+      "forms": [
+        "veteri",
+        "veterie",
+        "vetery",
+        "vetri",
+        "vetry",
+        "viteri",
+        "vitery",
+        "vitri",
+        "vitry",
+        "vittery",
+        "vittery canvas",
+        "vittrye",
+        "vittrye canvas"
+      ],
+      "gloss": "vitry — a light, durable canvas originally made in Vitré, Brittany; the name does not reliably imply provenance"
+    },
+    "wales": {
+      "label": "Wales",
+      "lang": "geo",
+      "forms": [
+        "wallie",
+        "walsche",
+        "welshe"
+      ],
+      "gloss": "from Wales",
+      "geo": {
+        "id": "Q25",
+        "wikidata": "https://www.wikidata.org/entity/Q25",
+        "label": "Wales",
+        "dataset": "wikidata",
+        "point": [
+          -3.63333,
+          52.35
+        ],
+        "hasPolygon": true,
+        "osm_relation": "58437"
+      }
+    },
+    "ware": {
+      "label": "ware",
+      "lang": "mul",
+      "forms": [
+        "ware"
+      ],
+      "gloss": "manufactured goods (ware)"
+    },
+    "warre": {
+      "label": "warre",
+      "lang": "mul",
+      "forms": [
+        "de warre",
+        "warre"
+      ],
+      "gloss": "made of knotty/burr wood (Jenks)"
+    },
+    "wast": {
+      "label": "wast",
+      "lang": "mul",
+      "forms": [
+        "wast"
+      ],
+      "gloss": "waste paper"
+    },
+    "weak": {
+      "label": "weak",
+      "lang": "mul",
+      "forms": [
+        "debile",
+        "debiles",
+        "debilis",
+        "debilles",
+        "debillis",
+        "debylles"
+      ],
+      "gloss": "of low quality"
+    },
+    "weaver": {
+      "label": "weaver",
+      "lang": "occ",
+      "forms": [
+        "for wyvers",
+        "of bristelles for wevers",
+        "pro wevers",
+        "weavers",
+        "wever",
+        "wevers",
+        "wevir",
+        "wyvers"
+      ],
+      "gloss": "for/used by weavers",
+      "aat": {
+        "specific": "300025367",
+        "label": "weavers"
+      }
+    },
+    "webbes": {
+      "label": "webbes",
+      "lang": "mul",
+      "forms": [
+        "webbes"
+      ],
+      "gloss": "probably identical to cadas corses (since measured here in dozens) (OED s.v. caddis1, web n.; Cobb 176 'worsted tape')"
+    },
+    "werkyne": {
+      "label": "Werkyne",
+      "lang": "geo",
+      "gloss": "from Werkyne",
+      "forms": [
+        "werkyne"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "westernes": {
+      "label": "Westernes",
+      "lang": "geo",
+      "gloss": "from Westernes",
+      "forms": [
+        "westernes"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'england' — review/merge in the editor."
+    },
+    "westorne": {
+      "label": "westorne",
+      "lang": "mul",
+      "forms": [
+        "westorne"
+      ],
+      "gloss": ""
+    },
+    "westphalia": {
+      "label": "Westphalia",
+      "lang": "geo",
+      "forms": [
+        "westfale",
+        "westfalle",
+        "westfalyn",
+        "westvale",
+        "westvalle",
+        "westvalyn"
+      ],
+      "gloss": "from Westphalia",
+      "geo": {
+        "id": "Q8614",
+        "wikidata": "https://www.wikidata.org/entity/Q8614",
+        "label": "Westphalia",
+        "dataset": "wikidata",
+        "point": [
+          8,
+          52
+        ],
+        "hasPolygon": false
+      }
+    },
+    "wet": {
+      "label": "wet",
+      "lang": "mul",
+      "forms": [
+        "madefacta",
+        "madefactum",
+        "madefactus",
+        "madidatis",
+        "wet",
+        "wete",
+        "wett"
+      ],
+      "gloss": "wet, damp or moistened; sometimes damaged by damp (madidatis, madefacta)"
+    },
+    "weythe": {
+      "label": "Weythe",
+      "lang": "geo",
+      "gloss": "from Weythe",
+      "forms": [
+        "weythe"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "whipped": {
+      "label": "whipped",
+      "lang": "mul",
+      "forms": [
+        "whipped"
+      ],
+      "gloss": "thread, overlaid with another material wound closely and regularly round and round"
+    },
+    "white": {
+      "label": "white",
+      "lang": "mul",
+      "forms": [
+        "alba",
+        "albe",
+        "albi",
+        "albis",
+        "albo",
+        "alborum",
+        "album",
+        "albus",
+        "albuss",
+        "blance",
+        "blancum",
+        "blancus",
+        "blank",
+        "vite",
+        "weyghth",
+        "whit",
+        "white",
+        "whited",
+        "whitid",
+        "whits",
+        "whyet",
+        "whyett",
+        "whyt",
+        "whyte",
+        "whytt",
+        "wyt",
+        "wyte",
+        "wytes",
+        "wyttes"
+      ],
+      "gloss": "white",
+      "aat": {
+        "specific": "300129784",
+        "label": "white (color)"
+      }
+    },
+    "whole": {
+      "label": "whole",
+      "lang": "mul",
+      "forms": [
+        "hole"
+      ],
+      "gloss": "whole — counted individually (not by gross)"
+    },
+    "wicker": {
+      "label": "wicker",
+      "lang": "mul",
+      "forms": [
+        "wicker",
+        "wiker",
+        "wycker",
+        "wyker",
+        "wykers"
+      ],
+      "gloss": "made of wicker",
+      "aat": {
+        "specific": "300014690",
+        "label": "wicker"
+      }
+    },
+    "wight": {
+      "label": "Isle of Wight",
+      "lang": "geo",
+      "forms": [
+        "whight",
+        "wyght"
+      ],
+      "gloss": "from Isle of Wight",
+      "geo": {
+        "id": "Q9679",
+        "wikidata": "https://www.wikidata.org/entity/Q9679",
+        "label": "Isle of Wight",
+        "dataset": "wikidata",
+        "point": [
+          -1.3,
+          50.7
+        ],
+        "hasPolygon": true,
+        "osm_relation": "154350"
+      }
+    },
+    "winchester": {
+      "label": "Winchester",
+      "lang": "geo",
+      "forms": [
+        "wincestria",
+        "wincestrie",
+        "wintonie",
+        "wyncestre",
+        "wyncestria",
+        "wyncestrie",
+        "wynchestria",
+        "wyntonie"
+      ],
+      "gloss": "from Winchester",
+      "geo": {
+        "id": "Q172157",
+        "wikidata": "https://www.wikidata.org/entity/Q172157",
+        "label": "Winchester",
+        "dataset": "wikidata",
+        "point": [
+          -1.30861,
+          51.06333
+        ],
+        "hasPolygon": false
+      }
+    },
+    "woadnut": {
+      "label": "woad-nut",
+      "lang": "mul",
+      "forms": [
+        "net",
+        "nette",
+        "notte",
+        "odenette",
+        "odenettes",
+        "wadnette",
+        "wadnettes",
+        "woadnette",
+        "woadnettes",
+        "wodenotte",
+        "wodenottes",
+        "wodnete",
+        "wodnetes",
+        "wodnette",
+        "wodnettes",
+        "wodnotte",
+        "wodnottes",
+        "woodenotte",
+        "woodenottes",
+        "woodnet",
+        "woodnetes",
+        "woodnette",
+        "woodnettes",
+        "woodnote",
+        "woodnotes"
+      ],
+      "gloss": "a ball or nut of woad"
+    },
+    "wol": {
+      "label": "wol",
+      "lang": "mul",
+      "forms": [
+        "wol",
+        "woll",
+        "wolle"
+      ],
+      "gloss": "caddis ribbon (since measured in dozen [lb.]), here made of wool"
+    },
+    "wolleherne": {
+      "label": "wolleherne",
+      "lang": "mul",
+      "forms": [
+        "wolleherne"
+      ],
+      "gloss": "some sort of thrumes, exact meaning unknown"
+    },
+    "womb": {
+      "label": "womb",
+      "lang": "mul",
+      "forms": [
+        "ventribus",
+        "ventris",
+        "ventrum",
+        "watermys",
+        "womb",
+        "wombe",
+        "wombes",
+        "wombis",
+        "wombs",
+        "wombys",
+        "wombz",
+        "wombez"
+      ],
+      "gloss": "fur from the belly of the animal"
+    },
+    "womens": {
+      "label": "women's",
+      "lang": "mul",
+      "forms": [
+        "pro feminis",
+        "womens",
+        "pro mulieribus"
+      ],
+      "gloss": "women's (for women)"
+    },
+    "wood": {
+      "label": "wood",
+      "lang": "mul",
+      "forms": [
+        "ashen",
+        "ligni",
+        "ligno",
+        "lingno",
+        "treen",
+        "treene",
+        "wod",
+        "wode",
+        "trene"
+      ],
+      "gloss": "made of wood",
+      "aat": {
+        "specific": "300011914",
+        "label": "wood (plant material)"
+      }
+    },
+    "wool": {
+      "label": "wool",
+      "lang": "mul",
+      "forms": [
+        "lana",
+        "lane",
+        "lanei",
+        "laneum",
+        "laneus",
+        "lano",
+        "launeus",
+        "wolde",
+        "woll",
+        "wolle",
+        "wollen",
+        "wollene",
+        "woole",
+        "woollen",
+        "wul",
+        "wull",
+        "wulle",
+        "wullen"
+      ],
+      "gloss": "made of wool",
+      "aat": {
+        "specific": "300243430",
+        "label": "wool (textile)"
+      }
+    },
+    "worked": {
+      "label": "worked",
+      "lang": "mul",
+      "forms": [
+        "aptata",
+        "aptati",
+        "aptatis",
+        "aptatum",
+        "aptatus",
+        "made",
+        "operata",
+        "operati",
+        "operatis",
+        "operatorum",
+        "operatum",
+        "operatus",
+        "wark",
+        "werk",
+        "werke",
+        "werkes",
+        "werkyn",
+        "werkynges",
+        "werkys",
+        "work",
+        "worke",
+        "wroght",
+        "wrough",
+        "wrought",
+        "wrowght",
+        "wrowte",
+        "wrougth"
+      ],
+      "gloss": "worked / finished"
+    },
+    "worsted": {
+      "label": "worsted",
+      "lang": "mul",
+      "forms": [
+        "worsted",
+        "worstede",
+        "worster",
+        "worstid",
+        "worstyd"
+      ],
+      "gloss": "made of worsted",
+      "aat": {
+        "specific": "300227943",
+        "label": "worsted"
+      }
+    },
+    "wosted": {
+      "label": "wosted",
+      "lang": "mul",
+      "forms": [
+        "wosted"
+      ],
+      "gloss": "clearly some kind of worsted inkle, but exact meaning unknown"
+    },
+    "wrack": {
+      "label": "wrack",
+      "lang": "mul",
+      "forms": [
+        "wrack",
+        "wracke",
+        "wrak",
+        "wrake"
+      ],
+      "gloss": "wrack — an inferior / refuse grade"
+    },
+    "writing": {
+      "label": "writing",
+      "lang": "mul",
+      "forms": [
+        "writing",
+        "writyng",
+        "wryting",
+        "wrytyng"
+      ],
+      "gloss": "writing paper"
+    },
+    "yellow": {
+      "label": "yellow",
+      "lang": "mul",
+      "forms": [
+        "yelow"
+      ],
+      "gloss": "yellow in color",
+      "aat": {
+        "specific": "300127794",
+        "label": "yellow (color)"
+      }
+    },
+    "ynglyche": {
+      "label": "Ynglyche",
+      "lang": "geo",
+      "gloss": "from Ynglyche",
+      "forms": [
+        "ynglyche"
+      ],
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "york": {
+      "label": "York",
+      "lang": "geo",
+      "forms": [
+        "eboracense",
+        "eboracensi",
+        "eboracensibus",
+        "york",
+        "yorke",
+        "eborum"
+      ],
+      "gloss": "from York",
+      "memo": "York (Eboracum); needs WHG geo"
+    },
+    "yorkshire": {
+      "label": "Yorkshire",
+      "lang": "geo",
+      "forms": [
+        "northone"
+      ],
+      "gloss": "from Yorkshire",
+      "geo": {
+        "id": "Q163",
+        "wikidata": "https://www.wikidata.org/entity/Q163",
+        "label": "Yorkshire",
+        "dataset": "wikidata",
+        "point": [
+          -1.08333,
+          53.95833
+        ],
+        "hasPolygon": true,
+        "osm_relation": "8484939"
+      }
+    },
+    "zeeland": {
+      "label": "Zeeland",
+      "lang": "geo",
+      "forms": [
+        "seland",
+        "selandie",
+        "sewic",
+        "sewice",
+        "sewiche",
+        "sewish",
+        "sewissh",
+        "sewisshe",
+        "sewych",
+        "sewys",
+        "sewysh",
+        "sewyshe",
+        "sewyssh",
+        "sewysshe",
+        "shewische",
+        "shewish",
+        "shewissh",
+        "shewysh",
+        "zelandia",
+        "zelandie"
+      ],
+      "gloss": "from Zeeland",
+      "geo": {
+        "id": "Q705",
+        "wikidata": "https://www.wikidata.org/entity/Q705",
+        "label": "Zeeland",
+        "dataset": "wikidata",
+        "point": [
+          3.75,
+          51.56667
+        ],
+        "hasPolygon": true,
+        "osm_relation": "47806"
+      }
+    }
+  }
+}

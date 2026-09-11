@@ -1,0 +1,13 @@
+{
+ "_meta": {
+  "sample": 0,
+  "band": [
+   0.78,
+   0.86
+  ],
+  "min_count": 2,
+  "items": 0,
+  "note": "Set each item's 'decision' to 'accept' or 'reject', then run --train. accept => add token as a form (kind=form) or qualifier variant (kind=qualifier) of 'target'; both feed the match scorer."
+ },
+ "items": []
+}

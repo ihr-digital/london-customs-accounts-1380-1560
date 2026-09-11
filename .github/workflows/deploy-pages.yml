@@ -1,0 +1,277 @@
+# Deploy GitHub Pages with generated JSON-LD entity files.
+#
+# Optimised for incremental rebuilds:
+#   - Caches docs/api/ between runs so unchanged entities are not regenerated
+#   - Detects which source files changed and regenerates only the affected
+#     subset (per-volume ladings, glossary, or neither)
+#   - Falls back to full regeneration when generate_jsonld.py itself changes,
+#     or on manual dispatch / first run (no cache)
+#
+# Also builds the Sphinx documentation sidecar from documentation/ into
+# docs/documentation/ so it is served at /documentation/ on the Pages site.
+
+name: Deploy Pages with JSON-LD
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'process/generate_jsonld.py'
+      - 'documentation/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:  # allow manual trigger (always does full regeneration)
+
+permissions:
+  contents: write  # convert-drafts step commits .docx → .md back to main
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need HEAD~1 for diff
+          # Persisted token used by the convert-drafts step below to push
+          # the resulting .md files back to main.
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: documentation/requirements.txt
+
+      # ── Convert any Word drafts in documentation/_drafts/ ────────────
+      # Colleagues can drop .docx (or legacy .doc) files into
+      # documentation/_drafts/ via the GitHub web UI. This step uses pandoc
+      # to convert each one into a Markdown page under documentation/content/,
+      # extracts embedded images into documentation/_static/media/<stem>/,
+      # deletes the source, and commits the result back to main. The build
+      # then proceeds in the same run with the freshly-converted content,
+      # so colleagues get a published page on a single upload-and-wait cycle.
+      - name: Convert pending Word drafts
+        id: convert
+        run: |
+          shopt -s nullglob
+          drafts=(documentation/_drafts/*.docx documentation/_drafts/*.doc)
+          if [ ${#drafts[@]} -eq 0 ]; then
+            echo "No Word drafts to convert."
+            echo "converted=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Found ${#drafts[@]} Word draft(s) to convert"
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc libreoffice
+          mkdir -p documentation/content documentation/_static/media
+          # cd into content/ so pandoc's --extract-media path is also the
+          # in-document image reference relative to the output .md.
+          pushd documentation/content > /dev/null
+          for f in "${drafts[@]}"; do
+            # Rebase the path because we changed directory
+            f="../../$f"
+            ext="${f##*.}"
+            # Promote .doc → .docx via LibreOffice headless conversion
+            if [ "$ext" = "doc" ]; then
+              libreoffice --headless --convert-to docx --outdir "$(dirname "$f")" "$f"
+              rm -f "$f"
+              f="${f%.doc}.docx"
+            fi
+            stem=$(basename "$f" .docx | tr '[:upper:] ' '[:lower:]-' | tr -cd 'a-z0-9-')
+            out="$stem.md"
+            media_rel="../_static/media/$stem"
+            echo "Converting $f → documentation/content/$out"
+            rm -rf "$media_rel"
+            pandoc "$f" \
+              --from=docx \
+              --to=gfm \
+              --wrap=none \
+              --extract-media="$media_rel" \
+              --output="$out"
+            rm -f "$f"
+          done
+          popd > /dev/null
+          # Commit and push the converted content back to main so future
+          # runs see the new .md and the old .docx is gone.
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add documentation/content documentation/_static/media documentation/_drafts
+          if git diff --cached --quiet; then
+            echo "Nothing to commit after conversion."
+            echo "converted=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Auto-convert Word drafts to Markdown"
+            git push origin HEAD:main
+            echo "converted=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── Detect what changed ───────────────────────────────────────────
+      - name: Detect changes
+        id: changes
+        run: |
+          # Manual dispatch → full regeneration
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "full=true" >> "$GITHUB_OUTPUT"
+            echo "Manual dispatch — full regeneration"
+            exit 0
+          fi
+
+          echo "full=false" >> "$GITHUB_OUTPUT"
+
+          # Compare HEAD against its parent
+          DIFF=$(git diff --name-only HEAD~1 HEAD)
+          echo "Changed files:"
+          echo "$DIFF"
+
+          # 1) Script changed → full
+          if echo "$DIFF" | grep -q '^process/generate_jsonld\.py$'; then
+            echo "full=true" >> "$GITHUB_OUTPUT"
+            echo "Generator script changed — full regeneration"
+            exit 0
+          fi
+
+          # 2) Which volume data files changed?
+          # The lading sources are stored gzipped in the repo; the plain .json
+          # is regenerated below before generate_jsonld runs.
+          VOLS=$(echo "$DIFF" | grep '^docs/data/ladings/.*\.json\.gz$' \
+                 | sed 's|docs/data/ladings/||;s|\.json\.gz$||' | sort -u || true)
+          if [ -n "$VOLS" ]; then
+            # Space-separated list of volume stems, e.g. "IV-3 II-1"
+            echo "volumes=$(echo $VOLS)" >> "$GITHUB_OUTPUT"
+            echo "Changed volumes: $VOLS"
+          else
+            echo "volumes=" >> "$GITHUB_OUTPUT"
+          fi
+
+          # 3) Glossary changed?
+          if echo "$DIFF" | grep -q '^docs/data/glossary_data\.json$'; then
+            echo "glossary=true" >> "$GITHUB_OUTPUT"
+            echo "Glossary data changed"
+          else
+            echo "glossary=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── Restore cached API files ─────────────────────────────────────
+      - name: Restore API cache
+        uses: actions/cache@v4
+        with:
+          path: docs/api
+          # Unique key per run so updated docs/api/ is always saved (GH
+          # caches are immutable).  The restore-keys prefix means a previous
+          # run's cache is restored even when the key doesn't match exactly.
+          key: jsonld-api-${{ github.run_id }}
+          restore-keys: |
+            jsonld-api-
+
+      - name: Check for cached API content
+        id: cache
+        run: |
+          if [ -f docs/api/context.json ]; then
+            echo "has_cache=true" >> "$GITHUB_OUTPUT"
+            echo "Cache restored ($(find docs/api -name '*.json' | wc -l) files)"
+          else
+            echo "has_cache=false" >> "$GITHUB_OUTPUT"
+            echo "No cached API content found — full regeneration needed"
+          fi
+
+      # ── Decompress lading JSONs for generate_jsonld ──────────────────
+      # The repo stores only the gzipped ladings (plain .json is gitignored
+      # to keep repo size down). generate_jsonld reads the plain .json, so
+      # gunzip them here and clean up afterwards before the deploy upload.
+      - name: Gunzip lading sources
+        run: |
+          for gz in docs/data/ladings/*.json.gz; do
+            gunzip -kf "$gz"
+          done
+          echo "Decompressed $(ls docs/data/ladings/*.json | wc -l) lading files"
+
+
+      # ── Full regeneration ─────────────────────────────────────────────
+      - name: Full regeneration
+        if: >-
+          steps.changes.outputs.full == 'true'
+          || steps.cache.outputs.has_cache != 'true'
+        run: |
+          echo "Clearing docs/api/ (preserving context.json)…"
+          find docs/api -name '*.json' ! -name 'context.json' -delete 2>/dev/null || true
+          rm -rf docs/api/glossary 2>/dev/null || true
+          python3 -m process.generate_jsonld
+
+      # ── Incremental: ladings only for changed volumes ─────────────────
+      - name: Regenerate changed volumes
+        if: >-
+          steps.changes.outputs.full != 'true'
+          && steps.cache.outputs.has_cache == 'true'
+          && steps.changes.outputs.volumes != ''
+        run: |
+          ARGS=""
+          for vol in ${{ steps.changes.outputs.volumes }}; do
+            ARGS="$ARGS --volume $vol"
+          done
+          echo "Regenerating volumes:$ARGS"
+          python3 -m process.generate_jsonld $ARGS
+
+      # ── Incremental: glossary only ────────────────────────────────────
+      - name: Regenerate glossary
+        if: >-
+          steps.changes.outputs.full != 'true'
+          && steps.cache.outputs.has_cache == 'true'
+          && steps.changes.outputs.glossary == 'true'
+        run: |
+          echo "Clearing docs/api/glossary/…"
+          rm -rf docs/api/glossary 2>/dev/null || true
+          python3 -m process.generate_jsonld --glossary
+
+      # ── Report ────────────────────────────────────────────────────────
+      - name: Report generated files
+        run: |
+          echo "Lading files: $(find docs/api -maxdepth 1 -name '*.json' ! -name 'context.json' | wc -l)"
+          echo "Glossary files: $(find docs/api/glossary -name '*.json' 2>/dev/null | wc -l)"
+          echo "Total size: $(du -sh docs/api | cut -f1)"
+
+      # ── Strip the decompressed lading sources from the deploy artefact ─
+      # Browser only fetches the .json.gz; the plain .json was needed only by
+      # generate_jsonld. Deleting them here keeps the Pages payload small.
+      - name: Remove decompressed lading sources
+        run: |
+          rm -f docs/data/ladings/*.json
+          echo "Remaining: $(ls docs/data/ladings/*.json.gz | wc -l) .json.gz files"
+
+      # ── Build Sphinx documentation sidecar ───────────────────────────
+      # Source lives in documentation/; output is placed in docs/documentation/
+      # so it ships inside the same Pages artefact and is served at
+      # /London_Customs_Accounts/documentation/.
+      - name: Install documentation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r documentation/requirements.txt
+
+      - name: Build documentation
+        run: |
+          rm -rf docs/documentation
+          sphinx-build -b html -W --keep-going documentation docs/documentation
+          echo "Documentation files: $(find docs/documentation -type f | wc -l)"
+
+      # ── Deploy ────────────────────────────────────────────────────────
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+

@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "mlca": "https://w3id.org/mlca/ontology#",
+    "hector": "https://w3id.org/hector/ontology#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Lading": "mlca:Lading",
+    "Cargo": "mlca:Cargo",
+    "Commodity": "mlca:Commodity",
+
+    "ladingId": "mlca:ladingId",
+    "customsType": "mlca:customsType",
+    "direction": "mlca:direction",
+    "date": { "@id": "dcterms:date", "@type": "xsd:date" },
+    "page": "mlca:page",
+
+    "vessel": "mlca:vessel",
+    "shipType": "mlca:shipType",
+    "shipName": "mlca:shipName",
+    "master": "mlca:master",
+    "givenName": "schema:givenName",
+    "familyName": "schema:familyName",
+
+    "cargo": { "@id": "mlca:cargo", "@container": "@set" },
+    "text": "mlca:originalText",
+    "merchant": "mlca:merchant",
+    "status": "mlca:status",
+    "commodities": { "@id": "mlca:commodities", "@container": "@set" },
+    "headword": "mlca:headword",
+    "commodity": { "@id": "mlca:commodity", "@type": "@id" },
+    "groups": { "@id": "mlca:grouping", "@container": "@set" },
+    "quantity": "mlca:quantity",
+    "unit": "mlca:unit",
+
+    "description": "dcterms:description",
+    "forms": { "@id": "mlca:forms", "@container": "@set" },
+    "spelling": "mlca:spelling",
+    "crossReferences": { "@id": "mlca:crossReferences", "@container": "@set" },
+    "qualifiers": { "@id": "mlca:qualifiers", "@container": "@set" },
+    "qualifierType": { "@id": "mlca:qualifierType", "@type": "@id" },
+    "qualifierAAT": { "@id": "mlca:qualifierAAT", "@type": "@id" },
+    "compoundOf": { "@id": "hector:compoundOf", "@type": "@id", "@container": "@set" },
+    "related": { "@id": "skos:related", "@type": "@id", "@container": "@set" },
+    "materials": { "@id": "schema:material", "@container": "@set" },
+    "label": "rdfs:label"
+  }
+}
+

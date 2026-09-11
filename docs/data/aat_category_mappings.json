@@ -1,0 +1,417 @@
+{
+  "_comment": "Mappings from BOR (Book of Rates) glossary categories to Getty AAT (Art & Architecture Thesaurus) concepts. Generated 2026-04-09 by querying the AAT SPARQL endpoint at vocab.getty.edu. Each BOR category maps to one or more AAT guide terms (broader concepts). When a specific AAT concept is assigned to a glossary entry, the system can walk the AAT 'broader' hierarchy to determine which BOR category the entry falls under. REQUIRES CHECKING.",
+  "_aat_prefix": "http://vocab.getty.edu/aat/",
+  "mappings": [
+    {
+      "bor_category": "armour & weaponry",
+      "aat": [
+        {
+          "id": "300036926",
+          "uri": "http://vocab.getty.edu/aat/300036926",
+          "label": "weapons",
+          "path": "Objects Facet > Furnishings and Equipment > Weapons and Ammunition > weapons",
+          "children_sample": ["armaments"],
+          "note": "Top-level weapons concept. Children include edged weapons, projectile weapons, percussive weapons, etc."
+        },
+        {
+          "id": "300036745",
+          "uri": "http://vocab.getty.edu/aat/300036745",
+          "label": "armor",
+          "path": "Objects Facet > Furnishings and Equipment > Costume > protective wear > armor",
+          "children_sample": ["<armor by form>", "<armor by function>"],
+          "note": "Includes body armor, helmets, shields, gauntlets — all defensive equipment."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Clean 1:1 mapping. BOR 'armor and weaponry' splits naturally into two AAT branches."
+    },
+    {
+      "bor_category": "cloth",
+      "aat": [
+        {
+          "id": "300231565",
+          "uri": "http://vocab.getty.edu/aat/300231565",
+          "label": "textile materials",
+          "path": "Materials Facet > Materials > materials by form > materials by physical form > fiber and fiber by product > fiber by product > textile materials",
+          "children_sample": ["<textile materials by composition or origin>", "<textile materials by form>", "<textile materials by function>", "<textile materials by process or technique>"],
+          "note": "Broad category covering all textile materials. Includes subcategories by composition (silk, wool, linen), by form (cloth, yarn, thread), by function (furnishing, clothing), and by technique (woven, knitted, felted)."
+        },
+        {
+          "id": "300162391",
+          "uri": "http://vocab.getty.edu/aat/300162391",
+          "label": "cloth",
+          "path": "Materials Facet > ... > textile materials > textile materials by form > cloth",
+          "children_sample": ["yardage"],
+          "note": "Narrower concept specifically for woven fabric. Parent 'textile materials' is the better category-level match."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Use aat:300231565 'textile materials' as the primary guide term. BOR 'cloth' maps well to this AAT branch."
+    },
+    {
+      "bor_category": "clothing & textiles",
+      "aat": [
+        {
+          "id": "300266639",
+          "uri": "http://vocab.getty.edu/aat/300266639",
+          "label": "clothing",
+          "path": "Objects Facet > Furnishings and Equipment > Costume > costume (mode of fashion) > clothing",
+          "children_sample": ["main garments", "outerwear", "underwear"],
+          "note": "Garments worn on the body. Includes main garments, outerwear, underwear, accessories."
+        },
+        {
+          "id": "300209286",
+          "uri": "http://vocab.getty.edu/aat/300209286",
+          "label": "jewelry",
+          "path": "Objects Facet > Furnishings and Equipment > Costume > costume accessories > worn costume accessories > jewelry",
+          "children_sample": ["<jewelry by form>", "<jewelry by function>", "<jewelry by location>"],
+          "note": "For costume accessories like brooches, buckles, rings that BOR classifies under 'clothing' rather than 'jewels'."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "BOR 'clothing & textiles' maps primarily to AAT 'clothing'. Note BOR includes items like buckles, brooches, belts which in AAT fall under costume accessories."
+    },
+    {
+      "bor_category": "leather goods",
+      "aat": [
+        {
+          "id": "300011845",
+          "uri": "http://vocab.getty.edu/aat/300011845",
+          "label": "leather",
+          "path": "Materials Facet > Materials > materials by origin > biological material > animal material > processed animal material > leather",
+          "children_sample": ["<leather by origin>", "<leather by process>"],
+          "note": "Processed animal hide material. Includes cordwain, morocco, etc."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Clean mapping. BOR 'leather goods' includes both the raw material (cordwain, redelasch) and finished leather products."
+    },
+    {
+      "bor_category": "food & comestibles",
+      "aat": [
+        {
+          "id": "300254496",
+          "uri": "http://vocab.getty.edu/aat/300254496",
+          "label": "food",
+          "path": "Materials Facet > Materials > materials by function > food",
+          "children_sample": ["beverages", "bread", "candy", "spices and seasonings", "milk and milk by product"],
+          "note": "Top-level food concept. Note: AAT places 'spices and seasonings' as a child of 'food', which aligns with BOR assigning 'food & comestibles' as a secondary category for spices."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Good primary match. BOR sub-categories (fish, grain, nuts, spices) are all reachable within the AAT food hierarchy."
+    },
+    {
+      "bor_category": "fish",
+      "aat": [
+        {
+          "id": "300389825",
+          "uri": "http://vocab.getty.edu/aat/300389825",
+          "label": "fish (meat)",
+          "path": "Materials Facet > Materials > materials by function > food > meat > fish (meat)",
+          "children_sample": [],
+          "note": "Fish as food/traded commodity (not the zoological concept). Child of 'meat' which is child of 'food'."
+        }
+      ],
+      "mapping_quality": "moderate",
+      "notes": "AAT's 'fish (meat)' is the right concept for traded fish. The hierarchy food > meat > fish (meat) correctly places fish under food, matching BOR's dual assignment of 'fish' + 'food & comestibles'."
+    },
+    {
+      "bor_category": "grain",
+      "aat": [
+        {
+          "id": "300444361",
+          "uri": "http://vocab.getty.edu/aat/300444361",
+          "label": "cereals",
+          "path": "Materials Facet > Materials > materials by origin > biological material > plant material > Plantae (kingdom) > cereals",
+          "children_sample": [],
+          "note": "Cereal crops. AAT places this under plant taxonomy rather than under food, so the food connection would need to be made via the BOR dual-category pattern."
+        }
+      ],
+      "mapping_quality": "moderate",
+      "notes": "AAT's 'cereals' is botanical. BOR 'grain' (avena, frumentum, rye) as traded commodities straddles AAT's botanical and food classifications. May need both this concept and a food-hierarchy reference."
+    },
+    {
+      "bor_category": "nuts",
+      "aat": [
+        {
+          "id": "300011897",
+          "uri": "http://vocab.getty.edu/aat/300011897",
+          "label": "nuts (plant components)",
+          "path": "Materials Facet > Materials > materials by origin > biological material > plant material > ... > dry fruit > nuts (plant components)",
+          "children_sample": ["acorns", "almonds (drupe kernels)", "cashew nuts", "chestnuts (nuts)", "hazelnuts (nuts)", "walnuts (nuts)"],
+          "note": "Excellent match. Contains the specific nut types found in BOR: almonds, hazelnuts, walnuts, chestnuts."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Very good match. AAT children directly correspond to BOR glossary entries (amigdalum=almond, avellana=hazelnut, nux=walnut)."
+    },
+    {
+      "bor_category": "dyestuffs",
+      "aat": [
+        {
+          "id": "300013029",
+          "uri": "http://vocab.getty.edu/aat/300013029",
+          "label": "dye",
+          "path": "Materials Facet > Materials > ... > colorant > dye",
+          "children_sample": ["<dye by composition or origin>", "<dye by property>"],
+          "note": "Colouring substances applied to textiles, leather, etc. Includes plant-derived dyes (woad, madder, brazilwood) and mineral dyes (alum)."
+        },
+        {
+          "id": "300217203",
+          "uri": "http://vocab.getty.edu/aat/300217203",
+          "label": "<colorant for dye and pigment>",
+          "path": "Materials Facet > Materials > ... > colorant > <colorant for dye and pigment>",
+          "children_sample": [],
+          "note": "Broader 'colorant' parent concept. Useful as a wider net since BOR 'dyestuffs' also includes pigments (vermilion, azurite) not strictly dyes."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Good match. BOR 'dyestuffs' includes both true dyes (woad, madder, grain) and pigments (vermilion, azurite, orpiment). AAT 'dye' is the primary match; the broader 'colorant' covers pigments too."
+    },
+    {
+      "bor_category": "spices & herbs",
+      "aat": [
+        {
+          "id": "300386730",
+          "uri": "http://vocab.getty.edu/aat/300386730",
+          "label": "spices",
+          "path": "Materials Facet > Materials > materials by function > food > spices and seasonings > spices",
+          "children_sample": ["pepper (spice)"],
+          "note": "Spices as traded commodities. Child of 'spices and seasonings' which is child of 'food' — matching BOR's dual 'spices & herbs' + 'food & comestibles' pattern."
+        },
+        {
+          "id": "300132436",
+          "uri": "http://vocab.getty.edu/aat/300132436",
+          "label": "herbs",
+          "path": "Materials Facet > Materials > materials by origin > biological material > plant material > nonwoody plants > herbs",
+          "children_sample": [],
+          "note": "Herbs as plant material. Placed botanically in AAT rather than under food."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "BOR 'spices & herbs' maps to two AAT concepts. 'spices' is well-placed under food; 'herbs' is botanical. Most BOR entries (pepper, cloves, cinnamon, nutmeg, cumin) will match AAT spice children."
+    },
+    {
+      "bor_category": "medicinal use",
+      "aat": [
+        {
+          "id": "300379869",
+          "uri": "http://vocab.getty.edu/aat/300379869",
+          "label": "drugs",
+          "path": "Materials Facet > Materials > materials by function > drugs",
+          "children_sample": ["calamine (pharmaceutical)", "cocaine", "hallucinogens", "snuff", "stimulants"],
+          "note": "Medicinal and pharmacological substances. Sibling of 'food' under 'materials by function'."
+        }
+      ],
+      "mapping_quality": "moderate",
+      "notes": "BOR 'medicinal use' is functional — the same substance (gall, alum, galingale) may appear under both 'medicinal use' and another category. AAT 'drugs' captures the pharmaceutical use. This is one of the categories where AAT hierarchy alone may not fully derive the BOR category, since medicinal use is a cross-cutting concern."
+    },
+    {
+      "bor_category": "furs, skins & hides",
+      "aat": [
+        {
+          "id": "300011811",
+          "uri": "http://vocab.getty.edu/aat/300011811",
+          "label": "fur (hair material)",
+          "path": "Materials Facet > Materials > materials by origin > biological material > animal material > keratinous material > hair and hair components > hair by form as material > fur",
+          "children_sample": ["rabbit hair"],
+          "note": "Fur as a traded material."
+        },
+        {
+          "id": "300193371",
+          "uri": "http://vocab.getty.edu/aat/300193371",
+          "label": "pelt (animal material)",
+          "path": "Materials Facet > Materials > materials by origin > biological material > animal material > processed animal material > pelt",
+          "children_sample": [],
+          "note": "Animal skin with fur attached — the primary form of traded furs (calabra, ermyn, martrin, etc.)."
+        },
+        {
+          "id": "300011845",
+          "uri": "http://vocab.getty.edu/aat/300011845",
+          "label": "leather",
+          "path": "Materials Facet > Materials > materials by origin > biological material > animal material > processed animal material > leather",
+          "children_sample": ["<leather by origin>", "<leather by process>"],
+          "note": "Processed hides (overlaps with 'leather goods' category). In BOR, raw and semi-processed hides appear here; finished leather goods have their own category."
+        }
+      ],
+      "mapping_quality": "moderate",
+      "notes": "BOR 'furs, skins & hides' spans several AAT concepts under 'animal material'. The common ancestor is aat:300011793 'animal material' or more precisely aat:300193287 'processed animal material'. Entries range from raw pelts (bever, ermyn) to semi-processed hides."
+    },
+    {
+      "bor_category": "industrial & artisanal goods",
+      "aat": [
+        {
+          "id": "300024841",
+          "uri": "http://vocab.getty.edu/aat/300024841",
+          "label": "tools",
+          "path": "Objects Facet > Furnishings and Equipment > Tools and Equipment > equipment by general type > tools",
+          "children_sample": ["instruments", "utensils"],
+          "note": "Covers tools, implements, and instruments. Many BOR 'industrial & artisanal goods' are tools (hammers, shears, anvils, grindstones)."
+        },
+        {
+          "id": "300010358",
+          "uri": "http://vocab.getty.edu/aat/300010358",
+          "label": "materials (substances)",
+          "path": "Materials Facet > Materials > materials (substances)",
+          "children_sample": [],
+          "note": "Very broad — for raw materials (alum, pitch, tar, wax, tallow, hemp, flax) that BOR classifies as 'industrial & artisanal goods'. These are materials used in craft/industry rather than finished objects."
+        }
+      ],
+      "mapping_quality": "weak",
+      "notes": "This is the most heterogeneous BOR category — a catch-all for everything from raw materials (wax, tallow, hemp, pitch) to tools (hammers, anvils, shears) to manufactured components (nails, wire, glass). No single AAT concept covers it. In practice, individual entries will map to diverse AAT branches. This category may be best handled by assigning specific AAT concepts to entries and not attempting a single category-level mapping."
+    },
+    {
+      "bor_category": "metals & ores",
+      "aat": [
+        {
+          "id": "300010900",
+          "uri": "http://vocab.getty.edu/aat/300010900",
+          "label": "metal",
+          "path": "Materials Facet > Materials > materials by composition > inorganic material > metal",
+          "children_sample": ["<metal by composition or origin>", "<metal by form>", "<metal by product>", "<metal by quality>"],
+          "note": "Top-level metal material concept. Children include specific metals (iron, copper, tin, lead, gold, silver) and forms (ingots, wire, plate)."
+        },
+        {
+          "id": "300152583",
+          "uri": "http://vocab.getty.edu/aat/300152583",
+          "label": "ore",
+          "path": "Materials Facet > Materials > materials by composition > inorganic material > ore",
+          "children_sample": ["iron ore"],
+          "note": "Unprocessed mineral containing metal. Sibling of 'metal' under 'inorganic material'."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Clean mapping. BOR entries (cuprum, ferrum, stannum, plumbum, osmond) map directly to AAT metal children. Ores are a sibling category."
+    },
+    {
+      "bor_category": "jewels & precious stones",
+      "aat": [
+        {
+          "id": "300201964",
+          "uri": "http://vocab.getty.edu/aat/300201964",
+          "label": "gemstones",
+          "path": "Materials Facet > Materials > materials by composition > inorganic material > rock > stone > stone by quality > gemstones",
+          "children_sample": ["<gemstones by specific type>", "precious stone (material)"],
+          "note": "Gemstones as materials. Includes precious and semi-precious stones."
+        },
+        {
+          "id": "300011054",
+          "uri": "http://vocab.getty.edu/aat/300011054",
+          "label": "precious metal",
+          "path": "Materials Facet > Materials > materials by composition > inorganic material > metal > metal by quality > precious metal",
+          "children_sample": [],
+          "note": "For gold and silver when classified as precious materials alongside gemstones."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Good match. BOR 'jewels & precious stones' entries (perle, saphir, diamant, ruby, emerawd) map well to AAT gemstones. Pearls are borderline (organic, not strictly stone) but AAT includes them."
+    },
+    {
+      "bor_category": "household goods",
+      "aat": [
+        {
+          "id": "300404584",
+          "uri": "http://vocab.getty.edu/aat/300404584",
+          "label": "household accessories",
+          "path": "Objects Facet > Object Genres > object genres by location, context or origin > household accessories",
+          "children_sample": [],
+          "note": "Genre classification for domestic objects. However, this is a thin concept in AAT."
+        },
+        {
+          "id": "300037336",
+          "uri": "http://vocab.getty.edu/aat/300037336",
+          "label": "furnishings (works)",
+          "path": "Objects Facet > Furnishings and Equipment > Furnishings > furnishings (works)",
+          "children_sample": [],
+          "note": "Physical furnishing objects — furniture, tableware, lighting, textiles. Broader coverage than 'household accessories'."
+        }
+      ],
+      "mapping_quality": "weak",
+      "notes": "BOR 'household goods' is the second most heterogeneous category — spanning furniture (cathedra, lectus), tableware (ciphus, patella), lighting (candela, lantern), textiles (curtina, towaille), personal items (pecten, speculum), devotional objects (paternoster, crucifix), and much more. Like 'industrial & artisanal goods', individual entries will scatter across many AAT branches. Best handled at the entry level."
+    },
+    {
+      "bor_category": "ships & shipping",
+      "aat": [
+        {
+          "id": "300042940",
+          "uri": "http://vocab.getty.edu/aat/300042940",
+          "label": "watercraft",
+          "path": "Objects Facet > Furnishings and Equipment > Transportation Vehicles > vehicles (transportation) > watercraft",
+          "children_sample": ["<watercraft by general type>", "<watercraft by specific type>"],
+          "note": "Vessels and boats. Children include ships, barges, galleys, etc."
+        },
+        {
+          "id": "300212975",
+          "uri": "http://vocab.getty.edu/aat/300212975",
+          "label": "watercraft equipment",
+          "path": "Objects Facet > Furnishings and Equipment > Tools and Equipment > ... > watercraft equipment",
+          "children_sample": [],
+          "note": "Ship's equipment and fittings: masts, cables, anchors, compasses, etc. Many BOR 'ships & shipping' entries are equipment rather than vessels themselves."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Good mapping. BOR entries split between vessels (navis) and equipment/materials for shipbuilding (mast, cable, pitch, tar, oars). AAT has both branches."
+    },
+    {
+      "bor_category": "wood & wood products",
+      "aat": [
+        {
+          "id": "300011914",
+          "uri": "http://vocab.getty.edu/aat/300011914",
+          "label": "wood (plant material)",
+          "path": "Materials Facet > Materials > materials by origin > biological material > plant material > wood and wood by product > wood (plant material)",
+          "children_sample": ["<wood by composition or origin>", "<wood by form or function>"],
+          "note": "Wood as raw/processed material. Children include specific wood types (oak, elm) and forms (boards, planks, staves). Covers most BOR wood entries: dele, bord, sparre, wainscot, bowestave."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Clean mapping. BOR 'wood & wood products' entries (planks, boards, staves, timber) map directly to AAT wood subcategories."
+    },
+    {
+      "bor_category": "packing units",
+      "aat": [
+        {
+          "id": "300197197",
+          "uri": "http://vocab.getty.edu/aat/300197197",
+          "label": "containers (receptacles)",
+          "path": "Objects Facet > Furnishings and Equipment > Containers > containers (receptacles)",
+          "children_sample": [],
+          "note": "Physical containers. Children include barrels, casks, baskets, boxes, sacks, etc. — directly matching BOR packing units (barellus, saccus, bala, cista, dolium, pipa, fardellus)."
+        }
+      ],
+      "mapping_quality": "strong",
+      "notes": "Good mapping. BOR 'packing units' are containers used for transporting goods. AAT 'containers (receptacles)' is the right parent concept. Individual entries (barrel, sack, bale, cask, pipe) will have specific AAT children."
+    },
+    {
+      "bor_category": "weights & measures",
+      "aat": [
+        {
+          "id": "300195708",
+          "uri": "http://vocab.getty.edu/aat/300195708",
+          "label": "weighing devices",
+          "path": "Objects Facet > Furnishings and Equipment > Measuring Devices > ... > weighing devices",
+          "children_sample": [],
+          "note": "Physical weighing instruments (balances, scales). For entries that are actual weighing objects."
+        },
+        {
+          "id": "300386648",
+          "uri": "http://vocab.getty.edu/aat/300386648",
+          "label": "weights and measures",
+          "path": "Associated Concepts Facet > ... > multidisciplinary concepts > weights and measures",
+          "children_sample": [],
+          "note": "Abstract concept of weights and measures as a system/standard. Better match for BOR's usage, since most BOR entries (petra, librum, ulna, centena, quarterium) are units of measurement, not physical devices."
+        }
+      ],
+      "mapping_quality": "moderate",
+      "notes": "BOR 'weights & measures' mostly contains abstract units (stone, pound, ell, hundredweight, quarter) rather than physical measuring devices. AAT's 'weights and measures' concept (300386648) captures the abstract system. Physical weights and balances would use 'weighing devices'. This is a conceptual mismatch — AAT is primarily an object thesaurus, while these BOR entries are units of measurement."
+    },
+    {
+      "bor_category": "unknown",
+      "aat": [],
+      "mapping_quality": "n/a",
+      "notes": "No AAT mapping. This is a holding category for unidentified glossary terms."
+    }
+  ]
+}
+

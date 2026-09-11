@@ -1,0 +1,66 @@
+/* Custom polish on top of the Shibuya theme.
+   Loaded via html_css_files in conf.py. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap');
+
+:root {
+    --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif;
+    --font-family-heading: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+    --font-family-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular,
+        'SF Mono', Menlo, Consolas, monospace;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+h1, h2, h3, h4, h5, h6,
+.bd-content h1, .bd-content h2, .bd-content h3,
+.bd-content h4, .bd-content h5, .bd-content h6 {
+    font-family: var(--font-family-heading);
+    letter-spacing: -0.01em;
+    font-weight: 600;
+}
+
+h1, .bd-content h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+code, kbd, pre, samp, .highlight {
+    font-family: var(--font-family-mono);
+}
+
+/* Slightly tighter inline code. */
+:not(pre) > code {
+    padding: 0.125em 0.375em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+}
+
+/* Generous reading rhythm in the main column. */
+.bd-content {
+    line-height: 1.7;
+}
+
+.bd-content p,
+.bd-content li {
+    font-size: 1rem;
+}
+
+/* Soften table borders. */
+.bd-content table {
+    border-collapse: collapse;
+}
+
+.bd-content table th,
+.bd-content table td {
+    padding: 0.5rem 0.75rem;
+}
+
+/* Print-friendly hides for the editor links in PDFs etc. */
+@media print {
+    .toc-tree, .navbar { display: none; }
+}

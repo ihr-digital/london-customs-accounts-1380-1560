@@ -1,0 +1,1757 @@
+{
+  "leftover:melting": {
+    "text": "Note the pipe separator between two forms that should be added",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T05:25:58.238Z"
+  },
+  "leftover:jamys": {
+    "text": "In one of the examples this appears to be a surname rather than a forename (following  \"..o\")",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T05:35:14.134Z"
+  },
+  "leftover:lanutarum": {
+    "text": "Complicated: `pellium lanutarum` is apparently an attestation of `basan`: does `pellium` have a `lanutarum` qualifier already which would map to `basan`? Handle this.",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T05:45:50.351Z"
+  },
+  "leftover:le": {
+    "text": "`outre le mer` needs an `overseas` or `foreign` qualifier which I don't think yet exists.",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T05:47:37.472Z"
+  },
+  "leftover:pannis": {
+    "text": "What do you think this is? `cloth` or a packing unit of some sort? Override my decision if appropriate.",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T06:02:19.617Z"
+  },
+  "leftover:þe": {
+    "text": "\"the\"",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T06:02:31.660Z"
+  },
+  "leftover:remblandes": {
+    "text": "Not sure about this one - what do you think?",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T06:07:05.419Z"
+  },
+  "leftover:sepo": {
+    "text": "Not sure about this - could it be tallow?",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T06:11:18.115Z"
+  },
+  "leftover:dosen": {
+    "text": "Check the description on `dozen` - it hasn't yet been curated and looks confusing. I want here the concept that means \"12\"",
+    "reviewer": "anonymous",
+    "updated": "2026-06-25T06:12:34.321Z"
+  },
+  "leftover:impressis": {
+    "text": "Meaning \"printed\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:36:57.852Z"
+  },
+  "leftover:aperti": {
+    "text": "Advice please: `aperti` presumable means literally `open`, but is it a type of silk rather than meaning `unwrapped`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:39:11.947Z"
+  },
+  "leftover:vivi": {
+    "text": "What might this mean? I would guess \"living\" but that doesn't fit the context (silver knobs).",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:41:12.820Z"
+  },
+  "leftover:cepi": {
+    "text": "I think we dealt with \"candelarum cepi\" compound on an earlier round - I suggested it is a tallow candle. Standalone it could be `onion`.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:44:26.083Z"
+  },
+  "leftover:egre": {
+    "text": "`vine egre` is vinegar; `bere egre` is beeregar. The UI doesn't give the option of providing separate mappings for different forms - maybe it should?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:46:44.346Z"
+  },
+  "leftover:integro": {
+    "text": "Make a new qualifier based on this:\n\nThis refers to \"whole grain,\" an expensive, high-quality red dye derived from the Kermes insect (often called scarlet or grain). Fabrics dyed with \"ingrain\" (ingrayne) were colorfast and highly valuable, distinguishing them from cheaper dyes.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:54:16.667Z"
+  },
+  "leftover:pomis": {
+    "text": "Check this: were oranges known as \"orange apples\"?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T07:57:43.431Z"
+  },
+  "leftover:pilosis": {
+    "text": "Means \"hairy\", I think?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T08:00:10.807Z"
+  },
+  "leftover:acri": {
+    "text": "Check this assignation.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T08:01:03.343Z"
+  },
+  "leftover:diverse": {
+    "text": "Surprised if a \"various|divers|diverse\" qualifier doesn't already exist. Check and add if necessary.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T10:18:26.644Z"
+  },
+  "leftover:pounderantibus": {
+    "text": "\"weighing\" - `pounderantibus` needs to be added to the parser which detects this in a cargo",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T10:34:21.899Z"
+  },
+  "leftover:brent": {
+    "text": "Check this - seems to mean something like a packing unit \"broken up\" into smaller units.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T10:35:29.665Z"
+  },
+  "leftover:lampadis": {
+    "text": "\"for lamps\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T11:28:23.146Z"
+  },
+  "leftover:staminis": {
+    "text": "means made of stamin (a coarse cloth of worsted)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T11:33:03.819Z"
+  },
+  "leftover:sancta": {
+    "text": "<em>de Sancta Cruce</em> wood of a South American species\n\nde sancta Maria = of St Mary",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T12:57:57.507Z"
+  },
+  "leftover:spike": {
+    "text": "Meaning \"spice\"? Check.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T12:59:42.393Z"
+  },
+  "leftover:gudde": {
+    "text": "meaning=medium quality",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T13:01:13.034Z"
+  },
+  "leftover:agninis": {
+    "text": "=of sheep",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T13:02:58.841Z"
+  },
+  "leftover:porcorum": {
+    "text": "=of pig/pork",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T13:04:04.042Z"
+  },
+  "leftover:pendentium": {
+    "text": "=hanging",
+    "reviewer": "docuracy",
+    "updated": "2026-06-25T13:04:26.539Z"
+  },
+  "leftover:berys": {
+    "text": "Might this be a qualifier of `grain` the dyestuff?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T08:31:39.927Z"
+  },
+  "leftover:ovilinis": {
+    "text": "This is obviously sheep, but I don't see a sheep qualifier, only `basan` which implies additional pelt-processing I think?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T08:34:29.999Z"
+  },
+  "leftover:berris": {
+    "text": "Same problem as with `berys` Leftover",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T08:35:24.758Z"
+  },
+  "leftover:berrys": {
+    "text": "Same again as `berys`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T08:35:44.982Z"
+  },
+  "leftover:westorn": {
+    "text": "Check that a `western` is technically always a `dozen`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:02:07.722Z"
+  },
+  "leftover:anthonio": {
+    "text": "I've tagged as `Forename`, but note that saints' names fall into this category as well as those of merchants and masters",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:03:29.114Z"
+  },
+  "leftover:castelle": {
+    "text": "The place is \"Castelle et Legionum\" (Castile and Leon)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:04:12.581Z"
+  },
+  "leftover:legionum": {
+    "text": "The place is \"Castelle et Legionum\" (Castile and Leon)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:04:31.305Z"
+  },
+  "leftover:sent": {
+    "text": "The \"Sent Laurenson\" example is an exception - obviously a forename here",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:06:55.806Z"
+  },
+  "leftover:may": {
+    "text": "One example is the name of the month.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:08:43.003Z"
+  },
+  "leftover:holond": {
+    "text": "I think `Holond|Holland` needs a separate concept, into which forms of cloth>holland should be merged",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T10:10:06.000Z"
+  },
+  "leftover:anthony": {
+    "text": "\"Adrian Anthony\" is an exception where this is a surname",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T13:51:13.204Z"
+  },
+  "leftover:schaft": {
+    "text": "Sometimes `schaft elles` = `shaft eel`, sometimes surname",
+    "reviewer": "docuracy",
+    "updated": "2026-06-26T13:52:30.429Z"
+  },
+  "leftover:baie": {
+    "text": "Mark this as \"from the Baye de Bourgneuf\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T06:20:11.438Z"
+  },
+  "leftover:hasbarrowe": {
+    "text": "Check that Hazebrouck cloth isn't already a distinct concept; it may already be a qualifer, but should be flagged as provenance",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T06:22:34.042Z"
+  },
+  "leftover:osymbrugges": {
+    "text": "This needs to be a distinct cloth concept, with any matching cloth>qualifier forms pulled out into it.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T06:23:27.810Z"
+  },
+  "leftover:brusylles": {
+    "text": "This denotes Brussells cloth - it needs a separate concept, again with equivalent concept>qualifier forms merged into it.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T08:08:40.707Z"
+  },
+  "leftover:lawrens": {
+    "text": "Can be either forename or surname",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T08:14:34.580Z"
+  },
+  "leftover:gentisch": {
+    "text": "Another cloth noted only by its provenance - we need another concept plus merge in any concept>qualifier equivalents.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T08:15:24.806Z"
+  },
+  "leftover:marie": {
+    "text": "I've marked this as a qualifier, but is that the best way to handle it?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T08:19:22.851Z"
+  },
+  "leftover:brusel": {
+    "text": "The examples include both concept and provenance-qualifiers",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T08:20:24.931Z"
+  },
+  "leftover:pulvere": {
+    "text": "\"pulvere pro vermibus\" is described in an index as <font size=\"2\" style=\"font-size: 9pt\"><span lang=\"en-US\"><i>pulvis,\n\t-eris pro vermibus</i></span><span lang=\"en-US\"> the dried\n\tunex&shy;panded flower-heads of species of </span><span lang=\"en-US\"><i>Ar&shy;temisia</i></span><span lang=\"en-US\">,\n\tproduced in Turkestan, used medically against intestinal worms);\n\tLevant or Alexandrian wormseed (OED s.v. santonica, Stieda, Venice,\n\t107) (see also wormesed(e)) </span>8, 11, 72, 80, 110, 181, 185</font></p>\n\nCan you construct an appropriate concept, with a \"see also\" link to wormseed?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T17:53:01.147Z"
+  },
+  "leftover:osyngbrugges": {
+    "text": "This  is either concept or qualifier with provenance tag, depending on context.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T17:57:19.597Z"
+  },
+  "leftover:osborugh": {
+    "text": "Osnabrück needs to be tagged as a provenance qualifier if not already",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T17:58:06.569Z"
+  },
+  "leftover:venis": {
+    "text": "Can you figure out what this is?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T18:00:09.857Z"
+  },
+  "leftover:saint": {
+    "text": "As noted before, Saint Thomas and Saint Omers are both provenance qualifiers of St Omer. Fix that.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T18:01:31.755Z"
+  },
+  "leftover:gildford": {
+    "text": "Ensure that the Guildford qualifier is tagged as provenance",
+    "reviewer": "docuracy",
+    "updated": "2026-06-27T18:03:07.489Z"
+  },
+  "leftover:seint": {
+    "text": "Mixed - Dean of St Andrews is part of a personal name, `Seint Thomas` is of course provenance St Omer",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T06:54:34.409Z"
+  },
+  "leftover:portugalia": {
+    "text": "But note not a qualifier when describing the provenance of a person (Johannis Alfons de Portugalia Ind')",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T06:56:13.298Z"
+  },
+  "leftover:osinbriges": {
+    "text": "Again, the same question of the provenance defining the type of cloth: handle in the usual way",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T06:57:19.056Z"
+  },
+  "leftover:bryssylles": {
+    "text": "These are Brussels cloth - a provenance-concept. Do we not have that split off from cloth>Brussells yet?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:29:40.482Z"
+  },
+  "leftover:beate": {
+    "text": "We dealt with \"Saint\" Mary, and now need similar treatment for this Beate Marie",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:32:09.715Z"
+  },
+  "leftover:poppey": {
+    "text": "Jenks was unsure of the meaning - I'm just guessing that this might be a provenance, so make sure that the uncertainty is flagged",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:34:23.044Z"
+  },
+  "leftover:niperfeldis": {
+    "text": "This is another of those provenance cloth names that might need a separate concept.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:35:43.676Z"
+  },
+  "leftover:hertfordes": {
+    "text": "This is another of those provenance cloth names that might need a separate concept.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:36:04.218Z"
+  },
+  "leftover:ossunbrigges": {
+    "text": "Are provenance-concepts tagged with a Place indicator?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:37:03.472Z"
+  },
+  "leftover:ossunbruges": {
+    "text": "We now seem to have two concepts which ought to be one? Is `osnaburg` synonymous with `osenbrigge`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:38:47.765Z"
+  },
+  "leftover:saynt": {
+    "text": "Saynt Omers is a form of St Omer (provenance) whereas \"images of Saynt George\" needs treatment of the same kind as the earlier one for Mary",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:54:54.692Z"
+  },
+  "leftover:werkyne": {
+    "text": "Another not certain provenance - Jenks does not offer anything for this word in his indexes",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:56:47.746Z"
+  },
+  "leftover:osinbrugges": {
+    "text": "Another Osnabruck cloth - explicitly described here as a fustian - is that compatible with the existing concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:58:06.092Z"
+  },
+  "leftover:malmesye": {
+    "text": "Note the strange repetition of `vini` in two of the examples",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T07:59:45.788Z"
+  },
+  "leftover:briselles": {
+    "text": "pecias Briselles are Brussels cloth, but in `remblandes Briselles` the word is a provenance-qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:00:45.539Z"
+  },
+  "leftover:hennaude": {
+    "text": "`tele Hennaude` is an existing cloth provenance-concept",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:02:47.209Z"
+  },
+  "leftover:northfolche": {
+    "text": "Is Norfolk a type of cloth as well as a provenance? Or is the concept specifically a Norfolk coverlet/coopertorio?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:04:33.908Z"
+  },
+  "leftover:stitish": {
+    "text": "`Stitish tele` and just `Stitish` - needs separate concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:53:02.788Z"
+  },
+  "leftover:brugges": {
+    "text": "Following a forename this is a surname, otherwise a provenance concept or qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:54:06.530Z"
+  },
+  "leftover:northerne": {
+    "text": "Distinction between northern kerseys and northern dozens? What is the existing concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:54:37.773Z"
+  },
+  "leftover:northens": {
+    "text": "Same query as `northerne`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:55:13.381Z"
+  },
+  "leftover:denshyre": {
+    "text": "But check - is the `devon` concept a Devonshire dozen?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:56:10.740Z"
+  },
+  "leftover:nordren": {
+    "text": "Same query as `northerne`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:56:24.962Z"
+  },
+  "leftover:rusels": {
+    "text": "Maybe another provenance cloth concept that we don't yet have? Check if we do - Jenks includes in his index:\n\n<p><em>Rusels</em>, <em>brod(e)</em> of obscure origin; possibly from\nRijssel, the Flemish name of Lille. The early forms, and the fact that\nblack and other colors occur earlier and more frequently than red, are\nagainst connexion with russel in the sense of ‘reddish’. A kind of\nwoollen fabric (worsted among other things) formerly used for articles\nof attire, especially in the 16<sup>th</sup> century (OED s.v. russel²),\nhere broad 286, 321, 373</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:58:15.315Z"
+  },
+  "leftover:flemmyshe": {
+    "text": "I think we need another new concept for Flemish cloth?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T08:59:32.665Z"
+  },
+  "leftover:stytisch": {
+    "text": "Again: sometimes a provenance qualifier, but sometimes perhaps a new cloth provenance-concept",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T09:00:21.457Z"
+  },
+  "leftover:norther": {
+    "text": "Same dozens/kerseys question as before",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T15:23:48.124Z"
+  },
+  "leftover:northerin": {
+    "text": "Same dozens/kerseys question again",
+    "reviewer": "docuracy",
+    "updated": "2026-06-28T15:24:39.928Z"
+  },
+  "leftover:angeo": {
+    "text": "This is an odd set of repetitions in the sample cargos - Angeo is a provenance-qualifier for wine, but how can it be usefully annotated when the repetition seems off?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:28:22.085Z"
+  },
+  "leftover:dornik": {
+    "text": "`mappe de Dornik` is a tablecloth made of `dornick` so a provenance-qualifier; in the other example it is the concept itself.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:35:52.366Z"
+  },
+  "leftover:bajon": {
+    "text": "Seems to be a provenance-concept cloth?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:37:51.989Z"
+  },
+  "leftover:hustere": {
+    "text": "Note that Jenks says:\n\n<p>— <em>Hauster(e)</em> (<em>Hustere</em>) probably identical to\n<em>hastrey clothe called browne hastrey</em> [1507] (Gras, 699),\ncertainly of the same origin as <em>tela lini Ostred/Austrett</em>.\nUtrecht is the best guess (Smit, 1393) 192, 222</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:38:51.752Z"
+  },
+  "leftover:eboracensibus": {
+    "text": "York",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:39:06.529Z"
+  },
+  "leftover:buske": {
+    "text": "Jenks Books of Rates defines a concept we lack at present, in both broad and narrow forms (we need a provenance-concept `Buske` with optional qualifiers with spelling variants):\n\n<p><em>Buske clothe brode</em> broadcloth made in ʼsHertogenbosch 14,\n46</p>\n<p><em>Buske clothe narowe</em> narrowcloth made in ʼsHertogenbosch 14,\n46</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:43:00.964Z"
+  },
+  "leftover:maria": {
+    "text": "I think we've dealt with this kind of thing multiple times already?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T05:59:10.699Z"
+  },
+  "leftover:norff": {
+    "text": "Another example of a provenance-concept (Norfolk cloth) being used as a qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:00:50.524Z"
+  },
+  "leftover:jhesu": {
+    "text": "Another like the \"Beata Maria\" type of image description qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:02:17.899Z"
+  },
+  "leftover:hertffordes": {
+    "text": "Is this a reasonable mapping?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:03:59.893Z"
+  },
+  "leftover:lopus": {
+    "text": "Surname or Forename",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:04:29.481Z"
+  },
+  "leftover:niffulles": {
+    "text": "New concept: cloth from Nivelles in Brabant",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:05:44.771Z"
+  },
+  "leftover:camerikes": {
+    "text": "But note that this is a provenance-concept",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:06:45.308Z"
+  },
+  "leftover:brabande": {
+    "text": "Mix of provenance qualifier and cloth-concept",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:08:03.396Z"
+  },
+  "leftover:surie": {
+    "text": "`Insula de Surie` is `Isole de Azores` (or something like that), i.e. the Azores",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:09:27.018Z"
+  },
+  "leftover:nyperfelle": {
+    "text": "A provenance cloth concept that we lack at present?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:10:57.877Z"
+  },
+  "leftover:niperfelle": {
+    "text": "See `nyperfelle`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T06:11:21.860Z"
+  },
+  "leftover:westarne": {
+    "text": "Mix of provenance concept/qualifiers depending on context? Are `western`s always kersey? We have them as dozens in the `westrons` Leftover.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:52:01.166Z"
+  },
+  "leftover:westrons": {
+    "text": "See `westarne`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:52:10.152Z"
+  },
+  "leftover:raine": {
+    "text": "We had this `vini` duplication before. How was it resolved?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:54:53.910Z"
+  },
+  "leftover:pers": {
+    "text": "Forename or Surname depending on context",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:55:22.768Z"
+  },
+  "leftover:hasborugh": {
+    "text": "Single-word Hasborugh cloth in the second example - do we have a separate concept for that?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:57:36.830Z"
+  },
+  "leftover:franchie": {
+    "text": "Similar repeated `vini` as elsewhere - how do we handle that?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T07:58:29.127Z"
+  },
+  "leftover:uwtnall": {
+    "text": "provenance",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T08:07:17.068Z"
+  },
+  "leftover:malmesies": {
+    "text": "Resolve the `vivi` duplication as before and tag appropriately",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T08:48:56.844Z"
+  },
+  "leftover:henege": {
+    "text": "Do we have a separate concept for cloth from Hainault? We need it here, and should merge in any cloth>Hainault concet>qualifier forms",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T08:50:47.859Z"
+  },
+  "leftover:det": {
+    "text": "This specific string \" dEt\" should be corrected in the transcripts to \"d Et\" (swap the position of the space) so that the \"d\" can be recognised with its preceding numeral as a pence indicator.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:24:17.743Z"
+  },
+  "leftover:vermibus": {
+    "text": "I thought we'd already dealt with \"pulveris pro vermibus\":\n\n\t<font size=\"2\" style=\"font-size: 9pt\"><i>pulvis, -eris pro vermibus</i>\n\tthe dried un&shy;expanded flower-heads of species of <i>Ar&shy;temisia</i>,\n\tproduced in Turkestan, used medically against intestinal worms);\n\tLevant or Alexandrian wormseed (OED s.v. santonica, Stieda, Venice,\n\t107) 93</font></p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:27:14.300Z"
+  },
+  "leftover:aque": {
+    "text": "The examples given are perhaps all multiword concepts which contain `aqua` - can you find them, or create if necessary?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:29:37.319Z"
+  },
+  "leftover:seminis": {
+    "text": "Is this another word which forms part of distinct concepts depending on its multiword partnerings?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:31:07.639Z"
+  },
+  "leftover:colorum": {
+    "text": "Note however that the qualifier here is compound, \"diversorum colorum\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:35:46.846Z"
+  },
+  "leftover:historiarum": {
+    "text": "This should be a qualifier on `volumen` - create it",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T09:59:42.302Z"
+  },
+  "leftover:mece": {
+    "text": "Somehow this concept was dropped:\n\n<font size=\"2\" style=\"font-size: 9pt\"><i>mece, -s </i>(<i>mecis</i>)\n\ta measure of weight, chiefly of copper (300 lb.) 9, 49, 50, 53, 63</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T15:50:29.428Z"
+  },
+  "leftover:ware": {
+    "text": "This seems to be some kind of pelt: do we have it as a concept already?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T15:53:16.968Z"
+  },
+  "leftover:sopebuttes": {
+    "text": "Need new `soap box` concept for this and box>pro sapone",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T15:58:03.056Z"
+  },
+  "leftover:roo": {
+    "text": "Need a new qualifier on at least three concepts:\n\n<font size=\"2\" style=\"font-size: 9pt\"><i>de roo</i> made of the\n\tskin of a roe: a small species of deer (<i>capreolus capraea</i>)\n\tinhabiting various parts of Europe and Asia (OED s.v. roe<sup>1</sup>)\n\t182, 190, 198, 199, 203, 219</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:16:36.547Z"
+  },
+  "leftover:uncoverde": {
+    "text": "Guess we need a new qualifier? Surprised we lack \"uncovered\". Check.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:19:58.448Z"
+  },
+  "leftover:linguis": {
+    "text": "Do we need a separate concept for unsalted ox-tongue, alongside the existing salted form?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:22:08.336Z"
+  },
+  "leftover:cot": {
+    "text": "Jenks doesn't seem to provide an explanation of this. What could it be? Seems to be a numbered qualifier in any case.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:24:20.184Z"
+  },
+  "leftover:assisa": {
+    "text": "Do we need new qualifiers for de parva assisa and magna?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:27:00.887Z"
+  },
+  "leftover:tazelles": {
+    "text": "These are teasels, but we seem to have lost the concept: IMPORTANT find out why/when it was lost and whether anything else was lost at around the same time.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-29T16:30:16.799Z"
+  },
+  "leftover:mortuis": {
+    "text": "Jenks gives:\n<font size=\"2\" style=\"font-size: 9pt\"><i>fungia (vocata) mortua\n\t</i>clearly some kind of dry cured fish, but exact meaning unknown\n\t98, 103</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T04:54:46.359Z"
+  },
+  "leftover:hattwolle": {
+    "text": "Lost from Jenks, make a new concept:\n\n<p><em>hattwolle</em> (<em>hatwoolle, hat(te) wolle</em>) (coarse) wool\nfor making hats 103, 104, 105, 148, 149, 208, 209, 233, 236, 249, 269,\n276</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:00:00.505Z"
+  },
+  "leftover:set": {
+    "text": "This is the same problem as we had to address earlier with \" dET\": fix it by post-editing the extracted cargos, NOT the pipeline (which caused us problems before)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:02:22.828Z"
+  },
+  "leftover:carnibus": {
+    "text": "We seem to be lacking a concept for generic `meat`? Create.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:05:23.083Z"
+  },
+  "leftover:ddeveria": {
+    "text": "Another misplaced space that needs postprocessing so that the pence can be detected: \" ddeveria\">\"d deveria\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:06:28.443Z"
+  },
+  "leftover:felthere": {
+    "text": "Jenks - we need a new concept:\n<p><em>felthere</em> very rough material for felting, e.g. for hats 24,\n30, 33, 53, 55</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:08:15.730Z"
+  },
+  "leftover:hatwolle": {
+    "text": "New concept `hat wool`:\n<p><em>hatwolle</em> (coarse) wool for making hats 85</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:09:59.347Z"
+  },
+  "leftover:vetere": {
+    "text": "The `new` qualifier seems to be polluted with forms of `vetus` which need to be attached instead to `old`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:12:33.890Z"
+  },
+  "leftover:remanento": {
+    "text": "I think our description of `remnants` limits the concept's use to cloth, but here it is also used for pelts.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:14:39.027Z"
+  },
+  "leftover:sancte": {
+    "text": "Process as before for saint names",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:14:56.818Z"
+  },
+  "leftover:duodecim": {
+    "text": "This needs to be captured by the number annotator pipeline",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:33:35.994Z"
+  },
+  "leftover:rof": {
+    "text": "`nail` already has a `rof` qualifier as \"rof|roff|rof\", but the UI is not showing it for selection. BUT in any case we need a new concept for `roffnailles` so should merge the nail>roof combo into that.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:43:01.911Z"
+  },
+  "leftover:oz": {
+    "text": "One of the examples is an `ounce balance`; the others need an `ounce` weight concept which I think is lacking",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:37:46.138Z"
+  },
+  "leftover:bacone": {
+    "text": "Odd that we lack a `bacon` concept? Investigate.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:38:55.187Z"
+  },
+  "leftover:mercimoniis": {
+    "text": "Do we really lack a merchandise/wares concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:40:33.153Z"
+  },
+  "leftover:roffnailles": {
+    "text": "See `rof` leftover instructions",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:43:22.946Z"
+  },
+  "leftover:unus": {
+    "text": "Should be picked up by the numeral parser (see also `duodecim` leftover)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:45:53.211Z"
+  },
+  "leftover:nect": {
+    "text": "See Jenks `nect` is presumably synonymous with `single nect`, and we seem to lack existing qualifier?\n\n<p>—<em>, neckyd (nect)</em> the meaning of <em>neckid</em> is unknown\n74, 157</p>\n<p>—<em>, sengle neckid (single necte)</em> the meaning of\n<em>neckid</em> is unknown 148, 197</p>\n<p>—<em>, doble nect (duble, doble nekyd, do(u)ble nekid, doule nedkid,\ndowble nekid, dol nect)</em> the meaning of <em>neckid</em> is unknown\n45, 61, 122, 135, 154, 155, 165, 167, 200</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:48:21.307Z"
+  },
+  "leftover:rubbyng": {
+    "text": "Missing `brush` qualifier?\n\n<p>—, <em>rubbyng</em> a hard brush used for rubbing in order to make\nclean (OED rubber, n.<sup>1</sup> I.1.a) (see also <em>rubbers</em>) 11,\n32, 48, 56, 80</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:49:29.686Z"
+  },
+  "leftover:mulmader": {
+    "text": "We need a separate concept: \"madder of the lowest quality\" related to `madder`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:50:37.810Z"
+  },
+  "leftover:lingno": {
+    "text": "But note Jenks:\n<font size=\"2\" style=\"font-size: 9pt\"><i>porcis de lingno</i>\n\tmeaning unknown 84</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T05:54:15.185Z"
+  },
+  "leftover:draconis": {
+    "text": "Is this missing as a concept?\n\n<p><em>drugge voc’ sanguis draconis</em> dragon’s blood, a bright red\ngum or resin, an ex­udation upon the fruit of a palm, <em>Calamus\nDraco</em>, used medically (OED s.v. dragon’s blood) 93</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:26:00.129Z"
+  },
+  "leftover:cepe": {
+    "text": "The examples are a mix of different concepts/qualifiers. Fix.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:27:00.429Z"
+  },
+  "leftover:horstaille": {
+    "text": "Missing either a concept or a silk qualifier:\n\n<font size=\"2\" style=\"font-size: 9pt\"><span lang=\"en-US\"><i>sericum,\n\t-i crudum horstaille</i></span><span lang=\"en-US\"> clearly raw silk\n\tof some sort, but exact meaning un&shy;known 45</span></font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:29:16.839Z"
+  },
+  "leftover:lasynge": {
+    "text": "This is `lasing|lasyng|lacyng` qualifier of `point` - UI does not offer it as a choice.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:31:50.047Z"
+  },
+  "leftover:da": {
+    "text": "Usually but not always part of a surname",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:32:41.254Z"
+  },
+  "leftover:stapulle": {
+    "text": "`staple fish` as \"stapulle piscibus\", but we need to handle the interposed `salcis` in \"piscibus salcis stapulle\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:34:01.152Z"
+  },
+  "leftover:crasshe": {
+    "text": "Probably a separate concept, but I cannot find it:\n\n<font size=\"2\" style=\"font-size: 9pt\"><i>craissh brusches</i>\n\t(<i>crasche, crasshe, cresshe brusches, brosshes</i>) brushes for\n\tcratching (scratching) (OED s.v. cratch v.); possi&shy;bly for use\n\tin treating cratch, a cutaneous disease attended with itching (OED\n\ts.v. cratch n.<sup>2</sup>) 13, 21, 28, 44, 65, 91</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:35:17.588Z"
+  },
+  "leftover:ful": {
+    "text": "We have the sense \"set of kettles\" for \"ful kettylles\", but what about the other examples?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:37:53.742Z"
+  },
+  "leftover:due": {
+    "text": "In one of these examples, `due` needs to be parsed as the number 2",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:38:45.537Z"
+  },
+  "leftover:sexdecim": {
+    "text": "More numerical parsing",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:38:59.748Z"
+  },
+  "leftover:square": {
+    "text": "\"ulnis square\" is a `square ell` (also `quatrata`)\nWhat could it mean in the case of `square plate`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:42:20.951Z"
+  },
+  "leftover:cuttinges": {
+    "text": "Does this need a separate new concept of will a qualifier suffice?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:46:24.566Z"
+  },
+  "leftover:warre": {
+    "text": "Do we have this qualifier?\n<font size=\"2\" style=\"font-size: 9pt\"><i>de warre</i> made of\n\tknotty wood 21, 36, 144, 200</font>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:47:33.797Z"
+  },
+  "leftover:whight": {
+    "text": "Not sure it applies in the case of \"shorte whight\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T06:48:26.904Z"
+  },
+  "leftover:undecem": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:25:39.667Z"
+  },
+  "leftover:quatuordecim": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:25:52.135Z"
+  },
+  "leftover:mercandysis": {
+    "text": "Similar to a previous Leftover - how should it be handled together with `diversis`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:28:28.262Z"
+  },
+  "leftover:doseyn": {
+    "text": "Another for the numerical parser - but careful not to capture `dozen cloth` forms",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:29:47.951Z"
+  },
+  "leftover:crache": {
+    "text": "I asked before about some variant of this (scratching brush): this needs the same handling.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:35:41.150Z"
+  },
+  "leftover:craysshe": {
+    "text": "Same processing as `crache`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:36:02.390Z"
+  },
+  "leftover:ossi": {
+    "text": "This is a qualifier used in combination with a colour. How should it best be handled?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:37:54.782Z"
+  },
+  "leftover:quadraginta": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:39:24.173Z"
+  },
+  "leftover:thowsant": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:39:44.788Z"
+  },
+  "leftover:chorte": {
+    "text": "Obviously a variant of `short` - handle appropriately for both qualifiers and (potentially?) concepts",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:41:44.460Z"
+  },
+  "leftover:shavyn": {
+    "text": "These three examples are all of latten swarf, but our `swarf` concept is at present limited to iron and steel. Should that be expanded to include latten?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:44:32.515Z"
+  },
+  "leftover:botum": {
+    "text": "Should the form include `fili`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:57:09.748Z"
+  },
+  "leftover:gladiorum": {
+    "text": "One of these is the concept, the other is a qualifier of `scindulis`: handle accordingly",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T07:58:45.803Z"
+  },
+  "leftover:crinibus": {
+    "text": "New qualifier required, I think?\n\n<p>— <em>de crinibus</em> made of cremil, a word used in connection with\ncertain textile fabrics, often applied attributively to their borders,\nmeaning, apparently, open work or lace, or perhaps even a fringe (OED\ns.v. cremil) 43, 44, 61</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T08:00:06.704Z"
+  },
+  "leftover:seel": {
+    "text": "I think this should be a qualifier of `pelt`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:44:42.682Z"
+  },
+  "leftover:harnasio": {
+    "text": "In this instance this should be a qualifier of `saddle` - does that exist yet?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:46:21.321Z"
+  },
+  "leftover:mer": {
+    "text": "Only one of these examples is `overseas` qualifier, the other is junk (part of an illegible surname)",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:47:56.802Z"
+  },
+  "leftover:fesantz": {
+    "text": "Apparently `pheasant` qualifier for `feather`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:52:53.066Z"
+  },
+  "leftover:tabulis": {
+    "text": "One of these is `tabyl pro altare`, the other a qualifier of plain `tablet` meaning unknown (according to Jenks).",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:55:07.479Z"
+  },
+  "leftover:duodecem": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:55:54.160Z"
+  },
+  "leftover:tresdecim": {
+    "text": "Another for the numerical parser",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:56:03.113Z"
+  },
+  "leftover:roughattes": {
+    "text": "A compound form of `hat`>`rough` which I guess needs to be separated out into a new concept.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:57:48.791Z"
+  },
+  "leftover:utensilibus": {
+    "text": "Should `rebus utensilibus` and plain `utensilibus` be forms of the `tools` concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T09:59:05.210Z"
+  },
+  "leftover:armour": {
+    "text": "Do we really have no general `armour` concept?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:01:22.936Z"
+  },
+  "leftover:citrilli": {
+    "text": "Qualifier for `semen`, \"meaning unknown\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:25:28.495Z"
+  },
+  "leftover:garnysshed": {
+    "text": "Are we lacking a `decorated` qualifier, which should include this as a form?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:27:18.975Z"
+  },
+  "leftover:paste": {
+    "text": "A condition qualifier meaning \"paste\", I guess?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:28:28.017Z"
+  },
+  "leftover:apparatu": {
+    "text": "\"cum apparatu\" needs a generic form of qualifier to cover both examples.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:31:39.544Z"
+  },
+  "leftover:reedellarum": {
+    "text": "We need a new concept here to also absorb `eel`>`red`",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:34:28.855Z"
+  },
+  "leftover:squerell": {
+    "text": "One surname, the other indicating a squirrel-fur qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:35:24.840Z"
+  },
+  "leftover:ddever": {
+    "text": "Another post-process switch of space needed to allow parsing of pence, \" ddever'\" > \"d dever'\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:37:17.944Z"
+  },
+  "leftover:bovine": {
+    "text": "We need a new concept `ox-meat` (\"bovine|bos|bovis\") with qualifier \"salso|salsa\" (salted).",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:40:13.151Z"
+  },
+  "leftover:talefili": {
+    "text": "How would you deal with this? Jenks gives:\n\n<p><em>filum</em> by characteristic</p>\n<p>— <em>album</em> white 136, 138, 147, 177, 181, 182</p>\n<p>— <em>crudum</em> of low quality 166</p>\n<p>— <em>grossum</em> of low quality 136, 178</p>\n<p>— <em>tale</em> (<em>talfilum</em>) <em>talea, -e</em> is a rod",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:42:25.164Z"
+  },
+  "leftover:medecine": {
+    "text": "We need a generic \"medicine\" qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:43:07.293Z"
+  },
+  "leftover:top": {
+    "text": "Obviously a qualifier for `brush`: does Jenks supply a meaning?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:44:55.791Z"
+  },
+  "leftover:shepys": {
+    "text": "Needs to be a \"for sheep\" qualifier on \"bell\"",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:46:49.599Z"
+  },
+  "leftover:pydfish": {
+    "text": "Jenks says \"obviously a kind of salt fish, but the precise meaning is unknown\": needs a new concept",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:48:51.622Z"
+  },
+  "leftover:litteris": {
+    "text": "Of \"boxes cum ...\" Jenks says:\n<p>— <em>cum litteris</em> with letters inside? or merely a letter-box?\n210</p>\n\nThe other example should simply be masked.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T10:50:08.214Z"
+  },
+  "leftover:lapidibus": {
+    "text": "\"cum lapidibus\" should be a qualifier on `ring` in the sense of finger ring:\n\n<p><em>ryng, -es, coper, cum lapidibus</em> copper ring, set with\nstones, for the adornment of the finger 71, 73</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:05:16.933Z"
+  },
+  "leftover:chambres": {
+    "text": "I think we have a qualifier covering this already but I cannot find it",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:07:35.287Z"
+  },
+  "leftover:horsemen": {
+    "text": "Occupational qualifier needed",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:08:10.147Z"
+  },
+  "leftover:employ": {
+    "text": "Compound qualifier with \"Holande\":\n\n<em>in Holande employ</em> folded in the Holland\nmanner (OED s.v. ploy n.<sup>1</sup>) 266",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:10:10.099Z"
+  },
+  "leftover:nigratorum": {
+    "text": "Is this a special form of blackening that requires a qualifier distinct from `black`?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:12:08.252Z"
+  },
+  "leftover:alkamyn": {
+    "text": "I thought we had an `alchemy` qualifier - we need it here:\n\n<p><em>spone, -s de alkamyn (spon, -ys)</em> alchemy: a substance\nproduced by alchemy; specifi­cally any of various metal alloys made in\nimitation of gold or resembling it in color, as varieties of brass or\nlatten, sometimes containing arsenic compounds (OED s.v. alchemy 2),\nespecially quote of 1773: J. Buchanan in J. Milton <em>Paradise\nLost</em> (new ed.) 128 (<em>note</em>) Alchemy is a mixture of metals\nof which spoons, &amp;c. are made 50, 116</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:13:09.848Z"
+  },
+  "leftover:di": {
+    "text": "In the first example, \"di'\" needs to be caught by the numerical parser. The other cannot be determined because of illegible context.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:15:10.061Z"
+  },
+  "leftover:rubbing": {
+    "text": "I thought we had a qualifier for this already - see what there is and add only if necessary.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:16:01.395Z"
+  },
+  "leftover:hawk": {
+    "text": "We need a basic \"hawk\" concept in addition to the `tiercel` and `gyrfalcon` concepts",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:17:45.968Z"
+  },
+  "leftover:goldesmythes": {
+    "text": "Occupational qualifier needed",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:18:09.589Z"
+  },
+  "leftover:magni": {
+    "text": "But note that it should be masked only in this context, and not generally.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:47:19.684Z"
+  },
+  "leftover:lowng": {
+    "text": "This is sometimes the `long` qualifier, but at other times has to serve as a short form of `long cloth`.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:48:20.933Z"
+  },
+  "leftover:preyst": {
+    "text": "Again, mask only in this context, not when required as a qualifier",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:48:51.853Z"
+  },
+  "leftover:lounge": {
+    "text": "This is sometimes the `long` qualifier, but at other times has to serve as a short form of `long cloth` (as with `lowng`).",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:49:20.027Z"
+  },
+  "leftover:merchandisis": {
+    "text": "I think we have a particular way of dealing with \"diversis merchandisis\"?",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:51:59.707Z"
+  },
+  "leftover:vinivasconie": {
+    "text": "This seems to be a clear transcription or processing error: edit surgically the affected extracted cargos to cause minimum disturbance (delete the redundant conflated duplicate \"viniVasconie\")",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:54:35.986Z"
+  },
+  "leftover:eagre": {
+    "text": "Could this be harmlessly resolved by adding the form \"eagre\" to `vinegar` and a qualifier \"bastard\", to satisfy Jenks:\n\n<p><em>bastard, eagre</em> vinegar made of bastard wine (q.v.) 8, 9</p>",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T11:57:37.062Z"
+  },
+  "leftover:dryfysshe": {
+    "text": "Not indexed by Jenks: needs a new concept absorbing `fish`>`dried` too",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T12:09:05.218Z"
+  },
+  "leftover:gommes": {
+    "text": "When followed by `nedles`, Jenks says:\n\n<p><em>gomme, -s nedles</em> (<em>gummes;</em> <em>acuum</em>) mean­ing\nunknown 22, 26, 43, 66, 81, 83</p>\n\nDo you have any suggestion for `gommes acuum`?\n\nMight `gommes` be a packing unit? Discuss options before committing to anything here.",
+    "reviewer": "docuracy",
+    "updated": "2026-06-30T12:12:49.473Z"
+  },
+  "cade_3": {
+    "text": "Merge with \"cade\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-15T15:53:30.408Z"
+  },
+  "copper auri": {
+    "text": "Merge with \"copper gold\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-15T16:43:30.465Z"
+  },
+  "cordkappus": {
+    "text": "Merge with \"cordecappe\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-15T16:48:04.611Z"
+  },
+  "hainault cloth": {
+    "text": "Merge with \"Hainaut\"",
+    "reviewer": "anonymous",
+    "updated": "2026-07-16T15:04:36.121Z",
+    "modes": [
+      "Merge with another concept"
+    ]
+  },
+  "pennartiphis": {
+    "text": "Merge with \"penartifices\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T16:21:30.875Z",
+    "modes": [
+      "Merge with another concept"
+    ]
+  },
+  "poppelotes": {
+    "text": "Merge with \"papelot\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T16:36:51.429Z"
+  },
+  "redgray": {
+    "text": "Merge with \"redewerk\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T16:56:26.080Z",
+    "modes": [
+      "Merge with another concept"
+    ]
+  },
+  "rippa": {
+    "text": "Merge with \"rip\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T18:43:45.314Z",
+    "modes": [
+      "Merge with another concept"
+    ]
+  },
+  "sopp box": {
+    "text": "Merge with \"soap box\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T21:39:05.100Z"
+  },
+  "stryng": {
+    "text": "Merge with \"streng\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T21:56:29.473Z"
+  },
+  "turputte": {
+    "text": "Merge with \"turputte\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T23:35:09.128Z"
+  },
+  "tynsalt": {
+    "text": "Merge with \"salt cellar\"",
+    "modes": [
+      "Merge with another concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-07-17T23:35:59.988Z"
+  },
+  "rawqual:al": {
+    "text": "Not a qualifier - marker of alien status in the vast majority of cases. Remove.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:23:48.043Z",
+    "modes": [
+      "Not a qualifier — remove"
+    ]
+  },
+  "rawqual:alabastre|de alabastre|cum imaginibus de alabastre": {
+    "memo": "Check the context here. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:27:52.537Z"
+  },
+  "rawqual:albez": {
+    "memo": "Check context here. The two examples seem to be unrelated. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:29:32.339Z"
+  },
+  "rawqual:ales": {
+    "memo": "Context unknown here. Check meaning. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:30:16.871Z"
+  },
+  "rawqual:alisaundre": {
+    "memo": "\"borde alisaundre\" / \"alexander\" etc. Should be promoted to a concept: http://lexissearch.arts.manchester.ac.uk/entry.aspx?id=518 EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:32:12.714Z"
+  },
+  "rawqual:alles": {
+    "memo": "\"alle\" here should be part of \"awl blades\" concept. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:36:44.300Z"
+  },
+  "rawqual:allesecre": {
+    "memo": "Check context here. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:36:56.804Z"
+  },
+  "qual:almyn": {
+    "text": "Merge with \"Almain\" - i.e. German.",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:38:37.702Z"
+  },
+  "rawqual:alexandre": {
+    "memo": "\"borde alisaundre\" / \"alexander\" etc. Should be promoted to a concept: http://lexissearch.arts.manchester.ac.uk/entry.aspx?id=518 EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:39:02.761Z"
+  },
+  "rawqual:alyssaunder": {
+    "memo": "\"borde alisaundre\" / \"alexander\" etc. Should be promoted to a concept: http://lexissearch.arts.manchester.ac.uk/entry.aspx?id=518 EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:39:06.156Z"
+  },
+  "rawqual:amaille": {
+    "memo": "Check for concept here. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:39:24.296Z"
+  },
+  "rawqual:amber": {
+    "memo": "Most of these should be amber as a concept rather than a qualifier. Amber as a qualifier should be for amber beads etc. 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:40:05.053Z"
+  },
+  "rawqual:ames": {
+    "memo": "One one level this should be a concept - weight/measure - \"aume\"for Rhenish wine. Ames iron seems to be an unknown qualifier. Jenks is not able to identify it. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:45:28.913Z"
+  },
+  "rawqual:amis": {
+    "memo": "One one level this should be a concept - weight/measure - \"aume\"for Rhenish wine. Ames iron seems to be an unknown qualifier. Jenks is not able to identify it. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:45:32.995Z"
+  },
+  "rawqual:amylle": {
+    "memo": "\"amylle\" will need to be merged into existing concept. \"amylle buttons\" unknown. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:47:04.827Z"
+  },
+  "rawqual:anglia": {
+    "memo": "\"in Anglia\" needs to be removed as administrative text. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:47:46.246Z",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "text": "\"in Anglia\" not a qualifier - remove."
+  },
+  "rawqual:anguillarum": {
+    "memo": "This needs to be merged with the concept anguillarum. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:48:13.523Z"
+  },
+  "rawqual:aperte|apertum|appertum|venicie apertum|venicie apertum mesane": {
+    "memo": "Will need merging with \"aperti\" - connected to silk. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:50:34.736Z"
+  },
+  "rawqual:apron": {
+    "memo": "Check context - not sure what \"apron caps\" are. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:53:21.663Z"
+  },
+  "rawqual:argent": {
+    "memo": "Should be promoted and merged with relevant concepts. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T11:56:28.802Z"
+  },
+  "rawqual:awmes": {
+    "memo": "Not a qualifier - should be merged into the \"aume\" weight and measure for Rhenish wine. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:06:38.074Z"
+  },
+  "rawqual:bacon": {
+    "memo": "\"Johanne Bacon\" etc. will need to be removed as a qualifier - name confusion. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:07:57.172Z"
+  },
+  "rawqual:bacone": {
+    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:08:43.717Z"
+  },
+  "rawqual:baconis": {
+    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:08:55.288Z"
+  },
+  "rawqual:bacun": {
+    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:09:04.837Z"
+  },
+  "rawqual:bagg": {
+    "memo": "\"Bag\" not a qualifier in any of the examples given here. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:09:39.658Z"
+  },
+  "rawqual:balies": {
+    "memo": "Will need checking. Meaning unclear. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:12:40.632Z"
+  },
+  "rawqual:ballokes": {
+    "memo": "\"bever ballokes\" should be a multi-compartment concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:13:34.948Z"
+  },
+  "rawqual:bamme": {
+    "memo": "Clearly a qualifier of canvas but meaning unknown according to Jenks. Only seen once in 1513: Lading ID 4-10-B-0575",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:17:26.981Z"
+  },
+  "rawqual:band": {
+    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:19:17.677Z"
+  },
+  "rawqual:bande": {
+    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:20:13.840Z"
+  },
+  "rawqual:banker": {
+    "memo": "Should be merged into \"banker cloths\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:20:36.029Z"
+  },
+  "rawqual:barellis": {
+    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:23:13.535Z"
+  },
+  "rawqual:barges": {
+    "memo": "\"coopers barges\" are one of the unknown concepts. These will need to be merged into that unknown concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:25:07.281Z"
+  },
+  "rawqual:barrelles": {
+    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:27:16.518Z"
+  },
+  "rawqual:barrels": {
+    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:27:19.694Z"
+  },
+  "rawqual:basiliconis": {
+    "memo": "\"seminis basiliconis\" will need merging into the basil seed concept. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:30:02.465Z"
+  },
+  "rawqual:bast ropes": {
+    "memo": "\"bast ropes\" - concept not qualifier EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:31:33.013Z"
+  },
+  "rawqual:bast|baste": {
+    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:44:21.477Z"
+  },
+  "rawqual:bast|de baste": {
+    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:44:25.760Z"
+  },
+  "rawqual:auter|awter|pro alter|pro altare|de ligno pro altare|depicta pro uno altari": {
+    "memo": "Will need sifting/connecting to \"altar\" as a qualifier. See other issue for the complications of this. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:45:28.577Z"
+  },
+  "rawqual:alias douglas": {
+    "memo": "Clearly a qualifier of a type of cloth. But context will need checking. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:46:30.376Z"
+  },
+  "rawqual:batry": {
+    "memo": "Battery should almost certainly not be a qualifier here. Also \"buttri\" should be decoupled and merged with \"butter/buttery\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:51:05.583Z"
+  },
+  "rawqual:beate marie|de beata maria|de sancta maria": {
+    "memo": "See Github issue - will need sifting and merging with \"beate marie.\" EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:53:54.560Z"
+  },
+  "rawqual:bed": {
+    "memo": "Some of these will need sifting as concepts. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:55:08.064Z"
+  },
+  "rawqual:bedde": {
+    "memo": "Should be variant of \"beads\" \"cole bedez\" etc. Will need sifting and merging. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T12:55:36.815Z"
+  },
+  "rawqual:belle": {
+    "memo": "Most of these should be removed as names rather than qualifiers. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:00:21.384Z"
+  },
+  "rawqual:ber": {
+    "memo": "Most of these should either be removed as \"beer\" or \"pillowbeers\" EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:05:55.599Z"
+  },
+  "rawqual:bere": {
+    "memo": "\"grayne berres\" will need promoting to a concept as berries of grano",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:07:04.422Z"
+  },
+  "rawqual:bere cruses": {
+    "memo": "Should be removed and promoted to a new concept. Or as a composite qualifier of \"cruse\" ? EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:08:00.287Z"
+  },
+  "qual:berfflete": {
+    "text": "Merge with Berflete",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:08:29.651Z"
+  },
+  "qual:bilbao 2": {
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:12:24.391Z"
+  },
+  "rawqual:bever|bevere|de bever": {
+    "memo": "Will need sifting and merging into the beaver qualifier where appropriate. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:16:53.518Z"
+  },
+  "rawqual:bever|bevere|parvum bever|de pellibus bevere vetere": {
+    "memo": "Will need sifting and merging into the beaver qualifier where appropriate. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:17:04.637Z"
+  },
+  "rawqual:bier": {
+    "memo": "Most of these will need merging into the beer concept. EB 12/08/2026. The attestation to \"sugar\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:18:02.999Z"
+  },
+  "rawqual:bisor": {
+    "memo": "This should be promote to an unknown concept \"cark bisor\" EB 12/08/2026. Only appears in one cargo in 1553. Lading ID 4-24-B-0001",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:22:30.279Z",
+    "modes": [
+      "Promote to standalone concept"
+    ],
+    "text": "Promote \"cark bisor\" to standalone concept."
+  },
+  "rawqual:bittes": {
+    "memo": "These should be merged into the \"bridle bits\" concept?",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:23:03.236Z"
+  },
+  "qual:blekid": {
+    "text": "Merge with \"bleked\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:23:55.510Z",
+    "modes": [
+      "Merge with another qualifier"
+    ]
+  },
+  "rawqual:bokon": {
+    "memo": "Should me merged with all the different bacons - \"bokon\" Should also not be a qualifier. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:25:07.372Z"
+  },
+  "rawqual:blanket|blanckett|de blanket": {
+    "memo": "These should be sifted and merged where appropriate. May also be a qualifier in specific places. Create qualifier \"of blanket\"? EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:30:19.839Z"
+  },
+  "rawqual:boge shankes": {
+    "memo": "\"budge shanks\" should be a standalone concept. To then be connected with related concept: budge EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:33:35.209Z",
+    "modes": [
+      "Promote to standalone concept"
+    ],
+    "text": "Promote to standalone concept \"budge shanks\""
+  },
+  "rawqual:boge|bogee|bogy|boge parvum|de boge parvum|bogye pellium|bogye pellium parvus|cours bogy|cours bogye|bogy peces|boge shankes": {
+    "memo": "These will need some substantial merging and shifting. Some have embedded qualifiers. All the variations of budge. Budge can also be a qualifier but will need more detailed sifting. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:35:06.268Z"
+  },
+  "rawqual:bokeram": {
+    "memo": "Most of these will need merging with \"bokerams\" and promoting into the \"buckram\" concept. Then a qualifier of buckram for a qualifier of hats, curtains etc. can be created. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:36:35.826Z"
+  },
+  "rawqual:bokerams": {
+    "memo": "These will need merging with \"bokerams\" and promoting into the \"buckram\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:37:05.860Z"
+  },
+  "rawqual:bokes": {
+    "memo": "The example here is an example of buck skin \"bukes pellibus\" EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:37:54.562Z"
+  },
+  "rawqual:bollard": {
+    "memo": "The bollard as commodity will need promoting into the concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:38:22.501Z"
+  },
+  "qual:bollen": {
+    "text": "Merge with Bologna.",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:39:28.751Z"
+  },
+  "rawqual:bond": {
+    "memo": "Many of these are merchant names erroneously being caught up as qualifiers. The attestation to \"last\" will concern the train oil issue discussed above. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:41:37.213Z"
+  },
+  "rawqual:bondes pro hattes": {
+    "memo": "\"Cap bands for hats\" should be merged into the hat-band variant as a synonym or at least a highly related concept. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:46:22.627Z"
+  },
+  "rawqual:bonette": {
+    "memo": "Unclear whether this is a concept or qualifier. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:47:57.773Z"
+  },
+  "rawqual:bordes": {
+    "memo": "Most of these are part of composite concepts and not qualifiers. Will need sifting and merging where appropriate. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:52:02.261Z"
+  },
+  "rawqual:borde": {
+    "memo": "See above \"bord\" problem EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:52:25.590Z"
+  },
+  "rawqual:borne": {
+    "memo": "Unknown here. Check context. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:52:51.483Z"
+  },
+  "rawqual:botelle|bottel|botels": {
+    "memo": "Unclear whether these should be qualifiers or part of composite concepts. Will need checking. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:53:37.408Z"
+  },
+  "rawqual:brede": {
+    "memo": "These should be merged into the \"ginger bread\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T13:57:46.522Z"
+  },
+  "qual:bullene": {
+    "text": "Merge with \"Bologna\"",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:07:16.163Z"
+  },
+  "rawqual:bretten|brettyn|britten|brittene|britayne": {
+    "memo": "Will need sifting and merging with the Brittany qualifier EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:08:39.968Z"
+  },
+  "rawqual:bocles": {
+    "memo": "Should be merged into \"buckle\" concept with breechgirdle concept? EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:31:03.351Z"
+  },
+  "rawqual:bogy heddes": {
+    "memo": "See above for problems with budge. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:32:33.916Z"
+  },
+  "rawqual:bowstaves": {
+    "memo": "These should be merged into the bowstave concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:33:19.024Z"
+  },
+  "rawqual:bounden": {
+    "memo": "Clearly an iron pan of some sort but exact meaning unknown. Imported by London Ironmonger Robert Byfeld. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:35:25.065Z"
+  },
+  "rawqual:bourde": {
+    "memo": "Probably remove as a qualifier as a component of \"deal boards.\" EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:39:21.396Z",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "text": "Not a qualifier remove."
+  },
+  "rawqual:box|sebuttes|sepboxis|sopebuttes": {
+    "memo": "Most of these will need sifting and merging as examples of the soap box concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:40:38.898Z"
+  },
+  "rawqual:breme": {
+    "text": "Promote to standalone concept: bream",
+    "modes": [
+      "Promote to standalone concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:48:41.578Z"
+  },
+  "rawqual:bridelles": {
+    "memo": "Most of these will need merging with \"bridle boss\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:54:42.782Z"
+  },
+  "rawqual:bridile": {
+    "memo": "Most of these will need merging with \"bridle boss\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:55:42.525Z"
+  },
+  "rawqual:bridille": {
+    "memo": "Most of these will need merging with \"bridle boss\" or \"bridle bits\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:55:56.954Z"
+  },
+  "rawqual:brik": {
+    "text": "Not a qualifier - remove and merge with concept \"brick\"",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:56:52.344Z"
+  },
+  "rawqual:broch|broches": {
+    "memo": "Most of these will need merging with brooch (particularly given the latten connection). EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:58:50.315Z"
+  },
+  "rawqual:brode ryssyll": {
+    "memo": "Will need separating into two separate qualifiers - \"brode\" will need merging with \"broad\" and Ryssyll will need merging with \"Lille\". EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T15:01:34.779Z"
+  },
+  "rawqual:broderd|brodred": {
+    "memo": "Will need sifting and merging into \"embroidered\" qualifier. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T15:02:03.006Z"
+  },
+  "rawqual:brydylle": {
+    "memo": "Will need merging with the \"bridle bit\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T15:03:51.071Z"
+  },
+  "rawqual:brysell": {
+    "memo": "Why is \"bridel\" caught up here - should be moved to \"bridle boss\" concept. Otherwise merge with \"Brussels\" EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T15:05:27.836Z"
+  },
+  "rawqual:brystylles": {
+    "memo": "These should removed and merged with the \"bristles\" concept. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:10:19.736Z"
+  },
+  "rawqual:budge": {
+    "memo": "See problems with budge/bodge etc above. Concept/qualifier set that will need major sifting. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:11:05.435Z"
+  },
+  "rawqual:burde": {
+    "memo": "Another example of the \"deal board\" issue. William \"Burde\" will also need removing. 60 pieces of burde is probably a type of cloth. EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:13:08.698Z"
+  },
+  "rawqual:burdes": {
+    "memo": "Merge into the deal board /deal concept. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:13:25.489Z"
+  },
+  "rawqual:button": {
+    "text": "Not a qualifier - remove.",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:15:35.760Z"
+  },
+  "rawqual:cace": {
+    "memo": "Most of these are examples of cases - i.e. objects and concepts in their own right and will need removing. EB 12/08/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:16:04.171Z"
+  },
+  "rawqual:cheyne": {
+    "text": "Not a qualifier - remove.",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:25:19.967Z"
+  },
+  "qual:cased": {
+    "text": "",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:26:07.460Z"
+  },
+  "qual:cappers": {
+    "text": "Merge with cap.",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:28:17.462Z"
+  },
+  "rawqual:bugle|bewge|de bugle": {
+    "memo": "Check whether these should be merged into \"bugle\" as a qualifier of bead or bugle as a concept (i.e. horn.) EB 12/08/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:29:18.058Z"
+  },
+  "baner": {
+    "text": "Merge with \"banner\".",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T16:46:49.768Z"
+  }
+}

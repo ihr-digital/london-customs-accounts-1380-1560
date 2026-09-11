@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Name Clusters — London Customs Accounts</title>
+    <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/fontawesome.min.css"/>
+    <link rel="stylesheet" href="css/libs/solid.min.css"/>
+    <link href="css/glossary-public.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        h1 { font-family: unset; }
+        /* ---- layout ---- */
+        .name-clusters-page { font-size: 14px; }
+        .main-row { height: calc(100vh - 160px); min-height: 500px; }
+        .left-panel { overflow-y: auto; border-right: 1px solid #dee2e6; padding-right: 0; }
+        .right-panel { overflow-y: auto; }
+
+        /* ---- filter bar ---- */
+        .filter-bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; padding: 8px 12px; background: #f8f9fa; border-radius: 4px; border: 1px solid #dee2e6; }
+        .filter-bar .form-control, .filter-bar .form-select { max-width: 200px; font-size: .85em; }
+        .filter-bar label { font-size: .8em; margin-bottom: 0; color: #555; }
+
+        /* ---- person list ---- */
+        .person-item { padding: 6px 10px; border-bottom: 1px solid #eee; cursor: pointer; transition: background .1s; }
+        .person-item:hover { background: #f0f4f8; }
+        .person-item.selected { background: #e3ecf6; border-left: 3px solid var(--bs-primary); }
+        .person-name { font-weight: 600; font-size: .9em; }
+        .person-meta { font-size: .78em; color: #666; }
+        .status-badge { font-size: .7em; padding: 1px 5px; border-radius: 3px; }
+        .status-alienigena { background: #fadbd8; color: #922b21; }
+        .status-indigena { background: #d5f5e3; color: #1e8449; }
+        .status-master { background: #d4e6f1; color: #1a5276; }
+        .status-mercatore { background: #fdebd0; color: #935116; }
+        .status-Hans { background: #e8daef; color: #6c3483; }
+        .status-milite { background: #d6dbdf; color: #2c3e50; }
+        .status-factore { background: #f9e79f; color: #7d6608; }
+        .status-juniore { background: #d1f2eb; color: #0e6655; }
+        .status-seniore { background: #f5cba7; color: #784212; }
+        .status-patrono { background: #d7bde2; color: #512e5f; }
+
+        /* ---- right panel sections ---- */
+        .detail-section { margin-bottom: 16px; }
+        .detail-header { font-size: 1.2rem; font-weight: 700; }
+        .detail-subhead { font-size: .85rem; color: #666; margin-bottom: 8px; }
+        .section-title { font-size: .85em; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; border-bottom: 1px solid #eee; padding-bottom: 3px; }
+
+        /* ---- candidate matches ---- */
+        .candidate-card { padding: 8px 10px; margin-bottom: 4px; background: #fafafa; border: 1px solid #eee; border-radius: 4px; cursor: pointer; transition: all .1s; }
+        .candidate-card:hover { background: #f0f4f8; border-color: #bbb; }
+        .candidate-card.same-person { border-left: 3px solid #27ae60; background: #f0faf4; }
+        .candidate-name { font-weight: 600; font-size: .88em; }
+        .candidate-meta { font-size: .76em; color: #666; }
+
+        /* ---- signal meters ---- */
+        .signal-meter { display: inline-block; width: 40px; height: 6px; background: #eee; border-radius: 3px; overflow: hidden; vertical-align: middle; }
+        .signal-meter-fill { display: block; height: 100%; border-radius: 3px; }
+        .signal-meter-fill.green  { background: #27ae60; }
+        .signal-meter-fill.yellow { background: #f39c12; }
+        .signal-meter-fill.red    { background: #e74c3c; }
+        .signal-label { font-size: .7em; color: #888; margin-right: 2px; }
+        .signals-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: .8em; }
+        .signal-group { display: flex; align-items: center; gap: 2px; }
+
+        /* ---- mini-timeline ---- */
+        .mini-timeline { width: 100%; background: #fafafa; border: 1px solid #dee2e6; border-radius: 4px; }
+        .axis-year line, .axis-year path { stroke: #ccc; }
+        .axis-year text { font-size: 10px; fill: #666; }
+
+        /* ---- summary cards ---- */
+        .stat-card { text-align: center; }
+        .stat-card .stat-num { font-size: 1.4rem; font-weight: 700; color: var(--bs-primary); }
+        .stat-card .stat-label { font-size: .78rem; color: #666; }
+
+        /* ---- tooltip ---- */
+        .viz-tooltip {
+            position: absolute; pointer-events: none; background: rgba(0,0,0,.85);
+            color: #fff; padding: 6px 10px; border-radius: 4px; font-size: .82em;
+            max-width: 400px; z-index: 1000; opacity: 0; transition: opacity .12s;
+            line-height: 1.4;
+        }
+        .viz-tooltip.show { opacity: 1; }
+
+        /* ---- no candidates ---- */
+        .empty-state { color: #999; text-align: center; padding: 40px 20px; }
+        .empty-state i { font-size: 2rem; margin-bottom: 8px; display: block; color: #ccc; }
+
+        /* ---- year-overlap indicator ---- */
+        .yr-overlap { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 3px; }
+        .yr-overlap.yes { background: #27ae60; }
+        .yr-overlap.no { background: #e74c3c; }
+        .yr-overlap.partial { background: #f39c12; }
+
+        /* ---- tabs ---- */
+        .nav-tabs .nav-link { font-size: .85rem; }
+        .tab-pane { padding-top: 12px; }
+
+        /* ---- overview charts ---- */
+        .chart-container { width: 100%; height: 360px; overflow: hidden; }
+        .chart-container svg { width: 100%; }
+        .bar-label { font-size: 10px; fill: #555; }
+        .chart-title { font-size: .95rem; font-weight: 700; color: #333; margin-bottom: 6px; }
+        .cluster-list-item { padding: 4px 8px; border-bottom: 1px solid #eee; font-size: .84em; cursor: pointer; }
+        .cluster-list-item:hover { background: #f0f4f8; }
+        .cluster-list-item .canon { font-weight: 600; }
+        .cluster-list-item .count { color: #888; }
+
+        /* ---- search clear buttons ---- */
+        .search-wrap { position: relative; display: inline-block; }
+        .search-wrap .form-control { padding-right: 24px; }
+        .search-clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); border: none; background: none; color: #999; cursor: pointer; font-size: .8em; line-height: 1; padding: 2px 4px; display: none; }
+        .search-clear:hover { color: #333; }
+        .search-clear.visible { display: block; }
+
+        /* ---- header tweaks ---- */
+        .header-actions .main-site-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: #edf2f7;
+            color: #1a202c;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background .2s ease;
+        }
+        .header-actions .main-site-link:hover { background: #e2e8f0; color: #1a202c; }
+    </style>
+</head>
+<body class="name-clusters-page">
+<div class="container">
+    <header>
+        <div class="header-content">
+            <div class="header-main">
+                <h1>
+                    <img src="favicon.ico" alt="" class="h1-favicon" width="32" height="32">
+                    Name Cluster Explorer
+                </h1>
+                <p class="subtitle">London Customs Accounts, 1380–1560</p>
+                <p class="attribution">Candidate reconciliation workspace for masters and merchants</p>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="main-site-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Main site
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="glossary-content">
+
+        <!-- Summary stats -->
+        <div class="row g-2 mb-2" id="summaryStats"></div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-0" id="mainTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab-explorer" data-bs-toggle="tab" data-bs-target="#pane-explorer" type="button" role="tab">
+                    <i class="fas fa-search"></i> Candidate Explorer
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-overview" data-bs-toggle="tab" data-bs-target="#pane-overview" type="button" role="tab">
+                    <i class="fas fa-chart-bar"></i> Cluster Overview
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+
+        <!-- ========== TAB 1: Candidate Explorer ========== -->
+        <div class="tab-pane fade show active" id="pane-explorer" role="tabpanel">
+        <div class="row main-row g-0">
+            <!-- Left panel: Person list + filters -->
+            <div class="col-md-4 col-lg-3 left-panel">
+                <div class="filter-bar">
+                    <span class="search-wrap">
+                        <input type="text" class="form-control form-control-sm" id="searchBox"
+                               placeholder="Search names…">
+                        <button type="button" class="search-clear" data-target="searchBox">&times;</button>
+                    </span>
+                    <select class="form-select form-select-sm" id="fnGroupFilter">
+                        <option value="">All forename groups</option>
+                    </select>
+                    <select class="form-select form-select-sm" id="statusFilter">
+                        <option value="">All statuses</option>
+                        <option value="alienigena">alienigena</option>
+                        <option value="factore">factore</option>
+                        <option value="Hans">Hans</option>
+                        <option value="indigena">indigena</option>
+                        <option value="juniore">juniore</option>
+                        <option value="master">master</option>
+                        <option value="mercatore">mercatore</option>
+                        <option value="milite">milite</option>
+                        <option value="patrono">patrono</option>
+                        <option value="seniore">seniore</option>
+                    </select>
+                    <div class="d-flex align-items-center gap-1 w-100">
+                        <label>Year:</label>
+                        <input type="number" class="form-control form-control-sm" id="yearMin"
+                               style="max-width:70px;" placeholder="1380" min="1380" max="1560">
+                        <span>–</span>
+                        <input type="number" class="form-control form-control-sm" id="yearMax"
+                               style="max-width:70px;" placeholder="1560" min="1380" max="1560">
+                    </div>
+                    <span class="text-muted small" id="listCount"></span>
+                </div>
+                <div id="personList"></div>
+            </div>
+
+            <!-- Right panel: Candidate matches + detail -->
+            <div class="col-md-8 col-lg-9 right-panel px-3">
+                <div id="detailPanel">
+                    <div class="empty-state" id="emptyState">
+                        <i class="fas fa-search"></i>
+                        Select a person from the list to see candidate matches
+                    </div>
+                    <div id="detailContent" style="display:none;">
+                        <!-- Selected person header -->
+                        <div class="detail-section">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="detail-header" id="detailName"></span>
+                                <span id="detailStatusBadge"></span>
+                            </div>
+                            <div class="detail-subhead" id="detailMeta"></div>
+                        </div>
+
+                        <!-- Candidate matches -->
+                        <div class="detail-section">
+                            <div class="section-title">
+                                Candidate Matches
+                                <span class="fw-normal text-muted" id="candidateCount"></span>
+                            </div>
+                            <div id="candidateList" style="max-height:360px; overflow-y:auto;"></div>
+                        </div>
+
+                        <!-- Timeline for selected person + highlighted candidate -->
+                        <div class="detail-section">
+                            <div class="section-title">Timeline</div>
+                            <svg id="detailTimeline" class="mini-timeline" height="200"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- ========== TAB 2: Cluster Overview ========== -->
+        <div class="tab-pane fade" id="pane-overview" role="tabpanel">
+            <div class="row g-3">
+                <!-- Forename groups chart -->
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <div class="chart-title">Forename Group Sizes <span class="text-muted fw-normal" id="fnChartSubtitle"></span></div>
+                        <div class="chart-container" id="fnChartContainer"></div>
+                        <div class="mt-2">
+                            <span class="search-wrap" style="width:100%;">
+                                <input type="text" class="form-control form-control-sm" id="fnClusterSearch" placeholder="Search forename groups…">
+                                <button type="button" class="search-clear" data-target="fnClusterSearch">&times;</button>
+                            </span>
+                        </div>
+                        <div id="fnClusterList" style="max-height:300px; overflow-y:auto; margin-top:8px;"></div>
+                    </div>
+                </div>
+                <!-- Surname neighbour-count chart -->
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <div class="chart-title">Surname Neighbour Counts <span class="text-muted fw-normal" id="snChartSubtitle"></span></div>
+                        <div class="chart-container" id="snChartContainer"></div>
+                        <div class="mt-2">
+                            <span class="search-wrap" style="width:100%;">
+                                <input type="text" class="form-control form-control-sm" id="snClusterSearch" placeholder="Search surnames…">
+                                <button type="button" class="search-clear" data-target="snClusterSearch">&times;</button>
+                            </span>
+                        </div>
+                        <div id="snClusterList" style="max-height:300px; overflow-y:auto; margin-top:8px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div><!-- /tab-content -->
+
+        <!-- Shared tooltip -->
+        <div class="viz-tooltip" id="vizTooltip"></div>
+
+    </main>
+</div>
+
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/bootstrap.bundle.min.js"></script>
+<script src="js/libs/d3.v7.min.js"></script>
+<script src="js/name-clusters.js"></script>
+</body>
+</html>
+

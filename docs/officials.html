@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Customs Officials 1356-1565</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/officials.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="favicon.ico" class="logo" alt="favicon">
+            <div>
+                <h1>London Customs Officials</h1>
+                <div class="subtitle">1356–1565</div>
+                <div class="credit">Data compiled by Eliot Benbow</div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <label for="searchInput" class="sr-only">Search all fields</label>
+                <input type="text" id="searchInput" placeholder="Search all fields...">
+            </div>
+            <div class="filter-group">
+                <label for="customTypeFilter" class="sr-only">Filter by custom type</label>
+                 <select id="customTypeFilter" class="filter-select">
+                     <option value="">All Custom Types</option>
+                 </select>
+                <label for="roleFilter" class="sr-only">Filter by role</label>
+                 <select id="roleFilter" class="filter-select">
+                     <option value="">All Roles</option>
+                 </select>
+            </div>
+
+            <div style="margin-left: auto; display:flex; gap:8px; align-items:center;">
+                <div class="record-count">
+                    Showing <span id="visibleCount">0</span> of <span id="totalCount">0</span> records
+                </div>
+                <button id="export-btn" class="btn btn-primary" title="Export current table as JSON">
+                    Export JSON
+                </button>
+                <button id="export-csv-btn" class="btn btn-primary" title="Export current table as CSV">
+                    Export CSV
+                </button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <div class="table-container">
+                <table id="dataTable">
+                    <thead>
+                        <tr id="headerRow"></tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            <div class="no-results" id="noResults">No results found</div>
+        </div>
+
+        <!-- Sources modal: show removed columns for a row -->
+        <div id="sources-modal" class="modal" style="display:none; position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;z-index:3000;">
+            <div style="background:white;padding:16px;border-radius:8px;min-width:340px;max-width:640px;box-shadow:0 12px 40px rgba(2,6,23,0.25);">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+                    <h3 id="sources-modal-title" style="margin:0;font-size:16px">Sources</h3>
+                    <button id="sources-modal-close" class="btn btn-ghost" aria-label="Close sources modal">Close</button>
+                </div>
+                <div id="sources-modal-content" style="max-height:60vh;overflow:auto;padding-top:6px;color:#243b53;font-size:13px;">
+                    <!-- dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/officials.js"></script>
+</body>
+</html>

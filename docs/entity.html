@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLCA Entity</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Design tokens ── */
+        :root {
+            --bg: #faf9f6; --fg: #1a1a1a; --muted: #666; --accent: #2c5f8a;
+            --border: #d4d0c8; --card: #fff; --header-bg: #fff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        /* ── Base typography ── */
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: var(--bg); color: var(--fg);
+            line-height: 1.6; margin: 0;
+        }
+
+        /* ── Site header (shared branding) ── */
+        .site-header {
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--border);
+            padding: .75rem 2rem;
+            display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap;
+        }
+        .site-header h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 1.55rem; margin: 0; line-height: 1.2;
+        }
+        .site-header h1 a { color: inherit; text-decoration: none; }
+        .site-header h1 a:hover { text-decoration: underline; }
+        .site-header .subtitle {
+            font-size: .85rem; color: var(--muted); font-style: italic;
+        }
+        .badge-dev {
+            display: inline-block; background: #ffc107; color: #1a1a1a;
+            font-size: .7rem; font-weight: 700; padding: .15em .5em;
+            border-radius: 3px; vertical-align: middle; position: relative; top: -2px;
+            font-style: normal; font-family: system-ui, sans-serif;
+        }
+
+        /* ── Main content area ── */
+        .main { max-width: 52rem; margin: 0 auto; padding: 1.5rem 2rem 2rem; }
+
+        /* ── Navigation bar (volume + prev/next) ── */
+        .entity-nav {
+            display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+            margin-bottom: 1.25rem; font-size: .85rem;
+        }
+        .entity-nav select {
+            font-family: inherit; font-size: .85rem; padding: .2rem .4rem;
+            border: 1px solid var(--border); border-radius: 3px; background: #fff;
+            color: var(--accent);
+        }
+        .entity-nav .nav-label { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; }
+        .entity-nav a, .entity-nav span.disabled {
+            text-decoration: none; padding: .2rem .6rem; border: 1px solid var(--border);
+            border-radius: 3px; background: #fff; color: var(--accent);
+        }
+        .entity-nav span.disabled { color: #bbb; cursor: default; }
+        .entity-nav a:hover { background: #eef3f8; }
+        .entity-nav .nav-spacer { flex: 1; }
+        .entity-nav .nav-pos { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+        /* ── Entity headings & metadata ── */
+        .entity-title {
+            display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+            font-size: 1.5rem; margin-bottom: .75rem;
+        }
+        .entity-title .title-text { white-space: nowrap; }
+        .entity-title .title-pid { font-family: monospace; font-size: .85rem; color: var(--muted); }
+        .entity-title .title-pid a { color: var(--muted); }
+        .entity-title .title-spacer { flex: 1; }
+        .entity-title .title-nav { display: flex; gap: .4rem; font-size: .85rem; white-space: nowrap; }
+        .entity-title .title-nav a, .entity-title .title-nav span.disabled {
+            text-decoration: none; padding: .2rem .6rem; border: 1px solid var(--border);
+            border-radius: 3px; background: #fff; color: var(--accent); font-family: Georgia, serif;
+        }
+        .entity-title .title-nav span.disabled { color: #bbb; cursor: default; }
+        .entity-title .title-nav a:hover { background: #eef3f8; }
+        .pid { font-family: monospace; font-size: .85rem; color: var(--muted); margin-bottom: .75rem; display: block; }
+        .pid a { color: var(--muted); }
+        h2 { font-size: 1.15rem; color: var(--accent); margin: 1.4rem 0 .4rem; border-bottom: 1px solid var(--border); padding-bottom: .15rem; }
+        a { color: var(--accent); }
+
+        .meta-line {
+            display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+            margin: .5rem 0; font-size: .92rem; color: var(--fg);
+        }
+        .meta-line .sep { color: var(--border); }
+        .type-badge {
+            display: inline-block; color: #fff; font-size: .75rem; font-weight: 700;
+            padding: .1em .5em; border-radius: 3px; text-transform: capitalize;
+            font-family: system-ui, sans-serif;
+        }
+        .dir-icon { cursor: default; font-size: .9rem; }
+        .pdf-link { text-decoration: none; font-size: .9rem; }
+        .pdf-link:hover { text-decoration: underline; }
+
+        /* ── Lading label (prominent) ── */
+        .lading-label {
+            font-size: 1.1rem; line-height: 1.55; margin: 1rem 0;
+            padding: .75rem 1rem; background: #f5f3ee; border-left: 3px solid var(--accent);
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* ── Cards ── */
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: .85rem 1.1rem; margin: .5rem 0; }
+        .card-highlight { border-left: 3px solid var(--accent); }
+        .cargo-header { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .35rem; flex-wrap: wrap; }
+        .cargo-num { font-weight: bold; color: var(--accent); font-size: .9rem; }
+        .cargo-merchant { font-weight: 600; }
+        .cargo-pid { font-family: monospace; font-size: .78rem; color: var(--muted); }
+        .cargo-pid a { color: var(--muted); }
+
+        /* ── Cargo text (annotated inline) ── */
+        .cargo-text { margin: .35rem 0; line-height: 1.7; }
+
+        /* ── Offset annotation spans (mirroring styles.css) ── */
+        .anno { border-radius: .2rem; padding: 0 .15rem; transition: background-color .2s ease; cursor: default; }
+        .anno.forename, .anno.surname, .anno.status,
+        .anno.master-forename, .anno.master-surname, .anno.master-status { background: #fce8e6; color: #d93025; }
+        .anno.status, .anno.master-status { font-style: italic; }
+        .anno.inserted { font-style: italic; opacity: .85; }
+        .anno.alias-forename, .anno.alias-surname { background: #fff3e0; color: #f57c00; font-style: italic; }
+        .anno.ship, .anno.ship-type, .anno.summing { background: #ede7f6; color: #5e35b1; }
+        .anno.place { background: #e6f4ea; color: #188038; }
+        .anno.quantity, .anno.quantity_word, .anno.footnote { background: #e8f0fe; color: #0d6efd; }
+        .anno.unit, .anno.mode { background: #e0f7fa; color: #00796b; }
+        .anno.commodity, .anno.commodities { background: #fff3cd; color: #856404; }
+        .anno.commodity-unit { background: #e8f5e9; color: #2e7d32; }
+        .anno.pence, .anno.money { background: #f3e5f5; color: #6a1b9a; }
+        .anno.containing { background: #fff3e0; color: #e65100; }
+        .anno.contained { background: #fce4ec; color: #c2185b; }
+        .anno.weighing { background: #f9fbe7; color: #827717; }
+        .anno.qualifier { background: #f0f4c3; color: #afb42b; }
+        .anno.at { background: #e3f2fd; color: #1976d2; }
+        .anno.and { background: #ede7f6; color: #5e35b1; }
+        .anno:hover { filter: brightness(.93); }
+
+        /* Commodity/unit badges within annotated text — linked */
+        .anno.commodity a, .anno.unit a, .anno.commodity-unit a,
+        .anno.commodities a { color: inherit; text-decoration: none; }
+        .anno.commodity a:hover, .anno.unit a:hover, .anno.commodity-unit a:hover,
+        .anno.commodities a:hover { text-decoration: underline; }
+
+        /* ── Glossary page styles ── */
+        .forms { list-style: none; display: flex; flex-wrap: wrap; gap: .3rem; }
+        .forms li { background: #f0ece4; border-radius: 3px; padding: .1rem .5rem; font-size: .85rem; }
+        .xref { margin-right: .5rem; }
+
+        /* ── Grouping page styles ── */
+        .cat-nav { line-height: 1.9; }
+        .term-list { list-style: none; column-width: 18rem; column-gap: 2rem; margin: .5rem 0; }
+        .term-list li { break-inside: avoid; padding: .2rem 0; border-bottom: 1px solid #eee; }
+        .term-list .term-desc { color: var(--muted); font-size: .85rem; }
+
+        /* ── Utilities ── */
+        #loading { color: var(--muted); font-style: italic; padding: 3rem 2rem; }
+        #error { color: #a33; padding: 1rem 2rem; }
+        .alt-format { margin-top: .5rem; font-size: .82rem; color: var(--muted); }
+        .back { margin-top: 1.5rem; font-size: .9rem; }
+    </style>
+</head>
+<body>
+    <!-- ── Site header (common branding) ── -->
+    <header class="site-header">
+        <h1><a href="index.html">London Customs Accounts, 1380–1560</a></h1>
+        <span class="subtitle">edited by Stuart Jenks
+            <span class="badge-dev">Under Development</span>
+        </span>
+    </header>
+
+    <div class="main">
+        <div id="loading">Loading entity…</div>
+        <div id="error" hidden></div>
+        <div id="content" hidden></div>
+    </div>
+
+    <script src="js/qualifiers.js"></script>
+    <script>
+    const BASE = 'https://w3id.org/mlca';
+    const ROMAN = { '1': 'I', '2': 'II', '3': 'III', '4': 'IV', '5': 'V' };
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const DOW = [null,'Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+    // ── Helpers ──
+
+    function ladingIdToVolume(ladingId) {
+        const p = ladingId.split('-');
+        return (ROMAN[p[0]] || p[0]) + '-' + p[1];
+    }
+
+    function formatDate(iso) {
+        if (!iso) return '—';
+        const [y, m, d] = iso.split('-').map(Number);
+        return `${d} ${MONTHS[m - 1]} ${y}`;
+    }
+
+    function formatDow(num) {
+        return num ? DOW[num] : null;
+    }
+
+    function groupSlug(name) {
+        return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    }
+
+    function escAttr(s) {
+        return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+    function escHtml(s) {
+        return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function parseHash() {
+        const h = decodeURIComponent(location.hash.slice(1));
+        if (!h) return null;
+        if (h.startsWith('group/')) return { type: 'group', slug: h.slice(6) };
+        if (h.startsWith('glossary/')) return { type: 'glossary', key: h.slice(9) };
+        if (/^\d+-\d+-[A-Z]-\d{4}-\d{4}$/.test(h)) {
+            const ladingId = h.slice(0, h.lastIndexOf('-'));
+            return { type: 'cargo', ladingId, cargoSeq: h.slice(h.lastIndexOf('-') + 1), fullId: h };
+        }
+        if (/^\d+-\d+-[A-Z]-\d{4}$/.test(h)) return { type: 'lading', id: h };
+        return null;
+    }
+
+    // ── Data fetching ──
+
+    let _inventoryCache = null;
+
+    async function fetchJson(url) {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        return r.json();
+    }
+
+    // The static host serves .gz files as-is (no Content-Encoding header),
+    // so we drive DecompressionStream ourselves.
+    async function fetchGzJson(url) {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+        const decompressed = r.body.pipeThrough(new DecompressionStream('gzip'));
+        return new Response(decompressed).json();
+    }
+
+    async function fetchLadingVolume(volume) {
+        return fetchGzJson(`data/ladings/${volume}.json.gz`);
+    }
+
+    async function fetchInventory() {
+        if (!_inventoryCache) _inventoryCache = fetchJson('data/inventory.json');
+        return _inventoryCache;
+    }
+
+    async function fetchGlossary() {
+        return fetchGzJson('data/glossary_data.json.gz');
+    }
+
+    // ── PDF link builder ──
+
+    function buildPdfLink(inventoryEntry, page) {
+        if (!inventoryEntry?.pdf_link || page?.pdf_index == null) return null;
+        return `${inventoryEntry.pdf_link}#page=${page.pdf_index + 1}`;
+    }
+
+    // ── Offset-based annotation renderer (vanilla JS port of annotations.js) ──
+
+    function buildAnnotationTooltip(ann, footnotes) {
+        if (ann.type === 'footnote') {
+            return (footnotes || {})[ann.label] || 'No label';
+        }
+        if (ann.type === 'pence') {
+            return (ann.label || '') + ' pence';
+        }
+        if (['commodity','unit','commodity-unit'].includes(ann.type) && ann.matches?.length) {
+            const UNIT_GROUP = 'Units, weights & measures';
+            const grpTerms = new Map();
+            for (const m of ann.matches) {
+                const gs = (m.groups && m.groups.length) ? m.groups : ['(ungrouped)'];
+                for (const g of gs) {
+                    if (!grpTerms.has(g)) grpTerms.set(g, new Set());
+                    grpTerms.get(g).add(m.headword);
+                }
+            }
+            const groups = [];
+            grpTerms.forEach((terms, grouping) => {
+                const arr = [...terms].sort();
+                groups.push({ cats: [grouping], terms: arr, sig: arr.join('|'),
+                              isUnit: grouping === UNIT_GROUP });
+            });
+            // merge groupings with identical term lists
+            const sigMap = new Map();
+            for (const g of groups) {
+                if (sigMap.has(g.sig)) { sigMap.get(g.sig).cats.push(...g.cats); }
+                else { sigMap.set(g.sig, g); }
+            }
+            const merged = [...sigMap.values()];
+            merged.sort((a,b) => a.cats[0].localeCompare(b.cats[0]));
+            let out = merged.map(g => `${g.cats.join(', ')}: ${g.terms.join(', ')}`).join(' · ');
+            if (ann.qualifiers && ann.qualifiers.length) {
+                out += ' · Qualifiers: ' + ann.qualifiers.map(q => {
+                    const c = window.MLCAQualifiers && MLCAQualifiers.getCanonical(q.canonical || q.text);
+                    return (c && c.label) || q.canonical || q.text;
+                }).join(', ');
+            }
+            return out;
+        }
+        return ann.label || ann.type;
+    }
+
+    function applyAnnotations(text, annotations, footnotes) {
+        const seen = new Set();
+        const anns = (annotations || [])
+            .filter(a => a.type !== 'footnote' && a.type !== 'back_reference')
+            .filter(a => typeof a.start === 'number' && typeof a.end === 'number')
+            .filter(a => a.text !== '')
+            .filter(a => {
+                const k = `${a.type}-${a.start}-${a.end}`;
+                if (seen.has(k)) return false;
+                seen.add(k); return true;
+            })
+            .sort((a, b) => b.start - a.start);   // process right-to-left
+
+        let result = text;
+        for (const a of anns) {
+            const before = result.slice(0, a.start);
+            const after  = result.slice(a.end);
+            const orig   = result.substring(a.start, a.end);
+
+            // For inserted (zero-width) annotations
+            if (a.inserted && a.start === a.end) {
+                const tip = escAttr(buildAnnotationTooltip(a, footnotes));
+                result = before
+                    + ` <span class="anno ${a.type} inserted" title="${tip}">${escHtml(a.text)}</span>`
+                    + after;
+                continue;
+            }
+
+            const escaped = escHtml(orig);
+            const tip = escAttr(buildAnnotationTooltip(a, footnotes));
+
+            // Commodity/unit annotations: wrap text in a glossary link
+            if (['commodity','unit','commodity-unit','commodities'].includes(a.type) && a.matches?.length) {
+                const key = a.matches[0].key || a.matches[0].headword || a.text;
+                result = before
+                    + `<span class="anno ${a.type}" title="${tip}"><a href="entity.html#glossary/${escAttr(key)}">${escaped}</a></span>`
+                    + after;
+            } else {
+                result = before
+                    + `<span class="anno ${a.type}" title="${tip}">${escaped}</span>`
+                    + after;
+            }
+        }
+        return result;
+    }
+
+    // ── Renderers ──
+
+    function renderPid(uri) {
+        return `<span class="pid"><a href="${uri}">${uri}</a></span>`;
+    }
+
+    function renderAltFormat(entity) {
+        const jsonUrl = entity.type === 'glossary'
+            ? `api/glossary/${entity.key || entity.term}.json`
+            : `api/${entity.ladingId || entity.id}.json`;
+        return `<div class="alt-format">JSON-LD: <a href="${jsonUrl}">${jsonUrl}</a></div>`;
+    }
+
+    function renderNav(volumeData, ladingIndex, volume, inventory) {
+        const volumes = inventory.filter(e => e.folder_exists);
+        const opts = volumes.map(e => {
+            const sel = e.reference === volume ? ' selected' : '';
+            return `<option value="${e.reference}"${sel}>${e.reference} — ${e.title}</option>`;
+        }).join('');
+
+        let html = '<nav class="entity-nav">';
+        html += '<span class="nav-label">Volume</span>';
+        html += `<select id="volumeSelect" title="Browse volumes">${opts}</select>`;
+        html += '<span class="nav-spacer"></span>';
+        html += `<span class="nav-pos">Lading ${ladingIndex + 1} of ${volumeData.length}</span>`;
+        html += '</nav>';
+        return html;
+    }
+
+    function extractMerchant(annotations) {
+        const fn = annotations.find(a => a.type === 'forename')?.text || '';
+        const sn = annotations.find(a => a.type === 'surname')?.text || '';
+        const st = annotations.find(a => a.type === 'status')?.text;
+        let name = [fn, sn].filter(Boolean).join(' ');
+        if (st) name += ` (${st})`;
+        return name || null;
+    }
+
+    function renderLading(lading, highlight, inventory, volumeData, ladingIndex) {
+        const label = typeof lading.label === 'string' ? JSON.parse(lading.label) : lading.label;
+        const cargos = typeof lading.cargos === 'string' ? JSON.parse(lading.cargos) : lading.cargos;
+        const footnotes = lading.footnotes || {};
+
+        // Dates
+        const dates = lading.date?.dates || [];
+        const dows  = lading.date?.dow || [];
+        const dateStr = dates.map((d, i) => {
+            const dow = formatDow(dows[i]);
+            return (dow ? dow + ', ' : '') + formatDate(d);
+        }).join('; ') || '—';
+
+        const dir = lading.export === true ? 'Export'
+                  : lading.export === false ? 'Import'
+                  : 'Indeterminate';
+        const dirIcon = lading.export === true  ? '&#x2197;'   // ↗ export
+                      : lading.export === false ? '&#x2199;'   // ↙ import
+                      : '&#x21c4;';                            // ⇄ indeterminate
+        const uri = `${BASE}/${lading.lading_id}`;
+
+        // PDF link
+        const volume = ladingIdToVolume(lading.lading_id);
+        const invEntry = inventory.find(e => e.reference === volume);
+        const pdfUrl = buildPdfLink(invEntry, lading.page);
+
+        // Type badge colour (matching index.html globals.js)
+        const typeColours = {
+            wool:   'rgba(228,188,88,0.8)',
+            tunnage: 'rgba(190,68,234,0.8)',
+            petty:  'rgba(0,178,255,0.8)',
+            miscellaneous: 'rgba(255,102,102,0.8)'
+        };
+        const typeBg = typeColours[lading.customs_type] || '#888';
+
+        // Prev / Next
+        const prev = ladingIndex > 0 ? volumeData[ladingIndex - 1] : null;
+        const next = ladingIndex < volumeData.length - 1 ? volumeData[ladingIndex + 1] : null;
+
+        // Title line: "Lading: <url>"  ...  [◂ Prev] [Next ▸]
+        let html = '<h1 class="entity-title">';
+        html += `<span class="title-text">Lading:</span>`;
+        html += `<span class="title-pid"><a href="${uri}">${uri}</a></span>`;
+        html += '<span class="title-spacer"></span>';
+        html += '<span class="title-nav">';
+        if (prev) {
+            html += `<a href="entity.html#${prev.lading_id}" title="Previous: ${prev.lading_id}">◂ Prev</a>`;
+        } else {
+            html += '<span class="disabled">◂ Prev</span>';
+        }
+        if (next) {
+            html += `<a href="entity.html#${next.lading_id}" title="Next: ${next.lading_id}">Next ▸</a>`;
+        } else {
+            html += '<span class="disabled">Next ▸</span>';
+        }
+        html += '</span>';
+        html += '</h1>';
+
+        // Condensed metadata line: date · type badge · direction icon · pdf icon
+        html += '<div class="meta-line">';
+        html += `<span>${dateStr}</span>`;
+        html += `<span class="sep">·</span>`;
+        html += `<span class="type-badge" style="background:${typeBg}" title="Customs type: ${escAttr(lading.customs_type || '—')}">${escHtml(lading.customs_type || '—')}</span>`;
+        html += `<span class="dir-icon" title="${dir}">${dirIcon}</span>`;
+        if (pdfUrl) {
+            html += `<a class="pdf-link" href="${pdfUrl}" target="_blank" rel="noopener" title="Open PDF — page ${lading.page?.number || '?'}">📄 p.&thinsp;${lading.page?.number || '?'}</a>`;
+        }
+        html += '</div>';
+
+        // Label text — prominent, with annotations
+        const labelHtml = label?.text
+            ? applyAnnotations(label.text, label.annotations || [], footnotes)
+            : '';
+        html += `<div class="lading-label">${labelHtml}</div>`;
+
+        html += `<h2>Cargos (${cargos.length})</h2>`;
+
+        for (let i = 0; i < cargos.length; i++) {
+            const c = cargos[i];
+            const seq = String(i + 1).padStart(4, '0');
+            const cargoId = `${lading.lading_id}-${seq}`;
+            const cargoUri = `${BASE}/${cargoId}`;
+            const isHighlight = highlight === cargoId;
+
+            const anns = c.annotations || [];
+            const merchant = extractMerchant(anns);
+
+            html += `<div class="card${isHighlight ? ' card-highlight' : ''}" id="${cargoId}">`;
+
+            html += '<div class="cargo-header">';
+            html += `<span class="cargo-num"><a href="#${cargoId}">#${i + 1}</a></span>`;
+            if (merchant) html += `<span class="cargo-merchant">${escHtml(merchant)}</span>`;
+            html += `<span class="cargo-pid"><a href="${cargoUri}">${cargoUri}</a></span>`;
+            html += '</div>';
+
+            // Annotated cargo text (inline colour-coded badges)
+            const cargoHtml = applyAnnotations(c.text || '', anns, footnotes);
+            html += `<div class="cargo-text">${cargoHtml}</div>`;
+
+            html += '</div>';
+        }
+        return html;
+    }
+
+    function renderGlossary(key, entry) {
+        const uri = `${BASE}/glossary/${key}`;
+        let html = `<h1 class="entity-title">${escHtml(key.replace(/_\d+$/, ''))}`;
+        if (/_\d+$/.test(key)) html += ` <small style="color:var(--muted)">(sense ${key.match(/_(\d+)$/)[1]})</small>`;
+        html += '</h1>';
+        html += renderPid(uri);
+
+        if (entry.d) html += `<p>${escHtml(entry.d)}</p>`;
+
+        if (entry.groups?.length) {
+            html += '<h2>Groupings</h2><p>' + entry.groups.map(c =>
+                `<a href="#group/${escAttr(groupSlug(c))}">${escHtml(c)}</a>`
+            ).join(', ') + '</p>';
+        }
+
+        const forms = (entry.f || []).filter(f => f.t).sort((a, b) => a.t.localeCompare(b.t));
+        if (forms.length) {
+            html += '<h2>Attested Forms</h2><ul class="forms">';
+            for (const f of forms) html += `<li>${escHtml(f.t)}</li>`;
+            html += '</ul>';
+        }
+
+        if (entry.q?.length) {
+            html += '<h2>Qualifiers</h2><ul>';
+            for (const q of entry.q) {
+                html += `<li><strong>${escHtml(q.t || '—')}</strong>`;
+                if (q.d) html += `: ${escHtml(q.d)}`;
+                html += '</li>';
+            }
+            html += '</ul>';
+        }
+
+        if (entry.x?.length) {
+            html += '<h2>See Also</h2><p>';
+            for (const x of entry.x) html += `<a class="xref" href="#glossary/${escAttr(x)}">${escHtml(x)}</a>`;
+            html += '</p>';
+        }
+
+        return html;
+    }
+
+    function renderGroup(slug, glossaryEntries) {
+        // Find the canonical grouping name from slug
+        const allCats = new Map(); // slug → display name
+        for (const [key, entry] of Object.entries(glossaryEntries)) {
+            for (const c of (entry.groups || [])) {
+                allCats.set(groupSlug(c), c);
+            }
+        }
+
+        const catName = allCats.get(slug);
+        if (!catName) return null; // not found
+
+        // Collect all terms in this grouping
+        const terms = [];
+        for (const [key, entry] of Object.entries(glossaryEntries)) {
+            if ((entry.groups || []).some(c => groupSlug(c) === slug)) {
+                terms.push({ key, d: entry.d || '' });
+            }
+        }
+        terms.sort((a, b) => a.key.localeCompare(b.key));
+
+        let html = `<h1 class="entity-title">${escHtml(catName)}</h1>`;
+        html += `<p>${terms.length} glossary term${terms.length !== 1 ? 's' : ''} in this grouping.</p>`;
+
+        // List of all other groupings for navigation
+        const sortedCats = [...allCats.entries()].sort((a, b) => a[1].localeCompare(b[1]));
+        html += '<h2>All Groupings</h2>';
+        html += '<p class="cat-nav">';
+        html += sortedCats.map(([s, name]) =>
+            s === slug
+                ? `<strong>${escHtml(name)}</strong>`
+                : `<a href="#group/${escAttr(s)}">${escHtml(name)}</a>`
+        ).join(' · ');
+        html += '</p>';
+
+        html += `<h2>Terms</h2>`;
+        html += '<ul class="term-list">';
+        for (const t of terms) {
+            const display = t.key.replace(/_\d+$/, '');
+            const sense = t.key.match(/_(\d+)$/);
+            html += `<li><a href="#glossary/${escAttr(t.key)}">${escHtml(display)}</a>`;
+            if (sense) html += ` <small style="color:var(--muted)">(${sense[1]})</small>`;
+            if (t.d) html += ` <span class="term-desc">— ${escHtml(t.d)}</span>`;
+            html += '</li>';
+        }
+        html += '</ul>';
+
+        return html;
+    }
+
+    // ── Volume selector handler ──
+
+    function setupVolumeSelector() {
+        const sel = document.getElementById('volumeSelect');
+        if (!sel) return;
+        sel.addEventListener('change', async () => {
+            const ref = sel.value;
+            try {
+                const data = await fetchLadingVolume(ref);
+                if (data.length) {
+                    location.hash = data[0].lading_id;
+                }
+            } catch (e) {
+                console.error('Failed to load volume', ref, e);
+            }
+        });
+    }
+
+    // ── Main ──
+
+    async function main() {
+        const entity = parseHash();
+        try { if (window.MLCAQualifiers) await MLCAQualifiers.load(); } catch (e) { /* qualifier store optional */ }
+        const $loading = document.getElementById('loading');
+        const $error   = document.getElementById('error');
+        const $content = document.getElementById('content');
+
+        if (!entity) {
+            $loading.hidden = true;
+            $error.hidden = false;
+            $error.textContent = 'No entity identifier found in URL. Expected format: #4-11-B-0001 or #glossary/cloth';
+            return;
+        }
+
+        try {
+            let html = '';
+
+            if (entity.type === 'glossary') {
+                document.title = `MLCA — ${entity.key}`;
+                const glossary = await fetchGlossary();
+                const entry = glossary.entries?.[entity.key];
+                if (!entry) throw new Error(`Glossary term "${entity.key}" not found`);
+                html = renderGlossary(entity.key, entry);
+                html += renderAltFormat(entity);
+
+            } else if (entity.type === 'group') {
+                const glossary = await fetchGlossary();
+                const result = renderGroup(entity.slug, glossary.entries || {});
+                if (!result) throw new Error(`Grouping "${entity.slug}" not found`);
+                document.title = `MLCA — Grouping`;
+                html = result;
+
+            } else if (entity.type === 'lading' || entity.type === 'cargo') {
+                const ladingId = entity.type === 'cargo' ? entity.ladingId : entity.id;
+                const displayId = entity.type === 'cargo' ? entity.fullId : ladingId;
+                document.title = `MLCA — ${displayId}`;
+
+                const volume = ladingIdToVolume(ladingId);
+                const [volumeData, inventory] = await Promise.all([
+                    fetchLadingVolume(volume),
+                    fetchInventory()
+                ]);
+
+                const ladingIndex = volumeData.findIndex(l => l.lading_id === ladingId);
+                if (ladingIndex === -1) throw new Error(`Lading "${ladingId}" not found in volume ${volume}`);
+
+                const lading = volumeData[ladingIndex];
+                const highlight = entity.type === 'cargo' ? entity.fullId : null;
+
+                html += renderNav(volumeData, ladingIndex, volume, inventory);
+                html += renderLading(lading, highlight, inventory, volumeData, ladingIndex);
+                html += renderAltFormat({ ...entity, ladingId, id: ladingId });
+            }
+
+            html += '<p class="back"><a href="index.html">← London Customs Accounts</a></p>';
+
+            $content.innerHTML = html;
+            $content.hidden = false;
+            $loading.hidden = true;
+
+            // Wire up volume selector
+            setupVolumeSelector();
+
+            // Scroll to highlighted cargo
+            if (entity.type === 'cargo') {
+                const el = document.getElementById(entity.fullId);
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+        } catch (err) {
+            $loading.hidden = true;
+            $error.hidden = false;
+            $error.textContent = err.message;
+        }
+    }
+
+    main();
+    window.addEventListener('hashchange', () => main());
+    </script>
+</body>
+</html>

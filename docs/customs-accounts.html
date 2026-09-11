@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particular Customs Accounts Database</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/customs-accounts.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="favicon.ico" alt="favicon">
+            <div>
+                <h1>Particular Customs Accounts Database</h1>
+                <div class="subtitle">English and Welsh port customs accounts from medieval and early modern periods</div>
+                <div class="credit">Database compiled by María Grove-Gordillo</div>
+            </div>
+        </header>
+
+        <div id="controls">
+            <div class="control-group">
+                <label for="search" class="sr-only">Search</label>
+                <input type="text" id="search" placeholder="Search officials, ports, references...">
+                <button id="clear-search" title="Clear search">✕</button>
+            </div>
+
+            <div class="control-group">
+                <label for="filter-port">Port:</label>
+                <select id="filter-port">
+                    <option value="">All Ports</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="filter-type">Customs Type:</label>
+                <select id="filter-type">
+                    <option value="">All Types</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="filter-archive">Archive:</label>
+                <select id="filter-archive">
+                    <option value="">All Archives</option>
+                </select>
+            </div>
+
+            <button id="reset-filters" class="btn-secondary">Reset Filters</button>
+
+            <div id="stats">
+                Showing <span id="visible-count">0</span> of <span id="total-count">0</span> records
+            </div>
+        </div>
+
+        <div id="table-wrapper">
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="Port" title="Click to sort">Port</th>
+                            <th data-sort="Officials" title="Click to sort">Officials</th>
+                            <th data-sort="Years covered (modern)" title="Click to sort">Years (Modern)</th>
+                            <th data-sort="Years covered (regnal years)" title="Click to sort">Years (Regnal)</th>
+                            <th data-sort="Customs Type" title="Click to sort">Customs Type</th>
+                            <th data-sort="Reference" title="Click to sort">Reference</th>
+                            <th data-sort="Archive" title="Click to sort">Archive</th>
+                            <th data-sort="Edition" title="Click to sort">Edition</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="loading" style="display: none;">Loading data...</div>
+    </div>
+
+    <script src="js/customs-accounts.js"></script>
+</body>
+</html>

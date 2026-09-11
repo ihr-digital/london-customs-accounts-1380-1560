@@ -1,0 +1,1812 @@
+[
+    {
+        "year": 1380,
+        "cloth_indigenous": null,
+        "cloth_hanse": 1,
+        "cloth_alien": null,
+        "cloth_total": null,
+        "wool_indigenous": 92,
+        "wool_alien": 52,
+        "wool_total": 95
+    },
+    {
+        "year": 1381,
+        "cloth_indigenous": null,
+        "cloth_hanse": 1,
+        "cloth_alien": null,
+        "cloth_total": null,
+        "wool_indigenous": 100,
+        "wool_alien": 45,
+        "wool_total": 100
+    },
+    {
+        "year": 1382,
+        "cloth_indigenous": null,
+        "cloth_hanse": 2,
+        "cloth_alien": null,
+        "cloth_total": null,
+        "wool_indigenous": 86,
+        "wool_alien": 40,
+        "wool_total": 86
+    },
+    {
+        "year": 1383,
+        "cloth_indigenous": null,
+        "cloth_hanse": 2,
+        "cloth_alien": null,
+        "cloth_total": null,
+        "wool_indigenous": 88,
+        "wool_alien": 44,
+        "wool_total": 89
+    },
+    {
+        "year": 1384,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 2,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 79,
+        "wool_alien": 40,
+        "wool_total": 80
+    },
+    {
+        "year": 1385,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 2,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 75,
+        "wool_alien": 41,
+        "wool_total": 77
+    },
+    {
+        "year": 1386,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 2,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 80,
+        "wool_alien": 49,
+        "wool_total": 84
+    },
+    {
+        "year": 1387,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 1,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 77,
+        "wool_alien": 48,
+        "wool_total": 81
+    },
+    {
+        "year": 1388,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 2,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 73,
+        "wool_alien": 47,
+        "wool_total": 77
+    },
+    {
+        "year": 1389,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 2,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 81,
+        "wool_alien": 57,
+        "wool_total": 86
+    },
+    {
+        "year": 1390,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 3,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 81,
+        "wool_alien": 99,
+        "wool_total": 86
+    },
+    {
+        "year": 1391,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 5,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 62,
+        "wool_alien": 99,
+        "wool_total": 86
+    },
+    {
+        "year": 1392,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 8,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 64,
+        "wool_alien": 100,
+        "wool_total": 87
+    },
+    {
+        "year": 1393,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 9,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 61,
+        "wool_alien": 87,
+        "wool_total": 79
+    },
+    {
+        "year": 1394,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 9,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 60,
+        "wool_alien": 75,
+        "wool_total": 75
+    },
+    {
+        "year": 1395,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 9,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 56,
+        "wool_alien": 62,
+        "wool_total": 67
+    },
+    {
+        "year": 1396,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 7,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 57,
+        "wool_alien": 58,
+        "wool_total": 66
+    },
+    {
+        "year": 1397,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 6,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 55,
+        "wool_alien": 49,
+        "wool_total": 62
+    },
+    {
+        "year": 1398,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 7,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 59,
+        "wool_alien": 39,
+        "wool_total": 62
+    },
+    {
+        "year": 1399,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 7,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 58,
+        "wool_alien": 31,
+        "wool_total": 60
+    },
+    {
+        "year": 1400,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 8,
+        "cloth_alien": 5,
+        "cloth_total": 5,
+        "wool_indigenous": 58,
+        "wool_alien": 29,
+        "wool_total": 59
+    },
+    {
+        "year": 1401,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 8,
+        "cloth_alien": 16,
+        "cloth_total": 14,
+        "wool_indigenous": 54,
+        "wool_alien": 22,
+        "wool_total": 54
+    },
+    {
+        "year": 1402,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 9,
+        "cloth_alien": 11,
+        "cloth_total": 13,
+        "wool_indigenous": 47,
+        "wool_alien": 16,
+        "wool_total": 46
+    },
+    {
+        "year": 1403,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 9,
+        "cloth_alien": 14,
+        "cloth_total": 13,
+        "wool_indigenous": 45,
+        "wool_alien": 13,
+        "wool_total": 44
+    },
+    {
+        "year": 1404,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 7,
+        "cloth_alien": 9,
+        "cloth_total": 11,
+        "wool_indigenous": 41,
+        "wool_alien": 9,
+        "wool_total": 38
+    },
+    {
+        "year": 1405,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 8,
+        "cloth_alien": 11,
+        "cloth_total": 12,
+        "wool_indigenous": 49,
+        "wool_alien": 12,
+        "wool_total": 46
+    },
+    {
+        "year": 1406,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 9,
+        "cloth_alien": 12,
+        "cloth_total": 12,
+        "wool_indigenous": 43,
+        "wool_alien": 12,
+        "wool_total": 41
+    },
+    {
+        "year": 1407,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 9,
+        "cloth_alien": 9,
+        "cloth_total": 10,
+        "wool_indigenous": 48,
+        "wool_alien": 14,
+        "wool_total": 46
+    },
+    {
+        "year": 1408,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 8,
+        "cloth_alien": 13,
+        "cloth_total": 11,
+        "wool_indigenous": 52,
+        "wool_alien": 14,
+        "wool_total": 46
+    },
+    {
+        "year": 1409,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 8,
+        "cloth_alien": 20,
+        "cloth_total": 12,
+        "wool_indigenous": 54,
+        "wool_alien": 24,
+        "wool_total": 52
+    },
+    {
+        "year": 1410,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 7,
+        "cloth_alien": 20,
+        "cloth_total": 12,
+        "wool_indigenous": 48,
+        "wool_alien": 24,
+        "wool_total": 48
+    },
+    {
+        "year": 1411,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 7,
+        "cloth_alien": 18,
+        "cloth_total": 11,
+        "wool_indigenous": 49,
+        "wool_alien": 22,
+        "wool_total": 48
+    },
+    {
+        "year": 1412,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 7,
+        "cloth_alien": 22,
+        "cloth_total": 12,
+        "wool_indigenous": 54,
+        "wool_alien": 20,
+        "wool_total": 52
+    },
+    {
+        "year": 1413,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 7,
+        "cloth_alien": 16,
+        "cloth_total": 11,
+        "wool_indigenous": 55,
+        "wool_alien": 13,
+        "wool_total": 52
+    },
+    {
+        "year": 1414,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 6,
+        "cloth_alien": 25,
+        "cloth_total": 13,
+        "wool_indigenous": 56,
+        "wool_alien": 21,
+        "wool_total": 54
+    },
+    {
+        "year": 1415,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 5,
+        "cloth_alien": 25,
+        "cloth_total": 12,
+        "wool_indigenous": 55,
+        "wool_alien": 18,
+        "wool_total": 53
+    },
+    {
+        "year": 1416,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 5,
+        "cloth_alien": 23,
+        "cloth_total": 11,
+        "wool_indigenous": 58,
+        "wool_alien": 17,
+        "wool_total": 55
+    },
+    {
+        "year": 1417,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 6,
+        "cloth_alien": 19,
+        "cloth_total": 11,
+        "wool_indigenous": 60,
+        "wool_alien": 19,
+        "wool_total": 58
+    },
+    {
+        "year": 1418,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 7,
+        "cloth_alien": 18,
+        "cloth_total": 11,
+        "wool_indigenous": 63,
+        "wool_alien": 16,
+        "wool_total": 60
+    },
+    {
+        "year": 1419,
+        "cloth_indigenous": 5,
+        "cloth_hanse": 9,
+        "cloth_alien": 17,
+        "cloth_total": 11,
+        "wool_indigenous": 57,
+        "wool_alien": 18,
+        "wool_total": 55
+    },
+    {
+        "year": 1420,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 10,
+        "cloth_alien": 12,
+        "cloth_total": 10,
+        "wool_indigenous": 55,
+        "wool_alien": 16,
+        "wool_total": 52
+    },
+    {
+        "year": 1421,
+        "cloth_indigenous": 4,
+        "cloth_hanse": 8,
+        "cloth_alien": 16,
+        "cloth_total": 10,
+        "wool_indigenous": 53,
+        "wool_alien": 11,
+        "wool_total": 49
+    },
+    {
+        "year": 1422,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 10,
+        "cloth_alien": 23,
+        "cloth_total": 14,
+        "wool_indigenous": 55,
+        "wool_alien": 17,
+        "wool_total": 53
+    },
+    {
+        "year": 1423,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 9,
+        "cloth_alien": 18,
+        "cloth_total": 13,
+        "wool_indigenous": 60,
+        "wool_alien": 16,
+        "wool_total": 57
+    },
+    {
+        "year": 1424,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 10,
+        "cloth_alien": 21,
+        "cloth_total": 15,
+        "wool_indigenous": 57,
+        "wool_alien": 21,
+        "wool_total": 55
+    },
+    {
+        "year": 1425,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 9,
+        "cloth_alien": 25,
+        "cloth_total": 15,
+        "wool_indigenous": 55,
+        "wool_alien": 21,
+        "wool_total": 54
+    },
+    {
+        "year": 1426,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 10,
+        "cloth_alien": 24,
+        "cloth_total": 14,
+        "wool_indigenous": 60,
+        "wool_alien": 28,
+        "wool_total": 60
+    },
+    {
+        "year": 1427,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 11,
+        "cloth_alien": 24,
+        "cloth_total": 14,
+        "wool_indigenous": 63,
+        "wool_alien": 22,
+        "wool_total": 61
+    },
+    {
+        "year": 1428,
+        "cloth_indigenous": 6,
+        "cloth_hanse": 10,
+        "cloth_alien": 23,
+        "cloth_total": 14,
+        "wool_indigenous": 50,
+        "wool_alien": 22,
+        "wool_total": 50
+    },
+    {
+        "year": 1429,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 10,
+        "cloth_alien": 23,
+        "cloth_total": 15,
+        "wool_indigenous": 44,
+        "wool_alien": 22,
+        "wool_total": 50
+    },
+    {
+        "year": 1430,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 8,
+        "cloth_alien": 20,
+        "cloth_total": 15,
+        "wool_indigenous": 47,
+        "wool_alien": 19,
+        "wool_total": 50
+    },
+    {
+        "year": 1431,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 7,
+        "cloth_alien": 14,
+        "cloth_total": 14,
+        "wool_indigenous": 41,
+        "wool_alien": 19,
+        "wool_total": 50
+    },
+    {
+        "year": 1432,
+        "cloth_indigenous": 12,
+        "cloth_hanse": 8,
+        "cloth_alien": 10,
+        "cloth_total": 14,
+        "wool_indigenous": 41,
+        "wool_alien": 19,
+        "wool_total": 50
+    },
+    {
+        "year": 1433,
+        "cloth_indigenous": 12,
+        "cloth_hanse": 8,
+        "cloth_alien": 11,
+        "cloth_total": 14,
+        "wool_indigenous": 29,
+        "wool_alien": 17,
+        "wool_total": 28
+    },
+    {
+        "year": 1434,
+        "cloth_indigenous": 12,
+        "cloth_hanse": 9,
+        "cloth_alien": 12,
+        "cloth_total": 14,
+        "wool_indigenous": 36,
+        "wool_alien": 14,
+        "wool_total": 34
+    },
+    {
+        "year": 1435,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 7,
+        "cloth_alien": 12,
+        "cloth_total": 12,
+        "wool_indigenous": 30,
+        "wool_alien": 14,
+        "wool_total": 29
+    },
+    {
+        "year": 1436,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 10,
+        "cloth_alien": 13,
+        "cloth_total": 12,
+        "wool_indigenous": 30,
+        "wool_alien": 16,
+        "wool_total": 29
+    },
+    {
+        "year": 1437,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 12,
+        "cloth_alien": 13,
+        "cloth_total": 13,
+        "wool_indigenous": 18,
+        "wool_alien": 20,
+        "wool_total": 20
+    },
+    {
+        "year": 1438,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 13,
+        "cloth_alien": 18,
+        "cloth_total": 16,
+        "wool_indigenous": 13,
+        "wool_alien": 18,
+        "wool_total": 16
+    },
+    {
+        "year": 1439,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 13,
+        "cloth_alien": 20,
+        "cloth_total": 17,
+        "wool_indigenous": 26,
+        "wool_alien": 18,
+        "wool_total": 27
+    },
+    {
+        "year": 1440,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 15,
+        "cloth_alien": 21,
+        "cloth_total": 18,
+        "wool_indigenous": 25,
+        "wool_alien": 17,
+        "wool_total": 26
+    },
+    {
+        "year": 1441,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 18,
+        "cloth_alien": 22,
+        "cloth_total": 19,
+        "wool_indigenous": 17,
+        "wool_alien": 18,
+        "wool_total": 20
+    },
+    {
+        "year": 1442,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 19,
+        "cloth_alien": 19,
+        "cloth_total": 20,
+        "wool_indigenous": 22,
+        "wool_alien": 23,
+        "wool_total": 25
+    },
+    {
+        "year": 1443,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 19,
+        "cloth_alien": 19,
+        "cloth_total": 19,
+        "wool_indigenous": 27,
+        "wool_alien": 26,
+        "wool_total": 31
+    },
+    {
+        "year": 1444,
+        "cloth_indigenous": 12,
+        "cloth_hanse": 19,
+        "cloth_alien": 15,
+        "cloth_total": 19,
+        "wool_indigenous": 19,
+        "wool_alien": 22,
+        "wool_total": 22
+    },
+    {
+        "year": 1445,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 19,
+        "cloth_alien": 12,
+        "cloth_total": 17,
+        "wool_indigenous": 34,
+        "wool_alien": 17,
+        "wool_total": 35
+    },
+    {
+        "year": 1446,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 18,
+        "cloth_alien": 12,
+        "cloth_total": 17,
+        "wool_indigenous": 24,
+        "wool_alien": 18,
+        "wool_total": 26
+    },
+    {
+        "year": 1447,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 18,
+        "cloth_alien": 9,
+        "cloth_total": 15,
+        "wool_indigenous": 30,
+        "wool_alien": 16,
+        "wool_total": 30
+    },
+    {
+        "year": 1448,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 16,
+        "cloth_alien": 10,
+        "cloth_total": 14,
+        "wool_indigenous": 22,
+        "wool_alien": 12,
+        "wool_total": 23
+    },
+    {
+        "year": 1449,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 13,
+        "cloth_alien": 7,
+        "cloth_total": 12,
+        "wool_indigenous": 36,
+        "wool_alien": 12,
+        "wool_total": 23
+    },
+    {
+        "year": 1450,
+        "cloth_indigenous": 8,
+        "cloth_hanse": 15,
+        "cloth_alien": 7,
+        "cloth_total": 13,
+        "wool_indigenous": 34,
+        "wool_alien": 13,
+        "wool_total": 27
+    },
+    {
+        "year": 1451,
+        "cloth_indigenous": 7,
+        "cloth_hanse": 12,
+        "cloth_alien": 5,
+        "cloth_total": 10,
+        "wool_indigenous": 32,
+        "wool_alien": 13,
+        "wool_total": 27
+    },
+    {
+        "year": 1452,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 16,
+        "cloth_alien": 5,
+        "cloth_total": 14,
+        "wool_indigenous": 29,
+        "wool_alien": 13,
+        "wool_total": 27
+    },
+    {
+        "year": 1453,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 17,
+        "cloth_alien": 4,
+        "cloth_total": 13,
+        "wool_indigenous": 31,
+        "wool_alien": 12,
+        "wool_total": 31
+    },
+    {
+        "year": 1454,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 16,
+        "cloth_alien": 3,
+        "cloth_total": 12,
+        "wool_indigenous": 24,
+        "wool_alien": 12,
+        "wool_total": 31
+    },
+    {
+        "year": 1455,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 19,
+        "cloth_alien": 4,
+        "cloth_total": 15,
+        "wool_indigenous": 42,
+        "wool_alien": 35,
+        "wool_total": 54
+    },
+    {
+        "year": 1456,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 18,
+        "cloth_alien": 3,
+        "cloth_total": 13,
+        "wool_indigenous": 34,
+        "wool_alien": 45,
+        "wool_total": 47
+    },
+    {
+        "year": 1457,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 20,
+        "cloth_alien": 3,
+        "cloth_total": 14,
+        "wool_indigenous": 37,
+        "wool_alien": 32,
+        "wool_total": 45
+    },
+    {
+        "year": 1458,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 21,
+        "cloth_alien": 2,
+        "cloth_total": 15,
+        "wool_indigenous": 39,
+        "wool_alien": 32,
+        "wool_total": 45
+    },
+    {
+        "year": 1459,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 18,
+        "cloth_alien": 2,
+        "cloth_total": 13,
+        "wool_indigenous": 31,
+        "wool_alien": 32,
+        "wool_total": 45
+    },
+    {
+        "year": 1460,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 19,
+        "cloth_alien": 2,
+        "cloth_total": 13,
+        "wool_indigenous": 31,
+        "wool_alien": 23,
+        "wool_total": 38
+    },
+    {
+        "year": 1461,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 20,
+        "cloth_alien": 2,
+        "cloth_total": 15,
+        "wool_indigenous": 23,
+        "wool_alien": 24,
+        "wool_total": 30
+    },
+    {
+        "year": 1462,
+        "cloth_indigenous": 11,
+        "cloth_hanse": 17,
+        "cloth_alien": 2,
+        "cloth_total": 14,
+        "wool_indigenous": 19,
+        "wool_alien": 17,
+        "wool_total": 24
+    },
+    {
+        "year": 1463,
+        "cloth_indigenous": 13,
+        "cloth_hanse": 19,
+        "cloth_alien": 1,
+        "cloth_total": 16,
+        "wool_indigenous": 26,
+        "wool_alien": 17,
+        "wool_total": 24
+    },
+    {
+        "year": 1464,
+        "cloth_indigenous": 9,
+        "cloth_hanse": 15,
+        "cloth_alien": 2,
+        "cloth_total": 12,
+        "wool_indigenous": 29,
+        "wool_alien": 15,
+        "wool_total": 28
+    },
+    {
+        "year": 1465,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 13,
+        "cloth_alien": 5,
+        "cloth_total": 13,
+        "wool_indigenous": 32,
+        "wool_alien": 14,
+        "wool_total": 31
+    },
+    {
+        "year": 1466,
+        "cloth_indigenous": 10,
+        "cloth_hanse": 14,
+        "cloth_alien": 5,
+        "cloth_total": 13,
+        "wool_indigenous": 40,
+        "wool_alien": 10,
+        "wool_total": 38
+    },
+    {
+        "year": 1467,
+        "cloth_indigenous": 13,
+        "cloth_hanse": 15,
+        "cloth_alien": 6,
+        "cloth_total": 16,
+        "wool_indigenous": 46,
+        "wool_alien": 14,
+        "wool_total": 44
+    },
+    {
+        "year": 1468,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 11,
+        "cloth_alien": 7,
+        "cloth_total": 18,
+        "wool_indigenous": 51,
+        "wool_alien": 15,
+        "wool_total": 48
+    },
+    {
+        "year": 1469,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 11,
+        "cloth_alien": 6,
+        "cloth_total": 17,
+        "wool_indigenous": 56,
+        "wool_alien": 12,
+        "wool_total": 52
+    },
+    {
+        "year": 1470,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 10,
+        "cloth_alien": 5,
+        "cloth_total": 16,
+        "wool_indigenous": 39,
+        "wool_alien": 12,
+        "wool_total": 52
+    },
+    {
+        "year": 1471,
+        "cloth_indigenous": 14,
+        "cloth_hanse": 9,
+        "cloth_alien": 5,
+        "cloth_total": 14,
+        "wool_indigenous": 52,
+        "wool_alien": 12,
+        "wool_total": 52
+    },
+    {
+        "year": 1472,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 9,
+        "cloth_alien": 10,
+        "cloth_total": 18,
+        "wool_indigenous": 48,
+        "wool_alien": 17,
+        "wool_total": 46
+    },
+    {
+        "year": 1473,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 8,
+        "cloth_alien": 22,
+        "cloth_total": 21,
+        "wool_indigenous": 51,
+        "wool_alien": 17,
+        "wool_total": 46
+    },
+    {
+        "year": 1474,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 8,
+        "cloth_alien": 22,
+        "cloth_total": 20,
+        "wool_indigenous": 51,
+        "wool_alien": 11,
+        "wool_total": 46
+    },
+    {
+        "year": 1475,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 5,
+        "cloth_alien": 21,
+        "cloth_total": 21,
+        "wool_indigenous": 72,
+        "wool_alien": 12,
+        "wool_total": 65
+    },
+    {
+        "year": 1476,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 11,
+        "cloth_alien": 24,
+        "cloth_total": 23,
+        "wool_indigenous": 50,
+        "wool_alien": 11,
+        "wool_total": 46
+    },
+    {
+        "year": 1477,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 12,
+        "cloth_alien": 19,
+        "cloth_total": 22,
+        "wool_indigenous": 51,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1478,
+        "cloth_indigenous": 23,
+        "cloth_hanse": 17,
+        "cloth_alien": 22,
+        "cloth_total": 28,
+        "wool_indigenous": 62,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1479,
+        "cloth_indigenous": 23,
+        "cloth_hanse": 20,
+        "cloth_alien": 24,
+        "cloth_total": 30,
+        "wool_indigenous": 63,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1480,
+        "cloth_indigenous": 25,
+        "cloth_hanse": 25,
+        "cloth_alien": 23,
+        "cloth_total": 32,
+        "wool_indigenous": 70,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1481,
+        "cloth_indigenous": 25,
+        "cloth_hanse": 28,
+        "cloth_alien": 23,
+        "cloth_total": 33,
+        "wool_indigenous": 63,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1482,
+        "cloth_indigenous": 19,
+        "cloth_hanse": 25,
+        "cloth_alien": 21,
+        "cloth_total": 28,
+        "wool_indigenous": 54,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1483,
+        "cloth_indigenous": 19,
+        "cloth_hanse": 28,
+        "cloth_alien": 23,
+        "cloth_total": 29,
+        "wool_indigenous": 54,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1484,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 30,
+        "cloth_alien": 23,
+        "cloth_total": 29,
+        "wool_indigenous": 51,
+        "wool_alien": 7,
+        "wool_total": 47
+    },
+    {
+        "year": 1485,
+        "cloth_indigenous": 21,
+        "cloth_hanse": 32,
+        "cloth_alien": 22,
+        "cloth_total": 31,
+        "wool_indigenous": 58,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1486,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 29,
+        "cloth_alien": 19,
+        "cloth_total": 27,
+        "wool_indigenous": 61,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1487,
+        "cloth_indigenous": 14,
+        "cloth_hanse": 30,
+        "cloth_alien": 24,
+        "cloth_total": 27,
+        "wool_indigenous": 59,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1488,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 32,
+        "cloth_alien": 26,
+        "cloth_total": 29,
+        "wool_indigenous": 58,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1489,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 34,
+        "cloth_alien": 24,
+        "cloth_total": 31,
+        "wool_indigenous": 59,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1490,
+        "cloth_indigenous": 18,
+        "cloth_hanse": 31,
+        "cloth_alien": 27,
+        "cloth_total": 31,
+        "wool_indigenous": 45,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1491,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 31,
+        "cloth_alien": 27,
+        "cloth_total": 31,
+        "wool_indigenous": 37,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1492,
+        "cloth_indigenous": 17,
+        "cloth_hanse": 33,
+        "cloth_alien": 25,
+        "cloth_total": 30,
+        "wool_indigenous": 37,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1493,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 36,
+        "cloth_alien": 22,
+        "cloth_total": 30,
+        "wool_indigenous": 45,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1494,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 36,
+        "cloth_alien": 22,
+        "cloth_total": 30,
+        "wool_indigenous": 61,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1495,
+        "cloth_indigenous": 16,
+        "cloth_hanse": 36,
+        "cloth_alien": 22,
+        "cloth_total": 30,
+        "wool_indigenous": 69,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1496,
+        "cloth_indigenous": 19,
+        "cloth_hanse": 38,
+        "cloth_alien": 23,
+        "cloth_total": 33,
+        "wool_indigenous": 65,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1497,
+        "cloth_indigenous": 21,
+        "cloth_hanse": 39,
+        "cloth_alien": 23,
+        "cloth_total": 34,
+        "wool_indigenous": 64,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1498,
+        "cloth_indigenous": 21,
+        "cloth_hanse": 41,
+        "cloth_alien": 19,
+        "cloth_total": 33,
+        "wool_indigenous": 58,
+        "wool_alien": 4,
+        "wool_total": 62
+    },
+    {
+        "year": 1499,
+        "cloth_indigenous": 24,
+        "cloth_hanse": 41,
+        "cloth_alien": 18,
+        "cloth_total": 35,
+        "wool_indigenous": 57,
+        "wool_alien": 0,
+        "wool_total": 49
+    },
+    {
+        "year": 1500,
+        "cloth_indigenous": 24,
+        "cloth_hanse": 42,
+        "cloth_alien": 22,
+        "cloth_total": 37,
+        "wool_indigenous": 50,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1501,
+        "cloth_indigenous": 26,
+        "cloth_hanse": 43,
+        "cloth_alien": 24,
+        "cloth_total": 39,
+        "wool_indigenous": 51,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1502,
+        "cloth_indigenous": 28,
+        "cloth_hanse": 42,
+        "cloth_alien": 24,
+        "cloth_total": 40,
+        "wool_indigenous": 50,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1503,
+        "cloth_indigenous": 27,
+        "cloth_hanse": 42,
+        "cloth_alien": 23,
+        "cloth_total": 39,
+        "wool_indigenous": 45,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1504,
+        "cloth_indigenous": 25,
+        "cloth_hanse": 43,
+        "cloth_alien": 22,
+        "cloth_total": 38,
+        "wool_indigenous": 42,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1505,
+        "cloth_indigenous": 27,
+        "cloth_hanse": 42,
+        "cloth_alien": 21,
+        "cloth_total": 38,
+        "wool_indigenous": 36,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1506,
+        "cloth_indigenous": 28,
+        "cloth_hanse": 44,
+        "cloth_alien": 23,
+        "cloth_total": 40,
+        "wool_indigenous": 41,
+        "wool_alien": 1,
+        "wool_total": 45
+    },
+    {
+        "year": 1507,
+        "cloth_indigenous": 31,
+        "cloth_hanse": 44,
+        "cloth_alien": 22,
+        "cloth_total": 43,
+        "wool_indigenous": 44,
+        "wool_alien": 1,
+        "wool_total": 45
+    },
+    {
+        "year": 1508,
+        "cloth_indigenous": 33,
+        "cloth_hanse": 46,
+        "cloth_alien": 24,
+        "cloth_total": 45,
+        "wool_indigenous": 48,
+        "wool_alien": 2,
+        "wool_total": 47
+    },
+    {
+        "year": 1509,
+        "cloth_indigenous": 34,
+        "cloth_hanse": 40,
+        "cloth_alien": 26,
+        "cloth_total": 44,
+        "wool_indigenous": 53,
+        "wool_alien": 2,
+        "wool_total": 47
+    },
+    {
+        "year": 1510,
+        "cloth_indigenous": 37,
+        "cloth_hanse": 44,
+        "cloth_alien": 26,
+        "cloth_total": 48,
+        "wool_indigenous": 59,
+        "wool_alien": 2,
+        "wool_total": 47
+    },
+    {
+        "year": 1511,
+        "cloth_indigenous": 38,
+        "cloth_hanse": 48,
+        "cloth_alien": 22,
+        "cloth_total": 49,
+        "wool_indigenous": 57,
+        "wool_alien": 2,
+        "wool_total": 46
+    },
+    {
+        "year": 1512,
+        "cloth_indigenous": 39,
+        "cloth_hanse": 50,
+        "cloth_alien": 20,
+        "cloth_total": 50,
+        "wool_indigenous": 53,
+        "wool_alien": 1,
+        "wool_total": 44
+    },
+    {
+        "year": 1513,
+        "cloth_indigenous": 43,
+        "cloth_hanse": 50,
+        "cloth_alien": 21,
+        "cloth_total": 53,
+        "wool_indigenous": 56,
+        "wool_alien": 3,
+        "wool_total": 48
+    },
+    {
+        "year": 1514,
+        "cloth_indigenous": 44,
+        "cloth_hanse": 51,
+        "cloth_alien": 23,
+        "cloth_total": 54,
+        "wool_indigenous": 52,
+        "wool_alien": 3,
+        "wool_total": 45
+    },
+    {
+        "year": 1515,
+        "cloth_indigenous": 43,
+        "cloth_hanse": 51,
+        "cloth_alien": 21,
+        "cloth_total": 53,
+        "wool_indigenous": 53,
+        "wool_alien": 6,
+        "wool_total": 48
+    },
+    {
+        "year": 1516,
+        "cloth_indigenous": 42,
+        "cloth_hanse": 52,
+        "cloth_alien": 20,
+        "cloth_total": 52,
+        "wool_indigenous": 53,
+        "wool_alien": 10,
+        "wool_total": 49
+    },
+    {
+        "year": 1517,
+        "cloth_indigenous": 44,
+        "cloth_hanse": 52,
+        "cloth_alien": 21,
+        "cloth_total": 54,
+        "wool_indigenous": 49,
+        "wool_alien": 8,
+        "wool_total": 45
+    },
+    {
+        "year": 1518,
+        "cloth_indigenous": 45,
+        "cloth_hanse": 53,
+        "cloth_alien": 14,
+        "cloth_total": 53,
+        "wool_indigenous": 56,
+        "wool_alien": 6,
+        "wool_total": 51
+    },
+    {
+        "year": 1519,
+        "cloth_indigenous": 48,
+        "cloth_hanse": 50,
+        "cloth_alien": 16,
+        "cloth_total": 54,
+        "wool_indigenous": 58,
+        "wool_alien": 4,
+        "wool_total": 52
+    },
+    {
+        "year": 1520,
+        "cloth_indigenous": 45,
+        "cloth_hanse": 48,
+        "cloth_alien": 16,
+        "cloth_total": 52,
+        "wool_indigenous": 55,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1521,
+        "cloth_indigenous": 43,
+        "cloth_hanse": 44,
+        "cloth_alien": 17,
+        "cloth_total": 49,
+        "wool_indigenous": 49,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1522,
+        "cloth_indigenous": 41,
+        "cloth_hanse": 45,
+        "cloth_alien": 19,
+        "cloth_total": 49,
+        "wool_indigenous": 41,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1523,
+        "cloth_indigenous": 44,
+        "cloth_hanse": 48,
+        "cloth_alien": 21,
+        "cloth_total": 53,
+        "wool_indigenous": 40,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1524,
+        "cloth_indigenous": 49,
+        "cloth_hanse": 50,
+        "cloth_alien": 27,
+        "cloth_total": 58,
+        "wool_indigenous": 35,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1525,
+        "cloth_indigenous": 51,
+        "cloth_hanse": 48,
+        "cloth_alien": 27,
+        "cloth_total": 59,
+        "wool_indigenous": 35,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1526,
+        "cloth_indigenous": 50,
+        "cloth_hanse": 44,
+        "cloth_alien": 34,
+        "cloth_total": 60,
+        "wool_indigenous": 40,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1527,
+        "cloth_indigenous": 52,
+        "cloth_hanse": 52,
+        "cloth_alien": 33,
+        "cloth_total": 63,
+        "wool_indigenous": 41,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1528,
+        "cloth_indigenous": 40,
+        "cloth_hanse": 39,
+        "cloth_alien": 31,
+        "cloth_total": 50,
+        "wool_indigenous": 35,
+        "wool_alien": 3,
+        "wool_total": 50
+    },
+    {
+        "year": 1529,
+        "cloth_indigenous": 44,
+        "cloth_hanse": 44,
+        "cloth_alien": 28,
+        "cloth_total": 53,
+        "wool_indigenous": 36,
+        "wool_alien": 3,
+        "wool_total": 36
+    },
+    {
+        "year": 1530,
+        "cloth_indigenous": 44,
+        "cloth_hanse": 47,
+        "cloth_alien": 27,
+        "cloth_total": 54,
+        "wool_indigenous": 31,
+        "wool_alien": 3,
+        "wool_total": 36
+    },
+    {
+        "year": 1531,
+        "cloth_indigenous": 43,
+        "cloth_hanse": 49,
+        "cloth_alien": 26,
+        "cloth_total": 54,
+        "wool_indigenous": 28,
+        "wool_alien": 3,
+        "wool_total": 29
+    },
+    {
+        "year": 1532,
+        "cloth_indigenous": 46,
+        "cloth_hanse": 54,
+        "cloth_alien": 19,
+        "cloth_total": 56,
+        "wool_indigenous": 24,
+        "wool_alien": 3,
+        "wool_total": 24
+    },
+    {
+        "year": 1533,
+        "cloth_indigenous": 51,
+        "cloth_hanse": 59,
+        "cloth_alien": 24,
+        "cloth_total": 62,
+        "wool_indigenous": 20,
+        "wool_alien": 4,
+        "wool_total": 20
+    },
+    {
+        "year": 1534,
+        "cloth_indigenous": 51,
+        "cloth_hanse": 62,
+        "cloth_alien": 25,
+        "cloth_total": 63,
+        "wool_indigenous": 23,
+        "wool_alien": 4,
+        "wool_total": 23
+    },
+    {
+        "year": 1535,
+        "cloth_indigenous": 55,
+        "cloth_hanse": 67,
+        "cloth_alien": 25,
+        "cloth_total": 68,
+        "wool_indigenous": 27,
+        "wool_alien": 4,
+        "wool_total": 25
+    },
+    {
+        "year": 1536,
+        "cloth_indigenous": 55,
+        "cloth_hanse": 73,
+        "cloth_alien": 22,
+        "cloth_total": 69,
+        "wool_indigenous": 26,
+        "wool_alien": 4,
+        "wool_total": 25
+    },
+    {
+        "year": 1537,
+        "cloth_indigenous": 56,
+        "cloth_hanse": 75,
+        "cloth_alien": 19,
+        "cloth_total": 70,
+        "wool_indigenous": 26,
+        "wool_alien": 2,
+        "wool_total": 24
+    },
+    {
+        "year": 1538,
+        "cloth_indigenous": 53,
+        "cloth_hanse": 77,
+        "cloth_alien": 40,
+        "cloth_total": 73,
+        "wool_indigenous": 28,
+        "wool_alien": 4,
+        "wool_total": 26
+    },
+    {
+        "year": 1539,
+        "cloth_indigenous": 54,
+        "cloth_hanse": 74,
+        "cloth_alien": 50,
+        "cloth_total": 77,
+        "wool_indigenous": 33,
+        "wool_alien": 3,
+        "wool_total": 30
+    },
+    {
+        "year": 1540,
+        "cloth_indigenous": 57,
+        "cloth_hanse": 73,
+        "cloth_alien": 62,
+        "cloth_total": 81,
+        "wool_indigenous": 34,
+        "wool_alien": 10,
+        "wool_total": 33
+    },
+    {
+        "year": 1541,
+        "cloth_indigenous": 55,
+        "cloth_hanse": 68,
+        "cloth_alien": 69,
+        "cloth_total": 81,
+        "wool_indigenous": 36,
+        "wool_alien": 14,
+        "wool_total": 36
+    },
+    {
+        "year": 1542,
+        "cloth_indigenous": 50,
+        "cloth_hanse": 66,
+        "cloth_alien": 60,
+        "cloth_total": 74,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1543,
+        "cloth_indigenous": 61,
+        "cloth_hanse": 67,
+        "cloth_alien": 62,
+        "cloth_total": 82,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1544,
+        "cloth_indigenous": 52,
+        "cloth_hanse": 74,
+        "cloth_alien": 90,
+        "cloth_total": 87,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1545,
+        "cloth_indigenous": 53,
+        "cloth_hanse": 75,
+        "cloth_alien": 100,
+        "cloth_total": 91,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1546,
+        "cloth_indigenous": 55,
+        "cloth_hanse": 75,
+        "cloth_alien": 81,
+        "cloth_total": 86,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1547,
+        "cloth_indigenous": 68,
+        "cloth_hanse": 83,
+        "cloth_alien": 55,
+        "cloth_total": 91,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1548,
+        "cloth_indigenous": 77,
+        "cloth_hanse": 92,
+        "cloth_alien": 38,
+        "cloth_total": 95,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1549,
+        "cloth_indigenous": 85,
+        "cloth_hanse": 99,
+        "cloth_alien": 26,
+        "cloth_total": 100,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1550,
+        "cloth_indigenous": 84,
+        "cloth_hanse": 100,
+        "cloth_alien": 20,
+        "cloth_total": 98,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1551,
+        "cloth_indigenous": 82,
+        "cloth_hanse": 78,
+        "cloth_alien": 19,
+        "cloth_total": 89,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1552,
+        "cloth_indigenous": 82,
+        "cloth_hanse": 78,
+        "cloth_alien": 19,
+        "cloth_total": 89,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1553,
+        "cloth_indigenous": 96,
+        "cloth_hanse": 75,
+        "cloth_alien": 24,
+        "cloth_total": 99,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1554,
+        "cloth_indigenous": 96,
+        "cloth_hanse": 75,
+        "cloth_alien": 24,
+        "cloth_total": 99,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1555,
+        "cloth_indigenous": 96,
+        "cloth_hanse": 75,
+        "cloth_alien": 24,
+        "cloth_total": 99,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1556,
+        "cloth_indigenous": 100,
+        "cloth_hanse": 50,
+        "cloth_alien": 32,
+        "cloth_total": 96,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1557,
+        "cloth_indigenous": 100,
+        "cloth_hanse": 50,
+        "cloth_alien": 32,
+        "cloth_total": 96,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1558,
+        "cloth_indigenous": 97,
+        "cloth_hanse": 50,
+        "cloth_alien": 33,
+        "cloth_total": 96,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1559,
+        "cloth_indigenous": 100,
+        "cloth_hanse": 35,
+        "cloth_alien": 33,
+        "cloth_total": 93,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    },
+    {
+        "year": 1560,
+        "cloth_indigenous": 90,
+        "cloth_hanse": 37,
+        "cloth_alien": 28,
+        "cloth_total": 85,
+        "wool_indigenous": 35,
+        "wool_alien": 13,
+        "wool_total": 34
+    }
+]

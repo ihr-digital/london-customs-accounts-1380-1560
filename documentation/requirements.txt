@@ -1,0 +1,7 @@
+sphinx>=7.0
+shibuya
+myst-parser
+sphinx-copybutton
+sphinxcontrib-mermaid
+sphinx-notfound-page
+linkify-it-py
