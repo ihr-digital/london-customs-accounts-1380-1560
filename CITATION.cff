@@ -15,7 +15,8 @@
 cff-version: 1.2.0
 message: "If you use this data, please cite it as below."
 type: dataset
-version: 0.1.0
+version: "0.0.0-beta"
+date-released: "2026-09-11"
 title: "London Customs Accounts, 1380-1560: machine-readable data and research tools"
 abstract: >-
   Machine-readable data and browser-based research tools for the particular
