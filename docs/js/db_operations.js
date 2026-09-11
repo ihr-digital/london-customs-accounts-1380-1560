@@ -523,6 +523,26 @@ db.version(90).stores({
     }
 });
 
+db.version(91).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    // Cargo text, lower-cased, one row per lading and nothing else in it. A text
+    // search used to fetch every cargo RECORD to read its text, and a cargo
+    // record is 1,474 bytes of which the text is 90: the annotations are 94% of
+    // what was being deserialised, and none of it was searched. Searching "peat"
+    // -- which matches nothing, so nothing short-circuits -- took 22 seconds.
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v91 — clearing ladings to build the search text alongside them");
+    try {
+        await trans.table("ladings").clear();
+    } catch (error) {
+        console.error("Error clearing data on v91 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -598,6 +618,7 @@ async function preloadAllLadings() {
                                                         {revalidate: true});
 
                 const cargosToBulkAdd = [];
+                const searchToBulkAdd = [];
                 ladings.forEach(v => {
                     v.volume = ref;
 
@@ -642,6 +663,15 @@ async function preloadAllLadings() {
                     v.groups = _collectLadingGroups(v.cargos);
 
                     if (v.cargos) {
+                        // The searchable text, kept apart from the annotations that
+                        // dwarf it. Lower-cased once here rather than on every search.
+                        // Held per cargo, not concatenated, so a multi-term query
+                        // still has to satisfy itself within ONE cargo, exactly as
+                        // when each cargo was fetched and tested separately.
+                        searchToBulkAdd.push({
+                            lading_id: v.lading_id,
+                            texts: v.cargos.map(c => (c.text || '').toLowerCase()),
+                        });
                         cargosToBulkAdd.push(...v.cargos.map((cargo, index) => {
                             const paddedIndex = String(index + 1).padStart(4, '0');
                             const cargoId = `${v.lading_id}-${paddedIndex}`;
@@ -672,6 +702,9 @@ async function preloadAllLadings() {
                 await db.ladings.bulkAdd(ladings, {allKeys: true, chunked: true, chunkSize: 100});
                 if (cargosToBulkAdd.length > 0) {
                     await db.cargos.bulkAdd(cargosToBulkAdd, {allKeys: true, chunked: true, chunkSize: 100});
+                }
+                if (searchToBulkAdd.length > 0) {
+                    await db.ladingText.bulkPut(searchToBulkAdd, {chunked: true, chunkSize: 500});
                 }
 
                 loadedFiles++;
@@ -735,6 +768,34 @@ async function _fetchGzippedJson(url, {revalidate = false} = {}) {
 
 // One full scan, once, after the corpus is loaded. 133 of 33,548 records, and they
 // cannot come from an index because a null key is not indexed.
+// Backfill for the search text, because the loader skips any volume already in
+// `ladings` -- so a store added after the corpus was loaded would never be
+// filled, and a schema bump that fails to clear (or a user who arrived between
+// two of them) would leave the search silently answering from an empty index.
+// Everything needed is already in the cargos store, so no refetch: one pass,
+// once, and only when it is actually missing.
+async function backfillSearchText() {
+    try {
+        const ladings = await db.ladings.count();
+        if (!ladings) return;                       // nothing loaded yet; the loader will do it
+        if (await db.ladingText.count() > 0) return;
+        console.warn("Search text index missing — rebuilding it from the cargos store");
+        $("#loadingSpinner .spinner-label").text("building the search index\u2026");
+        const byLading = new Map();
+        await db.cargos.each(c => {
+            let a = byLading.get(c.lading_id);
+            if (!a) byLading.set(c.lading_id, a = []);
+            a.push((c.cargo || "").toLowerCase());
+        });
+        const rows = [];
+        for (const [lading_id, texts] of byLading) rows.push({lading_id, texts});
+        if (rows.length) await db.ladingText.bulkPut(rows, {chunked: true, chunkSize: 500});
+        console.info(`Search text index rebuilt for ${rows.length} ladings`);
+    } catch (err) {
+        console.error("Could not rebuild the search text index:", err);
+    }
+}
+
 async function loadDatelessLadings() {
     try {
         datelessLadings = await db.ladings

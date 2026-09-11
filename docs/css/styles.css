@@ -269,6 +269,63 @@ h1 {
     background-color: inherit;
 }
 
+/* The filter row stood 104px tall to hold 31px of controls. It stacked into
+   three bands -- the controls, the result count on a line of its own, the
+   clear-filters button on a third -- because the wrapper holding the controls
+   carries flex-grow-1 and so took the full 990px, leaving its siblings nowhere
+   to sit but underneath. Let it shrink instead, and the row is one band. */
+#ladingTable thead tr:nth-child(2) th > .d-flex {
+    gap: .4rem;
+    row-gap: .25rem;
+}
+
+#ladingTable thead tr:nth-child(2) th > .d-flex > .flex-grow-1 {
+    flex: 1 1 auto;
+    min-width: 0;   /* a flex item will not shrink below its content without this */
+}
+
+/* Room to shrink before anything wraps, and a ceiling so two search boxes do
+   not eat a wide screen between them. */
+#personSearchWrap,
+#textFilter {
+    flex: 1 1 10rem;
+    min-width: 7rem;
+    max-width: 20rem;
+}
+
+/* The count sits in the header row now, between "Ladings" and the mode toggle,
+   which had an empty middle -- rather than taking a line of its own below.
+   The row is centre-aligned for the sake of the button group, which left the
+   smaller count text centred in the taller line and so riding 4.6px above the
+   baseline of "Ladings". The two text items are aligned to each other's
+   baseline instead; the buttons stay centred. */
+/* "Dates" and "Categories" are text in a cell aligned middle; "Ladings" is a
+   span inside a flex line made taller by the button group beside it. Centring
+   each against a different box left them 0.4px apart -- sub-pixel, but enough
+   on a fractional boundary to read as misaligned. Baseline alignment lines the
+   three headings up with each other by definition. */
+#ladingTable thead tr:nth-child(1) th {
+    vertical-align: baseline;
+}
+
+#ladingTable thead tr:nth-child(1) th > div > span {
+    align-self: baseline;
+}
+
+#resultCount {
+    font-weight: 400;
+    font-size: .8rem;
+    margin-right: auto;
+    padding-left: .75rem;
+}
+
+/* The header cells are padded for table rows, which is generous for controls. */
+#ladingTable thead tr:nth-child(2) th {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    vertical-align: middle;
+}
+
 #ladingTable th,
 #ladingTable td {
     border: 1px solid #dee2e6;

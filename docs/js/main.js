@@ -16,6 +16,7 @@ async function init() {
     await db.open(); // db is from globals.js
     await checkDbHealth();
     await preloadAllLadings(); // preloadAllLadings is from db_operations.js
+    await backfillSearchText(); // no-op unless the search index is missing
     await loadDatelessLadings(); // loadDatelessLadings is from db_operations.js
     await preloadPersonIndex(); // preloadPersonIndex is from db_operations.js
     await hydratePersonFilterLabels(); // hydratePersonFilterLabels is from filter_and_sort.js

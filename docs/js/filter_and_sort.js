@@ -178,6 +178,19 @@ function setLoadingProgress(fraction, label) {
     el.textContent = label ? pct + '% \u2014 ' + label : pct + '%';
 }
 
+// The cargo text for every lading, lower-cased, read once and kept. 33,548 rows
+// of nothing but text: about 20MB against the 280MB of cargo records it
+// replaces, and only touched when there is a text query to answer.
+let _searchText = null;
+async function cargoTextIndex(signal) {
+    if (_searchText) return _searchText;
+    const rows = await db.ladingText.toArray({signal});
+    const m = new Map();
+    for (const r of rows) m.set(r.lading_id, r.texts || []);
+    if (!signal || !signal.aborted) _searchText = m;
+    return m;
+}
+
 async function applyFilters() {
     // 1. Abort any previous ongoing operation
     if (currentFilterAbortController) {
@@ -321,42 +334,18 @@ async function applyFilters() {
                     }
                 });
 
-                // B. Loop over baseFilteredLadings and fetch their cargos individually and check for matches.
-                const cargoPromises = baseFilteredLadings.map(async v => {
-                    if (signal.aborted) {
-                        return null;
-                    }
-
-                    // Only fetch cargos if the lading isn't already matched by its own fields
-                    if (matchedLadingsMap.has(v.lading_id)) {
-                        return null;
-                    }
-
-                    // Pass the signal to the Dexie toArray() method for cargo fetches
-                    const cargosForLading = await db.cargos.where("lading_id").equals(v.lading_id).toArray({ signal });
-
-                    // Another check after the await, in case it was aborted while awaiting
-                    if (signal.aborted) {
-                        return null;
-                    }
-
-                    const hasMatchingCargo = cargosForLading.some(c =>
-                        matches(c.cargo?.toLowerCase() || '')
-                    );
-
-                    if (hasMatchingCargo) {
-                        return v;
-                    }
-                    return null;
-                });
-
-                // Wait for all cargo checks to complete.
-                // Promise.all will reject if *any* of its promises reject (e.g., due to AbortError)
-                const ladingsWithMatchingCargos = await Promise.all(cargoPromises);
-
-                // Add ladings that had matching cargos to the map
-                ladingsWithMatchingCargos.forEach(v => {
-                    if (v) {
+                // B. Test the cargo text of everything the lading's own fields did
+                //    not already match. This used to be one indexed query per
+                //    lading -- 33,415 of them for a term that matches nothing, and
+                //    22 seconds -- each one deserialising cargo records whose
+                //    annotations are 94% of their weight and are never searched.
+                //    One read of the text index answers all of them.
+                const searchText = await cargoTextIndex(signal);
+                if (signal.aborted) return;
+                baseFilteredLadings.forEach(v => {
+                    if (matchedLadingsMap.has(v.lading_id)) return;
+                    const texts = searchText.get(v.lading_id);
+                    if (texts && texts.some(t => matches(t))) {
                         matchedLadingsMap.set(v.lading_id, v);
                     }
                 });
@@ -367,20 +356,14 @@ async function applyFilters() {
                 // something — it costs a cargo fetch per surviving lading, and every
                 // query without a `!` should pay nothing for this.
                 if (negated.length > 0) {
-                    const survivors = [];
-                    await Promise.all(finalFilteredLadings.map(async v => {
-                        if (signal.aborted) return;
-                        const fullText = `${v.text} ${v.customs_type} ${v.lading_id}`.toLowerCase();
-                        if (excluded(fullText)) return;
-                        const cargos = await db.cargos.where("lading_id").equals(v.lading_id).toArray({signal});
-                        if (signal.aborted) return;
-                        if (cargos.some(c => excluded((c.cargo || "").toLowerCase()))) return;
-                        survivors.push(v);
-                    }));
+                    const texts = await cargoTextIndex(signal);
                     if (signal.aborted) return;
-                    // Order is not preserved by the parallel push above; the sort
-                    // below settles it, as it does for every other path here.
-                    finalFilteredLadings = survivors;
+                    finalFilteredLadings = finalFilteredLadings.filter(v => {
+                        const fullText = `${v.text} ${v.customs_type} ${v.lading_id}`.toLowerCase();
+                        if (excluded(fullText)) return false;
+                        const ts = texts.get(v.lading_id);
+                        return !(ts && ts.some(t => excluded(t)));
+                    });
                 }
 
             } else {
