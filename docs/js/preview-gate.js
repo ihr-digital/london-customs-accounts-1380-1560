@@ -114,10 +114,44 @@
 
     // Say when the page behind has finished, so the wait is legible rather than
     // silent -- but never hold the button hostage to it.
+    //
+    // The load event is the wrong signal: it fires when the page's own resources
+    // are in, which on the accounts explorer is long before the corpus has been
+    // read, so the gate cheerfully said "Data ready." over a progress bar at 78%.
+    // Wait for the page's own indicators to go quiet instead, and report what
+    // they say while they are still going.
     const label = veil.querySelector('#pg-load');
-    const done = () => { label.textContent = 'Data ready.'; };
-    if (document.readyState === 'complete') setTimeout(done, 0);
-    else window.addEventListener('load', done);
+    // offsetParent is null for a position:fixed element whether or not it is
+    // shown, and #loadingSpinner is fixed and centred -- so asking that way
+    // reported "not busy" throughout the load. Ask the layout instead.
+    const shown = el => {
+        if (!el) return false;
+        const cs = getComputedStyle(el);
+        if (cs.display === 'none' || cs.visibility === 'hidden') return false;
+        const r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0;
+    };
+    const busy = () => {
+        for (const sel of ['#loadingSpinner', '#progressBarContainer']) {
+            const el = document.querySelector(sel);
+            if (shown(el)) return el;
+        }
+        return null;
+    };
+    const tick = () => {
+        const el = busy();
+        if (!el && document.readyState === 'complete') {
+            label.textContent = 'Data ready.';
+            return;
+        }
+        // Mirror whatever the page is already saying, so there is one story.
+        const said = el && el.textContent.replace(/\s+/g, ' ').trim();
+        label.textContent = said && said.length < 60
+            ? said
+            : 'Loading data in the background\u2026';
+        setTimeout(tick, 400);
+    };
+    tick();
   }
 
   if (document.body) build();

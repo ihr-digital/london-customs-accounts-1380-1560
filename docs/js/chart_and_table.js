@@ -157,6 +157,21 @@ function startVirtualTable(items, shortToColour) {
         box.style.overflowAnchor = 'none';
         box._vtBound = true;
     }
+
+    // The first draw happens while the table is still hidden and the container
+    // has not reached its height, so the window was sized against about 200px
+    // and stopped at ten rows -- which reads as "that is all there is" until
+    // something nudges the scroll. Watch the box instead of assuming it: this
+    // fires when the content is revealed, when the viewport changes, and when
+    // the view tabs bring the table back.
+    if (box && !box._vtResize && typeof ResizeObserver !== 'undefined') {
+        box._vtResize = new ResizeObserver(() => {
+            if (!VT || box.clientHeight === VT.lastViewH) return;  // no loop on our own spacers
+            if (_vtRaf) return;
+            _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
+        });
+        box._vtResize.observe(box);
+    }
     if (box) box.scrollTop = 0;
     drawTableWindow();
 }
@@ -194,6 +209,7 @@ function drawTableWindow() {
     const off = vtOffsets();
     const scrollTop = box ? box.scrollTop : 0;
     const viewH = (box && box.clientHeight) || 600;
+    VT.lastViewH = box ? box.clientHeight : 0;
     const OVER = 6;
 
     // First row whose bottom edge is below the top of the viewport.
