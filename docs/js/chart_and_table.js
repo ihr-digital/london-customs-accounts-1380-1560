@@ -380,8 +380,12 @@ function renderTable(data, undatedHeldBack = 0) {
         if (VT) measureWindow();
     });
 
-    // Trigger click if only one lading (delegated event)
-    if (isSingleLading) {
+    // Trigger click if only one lading (delegated event).
+    // VT.single, not a local: `isSingleLading` became a parameter of ladingRowHtml
+    // when the virtual window was lifted out of this function, and its declaration
+    // here went with it. The use stayed, so every render threw a ReferenceError at
+    // this line -- after the rows were drawn, which is why the table looked fine.
+    if (VT && VT.single) {
         $ladingTableTbody.find('.single-lading-auto-click').trigger('click');
     }
 }

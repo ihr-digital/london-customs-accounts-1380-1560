@@ -18,6 +18,7 @@ project: a digital humanities edition of medieval London customs accounts
    Commodity Groupings <content/commodity-groupings.md>
    Rationalising the Qualifiers <content/qualifier-rationalisation.md>
    Name Matching <content/name-matching.md>
+   The Editorial Indices <content/editorial-index-rebuild.md>
    Data Model <content/data-model.md>
    Linked Data API <content/linked-data.md>
    Contributing <content/contributing.md>

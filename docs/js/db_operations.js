@@ -543,6 +543,26 @@ db.version(91).stores({
     }
 });
 
+db.version(92).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // 54 lading headings gained an annotation: 53 a destination place the date
+    // rule had been swallowing ("exeunte versus Calisiam die"), and one a
+    // master-surname that a missing space in the transcription had glued to
+    // "eodem". Only the headings changed, but a cached lading holds its own
+    // annotations, so the cached copies have to go.
+    console.warn("DB v92 — clearing ladings to pick up 54 corrected headings");
+    try {
+        await trans.table("ladings").clear();
+    } catch (error) {
+        console.error("Error clearing data on v92 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

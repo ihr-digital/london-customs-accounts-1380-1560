@@ -240,7 +240,28 @@ $(() => {
         $(this).tooltip('hide');
     });
 
+    // The open tab is URL state: record it when it changes, and restore it on
+    // arrival, so a link to the map opens the map.
+    const VIEWS = {'table-tab': 'table', 'chart-tab': 'chart', 'map-tab': 'map'};
+    $('#table-tab, #chart-tab, #map-tab').on('shown.bs.tab', function () {
+        window.mlcaView = VIEWS[this.id] || 'table';
+        if (typeof updateURLFromFilterState === 'function') updateURLFromFilterState();
+    });
+
+    const wanted = new URLSearchParams(location.search).get('view');
+    if (wanted && wanted !== 'table') {
+        const button = document.getElementById(`${wanted}-tab`);
+        // The map and chart both build themselves on first show, so triggering
+        // the tab is the whole restoration: their own handlers do the rest.
+        if (button) new bootstrap.Tab(button).show();
+    }
+
     $('#map-tab').on('shown.bs.tab', function () {
-        initMap();
+        // initMap probes the basemap service before building the map, so it is
+        // async now. Nothing waits on it, but an unhandled rejection would be
+        // invisible, and a map that silently fails to appear is the whole
+        // problem this tab has had.
+        Promise.resolve(initMap()).catch(error =>
+            console.error('[map] initialisation failed:', error));
     });
 });

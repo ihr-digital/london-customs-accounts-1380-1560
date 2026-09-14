@@ -555,7 +555,16 @@ function updateURLFromFilterState() {
             params.set("gmode", "AND");
         }
     }
-    const newUrl = `${window.location.pathname}?${params.toString()}`;
+    // Which of Table / Chart / Map is open is part of where you are, so it
+    // belongs in the link you send someone.
+    if (window.mlcaView && window.mlcaView !== "table") {
+        params.set("view", window.mlcaView);
+    }
+    // KEEP THE HASH. This function is called on every filter change and used to
+    // write `pathname?params`, discarding the fragment -- which is where MapLibre
+    // keeps the map's position, so panning the map and then touching a filter
+    // silently threw the view away.
+    const newUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
     history.replaceState({}, "", newUrl);
 }
 
