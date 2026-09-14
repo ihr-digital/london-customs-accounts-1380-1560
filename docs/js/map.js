@@ -236,6 +236,14 @@ async function corpusGazetteer(map) {
     });
 
     // One label per place, from its own source: see write_map_geojson().
+    try {
+        mapFilter.forms = await (await fetch('./data/geo/corpus-gazetteer-forms.json')).json();
+        mapFilter.total = data.features.length;
+        mapFilter.present = new Set(data.features.map(f => f.properties.id));
+    } catch (error) {
+        console.warn('[map] no corpus form index; filter mode unavailable:', error);
+    }
+
     const labels = await (await fetch('./data/geo/corpus-gazetteer-labels.geojson')).json();
     map.addSource('corpus-gazetteer-labels', {type: 'geojson', data: labels});
 
@@ -391,6 +399,13 @@ const KEY_ENTRIES = [
     {label: 'London', swatch: 'crown', layers: [], on: true, fixed: true},
 ];
 
+// Not a layer, so not a layer switch: it changes which places every gazetteer
+// layer shows, rather than whether one of them is drawn.
+const FILTER_MODE = {
+    label: 'Follow the table filters',
+    note: 'show only places the filtered table evidences',
+};
+
 const KEY_CSS = `
 .map-key{background:rgba(255,255,255,.93);border-radius:6px;padding:8px 10px;
   font:12px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
@@ -480,6 +495,33 @@ function mapKey(map) {
 
     // Bottom right, stacked above the attribution: the bottom left corner sat
     // over the Channel approaches, which is where this corpus is busiest.
+    const rule = document.createElement('div');
+    rule.style.cssText = 'border-top:1px solid #e2e2e2;margin:7px 0 6px';
+    container.appendChild(rule);
+
+    const mode = document.createElement('label');
+    const modeBox = document.createElement('input');
+    modeBox.type = 'checkbox';
+    modeBox.checked = mapFilter.on;
+    modeBox.addEventListener('change', () => {
+        mapFilter.on = modeBox.checked;
+        applyMapFilter(map);
+    });
+    mode.appendChild(modeBox);
+    const modeName = document.createElement('span');
+    modeName.className = 'nm';
+    modeName.textContent = FILTER_MODE.label;
+    const modeNote = document.createElement('span');
+    modeNote.className = 'note';
+    modeNote.textContent = FILTER_MODE.note;
+    modeName.appendChild(modeNote);
+    const count = document.createElement('span');
+    count.className = 'note';
+    count.id = 'map-filter-count';
+    modeName.appendChild(count);
+    mode.appendChild(modeName);
+    container.appendChild(mode);
+
     map.addControl({onAdd: () => container, onRemove: () => container.remove()},
         'bottom-right');
 }
@@ -532,6 +574,99 @@ function limitToGazetteer(map, bounds) {
 }
 
 
+/**
+ * Filter mode: show only the places the filtered table actually evidences.
+ *
+ * Off by default. The map's usual job is to show the gazetteer, and a map that
+ * silently hides most of it because a filter is set elsewhere would be a
+ * puzzle rather than a view; switching it on is how you ask the question.
+ *
+ * A lading names its port in its heading, in the spelling of the account --
+ * "Brekilsey", "Pennerke", "London'". corpus-gazetteer-forms.json is what turns
+ * those into gazetteer rows; nothing else in the browser can.
+ */
+const GAZETTEER_LAYERS = {
+    'gazetteer-areas': ['==', ['get', 'has_outline'], true],
+    'gazetteer-areas-outline': ['==', ['get', 'has_outline'], true],
+    'gazetteer-points': ['==', ['get', 'has_outline'], false],
+    'gazetteer-labels': ['>=', ['get', 'occurrences'], 25],
+    'gazetteer-labels-minor': ['<', ['get', 'occurrences'], 25],
+};
+
+const mapFilter = {
+    on: false,
+    forms: null,          // corpus spelling -> place id
+    ladings: null,        // whatever the table last showed
+    seen: new WeakMap(),  // lading object -> its place ids, computed once
+};
+
+
+function placesIn(ladings) {
+    const ids = new Set();
+    if (!mapFilter.forms) return ids;
+    for (const lading of ladings) {
+        let mine = mapFilter.seen.get(lading);
+        if (!mine) {
+            mine = [];
+            // In the browser a lading is FLAT -- `text` and `annotations` at the
+            // top level. The .json.gz on disk nests them under `label`, and
+            // reading the file's shape instead of the page's is why the first
+            // version of this matched nothing at all while looking as though it
+            // worked. The fallback keeps both shapes usable.
+            const annotations = lading.annotations
+                || (lading.label && lading.label.annotations) || [];
+            for (const a of annotations) {
+                if (a.type !== 'place') continue;
+                const id = mapFilter.forms[a.text] || mapFilter.forms[(a.text || '').toLowerCase()];
+                if (id) mine.push(id);
+            }
+            // Cached on the lading object itself: the same 33,000 objects are
+            // re-filtered on every keystroke, and their annotations never change.
+            mapFilter.seen.set(lading, mine);
+        }
+        for (const id of mine) ids.add(id);
+    }
+    // Only places the map actually draws. The form index covers the whole
+    // gazetteer, including London (its own crown), the rows no ship sailed from
+    // and the ones a curator refused to place -- so without this the tally read
+    // "291 of 235", which is not a number anyone should have to interpret.
+    if (mapFilter.present) {
+        for (const id of [...ids]) if (!mapFilter.present.has(id)) ids.delete(id);
+    }
+    return ids;
+}
+
+
+function applyMapFilter(map) {
+    if (!map || !map.getLayer('gazetteer-points')) return;
+    const active = mapFilter.on && mapFilter.ladings;
+    const ids = active ? [...placesIn(mapFilter.ladings)] : null;
+    for (const [layer, base] of Object.entries(GAZETTEER_LAYERS)) {
+        if (!map.getLayer(layer)) continue;
+        map.setFilter(layer, active
+            ? ['all', base, ['in', ['get', 'id'], ['literal', ids]]]
+            : base);
+    }
+    const note = document.getElementById('map-filter-count');
+    if (note) {
+        note.textContent = active
+            ? `${ids.length} of ${mapFilter.total || '?'} places in the current table`
+            : '';
+    }
+    window.mapFilterActive = !!active;
+    window.mapFilterIds = ids ? ids.length : null;
+}
+
+
+/**
+ * Called by the table whenever its filters change. Safe before the map exists.
+ */
+window.mlcaTableFiltered = function (ladings) {
+    mapFilter.ladings = ladings;
+    if (window._map) applyMapFilter(window._map);
+};
+
+
 async function initMap() {
     if (window._mapInitialized) return;
     window._mapInitialized = true;
@@ -576,6 +711,7 @@ async function initMap() {
 
         await corpusGazetteer(map);
         mapKey(map);
+        applyMapFilter(map);
 
         window.mlcaMapReady = true;
     });

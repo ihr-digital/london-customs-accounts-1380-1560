@@ -11,6 +11,10 @@ project: a digital humanities edition of medieval London customs accounts
    :caption: Contents
 
    Introduction <content/introduction.md>
+   The Table <content/using-the-table.md>
+   The Chart <content/using-the-chart.md>
+   The Map <content/using-the-map.md>
+   The More menu <content/more-resources.md>
    Pipeline <content/pipeline.md>
    Glossary Editor <content/glossary-editor.md>
    Concept, Qualifier & Leftover Review <content/concept-review-tool.md>

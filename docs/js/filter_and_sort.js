@@ -395,6 +395,13 @@ async function applyFilters() {
         renderTable(finalFilteredLadings, undatedHeldBack);
         $('#exportButtons i.fa-file-code').parent('span').data('data-export', finalFilteredLadings);
 
+        // Tell the map what the table is showing. It decides for itself whether
+        // to act on it -- filter mode is a switch on the map, off by default --
+        // and it copes with being told before it exists.
+        if (typeof window.mlcaTableFiltered === 'function') {
+            window.mlcaTableFiltered(finalFilteredLadings);
+        }
+
         if (!isLadingIdSearch) {
             $(".lading-text").each(function () {
                 highlightMatches($(this), currentSearchQuery);

@@ -22,6 +22,13 @@ visualisations.
 | Unique surname forms | 37,693 with 245,712 scored neighbour edges |
 | Person records | 79,205 |
 
+## Using the site
+
+- **[The Table](using-the-table.md)** — the edition itself, and the filters. The filters govern the Chart and the Map too, so start here.
+- **[The Chart](using-the-chart.md)** — the filtered ladings against the enrolled customs totals.
+- **[The Map](using-the-map.md)** — the corpus gazetteer, and how to make the map follow the Table's filters.
+- **[The More menu](more-resources.md)** — glossary, customs officials, name clusters, and the surviving account books.
+
 ## What's in the rest of this documentation
 
 - **[Pipeline](pipeline.md)** — the Python scripts that turn Word documents into JSON, in run order.
