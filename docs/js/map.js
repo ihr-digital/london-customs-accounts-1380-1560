@@ -442,7 +442,9 @@ const KEY_CSS = `
 .map-key .sw.line{height:0;border-top:3px solid;margin-top:8px}
 .map-key .nm{flex:1}
 .map-key .note{display:block;color:#777;font-size:10.5px}
-.map-key .note.empty{color:#9b2c2c;font-weight:600}
+.map-key .filter-count{font-size:11px;color:#444;margin:0 0 5px;min-height:1em}
+.map-key .filter-count:empty{display:none}
+.map-key .filter-count.empty{color:#9b2c2c;font-weight:600}
 .map-key .note a{color:#2b6cb0}
 .map-key input:disabled+.sw,.map-key input:disabled~.nm{opacity:.45}
 .map-key .tl{display:flex;align-items:center;gap:6px;margin:4px 0 0 20px}
@@ -547,6 +549,14 @@ function mapKey(map) {
     rule.style.cssText = 'border-top:1px solid #e2e2e2;margin:7px 0 6px';
     container.appendChild(rule);
 
+    // The count describes whichever mode is active, so it sits above both rather
+    // than inside one of them -- where it inherited that label's disabled styling
+    // and greyed out in exactly the mode it was reporting on.
+    const count = document.createElement('div');
+    count.className = 'filter-count';
+    count.id = 'map-filter-count';
+    container.appendChild(count);
+
     const mode = document.createElement('label');
     const modeBox = document.createElement('input');
     modeBox.type = 'checkbox';
@@ -564,10 +574,6 @@ function mapKey(map) {
     modeNote.className = 'note';
     modeNote.textContent = FILTER_MODE.note;
     modeName.appendChild(modeNote);
-    const count = document.createElement('span');
-    count.className = 'note';
-    count.id = 'map-filter-count';
-    modeName.appendChild(count);
     mode.appendChild(modeName);
     container.appendChild(mode);
 

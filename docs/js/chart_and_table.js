@@ -133,17 +133,24 @@ let _vtRaf = 0;
 function startVirtualTable(items, shortToColour) {
     const box = document.getElementById('tableScrollContainer');
     const keepExpanded = (VT && VT.expanded) || new Set();
+    // Carry the measured row height across rebuilds. Rows do not change height
+    // because a filter changed, but starting from the 48px guess every time made
+    // the first draw after a filter short by a third -- 22 rows where 30 fit --
+    // until a measure corrected it. What the table already knows about itself is
+    // better than a constant.
+    const est = (VT && VT.est) || 48;
     VT = {
         items,
         shortToColour,
         single: items.length === 1,
-        heights: new Float64Array(items.length).fill(48),  // replaced on first measure
-        est: 48,
+        heights: new Float64Array(items.length).fill(est),  // replaced on first measure
+        est,
         // Which rows are open, by lading_id rather than by DOM node: a row that
         // scrolls out of the window loses its element, and must come back open.
         expanded: keepExpanded,
         offsets: null,
         dirty: true,
+        refills: 0,
         start: 0,
         end: 0,
     };
@@ -167,7 +174,10 @@ function startVirtualTable(items, shortToColour) {
     if (box && !box._vtResize && typeof ResizeObserver !== 'undefined') {
         box._vtResize = new ResizeObserver(() => {
             if (!VT || box.clientHeight === VT.lastViewH) return;  // no loop on our own spacers
-            if (_vtRaf) return;
+            // Replace any queued frame rather than skipping this one: a draw
+            // already scheduled was scheduled against the size we have just
+            // stopped having.
+            if (_vtRaf) cancelAnimationFrame(_vtRaf);
             _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
         });
         box._vtResize.observe(box);
@@ -208,7 +218,22 @@ function drawTableWindow() {
 
     const off = vtOffsets();
     const scrollTop = box ? box.scrollTop : 0;
-    const viewH = (box && box.clientHeight) || 600;
+
+    // SIZE THE WINDOW BY THE SPACE AVAILABLE, NOT BY THE SPACE IN USE.
+    //
+    // #tableScrollContainer is `max-height: 80vh` with no height, so its height
+    // comes from its content -- which is what this function is deciding. Asking
+    // it how tall it is makes the calculation circular: draw few rows, the box
+    // is short, so few rows is the right number, and that is a stable answer
+    // rather than a transient one. Measured on a Categories change: the box was
+    // 129px when the window was computed and 760px a moment later, and the table
+    // sat at nine ladings until a scroll nudged it.
+    //
+    // 80vh is the ceiling the stylesheet imposes, so that is the most the box can
+    // ever be. Sizing to it draws a few rows more than strictly fit when the box
+    // is genuinely short, which costs nothing and cannot deadlock.
+    const ceiling = Math.round(window.innerHeight * 0.8);
+    const viewH = Math.max((box && box.clientHeight) || 0, ceiling, 600);
     VT.lastViewH = box ? box.clientHeight : 0;
     const OVER = 6;
 
@@ -241,6 +266,14 @@ function drawTableWindow() {
 // record, and the spacers with it, or the scrollbar lies by more and more the
 // further down the list you go.
 function measureWindow() {
+    // These were used below without being declared here -- `box` and `viewH` are
+    // locals of drawTableWindow, and the checks at the foot of this function
+    // referenced them across the boundary. Guarded by an early `return` on the
+    // common path, so it threw only when heights actually changed, and nothing
+    // in a run of the site happened to catch it.
+    const box = document.getElementById('tableScrollContainer');
+    const viewH = Math.max((box && box.clientHeight) || 0,
+                           Math.round(window.innerHeight * 0.8), 600);
     const tbody = $ladingTableTbody[0];
     const rows = tbody.querySelectorAll('tr[data-id]');
     let changed = false;
@@ -251,8 +284,12 @@ function measureWindow() {
     });
     if (!changed) return;
     // The first honest measurement is a better estimate for everything unmeasured
-    // than the guess it replaces.
-    if (VT.est === 48 && rows.length) {
+    // than the guess it replaces. Tested against the measurement rather than
+    // against the sentinel 48: the estimate is now carried across rebuilds, so
+    // "have we measured yet" is no longer the question. "Is what we are assuming
+    // still true" is, and it keeps working when rows genuinely change height --
+    // switching to Footnotes, or a single-lading view.
+    if (rows.length && Math.abs(VT.heights[VT.start] - VT.est) > 2) {
         VT.est = VT.heights[VT.start];
         for (let i = 0; i < VT.heights.length; i++) {
             if (i < VT.start || i >= VT.end) VT.heights[i] = VT.est;
@@ -264,6 +301,47 @@ function measureWindow() {
     if (spacers.length === 2) {
         spacers[0].style.height = Math.max(0, Math.round(off[VT.start])) + 'px';
         spacers[1].style.height = Math.max(0, Math.round(off[VT.items.length] - off[VT.end])) + 'px';
+    }
+
+    // THE INVARIANT: IF ROWS REMAIN, THE DRAWN WINDOW MUST REACH THE BOTTOM OF
+    // THE VIEWPORT. Anything else is a short table, and a short table looks
+    // exactly like a complete one -- which is why the Categories bug survived a
+    // ResizeObserver written to catch it.
+    //
+    // This is the check rather than a "more below" row in the table, because the
+    // table is virtual and there is ALWAYS more below: such a row would show
+    // permanently and say nothing. Here the healthy case is silent and the
+    // unhealthy one repairs itself.
+    //
+    // Bounded, because a redraw that changes nothing would otherwise schedule
+    // another for ever. Each pass measures real heights, so a genuine shortfall
+    // is normally corrected on the first retry.
+    const drawnPx = off[VT.end] - off[VT.start];
+    if (VT.end < VT.items.length && drawnPx < viewH && (VT.refills || 0) < 3) {
+        VT.refills = (VT.refills || 0) + 1;
+        if (!_vtRaf) {
+            _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
+        }
+    } else if (drawnPx >= viewH) {
+        VT.refills = 0;
+    }
+
+    // DRAW AGAIN IF THE VIEWPORT WAS NOT ITS FULL SIZE WHEN WE MEASURED IT.
+    //
+    // Re-running the filters empties the table, so the container collapses while
+    // the new rows are being built. Measured on a Categories change: the window
+    // was sized against a 129px box that was 760px by the time the rows landed,
+    // and stopped at nine ladings -- which reads as "that is all there is" until
+    // a scroll nudges it back to thirty.
+    //
+    // The ResizeObserver above was meant to catch exactly this and could not: it
+    // drops the notification when a frame is already queued, and on this path one
+    // always is. Self-correcting here needs no observer and no guessing about
+    // when layout settles -- if the box is a different size now than when the
+    // window was computed, the window is wrong, so compute it again.
+    const settled = box ? box.clientHeight : 0;
+    if (box && settled !== VT.lastViewH && !_vtRaf) {
+        _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
     }
 }
 
