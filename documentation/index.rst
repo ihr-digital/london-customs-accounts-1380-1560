@@ -32,7 +32,7 @@ project: a digital humanities edition of medieval London customs accounts
 
 .. toctree::
    :maxdepth: 2
-   :caption: How the data is made
+   :caption: How the dataset is made
 
    Pipeline <content/pipeline.md>
    Name Matching <content/name-matching.md>
@@ -47,6 +47,6 @@ project: a digital humanities edition of medieval London customs accounts
 
 .. toctree::
    :maxdepth: 2
-   :caption: Taking part
+   :caption: Project staff
 
-   Contributing <content/contributing.md>
+   Editing these pages <content/contributing.md>

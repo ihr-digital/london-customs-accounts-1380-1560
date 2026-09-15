@@ -1,5 +1,7 @@
 # The Chart
 
+**[Open the Chart](https://ihr-digital.github.io/london-customs-accounts-1380-1560/?view=chart)** — opens in the site itself.
+
 The Chart plots the ladings **currently passing the Table's filters** against
 the enrolled customs totals, so it answers "how much of the recorded trade does
 this filtered set account for?"

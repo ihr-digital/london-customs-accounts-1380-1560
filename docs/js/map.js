@@ -371,6 +371,7 @@ async function gazetteerBounds() {
  * turned off.
  */
 const KEY_ENTRIES = [
+    {label: 'London', swatch: 'crown', layers: [], on: true, fixed: true},
     {
         label: 'Places named in the accounts', swatch: 'disc', colour: '#f0c86b',
         layers: ['gazetteer-points', 'gazetteer-labels',
@@ -386,17 +387,27 @@ const KEY_ENTRIES = [
         label: 'Customs ports, 1566', swatch: 'disc', colour: '#d62f2f',
         layers: ['customs-ports-clusters', 'customs-ports-cluster-count',
                  'customs-ports-unclustered-point', 'customs-ports-labels'],
-        on: false, note: 'a later administrative geography',
+        // Every customs-port layer is minzoom 5, so switching this on at the
+        // opening view changes nothing you can see -- and MapLibre, rightly,
+        // credits a source only where its layers actually draw, so the
+        // attribution stays quiet until then too. Say so rather than let the
+        // switch look broken.
+        on: false, note: 'a later administrative geography — zoom in to see them',
+        source: {text: 'Gadd, 1566',
+                 href: 'https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565'},
     },
     {
         label: 'Inland navigation', swatch: 'line', colour: '#0b3b53',
-        layers: ['navigable-waterways'], on: true, note: 'Oksanen, 2019',
+        layers: ['navigable-waterways'], on: true,
+        source: {text: 'Oksanen, 2019',
+                 href: 'https://archaeologydataservice.ac.uk/archives/collections/view/1003427/index.cfm'},
     },
     {
         label: 'Water, c.1500', swatch: 'area', colour: '#8fb8c4',
-        layers: ['viabundus-water'], on: true, note: 'Viabundus',
+        layers: ['viabundus-water'], on: true,
+        source: {text: 'Viabundus',
+                 href: 'https://www.landesgeschichte.uni-goettingen.de/handelsstrassen/info.php'},
     },
-    {label: 'London', swatch: 'crown', layers: [], on: true, fixed: true},
     // Not built yet. It is here as a switch rather than as a plan because the
     // key is where a reader looks to find out what the map can show, and an
     // absent feature and an unbuilt one are worth distinguishing.
@@ -431,6 +442,9 @@ const KEY_CSS = `
 .map-key .sw.line{height:0;border-top:3px solid;margin-top:8px}
 .map-key .nm{flex:1}
 .map-key .note{display:block;color:#777;font-size:10.5px}
+.map-key .note.empty{color:#9b2c2c;font-weight:600}
+.map-key .note a{color:#2b6cb0}
+.map-key input:disabled+.sw,.map-key input:disabled~.nm{opacity:.45}
 .map-key .tl{display:flex;align-items:center;gap:6px;margin:4px 0 0 20px}
 .map-key .tl input[type=range]{flex:1;min-width:90px;margin:0}
 .map-key .tl button{border:1px solid #ccc;background:#fff;border-radius:3px;
@@ -505,6 +519,20 @@ function mapKey(map) {
             note.textContent = entry.note;
             name.appendChild(note);
         }
+        // The same credit the attribution widget carries, put where a reader is
+        // already looking to find out what a layer is.
+        if (entry.source) {
+            const credit = document.createElement('span');
+            credit.className = 'note';
+            const link = document.createElement('a');
+            link.href = entry.source.href;
+            link.target = '_blank';
+            link.rel = 'noopener';
+            link.textContent = entry.source.text;
+            link.addEventListener('click', event => event.stopPropagation());
+            credit.appendChild(link);
+            name.appendChild(credit);
+        }
         label.appendChild(name);
         container.appendChild(label);
 
@@ -525,6 +553,7 @@ function mapKey(map) {
     modeBox.checked = mapFilter.on;
     modeBox.addEventListener('change', () => {
         mapFilter.on = modeBox.checked;
+        lockModes();
         applyMapFilter(map);
     });
     mode.appendChild(modeBox);
@@ -560,55 +589,38 @@ function mapKey(map) {
     const tlRow = document.createElement('div');
     tlRow.className = 'tl';
     tlRow.hidden = true;
-    const play = document.createElement('button');
-    play.type = 'button';
-    play.textContent = '\u25B6';
-    play.title = 'Play';
     const slider = document.createElement('input');
     slider.type = 'range';
     slider.id = 'map-timeline-slider';
     slider.step = '1';
-    tlRow.append(play, slider);
+    tlRow.append(slider);
     container.appendChild(tlRow);
 
-    const stop = () => {
-        timeline.playing = false;
-        if (timeline.timer) clearInterval(timeline.timer);
-        timeline.timer = null;
-        play.textContent = '\u25B6';
-        play.title = 'Play';
-    };
-    const step = () => {
-        const last = Number(slider.max);
-        timeline.year = timeline.year >= last ? Number(slider.min) : timeline.year + 1;
-        slider.value = timeline.year;
-        applyMapFilter(map);
+    const EXCLUSIVE = 'Timeline and the table filters both decide which places '
+        + 'are shown; switch one off to use the other.';
+
+    const lockModes = () => {
+        modeBox.disabled = timeline.on;
+        tlBox.disabled = mapFilter.on;
+        mode.title = timeline.on ? EXCLUSIVE : '';
+        tlLabel.title = mapFilter.on ? EXCLUSIVE : '';
+        mode.classList.toggle('disabled', timeline.on);
+        tlLabel.classList.toggle('disabled', mapFilter.on);
     };
 
     tlBox.addEventListener('change', () => {
         timeline.on = tlBox.checked;
-        if (timeline.on) {
-            prepareTimeline();
-            tlRow.hidden = false;
-        } else {
-            stop();
-            tlRow.hidden = true;
-        }
+        if (timeline.on) prepareTimeline();
+        tlRow.hidden = !timeline.on;
+        lockModes();
         applyMapFilter(map);
     });
     slider.addEventListener('input', () => {
-        // Dragging is a deliberate act; it should take the wheel from the player.
-        stop();
         timeline.year = Number(slider.value);
         applyMapFilter(map);
     });
-    play.addEventListener('click', () => {
-        if (timeline.playing) { stop(); return; }
-        timeline.playing = true;
-        play.textContent = '\u25A0';
-        play.title = 'Pause';
-        timeline.timer = setInterval(step, timeline.STEP_MS);
-    });
+
+    lockModes();
 
     map.addControl({onAdd: () => container, onRemove: () => container.remove()},
         'bottom-right');
@@ -694,13 +706,14 @@ const mapFilter = {
 // is not blinking in and out on the strength of one voyage, and narrow enough
 // that the shift of trade -- Gascony, then the Low Countries, then the Baltic --
 // is visible as movement rather than as a static scatter.
+//
+// It is mutually exclusive with following the table's filters: both decide which
+// places are shown, and two answers to one question is not a mode, it is a bug
+// waiting to be reported. Whichever is on disables the other in the key.
 const timeline = {
     on: false,
     year: null,
     window: 10,
-    playing: false,
-    timer: null,
-    STEP_MS: 850,
 };
 
 
@@ -803,11 +816,17 @@ function applyMapFilter(map) {
     }
     const note = document.getElementById('map-filter-count');
     if (note) {
+        const span = `${timeline.year}–${timeline.year + timeline.window - 1}`;
         note.textContent = !active ? ''
             : timeline.on
-                ? `${ids.length} of ${mapFilter.total || '?'} places in `
-                  + `${timeline.year}–${timeline.year + timeline.window - 1}`
+                ? (ids.length
+                    ? `${ids.length} of ${mapFilter.total || '?'} places in ${span}`
+                    // Long stretches of the corpus name no placeable port at all.
+                    // An empty map with no explanation reads as a fault; saying so
+                    // makes it a finding.
+                    : `no places named in ${span}`)
                 : `${ids.length} of ${mapFilter.total || '?'} places in the current table`;
+        note.classList.toggle('empty', !!active && timeline.on && !ids.length);
     }
     window.mapFilterActive = !!active;
     window.mapFilterIds = ids ? ids.length : null;

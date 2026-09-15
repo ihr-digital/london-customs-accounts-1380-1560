@@ -1,9 +1,15 @@
 # The Table
 
+**[Open the Table](https://ihr-digital.github.io/london-customs-accounts-1380-1560/)** — opens in the site itself.
+
 The Table is the edition itself: one row per **lading** — a consignment entered
 under a ship's heading — with its cargos beneath. Everything else on the site
 shows the same set of ladings in another form, so **the filters described here
 govern the Chart and the Map as well**.
+
+- The [Chart](using-the-chart.md) always plots the filtered set.
+- The [Map](using-the-map.md) will narrow to it, but only if you ask: its
+  *Follow the table filters* switch is off until you turn it on.
 
 ## Reading a row
 

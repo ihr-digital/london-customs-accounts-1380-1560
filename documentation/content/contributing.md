@@ -1,4 +1,16 @@
-# Contributing to the documentation
+# Editing these documentation pages
+
+:::{important}
+**For project staff only, and it affects these documentation pages only.**
+
+- Editing here changes **the words on these documentation pages** — nothing else.
+- It does **not** change the edition, the gazetteer, the glossary, or any data
+  shown on the site. Those come from the pipeline, not from this directory.
+- It needs **write access to the repository**. Without it these steps will not
+  work, and there is no public contribution route.
+- If you have spotted a problem in the data rather than in the prose, raise it
+  with the project team rather than editing here.
+:::
 
 The documentation lives in the
 [`documentation/`](https://github.com/docuracy/London_Customs_Accounts/tree/main/documentation)
