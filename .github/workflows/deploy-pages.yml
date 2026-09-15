@@ -259,6 +259,14 @@ jobs:
           echo "Documentation files: $(find docs/documentation -type f | wc -l)"
 
       # ── Deploy ────────────────────────────────────────────────────────
+      # Version every local script and stylesheet by its content, so a reader
+      # with the site open stops running yesterday's JavaScript against today's
+      # data. Done here, against the runner's checkout, so the committed HTML
+      # stays clean and nobody has to remember.
+      - name: Stamp assets for cache busting
+        run: |
+          python -m process.stamp_assets --dir docs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

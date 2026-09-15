@@ -248,14 +248,6 @@ $(() => {
         if (typeof updateURLFromFilterState === 'function') updateURLFromFilterState();
     });
 
-    const wanted = new URLSearchParams(location.search).get('view');
-    if (wanted && wanted !== 'table') {
-        const button = document.getElementById(`${wanted}-tab`);
-        // The map and chart both build themselves on first show, so triggering
-        // the tab is the whole restoration: their own handlers do the rest.
-        if (button) new bootstrap.Tab(button).show();
-    }
-
     $('#map-tab').on('shown.bs.tab', function () {
         // initMap probes the basemap service before building the map, so it is
         // async now. Nothing waits on it, but an unhandled rejection would be
@@ -264,4 +256,16 @@ $(() => {
         Promise.resolve(initMap()).catch(error =>
             console.error('[map] initialisation failed:', error));
     });
+
+    // RESTORE THE TAB LAST, once every shown.bs.tab handler above is registered.
+    // Showing a tab fires the event immediately, so doing this earlier fired it
+    // into nothing: arriving at ?view=map gave an empty map tab that only built
+    // itself when you switched away and back.
+    const wanted = new URLSearchParams(location.search).get('view');
+    if (wanted && wanted !== 'table') {
+        const button = document.getElementById(`${wanted}-tab`);
+        // The map and chart both build themselves on first show, so triggering
+        // the tab is the whole restoration: their own handlers do the rest.
+        if (button) new bootstrap.Tab(button).show();
+    }
 });

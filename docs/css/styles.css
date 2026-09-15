@@ -764,7 +764,11 @@ h1 .date-range {
 #map {
     height: 80vh;
     margin: 0;
-    background: #0b0b2d;
+    /* CARTO Voyager's own sea, sampled from an open-ocean tile. This is what
+       shows before the first tiles arrive, so it should be the colour the map is
+       about to be: the old dark navy was the fallback basemap's sea, and it
+       flashed dark on a map that was about to come up pale. */
+    background: #d5e8eb;
 }
 
 .marker {

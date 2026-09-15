@@ -397,6 +397,14 @@ const KEY_ENTRIES = [
         layers: ['viabundus-water'], on: true, note: 'Viabundus',
     },
     {label: 'London', swatch: 'crown', layers: [], on: true, fixed: true},
+    // Not built yet. It is here as a switch rather than as a plan because the
+    // key is where a reader looks to find out what the map can show, and an
+    // absent feature and an unbuilt one are worth distinguishing.
+    {
+        label: 'Commodity provenance', swatch: 'disc', colour: '#9aa6b2',
+        layers: [], on: false, disabled: true,
+        note: 'where the goods came from — not yet available',
+    },
 ];
 
 // Not a layer, so not a layer switch: it changes which places every gazetteer
@@ -415,13 +423,20 @@ const KEY_CSS = `
 .map-key label{display:flex;align-items:flex-start;gap:7px;margin-bottom:5px;
   cursor:pointer}
 .map-key label.fixed{cursor:default;opacity:.85}
+.map-key label.disabled{cursor:not-allowed;opacity:.45}
 .map-key input{margin:2px 0 0;flex:0 0 auto}
 .map-key .sw{flex:0 0 14px;width:14px;height:14px;margin-top:1px}
 .map-key .sw.disc{border-radius:50%;border:1px solid #3d2c00}
 .map-key .sw.area{border-radius:2px;opacity:.55;border:1px solid #3d2c00}
 .map-key .sw.line{height:0;border-top:3px solid;margin-top:8px}
 .map-key .nm{flex:1}
-.map-key .note{display:block;color:#777;font-size:10.5px}`;
+.map-key .note{display:block;color:#777;font-size:10.5px}
+.map-key .tl{display:flex;align-items:center;gap:6px;margin:4px 0 0 20px}
+.map-key .tl input[type=range]{flex:1;min-width:90px;margin:0}
+.map-key .tl button{border:1px solid #ccc;background:#fff;border-radius:3px;
+  width:24px;height:22px;line-height:1;cursor:pointer;font-size:11px;padding:0}
+.map-key .tl button:hover{background:#f0f0f0}
+.map-key .tl[hidden]{display:none}`;
 
 
 function mapKey(map) {
@@ -448,11 +463,16 @@ function mapKey(map) {
         const label = document.createElement('label');
         if (entry.fixed) label.className = 'fixed';
 
+        if (entry.disabled) label.classList.add('disabled');
+
         if (!entry.fixed) {
             const box = document.createElement('input');
             box.type = 'checkbox';
             box.checked = entry.on;
-            box.addEventListener('change', () => show(entry, box.checked));
+            box.disabled = !!entry.disabled;
+            if (!entry.disabled) {
+                box.addEventListener('change', () => show(entry, box.checked));
+            }
             label.appendChild(box);
         } else {
             const spacer = document.createElement('span');
@@ -521,6 +541,74 @@ function mapKey(map) {
     modeName.appendChild(count);
     mode.appendChild(modeName);
     container.appendChild(mode);
+
+    // --- timeline -----------------------------------------------------------
+    const tlLabel = document.createElement('label');
+    const tlBox = document.createElement('input');
+    tlBox.type = 'checkbox';
+    tlLabel.appendChild(tlBox);
+    const tlName = document.createElement('span');
+    tlName.className = 'nm';
+    tlName.textContent = 'Timeline';
+    const tlNote = document.createElement('span');
+    tlNote.className = 'note';
+    tlNote.textContent = `a sliding ${timeline.window}-year window`;
+    tlName.appendChild(tlNote);
+    tlLabel.appendChild(tlName);
+    container.appendChild(tlLabel);
+
+    const tlRow = document.createElement('div');
+    tlRow.className = 'tl';
+    tlRow.hidden = true;
+    const play = document.createElement('button');
+    play.type = 'button';
+    play.textContent = '\u25B6';
+    play.title = 'Play';
+    const slider = document.createElement('input');
+    slider.type = 'range';
+    slider.id = 'map-timeline-slider';
+    slider.step = '1';
+    tlRow.append(play, slider);
+    container.appendChild(tlRow);
+
+    const stop = () => {
+        timeline.playing = false;
+        if (timeline.timer) clearInterval(timeline.timer);
+        timeline.timer = null;
+        play.textContent = '\u25B6';
+        play.title = 'Play';
+    };
+    const step = () => {
+        const last = Number(slider.max);
+        timeline.year = timeline.year >= last ? Number(slider.min) : timeline.year + 1;
+        slider.value = timeline.year;
+        applyMapFilter(map);
+    };
+
+    tlBox.addEventListener('change', () => {
+        timeline.on = tlBox.checked;
+        if (timeline.on) {
+            prepareTimeline();
+            tlRow.hidden = false;
+        } else {
+            stop();
+            tlRow.hidden = true;
+        }
+        applyMapFilter(map);
+    });
+    slider.addEventListener('input', () => {
+        // Dragging is a deliberate act; it should take the wheel from the player.
+        stop();
+        timeline.year = Number(slider.value);
+        applyMapFilter(map);
+    });
+    play.addEventListener('click', () => {
+        if (timeline.playing) { stop(); return; }
+        timeline.playing = true;
+        play.textContent = '\u25A0';
+        play.title = 'Pause';
+        timeline.timer = setInterval(step, timeline.STEP_MS);
+    });
 
     map.addControl({onAdd: () => container, onRemove: () => container.remove()},
         'bottom-right');
@@ -598,7 +686,71 @@ const mapFilter = {
     forms: null,          // corpus spelling -> place id
     ladings: null,        // whatever the table last showed
     seen: new WeakMap(),  // lading object -> its place ids, computed once
+    byYear: null,         // year -> Set(place ids), from the filtered ladings
+    span: [null, null],   // earliest and latest year present
 };
+
+// A sliding window over the corpus. Ten years is wide enough that a modest port
+// is not blinking in and out on the strength of one voyage, and narrow enough
+// that the shift of trade -- Gascony, then the Low Countries, then the Baltic --
+// is visible as movement rather than as a static scatter.
+const timeline = {
+    on: false,
+    year: null,
+    window: 10,
+    playing: false,
+    timer: null,
+    STEP_MS: 850,
+};
+
+
+function yearOf(lading) {
+    const date = lading.primary_date;
+    if (!date) return null;
+    const year = parseInt(String(date).slice(0, 4), 10);
+    return Number.isFinite(year) ? year : null;
+}
+
+
+/**
+ * Place ids by year, over whatever the table is currently showing.
+ *
+ * Built once per change of the table's filters, not once per frame: auto-play
+ * moves the window every 850ms and re-deriving 33,000 ladings each time would
+ * make the animation a slideshow.
+ */
+function indexByYear() {
+    const byYear = new Map();
+    let earliest = null, latest = null;
+    for (const lading of (mapFilter.ladings || [])) {
+        const year = yearOf(lading);
+        if (year === null) continue;      // undated: no year to place it in
+        earliest = earliest === null ? year : Math.min(earliest, year);
+        latest = latest === null ? year : Math.max(latest, year);
+        let bucket = byYear.get(year);
+        if (!bucket) byYear.set(year, bucket = new Set());
+        for (const id of placesIn([lading])) bucket.add(id);
+    }
+    mapFilter.byYear = byYear;
+    // The span that matters is the span with PLACES in it. Dated ladings begin
+    // before any of them names a port the gazetteer can place, so a window
+    // opening at the first dated year opened on an empty map -- which reads as
+    // a broken timeline rather than as a quiet decade.
+    const bearing = [...byYear.entries()].filter(([, ids]) => ids.size).map(([y]) => y);
+    mapFilter.span = bearing.length
+        ? [Math.min(...bearing), Math.max(...bearing)]
+        : [earliest, latest];
+}
+
+
+function placesInWindow() {
+    const ids = new Set();
+    if (!mapFilter.byYear || timeline.year === null) return ids;
+    for (let y = timeline.year; y < timeline.year + timeline.window; y++) {
+        for (const id of (mapFilter.byYear.get(y) || [])) ids.add(id);
+    }
+    return ids;
+}
 
 
 function placesIn(ladings) {
@@ -639,8 +791,10 @@ function placesIn(ladings) {
 
 function applyMapFilter(map) {
     if (!map || !map.getLayer('gazetteer-points')) return;
-    const active = mapFilter.on && mapFilter.ladings;
-    const ids = active ? [...placesIn(mapFilter.ladings)] : null;
+    const active = (mapFilter.on || timeline.on) && mapFilter.ladings;
+    const ids = !active ? null
+        : timeline.on ? [...placesInWindow()]
+        : [...placesIn(mapFilter.ladings)];
     for (const [layer, base] of Object.entries(GAZETTEER_LAYERS)) {
         if (!map.getLayer(layer)) continue;
         map.setFilter(layer, active
@@ -649,9 +803,11 @@ function applyMapFilter(map) {
     }
     const note = document.getElementById('map-filter-count');
     if (note) {
-        note.textContent = active
-            ? `${ids.length} of ${mapFilter.total || '?'} places in the current table`
-            : '';
+        note.textContent = !active ? ''
+            : timeline.on
+                ? `${ids.length} of ${mapFilter.total || '?'} places in `
+                  + `${timeline.year}–${timeline.year + timeline.window - 1}`
+                : `${ids.length} of ${mapFilter.total || '?'} places in the current table`;
     }
     window.mapFilterActive = !!active;
     window.mapFilterIds = ids ? ids.length : null;
@@ -663,8 +819,35 @@ function applyMapFilter(map) {
  */
 window.mlcaTableFiltered = function (ladings) {
     mapFilter.ladings = ladings;
+    mapFilter.byYear = null;              // the table moved; the buckets are stale
+    if (timeline.on) prepareTimeline();
     if (window._map) applyMapFilter(window._map);
 };
+
+
+/**
+ * Build the year buckets and put the window somewhere sensible within them.
+ */
+function prepareTimeline() {
+    indexByYear();
+    const [earliest, latest] = mapFilter.span;
+    const slider = document.getElementById('map-timeline-slider');
+    if (earliest === null) {
+        timeline.year = null;
+        if (slider) slider.disabled = true;
+        return;
+    }
+    const last = Math.max(earliest, latest - timeline.window + 1);
+    if (timeline.year === null || timeline.year < earliest || timeline.year > last) {
+        timeline.year = earliest;
+    }
+    if (slider) {
+        slider.disabled = false;
+        slider.min = earliest;
+        slider.max = last;
+        slider.value = timeline.year;
+    }
+}
 
 
 async function initMap() {
@@ -682,6 +865,12 @@ async function initMap() {
         hash: true,
         attributionControl: {compact: true},
     });
+
+    // The container shows through until the first tiles land. Paint it the sea
+    // colour of the basemap actually chosen, so the wait is not a flash of the
+    // wrong map.
+    const container = document.getElementById('map');
+    if (container) container.style.background = carto ? CARTO_SEA : seaColour;
 
     window.londonCoordinates = [-0.0817, 51.5084];
 
