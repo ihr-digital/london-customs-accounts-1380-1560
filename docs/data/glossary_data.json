@@ -64360,6 +64360,11 @@
             33
           ],
           "w": 0
+        },
+        {
+          "t": "casiis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -89722,6 +89727,11 @@
           "t": "carssyes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "carzes",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Refined 2026-06-16: descriptions consolidated; qualifiers atomised by category (colour, place, dimension, grain); concatenated multi-term forms split. NOTE: reinterpreted bare 'whyt'/'whytt' as white (colour), not Isle of Wight — cf. 'whyt northen', 'devynsheyre whytt' — while 'wyght'/'de wyght'/'de weythe' remain Isle of Wight. Please verify.",
@@ -109144,6 +109154,11 @@
         },
         {
           "t": "pyscium",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pisce",
           "s": [],
           "w": 0
         }
@@ -172468,8 +172483,8 @@
           "ref": "tanned"
         },
         {
-          "raw": "parvis peciis|parve pecie de",
-          "d": "small pieces"
+          "raw": "scissis",
+          "d": "slit"
         }
       ],
       "x": [],
@@ -263325,8 +263340,8 @@
         }
       ],
       "geo": {
-        "id": "Q4024",
-        "wikidata": "https://www.wikidata.org/entity/Q4024",
+        "id": "Q2916",
+        "wikidata": "https://www.wikidata.org/entity/Q2916",
         "label": "Osnabrück",
         "dataset": "wikidata",
         "point": [
@@ -264322,7 +264337,7 @@
       ],
       "aat": [
         {
-          "id": "300256775",
+          "id": "300389813",
           "label": "meat"
         }
       ]
@@ -264436,8 +264451,8 @@
       ],
       "aat": [
         {
-          "id": "300379226",
-          "label": "ounce"
+          "id": "300379229",
+          "label": "ounces (units for weight)"
         }
       ]
     },

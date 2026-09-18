@@ -563,6 +563,26 @@ db.version(92).stores({
     }
 });
 
+db.version(93).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // Every volume re-annotated: 32,871 quantities that itemised lists had lost,
+    // 4,285 word "numerals" that were not quantities (2 dimidiis barellis, dosen,
+    // seminis), and the glossary and pos.py work since the last regeneration on
+    // 16 Jul. Cargo annotations changed throughout, so both caches have to go.
+    console.warn("DB v93 — clearing ladings and cargos to pick up the re-annotated corpus");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v93 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
