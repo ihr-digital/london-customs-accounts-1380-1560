@@ -680,6 +680,26 @@ db.version(98).stores({
 // preloadAllLadings empties it whenever it finds no ladings at all, and replaces
 // a volume's rows whenever it reloads that volume.
 
+db.version(99).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // 43 "Holande" goods spans restored in 3 volumes ("104 pecias Gente Holande"):
+    // cached cargos hold their own annotations. The provenance store refills with
+    // the corpus (preloadAllLadings clears it when it finds no ladings).
+    console.warn("DB v99 — clearing ladings and cargos to pick up restored Holland cloth");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v99 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

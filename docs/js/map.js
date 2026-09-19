@@ -502,7 +502,13 @@ const KEY_ENTRIES = [
     {
         label: 'Commodity provenance', swatch: 'ring', colour: PROVENANCE_COLOUR,
         layers: ['provenance-points', 'provenance-labels'], on: false,
-        note: 'places the goods are named with (fili Colonie) — not proof of origin',
+        // How the places are found, and what that leaves out: goods whose own name
+        // comes from a place (holland cloth, cambric, osnaburg) carry the place on
+        // the glossary concept, not in the entry, and are deliberately not shown
+        // (Stephen, 19 Sep). Keep the key saying so, or Holland looks unimportant.
+        note: 'a place word written beside the goods in the entry: "fili Colonie", '
+            + 'thread of Cologne. Not proof of origin. Goods whose own name comes '
+            + 'from a place (holland cloth, cambric, osnaburg) are not shown.',
     },
 ];
 
