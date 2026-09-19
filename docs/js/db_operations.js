@@ -660,6 +660,26 @@ db.version(97).stores({
     }
 });
 
+db.version(98).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    // The places goods are NAMED with ("fili Colonie"), one row per lading that
+    // has any: see _collectLadingProvenance. For the map's Commodity provenance
+    // layer, which needs them for the whole corpus and cannot afford to read
+    // every cargo to get them.
+    provenance: "lading_id"
+});
+// NO UPGRADE FUNCTION, deliberately. Nothing cached is wrong; a store is missing,
+// and everything needed to fill it is already in `cargos`. Clearing the corpus
+// to fill it would make every returning visitor download 26MB again for 1MB of
+// derived rows, so backfillProvenance() builds it from the cargos store instead,
+// once. A later bump that clears ladings and cargos need not clear this too:
+// preloadAllLadings empties it whenever it finds no ladings at all, and replaces
+// a volume's rows whenever it reloads that volume.
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -719,6 +739,11 @@ async function preloadAllLadings() {
         $("#overallProgressBar").css("width", `${percentage}%`).attr("aria-valuenow", percentage).text(`${percentage}% (${loaded}/${total} files)`);
     };
 
+    // A corpus being loaded from nothing -- a first visit, or a version bump that
+    // cleared it -- takes its provenance with it, so rows for ladings that no
+    // longer exist cannot outlive them.
+    if (await db.ladings.count() === 0) await db.provenance.clear();
+
     for (const entry of inventory) {
         if (entry.folder_exists) {
             const ref = entry.reference;
@@ -736,6 +761,7 @@ async function preloadAllLadings() {
 
                 const cargosToBulkAdd = [];
                 const searchToBulkAdd = [];
+                const provenanceToBulkPut = [];
                 ladings.forEach(v => {
                     v.volume = ref;
 
@@ -778,6 +804,9 @@ async function preloadAllLadings() {
                     // commodity-group filter can narrow the in-memory lading list
                     // without re-fetching cargos (mirrors customs_type/date).
                     v.groups = _collectLadingGroups(v.cargos);
+
+                    const places = _collectLadingProvenance(v.cargos);
+                    if (places.length) provenanceToBulkPut.push({lading_id: v.lading_id, places});
 
                     if (v.cargos) {
                         // The searchable text, kept apart from the annotations that
@@ -823,6 +852,12 @@ async function preloadAllLadings() {
                 if (searchToBulkAdd.length > 0) {
                     await db.ladingText.bulkPut(searchToBulkAdd, {chunked: true, chunkSize: 500});
                 }
+                // Replace, not add: a volume reloaded on its own must not keep
+                // the rows of ladings that have since lost their places.
+                await db.provenance.bulkDelete(ladings.map(v => v.lading_id));
+                if (provenanceToBulkPut.length > 0) {
+                    await db.provenance.bulkPut(provenanceToBulkPut);
+                }
 
                 loadedFiles++;
                 updateLoadingProgressText(loadedFiles, totalFiles);
@@ -863,6 +898,63 @@ function _collectLadingGroups(cargos) {
         });
     });
     return Array.from(set).sort();
+}
+
+// Every place a lading's GOODS are named with: the geo on a qualifier of a
+// commodity, unit or commodity-unit annotation ("fili Colonie", "peces Gent").
+// One tuple per qualifier, [place id, label, lng, lat, what it qualifies, type].
+//
+// NOT the merchant-place annotations ("mercatore Colonie"). Those say where the
+// MERCHANT was from, which is a different question, and they are left out by
+// construction: only qualifiers are read, and a merchant-place has none.
+//
+// Nor the 31 glossary concepts with an entry-level geo (Holland cloth, dornick):
+// that is not on the annotations, so it is not read here.
+const PROVENANCE_TYPES = new Set(["commodity", "unit", "commodity-unit"]);
+
+function _collectLadingProvenance(cargos) {
+    const out = [];
+    (cargos || []).forEach(cargo => _provenanceOf(cargo.annotations, out));
+    return out;
+}
+
+function _provenanceOf(annotations, out) {
+    (annotations || []).forEach(a => {
+        if (!PROVENANCE_TYPES.has(a.type) || !Array.isArray(a.qualifiers)) return;
+        const match = (a.matches || [])[0];
+        const what = (match && (match.headword || match.key)) || a.text || "";
+        a.qualifiers.forEach(q => {
+            const geo = q && q.geo;
+            if (!geo || !geo.id || !Array.isArray(geo.point)) return;
+            out.push([geo.id, geo.label || q.text || geo.id,
+                      geo.point[0], geo.point[1], what, a.type]);
+        });
+    });
+    return out;
+}
+
+// Fill the provenance store from the cargos already cached, for a visitor whose
+// corpus was loaded before the store existed. Same shape as backfillSearchText,
+// and for the same reason: the loader skips volumes it already holds.
+async function backfillProvenance() {
+    try {
+        if (!await db.ladings.count()) return;       // the loader will do it
+        if (await db.provenance.count() > 0) return;
+        console.warn("Commodity provenance index missing — building it from the cargos store");
+        $("#loadingSpinner .spinner-label").text("indexing the places goods are named with\u2026");
+        const byLading = new Map();
+        await db.cargos.each(c => {
+            const before = (byLading.get(c.lading_id) || []);
+            const after = _provenanceOf(c.annotations, before);
+            if (after.length) byLading.set(c.lading_id, after);
+        });
+        const rows = [];
+        for (const [lading_id, places] of byLading) rows.push({lading_id, places});
+        if (rows.length) await db.provenance.bulkPut(rows, {chunked: true, chunkSize: 500});
+        console.info(`Commodity provenance indexed for ${rows.length} ladings`);
+    } catch (err) {
+        console.error("Could not build the commodity provenance index:", err);
+    }
 }
 
 // `revalidate` is for the one-shot store populations that follow a db.version()

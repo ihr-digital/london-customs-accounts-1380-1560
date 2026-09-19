@@ -289,40 +289,129 @@ async function corpusGazetteer(map) {
     // a region opened two popups and the region -- registered second -- won.
     // Every point in Normandy was unclickable that way, and the ports inside
     // Spain, Holland and Portugal with them.
-    const PICKABLE = ['gazetteer-points', 'gazetteer-areas'];
+    //
+    // A provenance disc is not a rival for the click: it usually stands on the
+    // very place the gazetteer marks (Cologne is both a port the accounts name and
+    // a name the goods carry), so the popup says both rather than choosing.
+    const PICKABLE = ['gazetteer-points', 'gazetteer-areas', 'provenance-points'];
     {
         map.on('click', event => {
-            const here = map.queryRenderedFeatures(event.point, {layers: PICKABLE})
+            const layers = PICKABLE.filter(id => map.getLayer(id));
+            const here = map.queryRenderedFeatures(event.point, {layers})
                 .filter(f => map.getLayoutProperty(f.layer.id, 'visibility') !== 'none');
             if (!here.length) return;
+            const goods = here.find(f => f.layer.id === 'provenance-points');
+            const places = here.filter(f => f.layer.id !== 'provenance-points');
             // A point beats the area it stands in; between two areas, the smaller.
-            const point = here.find(f => f.layer.id === 'gazetteer-points');
-            const chosen = point || here[0];
-            const p = chosen.properties;
-            const volumes = Array.isArray(p.volumes) ? p.volumes : JSON.parse(p.volumes || '[]');
-            // The span of the volumes naming this place. One year when they all
-            // fall in the same accounting year, which is worth saying plainly
-            // rather than printing "1519-1519".
-            const span = p.first_year && p.last_year
-                ? (String(p.first_year) === String(p.last_year)
-                    ? `${p.first_year}` : `${p.first_year}–${p.last_year}`)
-                : '';
-            new maplibregl.Popup({offset: 10})
-                .setLngLat(event.lngLat)
-                .setHTML(
-                    `<strong>${p.title}</strong><br>` +
+            const point = places.find(f => f.layer.id === 'gazetteer-points');
+            const chosen = point || places[0];
+            let html = '';
+            if (chosen) {
+                const p = chosen.properties;
+                const volumes = Array.isArray(p.volumes) ? p.volumes : JSON.parse(p.volumes || '[]');
+                // The span of the volumes naming this place. One year when they all
+                // fall in the same accounting year, which is worth saying plainly
+                // rather than printing "1519-1519".
+                const span = p.first_year && p.last_year
+                    ? (String(p.first_year) === String(p.last_year)
+                        ? `${p.first_year}` : `${p.first_year}–${p.last_year}`)
+                    : '';
+                html += `<strong>${p.title}</strong><br>` +
                     `${p.occurrences} occurrence${p.occurrences === 1 ? '' : 's'}` +
                     (span ? `, ${span}` : '') +
                     (p.variants ? `<br><small><em>${p.variants}</em></small>` : '') +
                     (volumes.length ? `<br><small>${volumes.join(', ')}</small>` : '') +
-                    (p.match ? `<br><small>${p.match}</small>` : ''))
+                    (p.match ? `<br><small>${p.match}</small>` : '');
+            }
+            if (goods) html += (html ? '<hr style="margin:5px 0">' : '') + provenancePopup(goods.properties);
+            new maplibregl.Popup({offset: 10})
+                .setLngLat(event.lngLat)
+                .setHTML(html)
                 .addTo(map);
         });
-        for (const layer of PICKABLE) {
+        // Cursor handlers only for layers that exist yet; the provenance layer
+        // registers its own when it is built, just after this.
+        for (const layer of PICKABLE.filter(id => map.getLayer(id))) {
             map.on('mouseenter', layer, () => map.getCanvas().style.cursor = 'pointer');
             map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '');
         }
     }
+}
+
+
+/**
+ * Commodity provenance: the places the GOODS are named with.
+ *
+ * "fili Colonie", "peces Gent", "vini Vasconie": a place on the qualifier of a
+ * commodity or a measure. That is a statement about how the goods were named,
+ * not proof of where they were made -- Holland cloth need not come from Holland,
+ * and the concept annotator's default for that question is "undecided" -- so the
+ * key and the popup say "named with", never "came from".
+ *
+ * Merchants' places of origin ("mercatore Colonie") are a different question and
+ * are not here at all: see _collectLadingProvenance in db_operations.js.
+ *
+ * The data is the `provenance` store, derived from the cargos as they load. The
+ * source starts empty and applyMapFilter fills it, from the whole corpus or from
+ * whatever the table is showing.
+ */
+const PROVENANCE_COLOUR = '#a45fd6';
+
+function commodityProvenance(map) {
+    map.addSource('commodity-provenance', {
+        type: 'geojson', data: {type: 'FeatureCollection', features: []},
+    });
+    // A ring over a pale fill, not a solid disc: most of these stand exactly on
+    // a gazetteer point, and a solid disc would bury it.
+    map.addLayer({
+        id: 'provenance-points', type: 'circle', source: 'commodity-provenance',
+        paint: {
+            'circle-radius': ['interpolate', ['linear'],
+                ['sqrt', ['max', ['get', 'mentions'], 1]], 1, 8, 5, 11, 14, 16, 50, 28],
+            'circle-color': PROVENANCE_COLOUR,
+            'circle-opacity': 0.22,
+            'circle-stroke-color': PROVENANCE_COLOUR,
+            'circle-stroke-width': 2.2,
+        },
+    });
+    // Above the disc, where the gazetteer's own labels (which hang below) are not.
+    map.addLayer({
+        id: 'provenance-labels', type: 'symbol', source: 'commodity-provenance',
+        minzoom: 4.5,
+        layout: {
+            'text-field': ['get', 'label'],
+            'text-font': [fontName],
+            'text-size': 12,
+            'text-offset': [0, -1.1],
+            'text-anchor': 'bottom',
+            'text-allow-overlap': false,
+            'symbol-sort-key': ['-', 0, ['get', 'mentions']],
+        },
+        paint: {
+            'text-color': '#f3e4ff',
+            'text-halo-color': '#2e1045',
+            'text-halo-width': 2,
+        },
+    });
+    map.on('mouseenter', 'provenance-points', () => map.getCanvas().style.cursor = 'pointer');
+    map.on('mouseleave', 'provenance-points', () => map.getCanvas().style.cursor = '');
+}
+
+
+const provenanceText = text => String(text).replace(/[&<>"]/g,
+    c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+
+function provenancePopup(p) {
+    const goods = Array.isArray(p.goods) ? p.goods : JSON.parse(p.goods || '[]');
+    const shown = goods.slice(0, 8).map(([what, n]) => `${provenanceText(what)} ${n}`);
+    if (goods.length > 8) shown.push(`and ${goods.length - 8} more`);
+    return `<strong>${provenanceText(p.label)}</strong> ` +
+        `<small style="color:${PROVENANCE_COLOUR}">goods named with this place</small><br>` +
+        `${p.mentions} mention${p.mentions === 1 ? '' : 's'} in ` +
+        `${p.ladings} lading${p.ladings === 1 ? '' : 's'}` +
+        (mapFilter.on || timeline.on ? ' shown' : '') +
+        (shown.length ? `<br><small>${shown.join(' · ')}</small>` : '') +
+        `<br><small><em>A place in the name of goods need not be where they were made.</em></small>`;
 }
 
 
@@ -408,13 +497,12 @@ const KEY_ENTRIES = [
         source: {text: 'Viabundus',
                  href: 'https://www.landesgeschichte.uni-goettingen.de/handelsstrassen/info.php'},
     },
-    // Not built yet. It is here as a switch rather than as a plan because the
-    // key is where a reader looks to find out what the map can show, and an
-    // absent feature and an unbuilt one are worth distinguishing.
+    // Off at first, like the customs ports: it answers a different question from
+    // the places the accounts name, and most of its rings sit on those places.
     {
-        label: 'Commodity provenance', swatch: 'disc', colour: '#9aa6b2',
-        layers: [], on: false, disabled: true,
-        note: 'where the goods came from — not yet available',
+        label: 'Commodity provenance', swatch: 'ring', colour: PROVENANCE_COLOUR,
+        layers: ['provenance-points', 'provenance-labels'], on: false,
+        note: 'places the goods are named with (fili Colonie) — not proof of origin',
     },
 ];
 
@@ -438,6 +526,7 @@ const KEY_CSS = `
 .map-key input{margin:2px 0 0;flex:0 0 auto}
 .map-key .sw{flex:0 0 14px;width:14px;height:14px;margin-top:1px}
 .map-key .sw.disc{border-radius:50%;border:1px solid #3d2c00}
+.map-key .sw.ring{border-radius:50%;border:2px solid;box-sizing:border-box}
 .map-key .sw.area{border-radius:2px;opacity:.55;border:1px solid #3d2c00}
 .map-key .sw.line{height:0;border-top:3px solid;margin-top:8px}
 .map-key .nm{flex:1}
@@ -487,7 +576,11 @@ function mapKey(map) {
             box.checked = entry.on;
             box.disabled = !!entry.disabled;
             if (!entry.disabled) {
-                box.addEventListener('change', () => show(entry, box.checked));
+                box.addEventListener('change', () => {
+                    show(entry, box.checked);
+                    // The count below speaks for whatever is switched on.
+                    applyMapFilter(map);
+                });
             }
             label.appendChild(box);
         } else {
@@ -507,6 +600,9 @@ function mapKey(map) {
             swatch.style.cssText = 'flex:0 0 20px;width:20px;color:#e1c060;' +
                 'font-size:20px;line-height:1;margin-top:-2px;' +
                 'text-shadow:0 0 1px rgba(0,0,0,.55)';
+        } else if (entry.swatch === 'ring') {
+            swatch.style.borderColor = entry.colour;
+            swatch.style.background = entry.colour + '38';
         } else {
             swatch.style.background = entry.colour;
         }
@@ -556,6 +652,10 @@ function mapKey(map) {
     count.className = 'filter-count';
     count.id = 'map-filter-count';
     container.appendChild(count);
+    const goodsCount = document.createElement('div');
+    goodsCount.className = 'filter-count';
+    goodsCount.id = 'map-provenance-count';
+    container.appendChild(goodsCount);
 
     const mode = document.createElement('label');
     const modeBox = document.createElement('input');
@@ -723,6 +823,104 @@ const timeline = {
 };
 
 
+// The provenance store, read once into memory: about 4,800 rows. Not read until
+// the table has reported, because the table reports only once the corpus is
+// loaded and backfilled, and a map opened mid-load would otherwise keep the
+// half it happened to see.
+const provenance = {
+    ready: false,
+    byLading: null,       // lading_id -> [[id, label, lng, lat, what, type], ...]
+    loading: null,
+    ids: null,            // lading ids the table is showing, for filter mode
+    total: 0,             // places over the whole corpus
+};
+
+function loadProvenance(map) {
+    if (!provenance.ready || provenance.byLading || provenance.loading) return;
+    if (typeof db === 'undefined' || !db.provenance) return;
+    provenance.loading = db.provenance.toArray().then(rows => {
+        provenance.byLading = new Map(rows.map(r => [r.lading_id, r.places]));
+        provenance.total = provenanceFeatures(null).length;
+        applyMapFilter(map);
+    }).catch(error => {
+        console.warn('[map] could not read the commodity provenance index:', error);
+    }).finally(() => { provenance.loading = null; });
+}
+
+
+/**
+ * One feature per place, over the ladings allowed (null: all of them).
+ */
+function provenanceFeatures(allowed) {
+    const byPlace = new Map();
+    for (const [ladingId, places] of (provenance.byLading || [])) {
+        if (allowed && !allowed.has(ladingId)) continue;
+        for (const [id, label, lng, lat, what, type] of places) {
+            let place = byPlace.get(id);
+            if (!place) {
+                byPlace.set(id, place = {id, label, lng, lat, mentions: 0,
+                                         ladings: new Set(), goods: new Map()});
+            }
+            place.mentions++;
+            place.ladings.add(ladingId);
+            // A place on a measure qualifies the goods it measures -- "peces
+            // Gent" are pieces of Ghent cloth -- so the measure is shown as such.
+            const name = type === 'unit' ? `${what} (measure)` : what;
+            place.goods.set(name, (place.goods.get(name) || 0) + 1);
+        }
+    }
+    return [...byPlace.values()].map(p => ({
+        type: 'Feature',
+        geometry: {type: 'Point', coordinates: [p.lng, p.lat]},
+        properties: {
+            id: p.id, label: p.label, mentions: p.mentions, ladings: p.ladings.size,
+            goods: [...p.goods.entries()].sort((a, b) => b[1] - a[1]),
+        },
+    }));
+}
+
+
+/**
+ * Which ladings provenance is counted over, in the mode the key is in.
+ */
+function provenanceAllowed(active) {
+    if (!active) return null;
+    if (!timeline.on) {
+        if (!provenance.ids) provenance.ids = new Set(mapFilter.ladings.map(l => l.lading_id));
+        return provenance.ids;
+    }
+    const allowed = new Set();
+    if (timeline.year === null) return allowed;
+    const end = timeline.year + timeline.window;
+    for (const lading of mapFilter.ladings) {
+        const year = yearOf(lading);
+        if (year !== null && year >= timeline.year && year < end) allowed.add(lading.lading_id);
+    }
+    return allowed;
+}
+
+
+function applyProvenance(map, active) {
+    const source = map.getSource('commodity-provenance');
+    if (!source) return;
+    loadProvenance(map);
+    const features = provenance.byLading ? provenanceFeatures(provenanceAllowed(active)) : [];
+    source.setData({type: 'FeatureCollection', features});
+
+    const shown = map.getLayer('provenance-points')
+        && map.getLayoutProperty('provenance-points', 'visibility') !== 'none';
+    const note = document.getElementById('map-provenance-count');
+    if (note) {
+        note.textContent = !shown || !provenance.byLading ? ''
+            : active
+                ? `${features.length} of ${provenance.total} places named on goods ` +
+                  (timeline.on ? 'in this window' : 'in the current table')
+                : `${features.length} places named on goods`;
+    }
+    window.mapProvenanceIds = provenance.byLading ? features.map(f => f.properties.id) : null;
+}
+
+
 function yearOf(lading) {
     const date = lading.primary_date;
     if (!date) return null;
@@ -836,6 +1034,7 @@ function applyMapFilter(map) {
     }
     window.mapFilterActive = !!active;
     window.mapFilterIds = ids ? ids.length : null;
+    applyProvenance(map, !!active);
 }
 
 
@@ -845,6 +1044,8 @@ function applyMapFilter(map) {
 window.mlcaTableFiltered = function (ladings) {
     mapFilter.ladings = ladings;
     mapFilter.byYear = null;              // the table moved; the buckets are stale
+    provenance.ids = null;
+    provenance.ready = true;              // the corpus is loaded: see `provenance`
     if (timeline.on) prepareTimeline();
     if (window._map) applyMapFilter(window._map);
 };
@@ -924,6 +1125,7 @@ async function initMap() {
         );
 
         await corpusGazetteer(map);
+        commodityProvenance(map);
         mapKey(map);
         applyMapFilter(map);
 
