@@ -476,7 +476,7 @@ const KEY_ENTRIES = [
     },
     {
         label: 'Customs ports, 1566', swatch: 'disc', colour: '#d62f2f',
-        layers: ['customs-ports-clusters', 'customs-ports-cluster-count',
+        layers: ['customs-ports-arcs', 'customs-ports-clusters', 'customs-ports-cluster-count',
                  'customs-ports-unclustered-point', 'customs-ports-labels'],
         // Every customs-port layer is minzoom 5, so switching this on at the
         // opening view changes nothing you can see -- and MapLibre, rightly,
@@ -513,6 +513,26 @@ const KEY_ENTRIES = [
             + 'from a place (holland cloth, cambric, osnaburg) are not shown.',
     },
 ];
+
+// Head ports and their members, 1566. Every port is red, as in the key; a head port
+// is the larger disc. A dashed arc joins each member to its head port, where the
+// surveys say which that is: the Exchequer returns (TNA E 159/350) or the State
+// Papers survey, via process/customs_port_arcs.py. 13 members have no sourced head
+// port and no arc.
+async function customsPortArcs(map) {
+    map.setPaintProperty('customs-ports-unclustered-point', 'circle-color', '#d62f2f');
+    map.setPaintProperty('customs-ports-unclustered-point', 'circle-radius',
+        ['case', ['==', ['get', 'head_port'], true], 6, 4]);
+    const data = await (await fetch('./data/geo/gadd-customs-port-arcs.geojson')).json();
+    map.addSource('customs-port-arcs', {type: 'geojson', data});
+    map.addLayer({
+        id: 'customs-ports-arcs', type: 'line', source: 'customs-port-arcs', minzoom: 5,
+        layout: {visibility: map.getLayoutProperty('customs-ports-unclustered-point', 'visibility') || 'visible',
+                 'line-cap': 'round'},
+        paint: {'line-color': '#d62f2f', 'line-width': 1, 'line-opacity': 0.7,
+                'line-dasharray': [3, 3]},
+    }, 'customs-ports-clusters');
+}
 
 // Not a layer, so not a layer switch: it changes which places every gazetteer
 // layer shows, rather than whether one of them is drawn.
@@ -1131,6 +1151,7 @@ async function initMap() {
             'customs-ports',
             'Customs Ports 1566: <a target="_blank" href="https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565">Gadd</a>'
         );
+        await customsPortArcs(map);
 
         await corpusGazetteer(map);
         commodityProvenance(map);
