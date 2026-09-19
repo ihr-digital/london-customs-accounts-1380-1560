@@ -126390,7 +126390,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q486985",
+        "wikidata": "https://www.wikidata.org/entity/Q486985",
+        "label": "Salzwedel",
+        "dataset": "wikidata",
+        "point": [
+          11.15,
+          52.85
+        ],
+        "hasPolygon": true,
+        "osm_relation": "1285595"
+      }
     },
     "spaltum": {
       "d": "probably asphalt or bitumen used as a varnish (OED s.v. spaltam), but cf. MED s.v. asp(h)alt n.",
@@ -167209,7 +167221,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q181285",
+        "wikidata": "https://www.wikidata.org/entity/Q181285",
+        "label": "Cambrai",
+        "dataset": "wikidata",
+        "point": [
+          3.23472,
+          50.17583
+        ],
+        "hasPolygon": true,
+        "osm_relation": "55938"
+      }
     },
     "camisia": {
       "d": "Shirts, with or without sleeves, worn next to the body and under another shirt. Usually pullovers of a cotton jersey. [Source: Getty AAT]",
@@ -196658,7 +196682,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q173219",
+        "wikidata": "https://www.wikidata.org/entity/Q173219",
+        "label": "Tournai",
+        "dataset": "wikidata",
+        "point": [
+          3.38806,
+          50.60556
+        ],
+        "hasPolygon": true,
+        "osm_relation": "2162970"
+      }
     },
     "dory": {
       "d": "a fish, Zeus faber, found in European seas, and much esteemed as food (OED s.v. dory n.2)",
@@ -227997,7 +228033,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q2742",
+        "wikidata": "https://www.wikidata.org/entity/Q2742",
+        "label": "Münster",
+        "dataset": "wikidata",
+        "point": [
+          7.62556,
+          51.9625
+        ],
+        "hasPolygon": true,
+        "osm_relation": "62591"
+      }
     },
     "mouse fur": {
       "d": "mouse fur",
@@ -251024,7 +251072,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q229",
+        "wikidata": "https://www.wikidata.org/entity/Q229",
+        "label": "Cyprus",
+        "dataset": "wikidata",
+        "point": [
+          33,
+          35
+        ],
+        "hasPolygon": true,
+        "osm_relation": "3263726"
+      }
     },
     "screen": {
       "d": "a contrivance for warding off the heat of a fire or a draught of air (OED s.v. screen n.1 1)",
@@ -263596,7 +263656,18 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q157070",
+        "wikidata": "https://www.wikidata.org/entity/Q157070",
+        "label": "County of Flanders",
+        "dataset": "wikidata",
+        "point": [
+          3.72,
+          51.06
+        ],
+        "hasPolygon": false
+      }
     },
     "buske": {
       "d": "Buske cloth: broad- or narrowcloth (also linen) made in 's-Hertogenbosch (Bois-le-Duc); defined in Jenks' Book of Rates as Buske clothe brode / narowe",
@@ -263636,7 +263707,19 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q2766547",
+        "wikidata": "https://www.wikidata.org/entity/Q2766547",
+        "label": "'s-Hertogenbosch",
+        "dataset": "wikidata",
+        "point": [
+          5.31667,
+          51.7
+        ],
+        "hasPolygon": true,
+        "osm_relation": "162798"
+      }
     },
     "niperfeld": {
       "d": "Niperfeld: a German (Westphalian) linen measured in ells, named by its place of manufacture; sold by the pak",

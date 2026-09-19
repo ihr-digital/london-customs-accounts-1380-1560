@@ -28,6 +28,13 @@ function getTitleForAnnotation(annotation, footnotes) {
         }
         return base;
     }
+    else if (annotation.type === "merchant-place") {
+        // "mercatore Colonie": where the merchant came from (not the goods, and
+        // not the ship's home port, which is "place" on the lading heading)
+        const g = annotation.geo;
+        return g ? `Merchant's place of origin: ${g.label} (Wikidata ${g.id})`
+                 : "Merchant's place of origin";
+    }
     else if (annotation.type === "commodity" || annotation.type === "unit" || annotation.type === "commodity-unit") {
         // For commodity/unit annotations with matches, create HTML tooltip
         // Group by subject grouping (grouping as heading, terms as list)

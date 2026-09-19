@@ -653,7 +653,7 @@ h1 .date-range {
     color: #5e35b1; /* deep purple */
 }
 
-.anno.place {
+.anno.place, .anno.merchant-place {
     background-color: #e6f4ea; /* pale green */
     color: #188038; /* Google green */
 }
