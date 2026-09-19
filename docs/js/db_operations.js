@@ -622,6 +622,44 @@ db.version(95).stores({
     }
 });
 
+db.version(96).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // Eliot's span-flag verdicts re-read goods, measures, compounds and statuses
+    // in 9,458 cargos across 43 volumes; cached cargos hold their own annotations.
+    console.warn("DB v96 — clearing ladings and cargos to pick up the span-flag verdicts");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v96 upgrade:", error);
+    }
+});
+
+db.version(97).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // Surnames no longer end in a dangling particle ("Lane the" -> "Lane", with
+    // "the elder" as status); 9 volumes, and the person index gains 9 merchants.
+    console.warn("DB v97 — clearing ladings, cargos and persons to pick up corrected surnames");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+        await trans.table("persons").clear();
+        await trans.table("personLadings").clear();
+    } catch (error) {
+        console.error("Error clearing data on v97 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
