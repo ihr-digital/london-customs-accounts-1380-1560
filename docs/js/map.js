@@ -321,7 +321,9 @@ async function corpusGazetteer(map) {
                     (span ? `, ${span}` : '') +
                     (p.variants ? `<br><small><em>${p.variants}</em></small>` : '') +
                     (volumes.length ? `<br><small>${volumes.join(', ')}</small>` : '') +
-                    (p.match ? `<br><small>${p.match}</small>` : '');
+                    (p.match ? `<br><small>${p.match}</small>` : '') +
+                    // A curator's doubt about the placing (gazetteer.CURATED_DOUBTS).
+                    (p.doubt ? `<br><small style="color:#9a3412"><em>Identification ${p.doubt}</em></small>` : '');
             }
             if (goods) html += (html ? '<hr style="margin:5px 0">' : '') + provenancePopup(goods.properties);
             new maplibregl.Popup({offset: 10})
