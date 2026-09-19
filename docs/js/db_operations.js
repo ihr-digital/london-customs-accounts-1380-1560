@@ -583,6 +583,27 @@ db.version(93).stores({
     }
 });
 
+db.version(94).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id"
+}).upgrade(async (trans) => {
+    // The English-format entries (IV-20) and late wool accounts (IV-9) gain their
+    // merchants and masters: 3,029 merchant names, 2,302 masters, 978 new person
+    // groups. Cargos, ladings and the person tables all changed.
+    console.warn("DB v94 — clearing ladings, cargos and persons to pick up the new merchants");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+        await trans.table("persons").clear();
+        await trans.table("personLadings").clear();
+    } catch (error) {
+        console.error("Error clearing data on v94 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
