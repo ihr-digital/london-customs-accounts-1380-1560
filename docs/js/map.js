@@ -293,7 +293,8 @@ async function corpusGazetteer(map) {
     // A provenance disc is not a rival for the click: it usually stands on the
     // very place the gazetteer marks (Cologne is both a port the accounts name and
     // a name the goods carry), so the popup says both rather than choosing.
-    const PICKABLE = ['gazetteer-points', 'gazetteer-areas', 'provenance-points'];
+    const PICKABLE = ['gazetteer-points', 'gazetteer-areas', 'provenance-points',
+                      'exchequer-1565-points'];
     {
         map.on('click', event => {
             const layers = PICKABLE.filter(id => map.getLayer(id));
@@ -301,7 +302,9 @@ async function corpusGazetteer(map) {
                 .filter(f => map.getLayoutProperty(f.layer.id, 'visibility') !== 'none');
             if (!here.length) return;
             const goods = here.find(f => f.layer.id === 'provenance-points');
-            const places = here.filter(f => f.layer.id !== 'provenance-points');
+            const exchequer = here.find(f => f.layer.id === 'exchequer-1565-points');
+            const places = here.filter(f => f.layer.id !== 'provenance-points'
+                                            && f.layer.id !== 'exchequer-1565-points');
             // A point beats the area it stands in; between two areas, the smaller.
             const point = places.find(f => f.layer.id === 'gazetteer-points');
             const chosen = point || places[0];
@@ -326,6 +329,7 @@ async function corpusGazetteer(map) {
                     (p.doubt ? `<br><small style="color:#9a3412"><em>Identification ${p.doubt}</em></small>` : '');
             }
             if (goods) html += (html ? '<hr style="margin:5px 0">' : '') + provenancePopup(goods.properties);
+            if (exchequer) html += (html ? '<hr style="margin:5px 0">' : '') + exchequerPopup(exchequer.properties);
             new maplibregl.Popup({offset: 10})
                 .setLngLat(event.lngLat)
                 .setHTML(html)
@@ -358,6 +362,8 @@ async function corpusGazetteer(map) {
  * whatever the table is showing.
  */
 const PROVENANCE_COLOUR = '#a45fd6';
+// The 1565 Exchequer hierarchy: its own colour, because it is its own arrangement.
+const EXCHEQUER_COLOUR = '#1b7f79';
 
 function commodityProvenance(map) {
     map.addSource('commodity-provenance', {
@@ -402,6 +408,18 @@ function commodityProvenance(map) {
 
 const provenanceText = text => String(text).replace(/[&<>"]/g,
     c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+
+// A place in the 1565 returns: what it was, and whose it was.
+function exchequerPopup(p) {
+    const what = {head: 'Head port', member: 'Belonging to', creek: 'Creek of'}[p.rank] || 'In';
+    return `<strong>${p.title}</strong><br><small>1565: ` +
+        (p.rank === 'head' ? 'head port' : `${what.toLowerCase()} ${p.head}`) +
+        (p.shires ? `, ${p.shires}` : '') + '</small>' +
+        (p.customhouse === true || p.customhouse === 'true' ? '<br><small>custom house</small>' : '') +
+        (p.secondary === true || p.secondary === 'true'
+            ? '<br><small><em>from Dallaway, 1815: the original return is not located</em></small>'
+            : '<br><small>TNA E 159/350</small>');
+}
 
 function provenancePopup(p) {
     const goods = Array.isArray(p.goods) ? p.goods : JSON.parse(p.goods || '[]');
@@ -476,7 +494,7 @@ const KEY_ENTRIES = [
     },
     {
         label: 'Customs ports, 1566', swatch: 'disc', colour: '#d62f2f',
-        layers: ['customs-ports-arcs', 'customs-ports-clusters', 'customs-ports-cluster-count',
+        layers: ['customs-ports-clusters', 'customs-ports-cluster-count',
                  'customs-ports-unclustered-point', 'customs-ports-labels'],
         // Every customs-port layer is minzoom 5, so switching this on at the
         // opening view changes nothing you can see -- and MapLibre, rightly,
@@ -485,6 +503,16 @@ const KEY_ENTRIES = [
         // switch look broken.
         on: false, note: 'a later administrative geography — zoom in to see them',
         source: {text: 'Gadd, 1566',
+                 href: 'https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565'},
+    },
+    {
+        label: 'Customs hierarchy, 1565', swatch: 'disc', colour: EXCHEQUER_COLOUR,
+        layers: ['exchequer-1565-arcs', 'exchequer-1565-points', 'exchequer-1565-labels'],
+        on: false,
+        note: 'head ports, the ports belonging to them and their creeks, as the '
+            + 'Exchequer commissioners returned them — a different year, and a '
+            + 'different arrangement, from the 1566 ports above',
+        source: {text: 'Gadd, TNA E 159/350',
                  href: 'https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565'},
     },
     {
@@ -514,24 +542,56 @@ const KEY_ENTRIES = [
     },
 ];
 
-// Head ports and their members, 1566. Every port is red, as in the key; a head port
-// is the larger disc. A dashed arc joins each member to its head port, where the
-// surveys say which that is: the Exchequer returns (TNA E 159/350) or the State
-// Papers survey, via process/customs_port_arcs.py. 13 members have no sourced head
-// port and no arc.
-async function customsPortArcs(map) {
+// The customs hierarchy of 1565, as the Exchequer commissioners returned it
+// (process/exchequer_1565.py): head ports, the ports belonging to them, and their
+// creeks, each with an arc to its head. Kept apart from the 1566 ports layer
+// because the two years do not agree -- Barnstaple is a head port in 1566 and one
+// of Exeter's members in 1565 -- and mixing them invents a hierarchy.
+async function exchequer1565(map) {
+    const [places, arcs] = await Promise.all([
+        fetch('./data/geo/exchequer-1565-places.geojson').then(r => r.json()),
+        fetch('./data/geo/exchequer-1565-arcs.geojson').then(r => r.json()),
+    ]);
+    const credit = 'Customs hierarchy 1565 (TNA E 159/350): '
+        + '<a target="_blank" href="https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565">Gadd</a>';
+    map.addSource('exchequer-1565-arcs', {type: 'geojson', data: arcs, attribution: credit});
+    map.addSource('exchequer-1565-places', {type: 'geojson', data: places, attribution: credit});
+    map.addLayer({
+        id: 'exchequer-1565-arcs', type: 'line', source: 'exchequer-1565-arcs', minzoom: 5,
+        layout: {visibility: 'none', 'line-cap': 'round'},
+        paint: {'line-color': EXCHEQUER_COLOUR, 'line-width': 1, 'line-opacity': 0.65,
+                'line-dasharray': [3, 3]},
+    });
+    map.addLayer({
+        id: 'exchequer-1565-points', type: 'circle', source: 'exchequer-1565-places', minzoom: 5,
+        layout: {visibility: 'none'},
+        paint: {
+            'circle-color': EXCHEQUER_COLOUR,
+            // head port, a port belonging to one, a creek or lesser landing place
+            'circle-radius': ['match', ['get', 'rank'], 'head', 6, 'member', 4, 2.5],
+            'circle-stroke-width': 1,
+            'circle-stroke-color': '#fff',
+        },
+    });
+    map.addLayer({
+        id: 'exchequer-1565-labels', type: 'symbol', source: 'exchequer-1565-places', minzoom: 5,
+        // The creeks are many and small: name them only close in.
+        filter: ['any', ['!=', ['get', 'rank'], 'creek'], ['>=', ['zoom'], 9]],
+        layout: {visibility: 'none', 'text-field': ['get', 'title'], 'text-font': [fontName],
+                 'text-size': ['match', ['get', 'rank'], 'head', 13, 11],
+                 'text-offset': [0, 1], 'text-anchor': 'top', 'text-optional': true},
+        paint: {'text-color': EXCHEQUER_COLOUR, 'text-halo-color': '#fff', 'text-halo-width': 1.4},
+    });
+}
+
+// The 1566 ports: every one red, as in the key, a head port being the larger disc.
+// Their membership is NOT drawn -- no source for the 1566 arrangement has been found
+// (Stephen is asking Kowaleski, 19 Sep 2026). The 1565 layer above shows the
+// hierarchy the Exchequer commissioners did record.
+async function customsPortsRed(map) {
     map.setPaintProperty('customs-ports-unclustered-point', 'circle-color', '#d62f2f');
     map.setPaintProperty('customs-ports-unclustered-point', 'circle-radius',
         ['case', ['==', ['get', 'head_port'], true], 6, 4]);
-    const data = await (await fetch('./data/geo/gadd-customs-port-arcs.geojson')).json();
-    map.addSource('customs-port-arcs', {type: 'geojson', data});
-    map.addLayer({
-        id: 'customs-ports-arcs', type: 'line', source: 'customs-port-arcs', minzoom: 5,
-        layout: {visibility: map.getLayoutProperty('customs-ports-unclustered-point', 'visibility') || 'visible',
-                 'line-cap': 'round'},
-        paint: {'line-color': '#d62f2f', 'line-width': 1, 'line-opacity': 0.7,
-                'line-dasharray': [3, 3]},
-    }, 'customs-ports-clusters');
 }
 
 // Not a layer, so not a layer switch: it changes which places every gazetteer
@@ -1151,7 +1211,8 @@ async function initMap() {
             'customs-ports',
             'Customs Ports 1566: <a target="_blank" href="https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565">Gadd</a>'
         );
-        await customsPortArcs(map);
+        await customsPortsRed(map);
+        await exchequer1565(map);
 
         await corpusGazetteer(map);
         commodityProvenance(map);
