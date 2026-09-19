@@ -363,7 +363,7 @@ async function corpusGazetteer(map) {
  */
 const PROVENANCE_COLOUR = '#a45fd6';
 // The 1565 Exchequer hierarchy: its own colour, because it is its own arrangement.
-const EXCHEQUER_COLOUR = '#1b7f79';
+const EXCHEQUER_COLOUR = '#d62f2f';
 
 function commodityProvenance(map) {
     map.addSource('commodity-provenance', {
@@ -493,25 +493,13 @@ const KEY_ENTRIES = [
         note: 'historic boundaries, dated where possible',
     },
     {
-        label: 'Customs ports, 1566', swatch: 'disc', colour: '#d62f2f',
-        layers: ['customs-ports-clusters', 'customs-ports-cluster-count',
-                 'customs-ports-unclustered-point', 'customs-ports-labels'],
-        // Every customs-port layer is minzoom 5, so switching this on at the
-        // opening view changes nothing you can see -- and MapLibre, rightly,
-        // credits a source only where its layers actually draw, so the
-        // attribution stays quiet until then too. Say so rather than let the
-        // switch look broken.
-        on: false, note: 'a later administrative geography — zoom in to see them',
-        source: {text: 'Gadd, 1566',
-                 href: 'https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565'},
-    },
-    {
         label: 'Customs hierarchy, 1565', swatch: 'disc', colour: EXCHEQUER_COLOUR,
         layers: ['exchequer-1565-arcs', 'exchequer-1565-points', 'exchequer-1565-labels'],
         on: false,
-        note: 'head ports, the ports belonging to them and their creeks, as the '
-            + 'Exchequer commissioners returned them — a different year, and a '
-            + 'different arrangement, from the 1566 ports above',
+        note: 'head ports (larger), the ports belonging to them and their creeks, '
+            + 'as the Exchequer commissioners returned them. The returns as they '
+            + 'survive do not reach Wales, and Chester\'s members are not among '
+            + 'them; the rest of the coast is covered in full',
         source: {text: 'Gadd, TNA E 159/350',
                  href: 'https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565'},
     },
@@ -544,9 +532,10 @@ const KEY_ENTRIES = [
 
 // The customs hierarchy of 1565, as the Exchequer commissioners returned it
 // (process/exchequer_1565.py): head ports, the ports belonging to them, and their
-// creeks, each with an arc to its head. Kept apart from the 1566 ports layer
-// because the two years do not agree -- Barnstaple is a head port in 1566 and one
-// of Exeter's members in 1565 -- and mixing them invents a hierarchy.
+// creeks, each with an arc to its head. The 1566 customs-ports layer was removed
+// (Stephen, 19 Sep): its head_port flags are a later arrangement -- Barnstaple is a
+// head port in 1566 and one of Exeter's members in 1565 -- and showing both invited
+// the two to be read as one hierarchy.
 async function exchequer1565(map) {
     const [places, arcs] = await Promise.all([
         fetch('./data/geo/exchequer-1565-places.geojson').then(r => r.json()),
@@ -582,16 +571,6 @@ async function exchequer1565(map) {
                  'text-offset': [0, 1], 'text-anchor': 'top', 'text-optional': true},
         paint: {'text-color': EXCHEQUER_COLOUR, 'text-halo-color': '#fff', 'text-halo-width': 1.4},
     });
-}
-
-// The 1566 ports: every one red, as in the key, a head port being the larger disc.
-// Their membership is NOT drawn -- no source for the 1566 arrangement has been found
-// (Stephen is asking Kowaleski, 19 Sep 2026). The 1565 layer above shows the
-// hierarchy the Exchequer commissioners did record.
-async function customsPortsRed(map) {
-    map.setPaintProperty('customs-ports-unclustered-point', 'circle-color', '#d62f2f');
-    map.setPaintProperty('customs-ports-unclustered-point', 'circle-radius',
-        ['case', ['==', ['get', 'head_port'], true], 6, 4]);
 }
 
 // Not a layer, so not a layer switch: it changes which places every gazetteer
@@ -1205,13 +1184,6 @@ async function initMap() {
         // settlements, Index Villaris and landing places came off with the
         // overland routes -- a modern road network and three gazetteers of
         // everywhere were burying the places the corpus actually names.
-        await clusterPoints(
-            './data/geo/gadd-customs-ports.geojson',
-            map,
-            'customs-ports',
-            'Customs Ports 1566: <a target="_blank" href="https://github.com/docuracy/Elizabethan_Coastal_Surveys_1565">Gadd</a>'
-        );
-        await customsPortsRed(map);
         await exchequer1565(map);
 
         await corpusGazetteer(map);
