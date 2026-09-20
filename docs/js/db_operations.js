@@ -819,6 +819,26 @@ db.version(105).stores({
     }
 });
 
+db.version(106).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // Widows, crossbowmen, aldermen and king's councillors are statuses too, and a
+    // citizen's city is his place: "cive et aldermanno London'". Cached cargos hold
+    // their own annotations.
+    console.warn("DB v106 — clearing ladings and cargos to pick up more statuses");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v106 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
