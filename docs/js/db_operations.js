@@ -720,6 +720,25 @@ db.version(100).stores({
     }
 });
 
+db.version(101).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // 25 merchants written "De <name>, de Vere" gain their place of origin, in two
+    // volumes; cached cargos hold their own annotations.
+    console.warn("DB v101 — clearing ladings and cargos to pick up merchants of Veere");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v101 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
