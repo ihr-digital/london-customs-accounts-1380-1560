@@ -760,6 +760,26 @@ db.version(102).stores({
     }
 });
 
+db.version(103).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // Two curator decisions: "de Hispania" on goods is Spain (50 cargos), "de Vere"
+    // on cloth is Veere (6). Cached cargos hold their own annotations; the
+    // provenance store refills with the corpus.
+    console.warn("DB v103 — clearing ladings and cargos to pick up Spain and Veere provenance");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v103 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

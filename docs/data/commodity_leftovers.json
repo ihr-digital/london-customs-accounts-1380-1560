@@ -18,13 +18,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "awl",
-      "label": "awl",
+      "key": "ale",
+      "label": "ale",
       "sim": 0.8
      }
     ],
-    "nearest": "awl",
-    "nearest_key": "awl",
+    "nearest": "ale",
+    "nearest_key": "ale",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -45,8 +45,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Calais",
+      "label": "Calais",
       "sim": 1.0
      },
      {
@@ -135,8 +135,8 @@
      },
      {
       "store": "place",
-      "key": "Calys",
-      "label": "Calys",
+      "key": "Calais",
+      "label": "Calais",
       "sim": 1.0
      },
      {
@@ -213,8 +213,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Cologne",
+      "label": "Cologne",
       "sim": 1.0
      },
      {
@@ -292,8 +292,8 @@
      },
      {
       "store": "concept",
-      "key": "press",
-      "label": "press",
+      "key": "pear",
+      "label": "pear",
       "sim": 0.8
      }
     ],
@@ -317,6 +317,12 @@
      "llis faciencia 8 dacra cust' 8s deveria ⟦Calesie⟧ 6½d"
     ],
     "near": [
+     {
+      "store": "place",
+      "key": "Calais",
+      "label": "Calais",
+      "sim": 1.0
+     },
      {
       "store": "concept",
       "key": "caul",
@@ -346,8 +352,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Spain",
+      "label": "Spain",
       "sim": 1.0
      },
      {
@@ -379,8 +385,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Bullon",
-      "label": "Bullon",
+      "key": "Boulogne",
+      "label": "Boulogne",
       "sim": 1.0
      },
      {
@@ -463,8 +469,8 @@
      },
      {
       "store": "concept",
-      "key": "mail",
-      "label": "mail",
+      "key": "mala",
+      "label": "mala",
       "sim": 0.8
      }
     ],
@@ -535,8 +541,8 @@
      },
      {
       "store": "place",
-      "key": "Bereflete",
-      "label": "Bereflete",
+      "key": "Biervliet",
+      "label": "Biervliet",
       "sim": 0.941
      },
      {
@@ -799,8 +805,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Marye",
-      "label": "Marye",
+      "key": "Marie",
+      "label": "Marie",
       "sim": 1.0
      },
      {
@@ -848,6 +854,12 @@
      {
       "store": "qualifier",
       "key": "spain",
+      "label": "Spain",
+      "sim": 1.0
+     },
+     {
+      "store": "place",
+      "key": "Spain",
       "label": "Spain",
       "sim": 1.0
      },
@@ -974,8 +986,8 @@
      },
      {
       "store": "place",
-      "key": "Denton",
-      "label": "Denton",
+      "key": "St Jean de Luz",
+      "label": "St Jean de Luz",
       "sim": 1.0
      },
      {
@@ -1124,8 +1136,8 @@
      },
      {
       "store": "concept",
-      "key": "mail",
-      "label": "mail",
+      "key": "mala",
+      "label": "mala",
       "sim": 0.8
      }
     ],
@@ -1151,13 +1163,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "nail",
-      "label": "nail",
+      "key": "nale",
+      "label": "nale",
       "sim": 0.857
      }
     ],
-    "nearest": "nail",
-    "nearest_key": "nail",
+    "nearest": "nale",
+    "nearest_key": "nale",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -1250,9 +1262,9 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 0.889
+      "key": "Portugal",
+      "label": "Portugal",
+      "sim": 1.0
      }
     ],
     "nearest": "Portugal",
@@ -1476,8 +1488,8 @@
      },
      {
       "store": "place",
-      "key": "Camfer",
-      "label": "Camfer",
+      "key": "Veere",
+      "label": "Veere",
       "sim": 0.889
      }
     ],
@@ -1509,8 +1521,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Portugal",
+      "label": "Portugal",
       "sim": 1.0
      },
      {
@@ -1604,16 +1616,22 @@
     ],
     "near": [
      {
+      "store": "qualifier",
+      "key": "beaten",
+      "label": "beaten",
+      "sim": 0.75
+     },
+     {
       "store": "concept",
       "key": "lantern",
       "label": "lantern",
       "sim": 0.727
      }
     ],
-    "nearest": "lantern",
-    "nearest_key": "lantern",
-    "nearest_store": "concept",
-    "nearest_sim": 0.727,
+    "nearest": "beaten",
+    "nearest_key": "beaten",
+    "nearest_store": "qualifier",
+    "nearest_sim": 0.75,
     "likely": "new"
    },
    {
@@ -1653,8 +1671,8 @@
      },
      {
       "store": "concept",
-      "key": "mail",
-      "label": "mail",
+      "key": "mala",
+      "label": "mala",
       "sim": 0.727
      }
     ],
@@ -1851,7 +1869,7 @@
      },
      {
       "store": "concept",
-      "key": "cypress_2",
+      "key": "cypress",
       "label": "cypress",
       "sim": 0.909
      }
@@ -1884,8 +1902,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Flanders",
+      "label": "Flanders",
       "sim": 1.0
      },
      {
@@ -2100,8 +2118,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "London",
+      "label": "London",
       "sim": 1.0
      },
      {
@@ -2437,8 +2455,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "aum",
-      "label": "aum",
+      "key": "wine",
+      "label": "vinum",
       "sim": 0.75
      },
      {
@@ -2448,8 +2466,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "aum",
-    "nearest_key": "aum",
+    "nearest": "vinum",
+    "nearest_key": "wine",
     "nearest_store": "concept",
     "nearest_sim": 0.75,
     "likely": "new"
@@ -2591,8 +2609,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Maie",
-      "label": "Maie",
+      "key": "May",
+      "label": "May",
       "sim": 1.0
      }
     ]
@@ -2674,8 +2692,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Poole",
+      "label": "Poole",
       "sim": 1.0
      },
      {
@@ -2713,13 +2731,13 @@
      },
      {
       "store": "concept",
-      "key": "verjuice",
-      "label": "verjuice",
+      "key": "verdure",
+      "label": "verdure",
       "sim": 0.8
      }
     ],
-    "nearest": "verjuice",
-    "nearest_key": "verjuice",
+    "nearest": "verdure",
+    "nearest_key": "verdure",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -2746,8 +2764,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Lübeck",
+      "label": "Lübeck",
       "sim": 1.0
      },
      {
@@ -2911,8 +2929,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Spain",
+      "label": "Spain",
       "sim": 1.0
      },
      {
@@ -2955,9 +2973,15 @@
       "sim": 1.0
      },
      {
+      "store": "place",
+      "key": "Prussia",
+      "label": "Prussia",
+      "sim": 1.0
+     },
+     {
       "store": "concept",
-      "key": "pig",
-      "label": "pig",
+      "key": "prage",
+      "label": "prage",
       "sim": 0.727
      }
     ],
@@ -3010,8 +3034,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Caen",
+      "label": "Caen",
       "sim": 1.0
      },
      {
@@ -3049,8 +3073,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Depe",
-      "label": "Depe",
+      "key": "Dieppe",
+      "label": "Dieppe",
       "sim": 1.0
      },
      {
@@ -3160,8 +3184,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Portugal",
+      "label": "Portugal",
       "sim": 1.0
      },
      {
@@ -3266,12 +3290,6 @@
      "⟦George⟧ Heton in John Barley a fardell content"
     ],
     "near": [
-     {
-      "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 1.0
-     },
      {
       "store": "surname",
       "key": "Georg",
@@ -3399,12 +3417,6 @@
     ],
     "near": [
      {
-      "store": "place",
-      "key": "Jamys",
-      "label": "Jamys",
-      "sim": 1.0
-     },
-     {
       "store": "surname",
       "key": "Yamys",
       "label": "Yamys",
@@ -3514,8 +3526,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Bullon",
-      "label": "Bullon",
+      "key": "Boulogne",
+      "label": "Boulogne",
       "sim": 0.909
      },
      {
@@ -3602,8 +3614,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Lübeck",
+      "label": "Lübeck",
       "sim": 1.0
      },
      {
@@ -3928,7 +3940,7 @@
      },
      {
       "store": "concept",
-      "key": "cypress_2",
+      "key": "cypress",
       "label": "cypress",
       "sim": 0.727
      }
@@ -4010,8 +4022,8 @@
      },
      {
       "store": "place",
-      "key": "Bereflete",
-      "label": "Bereflete",
+      "key": "Biervliet",
+      "label": "Biervliet",
       "sim": 0.875
      }
     ],
@@ -4036,8 +4048,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Antonyo",
-      "label": "Antonyo",
+      "key": "Anthonio",
+      "label": "Anthonio",
       "sim": 0.923
      },
      {
@@ -4118,9 +4130,9 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 0.875
+      "key": "Flanders",
+      "label": "Flanders",
+      "sim": 1.0
      },
      {
       "store": "concept",
@@ -4232,8 +4244,8 @@
      },
      {
       "store": "place",
-      "key": "Bereflete",
-      "label": "Bereflete",
+      "key": "Biervliet",
+      "label": "Biervliet",
       "sim": 0.941
      },
      {
@@ -4264,8 +4276,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Gravesend",
+      "label": "Gravesend",
       "sim": 1.0
      },
      {
@@ -4323,8 +4335,8 @@
      },
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Portugal",
+      "label": "Portugal",
       "sim": 1.0
      }
     ],
@@ -4346,7 +4358,14 @@
      "l' ad carcandum in dicto batello versus ⟦Sandewicum⟧ et ibidem ad recarcandum in quadam carr",
      "grano Ind' cust' 9s 4d carcatis versus ⟦Sandewicum⟧ vel Plimmouth et ibidem ad recarcandum"
     ],
-    "near": []
+    "near": [
+     {
+      "store": "place",
+      "key": "Sandwich",
+      "label": "Sandwich",
+      "sim": 1.0
+     }
+    ]
    },
    {
     "token": "islandia",
@@ -4369,8 +4388,8 @@
      },
      {
       "store": "place",
-      "key": "Selandia",
-      "label": "Selandia",
+      "key": "Zealand",
+      "label": "Zealand",
       "sim": 0.875
      }
     ],
@@ -4433,8 +4452,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Plymmoth",
-      "label": "Plymmoth",
+      "key": "Plymouth",
+      "label": "Plymouth",
       "sim": 1.0
      }
     ]
@@ -4486,8 +4505,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Maria",
-      "label": "Maria",
+      "key": "Marya",
+      "label": "Marya",
       "sim": 1.0
      },
      {
@@ -4518,12 +4537,6 @@
       "sim": 1.0
      },
      {
-      "store": "place",
-      "key": "Lucca",
-      "label": "Lucca",
-      "sim": 1.0
-     },
-     {
       "store": "surname",
       "key": "Luca",
       "label": "Luca",
@@ -4531,8 +4544,8 @@
      },
      {
       "store": "concept",
-      "key": "lac",
-      "label": "lac",
+      "key": "luce",
+      "label": "luce",
       "sim": 0.75
      }
     ],
@@ -4729,13 +4742,13 @@
      },
      {
       "store": "concept",
-      "key": "loop",
-      "label": "loop",
+      "key": "wolf",
+      "label": "wolf",
       "sim": 0.8
      }
     ],
-    "nearest": "loop",
-    "nearest_key": "loop",
+    "nearest": "wolf",
+    "nearest_key": "wolf",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -4813,8 +4826,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Vise",
-      "label": "Vise",
+      "key": "Wise",
+      "label": "Wise",
       "sim": 1.0
      },
      {
@@ -4845,8 +4858,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Vise",
-      "label": "Vise",
+      "key": "Wise",
+      "label": "Wise",
       "sim": 1.0
      },
      {
@@ -5181,14 +5194,14 @@
     "near": [
      {
       "store": "surname",
-      "key": "Watter",
-      "label": "Watter",
+      "key": "Water",
+      "label": "Water",
       "sim": 1.0
      },
      {
       "store": "concept",
-      "key": "vat",
-      "label": "vat",
+      "key": "bellow",
+      "label": "bellow",
       "sim": 0.889
      },
      {
@@ -5198,8 +5211,8 @@
       "sim": 0.8
      }
     ],
-    "nearest": "vat",
-    "nearest_key": "vat",
+    "nearest": "bellow",
+    "nearest_key": "bellow",
     "nearest_store": "concept",
     "nearest_sim": 0.889,
     "likely": "spelling-variant"
@@ -5350,8 +5363,8 @@
      },
      {
       "store": "surname",
-      "key": "Nevell",
-      "label": "Nevell",
+      "key": "Newel",
+      "label": "Newel",
       "sim": 1.0
      }
     ],
@@ -5586,17 +5599,23 @@
       "sim": 0.923
      },
      {
+      "store": "qualifier",
+      "key": "barge",
+      "label": "barge",
+      "sim": 0.909
+     },
+     {
       "store": "concept",
       "key": "barges",
       "label": "barges",
       "sim": 0.833
      }
     ],
-    "nearest": "barges",
-    "nearest_key": "barges",
-    "nearest_store": "concept",
-    "nearest_sim": 0.833,
-    "likely": "near"
+    "nearest": "barge",
+    "nearest_key": "barge",
+    "nearest_store": "qualifier",
+    "nearest_sim": 0.909,
+    "likely": "spelling-variant"
    },
    {
     "token": "bridges",
@@ -5622,6 +5641,12 @@
       "key": "Bridges",
       "label": "Bridges",
       "sim": 1.0
+     },
+     {
+      "store": "place",
+      "key": "Bruges",
+      "label": "Bruges",
+      "sim": 0.933
      },
      {
       "store": "concept",
@@ -5773,6 +5798,12 @@
       "key": "pound",
       "label": "pound",
       "sim": 1.0
+     },
+     {
+      "store": "qualifier",
+      "key": "lubik",
+      "label": "Lubik",
+      "sim": 0.8
      }
     ],
     "nearest": "pound",
@@ -5869,8 +5900,8 @@
      },
      {
       "store": "surname",
-      "key": "Scarlett",
-      "label": "Scarlett",
+      "key": "Scarlet",
+      "label": "Scarlet",
       "sim": 0.933
      }
     ],
@@ -6136,8 +6167,8 @@
      },
      {
       "store": "concept",
-      "key": "corf",
-      "label": "corf",
+      "key": "cord",
+      "label": "cord",
       "sim": 0.8
      }
     ],
@@ -6265,21 +6296,6 @@
     "near": []
    },
    {
-    "token": "sui",
-    "count": 57,
-    "bucket": "commodity",
-    "after_qtyunit": 0,
-    "near_commodity": 0,
-    "cooccur_commodity": 57,
-    "capitalised": 0,
-    "examples": [
-     "o suo datum 16° die Octobris anno regni ⟦sui⟧ 33° collectoribus subsidii lanarum, cor",
-     "o suo datum 16° die Octobris anno regni ⟦sui⟧ 33° collectoribus subsidii regis lanaru",
-     "o suo datum 16° die Octobris anno regni ⟦sui⟧ 33° collectoribus subsidii regis lanaru"
-    ],
-    "near": []
-   },
-   {
     "token": "ratam",
     "count": 57,
     "bucket": "commodity",
@@ -6306,21 +6322,6 @@
      "pro 22 pannis, 8 virgis super licenciam ⟦propriam⟧ Ind’ cust’ 26s ¾d",
      "bi Johnson, pro 30 pannis per licenciam ⟦propriam⟧ Ind’ custum’ 35s",
      "enigena, in nave predicta per licenciam ⟦propriam⟧, pro 14 pannis, 18 virgis Ind’ custum’"
-    ],
-    "near": []
-   },
-   {
-    "token": "suo",
-    "count": 56,
-    "bucket": "commodity",
-    "after_qtyunit": 0,
-    "near_commodity": 12,
-    "cooccur_commodity": 56,
-    "capitalised": 0,
-    "examples": [
-     "De dicto magistro et socio ⟦suo⟧ pro 2 doliis et 1 pipa olei precii £8,",
-     "De dicto magistro et socio ⟦suo⟧ pro 3 quintallis cere cust' 3s",
-     "nichil per breve regis de magno sigillo ⟦suo⟧ datum 16° die Octobris anno regni sui 3"
     ],
     "near": []
    },
@@ -6865,8 +6866,8 @@
      },
      {
       "store": "concept",
-      "key": "tin",
-      "label": "tin",
+      "key": "satin",
+      "label": "satin",
       "sim": 0.8
      }
     ],
@@ -7206,14 +7207,14 @@
       "store": "qualifier",
       "key": "large",
       "label": "large",
-      "sim": 0.8
+      "sim": 1.0
      }
     ],
     "nearest": "large",
     "nearest_key": "large",
     "nearest_store": "qualifier",
-    "nearest_sim": 0.8,
-    "likely": "near"
+    "nearest_sim": 1.0,
+    "likely": "spelling-variant"
    },
    {
     "token": "my",
@@ -7429,8 +7430,8 @@
      },
      {
       "store": "surname",
-      "key": "Scarlett",
-      "label": "Scarlett",
+      "key": "Scarlet",
+      "label": "Scarlet",
       "sim": 0.933
      }
     ],
@@ -7618,8 +7619,8 @@
      },
      {
       "store": "concept",
-      "key": "bard",
-      "label": "bard",
+      "key": "woodstave",
+      "label": "woodstave",
       "sim": 0.8
      }
     ],
@@ -7699,14 +7700,7 @@
      "De homo de ⟦consilio⟧ pro 40 godis panni stricti Wallie, uno",
      "De homo de ⟦consilio⟧ pro 70 topettes reisons grosse. Precii"
     ],
-    "near": [
-     {
-      "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 1.0
-     }
-    ]
+    "near": []
    },
    {
     "token": "ware",
@@ -7895,8 +7889,8 @@
      },
      {
       "store": "concept",
-      "key": "hide",
-      "label": "hide",
+      "key": "corf",
+      "label": "corf",
       "sim": 0.8
      }
     ],
@@ -8237,14 +8231,7 @@
      "De dicto Tryadang ⟦patrono⟧ galee, alienigena, 18½ sacci, 19 clavi",
      "De dicto Jerolimo Dandalo ⟦patrono⟧ galee pro 7 balis, 19 fardellis, 10 cis"
     ],
-    "near": [
-     {
-      "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 1.0
-     }
-    ]
+    "near": []
    },
    {
     "token": "kynges",
@@ -8848,12 +8835,6 @@
      "narum, coriorum et pellium lanutarum in ⟦portu⟧ predicto, qui nunc sunt vel qui pro tem"
     ],
     "near": [
-     {
-      "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
-      "sim": 0.889
-     },
      {
       "store": "concept",
       "key": "portas",
@@ -9520,6 +9501,12 @@
       "key": "ermine",
       "label": "ermine",
       "sim": 0.714
+     },
+     {
+      "store": "qualifier",
+      "key": "arming",
+      "label": "arming",
+      "sim": 0.714
      }
     ],
     "nearest": "ermine",
@@ -9999,8 +9986,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "pan",
-      "label": "pan",
+      "key": "cloth",
+      "label": "cloth",
       "sim": 1.0
      },
      {
@@ -10010,8 +9997,8 @@
       "sim": 1.0
      }
     ],
-    "nearest": "pan",
-    "nearest_key": "pan",
+    "nearest": "cloth",
+    "nearest_key": "cloth",
     "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
@@ -11190,16 +11177,16 @@
     "near": [
      {
       "store": "qualifier",
-      "key": "plain",
-      "label": "plain",
-      "sim": 0.769
+      "key": "roe-full",
+      "label": "roe-full",
+      "sim": 0.833
      }
     ],
-    "nearest": "plain",
-    "nearest_key": "plain",
+    "nearest": "roe-full",
+    "nearest_key": "roe-full",
     "nearest_store": "qualifier",
-    "nearest_sim": 0.769,
-    "likely": "new"
+    "nearest_sim": 0.833,
+    "likely": "near"
    },
    {
     "token": "nono",
@@ -11402,17 +11389,23 @@
     ],
     "near": [
      {
+      "store": "qualifier",
+      "key": "thread",
+      "label": "thread",
+      "sim": 0.8
+     },
+     {
       "store": "concept",
       "key": "frankincense",
       "label": "frankincense",
       "sim": 0.727
      }
     ],
-    "nearest": "frankincense",
-    "nearest_key": "frankincense",
-    "nearest_store": "concept",
-    "nearest_sim": 0.727,
-    "likely": "new"
+    "nearest": "thread",
+    "nearest_key": "thread",
+    "nearest_store": "qualifier",
+    "nearest_sim": 0.8,
+    "likely": "near"
    },
    {
     "token": "conteynynge",
@@ -11460,8 +11453,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Skynar",
-      "label": "Skynar",
+      "key": "Skinner",
+      "label": "Skinner",
       "sim": 1.0
      },
      {
@@ -11625,8 +11618,8 @@
      },
      {
       "store": "concept",
-      "key": "murrey",
-      "label": "murrey",
+      "key": "myrrh",
+      "label": "myrrh",
       "sim": 0.889
      }
     ],
@@ -12021,8 +12014,8 @@
      },
      {
       "store": "concept",
-      "key": "rubber",
-      "label": "rubber",
+      "key": "ruby",
+      "label": "ruby",
       "sim": 0.8
      }
     ],
@@ -12942,8 +12935,8 @@
      },
      {
       "store": "concept",
-      "key": "horn",
-      "label": "horn",
+      "key": "meat",
+      "label": "meat",
       "sim": 0.875
      }
     ],
@@ -13612,8 +13605,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "end",
-      "label": "end",
+      "key": "indigo",
+      "label": "indigo",
       "sim": 0.857
      },
      {
@@ -13623,8 +13616,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "end",
-    "nearest_key": "end",
+    "nearest": "indigo",
+    "nearest_key": "indigo",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -13670,8 +13663,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Well",
-      "label": "Well",
+      "key": "Vell",
+      "label": "Vell",
       "sim": 1.0
      },
      {
@@ -13783,6 +13776,12 @@
       "key": "bear",
       "label": "bear",
       "sim": 1.0
+     },
+     {
+      "store": "qualifier",
+      "key": "beaver",
+      "label": "beaver",
+      "sim": 0.75
      }
     ],
     "nearest": "bear",
@@ -13918,8 +13917,8 @@
     "near": [
      {
       "store": "place",
-      "key": "Almannia",
-      "label": "Almannia",
+      "key": "Arnemuiden",
+      "label": "Arnemuiden",
       "sim": 1.0
      },
      {
@@ -14467,8 +14466,8 @@
      },
      {
       "store": "concept",
-      "key": "millstone",
-      "label": "millstone",
+      "key": "lapidum",
+      "label": "lapidum",
       "sim": 0.75
      }
     ],
@@ -14725,8 +14724,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Shawe",
-      "label": "Shawe",
+      "key": "Chave",
+      "label": "Chave",
       "sim": 1.0
      },
      {
@@ -14756,6 +14755,12 @@
     ],
     "near": [
      {
+      "store": "qualifier",
+      "key": "barge",
+      "label": "barge",
+      "sim": 1.0
+     },
+     {
       "store": "surname",
       "key": "Barge",
       "label": "Barge",
@@ -14768,10 +14773,10 @@
       "sim": 0.909
      }
     ],
-    "nearest": "barges",
-    "nearest_key": "barges",
-    "nearest_store": "concept",
-    "nearest_sim": 0.909,
+    "nearest": "barge",
+    "nearest_key": "barge",
+    "nearest_store": "qualifier",
+    "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
    {
@@ -15095,8 +15100,8 @@
      },
      {
       "store": "concept",
-      "key": "cover",
-      "label": "cover",
+      "key": "cord",
+      "label": "cord",
       "sim": 0.833
      }
     ],
@@ -15261,13 +15266,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "muid",
-      "label": "muid",
+      "key": "aum",
+      "label": "aum",
       "sim": 0.8
      }
     ],
-    "nearest": "muid",
-    "nearest_key": "muid",
+    "nearest": "aum",
+    "nearest_key": "aum",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -15641,13 +15646,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "bunde",
-      "label": "bunde",
+      "key": "band",
+      "label": "band",
       "sim": 0.727
      }
     ],
-    "nearest": "bunde",
-    "nearest_key": "bunde",
+    "nearest": "band",
+    "nearest_key": "band",
     "nearest_store": "concept",
     "nearest_sim": 0.727,
     "likely": "new"
@@ -15772,6 +15777,12 @@
       "key": "yard",
       "label": "yard",
       "sim": 0.857
+     },
+     {
+      "store": "qualifier",
+      "key": "dried",
+      "label": "dried",
+      "sim": 0.75
      }
     ],
     "nearest": "yard",
@@ -16064,8 +16075,8 @@
      },
      {
       "store": "concept",
-      "key": "lucern",
-      "label": "lucern",
+      "key": "luce",
+      "label": "luce",
       "sim": 0.889
      }
     ],
@@ -16361,8 +16372,8 @@
      },
      {
       "store": "surname",
-      "key": "Sawe",
-      "label": "Sawe",
+      "key": "Save",
+      "label": "Save",
       "sim": 1.0
      }
     ],
@@ -16541,8 +16552,19 @@
       "key": "Brent",
       "label": "Brent",
       "sim": 1.0
+     },
+     {
+      "store": "qualifier",
+      "key": "burnt",
+      "label": "burnt",
+      "sim": 0.8
      }
-    ]
+    ],
+    "nearest": "burnt",
+    "nearest_key": "burnt",
+    "nearest_store": "qualifier",
+    "nearest_sim": 0.8,
+    "likely": "near"
    },
    {
     "token": "inhabitancium",

@@ -6898,6 +6898,7 @@
         "alygant",
         "hisp",
         "hispan",
+        "hispania",
         "hispanie",
         "hollock",
         "ispania",
@@ -7846,6 +7847,24 @@
         ],
         "hasPolygon": true,
         "osm_relation": "44741"
+      }
+    },
+    "vere": {
+      "label": "Veere",
+      "lang": "geo",
+      "gloss": "from Veere",
+      "forms": [
+        "vere"
+      ],
+      "geo": {
+        "id": "Q3184100",
+        "wikidata": "https://www.wikidata.org/entity/Q3184100",
+        "label": "Veere",
+        "dataset": "wikidata",
+        "point": [
+          3.66667,
+          51.55
+        ]
       }
     },
     "violet": {
