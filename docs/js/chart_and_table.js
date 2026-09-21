@@ -22,9 +22,25 @@ function renderCargosList(cargosListElement, cargos) {
         const listItem = $(`
             <li>
                 <i class="fas fa-clipboard copy-icon text-muted me-1" title="Copy cargo text"></i>
+                <i class="fas fa-table record-icon text-muted me-1" title="Show what the tools read out of this cargo: goods, quantity, measure, concept"></i>
                 <span class="cargo-text-content">${applyOffsetAnnotations(c.cargo || "", c.annotations, footnotes)}</span>
+                <div class="cargo-record-slot"></div>
             </li>
         `);
+
+        // The record is fetched per volume on first use (see cargo_record.js) and the
+        // panel is built once, so a second click just hides it.
+        listItem.find(".record-icon").on('click', async function () {
+            const slot = listItem.find(".cargo-record-slot");
+            if (slot.children().length) { slot.toggle(); return; }
+            slot.html('<div class="cr-none">reading…</div>').show();
+            try {
+                slot.html(CargoRecord.render(await CargoRecord.forCargo(c)));
+            } catch (err) {
+                slot.html('<div class="cr-none">the record for this volume could not be loaded</div>');
+                console.error('cargo record:', err);
+            }
+        });
 
         if (groupFiltering) {
             const relevant = _collectLadingGroups([c]).some(g => groupSel.has(g));
