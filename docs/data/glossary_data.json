@@ -51058,18 +51058,9 @@
           "w": 0
         },
         {
-          "t": "lanute",
-          "s": [],
-          "w": 0
-        },
-        {
           "t": "ovile",
           "s": [],
           "w": 0
-        },
-        {
-          "t": "lanutis",
-          "s": []
         },
         {
           "t": "ovinis",
@@ -51078,26 +51069,6 @@
         {
           "t": "basanarum",
           "s": []
-        },
-        {
-          "t": "pelles lanute",
-          "s": [],
-          "w": 0
-        },
-        {
-          "t": "pelles lanutas",
-          "s": [],
-          "w": 0
-        },
-        {
-          "t": "pellium lanutarum",
-          "s": [],
-          "w": 0
-        },
-        {
-          "t": "pellis lanuta",
-          "s": [],
-          "w": 0
         },
         {
           "t": "shepis",
@@ -264951,6 +264922,50 @@
       "related": [
         "fish"
       ]
+    },
+    "woolfell": {
+      "f": [
+        {
+          "t": "woolfell",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "lanute",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lanutis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pelles lanute",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pelles lanutas",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pellium lanutarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pellis lanuta",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "a sheepskin with the wool still on it, exported with wool and taxed beside it (OED s.v. wool-fell). Distinct from basan, which is sheepskin tanned in bark.",
+      "groups": [
+        "Furs, skins & leather"
+      ],
+      "memo": "Split from basan 21 Sep 2026 on Eliot's report: 'pelles lanute' and its kin were reading as basan. AAT has no woolfell term; the nearest is sheepskin (300193374), which basan already holds as a broader match -- left for a curator."
     }
   },
   "qa_identifiers": {

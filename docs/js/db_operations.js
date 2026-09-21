@@ -839,6 +839,45 @@ db.version(106).stores({
     }
 });
 
+db.version(107).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // "De eodem Roberto" names a man: 245 such merchants are tagged where the parser
+    // used to copy the previous cargo's instead. Cached cargos hold their own
+    // annotations.
+    console.warn("DB v107 — clearing ladings and cargos to pick up the named back-reference merchants");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v107 upgrade:", error);
+    }
+});
+
+db.version(108).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: "pid, forename, surname, surname_key, year_min, year_max",
+    personLadings: "[pid+lading_id+role], pid, lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    // "pelles lanute" is a woolfell, not basan: 7,727 spans change concept. Cached
+    // cargos hold their own annotations.
+    console.warn("DB v108 — clearing ladings and cargos to pick up the woolfell concept");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v108 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
