@@ -169,6 +169,24 @@ jobs:
           restore-keys: |
             jsonld-api-
 
+      # The cache carries its own copy of context.json, which lands on top of the
+      # checkout -- and the "preserving context.json" delete below then protects the
+      # STALE one. So an edit to the committed context.json never reached the site:
+      # three SKOS mapping terms added on 22 Sep 2026 were live in every entity
+      # document and undefined in the context, which in JSON-LD means the triples are
+      # silently dropped. The committed file is the source of truth; put it back.
+      - name: Restore the committed context.json over the cached one
+        run: |
+          git checkout HEAD -- docs/api/context.json
+          python3 - <<'PYEOF'
+          import json
+          c = json.load(open("docs/api/context.json"))["@context"]
+          missing = [t for t in ("exactMatch", "closeMatch", "broadMatch", "related",
+                                 "compoundOf", "materials") if t not in c]
+          print(f"context.json: {len(c)} terms")
+          raise SystemExit(f"context.json is missing {missing}" if missing else 0)
+          PYEOF
+
       - name: Check for cached API content
         id: cache
         run: |
