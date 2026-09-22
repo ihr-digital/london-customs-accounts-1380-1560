@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "generated": "2026-02-07T09:27:30.705018",
   "metadata": {
-    "licence": "This dataset is derived from Stuart Jenks's transcriptions of the Books of Rates and London Customs Accounts. © Historical transcriptions by Stuart Jenks. This compilation and enhancement is licensed under CC BY-SA 4.0.",
+    "licence": "This dataset is derived from Stuart Jenks's transcriptions of the Books of Rates and London Customs Accounts. © Historical transcriptions by Stuart Jenks. This compilation and enhancement is licensed under CC BY 4.0.",
     "key_mappings": {
       "entry_keys": {
         "f": "forms",
@@ -144751,7 +144751,7 @@
       ]
     },
     "anchovy": {
-      "d": "Anchovies are small, common forage fish of the family Engraulidae. Most species are found in marine waters, but several will enter brackish water, and some in South America are restricted to fresh water. [Source: Wikipedia]",
+      "d": "anchovy: a small fish of the herring family, traded preserved — salted and packed in barrels. Attested once in the corpus, as 56 small barrels (parvis barellis anchoves) landed with chests of sugar.",
       "q": [],
       "x": [],
       "f": [
@@ -144776,7 +144776,7 @@
           "w": 0
         }
       ],
-      "memo": "",
+      "memo": "Description rewritten 22 Sep 2026. It had been two verbatim sentences from Wikipedia, which is CC BY-SA 4.0 and was the ONLY share-alike text in this file — the reason its embedded licence statement claimed CC BY-SA while every other project file said CC BY 4.0. This wording is the project's own, from the entry's identifiers and its one attestation.",
       "aat": [
         {
           "id": "Q443259",

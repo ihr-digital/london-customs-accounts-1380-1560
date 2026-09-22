@@ -59,7 +59,15 @@ const CargoRecord = (() => {
         const status = (p.status || []).length ? ` <span class="cr-status">${esc(p.status.join(', '))}</span>` : '';
         const place = p.place && p.place.label ? ` <span class="cr-place">of ${esc(p.place.label)}</span>` : '';
         const from = p.from ? ` <span class="cr-from" title="named in the lading heading, not this cargo">(heading)</span>` : '';
-        const inner = p.pid ? `<a href="entity.html?pid=${p.pid}">${esc(name)}</a>` : esc(name);
+        // A person opens the name picker, exactly as a name in the cargo text does:
+        // name-picker.js binds one delegated handler for `span.clickable-name[data-pid]`
+        // on the document. This was `<a href="entity.html?pid=...">` and went nowhere --
+        // entity.html routes on location.hash and has no pid route at all, so every
+        // person link in a record landed on "No entity identifier found in URL".
+        const inner = p.pid
+            ? `<span class="clickable-name" data-pid="${esc(p.pid)}" role="button"
+                     title="Find this person, and people who may be the same">${esc(name)}</span>`
+            : esc(name);
         return inner + status + place + from;
     }
 

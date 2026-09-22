@@ -265,12 +265,23 @@ function drawTableWindow() {
     while (end < n && off[end] < limit) end++;
     end = Math.min(n, end + OVER);
 
+    // A tooltip belongs to a trigger element. The virtual table replaces every row
+    // on each redraw, so a trigger the pointer is resting on is DELETED without ever
+    // firing mouseout -- and Bootstrap, never told to hide, leaves the tooltip in the
+    // document. Scroll through a filtered list with the pointer over the table and
+    // they pile up, one per redraw, and nothing clears them.
+    //
+    // Hide them while their triggers still exist, then sweep whatever survived: an
+    // orphan is a .tooltip whose id no element claims through aria-describedby, which
+    // is the link Bootstrap itself maintains between the two.
+    hideTooltipsIn(tbody);
     let html = vtSpacer(off[start]);
     for (let i = start; i < end; i++) {
         html += ladingRowHtml(VT.items[i], VT.shortToColour, VT.single);
     }
     html += vtSpacer(off[n] - off[end]);
     tbody.innerHTML = html;
+    sweepOrphanedTooltips();
     VT.start = start;
     VT.end = end;
 
@@ -360,6 +371,25 @@ function measureWindow() {
         _vtRaf = requestAnimationFrame(() => { _vtRaf = 0; drawTableWindow(); });
     }
 }
+
+function hideTooltipsIn(root) {
+    if (!root || typeof bootstrap === 'undefined' || !bootstrap.Tooltip) return;
+    // HIDE, NEVER DISPOSE. These tooltips are delegated -- main.js initialises them on
+    // the table with a `selector`, so the instance attached to a row's button belongs to
+    // that delegation. Disposing it threw "Cannot convert undefined or null to object"
+    // on every redraw, which is a new fault in place of the old one.
+    root.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+        const inst = bootstrap.Tooltip.getInstance(el);
+        if (inst) { try { inst.hide(); } catch (e) { /* mid-teardown; the sweep gets it */ } }
+    });
+}
+
+function sweepOrphanedTooltips() {
+    document.querySelectorAll('.tooltip[id]').forEach(t => {
+        if (!document.querySelector(`[aria-describedby="${t.id}"]`)) t.remove();
+    });
+}
+
 
 // A row that was open when it scrolled away comes back open.
 async function restoreExpanded() {
@@ -451,22 +481,34 @@ function renderTable(data, undatedHeldBack = 0) {
     $ladingTableTbody.on('click', '.toggleCargosBtn', async function () {
         const cargosButton = $(this);
         cargosButton.tooltip('hide');
-        const cargosList = cargosButton.parents("td").find("ul.cargos-list");
-        // Retrieve footnotes from the button's data attribute
         const footnotes = cargosButton.data("footnotes");
-        cargosList.data("footnotes", footnotes); // Pass footnotes to cargo list
-
         const ladingId = String(cargosButton.closest('tr').data('id'));
 
-        if (cargosList.is(":visible")) {
-            cargosList.hide();
+        if (cargosButton.parents("td").find("ul.cargos-list").is(":visible")) {
+            cargosButton.parents("td").find("ul.cargos-list").hide();
             cargosButton.removeClass("btn-danger").addClass("btn-success");
             if (VT) VT.expanded.delete(ladingId);
         } else {
+            // REMEMBER FIRST, THEN FETCH. Opening is async, and a redraw during the
+            // await -- a scroll, a resize, measureWindow -- replaces every row, so the
+            // button and list captured above become detached nodes. Writing the cargos
+            // into them succeeds silently and shows the reader nothing: the click looks
+            // ignored, which is exactly what it looked like on a person-filtered list.
+            // Recording the id before the await means any redraw restores the row
+            // itself (restoreExpanded), and re-querying after it means we write to the
+            // row that is actually on screen.
+            if (VT) VT.expanded.add(ladingId);
             const cargos = await db.cargos.where("lading_id").equals(ladingId).toArray();
+            const $row = $ladingTableTbody.find(
+                'tr[data-id="' + String(ladingId).replace(/"/g, '\\"') + '"]');
+            const $btn = $row.length ? $row.find('.toggleCargosBtn') : cargosButton;
+            const cargosList = $row.length ? $row.find('ul.cargos-list')
+                                           : cargosButton.parents("td").find("ul.cargos-list");
+            if (!cargosList.length) return;   // scrolled out of the window; restoreExpanded has it
+            cargosList.data("footnotes", footnotes);
             renderCargosList(cargosList, cargos);
             cargosList.show();
-            cargosButton.removeClass("btn-success").addClass("btn-danger");
+            $btn.removeClass("btn-success").addClass("btn-danger");
             // Remembered by id: the row's element will not survive a scroll.
             if (VT) VT.expanded.add(ladingId);
         }
