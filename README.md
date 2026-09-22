@@ -31,10 +31,13 @@ Planned contents:
 
 ### Scale of the dataset
 
-- **33,548** ladings across **46** account-book files (Volumes I–IV)
-- **3,333** glossary headwords (7,387 including variant forms) in 22 commodity categories
-- **246,008** person mentions grouped for identity matching
-- **37,693** unique surname forms; **5,632** unique forename forms
+Measured from the data published here on 22 September 2026:
+
+- **33,548** ladings across **46** account-book files (Volumes I–IV), holding **212,196** cargos
+- **324,907** commodity rows in the cargo records, every one carrying a Getty AAT or Wikidata identifier
+- **2,452** glossary concepts, attested by **19,414** spellings, in **35** subject groupings derived from Getty AAT
+- **248,475** person mentions grouped into **111,964** groups for identity matching
+- **36,118** distinct surname spellings and **5,474** distinct forename spellings in the published annotations
 
 ## Project team
 
