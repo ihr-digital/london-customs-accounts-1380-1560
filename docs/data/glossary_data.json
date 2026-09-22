@@ -264537,13 +264537,29 @@
       "groups": [
         "Food, drink & provisions"
       ],
-      "aat": [],
+      "aat": [
+        {
+          "id": "Q11106",
+          "label": "bacon",
+          "source": "wikidata",
+          "note": "Getty AAT has no term for bacon, and none for pork or cured pork either (checked 22 Sep 2026 over every prefLabel and altLabel in the scheme): it is an art and architecture vocabulary and thin on foodstuffs. Wikidata Q11106, “salt cured pork belly, back, or side, sometimes smoked”, is the commodity exactly."
+        }
+      ],
       "sinceLeftovers": true,
       "reviewed": false,
       "related": [
         "flitch",
         "pig"
-      ]
+      ],
+      "relatedConcepts": [
+        {
+          "id": "300250114",
+          "label": "Sus (genus)",
+          "source": "aat",
+          "note": "The animal it is made from. A related concept, NOT a type: bacon is not a kind of pig, so this must not sit in `aat`, where the AAT grouping map unions the ancestors of every 300- id and would file bacon under animals."
+        }
+      ],
+      "memo": "AAT covers no foodstuff here, so the identifier is Wikidata Q11106 (22 Sep 2026); 92 other entries already use Wikidata ids. Related to AAT 300250114 Sus (genus), the animal it comes from."
     },
     "mull madder": {
       "d": "mull madder: madder of the lowest quality",
