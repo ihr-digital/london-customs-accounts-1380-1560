@@ -52,6 +52,38 @@ function initializeExportButtons() {
     $exportButtonsContainer.html(buttonsHtml);
 
     // --- Event Delegation for all button actions ---
+// The citation the quotation-mark button copies.
+//
+// It used to emit `Jenks, Stuart (ed.) ... Available at: <url> (Accessed: <date>).`
+// -- with the ellipsis literally in the output, so anyone who pressed it pasted a
+// placeholder into their notes.
+//
+// AUTHORS, TITLE AND DOI MIRROR CITATION.cff, which is the repository's machine-
+// readable citation metadata and what GitHub's "Cite this repository" reads. Keep
+// them in step: if the author list or the title changes there, change it here. The
+// DOI is the CONCEPT doi, which always resolves to the newest release.
+//
+// The ACCESSED DATE is ISO, not toLocaleDateString(): a citation pasted by a reader
+// in Hamburg read 22.9.2026 and one in Boston 9/22/2026, for the same data.
+//
+// The URL is the reader's CURRENT view, filters and all, because that is what they
+// were looking at when they pressed the button -- and the view is reconstructible
+// from it. Jenks's edition is named as the source of the transcripts, since the
+// structured data is derived from it and a reader checking a reading needs it.
+const CITATION = {
+    authors: 'Colson, J., Scheltjens, W., Benbow, E., Gadd, S., & Grove-Gordillo, M.',
+    title: 'London Customs Accounts, 1380-1560: machine-readable data and research tools',
+    doi: 'https://doi.org/10.5281/zenodo.22709785',
+    transcripts: 'Derived from the transcriptions of Stuart Jenks.',
+};
+
+function buildCitation() {
+    const accessed = new Date().toISOString().slice(0, 10);
+    return `${CITATION.authors} ${CITATION.title} [Data set]. Zenodo. `
+         + `${CITATION.doi}. ${CITATION.transcripts} `
+         + `View: ${window.location.href} (accessed ${accessed}).`;
+}
+
     $exportButtonsContainer.on('click contextmenu', '.export', async function (event) {
         // Prevent default browser context menu for right-clicks
         if (event.type === 'contextmenu') {
@@ -69,9 +101,7 @@ function initializeExportButtons() {
                 break;
 
             case 'copy-citation':
-                const today = new Date().toLocaleDateString();
-                const citationText = `Jenks, Stuart (ed.) ... Available at: ${window.location.href} (Accessed: ${today}).`;
-                copyToClipboard(citationText, $clickedSpan.find('i.fas'));
+                copyToClipboard(buildCitation(), $clickedSpan.find('i.fas'));
                 break;
 
             case 'export-csv':
