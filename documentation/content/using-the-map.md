@@ -18,10 +18,10 @@ the current zoom.
 | **London** | a crown, always shown. Every voyage in the corpus touches it, so it has no switch. |
 | **Places named in the accounts** | one disc per place, **sized by how often the accounts name it**. Calais is named 1,970 times; most places once or twice. |
 | **Regions named in the accounts** | sixteen rows are areas rather than ports, drawn as outlines. Where possible the outline is **dated to the period** — the Kingdom of Portugal 1415–1801, not modern Portugal. |
-| **Customs ports, 1566** | a later administrative geography. **Off by default**, and drawn only from **zoom 5** — at the opening view, switching it on changes nothing until you zoom in. |
+| **Customs hierarchy, 1565** | a later administrative geography: head ports (drawn larger), the ports belonging to them and their creeks, with a dashed arc from each place to its head, as the Exchequer commissioners returned them (TNA E 159/350). The returns as they survive do not reach Wales, and Chester's members are not among them; the rest of the coast is covered in full. **Off by default.** |
 | **Inland navigation** | navigable waterways. |
 | **Water, c.1500** | the coastline and inland water of the period. |
-| **Commodity provenance** | where the goods came from. **Not yet available** — the switch is greyed out. |
+| **Commodity provenance** | the places the goods are **named with** — a place word written beside them in the entry, as in *fili Colonie* or *pannis … de Vere*. **Off by default.** This is not a claim about where the goods were made: it is what the clerk wrote next to them, and whether it records an origin is a question for the curators, so each is recorded as *undecided* until one rules on it. Goods whose own **name** comes from a place — holland cloth, cambric, osnaburg — carry that place on the glossary concept rather than in the entry, and are deliberately **not** drawn here. |
 
 ## Using it
 
