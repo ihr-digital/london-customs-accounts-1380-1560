@@ -17,10 +17,13 @@ visualisations.
 |---|---|
 | Ladings | 33,548 across 46 account-book files (Volumes I–IV) |
 | Set aside, not parsed | 5,020 fragments that are not cargo records |
-| Glossary headwords | 3,333 (7,387 including variant forms) across 22 categories |
-| Unique forename forms | 5,632 → 1,283 curated groups |
-| Unique surname forms | 37,693 with 245,712 scored neighbour edges |
-| Person records | 79,205 |
+| Glossary concepts | 2,452, attested by 19,414 spellings, in 35 AAT-derived groupings |
+| Distinct forename spellings | 5,474 in the published annotations |
+| Distinct surname spellings | 36,118 in the published annotations |
+| Cargos | 212,196, carrying 324,907 commodity rows |
+| Person mentions | 248,475, in 111,964 groups |
+
+Measured from the published data on 22 September 2026.
 
 ## Using the site
 
