@@ -45,6 +45,9 @@
     "qualifierAAT": { "@id": "mlca:qualifierAAT", "@type": "@id" },
     "compoundOf": { "@id": "hector:compoundOf", "@type": "@id", "@container": "@set" },
     "related": { "@id": "skos:related", "@type": "@id", "@container": "@set" },
+    "exactMatch": { "@id": "skos:exactMatch", "@type": "@id", "@container": "@set" },
+    "closeMatch": { "@id": "skos:closeMatch", "@type": "@id", "@container": "@set" },
+    "broadMatch": { "@id": "skos:broadMatch", "@type": "@id", "@container": "@set" },
     "materials": { "@id": "schema:material", "@container": "@set" },
     "label": "rdfs:label"
   }

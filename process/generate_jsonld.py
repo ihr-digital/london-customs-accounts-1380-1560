@@ -24,6 +24,7 @@ Usage:
 import argparse
 import json
 import logging
+import re
 from pathlib import Path
 
 logging.basicConfig(
@@ -52,6 +53,21 @@ _QUAL_STORE = _load_qual_store()
 
 def _aat_uri(aat_id):
     return f"http://vocab.getty.edu/aat/{aat_id}"
+
+
+# term key -> how many of its concept mappings were withheld as unconfirmed or
+# uncertain. Filled by build_glossary_jsonld, reported by generate_glossary_jsonld.
+_WITHHELD: dict = {}
+
+
+def _external_uri(concept):
+    """A concept id from the glossary -- an AAT number, or a Wikidata Q-number,
+    which the editor stores with source='wikidata' and which is recognisable
+    anyway by its leading Q."""
+    cid = str(concept.get("id", ""))
+    if concept.get("source") == "wikidata" or re.fullmatch(r"Q\d+", cid):
+        return f"http://www.wikidata.org/entity/{cid}"
+    return _aat_uri(cid)
 
 
 def _ld_qualifier(q, store):
@@ -354,12 +370,53 @@ def build_glossary_jsonld(term_key, entry):
             f"{BASE_URI}/glossary/{k}" for k in compound_of
         ]
 
-    # Related terms (skos:related)
-    related = entry.get("related", [])
+    # Commodity type identifiers (entry.aat), as SKOS mapping relations.
+    #
+    # WHAT EACH FLAG MEANS HERE. The editor records how precisely a concept fits:
+    # exact (the default), close (`match: "close"`), broader (`broader: true`).
+    # Those are skos:exactMatch, skos:closeMatch and skos:broadMatch, which is
+    # what they were always meant to be.
+    #
+    # WHAT IS LEFT OUT, and why. `suggested: true` is a machine's proposal that no
+    # curator has confirmed -- publishing it would put the project's name to a
+    # guess. `uncertain: true` is a curator's own flagged doubt, and JSON-LD has no
+    # way to say "probably" without reifying the statement, so publishing it would
+    # turn a doubt into an assertion. Both are held back rather than asserted
+    # (Stephen, 22 Sep). The counts are returned so a run says how many it withheld
+    # instead of passing over them in silence.
+    withheld = 0
+    mappings = {"exactMatch": [], "closeMatch": [], "broadMatch": []}
+    for a in entry.get("aat", []):
+        if not a.get("id"):
+            continue
+        if a.get("suggested") or a.get("uncertain"):
+            withheld += 1
+            continue
+        if a.get("broader"):
+            mappings["broadMatch"].append(_external_uri(a))
+        elif a.get("match") == "close":
+            mappings["closeMatch"].append(_external_uri(a))
+        else:
+            mappings["exactMatch"].append(_external_uri(a))
+    for key, uris in mappings.items():
+        if uris:
+            doc[key] = uris
+    if withheld:
+        _WITHHELD[term_key] = withheld
+
+    # Related terms (skos:related): glossary entries, and external concepts.
+    #
+    # `related` holds glossary keys, with the reciprocal link maintained by the
+    # editor. `relatedConcepts` holds concepts in someone else's vocabulary --
+    # a concept the commodity is related to but is NOT a kind of, which is why
+    # it cannot live in `aat`: the AAT grouping map unions the ancestors of
+    # every 300- id there, so "Sus (genus)" on bacon would file bacon under
+    # animals. Both are skos:related, so both become URIs in the one set.
+    related = [f"{BASE_URI}/glossary/{k}" for k in entry.get("related", [])]
+    related += [_external_uri(c) for c in entry.get("relatedConcepts", [])
+                if c.get("id")]
     if related:
-        doc["related"] = [
-            f"{BASE_URI}/glossary/{k}" for k in related
-        ]
+        doc["related"] = related
 
     return doc
 
@@ -463,6 +520,7 @@ def generate_glossary(dry_run=False):
 
     entries = glossary.get("entries", {})
     count = 0
+    _WITHHELD.clear()
 
     for term_key, entry in entries.items():
         doc = build_glossary_jsonld(term_key, entry)
@@ -475,6 +533,11 @@ def generate_glossary(dry_run=False):
 
         count += 1
 
+    if _WITHHELD:
+        logging.info(
+            "glossary: %d concept mapping(s) on %d entries withheld as uncertain or "
+            "unconfirmed (e.g. %s)", sum(_WITHHELD.values()), len(_WITHHELD),
+            ", ".join(sorted(_WITHHELD)[:5]))
     return count
 
 
