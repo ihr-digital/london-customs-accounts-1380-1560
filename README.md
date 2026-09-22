@@ -31,7 +31,7 @@ Planned contents:
 
 ### Scale of the dataset
 
-- **33,548** ladings across **46** account-book files (Volumes I–V)
+- **33,548** ladings across **46** account-book files (Volumes I–IV)
 - **3,333** glossary headwords (7,387 including variant forms) in 22 commodity categories
 - **246,008** person mentions grouped for identity matching
 - **37,693** unique surname forms; **5,632** unique forename forms

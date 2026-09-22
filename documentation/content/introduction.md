@@ -15,8 +15,8 @@ visualisations.
 
 | Resource | Count |
 |---|---|
-| Ladings | 33,548 across 46 account-book files (Volumes I–V) |
-| Discarded cargo items | 5,020 (potential data loss; see `docs/data/discarded/`) |
+| Ladings | 33,548 across 46 account-book files (Volumes I–IV) |
+| Set aside, not parsed | 5,020 fragments that are not cargo records |
 | Glossary headwords | 3,333 (7,387 including variant forms) across 22 categories |
 | Unique forename forms | 5,632 → 1,283 curated groups |
 | Unique surname forms | 37,693 with 245,712 scored neighbour edges |
