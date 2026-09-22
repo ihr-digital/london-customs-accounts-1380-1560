@@ -264965,7 +264965,21 @@
       "groups": [
         "Furs, skins & leather"
       ],
-      "memo": "Split from basan 21 Sep 2026 on Eliot's report: 'pelles lanute' and its kin were reading as basan. AAT has no woolfell term; the nearest is sheepskin (300193374), which basan already holds as a broader match -- left for a curator."
+      "memo": "Split from basan 21 Sep 2026 on Eliot's report: 'pelles lanute' and its kin were reading as basan. AAT has no woolfell term and neither has Wikidata (checked 22 Sep 2026), so it carries two broader matches rather than a false exact one: pelts (animal skins) for the wool-on sense and sheepskin for the animal.",
+      "aat": [
+        {
+          "id": "300395532",
+          "label": "pelts (animal skins)",
+          "broader": true,
+          "note": "AAT has no woolfell term (checked 22 Sep 2026: no prefLabel or altLabel contains it, and Wikidata has none either). This scope note is the woolfell exactly -- “skins stripped from a dead animal, with hair, wool, or feathers attached” -- and is broader only in covering any animal."
+        },
+        {
+          "id": "300193374",
+          "label": "sheepskin",
+          "broader": true,
+          "note": "The animal and the substance. basan, the sheepskin tanned in bark, holds the same broader match: the two are sibling kinds of sheepskin, one with the wool still on and one tanned."
+        }
+      ]
     }
   },
   "qa_identifiers": {
