@@ -64485,7 +64485,8 @@
         {
           "t": "ciste",
           "s": [
-            4
+            4,
+            45
           ],
           "w": 0
         },
@@ -64638,7 +64639,7 @@
         "forcer_2",
         "mala"
       ],
-      "memo": "Merged 2026-06-17: chest_2 (duplicate measure entry, identical forms) and ship cista folded in; qualifiers atomised; AAT chests + weights/measures.",
+      "memo": "Merged 2026-06-17: chest_2 (duplicate measure entry, identical forms) and ship cista folded in; qualifiers atomised; AAT chests + weights/measures. Merged the separate `ciste` concept in, 22 Sep 2026 (Stephen). It was held apart with the note “meaning unknown (cannot be ‘chest’ because measured in lb.)”, but the corpus does not bear that out: of the 26 occurrences of the form, NONE has lb. or libr- within 60 characters, and every one reads as a chest — '1 ciste cum ½ panno curto', '1 ciste vitri', '6 cistes suger', '28 cistes Normandy glasse', '2 nest cistes'. The lb. reading it was created for is not in the data now.",
       "groups": [
         "Units, weights & measures",
         "Containers & vessels",
@@ -64895,30 +64896,6 @@
         {
           "id": "300386154",
           "label": "unidentified (information indicator)"
-        }
-      ],
-      "groups": [
-        "Unidentified"
-      ]
-    },
-    "ciste": {
-      "d": "meaning unknown (cannot be ‘chest’ because measured in lb.)",
-      "q": [],
-      "x": [],
-      "f": [
-        {
-          "t": "ciste",
-          "s": [
-            45
-          ],
-          "w": 1
-        }
-      ],
-      "aat": [
-        {
-          "id": "300386154",
-          "label": "unidentified (information indicator)",
-          "match": "close"
         }
       ],
       "groups": [
@@ -100735,7 +100712,13 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q1788657",
+        "label": "Northern England",
+        "dataset": "wikidata"
+      },
+      "memo": "The region of MANUFACTURE, which the description already states in prose (“cloth manufactured in the north of England”) — not a port of origin, and not a medieval administrative unit: Q1788657 is a modern cultural area. Adopted 22 Sep 2026."
     },
     "nullas": {
       "d": "General term referring to a person, people, place, or thing for which the identity has not been established. [Source: Getty AAT]",
@@ -103085,11 +103068,6 @@
       "d": "pack: a packing unit and measure for dry goods, flax, cloth, yarn, candlewick and similar wares — both a physical unit of transport of no particular size and, for some commodities, a measure of definite size (flax: 150 bales = 20 cwt at 112 lb./cwt; candlewick: 20 cwt; Irish yarn: 4 cwt at 120 lb./cwt; Cologne thread: 30 dozen lb.) (Zupko 270-1). See also packet, fardel, truss; for pack-thread see packthrede; for the pack-needle and packduck see those.",
       "aat": [
         {
-          "id": "300428728",
-          "label": "packs",
-          "match": "close"
-        },
-        {
           "id": "300386648",
           "label": "weights and measures (general, standards)",
           "broader": true
@@ -103325,7 +103303,7 @@
         "sack",
         "truss"
       ],
-      "memo": "Consolidated 2026-06-18 from pack/pack_2..5/pak/packe/paccus/package/packket. Pack-thread routed to packthrede; pack-needle and packduck split to their own concepts. ",
+      "memo": "Consolidated 2026-06-18 from pack/pack_2..5/pak/packe/paccus/package/packket. Pack-thread routed to packthrede; pack-needle and packduck split to their own concepts.  Dropped AAT 300428728 ‘packs’, 22 Sep 2026 (Stephen: a pak is always a measure). Its scope note is “Bags or containers of varied form designed to carry objects by one person”, broader ‘containers for personal gear’ — a rucksack, not a packing unit of cloth. Because groups are derived from AAT ancestry, that id was also why a packing measure sat in Clothing, costume & accessories and Tools & equipment.",
       "groups": [
         "Clothing, costume & accessories",
         "Units, weights & measures",
@@ -140742,7 +140720,13 @@
       ],
       "groups": [
         "Textiles & cloth"
-      ]
+      ],
+      "geo": {
+        "id": "Q1344070",
+        "label": "West Country",
+        "dataset": "wikidata"
+      },
+      "memo": "The region of MANUFACTURE, which the description already states in prose (“produced in the West of England”) — not a port of origin, and not a medieval administrative unit: Q1344070 is a modern cultural area. Adopted 22 Sep 2026."
     },
     "whalesgrece": {
       "d": "probably whale-oil, oil obtained from whale blubber (OED s.v. whale-oil)",

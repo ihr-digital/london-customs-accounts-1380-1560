@@ -76,6 +76,10 @@ const CargoRecord = (() => {
         const rows = (record.rows || []).map(r => {
             const qty = r.quantity ? esc(r.quantity.value != null ? r.quantity.value : r.quantity.w) : '';
             const measure = r.measure ? esc(r.measure.key || r.measure.w) : '<span class="cr-none">counted</span>';
+            // The container it travelled in, where the cargo named one: "1 cista cum 29
+            // peciis tele lini" is ONE lot of cloth in a chest, not a chest and some cloth.
+            const container = (r.container || []).map(c =>
+                `${esc((c.quantity || {}).w || '')} ${esc(c.w)}`.trim()).join(', ');
             const extra = (r.also || []).map(a =>
                 `<span class="cr-extra">also ${esc((a.quantity || {}).w || '')} ${esc((a.measure || {}).w || '')}</span>`).join(' ');
             const quals = (r.qualifiers || []).map(q => q.geo
@@ -89,7 +93,8 @@ const CargoRecord = (() => {
             return `<tr>
                 <td class="cr-goods">${esc((r.span || {}).w)}${quals ? `<div class="cr-quals">${quals}</div>` : ''}</td>
                 <td class="cr-qty">${qty}${extra ? `<div>${extra}</div>` : ''}</td>
-                <td class="cr-measure">${measure}</td>
+                <td class="cr-measure">${measure}${container
+                    ? `<div class="cr-container" title="the container the accounts name for this lot">in ${container}</div>` : ''}</td>
                 <td class="cr-concept">${esc(concept.label || concept.key || '—')}
                     <div class="cr-ids">${ids}</div>${materials}</td>
             </tr>`;

@@ -933,3 +933,6 @@ h1 .date-range {
 .cargo-record .cr-foot { margin-top: 6px; color: #90a2ad; font-size: 0.75rem; }
 .record-icon { cursor: pointer; }
 .record-icon:hover { color: #2b6cb0 !important; }
+/* The container a lot travelled in ("in 1 cista"): a packing fact, not a measure,
+   so it sits under the measure rather than replacing it. */
+.cargo-record .cr-container { color: #6b7d88; font-size: 0.78rem; font-style: italic; }
