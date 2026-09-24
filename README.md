@@ -17,7 +17,11 @@ This repository hosts the project's public web outputs: a static site of interac
 tools and visualisations built over the structured data, together with the
 documentation describing how that data was produced.
 
-The site can be found at https://w3id.org/mlca.
+- **The site:** https://w3id.org/mlca
+- **The documentation** (how to use each view, and how the dataset was built):
+  https://ihr-digital.github.io/london-customs-accounts-1380-1560/documentation/
+- **The wiki** (what the data claims, how to get it, cite it and report errors):
+  https://github.com/ihr-digital/london-customs-accounts-1380-1560/wiki
 
 Planned contents:
 
