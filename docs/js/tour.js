@@ -27,7 +27,12 @@ const Tour = (() => {
         {el: "#progressBarContainer, #loadingSpinner", onlyWhileLoading: true, title: "The first visit takes a few minutes",
          body: "Your browser is downloading the whole corpus, about 33,500 ladings, so that everything after this "
              + "is instant and works offline. It happens once; later visits start straight away. "
-             + "The tour carries on meanwhile."},
+             + "The tour carries on meanwhile.",
+         // Shown instead if the download finishes before the reader reaches this step: the
+         // step stays, so the count set at the start never changes (see `steps` below).
+         doneTitle: "Download finished",
+         doneBody: "Your copy of the accounts has finished downloading. It is kept in this browser, "
+             + "so from now on the site starts straight away and works offline."},
         {el: "#termSearchWrap", title: "One box for everything",
          body: "Goods by any spelling, Latin, English or French (<code>vinum</code>, <code>wyne</code>, "
              + "<code>wine</code>), and misspellings too (&asymp;); kinds of goods (<code>spices</code>); places "
@@ -103,19 +108,20 @@ const Tour = (() => {
         return {el: document.getElementById("viewTabs"), ready: false};
     }
 
-    function _skip(step) { return step.onlyWhileLoading && !loading(); }
+    // THE STEPS OF THIS RUN OF THE TOUR, fixed when it starts: the loading step only if the
+    // corpus is still downloading at that moment. Deciding per step made the count change
+    // under the reader -- "1 of 11", then "2 of 10" when loading finished (Stephen, 29 Sep).
+    let steps = STEPS;
 
-    function _content(step, ready) {
-        const n = STEPS.filter(s => !_skip(s)).length;
-        const k = STEPS.slice(0, i + 1).filter(s => !_skip(s)).length;
-        const wait = ready ? "" : `<div class="tour-wait"><i class="fas fa-hourglass-half me-1"></i>`
+    function _content(step, ready, done) {
+        const wait = ready || done ? "" : `<div class="tour-wait"><i class="fas fa-hourglass-half me-1"></i>`
             + `This appears when loading has finished.</div>`;
-        return `<div class="tour-body">${step.body}</div>${wait}
+        return `<div class="tour-body">${done ? step.doneBody : step.body}</div>${wait}
             <div class="tour-nav">
-                <span class="tour-count">${k} of ${n}</span>
+                <span class="tour-count">${i + 1} of ${steps.length}</span>
                 <button type="button" class="btn btn-link btn-sm" data-tour="close">Close</button>
                 ${i > 0 ? '<button type="button" class="btn btn-outline-secondary btn-sm" data-tour="back">Back</button>' : ""}
-                <button type="button" class="btn btn-primary btn-sm" data-tour="next">${i === STEPS.length - 1 ? "Done" : "Next"}</button>
+                <button type="button" class="btn btn-primary btn-sm" data-tour="next">${i === steps.length - 1 ? "Done" : "Next"}</button>
             </div>`;
     }
 
@@ -127,10 +133,10 @@ const Tour = (() => {
 
     function _show(dir = 1) {
         _hide();
-        while (i >= 0 && i < STEPS.length && _skip(STEPS[i])) i += dir;
-        if (i < 0 || i >= STEPS.length) { stop(); return; }
-        const step = STEPS[i];
-        const {el, ready} = _target(step);
+        if (i < 0 || i >= steps.length) { stop(); return; }
+        const step = steps[i];
+        const done = !!step.onlyWhileLoading && !loading();     // it finished before we got here
+        const {el, ready} = done ? {el: document.getElementById("viewTabs"), ready: false} : _target(step);
         anchor = el;
         if (ready) {
             el.classList.add("tour-target");
@@ -138,7 +144,7 @@ const Tour = (() => {
         }
         _placeSpot();
         pop = new bootstrap.Popover(el, {
-            title: step.title, content: _content(step, ready), html: true, sanitize: false,
+            title: done ? step.doneTitle : step.title, content: _content(step, ready, done), html: true, sanitize: false,
             trigger: "manual", placement: ready ? "auto" : "bottom", customClass: "tour-popover",
             container: "body"});
         pop.show();
@@ -147,6 +153,7 @@ const Tour = (() => {
     function start() {
         try { localStorage.setItem(SEEN_KEY, new Date().toISOString()); } catch (e) { /* per-visit */ }
         _veilOn();
+        steps = STEPS.filter(s => !s.onlyWhileLoading || loading());
         i = 0;
         _show(1);
         document.addEventListener("keydown", _keys, true);
@@ -200,5 +207,5 @@ const Tour = (() => {
     }
     $(autostart);
 
-    return {start, stop, get step() { return i; }, get steps() { return STEPS.length; }, SEEN_KEY};
+    return {start, stop, get step() { return i; }, get steps() { return steps.length; }, SEEN_KEY};
 })();
