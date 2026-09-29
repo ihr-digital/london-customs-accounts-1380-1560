@@ -308,6 +308,20 @@ async function applyFilters() {
                 });
             }
 
+            // Term filter (search_plan.md step 2): the concepts, units and qualifiers
+            // chosen in search, on the precomputed per-lading `terms` (db_operations.js
+            // _collectLadingTerms). AND by default -- each term chosen narrows -- or OR.
+            const termSel = (filterState.termFilter || []).map(t => t.id);
+            if (termSel.length > 0) {
+                const anyOf = filterState.termMode === "OR";
+                baseFilteredLadings = baseFilteredLadings.filter(v => {
+                    const lt = v.terms;
+                    if (!lt || lt.length === 0) return false;
+                    return anyOf ? termSel.some(id => lt.includes(id))
+                                 : termSel.every(id => lt.includes(id));
+                });
+            }
+
             if (currentSearchQuery && currentSearchQuery.trim()) {
                 const matchedLadingsMap = new Map();
 
@@ -482,6 +496,8 @@ function loadFilterState() {
         if (filterState.groupMode !== "AND") {
             filterState.groupMode = "OR";
         }
+        if (!Array.isArray(filterState.termFilter)) filterState.termFilter = [];
+        if (filterState.termMode !== "OR") filterState.termMode = "AND";
         // A state saved before the defaults existed carries neither direction, and
         // assigning it wholesale above has just replaced them with undefined.
         if (typeof filterState.import !== "boolean") filterState.import = true;
@@ -561,6 +577,11 @@ function updateURLFromFilterState() {
             params.set("gmode", "AND");
         }
     }
+    // Term ids contain spaces and commas ("c:salted ox-tongue"), so "~" as for groups.
+    if (filterState.termFilter && filterState.termFilter.length > 0) {
+        params.set("terms", filterState.termFilter.map(t => t.id).join("~"));
+        if (filterState.termMode === "OR") params.set("tmode", "OR");
+    }
     // Which of Table / Chart / Map is open is part of where you are, so it
     // belongs in the link you send someone.
     if (window.mlcaView && window.mlcaView !== "table") {
@@ -586,13 +607,15 @@ function loadFilterStateFromURL() {
     const persons = params.get("persons");
     const groups = params.get("groups");
     const gmode = params.get("gmode");
+    const terms = params.get("terms");
+    const tmode = params.get("tmode");
     // ASK WHETHER THE PARAMETERS ARE PRESENT, not what they evaluate to. `showImports`
     // and `showExports` are `true` precisely when their parameters are ABSENT, so the
     // old form of this guard (`!showImports && !showExports && ...`) could never hold:
     // it always returned true, the localStorage branch of loadFilterState was dead
     // code, and nothing ever seeded visibleTypes on a first visit (#39).
     const KEYS = ["types", "in", "out", "range", "sort", "q", "mode", "persons",
-                  "groups", "gmode"];
+                  "groups", "gmode", "terms", "tmode"];
     if (!KEYS.some(k => params.has(k))) {
         return false;
     }
@@ -638,6 +661,11 @@ function loadFilterStateFromURL() {
         filterState.groupFilter = groups.split("~").filter(Boolean);
     }
     filterState.groupMode = gmode === "AND" ? "AND" : "OR";
+    // Labels are the ids until the search vocabulary names them (step 3).
+    filterState.termFilter = terms
+        ? terms.split("~").filter(Boolean).map(id => ({id, label: id.slice(2)}))
+        : [];
+    filterState.termMode = tmode === "OR" ? "OR" : "AND";
     return true;
 }
 

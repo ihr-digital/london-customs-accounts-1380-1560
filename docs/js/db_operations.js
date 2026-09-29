@@ -893,6 +893,25 @@ db.version(109).stores({
     provenance: "lading_id"
 });
 
+// Version 110 -- every lading carries `terms` (_collectLadingTerms): the concepts, units
+// and qualifiers its cargos are tagged with, for the term filter and the new search
+// (search_plan.md step 2). Computed at load, like `groups`, so cached ladings must be
+// re-fetched once. The person index is untouched (it is not in IndexedDB since v109).
+db.version(110).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v110 — clearing ladings and cargos to compute per-lading terms");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v110 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -1017,6 +1036,9 @@ async function preloadAllLadings() {
                     // commodity-group filter can narrow the in-memory lading list
                     // without re-fetching cargos (mirrors customs_type/date).
                     v.groups = _collectLadingGroups(v.cargos);
+                    // And every concept, unit and qualifier named in them, for the
+                    // term filter and search (see _collectLadingTerms).
+                    v.terms = _collectLadingTerms(v.cargos);
 
                     const places = _collectLadingProvenance(v.cargos);
                     if (places.length) provenanceToBulkPut.push({lading_id: v.lading_id, places});
@@ -1108,6 +1130,30 @@ function _collectLadingGroups(cargos) {
                     if (Array.isArray(q && q.groups)) q.groups.forEach(g => set.add(g));
                 });
             }
+        });
+    });
+    return Array.from(set).sort();
+}
+
+// Every term a lading's cargos are tagged with, as kind-prefixed ids, sorted and unique:
+//   "c:<key>"  goods -- commodity and commodity-unit spans (matches[0].key)
+//   "u:<key>"  units -- unit spans (matches[0].key)
+//   "q:<canonical>"  qualifiers nested on any of those, lower-cased
+// The term filter narrows the in-memory lading list on these, as the group filter does
+// on `groups`, so choosing a term fetches no cargos. Standalone `qualifier` spans are
+// skipped: they carry no canonical (in the corpus they are fragments such as "de").
+// The search vocabulary (search_plan.md step 3) must produce ids in exactly this form.
+function _collectLadingTerms(cargos) {
+    const set = new Set();
+    (cargos || []).forEach(cargo => {
+        (cargo.annotations || []).forEach(a => {
+            const t = a.type;
+            if (t !== "commodity" && t !== "commodity-unit" && t !== "unit") return;
+            const m = Array.isArray(a.matches) && a.matches[0];
+            if (m && m.key) set.add((t === "unit" ? "u:" : "c:") + m.key);
+            (a.qualifiers || []).forEach(q => {
+                if (q && q.canonical) set.add("q:" + String(q.canonical).toLowerCase());
+            });
         });
     });
     return Array.from(set).sort();

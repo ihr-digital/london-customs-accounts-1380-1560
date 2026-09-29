@@ -70,7 +70,11 @@ let filterState = {
     annotationMode: "annotations",
     personFilter: [],  // [{pid, label}] — selected canonical persons used to narrow the table
     groupFilter: [],   // [fineGroupName] — selected commodity subject groups (empty = all)
-    groupMode: "OR"    // "OR" (any selected group) | "AND" (all selected groups)
+    groupMode: "OR",   // "OR" (any selected group) | "AND" (all selected groups)
+    // [{id, label}] -- chosen search terms (search_plan.md step 2). An id is kind-prefixed:
+    // "c:<concept key>" (goods), "u:<unit key>", "q:<qualifier canonical, lower-cased>".
+    termFilter: [],
+    termMode: "AND"    // "AND" (each term narrows) | "OR" (any term)
 };
 
 const accountingYears = {
