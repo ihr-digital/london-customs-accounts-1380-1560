@@ -57,6 +57,15 @@ function renderCargosList(cargosListElement, cargos) {
         cargosListElement.append(listItem);
     });
 
+    // Chosen search terms are marked where they occur in the cargo text: spans carry
+    // data-term (annotations.js _termAttr) in the same id form as the term filter.
+    const termSel = new Set((filterState.termFilter || []).map(t => t.id));
+    if (termSel.size) {
+        cargosListElement.find("[data-term]").each(function () {
+            if (termSel.has(this.getAttribute("data-term"))) this.classList.add("term-hit");
+        });
+    }
+
     $(".cargo-text-content").each(function () {
         highlightMatches($(this), filterState.searchQuery);
     });
@@ -161,6 +170,7 @@ function startVirtualTable(items, shortToColour) {
         shortToColour,
         single: items.length === 1,
         heights: new Float64Array(items.length).fill(est),  // replaced on first measure
+        measured: new Uint8Array(items.length),              // 1 once a row's real height is known
         est,
         // Which rows are open, by lading_id rather than by DOM node: a row that
         // scrolls out of the window loses its element, and must come back open.
@@ -279,6 +289,10 @@ function drawTableWindow() {
     // orphan is a .tooltip whose id no element claims through aria-describedby, which
     // is the link Bootstrap itself maintains between the two.
     hideTooltipsIn(tbody);
+    // Replacing the rows shortens the table for an instant (open rows are drawn closed and
+    // reopened below). If anything lays it out in that instant, the browser clamps the
+    // scroll position to the shorter height and it stays clamped. Put it back.
+    const keepTop = box ? box.scrollTop : 0;
     let html = vtSpacer(off[start]);
     for (let i = start; i < end; i++) {
         html += ladingRowHtml(VT.items[i], VT.shortToColour, VT.single);
@@ -291,6 +305,7 @@ function drawTableWindow() {
 
     // Restore BEFORE measuring: an open row must be measured open. See restoreExpanded.
     restoreExpanded();
+    if (box && Math.abs(box.scrollTop - keepTop) > 1) box.scrollTop = keepTop;
     measureWindow();
 }
 
@@ -309,22 +324,35 @@ function measureWindow() {
     const tbody = $ladingTableTbody[0];
     const rows = tbody.querySelectorAll('tr[data-id]');
     let changed = false;
+    const closed = [];
     rows.forEach((tr, k) => {
         const i = VT.start + k;
         const h = tr.offsetHeight;
-        if (h && Math.abs(h - VT.heights[i]) > 0.5) { VT.heights[i] = h; changed = true; }
+        if (!h) return;
+        VT.measured[i] = 1;
+        if (Math.abs(h - VT.heights[i]) > 0.5) { VT.heights[i] = h; changed = true; }
+        if (!VT.expanded.has(tr.getAttribute('data-id'))) closed.push(h);
     });
     if (!changed) return;
-    // The first honest measurement is a better estimate for everything unmeasured
-    // than the guess it replaces. Tested against the measurement rather than
-    // against the sentinel 48: the estimate is now carried across rebuilds, so
-    // "have we measured yet" is no longer the question. "Is what we are assuming
-    // still true" is, and it keeps working when rows genuinely change height --
-    // switching to Footnotes, or a single-lading view.
-    if (rows.length && Math.abs(VT.heights[VT.start] - VT.est) > 2) {
-        VT.est = VT.heights[VT.start];
-        for (let i = 0; i < VT.heights.length; i++) {
-            if (i < VT.start || i >= VT.end) VT.heights[i] = VT.est;
+    // A better estimate for the rows never drawn: the MEDIAN of the closed rows in
+    // view, applied only to rows never measured. It is carried across rebuilds, and
+    // it keeps working when rows genuinely change height (Footnotes, a single lading).
+    //
+    // IT USED TO BE the first drawn row's height, applied to EVERY row outside the
+    // window, measured or not. With a lading open, that row at the top of the window
+    // made every other row "tall"; and once it scrolled away, the rows above were
+    // reset to the short estimate, including the open one. Either way the content
+    // under the scrollbar moved by the height of a cargo list, and the table kept
+    // scrolling itself back up: no way to reach the bottom with a cargo open
+    // (Stephen, 29 Sep; shot.py `scrollopen`).
+    if (closed.length) {
+        closed.sort((a, b) => a - b);
+        const med = closed[closed.length >> 1];
+        if (Math.abs(med - VT.est) > 2) {
+            VT.est = med;
+            for (let i = 0; i < VT.heights.length; i++) {
+                if (!VT.measured[i]) VT.heights[i] = med;
+            }
         }
     }
     VT.dirty = true;
@@ -417,7 +445,12 @@ function restoreExpanded() {
         const id = tr.getAttribute('data-id');
         if (!VT.expanded.has(id)) continue;
         const $list = $(tr).find('ul.cargos-list');
-        if (!$list.length || $list.is(':visible')) continue;
+        // The INLINE style, never jQuery's :visible. :visible measures, which makes the
+        // browser lay out the table while this row is still drawn closed -- shorter by its
+        // cargos -- and clamp scrollTop to that shorter height. With the last lading open,
+        // its last cargos could then never be scrolled into view (Stephen, 29 Sep, copperas;
+        // shot.py `scrolllast`). A freshly drawn row always carries display:none.
+        if (!$list.length || $list[0].style.display !== 'none') continue;
         const cargos = VT.cargos.get(id);
         if (!cargos) { missing.push(id); continue; }
         $list.data('footnotes', $(tr).find('.toggleCargosBtn').data('footnotes'));

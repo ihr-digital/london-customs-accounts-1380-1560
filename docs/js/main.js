@@ -60,6 +60,9 @@ async function init() {
     hideGenericSpinner();
     $(".content-hidden").addClass("content-visible").removeClass("content-hidden");
     PersonIndex.load().catch(err => console.warn("Person index could not be loaded:", err));
+    // Chips for terms that came in by URL or saved state: the filter already ran on
+    // their ids; this only names them (term_search.js).
+    if (typeof TermSearch !== "undefined") TermSearch.hydrate();
 
     // READINESS FLAG FOR HEADLESS CHECKS (tools/pages/shot.py), behind `?debug`.
     // The page is the only thing that knows when it is interactive: the ladings

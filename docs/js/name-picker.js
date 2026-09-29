@@ -339,8 +339,15 @@
         $out.show();
     }
 
+    // "Sounds like" (name_phonetic.js): opt-in, remembered per browser.
+    function _soundsLike() {
+        try { return localStorage.getItem("mlca_sounds_like") === "1"; } catch (e) { return false; }
+    }
+    let _inlineSeq = 0;
+
     async function _runInlineSearch(q, $out) {
         if (q.length < 2) { $out.empty().hide(); return; }
+        const mine = ++_inlineSeq;
 
         let rows = [];
         try {
@@ -352,14 +359,43 @@
             return;
         }
 
+        if (mine !== _inlineSeq) return;
         const activePids = new Set((filterState.personFilter || []).map(e => String(e.pid)));
         rows = rows.filter(r => !activePids.has(String(r.pid)));
 
-        if (rows.length === 0) {
-            _showInlineDropdown($out, `<div class="person-search-empty">No matches.</div>`);
+        if (!_soundsLike() || q.trim().length < 3) {
+            _showInlineDropdown($out, rows.length ? rows.map(_personResultHtml).join("")
+                : `<div class="person-search-empty">No matches.</div>`);
             return;
         }
-        _showInlineDropdown($out, rows.map(_personResultHtml).join(""));
+        // Start-of-name matches first, as always; then people whose name SOUNDS like it.
+        const head = rows.map(_personResultHtml).join("");
+        _showInlineDropdown($out, head + `<div class="person-search-empty">${NamePhonetic.ready
+            ? "Listening\u2026" : "Loading the phonetic model (about 28 MB, once)\u2026"}</div>`);
+        let hits;
+        try { hits = await NamePhonetic.search(q, 12); }
+        catch (err) {
+            if (mine !== _inlineSeq) return;
+            _showInlineDropdown($out, head + `<div class="person-search-empty text-danger">Sounds-like search is unavailable: ${$("<div>").text(err.message).html()}</div>`);
+            return;
+        }
+        if (mine !== _inlineSeq) return;
+        const seen = new Set(rows.map(r => String(r.pid)));
+        const more = [];
+        for (const h of hits) {
+            for (const p of await PersonIndex.byPart(h.form, 8)) {
+                const pid = String(p.pid);
+                if (seen.has(pid) || activePids.has(pid)) continue;
+                seen.add(pid);
+                more.push({p, h});
+                if (more.length >= 25) break;
+            }
+            if (more.length >= 25) break;
+        }
+        if (mine !== _inlineSeq) return;
+        const tail = more.map(({p, h}) => _personResultHtml(p).replace('<strong>',
+            `<span class="term-via" title="sounds like: ${Math.round(h.score * 100)}% (Symphonym ${h.cos.toFixed(2)}, spelling ${h.tri.toFixed(2)})">&asymp; ${$("<div>").text(h.form).html()} &rarr;</span> <strong>`)).join("");
+        _showInlineDropdown($out, (head + tail) || `<div class="person-search-empty">No matches, even by sound.</div>`);
     }
 
     async function _addPersonToFilter(pid, label) {
@@ -374,6 +410,16 @@
     }
 
     let _inlineSearchDebounce;
+    // The "sounds like" toggle: remembered per browser, and re-runs the current search.
+    $(() => { $("#soundsLikeToggle").prop("checked", _soundsLike()); });
+    $(document).on("change", "#soundsLikeToggle", function () {
+        try { localStorage.setItem("mlca_sounds_like", this.checked ? "1" : "0"); } catch (e) { /* per-visit only */ }
+        $("#soundsLikeLabel").tooltip("hide");
+        const q = ($("#personSearchInput").val() || "").trim();
+        if (this.checked) NamePhonetic.load().catch(() => {});      // start the download now
+        if (q.length >= 2) _runInlineSearch(q, $("#personSearchResults"));
+    });
+
     $(document).on("input", "#personSearchInput", function () {
         const q = $(this).val().trim();
         clearTimeout(_inlineSearchDebounce);

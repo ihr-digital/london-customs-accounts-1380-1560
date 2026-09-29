@@ -305,7 +305,8 @@ async function exportFilteredPDF(ladings) {
 
     const groupSel = new Set(filterState.groupFilter || []);
     const pidSel = new Set((filterState.personFilter || []).map(p => String(p.pid)));
-    const filterActive = groupSel.size > 0 || pidSel.size > 0;
+    const termSel = new Set((filterState.termFilter || []).map(t => t.id));
+    const filterActive = groupSel.size > 0 || pidSel.size > 0 || termSel.size > 0;
     const shortToColour = customsTypes.reduce((a, t) => (a[t.short] = t.colour, a), {});
 
     // One query for every cargo in the filtered set, grouped by lading.
@@ -322,6 +323,7 @@ async function exportFilteredPDF(ladings) {
         if (!filterActive) return true;
         if (groupSel.size && _collectLadingGroups([c]).some(g => groupSel.has(g))) return true;
         if (pidSel.size && (c.annotations || []).some(a => a.pid != null && pidSel.has(String(a.pid)))) return true;
+        if (termSel.size && _collectLadingTerms([c]).some(t => termSel.has(t))) return true;
         return false;
     };
 
@@ -370,6 +372,7 @@ async function exportFilteredPDF(ladings) {
     if (Array.isArray(filterState.yearRange) && filterState.yearRange.length === 2) bits.push(`Years: ${filterState.yearRange[0]}–${filterState.yearRange[1]}`);
     if (pidSel.size) bits.push('People: ' + filterState.personFilter.map(p => p.label).join(', '));
     if (groupSel.size) bits.push(`Commodities (${filterState.groupMode}): ` + filterState.groupFilter.join(', '));
+    if (termSel.size) bits.push(`Terms (${filterState.termMode}): ` + filterState.termFilter.map(t => t.label).join(', '));
     if (filterState.searchQuery) bits.push('Search: “' + filterState.searchQuery + '”');
     const header = `
         <div class="pdf-header">

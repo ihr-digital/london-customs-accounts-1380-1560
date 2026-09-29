@@ -102,6 +102,17 @@ const PersonIndex = (() => {
             .map(x => x.p);
     }
 
+    // Persons whose forename, surname or surname_key IS this form (lower-cased), most
+    // often recorded first. For phonetic search, which finds forms, not persons.
+    async function byPart(form, limit = 50) {
+        await load();
+        const lq = String(form || "").toLowerCase().trim();
+        const out = new Set();
+        for (let i = _lowerBound(lq); i < keys.length && keys[i][0] === lq; i++) out.add(keys[i][1]);
+        return [...out].map(pid => byPid.get(pid))
+            .sort((a, b) => (b.count || 0) - (a.count || 0)).slice(0, limit);
+    }
+
     async function ladingIds(pids) {
         await load();
         const out = new Set();
@@ -125,7 +136,7 @@ const PersonIndex = (() => {
     }
 
     return {
-        load, get, bulkGet, search, ladingIds, neighbours,
+        load, get, bulkGet, search, byPart, ladingIds, neighbours,
         get ready() { return byPid !== null; },
         get size() { return byPid ? byPid.size : 0; },
     };

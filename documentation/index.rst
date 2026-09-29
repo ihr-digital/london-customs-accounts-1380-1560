@@ -10,6 +10,7 @@ project: a digital humanities edition of medieval London customs accounts
    :maxdepth: 1
 
    Introduction <content/introduction.md>
+   Getting Started <content/getting-started.md>
 
 .. toctree::
    :maxdepth: 2

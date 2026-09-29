@@ -1,0 +1,8 @@
+onnxruntime-web 1.27.0 -- three files from dist/ of the npm package, unmodified:
+  ort.wasm.min.mjs, ort-wasm-simd-threaded.mjs, ort-wasm-simd-threaded.wasm
+Source: npm registry, onnxruntime-web@1.27.0 (tarball integrity sha512-ogDLsqIozHZwifPuN37OproAo0byX6t43/bP8GzeZWBWD6MOGExswFAx3up4NS/vvWBOg2u2PXomDt3rMmdQSg==)
+        https://github.com/Microsoft/onnxruntime
+Licence: MIT (package.json "license"; Copyright (c) Microsoft Corporation).
+Vendored 29 Sep 2026 for the opt-in person-name phonetic search (docs/js/name_phonetic.js):
+this project self-hosts its dependencies rather than loading them from a CDN.
+The same version deep/ and CAMPOP-Places load from jsDelivr.

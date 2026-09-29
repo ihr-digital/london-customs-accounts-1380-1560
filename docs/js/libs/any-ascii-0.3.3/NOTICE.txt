@@ -1,0 +1,4 @@
+any-ascii 0.3.3 -- any-ascii.js and block.js from the npm package, unmodified; LICENSE is the package's (ISC).
+Source: npm registry, any-ascii@0.3.3 (tarball integrity sha512-8hm+zPrc1VnlxD5eRgMo9F9k2wEMZhbZVLKwA/sPKIt6ywuz7bI9uV/yb27uvc8fv8q6Wl2piJT51q1saKX0Jw==)
+Imported by docs/symphonym/preprocess.js as https://cdn.jsdelivr.net/npm/any-ascii@0.3.3/+esm;
+index.html's import map points that URL here, so preprocess.js stays byte-identical to deep's.

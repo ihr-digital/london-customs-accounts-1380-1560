@@ -300,6 +300,7 @@ h1 .date-range {
 
 /* Room to shrink before anything wraps, and a ceiling so two search boxes do
    not eat a wide screen between them. */
+#termSearchWrap,
 #personSearchWrap,
 #textFilter {
     flex: 1 1 10rem;
@@ -946,3 +947,80 @@ h1 .date-range {
 /* The container a lot travelled in ("in 1 cista"): a packing fact, not a measure,
    so it sits under the measure rather than replacing it. */
 .cargo-record .cr-container { color: #6b7d88; font-size: 0.78rem; font-style: italic; }
+
+
+/* --- Term search (term_search.js; documentation/search_plan.md step 3) --- */
+#clearTermSearchBtn {
+    border-top-right-radius: var(--bs-border-radius-sm);
+    border-bottom-right-radius: var(--bs-border-radius-sm);
+}
+#termSearchResults {
+    position: fixed;             /* escapes the table's overflow clip, as #personSearchResults */
+    z-index: 1050;
+    max-height: 420px;
+    max-width: min(34rem, calc(100vw - 16px));
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0;
+    display: none;
+}
+.term-suggestion {
+    display: block;
+    width: 100%;
+    text-align: left;
+    white-space: normal;
+    border: 0;
+    background: transparent;
+    padding: 0.35rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.term-suggestion:hover,
+.term-suggestion.active {
+    background-color: rgba(13, 110, 253, 0.10);
+}
+.term-via { color: #6c757d; font-style: italic; }
+.term-kind {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-radius: 0.2rem;
+    padding: 0 0.3rem;
+    margin-left: 0.35rem;
+    color: #fff;
+}
+.term-kind-goods, .term-chip-goods     { background-color: #1e6b52; }
+.term-kind-measure, .term-chip-measure { background-color: #5b5f97; }
+.term-kind-quality, .term-chip-quality { background-color: #8a5a00; }
+.term-count { float: right; color: #6c757d; font-size: 0.8rem; margin-left: 0.5rem; }
+.term-note { color: #6c757d; font-size: 0.78rem; }
+.term-filter-chip {
+    background-color: #1e6b52;
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+.term-filter-chip .btn-close {
+    width: 0.5rem; height: 0.5rem; padding: 0; background-size: 0.5rem; opacity: 0.85;
+}
+.term-filter-chip .btn-close:hover { opacity: 1; }
+/* A chosen term where it occurs in the cargo text. */
+.anno.term-hit {
+    outline: 2px solid #f0a202;
+    outline-offset: 1px;
+    border-radius: 2px;
+}
+
+
+/* --- Guided tour (tour.js; documentation/search_plan.md step 6) --- */
+.tour-popover { max-width: 22rem; z-index: 1080; }
+.tour-popover .popover-body { font-size: 0.9rem; }
+.tour-nav { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.6rem; }
+.tour-count { margin-right: auto; color: #6c757d; font-size: 0.8rem; }
+.tour-wait { margin-top: 0.45rem; color: #8a5a00; font-size: 0.82rem; }
+.tour-target { outline: 3px solid #f0a202; outline-offset: 3px; border-radius: 4px; }

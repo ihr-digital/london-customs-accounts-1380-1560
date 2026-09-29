@@ -27,6 +27,8 @@ Measured from the published data on 22 September 2026.
 
 ## Using the site
 
+- **[Getting Started](getting-started.md)** — for researchers: finding a commodity, a merchant, goods from a place, a period.
+
 - **[The Table](using-the-table.md)** — the edition itself, and the filters. The filters govern the Chart and the Map too, so start here.
 - **[The Chart](using-the-chart.md)** — the filtered ladings against the enrolled customs totals.
 - **[The Map](using-the-map.md)** — the corpus gazetteer, and how to make the map follow the Table's filters.

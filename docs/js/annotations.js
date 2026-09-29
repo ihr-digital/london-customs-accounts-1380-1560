@@ -141,11 +141,26 @@ function _qualifierTitle(q) {
     return t;
 }
 
+// The search term a span stands for, in the form db_operations.js _collectLadingTerms
+// gives a lading: "c:<key>" goods, "u:<key>" unit, "q:<canonical>" qualifier. Written
+// on the span as data-term so a chosen term can be highlighted in the cargo text
+// (search_plan.md step 3); "" where the span names no term.
+function _termAttr(a, isQualifier) {
+    let id = "";
+    if (isQualifier) {
+        if (a && a.canonical) id = "q:" + String(a.canonical).toLowerCase();
+    } else if (a && (a.type === "commodity" || a.type === "commodity-unit" || a.type === "unit")) {
+        const m = Array.isArray(a.matches) && a.matches[0];
+        if (m && m.key) id = (a.type === "unit" ? "u:" : "c:") + m.key;
+    }
+    return id ? ` data-term="${_escAttr(id)}"` : "";
+}
+
 // Render a single commodity/unit head span (with its rich HTML tooltip).
 function _renderHeadSpan(text, head, footnotes) {
     const sub = text.substring(head.start, head.end);
     const tooltip = getTitleForAnnotation(head, footnotes);
-    return `<span class="anno ${head.type}" data-bs-toggle="tooltip" data-bs-html="true" `
+    return `<span class="anno ${head.type}"${_termAttr(head)} data-bs-toggle="tooltip" data-bs-html="true" `
         + `title="${tooltip.replace(/"/g, '&quot;').replace(/'/g, '&#39;')}">`
         + `${$('<div>').text(sub).html()}</span>`;
 }
@@ -156,11 +171,11 @@ function _renderQualSpan(text, q) {
     // Rich popover (canonical label + gloss + linked AAT + linked geo) once the
     // shared qualifier store is loaded; falls back to a plain title otherwise.
     if (window.MLCAQualifiers && MLCAQualifiers.isLoaded()) {
-        return `<span class="${cls}" data-bs-toggle="tooltip" data-bs-html="true" `
+        return `<span class="${cls}"${_termAttr(q, true)} data-bs-toggle="tooltip" data-bs-html="true" `
             + `title="${_escAttr(MLCAQualifiers.popoverHTML(q))}">`
             + `${$('<div>').text(sub).html()}</span>`;
     }
-    return `<span class="${cls}" data-bs-toggle="tooltip" title="${_escAttr(_qualifierTitle(q))}">`
+    return `<span class="${cls}"${_termAttr(q, true)} data-bs-toggle="tooltip" title="${_escAttr(_qualifierTitle(q))}">`
         + `${$('<div>').text(sub).html()}</span>`;
 }
 
@@ -245,7 +260,7 @@ function applyOffsetAnnotations(text, annotations, footnotes, mode=filterState.a
                     .replace(/'/g, '&#39;');
                 ops.push({
                     start: a.start, end: a.end,
-                    html: `<span class="anno ${a.type}" data-bs-toggle="tooltip" data-bs-html="true" title="${escapedTooltip}">${escapedText}</span>`
+                    html: `<span class="anno ${a.type}"${_termAttr(a)} data-bs-toggle="tooltip" data-bs-html="true" title="${escapedTooltip}">${escapedText}</span>`
                 });
             } else {
                 const escapedTitle = $('<div>').text(tooltipContent).html();

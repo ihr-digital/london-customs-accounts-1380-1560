@@ -17,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- docs/symphonym/preprocess.js (copied unmodified from deep) imports any-ascii from a CDN;
+         this project self-hosts, so the URL is mapped to the vendored copy. -->
+    <script type="importmap">
+    {"imports": {"https://cdn.jsdelivr.net/npm/any-ascii@0.3.3/+esm": "./js/libs/any-ascii-0.3.3/any-ascii.js"}}
+    </script>
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/bootstrap.bundle.min.js"></script>
     <script src="js/libs/dexie.min.js"></script>
@@ -37,6 +42,10 @@
     <script src="js/qualifiers.js" defer></script>
     <script src="js/annotations.js" defer></script>
     <script src="js/name-picker.js" defer></script>
+    <script src="js/fuzzy_encoder.js" defer></script>
+    <script src="js/term_search.js" defer></script>
+    <script src="js/name_phonetic.js" defer></script>
+    <script src="js/tour.js" defer></script>
     <script src="js/commodity_filter.js" defer></script>
     <script src="js/export.js" defer></script>
     <script src="js/map-keys.js" defer></script>
@@ -79,6 +88,12 @@
             Map
         </button>
     </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tourBtn" type="button" data-bs-toggle="tooltip"
+                title="A short guided tour of the page">
+            <i class="fas fa-circle-question me-1"></i>Tour
+        </button>
+    </li>
     <li class="nav-item dropdown" role="presentation">
         <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown"
            role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,6 +105,7 @@
             <li><a class="dropdown-item" href="name-clusters.html">Name Clusters</a></li>
             <li><a class="dropdown-item" href="customs-accounts.html">Particular Customs Accounts</a></li>
             <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="documentation/content/getting-started.html">Getting Started</a></li>
             <li><a class="dropdown-item" href="documentation/">Documentation</a></li>
         </ul>
     </li>
@@ -161,6 +177,36 @@
                                     <div id="directionControls" class="d-flex align-items-center btn-group btn-group-sm"
                                          role="group"
                                          aria-label="Direction toggles"></div>
+                                    <div id="termSearchWrap" class="input-group input-group-sm flex-grow-1 position-relative">
+                                        <span class="input-group-text"><i class="fas fa-box-open"></i></span>
+                                        <input type="search" id="termSearchInput" class="form-control"
+                                               placeholder="Search goods, measures, qualities…"
+                                               spellcheck="false"
+                                               autocomplete="off"
+                                               role="combobox"
+                                               aria-autocomplete="list"
+                                               aria-controls="termSearchResults"
+                                               data-bs-toggle="popover"
+                                               data-bs-trigger="hover"
+                                               data-bs-placement="top"
+                                               data-bs-html="true"
+                                               title="Search goods, measures and qualities"
+                                               data-bs-content="
+                                        <small>
+                                        Type any spelling &mdash; Latin, English or French, e.g. <code>vinum</code>, <code>wyne</code> or <code>wine</code> &mdash; and choose from the suggestions.
+                                        Each shows what it is and how many ladings name it.<br><br>
+                                        <strong>&uarr;/&darr;</strong> to move, <strong>Enter</strong> to choose, <strong>Esc</strong> to close.
+                                        Each choice becomes a chip that narrows the table and is highlighted in the cargos;
+                                        with two or more, choose <em>all</em> or <em>any</em>.<br><br>
+                                        To search the words of the transcription itself, use <strong>Filter text</strong>.
+                                        </small>">
+                                        <button class="btn btn-outline-secondary" type="button" id="clearTermSearchBtn"
+                                                data-bs-toggle="tooltip"
+                                                title="Clear the search box">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                        <div id="termSearchResults" role="listbox"></div>
+                                    </div>
                                     <div id="personSearchWrap" class="input-group input-group-sm flex-grow-1 position-relative">
                                         <span class="input-group-text"><i class="fas fa-user"></i></span>
                                         <input type="search" id="personSearchInput" class="form-control"
@@ -177,6 +223,12 @@
                                         Search a <strong>single forename</strong> <em>or</em> a <strong>single surname</strong> — forenames and surnames are indexed separately, so a <strong>full name</strong> (e.g. <code>Marten de Lazera</code>) will not match here.<br><br>
                                         To search a full name, use <strong>Filter text</strong> instead, which searches the whole lading and cargo text.
                                         </small>">
+                                        <input type="checkbox" class="btn-check" id="soundsLikeToggle" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="soundsLikeToggle" id="soundsLikeLabel"
+                                               data-bs-toggle="tooltip"
+                                               title="Sounds like: also find names that sound like what you type (Thomas, Tomas, Thoma...). Loads a phonetic model (about 28 MB) the first time.">
+                                            <i class="fas fa-ear-listen"></i>
+                                        </label>
                                         <button class="btn btn-outline-secondary" type="button" id="clearPersonSearchBtn"
                                                 data-bs-toggle="tooltip"
                                                 title="Clear person search">
@@ -279,6 +331,29 @@
                                         data-bs-toggle="tooltip"
                                         title="Clear all filters">
                                     <i class="fas fa-filter-circle-xmark me-1"></i>
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr id="termFilterRow" class="d-none">
+                        <th colspan="3" class="py-1">
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <span class="small text-muted text-nowrap">
+                                    <i class="fas fa-box-open me-1"></i>Terms:
+                                </span>
+                                <div id="termFilterChips" class="d-flex flex-wrap"></div>
+                                <div id="termModeToggle" class="btn-group btn-group-sm d-none" role="group"
+                                     aria-label="Require all terms or any">
+                                    <input type="radio" class="btn-check" name="termMode" id="termModeAnd" value="AND" autocomplete="off" checked>
+                                    <label class="btn btn-outline-secondary" for="termModeAnd" title="Ladings naming every term">all</label>
+                                    <input type="radio" class="btn-check" name="termMode" id="termModeOr" value="OR" autocomplete="off">
+                                    <label class="btn btn-outline-secondary" for="termModeOr" title="Ladings naming any of the terms">any</label>
+                                </div>
+                                <button type="button" id="clearTermsBtn"
+                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
+                                        data-bs-toggle="tooltip"
+                                        title="Clear all search terms">
+                                    <i class="fas fa-times me-1"></i>Clear terms
                                 </button>
                             </div>
                         </th>
