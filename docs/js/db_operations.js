@@ -929,6 +929,25 @@ db.version(111).stores({
     }
 });
 
+// Version 112 -- 3,760 cargos the parser used to lose, restored (process/recover_lost_cargos.py):
+// cargos after a lading's first footnote block, cargos in tables, cargos opening with a
+// footnote mark, IV-19's tunnage register
+// (4-19-C) and IV-25's wool particulars (4-25-D). The ladings changed, so re-fetch them.
+db.version(112).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v112 — clearing ladings and cargos to load the recovered cargos");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v112 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

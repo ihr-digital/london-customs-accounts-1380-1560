@@ -208083,7 +208083,8 @@
         "gunstone",
         "hand gun",
         "harquebus",
-        "serpentine"
+        "serpentine",
+        "base"
       ],
       "q": [
         {
@@ -264980,6 +264981,39 @@
           "note": "The animal and the substance. basan, the sheepskin tanned in bark, holds the same broader match: the two are sibling kinds of sheepskin, one with the wool still on and one tanned."
         }
       ]
+    },
+    "base": {
+      "f": [
+        {
+          "t": "base",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "basis",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "base, the smallest kind of cannon used in the 16th and 17th centuries (OED s.v. base n.6). IV-19, p. 530: \"6 gunes vocatis basis\".",
+      "q": [],
+      "x": [],
+      "aat": [
+        {
+          "id": "300036936",
+          "label": "cannons (artillery)",
+          "broader": true,
+          "note": "AAT has no term for the base (checked 29 Sep 2026); its narrower cannons are demi-cannons, pedreros, serpentines, culverins, falcons, falconets, bombards, carronades and swivel guns. Broader rather than a guessed exact match, as for woolfell."
+        }
+      ],
+      "groups": [
+        "Weapons & armour"
+      ],
+      "related": [
+        "gun"
+      ],
+      "memo": "Split from gun 29 Sep 2026 on Stephen's ruling: 'basis' was folded into gun in June and survived nowhere as a concept or qualifier. The Index of Subjects (IV-19) glosses 'gunes vocati basis' as 'the smallest kind of cannon used in the 16th and 17th centuries (OED base n.6)'. Its one attestation, IV-19 p. 530, is in the tunnage account (file 3), which is missing from the ladings, so the concept shows as unattested until that file is parsed.",
+      "sinceLeftovers": true
     }
   },
   "qa_identifiers": {
