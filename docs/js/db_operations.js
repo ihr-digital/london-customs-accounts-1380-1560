@@ -912,6 +912,23 @@ db.version(110).stores({
     }
 });
 
+// Version 111 -- `terms` also carries places by role, "pg:" goods from and "pm:" merchant from
+// (search_plan.md step 8: one search box for goods, groups, places, ships and people).
+db.version(111).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v111 — clearing ladings and cargos to add places to per-lading terms");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v111 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -1143,16 +1160,25 @@ function _collectLadingGroups(cargos) {
 // on `groups`, so choosing a term fetches no cargos. Standalone `qualifier` spans are
 // skipped: they carry no canonical (in the corpus they are fragments such as "de").
 // The search vocabulary (search_plan.md step 3) must produce ids in exactly this form.
+//   "pg:<place>"  goods FROM a place: a qualifier's geo on any of those (v111)
+//   "pm:<place>"  a merchant FROM a place: a merchant-place span's geo (v111)
+// (The heading's ship and port -- "s:", "pp:" -- are resolved in the page by term_search.js
+// from `label`, so a gazetteer change needs no database bump.)
 function _collectLadingTerms(cargos) {
     const set = new Set();
     (cargos || []).forEach(cargo => {
         (cargo.annotations || []).forEach(a => {
             const t = a.type;
+            if (t === "merchant-place") {
+                if (a.geo && a.geo.id) set.add("pm:" + a.geo.id);
+                return;
+            }
             if (t !== "commodity" && t !== "commodity-unit" && t !== "unit") return;
             const m = Array.isArray(a.matches) && a.matches[0];
             if (m && m.key) set.add((t === "unit" ? "u:" : "c:") + m.key);
             (a.qualifiers || []).forEach(q => {
                 if (q && q.canonical) set.add("q:" + String(q.canonical).toLowerCase());
+                if (q && q.geo && q.geo.id) set.add("pg:" + q.geo.id);
             });
         });
     });

@@ -308,17 +308,33 @@ async function applyFilters() {
                 });
             }
 
-            // Term filter (search_plan.md step 2): the concepts, units and qualifiers
-            // chosen in search, on the precomputed per-lading `terms` (db_operations.js
-            // _collectLadingTerms). AND by default -- each term chosen narrows -- or OR.
+            // Term filter (search_plan.md steps 2 and 8): everything chosen in the search
+            // box except people. Chips of DIFFERENT kinds combine with AND; chips of the
+            // SAME kind with `termMode` -- "OR" (any, the default) or "AND" (all).
+            // Kinds: goods c:, measure u:, quality q:, group g:, place pg:/pp:/pm: (one kind,
+            // three roles), ship s:. c/u/q/pg/pm are on the per-lading `terms`
+            // (db_operations.js _collectLadingTerms); g: is the lading's `groups`; pp: and
+            // s: come from the heading, resolved by term_search.js.
             const termSel = (filterState.termFilter || []).map(t => t.id);
             if (termSel.length > 0) {
-                const anyOf = filterState.termMode === "OR";
+                if (termSel.some(id => /^(pp|s):/.test(id)) && typeof TermSearch !== "undefined") {
+                    try { await TermSearch.load(); } catch (e) { console.warn("vocabulary:", e); }
+                    if (signal.aborted) return;
+                }
+                const byKind = new Map();
+                for (const id of termSel) {
+                    const k = termKind(id);
+                    if (!byKind.has(k)) byKind.set(k, []);
+                    byKind.get(k).push(id);
+                }
+                const allOf = filterState.termMode === "AND";
                 baseFilteredLadings = baseFilteredLadings.filter(v => {
-                    const lt = v.terms;
-                    if (!lt || lt.length === 0) return false;
-                    return anyOf ? termSel.some(id => lt.includes(id))
-                                 : termSel.every(id => lt.includes(id));
+                    for (const ids of byKind.values()) {
+                        const ok = allOf ? ids.every(id => ladingHasTerm(v, id))
+                                         : ids.some(id => ladingHasTerm(v, id));
+                        if (!ok) return false;
+                    }
+                    return true;
                 });
             }
 
@@ -497,7 +513,7 @@ function loadFilterState() {
             filterState.groupMode = "OR";
         }
         if (!Array.isArray(filterState.termFilter)) filterState.termFilter = [];
-        if (filterState.termMode !== "OR") filterState.termMode = "AND";
+        if (filterState.termMode !== "AND") filterState.termMode = "OR";
         // A state saved before the defaults existed carries neither direction, and
         // assigning it wholesale above has just replaced them with undefined.
         if (typeof filterState.import !== "boolean") filterState.import = true;
@@ -580,7 +596,7 @@ function updateURLFromFilterState() {
     // Term ids contain spaces and commas ("c:salted ox-tongue"), so "~" as for groups.
     if (filterState.termFilter && filterState.termFilter.length > 0) {
         params.set("terms", filterState.termFilter.map(t => t.id).join("~"));
-        if (filterState.termMode === "OR") params.set("tmode", "OR");
+        if (filterState.termMode === "AND") params.set("tmode", "AND");
     }
     // Which of Table / Chart / Map is open is part of where you are, so it
     // belongs in the link you send someone.
@@ -665,7 +681,7 @@ function loadFilterStateFromURL() {
     filterState.termFilter = terms
         ? terms.split("~").filter(Boolean).map(id => ({id, label: id.slice(2)}))
         : [];
-    filterState.termMode = tmode === "OR" ? "OR" : "AND";
+    filterState.termMode = tmode === "AND" ? "AND" : "OR";
     return true;
 }
 
@@ -686,4 +702,20 @@ async function hydratePersonFilterLabels() {
     } catch (err) {
         console.warn("Failed to hydrate person filter labels:", err);
     }
+}
+
+// The kind a term id belongs to, for "any within a kind, all across kinds". The three place
+// roles are one kind: "goods from Ghent" or "ship's port Ghent" are alternatives.
+function termKind(id) {
+    const p = String(id).split(":", 1)[0];
+    return (p === "pg" || p === "pp" || p === "pm") ? "place" : p;
+}
+
+// Does lading v carry term id? See the term stage in applyFilters.
+function ladingHasTerm(v, id) {
+    if (id.startsWith("g:")) return !!(v.groups && v.groups.includes(id.slice(2)));
+    if (id.startsWith("pp:") || id.startsWith("s:")) {
+        return typeof TermSearch !== "undefined" && TermSearch.headingTerms(v).has(id);
+    }
+    return !!(v.terms && v.terms.includes(id));
 }

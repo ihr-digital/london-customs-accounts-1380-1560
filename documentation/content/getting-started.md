@@ -21,7 +21,7 @@ goods listed beneath it, each usually with a merchant, a quantity and a value.
 ## Find every cargo of a commodity, whatever the spelling
 
 The accounts spell the same goods many ways, in Latin, English and French. The search box
-"**Search goods, measures, qualities…**" knows the spellings.
+"**Search goods, places, ships, people…**" at the head of the table knows the spellings.
 
 1. Type any spelling, for example `cera`.
 2. The suggestions say what each one is and how many ladings name it:
@@ -34,39 +34,60 @@ Things to know:
 
 - **Misspellings are caught.** Suggestions marked **≈** are close spellings:
   `saphron` offers *≈ saferon → saffron*.
-- **Measures and qualities are searchable too** — `pipe` (a measure of wine),
-  `Ghent`, `Spain`, `Holland` (qualities of goods: where they came from, or the kind
-  of cloth).
-- **Combine terms.** Choose two or more; with **all** the table keeps ladings naming
-  every one (cloth *and* Ghent: 330 ladings), with **any** it keeps ladings naming at
-  least one.
-- Remove a chip with its **×**, or all of them with **Clear terms**.
+- **Kinds of goods** too: `spices` offers the group *Spices* as well as each spice.
+- **Measures and qualities** — `pipe` (a measure of wine), `Ghent`, `Holland`
+  (qualities of goods: where they came from, or the kind of cloth).
+- **Combine.** Choices of different kinds must all hold (cloth *and* Ghent: 330
+  ladings). Several of one kind mean *any* of them (wine *or* cloth); a switch beside
+  the chips changes that to *all*.
+- Remove a chip with its **×**, or everything with the red *clear* icon.
 
 ## Find a merchant or shipmaster, and their other spellings
 
-1. In the box marked with a person ("**Filter by person…**"), type a forename *or* a
-   surname — not both.
-2. Choose a person from the list. The table narrows to their ladings.
-3. Names are spelt many ways. Switch on the **ear** in the same box to include names that
-   *sound* alike: `kristofer` then also finds *Cristofer*. The first time, this loads a
-   phonetic model of about 28 MB.
-4. To gather someone's variants, open any cargo that names them and **click the name**.
-   A window lists similar people, weighted by when they were active; tick the ones that are
-   the same person and press **Apply filter**.
+1. In the same search box, type a forename *or* a surname — not both — for example
+   `Lazera`. People are listed under **People**, with the years they appear and how
+   many times.
+2. Click a person to choose them. To choose **several**, hold **Ctrl** (**Cmd** on a
+   Mac) as you click, or press **Space**: the list stays open and each is ticked.
+3. Names are spelt many ways. Tick the **ear** at the top of the list to include
+   names that *sound* alike: `kristofer` then also finds *Cristofer*. The first time,
+   this loads a phonetic model of about 28 MB.
+4. To gather someone's variants, click **similar…** beside them in the list, or click
+   their name in any cargo. A window lists similar people, weighted by when they were
+   active; tick the ones that are the same person and press **Apply filter**.
 
 The site groups a person's mentions automatically by name and date. It does not decide
 that two differently spelt names are one person: that is your judgement, made in step 4.
 
+## Find goods from a place, a ship, or a port
+
+The search box knows places in three roles, and says which it means:
+
+- **goods from** — the place the goods are named from (*Cologne* thread, *Spanish* iron);
+- **ship's port** — the place named in a lading's heading, usually the ship's or
+  master's home port;
+- **merchant from** — where the merchant came from.
+
+Type the place (`Colonie`, `Cologne` and `Coleyn` all work) and choose the role you mean.
+Choosing two places, or one place in two roles, keeps ladings that match *either*.
+
+Ships are found by the name in the lading's heading: `Mary` offers the ship *Mary* (and,
+separately, people called Mary). In the sixteenth-century accounts a ship is often named
+in each cargo instead of the heading; those are not yet searchable by ship, so use
+Filter text (below) for them.
+
 ## Search the words of the text itself
 
-**Filter text** searches the transcription as written, lading headings and cargos alike.
+Press **Advanced**, at the right of the filter row, for **Filter text**. It searches the
+transcription as written, lading headings and cargos alike.
 Use it for anything the other boxes do not cover: a ship's name, a phrase, a place in the
 text. Hover over the box for the full rules. In brief:
 
 - `tim*` matches *timber* and *Timothy*; `j?h*n*` matches *John*, *Johannes*.
 - Several words must all appear; `"de Lazera"` in quotes is an exact phrase.
 - `wool & !Antwerp`, `fish | salt`, and brackets for grouping.
-- A lading's reference (`3-5-A-0485`) shows just that lading.
+- A lading's reference (`3-5-A-0485`) shows just that lading. (Typing a reference in
+  the main search box does the same: choose *Go to lading*.)
 
 ## Narrow by date, account and direction
 
@@ -74,10 +95,11 @@ At the head of the table:
 
 - **Years** — choose a first and last customs year. Ladings the accounts leave undated
   are held back; a note under the table says how many, and shows them if you ask.
-- **Account types** — wool, tunnage, petty, miscellaneous.
-- **Direction** — imports, exports, or both.
-- **Commodities** — broad groups of goods (textiles, spices, metals…), drawn from the
-  Getty Art & Architecture Thesaurus.
+- **Accounts** — wool, tunnage, petty, miscellaneous; and beneath them, imports,
+  exports, or both.
+- **Kinds of goods** — broad groups (textiles, spices, metals…), drawn from the Getty Art
+  & Architecture Thesaurus: search for them in the box, or browse them all under
+  **Advanced**.
 
 Every filter combines with every other, and with the searches above.
 

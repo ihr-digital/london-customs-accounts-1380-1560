@@ -169,18 +169,21 @@
                             <div class="btn-groups-wrapper">
                                 <div id="customsTypes" class="btn-group btn-group-sm" role="group"
                                      aria-label="Type toggles"></div>
+                                <!-- Direction sits with the account types: together they are "which accounts". -->
+                                <div class="mt-1">
+                                    <div id="directionControls" class="d-flex align-items-center btn-group btn-group-sm"
+                                         role="group"
+                                         aria-label="Direction toggles"></div>
+                                </div>
                             </div>
                         </th>
                         <th>
                             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
                                 <div class="d-flex align-items-center flex-grow-1 gap-2 flex-wrap">
-                                    <div id="directionControls" class="d-flex align-items-center btn-group btn-group-sm"
-                                         role="group"
-                                         aria-label="Direction toggles"></div>
                                     <div id="termSearchWrap" class="input-group input-group-sm flex-grow-1 position-relative">
                                         <span class="input-group-text"><i class="fas fa-box-open"></i></span>
                                         <input type="search" id="termSearchInput" class="form-control"
-                                               placeholder="Search goods, measures, qualities…"
+                                               placeholder="Search goods, places, ships, people…"
                                                spellcheck="false"
                                                autocomplete="off"
                                                role="combobox"
@@ -190,15 +193,19 @@
                                                data-bs-trigger="hover"
                                                data-bs-placement="top"
                                                data-bs-html="true"
-                                               title="Search goods, measures and qualities"
+                                               title="Search the accounts"
                                                data-bs-content="
                                         <small>
-                                        Type any spelling &mdash; Latin, English or French, e.g. <code>vinum</code>, <code>wyne</code> or <code>wine</code> &mdash; and choose from the suggestions.
-                                        Each shows what it is and how many ladings name it.<br><br>
-                                        <strong>&uarr;/&darr;</strong> to move, <strong>Enter</strong> to choose, <strong>Esc</strong> to close.
-                                        Each choice becomes a chip that narrows the table and is highlighted in the cargos;
-                                        with two or more, choose <em>all</em> or <em>any</em>.<br><br>
-                                        To search the words of the transcription itself, use <strong>Filter text</strong>.
+                                        One box for everything the accounts are tagged with. Type and choose from the suggestions:
+                                        <ul class='mb-1 ps-3'>
+                                          <li><strong>Goods</strong> by any spelling &mdash; <code>vinum</code>, <code>wyne</code>, <code>wine</code> &mdash; and misspellings (&asymp;); <strong>kinds of goods</strong> (<code>spices</code>); measures; qualities (<code>Ghent</code>).</li>
+                                          <li><strong>Places</strong>: goods from, a ship's port, a merchant from.</li>
+                                          <li><strong>Ships</strong> by name.</li>
+                                          <li><strong>People</strong> by a single forename <em>or</em> surname. <strong>Ctrl/Cmd-click</strong> (or Space) adds several without closing the list; the ear adds names that <em>sound</em> alike.</li>
+                                          <li>A lading reference (<code>3-5-A-0485</code>) goes straight to it.</li>
+                                        </ul>
+                                        The tabs at the top of the list narrow it. Each choice becomes a chip; different kinds combine (all must hold), several of one kind mean <em>any</em>.
+                                        To search the words of the text itself, open <strong>Advanced</strong> &rarr; Filter text.
                                         </small>">
                                         <button class="btn btn-outline-secondary" type="button" id="clearTermSearchBtn"
                                                 data-bs-toggle="tooltip"
@@ -207,37 +214,27 @@
                                         </button>
                                         <div id="termSearchResults" role="listbox"></div>
                                     </div>
-                                    <div id="personSearchWrap" class="input-group input-group-sm flex-grow-1 position-relative">
-                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                        <input type="search" id="personSearchInput" class="form-control"
-                                               placeholder="Filter by person (forename or surname)…"
-                                               spellcheck="false"
-                                               autocomplete="off"
-                                               data-bs-toggle="popover"
-                                               data-bs-trigger="hover"
-                                               data-bs-placement="top"
-                                               data-bs-html="true"
-                                               title="Filter by person"
-                                               data-bs-content="
-                                        <small>
-                                        Search a <strong>single forename</strong> <em>or</em> a <strong>single surname</strong> — forenames and surnames are indexed separately, so a <strong>full name</strong> (e.g. <code>Marten de Lazera</code>) will not match here.<br><br>
-                                        To search a full name, use <strong>Filter text</strong> instead, which searches the whole lading and cargo text.
-                                        </small>">
-                                        <input type="checkbox" class="btn-check" id="soundsLikeToggle" autocomplete="off">
-                                        <label class="btn btn-outline-secondary" for="soundsLikeToggle" id="soundsLikeLabel"
-                                               data-bs-toggle="tooltip"
-                                               title="Sounds like: also find names that sound like what you type (Thomas, Tomas, Thoma...). Loads a phonetic model (about 28 MB) the first time.">
-                                            <i class="fas fa-ear-listen"></i>
-                                        </label>
-                                        <button class="btn btn-outline-secondary" type="button" id="clearPersonSearchBtn"
-                                                data-bs-toggle="tooltip"
-                                                title="Clear person search">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                        <div id="personSearchResults"></div>
-                                    </div>
+                                    
 
-                                    <div id="textFilter" class="input-group input-group-sm flex-grow-1">
+                                </div>
+                                <button id="advancedToggle" class="btn btn-sm btn-outline-secondary ms-auto text-nowrap"
+                                        type="button" data-bs-toggle="tooltip"
+                                        title="Advanced: search the words of the text (wildcards, AND / OR / NOT), and browse kinds of goods">
+                                    Advanced <i class="fas fa-chevron-down ms-1"></i>
+                                </button>
+                                <button id="clearAllFiltersBtn" class="btn btn-sm btn-outline-danger"
+                                        data-bs-toggle="tooltip"
+                                        title="Clear all filters">
+                                    <i class="fas fa-filter-circle-xmark me-1"></i>
+                                </button>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr id="advancedRow" class="d-none">
+                        <th colspan="3" class="py-1">
+                            <div class="d-flex align-items-center gap-2 flex-wrap">
+                                <span class="small text-muted text-nowrap">Advanced:</span>
+                                <div id="textFilter" class="input-group input-group-sm flex-grow-1">
                                         <input type="text" id="searchInput" class="form-control"
                                                placeholder="Filter text (ladings+cargos)..."
                                                spellcheck="false"
@@ -298,14 +295,13 @@
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>
-
-                                    <div id="commodityFilter" class="dropdown">
+                                <div id="commodityFilter" class="dropdown">
                                         <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
                                                 id="commodityFilterBtn"
                                                 data-bs-toggle="dropdown" data-bs-auto-close="outside"
                                                 aria-expanded="false"
                                                 title="Filter by commodity group">
-                                            <i class="fas fa-boxes-stacked me-1"></i><span id="commodityFilterLabel">Commodities</span>
+                                            <i class="fas fa-boxes-stacked me-1"></i><span id="commodityFilterLabel">Kinds of goods</span>
                                         </button>
                                         <div class="dropdown-menu p-2 commodity-filter-menu" aria-labelledby="commodityFilterBtn">
                                             <div class="d-flex align-items-center justify-content-between mb-2 gap-2">
@@ -325,23 +321,24 @@
                                             <div id="commodityGroupTree" class="commodity-group-tree"></div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <button id="clearAllFiltersBtn" class="btn btn-sm btn-outline-danger ms-auto"
-                                        data-bs-toggle="tooltip"
-                                        title="Clear all filters">
-                                    <i class="fas fa-filter-circle-xmark me-1"></i>
-                                </button>
                             </div>
                         </th>
                     </tr>
-                    <tr id="termFilterRow" class="d-none">
+                    <tr id="filtersRow" class="d-none">
                         <th colspan="3" class="py-1">
+                            <!-- Everything chosen, as chips, in one row (search_plan.md step 8). Different
+                                 kinds combine with AND; within a kind, any (or all, with the switch). -->
                             <div class="d-flex align-items-center gap-2 flex-wrap">
-                                <span class="small text-muted text-nowrap">
-                                    <i class="fas fa-box-open me-1"></i>Terms:
-                                </span>
-                                <div id="termFilterChips" class="d-flex flex-wrap"></div>
+                                <span class="small text-muted text-nowrap"><i class="fas fa-filter me-1"></i>Filters:</span>
+                                <div id="termFilterRow" class="d-none d-flex align-items-center gap-1 flex-wrap">
+                                    <div id="termFilterChips" class="d-flex flex-wrap"></div>
+                                </div>
+                                <div id="personFilterRow" class="d-none d-flex align-items-center gap-1 flex-wrap">
+                                    <div id="personFilterChips" class="d-flex flex-wrap"></div>
+                                </div>
+                                <div id="commodityFilterRow" class="d-none d-flex align-items-center gap-1 flex-wrap">
+                                    <div id="commodityFilterChips" class="d-flex flex-wrap"></div>
+                                </div>
                                 <div id="termModeToggle" class="btn-group btn-group-sm d-none" role="group"
                                      aria-label="Require all terms or any">
                                     <input type="radio" class="btn-check" name="termMode" id="termModeAnd" value="AND" autocomplete="off" checked>
@@ -349,44 +346,6 @@
                                     <input type="radio" class="btn-check" name="termMode" id="termModeOr" value="OR" autocomplete="off">
                                     <label class="btn btn-outline-secondary" for="termModeOr" title="Ladings naming any of the terms">any</label>
                                 </div>
-                                <button type="button" id="clearTermsBtn"
-                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
-                                        data-bs-toggle="tooltip"
-                                        title="Clear all search terms">
-                                    <i class="fas fa-times me-1"></i>Clear terms
-                                </button>
-                            </div>
-                        </th>
-                    </tr>
-                    <tr id="personFilterRow" class="d-none">
-                        <th colspan="3" class="py-1">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="small text-muted text-nowrap">
-                                    <i class="fas fa-user me-1"></i>People:
-                                </span>
-                                <div id="personFilterChips" class="d-flex flex-wrap"></div>
-                                <button type="button" id="clearPeopleBtn"
-                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
-                                        data-bs-toggle="tooltip"
-                                        title="Clear all selected people">
-                                    <i class="fas fa-user-slash me-1"></i>Clear people
-                                </button>
-                            </div>
-                        </th>
-                    </tr>
-                    <tr id="commodityFilterRow" class="d-none">
-                        <th colspan="3" class="py-1">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="small text-muted text-nowrap">
-                                    <i class="fas fa-boxes-stacked me-1"></i>Commodities:
-                                </span>
-                                <div id="commodityFilterChips" class="d-flex flex-wrap"></div>
-                                <button type="button" id="clearCommoditiesBtn"
-                                        class="btn btn-outline-secondary btn-sm ms-auto text-nowrap"
-                                        data-bs-toggle="tooltip"
-                                        title="Clear all selected commodity groups">
-                                    <i class="fas fa-eraser me-1"></i>Clear commodities
-                                </button>
                             </div>
                         </th>
                     </tr>

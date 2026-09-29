@@ -28,22 +28,24 @@ const Tour = (() => {
          body: "Your browser is downloading the whole corpus, about 33,500 ladings, so that everything after this "
              + "is instant and works offline. It happens once; later visits start straight away. "
              + "The tour carries on meanwhile."},
-        {el: "#termSearchWrap", title: "Search goods, measures and qualities",
-         body: "Type any spelling, Latin, English or French (<code>vinum</code>, <code>wyne</code>, <code>wine</code>) "
-             + "and choose from the suggestions, which show what each is and how many ladings name it. "
-             + "Misspellings are caught too (&asymp;). Each choice narrows the table and is highlighted in the cargos."},
-        {el: "#personSearchWrap", title: "People",
-         body: "Find a merchant or shipmaster by forename or surname. Switch on the ear "
-             + "(<i class=\"fas fa-ear-listen\"></i>) to include names that <em>sound</em> alike, "
-             + "such as Kristofer and Cristofer."},
-        {el: "#textFilter", title: "Filter text",
-         body: "Searches the words of the transcription itself, with wildcards, phrases, AND / OR / NOT. "
-             + "Hover over the box for the rules."},
-        {el: "#dateSelectors", title: "Years, accounts and direction",
-         body: "Narrow by customs year, by kind of account (wool, tunnage, petty, miscellaneous) "
-             + "and by imports or exports."},
-        {el: "#commodityFilter", title: "Kinds of goods",
-         body: "Filter by broad groups (textiles, spices, metals&hellip;), drawn from the Getty AAT."},
+        {el: "#termSearchWrap", title: "One box for everything",
+         body: "Goods by any spelling, Latin, English or French (<code>vinum</code>, <code>wyne</code>, "
+             + "<code>wine</code>), and misspellings too (&asymp;); kinds of goods (<code>spices</code>); places "
+             + "(goods from, a ship's port, a merchant from); ships; and people by forename or surname. "
+             + "Each suggestion says what it is and how many ladings it would show. "
+             + "The tabs at the top of the list narrow it."},
+        {el: "#termSearchWrap", title: "Choices become filters",
+         body: "Each choice becomes a chip in a <strong>Filters</strong> row above the table. Different kinds "
+             + "combine (wine <em>and</em> from Spain); several of one kind mean <em>any</em>. "
+             + "For people, <strong>Ctrl/Cmd-click</strong> adds several at once, and the ear "
+             + "(<i class=\"fas fa-ear-listen\"></i>) adds names that <em>sound</em> alike."},
+        {el: "#dateSelectors", title: "Years",
+         body: "Narrow to a span of customs years; the arrow between them reverses the order."},
+        {el: "#customsTypes", title: "Which accounts",
+         body: "Wool, tunnage, petty and miscellaneous accounts, and imports or exports."},
+        {el: "#advancedToggle", title: "Advanced",
+         body: "<strong>Filter text</strong> searches the words of the transcription itself, with wildcards, "
+             + "phrases and AND / OR / NOT; and you can browse every kind of goods as a tree."},
         {el: "#ladingTable tbody tr[data-id] .toggleCargosBtn", title: "Open a lading",
          body: "Shows its cargos. Coloured words are what the tools recognised: hover for what they are, "
              + "click a name to find that person, and use <i class=\"fas fa-table\"></i> for the "

@@ -300,7 +300,6 @@ h1 .date-range {
 
 /* Room to shrink before anything wraps, and a ceiling so two search boxes do
    not eat a wide screen between them. */
-#termSearchWrap,
 #personSearchWrap,
 #textFilter {
     flex: 1 1 10rem;
@@ -1024,3 +1023,31 @@ h1 .date-range {
 .tour-count { margin-right: auto; color: #6c757d; font-size: 0.8rem; }
 .tour-wait { margin-top: 0.45rem; color: #8a5a00; font-size: 0.82rem; }
 .tour-target { outline: 3px solid #f0a202; outline-offset: 3px; border-radius: 4px; }
+
+
+/* --- One search box (term_search.js; search_plan.md step 8) --- */
+#termSearchWrap { flex: 1 1 22rem; min-width: 12rem; max-width: 42rem; }
+#advancedRow #textFilter { flex: 1 1 18rem; max-width: 30rem; }
+#advancedToggle.active { background-color: var(--bs-gray-300); }
+.term-tabs { display: flex; align-items: center; gap: 0.15rem; padding: 0.2rem 0.5rem 0.35rem;
+             border-bottom: 1px solid rgba(0,0,0,0.1); position: sticky; top: -0.25rem; background: #fff; z-index: 1; }
+.term-tab { border: 0; background: transparent; font-size: 0.8rem; padding: 0.15rem 0.5rem; border-radius: 0.2rem; color: #495057; }
+.term-tab.active { background: #1e6b52; color: #fff; }
+.term-sounds { font-size: 0.78rem; color: #495057; cursor: pointer; white-space: nowrap; }
+.term-section { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: #6c757d;
+                padding: 0.35rem 0.75rem 0.1rem; }
+.term-person { display: block; cursor: pointer; }
+.term-similar { font-size: 0.78rem; }
+.term-note-inline { color: #6c757d; font-size: 0.8rem; }
+.term-kind-group, .term-chip-group   { background-color: #2f5f8a; }
+.term-kind-place, .term-chip-place   { background-color: #7a3e8e; }
+.term-kind-ship, .term-chip-ship     { background-color: #0f6b7a; }
+.term-kind-person                    { background-color: #d93025; }
+.chip-role { font-weight: normal; opacity: 0.85; font-size: 0.75em; margin-left: 0.25rem; }
+
+/* Tooltips never take the mouse. A tooltip pops up under the pointer from whatever row it
+   is over; taking pointer events, it swallowed the wheel -- it sits outside the table's
+   scroll box -- and scrolling stalled wherever one appeared (29 Sep: scrollopen stuck at
+   9,000 px with the pointer on a .tooltip-arrow). They vanish when the pointer leaves their
+   trigger, so nothing in one could be clicked anyway. */
+.tooltip { pointer-events: none; }

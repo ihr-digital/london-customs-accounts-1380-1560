@@ -29,8 +29,9 @@ govern the Chart and the Map as well**.
   cargos entered under that heading, and again to close it.
 - A row you leave open **stays open** while you scroll, even though the table
   only keeps the visible rows in the page.
-- With a **Commodities** filter active, the cargos that carry a selected group
-  are highlighted, so you can see which part of a lading matched.
+- With a kind of goods chosen, the cargos that carry it are highlighted, and a
+  chosen commodity, measure or quality is outlined wherever it occurs in the
+  cargo text, so you can see which part of a lading matched.
 - The clipboard icon beside a cargo copies its text.
 
 ## Clicking a name
@@ -48,9 +49,10 @@ identified. Clicking one opens the **name picker**:
   shown underlined rather than highlighted.
 
 :::{tip}
-This is the way to follow one merchant through the corpus. The *Person* filter
-box searches a single forename **or** surname; the name picker starts from an
-actual person in an actual lading and gathers their variant spellings for you.
+This is the way to follow one merchant through the corpus. The search box finds
+people by a single forename **or** surname; the name picker starts from an actual
+person in an actual lading and gathers their variant spellings for you. It is
+also one click away in the search box: *similar…* on any person it offers.
 :::
 
 ## What the colours mean
@@ -77,27 +79,53 @@ identified:
 
 ## Filters
 
-Filters combine: a lading must satisfy **all** of them to appear. The result
-count sits beside the *Ladings* heading.
+Everything you choose appears as a **chip** in the *Filters* row above the table;
+the × on a chip removes it. Chips of **different kinds** combine — a lading must
+satisfy all of them (wine *and* from Spain). Several chips of **one kind** mean
+*any* of them; when there are two or more, a switch beside the chips offers *all*
+instead. The result count sits beside the *Ladings* heading.
 
-**Dates** — the two year selectors set the range. The arrow between them
-reverses the sort order.
+### The search box
 
-**Customs type** — wool, tunnage, petty, miscellaneous. Toggle each on or off.
+One box searches everything the accounts are tagged with. Type two or more
+letters and choose from the suggestions, each of which says what it is and how
+many ladings it would show:
 
-**Direction** — imports, exports, or both.
+- **Goods**, by any spelling — `vinum`, `wyne` and `wine` all offer *wine*.
+  Misspellings are caught too, marked **≈** (`saphron` → *saffron*).
+- **Kinds of goods** — groups such as *Spices* or *Textiles & cloth*, drawn from
+  the Getty Art & Architecture Thesaurus.
+- **Measures** (`pipe`, `pot`) and **qualities** (`Ghent`, `Spain`, `white`).
+- **Places**, in three roles: *goods from* (the place the goods are named from),
+  *ship's port* (the place in a lading's heading) and *merchant from*.
+- **Ships**, by the name in the lading's heading.
+- **People**, by **one forename or one surname** — a full name such as
+  `Marten de Lazera` will not match; search `Lazera`.
+  - **Ctrl/Cmd-click** (or Space) a person to add them **without closing the
+    list**, and so choose several; a plain click chooses one and closes it.
+  - The ear in the list's header adds names that **sound** alike (`kristofer`
+    finds *Cristofer*). It loads a phonetic model of about 28 MB the first time.
+  - *similar…* opens the name picker for that person.
+- A **lading reference** (`3-5-A-0485`) offers *Go to lading*, which shows that
+  one record.
 
-**Person** — one **forename** *or* one **surname**.
-- Forenames and surnames are indexed separately, so a full name such as
-  `Marten de Lazera` will **not** match here.
-- For a full name, use *Filter text* instead.
+The tabs at the top of the list — *All, Goods, Places, Ships, People* — narrow
+it. ↑/↓ move, **Enter** chooses, **Esc** closes.
 
-**Commodities** — a dropdown of commodity groups.
-- *Any* keeps ladings carrying **any** selected group.
-- *All* keeps only ladings carrying **every** selected group.
+### Years and accounts
 
-**Filter text** — searches the whole text of headings and cargos. Searching
-begins one second after you stop typing.
+**Years** — the two selectors set the range. The arrow between them reverses the
+sort order.
+
+**Accounts** — wool, tunnage, petty, miscellaneous, and beneath them imports,
+exports, or both.
+
+### Advanced
+
+**Advanced** (beside the red *clear* icon) opens two more tools.
+
+**Filter text** — searches the words of the headings and cargos as transcribed.
+Searching begins one second after you stop typing.
 
 | Syntax | Meaning | Example |
 |---|---|---|
@@ -113,6 +141,10 @@ begins one second after you stop typing.
 A **lading ID** typed here (for example `3-5-A-0485`) shows that one record and
 **ignores every other filter**.
 
+**Kinds of goods** — every group as a tree, to browse rather than search.
+*Any* keeps ladings carrying any selected group; *All* only those carrying
+every one.
+
 **Clear all filters** — the red icon at the right of the filter row.
 
 ## Sharing and export
@@ -125,5 +157,5 @@ the whole corpus.
 - **Quotation mark** — copies a citation.
 - **CSV** — the filtered ladings as a spreadsheet.
 - **JSON** — the filtered ladings as data. *Right-click* to include annotations.
-- **PDF** — prints the filtered table, keeping the colour coding. Cargos
-  irrelevant to an active Commodities or Person filter are omitted.
+- **PDF** — prints the filtered table, keeping the colour coding. Cargos that
+  do not name a chosen term, kind of goods or person are omitted.

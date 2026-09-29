@@ -74,7 +74,7 @@ let filterState = {
     // [{id, label}] -- chosen search terms (search_plan.md step 2). An id is kind-prefixed:
     // "c:<concept key>" (goods), "u:<unit key>", "q:<qualifier canonical, lower-cased>".
     termFilter: [],
-    termMode: "AND"    // "AND" (each term narrows) | "OR" (any term)
+    termMode: "OR"     // within a kind: "OR" (any, default) | "AND" (all); kinds always AND
 };
 
 const accountingYears = {

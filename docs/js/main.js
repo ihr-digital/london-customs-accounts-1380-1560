@@ -236,6 +236,9 @@ $(() => {
         filterState.personFilter = [];
         if (typeof renderPersonChips === "function") renderPersonChips();
         if (typeof clearCommodityFilter === "function") clearCommodityFilter();
+        // The search box's chips too: Clear all left them in force (found 29 Sep).
+        filterState.termFilter = [];
+        if (typeof TermSearch !== "undefined") TermSearch.renderChips();
 
         applyFilters();
     });

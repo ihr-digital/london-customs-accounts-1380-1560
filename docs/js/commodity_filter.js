@@ -226,7 +226,7 @@ function _cgCommit(alreadyRead) {
 
 function _cgUpdateButtonLabel() {
     const n = (filterState.groupFilter || []).length;
-    $("#commodityFilterLabel").text(n > 0 ? `Commodities (${n})` : "Commodities");
+    $("#commodityFilterLabel").text(n > 0 ? `Kinds of goods (${n})` : "Kinds of goods");
     $("#commodityFilterBtn").toggleClass("active", n > 0);
 }
 
