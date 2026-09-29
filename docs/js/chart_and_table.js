@@ -149,6 +149,7 @@ let _vtRaf = 0;
 function startVirtualTable(items, shortToColour) {
     const box = document.getElementById('tableScrollContainer');
     const keepExpanded = (VT && VT.expanded) || new Set();
+    const keepCargos = (VT && VT.cargos) || new Map();
     // Carry the measured row height across rebuilds. Rows do not change height
     // because a filter changed, but starting from the 48px guess every time made
     // the first draw after a filter short by a third -- 22 rows where 30 fit --
@@ -164,6 +165,9 @@ function startVirtualTable(items, shortToColour) {
         // Which rows are open, by lading_id rather than by DOM node: a row that
         // scrolls out of the window loses its element, and must come back open.
         expanded: keepExpanded,
+        // The cargos of each open row, so a redraw can put them back in the same
+        // frame it draws the row (restoreExpanded). See there for why that matters.
+        cargos: keepCargos,
         offsets: null,
         dirty: true,
         refills: 0,
@@ -285,8 +289,9 @@ function drawTableWindow() {
     VT.start = start;
     VT.end = end;
 
-    measureWindow();
+    // Restore BEFORE measuring: an open row must be measured open. See restoreExpanded.
     restoreExpanded();
+    measureWindow();
 }
 
 // Rows are the size the browser made them, not the size we guessed. Correct the
@@ -392,21 +397,41 @@ function sweepOrphanedTooltips() {
 
 
 // A row that was open when it scrolled away comes back open.
-async function restoreExpanded() {
+//
+// SYNCHRONOUSLY, FROM VT.cargos, WHEREVER IT CAN. A redraw replaces every row with
+// closed ones. When the cargos came back only after an `await`, a short list -- one
+// whose box is sized by its content rather than capped at 80vh -- went into a loop:
+// the redraw dropped the open row's cargos and the box shrank, the cargos came back
+// and it grew, measureWindow saw the box change size and scheduled another redraw,
+// and so on, about 60 times a second. Every row was replaced before a click could
+// land, so no cargo would open. Stephen's path reaches exactly that state: open a
+// cargo, click a person's name in it, apply the picker -- and the lading he opened
+// is on the short filtered list, because that person is in it (29 Sep, IHR site;
+// shot.py `personpicker`). Put back in the frame that draws it, the row is the same
+// height on every redraw, the box stops changing, and the loop cannot start.
+function restoreExpanded() {
     if (!VT.expanded.size) return;
     const tbody = $ladingTableTbody[0];
+    const missing = [];
     for (const tr of tbody.querySelectorAll('tr[data-id]')) {
         const id = tr.getAttribute('data-id');
         if (!VT.expanded.has(id)) continue;
         const $list = $(tr).find('ul.cargos-list');
         if (!$list.length || $list.is(':visible')) continue;
-        const cargos = await db.cargos.where('lading_id').equals(id).toArray();
+        const cargos = VT.cargos.get(id);
+        if (!cargos) { missing.push(id); continue; }
         $list.data('footnotes', $(tr).find('.toggleCargosBtn').data('footnotes'));
         renderCargosList($list, cargos);
         $list.show();
         $(tr).find('.toggleCargosBtn').removeClass('btn-success').addClass('btn-danger');
     }
-    measureWindow();
+    // Open rows whose cargos were never fetched here (restored from elsewhere): fetch
+    // once, then they are cached and every later redraw is synchronous.
+    if (missing.length) {
+        Promise.all(missing.map(id => db.cargos.where('lading_id').equals(id).toArray()
+            .then(c => VT.cargos.set(id, c))))
+            .then(() => { restoreExpanded(); measureWindow(); });
+    }
 }
 
 function renderTable(data, undatedHeldBack = 0) {
@@ -499,6 +524,7 @@ function renderTable(data, undatedHeldBack = 0) {
             // row that is actually on screen.
             if (VT) VT.expanded.add(ladingId);
             const cargos = await db.cargos.where("lading_id").equals(ladingId).toArray();
+            if (VT) VT.cargos.set(ladingId, cargos);   // so a redraw can restore it in-frame
             const $row = $ladingTableTbody.find(
                 'tr[data-id="' + String(ladingId).replace(/"/g, '\\"') + '"]');
             const $btn = $row.length ? $row.find('.toggleCargosBtn') : cargosButton;

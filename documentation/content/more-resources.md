@@ -17,7 +17,7 @@ across 22 categories.
 
 ## Customs Officials
 
-The officers who kept these accounts, **1356–1565**.
+The officers who kept these accounts, **1351–1546**.
 
 - **Search all fields** — name, office, port, date.
 - Each record cites the source it came from.
