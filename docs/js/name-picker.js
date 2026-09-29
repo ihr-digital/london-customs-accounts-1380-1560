@@ -143,16 +143,9 @@
         const $out = $(_modalEl).find(".name-picker-search-results");
         if (q.length < 2) { $out.empty(); return; }
 
-        const lower = q.toLowerCase();
-        // Dexie's startsWithIgnoreCase requires per-key resolution; chain via .or().
         let rows = [];
         try {
-            rows = await db.persons
-                .where("forename").startsWithIgnoreCase(q)
-                .or("surname").startsWithIgnoreCase(q)
-                .or("surname_key").startsWithIgnoreCase(q)
-                .limit(50)
-                .toArray();
+            rows = await PersonIndex.search(q, 50);
         } catch (err) {
             console.warn("Person search failed:", err);
             $out.html(`<div class="text-danger small">Search error: ${err.message}</div>`);
@@ -226,8 +219,15 @@
 
         _modalInstance.show();
 
-        // Look up the seed person
-        const seed = await db.persons.get(_seedPid);
+        // Look up the seed person (person_index.js loads the index if it has not yet)
+        let seed;
+        try {
+            seed = await PersonIndex.get(_seedPid);
+        } catch (err) {
+            $(_modalEl).find(".name-picker-seed-block").html(
+                `<div class="alert alert-warning mb-0">The name index could not be loaded: ${err.message}</div>`);
+            return;
+        }
         if (!seed) {
             $(_modalEl).find(".name-picker-seed-block").html(
                 `<div class="alert alert-warning mb-0">Could not find this person in the index (pid=${_seedPid}).</div>`
@@ -242,12 +242,18 @@
 
         $(_modalEl).find(".name-picker-seed-block").html(_personRowHtml(seed, {seed: true}));
 
-        // Look up neighbours
-        const neighbourMeta = (seed.neighbours || []);
+        // Look up neighbours: fetched from the seed's shard only now, on demand
+        let neighbourMeta = [];
+        try {
+            neighbourMeta = await PersonIndex.neighbours(_seedPid);
+        } catch (err) {
+            console.warn("Neighbours could not be loaded:", err);
+        }
+        if (String(_seedPid) !== String(pid)) return;   // another seed was opened meanwhile
         const ids = neighbourMeta.map(n => n.id);
         let nrows = [];
         if (ids.length > 0) {
-            nrows = (await db.persons.bulkGet(ids)).filter(Boolean);
+            nrows = (await PersonIndex.bulkGet(ids)).filter(Boolean);
         }
         const byId = new Map(nrows.map(p => [String(p.pid), p]));
 
@@ -338,12 +344,8 @@
 
         let rows = [];
         try {
-            rows = await db.persons
-                .where("forename").startsWithIgnoreCase(q)
-                .or("surname").startsWithIgnoreCase(q)
-                .or("surname_key").startsWithIgnoreCase(q)
-                .limit(50)
-                .toArray();
+            if (!PersonIndex.ready) _showInlineDropdown($out, `<div class="person-search-empty">Loading the name index\u2026</div>`);
+            rows = await PersonIndex.search(q, 50);
         } catch (err) {
             console.warn("Inline person search failed:", err);
             _showInlineDropdown($out, `<div class="person-search-empty text-danger">Search error: ${err.message}</div>`);

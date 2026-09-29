@@ -285,9 +285,8 @@ async function applyFilters() {
             // This must run before the text-AST stage so subsequent filters narrow further.
             if (filterState.personFilter && filterState.personFilter.length > 0) {
                 const pids = filterState.personFilter.map(p => String(p.pid));
-                const rows = await db.personLadings.where("pid").anyOf(pids).toArray({ signal });
+                const allowed = await PersonIndex.ladingIds(pids);   // in memory (person_index.js)
                 if (signal.aborted) return;
-                const allowed = new Set(rows.map(r => r.lading_id));
                 baseFilteredLadings = baseFilteredLadings.filter(v => allowed.has(v.lading_id));
             }
 
@@ -647,7 +646,7 @@ async function hydratePersonFilterLabels() {
     if (list.length === 0) return;
     const pids = list.map(e => String(e.pid));
     try {
-        const rows = await db.persons.bulkGet(pids);
+        const rows = await PersonIndex.bulkGet(pids);
         const byPid = new Map(rows.filter(Boolean).map(r => [String(r.pid), r]));
         filterState.personFilter = list.map(e => {
             const r = byPid.get(String(e.pid));

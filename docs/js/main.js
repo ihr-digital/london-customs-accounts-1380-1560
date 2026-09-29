@@ -19,8 +19,15 @@ async function init() {
     await backfillSearchText(); // no-op unless the search index is missing
     await backfillProvenance(); // no-op unless the provenance index is missing
     await loadDatelessLadings(); // loadDatelessLadings is from db_operations.js
-    await preloadPersonIndex(); // preloadPersonIndex is from db_operations.js
-    await hydratePersonFilterLabels(); // hydratePersonFilterLabels is from filter_and_sort.js
+    // THE TABLE DOES NOT WAIT FOR THE PERSON INDEX (person_index.js), which used to
+    // hold a first visit at a 0% bar for 7.8 minutes. Only a person filter already in
+    // force -- from the URL or saved state -- needs it before the first filter; then
+    // it is awaited, which costs a second or two. Otherwise it loads after the table
+    // appears, and the name picker / person search wait on it if used first.
+    if ((filterState.personFilter || []).length) {
+        try { await PersonIndex.load(); } catch (err) { console.warn("Person index:", err); }
+        await hydratePersonFilterLabels(); // hydratePersonFilterLabels is from filter_and_sort.js
+    }
     if (typeof renderPersonChips === "function") renderPersonChips();
     if (typeof syncCommodityFilterUI === "function") syncCommodityFilterUI();
 
@@ -52,6 +59,7 @@ async function init() {
 
     hideGenericSpinner();
     $(".content-hidden").addClass("content-visible").removeClass("content-hidden");
+    PersonIndex.load().catch(err => console.warn("Person index could not be loaded:", err));
 
     // READINESS FLAG FOR HEADLESS CHECKS (tools/pages/shot.py), behind `?debug`.
     // The page is the only thing that knows when it is interactive: the ladings

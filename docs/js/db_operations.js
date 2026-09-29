@@ -878,6 +878,21 @@ db.version(108).stores({
     }
 });
 
+// Version 109 -- the person index leaves IndexedDB. Writing it (111,964 persons with
+// 30 neighbours each, 122 MB unpacked, plus 214,025 person-lading rows) held a first
+// visit at a 0% bar for 7.8 minutes, measured 29 Sep 2026. It is read into memory from
+// persons.json.gz instead (person_index.js), and neighbours are fetched per shard on
+// demand. `null` deletes the two stores. Ladings and cargos are untouched, so a
+// returning visitor re-downloads nothing but the 2.3 MB person file.
+db.version(109).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    persons: null,
+    personLadings: null,
+    provenance: "lading_id"
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
@@ -1217,42 +1232,6 @@ async function loadDatelessLadings() {
     }
 }
 
-async function preloadPersonIndex() {
-    const existing = await db.persons.count();
-    if (existing > 0) {
-        console.info(`Person index already loaded (${existing} groups).`);
-        return;
-    }
-
-    $("#progressBarContainer").show();
-    $("#overallProgressBar")
-        .css("width", "0%")
-        .attr("aria-valuenow", 0)
-        .addClass("progress-bar-animated")
-        .removeClass("bg-danger")
-        .text("Loading name index...");
-
-    try {
-        const [idx, rev] = await Promise.all([
-            _fetchGzippedJson("data/name_index.json.gz", {revalidate: true}),
-            _fetchGzippedJson("data/name_lading_index.json.gz", {revalidate: true}),
-        ]);
-
-        const personRows = Object.entries(idx).map(([pid, v]) => ({pid, ...v}));
-        await db.persons.bulkAdd(personRows, {chunked: true, chunkSize: 2000});
-
-        const ladingRows = [];
-        for (const [pid, rows] of Object.entries(rev)) {
-            for (const [lading_id, role] of rows) {
-                ladingRows.push({pid, lading_id, role});
-            }
-        }
-        await db.personLadings.bulkAdd(ladingRows, {chunked: true, chunkSize: 5000});
-
-        console.info(`Person index loaded: ${personRows.length} groups, ${ladingRows.length} pid/lading pairs.`);
-    } catch (err) {
-        console.warn("Failed to load name index:", err);
-    } finally {
-        $("#progressBarContainer").hide();
-    }
-}
+// preloadPersonIndex() was here: it wrote the person index into the `persons` and
+// `personLadings` tables and made the table wait for it. The index is held in memory
+// now (person_index.js) and those tables are dropped in v109.
