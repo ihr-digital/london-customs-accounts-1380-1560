@@ -1017,12 +1017,16 @@ h1 .date-range {
 
 
 /* --- Guided tour (tour.js; documentation/search_plan.md step 6) --- */
-.tour-popover { max-width: 22rem; z-index: 1080; }
+.tour-popover { max-width: 22rem; z-index: 2147483600; }
+/* While the tour runs the page takes no pointer events (tour.js _veilOn). */
+.tour-veil { position: fixed; inset: 0; z-index: 2147483500; background: transparent; cursor: default; }
+.tour-spot { position: fixed; z-index: 2147483550; pointer-events: none; border-radius: 6px;
+             outline: 3px solid #f0a202; box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.25); display: none; }
 .tour-popover .popover-body { font-size: 0.9rem; }
 .tour-nav { display: flex; align-items: center; gap: 0.35rem; margin-top: 0.6rem; }
 .tour-count { margin-right: auto; color: #6c757d; font-size: 0.8rem; }
 .tour-wait { margin-top: 0.45rem; color: #8a5a00; font-size: 0.82rem; }
-.tour-target { outline: 3px solid #f0a202; outline-offset: 3px; border-radius: 4px; }
+.tour-target { }   /* marked for tour.js; the highlight is drawn by .tour-spot */
 
 
 /* --- One search box (term_search.js; search_plan.md step 8) --- */

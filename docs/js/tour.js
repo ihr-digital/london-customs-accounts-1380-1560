@@ -61,6 +61,36 @@ const Tour = (() => {
 
     let i = -1, pop = null, anchor = null;
 
+    // THE PAGE IS INERT WHILE THE TOUR RUNS (Stephen, 29 Sep: tooltips appeared and buttons
+    // and links could be clicked underneath it). A transparent veil over the whole page takes
+    // every pointer event -- clicks, hovers, the wheel -- so nothing beneath reacts; the tour's
+    // popover sits above it. The current step's control is shown through a "spot": a frame
+    // over it that dims the rest of the page and takes no pointer events itself, so the
+    // control is visible but, being under the veil, not clickable.
+    let veil = null, spot = null;
+    function _veilOn() {
+        if (veil) return;
+        veil = document.createElement("div");
+        veil.className = "tour-veil";
+        veil.setAttribute("aria-hidden", "true");
+        spot = document.createElement("div");
+        spot.className = "tour-spot";
+        document.body.append(veil, spot);
+        document.querySelectorAll(".tooltip").forEach(t => t.remove());   // any already showing
+    }
+    function _veilOff() {
+        if (veil) veil.remove();
+        if (spot) spot.remove();
+        veil = spot = null;
+    }
+    function _placeSpot() {
+        if (!spot) return;
+        if (!anchor || !anchor.classList.contains("tour-target")) { spot.style.display = "none"; return; }
+        const r = anchor.getBoundingClientRect();
+        Object.assign(spot.style, {display: "block", top: `${r.top - 6}px`, left: `${r.left - 6}px`,
+                                   width: `${r.width + 12}px`, height: `${r.height + 12}px`});
+    }
+
     const visible = el => !!el && el.getClientRects().length > 0 &&
         getComputedStyle(el).visibility !== "hidden" && !el.closest(".content-hidden");
     const loading = () => !!document.querySelector("#ladingTable.content-hidden");
@@ -104,8 +134,9 @@ const Tour = (() => {
         anchor = el;
         if (ready) {
             el.classList.add("tour-target");
-            el.scrollIntoView({block: "nearest", behavior: "smooth"});
+            el.scrollIntoView({block: "nearest"});
         }
+        _placeSpot();
         pop = new bootstrap.Popover(el, {
             title: step.title, content: _content(step, ready), html: true, sanitize: false,
             trigger: "manual", placement: ready ? "auto" : "bottom", customClass: "tour-popover",
@@ -115,6 +146,7 @@ const Tour = (() => {
 
     function start() {
         try { localStorage.setItem(SEEN_KEY, new Date().toISOString()); } catch (e) { /* per-visit */ }
+        _veilOn();
         i = 0;
         _show(1);
         document.addEventListener("keydown", _keys, true);
@@ -122,6 +154,7 @@ const Tour = (() => {
 
     function stop() {
         _hide();
+        _veilOff();
         i = -1;
         document.removeEventListener("keydown", _keys, true);
     }
@@ -142,7 +175,8 @@ const Tour = (() => {
     });
     $(document).on("click", "#tourBtn", function (e) { e.preventDefault(); $(this).tooltip("hide"); stop(); start(); });
     // When loading finishes, a step shown beside the tabs can move to its real control.
-    $(window).on("resize", () => { if (pop) pop.update(); });
+    $(window).on("resize", () => { if (pop) pop.update(); _placeSpot(); });
+    window.addEventListener("scroll", () => { if (spot) _placeSpot(); }, true);
     $(() => {
         const table = document.getElementById("ladingTable");
         if (!table) return;
