@@ -187,11 +187,21 @@ const TermSearch = (() => {
         try { return localStorage.getItem("mlca_sounds_like") === "1"; } catch (e) { return false; }
     }
 
+    // PINNED TO THE BOX. The list is position:fixed so that a short table's scroll box
+    // cannot clip it; but the box lives in the table header, which scrolls away inside that
+    // same scroll box, and a fixed list followed it up over the headings and the page above
+    // (Stephen, 29 Sep). So: while the search box is out of sight -- above the visible part
+    // of the table, or off the top of the window -- the list is hidden, and it reappears as
+    // it was when the box comes back.
     function _position() {
         const wrap = document.getElementById("termSearchWrap");
         const out = document.getElementById("termSearchResults");
         if (!wrap || !out) return;
         const r = wrap.getBoundingClientRect();
+        const box = document.getElementById("tableScrollContainer");
+        const b = box ? box.getBoundingClientRect() : {top: 0, bottom: window.innerHeight};
+        const outOfSight = r.bottom < Math.max(b.top, 0) + 4 || r.top > Math.min(b.bottom, window.innerHeight);
+        out.style.visibility = outOfSight ? "hidden" : "visible";
         out.style.top = `${r.bottom}px`;
         out.style.left = `${r.left}px`;
         out.style.minWidth = `${Math.max(r.width, 360)}px`;
@@ -239,6 +249,8 @@ const TermSearch = (() => {
     const _section = s => s.type === "lading" ? "" : s.type === "person" ? "People"
         : s.t.kind === "place" ? "Places" : s.t.kind === "ship" ? "Ships" : "Goods";
 
+    let peoplePending = false;     // the People section is still being looked up
+
     function _render(note) {
         const $out = $("#termSearchResults");
         const tabs = `<div class="term-tabs" role="tablist">${TABS.map(([k, l]) =>
@@ -253,15 +265,24 @@ const TermSearch = (() => {
             sec = h;
             body += _itemHtml(s, i);
         });
-        if (!shown.length) body = `<div class="person-search-empty">${note || "Nothing matches."}</div>`;
-        else if (note) body += `<div class="person-search-empty">${note}</div>`;
+        // A spinner where People will be, while they are looked up (Stephen, 29 Sep): the
+        // first search also loads the person index, and "sounds like" the phonetic model.
+        if (peoplePending) {
+            const loadingIndex = typeof PersonIndex !== "undefined" && !PersonIndex.ready;
+            const also = _soundsLike() ? " and names that sound alike" : "";
+            body += (tab === "all" ? `<div class="term-section">People</div>` : "")
+                + `<div class="term-loading" role="status"><span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>`
+                + (loadingIndex ? `Loading the name index${also ? " (then" + also + ")" : ""}…` : `Looking for people${also}…`) + `</div>`;
+        }
+        if (!shown.length && !peoplePending) body = `<div class="person-search-empty">${note || "Nothing matches."}</div>`;
+        else if (note && !(peoplePending && !shown.length)) body += `<div class="person-search-empty">${note}</div>`;
         $out.html(tabs + body);
         _position();
         $out.show();
     }
 
     function _close() {
-        shown = []; active = -1;
+        shown = []; active = -1; peoplePending = false;
         $("#termSearchResults").hide().empty();
     }
 
@@ -319,8 +340,10 @@ const TermSearch = (() => {
             return lading.concat(items);
         };
         shown = assemble([]); active = shown.length ? 0 : -1;
-        _render(shown.length ? "" : "Looking…");
-        const people = await _people(q, mine);
+        peoplePending = (tab === "all" || tab === "people") && q.trim().length >= 2;
+        _render("");
+        let people;
+        try { people = await _people(q, mine); } finally { if (mine === seq) peoplePending = false; }
         if (mine !== seq) return;
         shown = assemble(people); active = shown.length ? Math.min(Math.max(active, 0), shown.length - 1) : -1;
         _render(shown.length ? "" : (fold(q).length >= 3 && !fzBroken ? "Looking for similar spellings…" : "Nothing matches."));

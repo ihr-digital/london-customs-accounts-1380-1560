@@ -954,8 +954,8 @@ h1 .date-range {
     border-bottom-right-radius: var(--bs-border-radius-sm);
 }
 #termSearchResults {
-    position: fixed;             /* escapes the table's overflow clip, as #personSearchResults */
-    z-index: 1050;
+    position: fixed;             /* escapes the table's overflow clip; hidden while its box is out of sight (term_search.js _position) */
+    z-index: 1025;               /* below Bootstrap's modals (1055) and tooltips (1080) */
     max-height: 420px;
     max-width: min(34rem, calc(100vw - 16px));
     overflow-y: auto;
@@ -1055,3 +1055,5 @@ h1 .date-range {
    9,000 px with the pointer on a .tooltip-arrow). They vanish when the pointer leaves their
    trigger, so nothing in one could be clicked anyway. */
 .tooltip { pointer-events: none; }
+
+.term-loading { padding: 0.4rem 0.75rem; font-size: 0.85rem; color: #6c757d; display: flex; align-items: center; }
