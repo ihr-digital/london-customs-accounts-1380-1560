@@ -13,6 +13,10 @@ async function init() {
     if (typeof initCommodityFilter === "function") initCommodityFilter();
     if (typeof syncCommodityFilterUI === "function") syncCommodityFilterUI();
 
+    // SAY WHAT THE WAIT IS. Opening the database runs any pending version upgrade, and an
+    // upgrade that clears the stored corpus (212,000 cargos) takes a while with nothing on
+    // screen but "Loading..." -- the reason was only in the console (Stephen, 29 Sep, v111).
+    await announceDbOpen();
     await db.open(); // db is from globals.js
     await checkDbHealth();
     await preloadAllLadings(); // preloadAllLadings is from db_operations.js
@@ -284,3 +288,28 @@ $(() => {
         if (button) new bootstrap.Tab(button).show();
     }
 });
+
+// Tell the reader, before db.open(), whether this is a first visit, an upgrade that clears
+// and refreshes their stored copy, or an ordinary start. Dexie stores version N as native
+// IndexedDB version N * 10; indexedDB.databases() reports the native one. Where the browser
+// cannot list databases, say the neutral thing.
+async function announceDbOpen() {
+    const label = document.querySelector("#loadingSpinner .spinner-label");
+    if (!label) return;
+    let stored = null;
+    try {
+        if (indexedDB.databases) {
+            const found = (await indexedDB.databases()).find(d => d.name === db.name);
+            stored = found ? found.version : 0;
+        }
+    } catch (e) { /* not listable: fall through */ }
+    const target = db.verno * 10;
+    if (stored === 0) {
+        label.textContent = "First visit: preparing to download the accounts (a few minutes, once)\u2026";
+    } else if (stored !== null && stored < target) {
+        label.textContent = "The site has been updated: clearing your stored copy of the accounts "
+            + "so it can be refreshed. This happens once and takes a minute or two\u2026";
+    } else {
+        label.textContent = "Opening your stored copy of the accounts\u2026";
+    }
+}
