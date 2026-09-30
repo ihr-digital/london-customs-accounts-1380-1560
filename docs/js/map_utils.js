@@ -308,6 +308,52 @@ function londonMarker(map) {
             map.addImage('crown', image, {sdf: false});
         }
         URL.revokeObjectURL(url);
+        drawLondon(map);
     };
     image.src = url;
+}
+
+// London's crown and label, drawn on their own. They used to come with the 1566
+// customs-ports layer (clusterPoints picked London out of it), so when that layer was
+// removed on 19 Sep 2026 London vanished from the map while the key still listed it.
+function drawLondon(map) {
+    if (map.getSource('london-point')) return;
+    map.addSource('london-point', {
+        type: 'geojson',
+        data: {
+            type: 'FeatureCollection',
+            features: [{type: 'Feature', properties: {title: 'LONDON'},
+                        geometry: {type: 'Point', coordinates: window.londonCoordinates || [-0.0817, 51.5084]}}]
+        }
+    });
+    map.addLayer({
+        id: 'london-point-layer',
+        type: 'symbol',
+        source: 'london-point',
+        layout: {
+            'icon-image': 'crown',
+            'icon-size': ['interpolate', ['linear'], ['zoom'], 4, 0.8, 5, 1.2],
+            'icon-allow-overlap': true,
+            'icon-offset': [0, -10.0]
+        }
+    });
+    map.addLayer({
+        id: 'london-label',
+        type: 'symbol',
+        source: 'london-point',
+        minzoom: 5,
+        layout: {
+            'text-field': ['get', 'title'],
+            'text-font': [fontName],
+            'text-size': 12,
+            'text-offset': [0, 0.7],
+            'text-anchor': 'top'
+        },
+        paint: {
+            'text-color': '#000',
+            'text-halo-color': '#fff',
+            'text-halo-width': 1.5,
+            'text-halo-blur': 0.5
+        }
+    });
 }

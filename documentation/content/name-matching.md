@@ -1,7 +1,7 @@
 # Name Matching
 
 Name matching reconciles variant spellings of forenames, surnames, and full
-persons across 33,548 ladings. The current architecture is the result of
+persons across 33,742 ladings. The current architecture is the result of
 thirteen experiments — see `NAME_CLUSTERING_STRATEGIES.md` in the repository
 for the full history.
 

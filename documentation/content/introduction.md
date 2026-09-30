@@ -15,15 +15,15 @@ visualisations.
 
 | Resource | Count |
 |---|---|
-| Ladings | 33,548 across 46 account-book files (Volumes I–IV) |
-| Set aside, not parsed | 5,020 fragments that are not cargo records |
-| Glossary concepts | 2,452, attested by 19,414 spellings, in 35 AAT-derived groupings |
-| Distinct forename spellings | 5,474 in the published annotations |
-| Distinct surname spellings | 36,118 in the published annotations |
-| Cargos | 212,196, carrying 324,907 commodity rows |
-| Person mentions | 248,475, in 111,964 groups |
+| Ladings | 33,742 across 46 account-book files (Volumes I–IV) |
+| Set aside, not parsed | 8,142 paragraphs that are not cargo records (statements of account, editorial notes, fragments) |
+| Glossary concepts | 2,453, attested by 19,424 spellings, in 35 AAT-derived groupings |
+| Distinct forename spellings | 5,474 in the published annotations (22 September) |
+| Distinct surname spellings | 36,118 in the published annotations (22 September) |
+| Cargos | 215,810, carrying 329,526 commodity rows |
+| Person mentions | 248,475 (22 September); persons now in 120,099 groups |
 
-Measured from the published data on 22 September 2026.
+Measured from the published data on 30 September 2026, except where a row says otherwise. The ladings and cargos rose on 30 September when about 3,800 cargos the transcription parser had silently dropped were restored (see the tagging plan); the person groups rose when the merchants and shipmasters in them, and in the 16th-century "in navi" cargos, were given person records.
 
 ## Using the site
 

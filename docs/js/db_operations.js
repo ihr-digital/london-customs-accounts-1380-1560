@@ -1034,6 +1034,24 @@ db.version(117).stores({
     }
 });
 
+// Version 118 -- 15 cargos back from the discard pile, forename and place fixes, and the
+// whole corpus's goods re-read after Eliot's rulings (bovium/bovinorum as the cowhide
+// qualifier, "sine grano" not grain, "suum" not a measure; 1,921 cargos).
+db.version(118).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v118 — clearing ladings and cargos: recovered cargos, goods re-read");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v118 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

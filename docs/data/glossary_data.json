@@ -55530,18 +55530,6 @@
             9
           ],
           "w": 1
-        },
-        {
-          "t": "bovum",
-          "s": [
-            9
-          ]
-        },
-        {
-          "t": "bovium",
-          "s": [
-            9
-          ]
         }
       ],
       "aat": [
@@ -55558,7 +55546,8 @@
       ],
       "groups": [
         "Furs, skins & leather"
-      ]
+      ],
+      "memo": "30 Sep 2026 (Eliot Benbow): the bare genitives are the cowhide qualifier ('coriorum bovium tannatorum'), not this concept; removed."
     },
     "bow": {
       "d": "Stringed projectile weapons designed to propel arrows, generally consisting of a long stave of wood, metal, fiberglass, or other flexible material, with a length of strong string fastened to the tips of the stave which is bent in a curve, either permanently or from the tension of the string. The string is drawn back, holding the arrow by means of a notch in its rear tip, and propels the arrow upon release. [Source: Getty AAT]",
@@ -118414,20 +118403,6 @@
           ]
         },
         {
-          "t": "revette",
-          "s": [
-            10
-          ],
-          "w": 0
-        },
-        {
-          "t": "revettes",
-          "s": [
-            10
-          ],
-          "w": 0
-        },
-        {
           "t": "rewette",
           "s": [
             5
@@ -118465,7 +118440,8 @@
       ],
       "groups": [
         "Musical instruments"
-      ]
+      ],
+      "memo": "30 Sep 2026 (Eliot Benbow): revette(s) moved to almain-rivets; they occur with Almain."
     },
     "ruet sede": {
       "d": "General term referring to a person, people, place, or thing for which the identity has not been established. [Source: Getty AAT]",
@@ -162364,10 +162340,6 @@
           "w": 0
         },
         {
-          "t": "bovinorum",
-          "s": []
-        },
-        {
           "t": "bobus",
           "s": [],
           "w": 0
@@ -162384,7 +162356,8 @@
       ],
       "related": [
         "ox-meat"
-      ]
+      ],
+      "memo": "30 Sep 2026 (Eliot Benbow): 'bovinorum' ('coriorum bovinorum') moved to the cowhide qualifier."
     },
     "ox sinew": {
       "d": "sinew of an ox | sinew of an ox (Latham, Word-List s.v. nervus)",
@@ -177376,6 +177349,11 @@
         {
           "t": "cetarum",
           "s": []
+        },
+        {
+          "t": "birse",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"12 dossenis brusches de ceta\" - should be categorised under brushes (i.e. as bristle brushes) EB 29/06/2026. ",
@@ -190046,6 +190024,11 @@
           "p": "set",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "shethes",
+          "s": [],
+          "w": 0
         }
       ],
       "d": "Cases or coverings for the blade of a sword, dagger, or other instrument to which it fits closely. [Source: Getty AAT]",
@@ -191352,6 +191335,16 @@
           "s": [
             4
           ],
+          "w": 0
+        },
+        {
+          "t": "cuschone clothez",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cuschone clothes",
+          "s": [],
           "w": 0
         }
       ],
@@ -208862,6 +208855,16 @@
           "t": "goates",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "gott skinis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gott skins",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"capparum\" needs to be removed from this concept. EB 16/07/2026. Most of the sample cargoes seem to be erroneous. ",
@@ -224155,13 +224158,6 @@
           "w": 0
         },
         {
-          "t": "bovium",
-          "s": [
-            10
-          ],
-          "w": 0
-        },
-        {
           "t": "linguarum bovium salsarum",
           "s": [],
           "w": 0
@@ -224177,7 +224173,7 @@
       "groups": [
         "Food, spices & comestibles"
       ],
-      "memo": "\"bovium\" will need to be mostly removed from this concept. EB 17/07/2026",
+      "memo": "\"bovium\" will need to be mostly removed from this concept. EB 17/07/2026 | 30 Sep 2026 (Eliot Benbow): the bare genitives are the cowhide qualifier ('coriorum bovium tannatorum'), not this concept; removed.",
       "reviewed": false,
       "helpWanted": true
     },
@@ -239003,6 +238999,26 @@
             31
           ],
           "w": 0
+        },
+        {
+          "t": "scalte",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "scaltes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "scalle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "scalles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -239014,7 +239030,8 @@
       ],
       "groups": [
         "Wood & wood products"
-      ]
+      ],
+      "memo": "30 Sep 2026 (Eliot Benbow): '3500 scaltes pro shethes' (4-6-B-0260) is this; also 'scale boards' in 16thC bookbinding."
     },
     "skein": {
       "d": "skein: a quantity of thread or yarn wound to a certain length on a reel (OED s.v. skein n.1); used as a measure of thread (white, Prussian, cable thread), silk, and gold-and-silver thread (5 talea per skein). The 'long skein' is a standardized large reel — the c (hundred) containing 120 lb (Book of Rates 39).",
@@ -244506,6 +244523,11 @@
           "s": [
             39
           ],
+          "w": 0
+        },
+        {
+          "t": "dyeper towlyng",
+          "s": [],
           "w": 0
         }
       ],
@@ -257137,6 +257159,16 @@
           "t": "almayne revet",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "revette",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "revettes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -262233,6 +262265,11 @@
         },
         {
           "t": "pares",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pari",
           "s": [],
           "w": 0
         }

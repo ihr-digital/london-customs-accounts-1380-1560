@@ -18,13 +18,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "ale",
-      "label": "ale",
+      "key": "awl",
+      "label": "awl",
       "sim": 0.8
      }
     ],
-    "nearest": "ale",
-    "nearest_key": "ale",
+    "nearest": "awl",
+    "nearest_key": "awl",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -180,8 +180,8 @@
      },
      {
       "store": "concept",
-      "key": "colobium",
-      "label": "colobium",
+      "key": "colour",
+      "label": "colour",
       "sim": 0.714
      }
     ],
@@ -351,22 +351,22 @@
     ],
     "near": [
      {
-      "store": "place",
-      "key": "Spain",
+      "store": "qualifier",
+      "key": "spain",
       "label": "Spain",
       "sim": 1.0
      },
      {
-      "store": "qualifier",
-      "key": "spain",
+      "store": "place",
+      "key": "Spain",
       "label": "Spain",
-      "sim": 0.875
+      "sim": 1.0
      }
     ],
     "nearest": "Spain",
     "nearest_key": "spain",
     "nearest_store": "qualifier",
-    "nearest_sim": 0.875,
+    "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
    {
@@ -535,8 +535,8 @@
     "near": [
      {
       "store": "qualifier",
-      "key": "berflete",
-      "label": "Berflete",
+      "key": "berfflete",
+      "label": "Berfflete",
       "sim": 1.0
      },
      {
@@ -552,8 +552,8 @@
       "sim": 0.933
      }
     ],
-    "nearest": "Berflete",
-    "nearest_key": "berflete",
+    "nearest": "Berfflete",
+    "nearest_key": "berfflete",
     "nearest_store": "qualifier",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
@@ -1036,6 +1036,12 @@
       "sim": 1.0
      },
      {
+      "store": "place",
+      "key": "Venice",
+      "label": "Venice",
+      "sim": 0.909
+     },
+     {
       "store": "concept",
       "key": "fanne",
       "label": "fanne",
@@ -1163,13 +1169,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "nale",
-      "label": "nale",
+      "key": "nail",
+      "label": "nail",
       "sim": 0.857
      }
     ],
-    "nearest": "nale",
-    "nearest_key": "nale",
+    "nearest": "nail",
+    "nearest_key": "nail",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -1475,16 +1481,16 @@
       "sim": 1.0
      },
      {
-      "store": "surname",
-      "key": "Veere",
+      "store": "qualifier",
+      "key": "vere",
       "label": "Veere",
       "sim": 1.0
      },
      {
-      "store": "qualifier",
-      "key": "ivory",
-      "label": "ivory",
-      "sim": 0.889
+      "store": "surname",
+      "key": "Veere",
+      "label": "Veere",
+      "sim": 1.0
      },
      {
       "store": "place",
@@ -1590,13 +1596,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "madder",
-      "label": "madder",
+      "key": "mathes",
+      "label": "mathes",
       "sim": 0.833
      }
     ],
-    "nearest": "madder",
-    "nearest_key": "madder",
+    "nearest": "mathes",
+    "nearest_key": "mathes",
     "nearest_store": "concept",
     "nearest_sim": 0.833,
     "likely": "near"
@@ -1869,7 +1875,7 @@
      },
      {
       "store": "concept",
-      "key": "cypress",
+      "key": "cypress_2",
       "label": "cypress",
       "sim": 0.909
      }
@@ -2073,8 +2079,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Seynt",
-      "label": "Seynt",
+      "key": "Seint",
+      "label": "Seint",
       "sim": 1.0
      },
      {
@@ -2455,8 +2461,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "wine",
-      "label": "vinum",
+      "key": "aum",
+      "label": "aum",
       "sim": 0.75
      },
      {
@@ -2466,8 +2472,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "vinum",
-    "nearest_key": "wine",
+    "nearest": "aum",
+    "nearest_key": "aum",
     "nearest_store": "concept",
     "nearest_sim": 0.75,
     "likely": "new"
@@ -2609,8 +2615,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "May",
-      "label": "May",
+      "key": "Maie",
+      "label": "Maie",
       "sim": 1.0
      }
     ]
@@ -2980,8 +2986,8 @@
      },
      {
       "store": "concept",
-      "key": "prage",
-      "label": "prage",
+      "key": "purse",
+      "label": "purse",
       "sim": 0.727
      }
     ],
@@ -3418,8 +3424,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Yamys",
-      "label": "Yamys",
+      "key": "Jacmes",
+      "label": "Jacmes",
       "sim": 1.0
      },
      {
@@ -3940,7 +3946,7 @@
      },
      {
       "store": "concept",
-      "key": "cypress",
+      "key": "cypress_2",
       "label": "cypress",
       "sim": 0.727
      }
@@ -4238,8 +4244,8 @@
     "near": [
      {
       "store": "qualifier",
-      "key": "berflete",
-      "label": "Berflete",
+      "key": "berfflete",
+      "label": "Berfflete",
       "sim": 1.0
      },
      {
@@ -4255,8 +4261,8 @@
       "sim": 0.933
      }
     ],
-    "nearest": "Berflete",
-    "nearest_key": "berflete",
+    "nearest": "Berfflete",
+    "nearest_key": "berfflete",
     "nearest_store": "qualifier",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
@@ -4505,8 +4511,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Marya",
-      "label": "Marya",
+      "key": "Maria",
+      "label": "Maria",
       "sim": 1.0
      },
      {
@@ -4742,13 +4748,13 @@
      },
      {
       "store": "concept",
-      "key": "wolf",
-      "label": "wolf",
+      "key": "loop",
+      "label": "loop",
       "sim": 0.8
      }
     ],
-    "nearest": "wolf",
-    "nearest_key": "wolf",
+    "nearest": "loop",
+    "nearest_key": "loop",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -6167,8 +6173,8 @@
      },
      {
       "store": "concept",
-      "key": "cord",
-      "label": "cord",
+      "key": "card",
+      "label": "card",
       "sim": 0.8
      }
     ],
@@ -6200,14 +6206,14 @@
      },
      {
       "store": "surname",
-      "key": "Stagge",
-      "label": "Stagge",
+      "key": "Stage",
+      "label": "Stage",
       "sim": 1.0
      },
      {
       "store": "concept",
-      "key": "tin",
-      "label": "tin",
+      "key": "steege",
+      "label": "steege",
       "sim": 0.727
      }
     ],
@@ -6351,21 +6357,6 @@
     "nearest_store": "concept",
     "nearest_sim": 0.706,
     "likely": "new"
-   },
-   {
-    "token": "sigillo",
-    "count": 53,
-    "bucket": "commodity",
-    "after_qtyunit": 0,
-    "near_commodity": 2,
-    "cooccur_commodity": 53,
-    "capitalised": 0,
-    "examples": [
-     "ut continetur in brevi regis de privato ⟦sigillo⟧ dictis collectoribus directo dato 5to d",
-     "7s 8½d nichil per breve regis de magno ⟦sigillo⟧ suo datum 16° die Octobris anno regni s",
-     "18s 2½d nichil per breve regis de magno ⟦sigillo⟧ suo datum 16° die Octobris anno regni s"
-    ],
-    "near": []
    },
    {
     "token": "alias",
@@ -7724,14 +7715,14 @@
      },
      {
       "store": "qualifier",
-      "key": "warre",
-      "label": "warre",
+      "key": "ware",
+      "label": "ware",
       "sim": 1.0
      },
      {
       "store": "surname",
-      "key": "Ware",
-      "label": "Ware",
+      "key": "Vare",
+      "label": "Vare",
       "sim": 1.0
      }
     ],
@@ -8099,8 +8090,8 @@
      },
      {
       "store": "surname",
-      "key": "Lang",
-      "label": "Lang",
+      "key": "Longge",
+      "label": "Longge",
       "sim": 1.0
      },
      {
@@ -8417,8 +8408,8 @@
      },
      {
       "store": "concept",
-      "key": "coat",
-      "label": "coat",
+      "key": "whetstone",
+      "label": "whetstone",
       "sim": 0.857
      }
     ],
@@ -9929,33 +9920,6 @@
     "near": []
    },
    {
-    "token": "patencium",
-    "count": 6,
-    "bucket": "commodity",
-    "after_qtyunit": 0,
-    "near_commodity": 0,
-    "cooccur_commodity": 6,
-    "capitalised": 0,
-    "examples": [
-     "lvendo seu reddendo pretextu litterarum ⟦patencium⟧ dicti domini regis nunc Henrici Octavi,",
-     "terarum domini nuper regis Henrici viij ⟦patencium⟧ Antonio Ager, indigene, confectarum, 9",
-     "ute litterarum nuper regis Henrici viij ⟦patencium⟧ dicto Antonio Ager confectarum, tres la"
-    ],
-    "near": [
-     {
-      "store": "concept",
-      "key": "pattens",
-      "label": "pattens",
-      "sim": 0.714
-     }
-    ],
-    "nearest": "pattens",
-    "nearest_key": "pattens",
-    "nearest_store": "concept",
-    "nearest_sim": 0.714,
-    "likely": "new"
-   },
-   {
     "token": "oneris",
     "count": 6,
     "bucket": "commodity",
@@ -9986,8 +9950,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "cloth",
-      "label": "cloth",
+      "key": "pan",
+      "label": "pan",
       "sim": 1.0
      },
      {
@@ -9997,8 +9961,8 @@
       "sim": 1.0
      }
     ],
-    "nearest": "cloth",
-    "nearest_key": "cloth",
+    "nearest": "pan",
+    "nearest_key": "pan",
     "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
@@ -10658,8 +10622,8 @@
      },
      {
       "store": "qualifier",
-      "key": "old",
-      "label": "old",
+      "key": "vitre",
+      "label": "vitry",
       "sim": 0.727
      }
     ],
@@ -11453,8 +11417,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Skinner",
-      "label": "Skinner",
+      "key": "Skynar",
+      "label": "Skynar",
       "sim": 1.0
      },
      {
@@ -11753,14 +11717,14 @@
      },
      {
       "store": "qualifier",
-      "key": "warre",
-      "label": "warre",
+      "key": "ware",
+      "label": "ware",
       "sim": 1.0
      },
      {
       "store": "surname",
-      "key": "Ware",
-      "label": "Ware",
+      "key": "Vare",
+      "label": "Vare",
       "sim": 1.0
      }
     ],
@@ -13605,8 +13569,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "indigo",
-      "label": "indigo",
+      "key": "end",
+      "label": "end",
       "sim": 0.857
      },
      {
@@ -13616,8 +13580,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "indigo",
-    "nearest_key": "indigo",
+    "nearest": "end",
+    "nearest_key": "end",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -13779,8 +13743,8 @@
      },
      {
       "store": "qualifier",
-      "key": "beaver",
-      "label": "beaver",
+      "key": "bower",
+      "label": "bower",
       "sim": 0.75
      }
     ],
@@ -14724,8 +14688,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Chave",
-      "label": "Chave",
+      "key": "Shawe",
+      "label": "Shawe",
       "sim": 1.0
      },
      {
@@ -14976,8 +14940,8 @@
      },
      {
       "store": "concept",
-      "key": "pair",
-      "label": "pair",
+      "key": "parys",
+      "label": "parys",
       "sim": 0.727
      }
     ],
@@ -15100,8 +15064,8 @@
      },
      {
       "store": "concept",
-      "key": "cord",
-      "label": "cord",
+      "key": "cover",
+      "label": "cover",
       "sim": 0.833
      }
     ],
@@ -15266,13 +15230,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "aum",
-      "label": "aum",
+      "key": "muid",
+      "label": "muid",
       "sim": 0.8
      }
     ],
-    "nearest": "aum",
-    "nearest_key": "aum",
+    "nearest": "muid",
+    "nearest_key": "muid",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -15646,13 +15610,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "band",
-      "label": "band",
+      "key": "bende",
+      "label": "bende",
       "sim": 0.727
      }
     ],
-    "nearest": "band",
-    "nearest_key": "band",
+    "nearest": "bende",
+    "nearest_key": "bende",
     "nearest_store": "concept",
     "nearest_sim": 0.727,
     "likely": "new"
@@ -16186,8 +16150,8 @@
      },
      {
       "store": "concept",
-      "key": "petra",
-      "label": "petra",
+      "key": "pewter",
+      "label": "pewter",
       "sim": 0.909
      },
      {
@@ -16197,8 +16161,8 @@
       "sim": 0.909
      }
     ],
-    "nearest": "petra",
-    "nearest_key": "petra",
+    "nearest": "pewter",
+    "nearest_key": "pewter",
     "nearest_store": "concept",
     "nearest_sim": 0.909,
     "likely": "spelling-variant"
@@ -16884,8 +16848,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "cat fur",
-      "label": "cat fur",
+      "key": "bristle",
+      "label": "bristle",
       "sim": 0.75
      },
      {
@@ -16895,8 +16859,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "cat fur",
-    "nearest_key": "cat fur",
+    "nearest": "bristle",
+    "nearest_key": "bristle",
     "nearest_store": "concept",
     "nearest_sim": 0.75,
     "likely": "new"
@@ -17159,13 +17123,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "sleeve_2",
-      "label": "sleeve",
+      "key": "menever",
+      "label": "menever",
       "sim": 0.714
      }
     ],
-    "nearest": "sleeve",
-    "nearest_key": "sleeve_2",
+    "nearest": "menever",
+    "nearest_key": "menever",
     "nearest_store": "concept",
     "nearest_sim": 0.714,
     "likely": "new"
