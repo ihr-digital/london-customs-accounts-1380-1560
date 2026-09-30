@@ -948,6 +948,23 @@ db.version(112).stores({
     }
 });
 
+// Version 113 -- seven "cargos" that were editors' footnote text removed (to discarded/), and
+// their ladings given the footnotes the parser now reads (tagging_plan.md, 30 Sep 2026).
+db.version(113).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v113 — clearing ladings and cargos to drop seven footnote-text cargos");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v113 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
