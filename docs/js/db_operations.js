@@ -1000,6 +1000,22 @@ db.version(115).stores({
     }
 });
 
+// Version 116 -- "Received" and "Iidem" no longer tagged as merchants' names (IV-20, IV-9).
+db.version(116).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v116 — clearing ladings and cargos: two words untagged as names");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v116 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
