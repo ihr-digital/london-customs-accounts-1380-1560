@@ -1057,3 +1057,19 @@ h1 .date-range {
 .tooltip { pointer-events: none; }
 
 .term-loading { padding: 0.4rem 0.75rem; font-size: 0.85rem; color: #6c757d; display: flex; align-items: center; }
+
+/* #27: a name the annotator filled in for "De eodem" / "dicto magistro" / "Et pro"
+   (tooltip: the source's words); and the source's words shown in its place */
+.resolved-name {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: help;
+}
+.resolved-source {
+    font-style: italic;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    cursor: help;
+}

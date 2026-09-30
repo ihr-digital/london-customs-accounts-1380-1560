@@ -21,6 +21,10 @@ govern the Chart and the Map as well**.
   - *Annotations*: names, places, ships, commodities and units highlighted in
     the text.
   - *Footnotes*: the editors' notes, as printed.
+- **Source words** — where the accounts point back rather than name someone
+  ("De eodem", "de dicto magistro", "Et pro"), the table fills in the person meant,
+  underlined with dots; hover to see the words of the source. Switch *Source words*
+  on to show those words in place of the names instead. The setting is remembered.
 - The **PDF icon** on a row opens the page image for that lading.
 
 ## Cargos

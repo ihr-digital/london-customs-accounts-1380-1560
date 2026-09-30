@@ -1016,6 +1016,24 @@ db.version(116).stores({
     }
 });
 
+// Version 117 -- #42 shipmasters in cargos given person ids (79.8% -> 99.0%); #29 paired
+// saints' ship names read as one; #27 back-reference substitutions marked, with the
+// source words kept for the "Source words" switch.
+db.version(117).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v117 — clearing ladings and cargos: masters' ids, ship names, back-references");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v117 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

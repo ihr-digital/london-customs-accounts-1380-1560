@@ -217,9 +217,40 @@ function _buildClusterOp(text, head, footnotes) {
     return { start: cmin, end: cmax, html };
 }
 
+// #27: names the annotator filled in for a back-reference ("De eodem" -> the master or the
+// previous merchant, "dicto magistro" -> the master, "Et pro" -> the previous merchant) carry
+// a back_reference span {start, end, text, source}. Marked with a dotted underline; with the
+// "Source words" switch on, the source's words are shown in their place instead.
+function _resolvedSpans(annotations) {
+    return (annotations || []).filter(a => a.type === "back_reference" && typeof a.start === "number"
+        && typeof a.end === "number" && a.end > a.start && a.source);
+}
+
+function _toSourceWords(text, annotations, resolved) {
+    // Replace each resolved span by its source words (right to left), drop the annotations
+    // inside it (the resolved name's own spans), shift those after it.
+    let anns = (annotations || []).filter(a => a.type !== "back_reference");
+    const marks = [];
+    [...resolved].sort((a, b) => b.start - a.start).forEach(r => {
+        const delta = r.source.length - (r.end - r.start);
+        text = text.slice(0, r.start) + r.source + text.slice(r.end);
+        anns = anns.filter(a => !(typeof a.start === "number" && a.start < r.end && a.end > r.start))
+            .map(a => (typeof a.start === "number" && a.start >= r.end) ? {...a, start: a.start + delta, end: a.end + delta} : a);
+        marks.forEach(m => { m.start += delta; m.end += delta; });
+        marks.push({start: r.start, end: r.start + r.source.length, resolvedAs: r.text});
+    });
+    return {text, anns, marks};
+}
+
 function applyOffsetAnnotations(text, annotations, footnotes, mode=filterState.annotationMode) {
     const seen = new Set();
     const ops = [];
+    const resolved = mode === "footnotes" ? [] : _resolvedSpans(annotations);
+    let sourceMarks = [];
+    if (resolved.length && filterState.showSourceWords) {
+        const swapped = _toSourceWords(text, annotations, resolved);
+        text = swapped.text; annotations = swapped.anns; sourceMarks = swapped.marks;
+    }
     (annotations || [])
         .filter(a => mode === "footnotes" ? a.type === "footnote" : a.type !== "footnote")
         .filter(a => a.type !== "back_reference") // Exclude back_reference annotations - they're metadata only
@@ -291,8 +322,27 @@ function applyOffsetAnnotations(text, annotations, footnotes, mode=filterState.a
         if (placed.some(p => op.start < p.end && op.end > p.start)) continue;
         placed.push(op);
     }
-    // Splice right-to-left so earlier offsets stay valid.
-    placed.sort((x, y) => y.start - x.start);
+    const esc = s => $('<div>').text(s).html();
+    // The source's words, shown in place of a resolved name
+    sourceMarks.forEach(m => {
+        if (placed.some(p => m.start < p.end && m.end > p.start)) return;
+        placed.push({start: m.start, end: m.end,
+            html: `<span class="resolved-source" data-bs-toggle="tooltip" title="${esc("Resolved as: " + m.resolvedAs)}">${esc(text.substring(m.start, m.end))}</span>`});
+    });
+    // A resolved name: wrap whatever is drawn inside it (its forename and surname spans stay
+    // clickable), unless some span crosses its edges.
+    if (!filterState.showSourceWords) {
+        resolved.forEach(r => {
+            if (placed.some(p => (p.start < r.start && p.end > r.start) || (p.start < r.end && p.end > r.end))) return;
+            const title = esc(`In the source: “${r.source}”`);
+            placed.push({start: r.end, end: r.end, html: `</span>`, zero: true});
+            placed.push({start: r.start, end: r.start, zero: true,
+                html: `<span class="resolved-name" data-bs-toggle="tooltip" title="${title}">`});
+        });
+    }
+    // Splice right-to-left so earlier offsets stay valid. At one offset the real spans go
+    // first, so a zero-width tag inserted after them lands in front of them.
+    placed.sort((x, y) => (y.start - x.start) || ((x.zero ? 1 : 0) - (y.zero ? 1 : 0)));
     let annotatedText = text;
     placed.forEach(op => {
         annotatedText = annotatedText.slice(0, op.start) + op.html + annotatedText.slice(op.end);

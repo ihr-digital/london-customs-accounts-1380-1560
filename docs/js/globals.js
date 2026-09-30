@@ -68,6 +68,9 @@ let filterState = {
     sort: {field: "primary_date", order: "asc"},
     searchQuery: "",
     annotationMode: "annotations",
+    // #27: show the source's words ("De eodem", "dicto magistro", "Et pro") in place of the
+    // names the annotator resolved them to. Per reader (localStorage), not in the URL.
+    showSourceWords: (() => { try { return localStorage.getItem("LCA_showSourceWords") === "1"; } catch (e) { return false; } })(),
     personFilter: [],  // [{pid, label}] — selected canonical persons used to narrow the table
     groupFilter: [],   // [fineGroupName] — selected commodity subject groups (empty = all)
     groupMode: "OR",   // "OR" (any selected group) | "AND" (all selected groups)

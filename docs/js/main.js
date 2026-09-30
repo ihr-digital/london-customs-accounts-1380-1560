@@ -203,6 +203,13 @@ $(() => {
         handleAnnotationModeChange(selectedMode);
     });
 
+    // #27: resolved names <-> the source's words
+    $('#sourceWordsToggle').prop('checked', !!filterState.showSourceWords).on('change', function () {
+        filterState.showSourceWords = this.checked;
+        try { localStorage.setItem("LCA_showSourceWords", this.checked ? "1" : "0"); } catch (e) { /* private window */ }
+        handleAnnotationModeChange(filterState.annotationMode);
+    });
+
 
     const $scrollBtn = $('#scrollTbodyTopBtn');
     const $scrollContainer = $('#tableScrollContainer');
