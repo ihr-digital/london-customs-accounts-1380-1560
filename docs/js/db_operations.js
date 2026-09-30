@@ -965,6 +965,24 @@ db.version(113).stores({
     }
 });
 
+// Version 114 -- the recovered cargos annotated as fully as the rest: merchants given person
+// ids, goods re-read (a footnote over an entry no longer hides its goods), and 51 paragraphs
+// that are not cargos -- statements of account, the editors' appendix, scribal notes -- removed.
+db.version(114).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v114 — clearing ladings and cargos to load the re-annotated recovered cargos");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v114 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
