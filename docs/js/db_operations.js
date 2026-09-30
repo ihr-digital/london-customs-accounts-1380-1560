@@ -983,6 +983,23 @@ db.version(114).stores({
     }
 });
 
+// Version 115 -- 103 statements of account removed ("Et de residuo subsidii ...", "De £..."),
+// and "Rothomagensis" identified as Rouen (Stephen, 30 Sep 2026).
+db.version(115).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v115 — clearing ladings and cargos: statements of account removed");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v115 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
