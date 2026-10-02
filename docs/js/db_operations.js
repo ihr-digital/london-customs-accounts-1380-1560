@@ -1052,6 +1052,23 @@ db.version(118).stores({
     }
 });
 
+// Version 119 -- Maria's glossary form gaps (1,256 cargos re-read, +934 goods), cushion
+// cloths as one concept, and four cargos that carried the previous cargo's goods.
+db.version(119).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v119 — clearing ladings and cargos: form gaps, cushion cloths, four cargos");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v119 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

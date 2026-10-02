@@ -20,7 +20,7 @@ visualisations.
 | Glossary concepts | 2,453, attested by 19,424 spellings, in 35 AAT-derived groupings |
 | Distinct forename spellings | 5,474 in the published annotations (22 September) |
 | Distinct surname spellings | 36,118 in the published annotations (22 September) |
-| Cargos | 215,810, carrying 329,526 commodity rows |
+| Cargos | 215,810, carrying 330,211 commodity rows |
 | Person mentions | 248,475 (22 September); persons now in 120,099 groups |
 
 Measured from the published data on 30 September 2026, except where a row says otherwise. The ladings and cargos rose on 30 September when about 3,800 cargos the transcription parser had silently dropped were restored (see the tagging plan); the person groups rose when the merchants and shipmasters in them, and in the 16th-century "in navi" cargos, were given person records.

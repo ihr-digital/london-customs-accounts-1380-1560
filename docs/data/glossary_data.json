@@ -46054,6 +46054,11 @@
             3
           ],
           "w": 0
+        },
+        {
+          "t": "alabastri",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -46306,6 +46311,11 @@
           "s": [
             1
           ]
+        },
+        {
+          "t": "allute",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -47883,6 +47893,21 @@
         },
         {
           "t": "cinis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "aschis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cineris",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cineri",
           "s": [],
           "w": 0
         }
@@ -49905,6 +49930,11 @@
         },
         {
           "t": "pilarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pillarum",
           "s": [],
           "w": 0
         }
@@ -52481,6 +52511,16 @@
             18
           ],
           "w": 0
+        },
+        {
+          "t": "beir",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "byr",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Example of \"pillow beers\" being merged under this concept erroneously. EB 15/07/2026",
@@ -53507,6 +53547,11 @@
           "s": [
             30
           ]
+        },
+        {
+          "t": "bladis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Merge with sword blade as a concept? EB 15/07/2026",
@@ -57061,6 +57106,11 @@
             4
           ],
           "w": 0
+        },
+        {
+          "t": "breste",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -57710,6 +57760,21 @@
         },
         {
           "t": "brusilles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brysele",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brusselles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brusele",
           "s": [],
           "w": 0
         }
@@ -60856,6 +60921,11 @@
           "t": "de calabro",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "calabris",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -62474,6 +62544,11 @@
             33
           ],
           "w": 0
+        },
+        {
+          "t": "kerpytt",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -62586,6 +62661,11 @@
             3
           ],
           "w": 1
+        },
+        {
+          "t": "casdoke",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -66233,6 +66313,16 @@
           "t": "cloethez",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "cloþes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "teleis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -67052,6 +67142,11 @@
           "t": "pectinibus",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "pectines",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -67292,6 +67387,16 @@
           "s": [
             2
           ],
+          "w": 0
+        },
+        {
+          "t": "comfect",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "comfetes",
+          "s": [],
           "w": 0
         }
       ],
@@ -67708,6 +67813,11 @@
           "s": [
             36
           ],
+          "w": 0
+        },
+        {
+          "t": "coppyn",
+          "s": [],
           "w": 0
         }
       ],
@@ -70472,6 +70582,11 @@
             44
           ],
           "w": 1
+        },
+        {
+          "t": "cute",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -71160,6 +71275,11 @@
           "s": [
             40
           ],
+          "w": 0
+        },
+        {
+          "t": "damasce",
+          "s": [],
           "w": 0
         }
       ],
@@ -72302,6 +72422,11 @@
           "s": [
             1
           ]
+        },
+        {
+          "t": "dipticorum",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "See also writing tables/tablets. Could also be the devotional objects. One shipment imported with \"painted tables.\" De Jacobo Thridhalffote pro 1 cista, 1½ barellis cum 24 dossenis serurarum precii 36s, 7 tabulis depictis 8s 6d, 2 dossenis dipticorum 20d, 3 baselardis et 4 dag-geres harnesed 37s 2d, 12 capellis de bever 33s 7d, 4 lb. ambre 40s 6d, 6 lb. yvere £3 6s 3d, 7 dossenis keverchef fili de Parys £4 11s, 8 peciis keverchef de Cipro 30s. Summa £17 4s 8d ................................................................. sb' 8s 7½d LCA I-5, p. 42. EB 02/03/2026",
@@ -75200,6 +75325,21 @@
           "t": "tale fili",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "threden",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "fyle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "thride",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Consolidated 2026-06-10 from filum, filum_2..filum_6, 'pecing filum' and 'shomakers filum' (numbered duplicate thread concepts). All forms and qualifiers preserved; exact-duplicate qualifiers merged. Deep qualifier rationalisation into canonical lemmas remains the separate deferred pass. filum_7 (a scribal error for ficus, 'dodes') deleted as redundant — already covered by 'fig'/'fig-dote'. Merged English 'thread' (thread/thred/threde/threade/threed/threede) as synonymical forms 2026-06-10.",
@@ -76694,6 +76834,11 @@
           "s": [
             44
           ],
+          "w": 0
+        },
+        {
+          "t": "flaxes",
+          "s": [],
           "w": 0
         }
       ],
@@ -80346,6 +80491,11 @@
             33
           ],
           "w": 0
+        },
+        {
+          "t": "galinge",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -80953,6 +81103,11 @@
           "s": [
             4
           ],
+          "w": 0
+        },
+        {
+          "t": "garbell",
+          "s": [],
           "w": 0
         }
       ],
@@ -85010,6 +85165,11 @@
           "s": [
             45
           ]
+        },
+        {
+          "t": "hedlakyn",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -85790,6 +85950,11 @@
           "t": "allecibus",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "heyrynges",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"alliis\" sometimes getting caught up under this concept. Will need sifting. EB 16/07/2026",
@@ -85856,6 +86021,11 @@
           "s": [
             7
           ],
+          "w": 0
+        },
+        {
+          "t": "herwarke",
+          "s": [],
           "w": 0
         }
       ],
@@ -87305,6 +87475,11 @@
         },
         {
           "t": "caligis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "calige",
           "s": [],
           "w": 0
         }
@@ -89049,6 +89224,16 @@
           "t": "kerchers",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "kerchiefes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "kerchieffes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -89667,6 +89852,11 @@
         },
         {
           "t": "carzes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "karses",
           "s": [],
           "w": 0
         }
@@ -91576,6 +91766,16 @@
         },
         {
           "t": "laisshe",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lash",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lassh",
           "s": [],
           "w": 0
         }
@@ -93707,6 +93907,11 @@
           "t": "lokys",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "serurarum",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Tidied 2026-06-17: hanging/pendens (padlock) sense routed to padlock; qualifiers atomised; junk 'k' form removed. EB 06/03/2026",
@@ -95215,6 +95420,11 @@
         },
         {
           "t": "mantillis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "mantellorum",
           "s": [],
           "w": 0
         }
@@ -100690,6 +100900,11 @@
           "t": "northin dozines",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "north",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -101799,6 +102014,11 @@
         },
         {
           "t": "cepe",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "unius",
           "s": [],
           "w": 0
         }
@@ -106189,6 +106409,11 @@
             0
           ],
           "w": 0
+        },
+        {
+          "t": "pirorum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -109099,6 +109324,11 @@
           "t": "pisce",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "pisscibus",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Consolidated 2026-06-10: merged Latin 'piscis' and 'fisshe' into a single 'fish' concept (canonical English headword); forms and qualifiers preserved, exact-duplicate qualifiers merged. Deep qualifier rationalisation remains the separate deferred pass.",
@@ -111271,6 +111501,11 @@
         },
         {
           "t": "popillis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "popillorum",
           "s": [],
           "w": 0
         }
@@ -113579,6 +113814,11 @@
         },
         {
           "t": "prunorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "prunis",
           "s": [],
           "w": 0
         }
@@ -116218,6 +116458,11 @@
             31,
             38
           ]
+        },
+        {
+          "t": "recorderes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -117208,6 +117453,11 @@
           "s": [
             6
           ],
+          "w": 0
+        },
+        {
+          "t": "rof",
+          "s": [],
           "w": 0
         }
       ],
@@ -118428,6 +118678,11 @@
           "s": [
             12
           ],
+          "w": 0
+        },
+        {
+          "t": "ruett",
+          "s": [],
           "w": 0
         }
       ],
@@ -119668,6 +119923,21 @@
         },
         {
           "t": "justyng sadles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "sadell",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "sadill",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cellis",
           "s": [],
           "w": 0
         }
@@ -123564,6 +123834,11 @@
             46
           ],
           "w": 0
+        },
+        {
+          "t": "seales",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -125236,6 +125511,11 @@
             39
           ],
           "w": 0
+        },
+        {
+          "t": "sirico",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -126304,6 +126584,21 @@
           "t": "sultwyche",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "soltwychis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "sultwychis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "soltwichis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -126884,6 +127179,11 @@
           "s": [
             1
           ],
+          "w": 0
+        },
+        {
+          "t": "sportarum",
+          "s": [],
           "w": 0
         }
       ],
@@ -128272,6 +128572,11 @@
         },
         {
           "t": "fungiis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "fungeis",
           "s": [],
           "w": 0
         }
@@ -130830,6 +131135,11 @@
           "t": "taphete",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "taffete",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -130948,6 +131258,11 @@
           "s": [
             42
           ],
+          "w": 0
+        },
+        {
+          "t": "tak",
+          "s": [],
           "w": 0
         }
       ],
@@ -131645,6 +131960,11 @@
           "s": [
             2
           ],
+          "w": 0
+        },
+        {
+          "t": "tapstri",
+          "s": [],
           "w": 0
         }
       ],
@@ -136128,6 +136448,11 @@
           "s": [
             2
           ]
+        },
+        {
+          "t": "trubullarum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -140457,6 +140782,11 @@
             3
           ],
           "w": 1
+        },
+        {
+          "t": "werkes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -140684,6 +141014,16 @@
         },
         {
           "t": "westrons",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "westernes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "westron",
           "s": [],
           "w": 0
         }
@@ -141177,6 +141517,16 @@
           "s": [
             33
           ],
+          "w": 0
+        },
+        {
+          "t": "wyarr",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wiere",
+          "s": [],
           "w": 0
         }
       ],
@@ -144122,6 +144472,11 @@
           "t": "amgidalorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "amigdalorum",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -146670,6 +147025,11 @@
         },
         {
           "t": "gladiis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "swurde",
           "s": [],
           "w": 0
         }
@@ -151900,6 +152260,11 @@
           "p": "barele",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "barellorum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -156247,6 +156612,11 @@
           "t": "sonarum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "son",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -156716,6 +157086,11 @@
         },
         {
           "t": "brokettorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "broche",
           "s": [],
           "w": 0
         }
@@ -157833,6 +158208,16 @@
         },
         {
           "t": "pyche",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "picti",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pice",
           "s": [],
           "w": 0
         }
@@ -159158,6 +159543,11 @@
         {
           "t": "pluscularum",
           "s": []
+        },
+        {
+          "t": "bokillarum",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -159364,6 +159754,11 @@
           "t": "buk",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "bukes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -159477,6 +159872,11 @@
         },
         {
           "t": "buff",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "booff",
           "s": [],
           "w": 0
         }
@@ -161316,6 +161716,11 @@
           "s": [
             31
           ],
+          "w": 0
+        },
+        {
+          "t": "bonett",
+          "s": [],
           "w": 0
         }
       ],
@@ -163517,6 +163922,11 @@
             6
           ],
           "w": 0
+        },
+        {
+          "t": "makerellorum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -164835,6 +165245,11 @@
           "t": "sylver",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "argento",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -165213,6 +165628,11 @@
           "s": [
             5
           ],
+          "w": 0
+        },
+        {
+          "t": "cabilles",
+          "s": [],
           "w": 0
         }
       ],
@@ -166282,6 +166702,11 @@
           "p": "split",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "splynte",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -167143,6 +167568,11 @@
           "t": "camerikes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "camerik",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -167276,6 +167706,11 @@
         },
         {
           "t": "campernollarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "camperinollarum",
           "s": [],
           "w": 0
         }
@@ -167703,6 +168138,11 @@
           "t": "hainault",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "henegos",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -168037,6 +168477,16 @@
         },
         {
           "t": "cocliarium",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "sponis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cocleari",
           "s": [],
           "w": 0
         }
@@ -168858,6 +169308,11 @@
         },
         {
           "t": "chaffyng dyssh",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "chafres",
           "s": [],
           "w": 0
         }
@@ -169849,6 +170304,11 @@
         },
         {
           "t": "candelabrorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "candellabris",
           "s": [],
           "w": 0
         }
@@ -170898,6 +171358,11 @@
           "t": "canelle",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "synnamonde",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"canape\" will need removing here. EB 15/07/2026",
@@ -171212,6 +171677,16 @@
         },
         {
           "t": "ciphorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "siphis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "siffis",
           "s": [],
           "w": 0
         }
@@ -172260,6 +172735,16 @@
         },
         {
           "t": "capellis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "capparum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "calepstris",
           "s": [],
           "w": 0
         }
@@ -174741,6 +175226,11 @@
             34
           ],
           "w": 0
+        },
+        {
+          "t": "cassiafistule",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -175347,6 +175837,11 @@
         },
         {
           "t": "cates",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "catt",
           "s": [],
           "w": 0
         }
@@ -179344,6 +179839,11 @@
             26
           ],
           "w": 1
+        },
+        {
+          "t": "semiis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -179741,6 +180241,11 @@
           "s": [
             43
           ],
+          "w": 0
+        },
+        {
+          "t": "gyttornes",
+          "s": [],
           "w": 0
         }
       ],
@@ -180435,6 +180940,11 @@
         },
         {
           "t": "clavo ferri",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "naile",
           "s": [],
           "w": 0
         }
@@ -181143,6 +181653,11 @@
           "s": [
             5
           ],
+          "w": 0
+        },
+        {
+          "t": "cloges",
+          "s": [],
           "w": 0
         }
       ],
@@ -181980,6 +182495,11 @@
           "s": [
             10
           ],
+          "w": 0
+        },
+        {
+          "t": "cokeres",
+          "s": [],
           "w": 0
         }
       ],
@@ -182871,6 +183391,46 @@
           "t": "cowshen clothes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "cuschen",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "qwyshon",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "qwyssin",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "quischin",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "quishyn",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "quyshen",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "quisshin",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cushin",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -183335,6 +183895,11 @@
         {
           "t": "arn",
           "p": "arn",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "yernes",
           "s": [],
           "w": 0
         }
@@ -184538,6 +185103,16 @@
           "t": "rasemorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "resinorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "racimorum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -185138,6 +185713,11 @@
           "s": [
             1
           ],
+          "w": 0
+        },
+        {
+          "t": "tunicarum",
+          "s": [],
           "w": 0
         }
       ],
@@ -187657,6 +188237,11 @@
             12
           ],
           "w": 0
+        },
+        {
+          "t": "cordwyn",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -187955,6 +188540,16 @@
         },
         {
           "t": "coriorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "coreis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "corea",
           "s": [],
           "w": 0
         }
@@ -188411,6 +189006,11 @@
           "s": [
             42
           ],
+          "w": 0
+        },
+        {
+          "t": "yperlinge",
+          "s": [],
           "w": 0
         }
       ],
@@ -190029,6 +190629,11 @@
           "t": "shethes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "shethe",
+          "s": [],
+          "w": 0
         }
       ],
       "d": "Cases or coverings for the blade of a sword, dagger, or other instrument to which it fits closely. [Source: Getty AAT]",
@@ -190352,6 +190957,21 @@
           "s": [
             16
           ],
+          "w": 0
+        },
+        {
+          "t": "cotten",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cottones",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cottone",
+          "s": [],
           "w": 0
         }
       ],
@@ -194214,6 +194834,11 @@
           "t": "duplettis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "doublettes",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -196629,6 +197254,11 @@
           "t": "dornyckes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "dornikes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -198074,6 +198704,11 @@
           "t": "stubb",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "stobellellarum",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -198476,6 +199111,11 @@
         },
         {
           "t": "kyvelles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "keveellarum",
           "s": [],
           "w": 0
         }
@@ -199345,6 +199985,11 @@
             31
           ],
           "w": 0
+        },
+        {
+          "t": "enneis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -199747,6 +200392,11 @@
           "s": [
             11
           ],
+          "w": 0
+        },
+        {
+          "t": "eris",
+          "s": [],
           "w": 0
         }
       ],
@@ -201960,6 +202610,16 @@
           "t": "plumis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "fedires",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "feþeres",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -203966,6 +204626,11 @@
             40
           ],
           "w": 0
+        },
+        {
+          "t": "scarleta",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -204838,6 +205503,16 @@
           "s": [
             45
           ],
+          "w": 0
+        },
+        {
+          "t": "frengis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "frenges",
+          "s": [],
           "w": 0
         }
       ],
@@ -206602,6 +207277,11 @@
         {
           "t": "knoppum",
           "p": "knop",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "knopporum",
           "s": [],
           "w": 0
         }
@@ -208865,6 +209545,21 @@
           "t": "gott skins",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "gottes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gott",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "goote",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"capparum\" needs to be removed from this concept. EB 16/07/2026. Most of the sample cargoes seem to be erroneous. ",
@@ -209078,6 +209773,11 @@
           "s": [
             1
           ],
+          "w": 0
+        },
+        {
+          "t": "graturarum",
+          "s": [],
           "w": 0
         }
       ],
@@ -211896,6 +212596,11 @@
             42
           ],
           "w": 0
+        },
+        {
+          "t": "hinges",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -214040,6 +214745,16 @@
             45
           ],
           "w": 0
+        },
+        {
+          "t": "heare",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "hearre",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -214728,6 +215443,11 @@
           "s": [
             38
           ],
+          "w": 0
+        },
+        {
+          "t": "hookes",
+          "s": [],
           "w": 0
         }
       ],
@@ -216865,6 +217585,11 @@
         },
         {
           "t": "enettes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "jenetes",
           "s": [],
           "w": 0
         }
@@ -221651,6 +222376,16 @@
           "t": "lanarum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "lanei",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wullen",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -222223,6 +222958,11 @@
           "s": [
             18
           ],
+          "w": 0
+        },
+        {
+          "t": "lampadarum",
+          "s": [],
           "w": 0
         }
       ],
@@ -223021,6 +223761,11 @@
           "s": [
             4
           ],
+          "w": 0
+        },
+        {
+          "t": "plumbei",
+          "s": [],
           "w": 0
         }
       ],
@@ -225065,6 +225810,11 @@
             25
           ],
           "w": 0
+        },
+        {
+          "t": "sheff",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -226779,6 +227529,16 @@
           "t": "malmeseis vini",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "malveseis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "malmesies",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -228378,6 +229138,11 @@
           "t": "nobs",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "nobis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -228530,6 +229295,11 @@
         },
         {
           "t": "nucibus",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "nucum",
           "s": [],
           "w": 0
         }
@@ -229020,6 +229790,11 @@
           "s": [
             5
           ],
+          "w": 0
+        },
+        {
+          "t": "oldrones",
+          "s": [],
           "w": 0
         }
       ],
@@ -232626,6 +233401,11 @@
           "t": "pelle",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "felle",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"pellibus lanutis\" could possibly be categorised under woolfells - a separate commodity and one of the regular goods exported to the Calais Staple. https://en.wiktionary.org/wiki/woolfell EB 17/07/2026",
@@ -233432,6 +234212,11 @@
             9
           ],
           "w": 0
+        },
+        {
+          "t": "pik",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -233588,6 +234373,11 @@
           "p": "ptraria",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "petrarie",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -236292,6 +237082,11 @@
           "t": "anulorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "annulorum",
+          "s": [],
+          "w": 0
         }
       ],
       "d": "finger ring: a ring worn on the finger (Latin anulus), of gold, silver or base metal, often gilded and set with precious stones — rubies, balas rubies, sapphires, emeralds, turquoises, pearls, garnets or diamonds — or with glass paste; quality ranges from coarse to fine. The English forms ring/ringes are shared with the generic ring concept.",
@@ -237803,6 +238598,11 @@
             2
           ],
           "w": 0
+        },
+        {
+          "t": "scutellis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -237936,6 +238736,11 @@
           "s": [
             19
           ],
+          "w": 0
+        },
+        {
+          "t": "signettes",
+          "s": [],
           "w": 0
         }
       ],
@@ -245988,6 +246793,11 @@
           "t": "typpis of",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "tippe",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -246601,6 +247411,11 @@
         },
         {
           "t": "eagre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "egre",
           "s": [],
           "w": 0
         }
@@ -252991,6 +253806,11 @@
           "p": "mtil",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "mettylle",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -254522,6 +255342,11 @@
           "t": "olee",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "ole",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"olei de rape\" should probably included under rapeseed oil. EB 17/07/2026",
@@ -254644,6 +255469,11 @@
           "s": [
             33
           ],
+          "w": 0
+        },
+        {
+          "t": "orchell",
+          "s": [],
           "w": 0
         }
       ],
@@ -255178,6 +256008,11 @@
           "p": "pkerele",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "pekerelles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -258267,6 +259102,11 @@
             10
           ],
           "w": 0
+        },
+        {
+          "t": "spinale",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -258759,6 +259599,11 @@
         },
         {
           "t": "seminis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "seedes",
           "s": [],
           "w": 0
         }
@@ -263017,6 +263862,11 @@
           "t": "lounge",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "loung",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -263553,6 +264403,11 @@
           "t": "herford",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "herfford",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -263786,6 +264641,16 @@
           "t": "niperfild",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "nyperfelde",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "nyperfelles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -263819,6 +264684,11 @@
         },
         {
           "t": "brabandes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "braband",
           "s": [],
           "w": 0
         }
@@ -263863,6 +264733,11 @@
         },
         {
           "t": "nyvylle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "nyfulle",
           "s": [],
           "w": 0
         }
@@ -264594,6 +265469,16 @@
           "t": "bacoun",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "baconis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "baconibus",
+          "s": [],
+          "w": 0
         }
       ],
       "groups": [
@@ -265035,6 +265920,11 @@
         },
         {
           "t": "pellis lanuta",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lanutus",
           "s": [],
           "w": 0
         }

@@ -141,8 +141,8 @@
      },
      {
       "store": "surname",
-      "key": "Calis",
-      "label": "Calis",
+      "key": "Callis",
+      "label": "Callis",
       "sim": 1.0
      }
     ],
@@ -180,8 +180,8 @@
      },
      {
       "store": "concept",
-      "key": "colour",
-      "label": "colour",
+      "key": "collar",
+      "label": "collar",
       "sim": 0.714
      }
     ],
@@ -778,8 +778,8 @@
      },
      {
       "store": "concept",
-      "key": "western",
-      "label": "western",
+      "key": "vest",
+      "label": "vest",
       "sim": 0.769
      }
     ],
@@ -992,8 +992,8 @@
      },
      {
       "store": "surname",
-      "key": "Lucke",
-      "label": "Lucke",
+      "key": "Lwce",
+      "label": "Lwce",
       "sim": 1.0
      },
      {
@@ -2461,8 +2461,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "aum",
-      "label": "aum",
+      "key": "wine",
+      "label": "vinum",
       "sim": 0.75
      },
      {
@@ -2472,8 +2472,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "aum",
-    "nearest_key": "aum",
+    "nearest": "vinum",
+    "nearest_key": "wine",
     "nearest_store": "concept",
     "nearest_sim": 0.75,
     "likely": "new"
@@ -2615,8 +2615,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Maie",
-      "label": "Maie",
+      "key": "May",
+      "label": "May",
       "sim": 1.0
      }
     ]
@@ -2986,8 +2986,8 @@
      },
      {
       "store": "concept",
-      "key": "purse",
-      "label": "purse",
+      "key": "prage",
+      "label": "prage",
       "sim": 0.727
      }
     ],
@@ -4511,8 +4511,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Maria",
-      "label": "Maria",
+      "key": "Marya",
+      "label": "Marya",
       "sim": 1.0
      },
      {
@@ -4748,13 +4748,13 @@
      },
      {
       "store": "concept",
-      "key": "loop",
-      "label": "loop",
+      "key": "wolf",
+      "label": "wolf",
       "sim": 0.8
      }
     ],
-    "nearest": "loop",
-    "nearest_key": "loop",
+    "nearest": "wolf",
+    "nearest_key": "wolf",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -4832,8 +4832,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Wise",
-      "label": "Wise",
+      "key": "Vise",
+      "label": "Vise",
       "sim": 1.0
      },
      {
@@ -4864,8 +4864,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Wise",
-      "label": "Wise",
+      "key": "Vise",
+      "label": "Vise",
       "sim": 1.0
      },
      {
@@ -5369,8 +5369,8 @@
      },
      {
       "store": "surname",
-      "key": "Newel",
-      "label": "Newel",
+      "key": "Nevell",
+      "label": "Nevell",
       "sim": 1.0
      }
     ],
@@ -5834,13 +5834,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "eel",
-      "label": "eel",
+      "key": "olle",
+      "label": "olle",
       "sim": 0.8
      }
     ],
-    "nearest": "eel",
-    "nearest_key": "eel",
+    "nearest": "olle",
+    "nearest_key": "olle",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -5893,27 +5893,27 @@
     ],
     "near": [
      {
+      "store": "concept",
+      "key": "scarlet",
+      "label": "scarlet",
+      "sim": 1.0
+     },
+     {
       "store": "qualifier",
       "key": "scarlet",
       "label": "scarlet",
       "sim": 1.0
      },
      {
-      "store": "concept",
-      "key": "scarlet",
-      "label": "scarlet",
-      "sim": 0.933
-     },
-     {
       "store": "surname",
-      "key": "Scarlet",
-      "label": "Scarlet",
+      "key": "Scarlett",
+      "label": "Scarlett",
       "sim": 0.933
      }
     ],
     "nearest": "scarlet",
     "nearest_key": "scarlet",
-    "nearest_store": "qualifier",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -6113,7 +6113,19 @@
      "is allecis precii £6 13s 4d, 2 barellis ⟦nucum⟧ 7s. Summa £7 4d sb' 3s 6¼d",
      "derantibus 2400 lb. precii £24, 3 casis ⟦nucum⟧ in confect 45s, 47½ lb. maces £5 10s. S"
     ],
-    "near": []
+    "near": [
+     {
+      "store": "concept",
+      "key": "nut",
+      "label": "nut",
+      "sim": 1.0
+     }
+    ],
+    "nearest": "nut",
+    "nearest_key": "nut",
+    "nearest_store": "concept",
+    "nearest_sim": 1.0,
+    "likely": "spelling-variant"
    },
    {
     "token": "quolibet",
@@ -6206,8 +6218,8 @@
      },
      {
       "store": "surname",
-      "key": "Stage",
-      "label": "Stage",
+      "key": "Stagge",
+      "label": "Stagge",
       "sim": 1.0
      },
      {
@@ -6910,21 +6922,21 @@
     ],
     "near": [
      {
-      "store": "qualifier",
+      "store": "concept",
       "key": "calaber",
       "label": "calaber",
       "sim": 1.0
      },
      {
-      "store": "concept",
-      "key": "steel",
-      "label": "steel",
-      "sim": 0.933
+      "store": "qualifier",
+      "key": "calaber",
+      "label": "calaber",
+      "sim": 1.0
      }
     ],
     "nearest": "calaber",
     "nearest_key": "calaber",
-    "nearest_store": "qualifier",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -6979,14 +6991,14 @@
       "store": "concept",
       "key": "girdle",
       "label": "girdle",
-      "sim": 0.857
+      "sim": 1.0
      }
     ],
     "nearest": "girdle",
     "nearest_key": "girdle",
     "nearest_store": "concept",
-    "nearest_sim": 0.857,
-    "likely": "near"
+    "nearest_sim": 1.0,
+    "likely": "spelling-variant"
    },
    {
     "token": "marcandisis",
@@ -7283,8 +7295,8 @@
      },
      {
       "store": "concept",
-      "key": "hide",
-      "label": "hide",
+      "key": "coursse",
+      "label": "coursse",
       "sim": 0.8
      }
     ],
@@ -7408,27 +7420,27 @@
     ],
     "near": [
      {
+      "store": "concept",
+      "key": "scarlet",
+      "label": "scarlet",
+      "sim": 1.0
+     },
+     {
       "store": "qualifier",
       "key": "scarlet",
       "label": "scarlet",
       "sim": 1.0
      },
      {
-      "store": "concept",
-      "key": "scarlet",
-      "label": "scarlet",
-      "sim": 0.933
-     },
-     {
       "store": "surname",
-      "key": "Scarlet",
-      "label": "Scarlet",
+      "key": "Scarlett",
+      "label": "Scarlett",
       "sim": 0.933
      }
     ],
     "nearest": "scarlet",
     "nearest_key": "scarlet",
-    "nearest_store": "qualifier",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -7880,8 +7892,8 @@
      },
      {
       "store": "concept",
-      "key": "corf",
-      "label": "corf",
+      "key": "hide",
+      "label": "hide",
       "sim": 0.8
      }
     ],
@@ -8335,6 +8347,12 @@
     ],
     "near": [
      {
+      "store": "concept",
+      "key": "silver",
+      "label": "silver",
+      "sim": 1.0
+     },
+     {
       "store": "qualifier",
       "key": "silver",
       "label": "silver",
@@ -8345,17 +8363,11 @@
       "key": "Argent",
       "label": "Argent",
       "sim": 0.923
-     },
-     {
-      "store": "concept",
-      "key": "silver",
-      "label": "silver",
-      "sim": 0.857
      }
     ],
     "nearest": "silver",
     "nearest_key": "silver",
-    "nearest_store": "qualifier",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -8408,8 +8420,8 @@
      },
      {
       "store": "concept",
-      "key": "whetstone",
-      "label": "whetstone",
+      "key": "coat",
+      "label": "coat",
       "sim": 0.857
      }
     ],
@@ -8548,6 +8560,12 @@
     ],
     "near": [
      {
+      "store": "concept",
+      "key": "cutes",
+      "label": "cutes",
+      "sim": 1.0
+     },
+     {
       "store": "qualifier",
       "key": "cute",
       "label": "cute",
@@ -8558,17 +8576,11 @@
       "key": "Cutte",
       "label": "Cutte",
       "sim": 1.0
-     },
-     {
-      "store": "concept",
-      "key": "cutes",
-      "label": "cutes",
-      "sim": 0.889
      }
     ],
-    "nearest": "cute",
-    "nearest_key": "cute",
-    "nearest_store": "qualifier",
+    "nearest": "cutes",
+    "nearest_key": "cutes",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -8801,13 +8813,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "pesys",
-      "label": "pesys",
+      "key": "fish",
+      "label": "fish",
       "sim": 0.727
      }
     ],
-    "nearest": "pesys",
-    "nearest_key": "pesys",
+    "nearest": "fish",
+    "nearest_key": "fish",
     "nearest_store": "concept",
     "nearest_sim": 0.727,
     "likely": "new"
@@ -9013,16 +9025,16 @@
     ],
     "near": [
      {
+      "store": "concept",
+      "key": "vinegar",
+      "label": "vinegar",
+      "sim": 1.0
+     },
+     {
       "store": "surname",
       "key": "Egre",
       "label": "Egre",
       "sim": 1.0
-     },
-     {
-      "store": "concept",
-      "key": "vinegar",
-      "label": "vinegar",
-      "sim": 0.889
      },
      {
       "store": "qualifier",
@@ -9034,7 +9046,7 @@
     "nearest": "vinegar",
     "nearest_key": "vinegar",
     "nearest_store": "concept",
-    "nearest_sim": 0.889,
+    "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
    {
@@ -10282,14 +10294,14 @@
       "store": "concept",
       "key": "girdle",
       "label": "girdle",
-      "sim": 0.857
+      "sim": 1.0
      }
     ],
     "nearest": "girdle",
     "nearest_key": "girdle",
     "nearest_store": "concept",
-    "nearest_sim": 0.857,
-    "likely": "near"
+    "nearest_sim": 1.0,
+    "likely": "spelling-variant"
    },
    {
     "token": "batyporte",
@@ -11417,8 +11429,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Skynar",
-      "label": "Skynar",
+      "key": "Skinner",
+      "label": "Skinner",
       "sim": 1.0
      },
      {
@@ -11978,8 +11990,8 @@
      },
      {
       "store": "concept",
-      "key": "ruby",
-      "label": "ruby",
+      "key": "rubber",
+      "label": "rubber",
       "sim": 0.8
      }
     ],
@@ -12295,21 +12307,21 @@
     ],
     "near": [
      {
-      "store": "qualifier",
+      "store": "concept",
       "key": "silk",
       "label": "silk",
       "sim": 1.0
      },
      {
-      "store": "concept",
+      "store": "qualifier",
       "key": "silk",
       "label": "silk",
-      "sim": 0.833
+      "sim": 1.0
      }
     ],
     "nearest": "silk",
     "nearest_key": "silk",
-    "nearest_store": "qualifier",
+    "nearest_store": "concept",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
    },
@@ -12767,13 +12779,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "say",
-      "label": "say",
+      "key": "sieve",
+      "label": "sieve",
       "sim": 0.857
      }
     ],
-    "nearest": "say",
-    "nearest_key": "say",
+    "nearest": "sieve",
+    "nearest_key": "sieve",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -12835,8 +12847,8 @@
      },
      {
       "store": "concept",
-      "key": "wool",
-      "label": "wool",
+      "key": "lawn",
+      "label": "lawn",
       "sim": 0.75
      }
     ],
@@ -12899,8 +12911,8 @@
      },
      {
       "store": "concept",
-      "key": "meat",
-      "label": "meat",
+      "key": "horn",
+      "label": "horn",
       "sim": 0.875
      }
     ],
@@ -12925,19 +12937,19 @@
     "near": [
      {
       "store": "qualifier",
-      "key": "coarse",
-      "label": "coarse",
+      "key": "weak",
+      "label": "weak",
       "sim": 1.0
      },
      {
       "store": "concept",
-      "key": "doubler",
-      "label": "doubler",
+      "key": "double",
+      "label": "double",
       "sim": 0.714
      }
     ],
-    "nearest": "coarse",
-    "nearest_key": "coarse",
+    "nearest": "weak",
+    "nearest_key": "weak",
     "nearest_store": "qualifier",
     "nearest_sim": 1.0,
     "likely": "spelling-variant"
@@ -13569,8 +13581,8 @@
     "near": [
      {
       "store": "concept",
-      "key": "end",
-      "label": "end",
+      "key": "indigo",
+      "label": "indigo",
       "sim": 0.857
      },
      {
@@ -13580,8 +13592,8 @@
       "sim": 0.75
      }
     ],
-    "nearest": "end",
-    "nearest_key": "end",
+    "nearest": "indigo",
+    "nearest_key": "indigo",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -13601,13 +13613,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "eel",
-      "label": "eel",
+      "key": "olle",
+      "label": "olle",
       "sim": 0.8
      }
     ],
-    "nearest": "eel",
-    "nearest_key": "eel",
+    "nearest": "olle",
+    "nearest_key": "olle",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -13627,19 +13639,19 @@
     "near": [
      {
       "store": "surname",
-      "key": "Vell",
-      "label": "Vell",
+      "key": "Well",
+      "label": "Well",
       "sim": 1.0
      },
      {
       "store": "concept",
-      "key": "sail",
-      "label": "sail",
+      "key": "veil",
+      "label": "veil",
       "sim": 0.857
      }
     ],
-    "nearest": "sail",
-    "nearest_key": "sail",
+    "nearest": "veil",
+    "nearest_key": "veil",
     "nearest_store": "concept",
     "nearest_sim": 0.857,
     "likely": "near"
@@ -13743,8 +13755,8 @@
      },
      {
       "store": "qualifier",
-      "key": "bower",
-      "label": "bower",
+      "key": "beaver",
+      "label": "beaver",
       "sim": 0.75
      }
     ],
@@ -14024,13 +14036,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "wey",
-      "label": "wey",
+      "key": "egg",
+      "label": "egg",
       "sim": 0.8
      }
     ],
-    "nearest": "wey",
-    "nearest_key": "wey",
+    "nearest": "egg",
+    "nearest_key": "egg",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -14064,13 +14076,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "oar",
-      "label": "oar",
+      "key": "jar",
+      "label": "jar",
       "sim": 0.8
      }
     ],
-    "nearest": "oar",
-    "nearest_key": "oar",
+    "nearest": "jar",
+    "nearest_key": "jar",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -14430,8 +14442,8 @@
      },
      {
       "store": "concept",
-      "key": "lapidum",
-      "label": "lapidum",
+      "key": "millstone",
+      "label": "millstone",
       "sim": 0.75
      }
     ],
@@ -14688,8 +14700,8 @@
     "near": [
      {
       "store": "surname",
-      "key": "Shawe",
-      "label": "Shawe",
+      "key": "Chave",
+      "label": "Chave",
       "sim": 1.0
      },
      {
@@ -15064,8 +15076,8 @@
      },
      {
       "store": "concept",
-      "key": "cover",
-      "label": "cover",
+      "key": "cord",
+      "label": "cord",
       "sim": 0.833
      }
     ],
@@ -16033,14 +16045,14 @@
      },
      {
       "store": "surname",
-      "key": "Lewes",
-      "label": "Lewes",
+      "key": "Losse",
+      "label": "Losse",
       "sim": 1.0
      },
      {
       "store": "concept",
-      "key": "luce",
-      "label": "luce",
+      "key": "loose",
+      "label": "loose",
       "sim": 0.889
      }
     ],
@@ -17327,13 +17339,13 @@
     "near": [
      {
       "store": "concept",
-      "key": "cat",
-      "label": "cat",
+      "key": "cat fur",
+      "label": "cat fur",
       "sim": 0.8
      }
     ],
-    "nearest": "cat",
-    "nearest_key": "cat",
+    "nearest": "cat fur",
+    "nearest_key": "cat fur",
     "nearest_store": "concept",
     "nearest_sim": 0.8,
     "likely": "near"
@@ -17453,13 +17465,13 @@
      },
      {
       "store": "concept",
-      "key": "jar",
-      "label": "jar",
+      "key": "vinegar",
+      "label": "vinegar",
       "sim": 0.75
      }
     ],
-    "nearest": "jar",
-    "nearest_key": "jar",
+    "nearest": "vinegar",
+    "nearest_key": "vinegar",
     "nearest_store": "concept",
     "nearest_sim": 0.75,
     "likely": "new"
