@@ -150,7 +150,8 @@ jobs:
           fi
 
           # 3) Glossary changed?
-          if echo "$DIFF" | grep -q '^docs/data/glossary_data\.json$'; then
+          # (HECTOR's ledgers too: generate_jsonld links each entry to its HECTOR record from them)
+          if echo "$DIFF" | grep -qE '^docs/data/(glossary_data\.json|hector/.*\.tsv)$'; then
             echo "glossary=true" >> "$GITHUB_OUTPUT"
             echo "Glossary data changed"
           else

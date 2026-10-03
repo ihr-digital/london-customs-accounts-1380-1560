@@ -37,6 +37,31 @@ LADINGS_DIR = ROOT / "docs" / "data" / "ladings"
 API_DIR = ROOT / "docs" / "api"
 _GLOSSARY_JSON = ROOT / "docs" / "data" / "glossary_data.json"
 _QUALIFIERS_JSON = ROOT / "docs" / "data" / "qualifiers.json"
+_HECTOR_LEDGERS = ROOT / "docs" / "data" / "hector"   # copied by process/sync_hector_ledger.py
+HECTOR = "https://w3id.org/hector/"
+
+
+def _load_hector_slugs():
+    """{glossary key: commodity slug}, {glossary key: unit slug}, from HECTOR's ledgers.
+
+    HECTOR mints each slug once and never recomputes it (keys are renamed and merged), so the
+    slug is read from its ledger, never derived from the key here. Missing ledgers mean no
+    links, not an error: the glossary still publishes."""
+    import csv
+    out = []
+    for name, key_col in (("commodities.tsv", "glossary_key"), ("units.tsv", "key")):
+        path = _HECTOR_LEDGERS / name
+        rows = {}
+        if path.exists():
+            with open(path, encoding="utf-8", newline="") as fh:
+                for r in csv.DictReader(fh, delimiter="\t"):
+                    if r.get("status") == "active" and r.get(key_col):
+                        rows[r[key_col]] = r["slug"]
+        out.append(rows)
+    return out[0], out[1]
+
+
+_HECTOR_COMMODITY, _HECTOR_UNIT = _load_hector_slugs()
 
 
 def _load_qual_store():
@@ -398,6 +423,13 @@ def build_glossary_jsonld(term_key, entry):
             mappings["closeMatch"].append(_external_uri(a))
         else:
             mappings["exactMatch"].append(_external_uri(a))
+    # HECTOR is the canonical home of the concept (D4, 29 Sep 2026): the same concept, so
+    # skos:exactMatch, mirroring HECTOR's own exactMatch back to this entry. A unit has a
+    # second HECTOR record, the unit itself, which HECTOR links here with rdfs:seeAlso.
+    if term_key in _HECTOR_COMMODITY:
+        mappings["exactMatch"].insert(0, f"{HECTOR}commodity/{_HECTOR_COMMODITY[term_key]}")
+    if term_key in _HECTOR_UNIT:
+        doc["seeAlso"] = [f"{HECTOR}unit/{_HECTOR_UNIT[term_key]}"]
     for key, uris in mappings.items():
         if uris:
             doc[key] = uris

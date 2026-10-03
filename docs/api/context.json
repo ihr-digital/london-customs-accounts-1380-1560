@@ -48,6 +48,7 @@
     "exactMatch": { "@id": "skos:exactMatch", "@type": "@id", "@container": "@set" },
     "closeMatch": { "@id": "skos:closeMatch", "@type": "@id", "@container": "@set" },
     "broadMatch": { "@id": "skos:broadMatch", "@type": "@id", "@container": "@set" },
+    "seeAlso": { "@id": "rdfs:seeAlso", "@type": "@id", "@container": "@set" },
     "materials": { "@id": "schema:material", "@container": "@set" },
     "label": "rdfs:label"
   }
