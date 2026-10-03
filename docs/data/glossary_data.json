@@ -32323,6 +32323,14 @@
           "pan_2"
         ],
         "rationale": "Spelling variant"
+      },
+      {
+        "timestamp": "2026-09-22T00:00:00.000Z",
+        "primary": "chest",
+        "merged": [
+          "ciste"
+        ],
+        "rationale": "Same thing: every one of the 26 occurrences of the form reads as a chest; the old note ('measured in lb.') is not borne out (none has lb. nearby). Recorded 3 Oct 2026: the merge was made 22 Sep without a history record, which HECTOR needs to redirect the ciste URI."
       }
     ],
     "rekey_history": [
@@ -49138,6 +49146,11 @@
           "s": [
             45
           ],
+          "w": 0
+        },
+        {
+          "t": "blakke",
+          "s": [],
           "w": 0
         }
       ],
@@ -89859,6 +89872,16 @@
           "t": "karses",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "karsays",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "karsees",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Refined 2026-06-16: descriptions consolidated; qualifiers atomised by category (colour, place, dimension, grain); concatenated multi-term forms split. NOTE: reinterpreted bare 'whyt'/'whytt' as white (colour), not Isle of Wight — cf. 'whyt northen', 'devynsheyre whytt' — while 'wyght'/'de wyght'/'de weythe' remain Isle of Wight. Please verify.",
@@ -102016,11 +102039,6 @@
           "t": "cepe",
           "s": [],
           "w": 0
-        },
-        {
-          "t": "unius",
-          "s": [],
-          "w": 0
         }
       ],
       "memo": "",
@@ -103498,6 +103516,21 @@
           "s": [
             16
           ],
+          "w": 0
+        },
+        {
+          "t": "paked",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "packde",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "packed",
+          "s": [],
           "w": 0
         }
       ],
@@ -107207,7 +107240,8 @@
       ],
       "related": [
         "pen case",
-        "pincushion"
+        "pincushion",
+        "white cloth"
       ],
       "groups": [
         "Textiles & cloth"
@@ -133994,6 +134028,11 @@
             15
           ],
           "w": 0
+        },
+        {
+          "t": "ticis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -139163,7 +139202,8 @@
       ],
       "related": [
         "vinegar",
-        "lees"
+        "lees",
+        "sack wine"
       ],
       "groups": [
         "Food, spices & comestibles"
@@ -154867,6 +154907,21 @@
           "t": "lectos",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "lecto",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lectis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lectorum",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Merged 2026-06-17: lectum i (Latin bed-with-hangings) and bed tapestry consolidated here; ~134 qualifiers atomised by material/construction/accoutrement/place/size/quality. The featherbed sense (plumarum, de plumis) routed to featherbed.",
@@ -156612,11 +156667,6 @@
           "t": "sonarum",
           "s": [],
           "w": 0
-        },
-        {
-          "t": "son",
-          "s": [],
-          "w": 0
         }
       ],
       "aat": [
@@ -158208,11 +158258,6 @@
         },
         {
           "t": "pyche",
-          "s": [],
-          "w": 0
-        },
-        {
-          "t": "picti",
           "s": [],
           "w": 0
         },
@@ -190221,6 +190266,11 @@
           "t": "copertoriis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "coopertorio",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -191010,6 +191060,11 @@
         {
           "t": "cotton russet",
           "p": "ktonrset",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "russettes",
           "s": [],
           "w": 0
         }
@@ -192297,6 +192352,11 @@
           "s": [
             5
           ],
+          "w": 0
+        },
+        {
+          "t": "cradille",
+          "s": [],
           "w": 0
         }
       ],
@@ -200393,11 +200453,6 @@
             11
           ],
           "w": 0
-        },
-        {
-          "t": "eris",
-          "s": [],
-          "w": 0
         }
       ],
       "aat": [
@@ -206564,6 +206619,16 @@
             2
           ],
           "w": 0
+        },
+        {
+          "t": "rapis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "rapys",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -208210,6 +208275,11 @@
         },
         {
           "t": "veter",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "vitrie",
           "s": [],
           "w": 0
         }
@@ -231208,6 +231278,11 @@
           "p": "nas",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "navy",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -251937,6 +252012,11 @@
             2
           ],
           "w": 0
+        },
+        {
+          "t": "screvane",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -255175,6 +255255,9 @@
       ],
       "groups": [
         "Textiles & cloth"
+      ],
+      "related": [
+        "white cloth"
       ]
     },
     "oil": {
@@ -258002,6 +258085,11 @@
         },
         {
           "t": "revettes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "reuettes",
           "s": [],
           "w": 0
         }
@@ -263867,6 +263955,16 @@
           "t": "loung",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "long clothe",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "longe clothe",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -265981,6 +266079,86 @@
       ],
       "memo": "Split from gun 29 Sep 2026 on Stephen's ruling: 'basis' was folded into gun in June and survived nowhere as a concept or qualifier. The Index of Subjects (IV-19) glosses 'gunes vocati basis' as 'the smallest kind of cannon used in the 16th and 17th centuries (OED base n.6)'. Its one attestation, IV-19 p. 530, is in the tunnage account (file 3), which is missing from the ladings, so the concept shows as unattested until that file is parsed.",
       "sinceLeftovers": true
+    },
+    "white cloth": {
+      "f": [
+        {
+          "t": "white cloth",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "whyttes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "whites",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "whytes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "whittes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "whyttys",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Whites: undyed ('white') woollen cloth, the 'short whites' and 'long whites' of the sixteenth-century accounts (e.g. '21 shorte whyttes', 4-20-B-0017).",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Textiles & cloth"
+      ],
+      "related": [
+        "penwhite",
+        "newberrye whites"
+      ],
+      "helpWanted": true,
+      "memo": "Added 3 Oct 2026 at Stephen's ruling: these had been read as whittle (a blanket), or as whip when 'whippes' was registered. Description to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300162391",
+          "label": "cloth",
+          "broader": true
+        }
+      ]
+    },
+    "sack wine": {
+      "f": [
+        {
+          "t": "sack wine",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "d": "Sack: a dry white wine from Spain and the Canaries (Spanish 'seco'), in the accounts as 'vini sac(kes) vini Hispanie'.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Food, spices & comestibles"
+      ],
+      "related": [
+        "wine"
+      ],
+      "helpWanted": true,
+      "memo": "Added 3 Oct 2026 for Eliot's concept-pass2 note (4-20-D-0200): the sack wine is the goods, 'vini Hispanie' the customs category. Read only in that wine context by verdicts.py; 'sac/sackes' alone stay the measure. Description to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300379442",
+          "label": "wine",
+          "broader": true
+        }
+      ]
     }
   },
   "qa_identifiers": {

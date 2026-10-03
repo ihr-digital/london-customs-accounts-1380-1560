@@ -1069,6 +1069,24 @@ db.version(119).stores({
     }
 });
 
+// Version 120 -- the curators' rulings of 3 Oct 2026: a skin named with its animal is one item
+// (5,532 had read as two), white cloth and sack wine as concepts, a bed of worsted is a bed,
+// linen cloth not cloth and flax, "vini Hispanie" a customs category.
+db.version(120).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v120 — clearing ladings and cargos: skins, beds, linen, wines");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v120 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

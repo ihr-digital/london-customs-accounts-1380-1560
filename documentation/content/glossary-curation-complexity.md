@@ -161,6 +161,31 @@ different objects but were jumbled together; the workable rule turned out to
 be the second letter — **i/y → pin case, e → pen case** — applied form by
 form across both entries.
 
+## Hides and skins: which word is the goods
+
+Hides and skins are among the hardest entries to read, because one item is
+named by two or three words, each of which could pass for goods on its own:
+the material (*corium*, *pellis*), the animal (*bovium*, *vitulorum*,
+*agnorum*) and the treatment (*tannatorum*, *crudorum*, *lanutis*). Read
+word by word, "pellium vitulorum" is a pelt *and* a calfskin, and the item is
+counted twice. The rule, settled with the curators in October 2026:
+
+- **A skin named with its animal is one item: that skin's own concept.** The
+  general word is folded into it. "pellibus lanutis" is a woolfell,
+  "pellium vitulorum" a calfskin, "pellibus agnorum" lambskins, "pellibus
+  boge" budge. Before this rule, 5,532 such entries read as two goods.
+- **A hide is the goods; the animal and the treatment qualify it.**
+  "coriorum bovium tannatorum" is *hide*, qualified *cowhide* and *tanned*.
+  The bare genitives *bovium* and *bovinorum* are that qualifier, not the
+  Book of Rates concept of small pieces of ox hide cut from the neck and belly,
+  which keeps only its full phrase.
+- **The two stay apart only when the source separates them**: by a number,
+  punctuation or "et". "3 pellibus, 2 lanutis" is two items.
+
+Leather goods follow the general rule for compounds: a bed of worsted is a bed
+with worsted as its material, and "coverlets pro lectis" are coverlets, *for*
+beds.
+
 ## The caveats that slow everything down
 
 :::{note}
