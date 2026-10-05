@@ -142,8 +142,9 @@ This repository is under active development ahead of first release.
   ODC-By, Wikidata CC0).
 
 `LICENSE` at the root is the CC BY 4.0 licence for the project's own data and for the
-data derived from Jenks's transcriptions, which is what GitHub and Zenodo will report
-for the repository as a whole. It does not override the other positions above: the code
+data derived from Jenks's transcriptions, and the licence Zenodo records for the
+deposit as a whole (GitHub's sidebar shows "Other", as the repository carries more
+than one licence file). It does not override the other positions above: the code
 is MIT, and material deriving from other earlier editions and reference works carries no
 permission until one is stated.
 
