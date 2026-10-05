@@ -21,10 +21,10 @@ abstract: >-
   Machine-readable data and browser-based research tools for the particular
   customs accounts of the port of London, 1380-1560, produced by the project
   "Unlocking Upcycled Medieval Data: North Sea Networks, People, and Commodities
-  in the London Customs Accounts 1380-1560". Comprises 33,548 ladings across 46
-  account-book files (Volumes I-IV) holding 212,196 cargos, a curated glossary of
-  2,452 commodity concepts attested by 19,414 spellings and aligned to Getty AAT
-  and Wikidata, and 248,475 person mentions grouped for identity matching.
+  in the London Customs Accounts 1380-1560". Comprises 33,742 ladings across 46
+  account-book files (Volumes I-IV) holding 215,810 cargos, a curated glossary of
+  2,455 commodity concepts attested by 19,634 spellings and aligned to Getty AAT
+  and Wikidata, and 267,408 person mentions grouped for identity matching.
 authors:
   - family-names: Colson
     given-names: Justin
