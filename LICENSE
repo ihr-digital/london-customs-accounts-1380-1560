@@ -394,3 +394,20 @@ public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
 
+
+
+=======================================================================
+
+Scope of this licence in this repository (a note by the project; it is
+not part of the licence text above).
+
+This licence applies to the project-authored data in this repository and
+to Stuart Jenks's transcriptions of the London customs accounts and the
+Tudor books of rates, as reproduced here, and all data derived from them,
+licensed by Stuart Jenks on 3 October 2026. Attribute that material as:
+"Derived from Stuart Jenks's transcriptions of the London customs accounts
+and the Tudor books of rates. Licensed CC BY 4.0."
+
+It does not cover the site code (MIT: see LICENSE-MIT), or material from
+other earlier editions and reference works, which carries no permission
+until one is stated. See README.md, "Status and licence".

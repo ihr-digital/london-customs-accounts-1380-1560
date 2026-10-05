@@ -90,8 +90,9 @@ London, and Otto-Friedrich-Universität Bamberg.
 
 ## Sources and acknowledgements
 
-The structured data derives from transcripts and editions prepared by earlier
-scholarship, and from reference works consulted under their own terms of use. Full
+The structured data derives from **Stuart Jenks's transcriptions** of the London
+particular customs accounts and the Tudor books of rates, published by the Hansischer
+Geschichtsverein, and from reference works consulted under their own terms of use. Full
 source acknowledgements and rights statements accompany the data as it is released.
 
 ## Citation
@@ -115,6 +116,13 @@ Every data file must have its rights position settled before it is published her
 That clearance is tracked source by source as the data is prepared, and each file
 arrives with its rights position stated.
 
+**Stuart Jenks's transcriptions are cleared.** On 3 October 2026 Stuart Jenks granted a
+CC BY 4.0 licence on his transcriptions, as reproduced in the project's datasets, and on
+all data derived from them. The grant does not cover the printed and online editions as
+publications, or what their publisher holds in them (typesetting, page images,
+introductions): the site links to the page images on the Hansischer Geschichtsverein's
+site and does not copy them.
+
 ## Status and licence
 
 This repository is under active development ahead of first release.
@@ -123,13 +131,21 @@ This repository is under active development ahead of first release.
 - **Project-authored data** — CC BY 4.0: [`LICENSE`](LICENSE). Attribute as
   *Unlocking Upcycled Medieval Data (IHR / Universität Bamberg)*, citing the DOI of
   the release used.
-- **Everything else** — not yet cleared. Until a file is published here with its
-  rights position stated, no permission to reuse it is granted or implied.
+- **Stuart Jenks's transcriptions, as reproduced here, and all data derived from them**
+  — CC BY 4.0: [`LICENSE`](LICENSE), granted by Stuart Jenks on 3 October 2026.
+  Attribute in the words he asked for:
+  "Derived from Stuart Jenks's transcriptions of the London customs accounts and
+  the Tudor books of rates. Licensed CC BY 4.0."
+- **Material from other earlier editions and reference works** — not yet cleared.
+  Until a file is published here with its rights position stated, no permission to
+  reuse it is granted or implied. External identifiers keep their own terms (Getty AAT
+  ODC-By, Wikidata CC0).
 
-`LICENSE` at the root is the licence for the project's own data, which is what
-GitHub and Zenodo will report for the repository as a whole. It does not override
-either of the other two positions above: the code is MIT, and material deriving from
-earlier editions and reference works carries no permission until one is stated.
+`LICENSE` at the root is the CC BY 4.0 licence for the project's own data and for the
+data derived from Jenks's transcriptions, which is what GitHub and Zenodo will report
+for the repository as a whole. It does not override the other positions above: the code
+is MIT, and material deriving from other earlier editions and reference works carries no
+permission until one is stated.
 
 ## Contact
 
