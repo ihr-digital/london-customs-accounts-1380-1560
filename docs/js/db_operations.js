@@ -1087,6 +1087,24 @@ db.version(120).stores({
     }
 });
 
+// Version 121 -- Eliot's rulings of 4 and 7 Oct 2026: cloth of gold (and silver) one item, not
+// cloth and gold thread; sack wine after "vini" or a wine cask; playing cards, feathers, roof
+// nails and ~55 more spellings; pouch rings.
+db.version(121).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v121 — clearing ladings and cargos: Eliot's rulings of 4 and 7 Oct");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v121 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

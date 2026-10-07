@@ -275,8 +275,12 @@
         return _inventoryCache;
     }
 
+    // The live glossary, as the public glossary page reads it. (This page used to read
+    // glossary_data.json.gz, a copy last written in April 2026, before the clean data model.)
+    let _glossaryCache = null;
     async function fetchGlossary() {
-        return fetchGzJson('data/glossary_data.json.gz');
+        if (!_glossaryCache) _glossaryCache = fetchJson('data/glossary_data.json');
+        return _glossaryCache;
     }
 
     // ── PDF link builder ──
@@ -521,7 +525,7 @@
         return html;
     }
 
-    function renderGlossary(key, entry) {
+    function renderGlossary(key, entry, entries) {
         const uri = `${BASE}/glossary/${key}`;
         let html = `<h1 class="entity-title">${escHtml(key.replace(/_\d+$/, ''))}`;
         if (/_\d+$/.test(key)) html += ` <small style="color:var(--muted)">(sense ${key.match(/_(\d+)$/)[1]})</small>`;
@@ -546,7 +550,7 @@
         if (entry.q?.length) {
             html += '<h2>Qualifiers</h2><ul>';
             for (const q of entry.q) {
-                html += `<li><strong>${escHtml(q.t || '—')}</strong>`;
+                html += `<li><strong>${escHtml(q.t || q.ref || q.raw || '—')}</strong>`;
                 if (q.d) html += `: ${escHtml(q.d)}`;
                 html += '</li>';
             }
@@ -556,6 +560,22 @@
         if (entry.x?.length) {
             html += '<h2>See Also</h2><p>';
             for (const x of entry.x) html += `<a class="xref" href="#glossary/${escAttr(x)}">${escHtml(x)}</a>`;
+            html += '</p>';
+        }
+
+        // Related concepts: other glossary concepts (entry.related, kept reciprocal by the
+        // concepts tool) and concepts in an external vocabulary (entry.relatedConcepts).
+        const related = (entry.related || []).filter(k => !entries || entries[k]);
+        const external = entry.relatedConcepts || [];
+        if (related.length || external.length) {
+            html += '<h2>Related Concepts</h2><p>';
+            for (const k of related) html += `<a class="xref" href="#glossary/${escAttr(k)}">${escHtml(k.replace(/_\d+$/, ''))}</a>`;
+            for (const c of external) {
+                const id = String(c.id || '');
+                const href = (c.source === 'wikidata' || /^Q\d+$/.test(id))
+                    ? `https://www.wikidata.org/wiki/${id}` : `http://vocab.getty.edu/aat/${id}`;
+                html += `<a class="xref" href="${escAttr(href)}" target="_blank" rel="noopener">${escHtml(c.label || id)} ↗</a>`;
+            }
             html += '</p>';
         }
 
@@ -654,7 +674,7 @@
                 const glossary = await fetchGlossary();
                 const entry = glossary.entries?.[entity.key];
                 if (!entry) throw new Error(`Glossary term "${entity.key}" not found`);
-                html = renderGlossary(entity.key, entry);
+                html = renderGlossary(entity.key, entry, glossary.entries);
                 html += renderAltFormat(entity);
 
             } else if (entity.type === 'group') {

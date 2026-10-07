@@ -46,18 +46,24 @@ def _load_hector_slugs():
 
     HECTOR mints each slug once and never recomputes it (keys are renamed and merged), so the
     slug is read from its ledger, never derived from the key here. Missing ledgers mean no
-    links, not an error: the glossary still publishes."""
+    links, not an error: the glossary still publishes. A record that is not active links to
+    its replaced_by slug, or not at all when that is empty; an active record for the same key
+    wins over a retired one."""
     import csv
     out = []
     for name, key_col in (("commodities.tsv", "glossary_key"), ("units.tsv", "key")):
         path = _HECTOR_LEDGERS / name
-        rows = {}
+        rows, retired = {}, {}
         if path.exists():
             with open(path, encoding="utf-8", newline="") as fh:
                 for r in csv.DictReader(fh, delimiter="\t"):
-                    if r.get("status") == "active" and r.get(key_col):
+                    if not r.get(key_col):
+                        continue
+                    if r.get("status") == "active":
                         rows[r[key_col]] = r["slug"]
-        out.append(rows)
+                    elif r.get("replaced_by"):
+                        retired[r[key_col]] = r["replaced_by"]
+        out.append({**retired, **rows})
     return out[0], out[1]
 
 

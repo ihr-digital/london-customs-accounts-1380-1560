@@ -428,6 +428,25 @@ function renderEntry(item, senseNumber){
         mats.forEach(m=>{ html += renderAatChip({id:m.id, label:m.label}); });
         html += `</div></div>`;
     }
+    // Related concepts: other glossary concepts (entry.related, kept reciprocal by the
+    // concepts tool) and concepts in an external vocabulary (entry.relatedConcepts)
+    const allEntries = (state.glossary && state.glossary.entries) || {};
+    const rel = (Array.isArray(entry.related)? entry.related : []).filter(k => allEntries[k]);
+    const ext = Array.isArray(entry.relatedConcepts)? entry.relatedConcepts : [];
+    if(rel.length || ext.length){
+        html += `<div class="entry-aat"><span class="categories-label">Related concepts:</span><div class="aat-list">`;
+        rel.forEach(k=>{
+            const hw = getHeadwordFromEntry(allEntries[k], k) || k;
+            html += `<a class="related-chip" href="#${encodeURIComponent(hw)}" onclick="return showRelated(this.dataset.hw)" data-hw="${escapeHtml(hw)}" title="Go to ${escapeHtml(hw)}">${escapeHtml(hw)}</a>`;
+        });
+        ext.forEach(c=>{
+            const id = String(c.id||'');
+            const isWd = c.source === 'wikidata' || /^Q\d+$/.test(id);
+            const href = isWd ? `https://www.wikidata.org/wiki/${escapeHtml(id)}` : `https://vocab.getty.edu/aat/${escapeHtml(id)}`;
+            html += `<a class="related-chip related-external" href="${href}" target="_blank" rel="noopener" title="${isWd ? 'Wikidata' : 'Getty AAT'}${c.note ? ': ' + escapeHtml(c.note) : ''}">${escapeHtml(c.label||id)} ↗</a>`;
+        });
+        html += `</div></div>`;
+    }
 
     // Qualifiers
     const qs = Array.isArray(entry.q)? entry.q : [];
@@ -547,6 +566,15 @@ function updateResultsCount(){ const el=document.getElementById('results-count')
 // ============================================================================
 
 function handleUrlHashOnLoad(){ const h = window.location.hash.substring(1); if(!h) return; try{ const decoded = decodeURIComponent(h); const s=document.getElementById('search-input'); const ex=document.getElementById('exact-search'); if(s) s.value = decoded; if(ex) ex.checked = true; state.currentFilter.search = decoded; }catch(e){console.warn('hash decode',e);} }
+
+// A related-concept chip: show that entry (exact headword search), as a link to it would
+function showRelated(hw){
+    const s=document.getElementById('search-input'); const ex=document.getElementById('exact-search');
+    if(s) s.value = hw; if(ex) ex.checked = true;
+    try{ history.pushState(null, '', '#' + encodeURIComponent(hw)); }catch(e){}
+    handleSearch(); window.scrollTo({top:0, behavior:'smooth'});
+    return false;
+}
 
 // ============================================================================
 // Qualifiers Toggle

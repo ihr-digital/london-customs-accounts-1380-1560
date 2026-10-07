@@ -711,7 +711,8 @@
         "ossi",
         "ossis",
         "ossium",
-        "boon"
+        "boon",
+        "boone"
       ],
       "gloss": "made of bone",
       "aat": {
@@ -3202,7 +3203,9 @@
       "label": "goat",
       "lang": "mul",
       "forms": [
-        "caprarum"
+        "caprarum",
+        "gottis",
+        "de gottis"
       ],
       "gloss": "of goat"
     },
@@ -3739,7 +3742,8 @@
       "label": "horse",
       "lang": "mul",
       "forms": [
-        "hors"
+        "hors",
+        "pro equis"
       ],
       "gloss": "of / for horses"
     },
@@ -8113,7 +8117,9 @@
       "label": "whole",
       "lang": "mul",
       "forms": [
-        "hole"
+        "hole",
+        "hoole",
+        "hoolle"
       ],
       "gloss": "whole — counted individually (not by gross)"
     },
@@ -8300,7 +8306,8 @@
         "wul",
         "wull",
         "wulle",
-        "wullen"
+        "wullen",
+        "laneis"
       ],
       "gloss": "made of wool",
       "aat": {
@@ -8481,6 +8488,72 @@
         "hasPolygon": true,
         "osm_relation": "47806"
       }
+    },
+    "for bridles": {
+      "label": "for bridles",
+      "lang": "mul",
+      "forms": [
+        "pro frenis"
+      ],
+      "gloss": "for bridles ('2 bittes pro frenis': bridle bits)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for baskets": {
+      "label": "for baskets",
+      "lang": "mul",
+      "forms": [
+        "pro baskettis"
+      ],
+      "gloss": "for baskets ('bundellis roddes pro baskettis': basket rods)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for moulds": {
+      "label": "for moulds",
+      "lang": "mul",
+      "forms": [
+        "pro moldis"
+      ],
+      "gloss": "for moulds ('petris pro moldis': stones for moulds)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for lamps": {
+      "label": "for lamps",
+      "lang": "mul",
+      "forms": [
+        "lampadis"
+      ],
+      "gloss": "for lamps ('olei lampadis': lamp oil)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "steel": {
+      "label": "steel",
+      "lang": "mul",
+      "forms": [
+        "stil"
+      ],
+      "gloss": "made of steel ('stil ringes')",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "coppyn": {
+      "label": "coppyn",
+      "lang": "mul",
+      "forms": [
+        "coppyn"
+      ],
+      "gloss": "coppyn hats: a kind of hat from the Low Countries, perhaps associated with pilgrims to St James (Eliot Benbow, 7 Oct 2026: 'Coppyn' a diminutive of James/Jacob)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
     }
   }
 }

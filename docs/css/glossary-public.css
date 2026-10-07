@@ -525,6 +525,15 @@ h1 {
 .aat-chip.aat-uncertain { opacity: 0.85; }
 .aat-chip.aat-suggested { background: #fffaf0; color: #7b341e; border: 1px dashed #f6ad55; }
 
+/* related concepts: purple, as in the concepts tool */
+.related-chip {
+    display: inline-flex; align-items: baseline; padding: 3px 10px; border-radius: 12px;
+    font-size: 12px; font-weight: 500; text-decoration: none;
+    background: #faf5ff; color: #553c9a; border: 1px solid #d6bcfa;
+}
+.related-chip:hover { background: #e9d8fd; }
+.related-chip.related-external { border-style: dashed; }
+
 .aat-chip .aat-sym { font-weight: 700; opacity: 0.8; }
 .aat-chip .aat-src {
     background: #805ad5; color: #fff; font-size: 9px; font-weight: 700;

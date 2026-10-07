@@ -47918,6 +47918,11 @@
           "t": "cineri",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "asshis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Check \"ashes\" and \"ashes\" as two different concepts? EB 15/07/2026",
@@ -51117,6 +51122,11 @@
           "t": "shepis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "baselle",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -51646,7 +51656,8 @@
         }
       ],
       "related": [
-        "bastard egre"
+        "bastard egre",
+        "bastard cloth"
       ],
       "groups": [
         "Food, spices & comestibles"
@@ -58112,6 +58123,11 @@
             0
           ],
           "w": 0
+        },
+        {
+          "t": "broshis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -59943,6 +59959,11 @@
           "s": [
             39
           ],
+          "w": 0
+        },
+        {
+          "t": "buttri",
+          "s": [],
           "w": 0
         }
       ],
@@ -66336,6 +66357,11 @@
           "t": "teleis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "cloþe",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -67160,6 +67186,11 @@
           "t": "pectines",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "pectenes",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -67827,11 +67858,6 @@
             36
           ],
           "w": 0
-        },
-        {
-          "t": "coppyn",
-          "s": [],
-          "w": 0
         }
       ],
       "aat": [
@@ -68070,6 +68096,11 @@
           "s": [
             38
           ],
+          "w": 0
+        },
+        {
+          "t": "cuperi",
+          "s": [],
           "w": 0
         }
       ],
@@ -75345,11 +75376,6 @@
           "w": 0
         },
         {
-          "t": "fyle",
-          "s": [],
-          "w": 0
-        },
-        {
           "t": "thride",
           "s": [],
           "w": 0
@@ -75813,6 +75839,11 @@
         {
           "t": "fistularum",
           "s": []
+        },
+        {
+          "t": "fistule",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -77302,6 +77333,11 @@
           "s": [
             42
           ],
+          "w": 0
+        },
+        {
+          "t": "flokkis",
+          "s": [],
           "w": 0
         }
       ],
@@ -81122,6 +81158,16 @@
           "t": "garbell",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "garbelur",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "garbelura",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -82738,6 +82784,11 @@
         },
         {
           "t": "cristy gray",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "grayes",
           "s": [],
           "w": 0
         }
@@ -88758,6 +88809,11 @@
           "s": [
             36
           ]
+        },
+        {
+          "t": "kendal",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -93375,6 +93431,11 @@
         {
           "t": "ligularum",
           "s": []
+        },
+        {
+          "t": "ligulis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -93933,6 +93994,11 @@
         },
         {
           "t": "serurarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cerurarum",
           "s": [],
           "w": 0
         }
@@ -98014,6 +98080,11 @@
           "s": [
             23
           ],
+          "w": 0
+        },
+        {
+          "t": "specullorum",
+          "s": [],
           "w": 0
         }
       ],
@@ -103077,6 +103148,11 @@
           "t": "pellis otters skynnys",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "otteres",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -103530,6 +103606,11 @@
         },
         {
           "t": "packed",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pacc",
           "s": [],
           "w": 0
         }
@@ -104528,6 +104609,11 @@
           "s": [
             3
           ]
+        },
+        {
+          "t": "panellis",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -106445,6 +106531,11 @@
         },
         {
           "t": "pirorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pir",
           "s": [],
           "w": 0
         }
@@ -110514,6 +110605,11 @@
           "t": "points",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "poyntis",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -111542,6 +111638,11 @@
           "t": "popillorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "popilles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -112166,6 +112267,11 @@
         },
         {
           "t": "potellis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "potell",
           "s": [],
           "w": 0
         }
@@ -116430,6 +116536,16 @@
             19
           ],
           "w": 0
+        },
+        {
+          "t": "rewmis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "rewmys",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -117488,11 +117604,6 @@
             6
           ],
           "w": 0
-        },
-        {
-          "t": "rof",
-          "s": [],
-          "w": 0
         }
       ],
       "related": [],
@@ -118229,6 +118340,11 @@
             31
           ],
           "w": 0
+        },
+        {
+          "t": "rosette",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -118627,6 +118743,11 @@
           "s": [
             7
           ],
+          "w": 0
+        },
+        {
+          "t": "rubino",
+          "s": [],
           "w": 0
         }
       ],
@@ -128613,6 +128734,11 @@
           "t": "fungeis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "fungias",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -131368,6 +131494,16 @@
           "s": [
             0
           ]
+        },
+        {
+          "t": "talearum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "taleas",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -134033,6 +134169,11 @@
           "t": "ticis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "taker",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -135466,6 +135607,11 @@
           "s": [
             15
           ]
+        },
+        {
+          "t": "trashe",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -140827,6 +140973,11 @@
           "t": "werkes",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "werke",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -142994,6 +143145,11 @@
         },
         {
           "t": "balistis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "crosbowis",
           "s": [],
           "w": 0
         }
@@ -147072,6 +147228,11 @@
           "t": "swurde",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "swyrde",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -147845,6 +148006,11 @@
             43
           ],
           "w": 0
+        },
+        {
+          "t": "zinzibere",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -148246,6 +148412,11 @@
         {
           "t": "aurum papir",
           "p": "arumppir",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gold fyle",
           "s": [],
           "w": 0
         }
@@ -148779,7 +148950,8 @@
       ],
       "related": [
         "gold leaf",
-        "roll"
+        "roll",
+        "cloth of gold"
       ],
       "aat": [
         {
@@ -152305,6 +152477,11 @@
           "t": "barellorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "barrellorum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -153679,7 +153856,10 @@
       ],
       "memo": "See examples of this being caught up in \"bastard\" (i.e. wine) EB 15/07/2026",
       "reviewed": false,
-      "helpWanted": true
+      "helpWanted": true,
+      "related": [
+        "bastard cloth"
+      ]
     },
     "bastard short": {
       "f": [
@@ -153720,6 +153900,9 @@
       ],
       "groups": [
         "Textiles & cloth"
+      ],
+      "related": [
+        "bastard cloth"
       ]
     },
     "battle-axe": {
@@ -158090,6 +158273,11 @@
             1
           ],
           "w": 0
+        },
+        {
+          "t": "byses",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -158263,6 +158451,11 @@
         },
         {
           "t": "pice",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pik",
           "s": [],
           "w": 0
         }
@@ -159712,6 +159905,11 @@
             34
           ],
           "w": 0
+        },
+        {
+          "t": "bugyll",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "See also bugles as horns which also need separating - \"pro 1000 cornuum de bugle.\" EB 15/07/2026",
@@ -160519,6 +160717,11 @@
           "s": [
             36
           ],
+          "w": 0
+        },
+        {
+          "t": "bundellorum",
+          "s": [],
           "w": 0
         }
       ],
@@ -164183,6 +164386,11 @@
           "p": "brdel",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "bridel",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -165312,6 +165520,9 @@
       ],
       "groups": [
         "Textiles & cloth"
+      ],
+      "related": [
+        "cloth of silver"
       ]
     },
     "gold and silver": {
@@ -165677,6 +165888,11 @@
         },
         {
           "t": "cabilles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cabulis",
           "s": [],
           "w": 0
         }
@@ -167390,6 +167606,11 @@
           "t": "vitulinis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "vitulium",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -168532,6 +168753,11 @@
         },
         {
           "t": "cocleari",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cocliaribus",
           "s": [],
           "w": 0
         }
@@ -169725,6 +169951,11 @@
         },
         {
           "t": "candullarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "candel",
           "s": [],
           "w": 0
         }
@@ -173802,6 +174033,16 @@
         },
         {
           "t": "playing cardis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "carte lusorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "carte lusorn",
           "s": [],
           "w": 0
         }
@@ -178077,6 +178318,11 @@
             5
           ],
           "w": 0
+        },
+        {
+          "t": "velo",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -179887,6 +180133,11 @@
         },
         {
           "t": "semiis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "simeis",
           "s": [],
           "w": 0
         }
@@ -184514,6 +184765,11 @@
           "t": "ellis",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "eeles",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Restructured 2026-06-10: named eel types split into separate entries (stub eel, shaft eel, middle eel, pympernel, kyve eel); cross-cutting qualifiers (salted, fresh, red, low quality, dried, of all sorts, Prussian) duplicated across the type entries. ",
@@ -187592,6 +187848,11 @@
           "s": [
             36
           ],
+          "w": 0
+        },
+        {
+          "t": "novaculis",
+          "s": [],
           "w": 0
         }
       ],
@@ -192802,6 +193063,11 @@
             31
           ],
           "w": 0
+        },
+        {
+          "t": "crul",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -193290,6 +193556,11 @@
           "s": [
             30
           ],
+          "w": 0
+        },
+        {
+          "t": "crucibus",
+          "s": [],
           "w": 0
         }
       ],
@@ -201598,6 +201869,16 @@
             31
           ],
           "w": 0
+        },
+        {
+          "t": "lecto plumarum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "lectis plumarum",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -202673,6 +202954,11 @@
         },
         {
           "t": "feþeres",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "plumarum",
           "s": [],
           "w": 0
         }
@@ -206627,6 +206913,11 @@
         },
         {
           "t": "rapys",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "fune",
           "s": [],
           "w": 0
         }
@@ -214524,6 +214815,11 @@
             19
           ],
           "w": 0
+        },
+        {
+          "t": "hank hodes",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "One erroneous example of \"haukesbelles\" being labelled under this concept. EB 16/07/2026",
@@ -214825,6 +215121,21 @@
           "t": "hearre",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "heir",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "heere",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "herre",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -215034,6 +215345,11 @@
           "p": "lter",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "lethere",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -222926,6 +223242,11 @@
           "t": "pellibus agnellorum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "anguinis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Absorbed 2026-06-17 the lambfell/lambskin sense from the muddled 'lam' entry.",
@@ -224806,6 +225127,11 @@
         },
         {
           "t": "leys",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "liez de vino",
           "s": [],
           "w": 0
         }
@@ -229372,6 +229698,11 @@
           "t": "nucum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "nucium",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -229971,6 +230302,16 @@
         },
         {
           "t": "seminis separum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "ounyon seede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "unnyon seede",
           "s": [],
           "w": 0
         }
@@ -232624,6 +232965,11 @@
           "t": "bursarum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "bursis",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -233481,6 +233827,11 @@
           "t": "felle",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "skillis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "\"pellibus lanutis\" could possibly be categorised under woolfells - a separate commodity and one of the regular goods exported to the Calais Staple. https://en.wiktionary.org/wiki/woolfell EB 17/07/2026",
@@ -234286,11 +234637,6 @@
           "s": [
             9
           ],
-          "w": 0
-        },
-        {
-          "t": "pik",
-          "s": [],
           "w": 0
         }
       ],
@@ -239318,6 +239664,11 @@
             44
           ],
           "w": 0
+        },
+        {
+          "t": "sherman",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -241951,6 +242302,11 @@
           "s": [
             6
           ],
+          "w": 0
+        },
+        {
+          "t": "spere hedis",
+          "s": [],
           "w": 0
         }
       ],
@@ -251242,6 +251598,11 @@
             18
           ],
           "w": 0
+        },
+        {
+          "t": "quarteres",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -255428,6 +255789,11 @@
         },
         {
           "t": "ole",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "oleo",
           "s": [],
           "w": 0
         }
@@ -259692,6 +260058,11 @@
         },
         {
           "t": "seedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "seede",
           "s": [],
           "w": 0
         }
@@ -265273,6 +265644,11 @@
           "t": "teasel",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "taseles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -265493,6 +265869,26 @@
           "t": "rof nailles",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "rof nailes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "rof nayles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "rof nale",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "rof naile",
+          "s": [],
+          "w": 0
         }
       ],
       "groups": [
@@ -265575,6 +265971,16 @@
         },
         {
           "t": "baconibus",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bacun",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bakon",
           "s": [],
           "w": 0
         }
@@ -266156,6 +266562,121 @@
         {
           "id": "300379442",
           "label": "wine",
+          "broader": true
+        }
+      ]
+    },
+    "cloth of gold": {
+      "f": [
+        {
+          "t": "cloth of gold",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "d": "Cloth of gold: a rich fabric woven with gold thread, in the accounts 'panni auri' and 'tele auri' (e.g. '2 peciis tele auri damast', 4-10-B-0010). Read before 7 Oct 2026 as two goods, cloth and gold thread.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Textiles & cloth"
+      ],
+      "related": [
+        "gold thread",
+        "cloth of silver",
+        "cloth of gold and silver"
+      ],
+      "helpWanted": true,
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps. Description provisional, to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300162391",
+          "label": "cloth",
+          "broader": true
+        }
+      ]
+    },
+    "cloth of silver": {
+      "f": [
+        {
+          "t": "cloth of silver",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "d": "Cloth of silver: a fabric woven with silver thread, 'panni argentei', 'tele argenti' (e.g. '3 pecias tele argenti', 4-10-B-0225).",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Textiles & cloth"
+      ],
+      "related": [
+        "cloth of gold",
+        "silver",
+        "cloth of gold and silver"
+      ],
+      "helpWanted": true,
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps. Description provisional, to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300162391",
+          "label": "cloth",
+          "broader": true
+        }
+      ]
+    },
+    "cloth of gold and silver": {
+      "f": [
+        {
+          "t": "cloth of gold and silver",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "d": "A fabric woven with both gold and silver thread, 'panni auri et argenti', 'tele auri (et) argenti' (2-1-I-0099, 4-10-B-0222). Not simply cloth of gold (Eliot Benbow, 4 Oct 2026).",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Textiles & cloth"
+      ],
+      "related": [
+        "cloth of gold",
+        "cloth of silver"
+      ],
+      "helpWanted": true,
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps. Description provisional, to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300162391",
+          "label": "cloth",
+          "broader": true
+        }
+      ]
+    },
+    "bastard cloth": {
+      "f": [
+        {
+          "t": "bastard cloth",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "d": "Bastard: the woollen cloth, 'panni bastardi(s)', 'pannis bastardes' (e.g. '38 pannis bastardis', 4-1-B-0217); not bastard the Spanish wine (Eliot Benbow, 7 Oct 2026). See also bastard long and bastard short.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Textiles & cloth"
+      ],
+      "related": [
+        "bastard long",
+        "bastard short",
+        "bastard"
+      ],
+      "helpWanted": true,
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps. Description provisional, to be checked by a curator.",
+      "aat": [
+        {
+          "id": "300162391",
+          "label": "cloth",
           "broader": true
         }
       ]
