@@ -234,7 +234,6 @@ function getRoleBadgeClass(v) {
     if (s.includes('supervisor')) return 'badge badge-role-supervisor';
     if (s.includes('searcher')) return 'badge badge-role-searcher';
     if (s.includes('deput')) return 'badge badge-role-deputy';
-    if (s.includes('appraiso') || s.includes('appraise')) return 'badge badge-role-appraiser';
     return 'badge badge-role-default';
 }
 

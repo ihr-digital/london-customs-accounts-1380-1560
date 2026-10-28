@@ -4539,7 +4539,8 @@
         "malvesey",
         "malveseys",
         "malvessey",
-        "malvesy"
+        "malvesy",
+        "mawesye"
       ],
       "gloss": "malmsey — a strong sweet wine"
     },
@@ -5433,11 +5434,16 @@
         "paynted",
         "payntid",
         "peyntid",
+        "picti",
         "picto",
         "pictum",
-        "pictus"
+        "pictus",
+        "stained",
+        "stayned",
+        "steined",
+        "steyned"
       ],
-      "gloss": "painted / depicted"
+      "gloss": "painted or stained / ornamented with painted designs: \"panni steyned\" means the same as \"pannus depictus\" (Eliot Benbow, 8 Oct 2026)"
     },
     "paradise": {
       "label": "of paradise",
@@ -6087,6 +6093,7 @@
         "reign",
         "reigni",
         "rene",
+        "renensis",
         "reni",
         "renishe",
         "reno",
@@ -7072,15 +7079,6 @@
       ],
       "gloss": "from a starved/emaciated animal"
     },
-    "stayned": {
-      "label": "stayned",
-      "lang": "mul",
-      "forms": [
-        "stayned",
-        "steyned"
-      ],
-      "gloss": "stained / ornamented with painted designs"
-    },
     "stendal": {
       "label": "Stendal",
       "lang": "geo",
@@ -7111,8 +7109,7 @@
         "stones",
         "stonne",
         "stonys",
-        "stoone",
-        "terre"
+        "stoone"
       ],
       "gloss": "made of stone or stoneware"
     },

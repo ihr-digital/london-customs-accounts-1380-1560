@@ -88,8 +88,15 @@ const CargoRecord = (() => {
             // peciis tele lini" is ONE lot of cloth in a chest, not a chest and some cloth.
             const container = (r.container || []).map(c =>
                 `${esc((c.quantity || {}).w || '')} ${esc(c.w)}`.trim()).join(', ');
-            const extra = (r.also || []).map(a =>
-                `<span class="cr-extra">also ${esc((a.quantity || {}).w || '')} ${esc((a.measure || {}).w || '')}</span>`).join(' ');
+            const pair = (word, list) => (list || []).map(a =>
+                `<span class="cr-extra">${word} ${esc((a.quantity || {}).w || '')} ${esc((a.measure || {}).w || '')}</span>`);
+            // "17 pannis, 4 vergis": the yards are more of the same lot; "continentibus 1800
+            // ulnas" what it contains; "ponderantibus 18,000 lb." what it weighs
+            const extras = [...pair('also', r.also), ...pair('containing', r.content), ...pair('weighing', r.equiv)];
+            // "ollarum et patellarum": two goods under one count, which the accounts never divide
+            const shared = (r.quantity_shared_with || []).map(i => ((record.rows || [])[i] || {}).span || {});
+            if (shared.length) extras.push(`<span class="cr-extra" title="one count for these goods together; the accounts do not say how it divides">shared with ${shared.map(s => esc(s.w || '')).join(', ')}</span>`);
+            const extra = extras.join(' ');
             const quals = (r.qualifiers || []).map(q => q.geo
                 ? `<span class="cr-qual cr-geo" title="a place the goods are named with — not proof of origin (${esc(q.geo.id)})">${esc(q.w)}</span>`
                 : `<span class="cr-qual">${esc(q.w)}</span>`).join(' ');

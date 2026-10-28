@@ -332,7 +332,7 @@ async function exportFilteredPDF(ladings) {
         const date = v.date?.dates ? formatDate(v.date.dates[0]) : '';
         const dowNum = v.date?.dow?.[0];
         const dow = dowNum ? `${abbrIsoDow[dowNum]}, ` : '';
-        const typeInitial = v.customs_type ? v.customs_type.charAt(0).toUpperCase() : '';
+        const typeInitial = v.customs_type ? ((customsTypes.find(t => t.short === v.customs_type) || {}).initial || v.customs_type.charAt(0).toUpperCase()) : '';
         const badge = `<span class="pdf-type-badge" style="background-color:${shortToColour[v.customs_type] || 'rgba(0,0,0,0.5)'};" title="${_pdfEsc(upperFirst(v.customs_type))}">${_pdfEsc(typeInitial)}</span>`;
         const dir = (v.export === undefined || v.export === null) ? '⇄ indeterminate' : (v.export ? '→ export' : '← import');
 

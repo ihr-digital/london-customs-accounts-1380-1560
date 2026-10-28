@@ -325,6 +325,7 @@ async function corpusGazetteer(map) {
                     (p.variants ? `<br><small><em>${p.variants}</em></small>` : '') +
                     (volumes.length ? `<br><small>${volumes.join(', ')}</small>` : '') +
                     (p.match ? `<br><small>${p.match}</small>` : '') +
+                    (p.outline_source ? `<br><small>boundary: ${p.outline_source}, ${p.outline_dates}</small>` : '') +
                     // A curator's doubt about the placing (gazetteer.CURATED_DOUBTS).
                     (p.doubt ? `<br><small style="color:#9a3412"><em>Identification ${p.doubt}</em></small>` : '');
             }
@@ -490,7 +491,7 @@ const KEY_ENTRIES = [
     {
         label: 'Regions named in the accounts', swatch: 'area', colour: '#f0c86b',
         layers: ['gazetteer-areas', 'gazetteer-areas-outline'], on: true,
-        note: 'historic boundaries, dated where possible',
+        note: 'boundaries dated to the period (OpenHistoricalMap); where none exists, a point',
     },
     {
         label: 'Customs hierarchy, 1565', swatch: 'disc', colour: EXCHEQUER_COLOUR,

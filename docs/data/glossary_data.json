@@ -324,6 +324,12 @@
           "date_from": null,
           "date_to": null,
           "reference": null
+        },
+        {
+          "name": "London Customs Account IV-26",
+          "date_from": 1378,
+          "date_to": 1487,
+          "reference": "IV-26"
         }
       ]
     },
@@ -48367,6 +48373,34 @@
             40
           ],
           "w": 0
+        },
+        {
+          "t": "alme",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "almes",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "alma",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "almam",
+          "s": [
+            48
+          ],
+          "w": 0
         }
       ],
       "aat": [
@@ -58250,10 +58284,6 @@
           "ref": "painted"
         },
         {
-          "d": "ornamented with pictures or designs in color (OED s.v. stained ppl.a. 2)",
-          "ref": "stayned"
-        },
-        {
           "d": "narrow",
           "ref": "narrow"
         },
@@ -62583,6 +62613,12 @@
           "t": "kerpytt",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "kerpites"
+        },
+        {
+          "t": "carpettis"
         }
       ],
       "aat": [
@@ -65697,7 +65733,7 @@
         },
         {
           "d": "stained / ornamented with painted designs",
-          "ref": "stayned"
+          "ref": "painted"
         },
         {
           "d": "tapestry (figured woven cloth)",
@@ -68102,6 +68138,12 @@
           "t": "cuperi",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "eris"
+        },
+        {
+          "t": "aeris"
         }
       ],
       "memo": "",
@@ -75393,7 +75435,7 @@
       ]
     },
     "firkin": {
-      "d": "Small casks containing a quarter of a barrel or half a kilderkin for liquids, fish, butter, or other foods. [Source: Getty AAT]",
+      "d": "Small casks containing a quarter of a barrel or half a kilderkin for liquids, fish, butter, or other foods. [Source: Getty AAT] | fer', firkin, a small cask for liquids, fish, butter etc. (equivalent to ½ kilderkin or ¼ barrel) (OED s.v. firkin, n.), here of Rhine wine",
       "q": [
         {
           "d": "small firkin as a packing unit for dry goods",
@@ -75733,6 +75775,13 @@
           "t": "firdeken",
           "s": [
             10
+          ],
+          "w": 0
+        },
+        {
+          "t": "fer’",
+          "s": [
+            48
           ],
           "w": 0
         }
@@ -117802,7 +117851,7 @@
       "helpWanted": true
     },
     "roda": {
-      "d": "a measure of Rhine wine (equivalent to 2 tuns) | as a Rhenish measure of wine (= 2 tuns) | a Rhenish measure of wine (equivalent to 2 tuns/dolia) | measure of capacity for Rhine wine, equivalent to 12 English tuns | a Rhenish measure of wine equivalent to 12 tuns",
+      "d": "a measure of Rhine wine (equivalent to 2 tuns) | as a Rhenish measure of wine (= 2 tuns) | a Rhenish measure of wine (equivalent to 2 tuns/dolia) | measure of capacity for Rhine wine, equivalent to 12 English tuns | a Rhenish measure of wine equivalent to 12 tuns | rode, -s (rood(e), rod, roda, -e) a measure of volume for Rhine wine, equivalent to 2 dolia",
       "q": [],
       "x": [],
       "f": [
@@ -117836,6 +117885,27 @@
           "s": [
             11
           ]
+        },
+        {
+          "t": "roode",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "roodes",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "rood",
+          "s": [
+            48
+          ],
+          "w": 0
         }
       ],
       "aat": [
@@ -132308,12 +132378,6 @@
           ]
         },
         {
-          "t": "terre",
-          "s": [
-            41
-          ]
-        },
-        {
           "t": "tarra",
           "s": [
             0
@@ -139197,7 +139261,7 @@
       ]
     },
     "wine": {
-      "d": "wine (Latin vinum); in the customs accounts the default is Gascon wine, with many named types (Rhenish, malmsey, muscadel, romney, bastard, sack...) and origins. Soured wine / vinegar is a distinct concept.",
+      "d": "wine (Latin vinum); in the customs accounts the default is Gascon wine, with many named types (Rhenish, malmsey, muscadel, romney, bastard, sack...) and origins. Soured wine / vinegar is a distinct concept. | in the butler's accounts Gascon wine (vinum Vasconie and variants) is usually recorded silently, while other types are named: Rhine wine (de Ryno, Renensis, Reni), sweet Mediterranean wine (dulce) and malmsey (Mawesye)",
       "q": [
         {
           "d": "Rhine (Rhenish) wine",
@@ -139478,6 +139542,12 @@
           "t": "virgarum",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "vergis"
+        },
+        {
+          "t": "vergas"
         }
       ],
       "aat": [
@@ -139716,6 +139786,12 @@
           "t": "viter",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "vitris"
+        },
+        {
+          "t": "vitreis"
         }
       ],
       "related": [],
@@ -149913,7 +149989,7 @@
               "ref": "silk"
             },
             {
-              "ref": "stayned"
+              "ref": "painted"
             }
           ]
         },
@@ -152075,7 +152151,7 @@
       ]
     },
     "barrel": {
-      "d": "Cylindrical containers, usually wooden, with slightly bulging sides made of staves hooped together, and with flat, parallel ends. [Source: Getty AAT]",
+      "d": "Cylindrical containers, usually wooden, with slightly bulging sides made of staves hooped together, and with flat, parallel ends. [Source: Getty AAT] | barellus, -i, barrel, here a measure of wine equivalent to 1/12 dolium",
       "q": [
         {
           "d": "half barrel as a packing unit for steel of a specific size",
@@ -162518,6 +162594,12 @@
           "t": "libris",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "books"
+        },
+        {
+          "t": "boockes"
         }
       ],
       "memo": "Note that annotations from the auditors/collectors are being pulled in here: \"folio hujus libri annotatum\" - these will need sifting. EB 15/07/2026",
@@ -179913,7 +179995,7 @@
       "q": [
         {
           "d": "dyed",
-          "ref": "stayned"
+          "ref": "painted"
         }
       ],
       "x": [],
@@ -215486,7 +215568,7 @@
       ]
     },
     "hogshead": {
-      "d": "Large casks or barrels; especially ones of a capacity between 63 and 140 gallons. [Source: Getty AAT]",
+      "d": "Large casks or barrels; especially ones of a capacity between 63 and 140 gallons. [Source: Getty AAT] | hoggeshede, -s a large cask for liquids; for liquor a liquid measure containing 63 old wine-gallons (= 52½ imperial gallons or ¼ dolium) (OED s.v. hogshead)",
       "q": [
         {
           "d": "half a large cask as a packing unit for dry goods of no particular size",
@@ -235184,7 +235266,7 @@
       ]
     },
     "puncheon": {
-      "d": "a large cask for liquids, fish etc., specifically one of a definite capacity (wine = 1 hogshead or 1/4 tun), here used as a packing unit for dry or liquid goods (OED s.v. puncheon2; MED s.v. punchoun n.)",
+      "d": "a large cask for liquids, fish etc., specifically one of a definite capacity (wine = 1 hogshead or 1/4 tun), here used as a packing unit for dry or liquid goods (OED s.v. puncheon2; MED s.v. punchoun n.) | punchun, a large cask for liquids, fish etc., specifically one of a definite capacity (OED s.v. puncheon2), here as a measure of wine equivalent to ⅓ dolium",
       "q": [
         {
           "d": "small, here as an article of commerce",
@@ -261897,13 +261979,6 @@
           "w": 0
         },
         {
-          "t": "vergis",
-          "s": [
-            33
-          ],
-          "w": 0
-        },
-        {
           "t": "vertjuse",
           "s": [
             31
@@ -264805,6 +264880,15 @@
           "t": "gaunt cloth",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "gent"
+        },
+        {
+          "t": "gente"
+        },
+        {
+          "t": "gentishe"
         }
       ],
       "aat": [
@@ -266679,6 +266763,89 @@
           "label": "cloth",
           "broader": true
         }
+      ]
+    },
+    "third of a tun": {
+      "d": "tercia pars dolii, one third of a dolium (due partes dolii = two thirds), a measure of wine",
+      "q": [],
+      "x": [],
+      "f": [
+        {
+          "t": "pars dolii",
+          "s": [
+            48
+          ],
+          "w": 1
+        },
+        {
+          "t": "parte dolii",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "partes dolii",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "partem dolii",
+          "s": [
+            48
+          ],
+          "w": 0
+        }
+      ],
+      "aat": [
+        {
+          "id": "300386648",
+          "label": "weights and measures (general, standards)",
+          "broader": true
+        }
+      ],
+      "groups": [
+        "Units, weights & measures"
+      ]
+    },
+    "third of a butt": {
+      "d": "terce de butte, one third of a butt (q.v.), a measure of wine",
+      "q": [],
+      "x": [],
+      "f": [
+        {
+          "t": "terce de butte",
+          "s": [
+            48
+          ],
+          "w": 1
+        },
+        {
+          "t": "terce de bute",
+          "s": [
+            48
+          ],
+          "w": 0
+        },
+        {
+          "t": "terce de buttes",
+          "s": [
+            48
+          ],
+          "w": 0
+        }
+      ],
+      "aat": [
+        {
+          "id": "300386648",
+          "label": "weights and measures (general, standards)",
+          "broader": true
+        }
+      ],
+      "groups": [
+        "Units, weights & measures"
       ]
     }
   },

@@ -26,12 +26,15 @@ var customsTypes = [
     {"label": "Wool Custom", "colour": "rgba(228,188,88,0.8)"},
     {"label": "Tunnage & Poundage", "colour": "rgba(190,68,234,0.8)"},
     {"label": "Petty Custom", "colour": "rgba(0,178,255,0.8)"},
-    {"label": "Miscellaneous Custom", "colour": "rgba(255,102,102,0.8)"}
+    {"label": "Miscellaneous Custom", "colour": "rgba(255,102,102,0.8)"},
+    // The butler's accounts of the customs on alien wine (LCA IV-26). Initial V, because W is Wool's;
+    // the colour is a burgundy, well away from Miscellaneous's coral.
+    {"label": "Wine Custom", "colour": "rgba(128,24,56,0.85)", "initial": "V"}
 ];
 let css = "";
 customsTypes.forEach(customType => {
     customType.short = customType.label.split(" ")[0].toLowerCase();
-    customType.initial = customType.label[0];
+    customType.initial = customType.initial || customType.label[0];
 
     const id = "toggle" + customType.initial;
     css += `

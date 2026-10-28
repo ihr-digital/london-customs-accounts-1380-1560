@@ -21,6 +21,9 @@ The officers who kept these accounts, **1351–1546**.
 
 - **Search all fields** — name, office, port, date.
 - Each record cites the source it came from.
+- The table lists officers with terms of office. The appraisers of seized goods have none, so they are left out of
+  it and appear only in the **full spreadsheet** (`.xlsx`, a link beside the export buttons), which holds the
+  consolidated list as Eliot Benbow compiled it.
 
 ## Name Clusters
 

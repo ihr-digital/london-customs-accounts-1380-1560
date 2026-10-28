@@ -1105,6 +1105,23 @@ db.version(121).stores({
     }
 });
 
+// Version 122 -- LCA IV-26: the butler's accounts of the (New) Customs on alien wine imports,
+// 1378-1487 (E101), a 47th volume and a fifth customs type ("wine", initial V).
+db.version(122).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v122 — clearing ladings and cargos: new volume IV-26 (wine accounts)");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v122 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

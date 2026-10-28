@@ -87,7 +87,7 @@ function ladingRowHtml(v, shortToColour, isSingleLading) {
             <strong>Page:</strong> ${v.page?.number || 'N/A'}
             ${v.pdf_link ? '<br><em>Click to open PDF</em>' : '<br><em>(No PDF link available)</em>'}
         `;
-        const typeInitial = v.customs_type ? v.customs_type.charAt(0).toUpperCase() : '';
+        const typeInitial = v.customs_type ? ((customsTypes.find(t => t.short === v.customs_type) || {}).initial || v.customs_type.charAt(0).toUpperCase()) : '';
 
         const exporting = (v.export === undefined || v.export === null) ?
             `<i class="fas fa-repeat text-muted me-1" data-bs-toggle="tooltip" title="Indeterminate Import/Export"></i>`

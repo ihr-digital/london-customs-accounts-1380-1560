@@ -63,6 +63,7 @@ const TermSearch = (() => {
     let loading = null;
     let seq = 0;               // a stale answer never overwrites a newer one
     let active = -1;           // highlighted suggestion
+    let navigated = false;     // the user has moved into the list with the arrow keys
     let shown = [];            // suggestions currently in the dropdown
 
     function fold(s) {
@@ -282,14 +283,28 @@ const TermSearch = (() => {
     }
 
     function _close() {
-        shown = []; active = -1; peoplePending = false;
+        shown = []; active = -1; peoplePending = false; navigated = false;
         $("#termSearchResults").hide().empty();
     }
 
     async function _people(q, mine) {
         if (!(tab === "all" || tab === "people") || q.trim().length < 2) return [];
         let rows = [];
-        try { rows = await PersonIndex.search(q, tab === "people" ? 25 : 6); } catch (e) { return []; }
+        const want = tab === "people" ? 25 : 6;
+        try {
+            // A full name ("john smith") is two name parts, and the index is keyed by one:
+            // look up the first word, keep those whose forename and surname start with the
+            // words, in either order.
+            const w = q.trim().toLowerCase().split(/\s+/);
+            if (w.length < 2) rows = await PersonIndex.search(q, want);
+            else {
+                const a = w[0], b = w.slice(1).join(" ");
+                const at = (x, t) => String(x || "").toLowerCase().startsWith(t);
+                rows = (await PersonIndex.search(a, 5000))
+                    .filter(p => (at(p.forename, a) && at(p.surname, b)) || (at(p.surname, a) && at(p.forename, b)))
+                    .slice(0, want);
+            }
+        } catch (e) { return []; }
         const out = rows.map(p => ({type: "person", p}));
         if (_soundsLike() && q.trim().length >= 3) {
             try {
@@ -312,6 +327,7 @@ const TermSearch = (() => {
     async function _onInput() {
         const q = $("#termSearchInput").val();
         lastQuery = q;
+        navigated = false;
         const mine = ++seq;
         if (fold(q).length < 2) { _close(); return; }
         if (!vocab) { shown = []; _render("Loading the vocabulary…"); }
@@ -346,7 +362,10 @@ const TermSearch = (() => {
         try { people = await _people(q, mine); } finally { if (mine === seq) peoplePending = false; }
         if (mine !== seq) return;
         shown = assemble(people); active = shown.length ? Math.min(Math.max(active, 0), shown.length - 1) : -1;
-        _render(shown.length ? "" : (fold(q).length >= 3 && !fzBroken ? "Looking for similar spellings…" : "Nothing matches."));
+        // Only where the close-spelling step below will follow and replace it: People and
+        // Ships never reach it, and the note stayed for good (28 Oct).
+        const fuzzyFollows = tab !== "people" && tab !== "ships" && fold(q).length >= 3 && !fzBroken;
+        _render(shown.length ? "" : (fuzzyFollows ? "Looking for similar spellings…" : "Nothing matches."));
         // Nothing matches exactly or at the start of a spelling: add close spellings (the
         // bi-encoder), once loaded. Not otherwise -- for "calais" they were steel, caul and
         // chalk, listed above the place itself (29 Sep).
@@ -480,10 +499,14 @@ const TermSearch = (() => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             if (!shown.length) return;
             e.preventDefault();
+            navigated = true;
             active = (active + (e.key === "ArrowDown" ? 1 : -1) + shown.length) % shown.length;
             _render();
-        } else if (e.key === " " && active >= 0 && shown[active] && shown[active].type === "person") {
-            e.preventDefault();                       // Space ticks a person, list stays open
+        } else if (e.key === " " && navigated && active >= 0 && shown[active] && shown[active].type === "person") {
+            // Space ticks a person, list stays open -- but only once the user has moved into
+            // the list with the arrows. Highlight 0 is automatic, and taking Space then made a
+            // name with a space in it ("John Smith") impossible to type (28 Oct).
+            e.preventDefault();
             pick(active, true);
         } else if (e.key === "Enter" || (e.key === "Tab" && shown.length && $(this).val())) {
             if (active >= 0 && shown[active]) { e.preventDefault(); pick(active, e.ctrlKey || e.metaKey); }
