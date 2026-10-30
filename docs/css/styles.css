@@ -648,10 +648,13 @@ h1 .date-range {
     font-style: italic;
 }
 
-.anno.ship, .anno.ship-type, .anno.summing {
+.anno.ship, .anno.ship-type, .anno.summing, .anno.status-marker {
     background-color: #ede7f6; /* light purple */
     color: #5e35b1; /* deep purple */
 }
+
+/* the alien-custom marker "Al'" (type status-marker): the charge family's purple, italic like a status */
+.anno.status-marker { font-style: italic; }
 
 .anno.place, .anno.merchant-place {
     background-color: #e6f4ea; /* pale green */

@@ -22,6 +22,7 @@
     // State
     // ---------------------------------------------------------------
     let DATA = null;
+    let V8 = null;   // {index: Map(form -> row), vec: Float32Array, dim, scorer} once loaded
     let selectedPersonIdx = null;
     let personListFiltered = [];   // indices into DATA.persons
     let personListPage = 0;
@@ -36,8 +37,15 @@
     // ---------------------------------------------------------------
     // Load data
     // ---------------------------------------------------------------
-    d3.json("data/name_cluster_viz.json").then(data => {
+    Promise.all([d3.json("data/name_cluster_viz.json"), loadV8()]).then(([data, v8]) => {
         DATA = data;
+        window.NameClustersDebug = {score: (i, j) => computeMatchScore(DATA.persons[i], DATA.persons[j]), persons: () => DATA.persons};
+        V8 = v8;       // null if the vectors could not be loaded
+        // The scorer was trained on one Symphonym model's cosines; use it only with that model's vectors.
+        if (V8 && (!DATA.scorerMeta || DATA.scorerMeta.model_md5 !== V8.modelMd5)) {
+            console.warn("Symphonym v8 vectors unavailable: scorer and vectors come from different models; ad-hoc scoring");
+            V8 = null;
+        }
         buildIndexes();
         renderSummary();
         populateForenameDropdown();
@@ -49,6 +57,54 @@
         document.getElementById("summaryStats").innerHTML =
             '<div class="col"><div class="alert alert-danger">Failed to load data: ' + err.message + '</div></div>';
     });
+
+    // ---------------------------------------------------------------
+    // Symphonym v8 name vectors (data/search/names.*, built for search by
+    // process/build_name_phonetic.py) and the surname scorer trained on them
+    // (data/surname_scorer_v8.meta.json, tools/names/retrain_surname_v8.py).
+    // Lookup only: no model runs here, every form compared is a corpus form.
+    // ---------------------------------------------------------------
+    async function gunzip(url) {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error(url + ": " + r.status);
+        return new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+    }
+
+    async function loadV8() {
+        try {
+            const [metaBuf, vecBuf] = await Promise.all([
+                gunzip("data/search/names.json.gz"), gunzip("data/search/names.i8.gz")]);
+            const meta = JSON.parse(new TextDecoder().decode(metaBuf));
+            const i8 = new Int8Array(vecBuf);
+            if (i8.length !== meta.n * meta.dim) throw new Error("names.i8 size mismatch");
+            const vec = new Float32Array(i8.length);
+            for (let r = 0; r < meta.n; r++) {            // unit-normalise each row once
+                let ss = 0;
+                for (let d = 0; d < meta.dim; d++) { const v = i8[r * meta.dim + d]; ss += v * v; }
+                const inv = 1 / (Math.sqrt(ss) || 1);
+                for (let d = 0; d < meta.dim; d++) vec[r * meta.dim + d] = i8[r * meta.dim + d] * inv;
+            }
+            const index = new Map(meta.forms.map((f, i) => [f, i]));
+            return {index, vec, dim: meta.dim, modelMd5: meta.model_md5};
+        } catch (err) {
+            console.warn("Symphonym v8 vectors unavailable; scoring with the string proxy:", err);
+            return null;
+        }
+    }
+
+    // Same lookup order as train_surname_scorer.compute_features: trimmed form, then whole form.
+    function v8Row(trimmed, whole) {
+        const i = V8.index.get(trimmed.toLowerCase().trim());
+        return i !== undefined ? i : V8.index.get(whole.toLowerCase().trim());
+    }
+
+    function v8Cosine(trimA, wholeA, trimB, wholeB) {
+        const a = v8Row(trimA, wholeA), b = v8Row(trimB, wholeB);
+        if (a === undefined || b === undefined) return null;
+        let dot = 0;
+        for (let d = 0; d < V8.dim; d++) dot += V8.vec[a * V8.dim + d] * V8.vec[b * V8.dim + d];
+        return dot;
+    }
 
     // ---------------------------------------------------------------
     // Build in-memory indexes
@@ -393,22 +449,13 @@
             ngramJacc = ngramJaccard(ta, tb, 3);
         }
 
-        // Symphonym cosine — look up from surname graph if available
-        let symCos = 0.0;
-        const nbrs = DATA.surnameGraph[p1.sn];
-        if (nbrs) {
-            for (const nbr of nbrs) {
-                if (nbr.form === p2.sn) {
-                    // Use JW as proxy for cosine since we stripped cos from graph
-                    // The graph was built with cosine ANN; the JW is the filtered score
-                    symCos = Math.max(snJw, snSkelJw);  // approximate
-                    break;
-                }
-            }
-        }
-        if (symCos === 0.0) {
-            symCos = Math.max(snJw * 0.9, snSkelJw * 0.85);  // heuristic proxy
-        }
+        // Symphonym cosine: the real one, from the v8 name vectors (the same ones search uses and
+        // the surname graph and scorer were built from). If they are missing (load failure, or a
+        // form with no vector) the trained scorer is NOT used with a stand-in for its strongest
+        // feature: the pair gets the ad-hoc weighted score below instead.
+        let symCos = V8 ? v8Cosine(t1.trimmed, p1.sn, t2.trimmed, p2.sn) : null;
+        const usedEmbedding = symCos !== null;
+        if (!usedEmbedding) symCos = Math.max(snJw * 0.9, snSkelJw * 0.85);  // proxy (no vectors)
 
         // Structural flags
         const bothPat = (t1.isPat && t2.isPat) ? 1.0 : 0.0;
@@ -445,7 +492,7 @@
 
         // ML-based composite score using logistic regression
         let composite;
-        const sm = DATA.scorerMeta;
+        const sm = usedEmbedding ? DATA.scorerMeta : null;
         if (sm && sm.coefficients && sm.scaler_mean && sm.scaler_scale) {
             const rawFeatures = {
                 symphonym_cosine: symCos,
@@ -490,6 +537,7 @@
             yearOverlap, statusMatch, sameSurname: samesSn,
             bothPat, bothPart, samePart,
             composite: Math.round(Math.min(composite, 1.0) * 1000) / 1000,
+            embeddingScored: usedEmbedding, symCos,
         };
     }
 
