@@ -46637,7 +46637,7 @@
             }
           ],
           "d_from_id": true,
-          "raw": "de barbory"
+          "ref": "de barbory"
         },
         {
           "p": "dbil",
@@ -46669,7 +46669,7 @@
               "curated": true
             }
           ],
-          "raw": "garbelera"
+          "ref": "garbled"
         }
       ],
       "x": [],
@@ -47188,6 +47188,11 @@
           "s": [
             8
           ],
+          "w": 0
+        },
+        {
+          "t": "amaille",
+          "s": [],
           "w": 0
         }
       ],
@@ -48196,7 +48201,7 @@
               "lon": 4.678333333333334
             }
           ],
-          "raw": "dordright"
+          "ref": "dordrecht"
         },
         {
           "d": "iron (metal) [AAT 300011002]",
@@ -50419,11 +50424,8 @@
           "raw": "cloth"
         },
         {
-          "raw": "clothis"
-        },
-        {
-          "raw": "de tapiserie",
-          "d": "a covering, made of tapestry, for a bench or a chair (OED s.v. banker1) | made of tapestry"
+          "d": "a covering, made of tapestry, for a bench or a chair (OED s.v. banker1) | made of tapestry",
+          "ref": "tapestry"
         },
         {
           "raw": "de tapistery",
@@ -50637,6 +50639,16 @@
           "s": [
             6
           ],
+          "w": 0
+        },
+        {
+          "t": "banker clothis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "banker clothes",
+          "s": [],
           "w": 0
         }
       ],
@@ -51900,15 +51912,15 @@
         },
         {
           "d": "damaged by sea water",
-          "raw": "wet aqua marina"
+          "ref": "wet aqua marina"
         },
         {
           "d": "old",
           "ref": "old"
         },
         {
-          "raw": "de almania",
-          "d": "manufactured in Germany"
+          "d": "manufactured in Germany",
+          "ref": "almain"
         }
       ],
       "x": [],
@@ -52040,7 +52052,7 @@
           "w": 0
         }
       ],
-      "memo": "",
+      "memo": "Battery should almost certainly not be a qualifier here. Also \"buttri\" should be decoupled and merged with \"butter/buttery\" concept. EB 12/08/2026.",
       "aat": [
         {
           "id": "300265121",
@@ -52581,7 +52593,7 @@
           "w": 0
         }
       ],
-      "memo": "Example of \"pillow beers\" being merged under this concept erroneously. EB 15/07/2026",
+      "memo": "Example of \"pillow beers\" being merged under this concept erroneously. EB 15/07/2026 — Most of these will need merging into the beer concept. EB 12/08/2026. The attestation to \"sugar\"",
       "aat": [
         {
           "id": "300302722",
@@ -53817,7 +53829,8 @@
       ],
       "groups": [
         "Furnishings & household goods"
-      ]
+      ],
+      "memo": "These should be sifted and merged where appropriate. May also be a qualifier in specific places. Create qualifier \"of blanket\"? EB 12/08/2026."
     },
     "block": {
       "d": "a measure of tin (worth £2 10s) | raw Cornish tin in large rectangular blocks weighing roughly 200-300 lb. (see also stannum) | tin of second quality cast into blocks; solid tin as distinct from tin plate (OED s.v. tin n. 1b) | a packing unit for box wood of no particular size",
@@ -53986,7 +53999,11 @@
       "d": "Note that the Cologne translation of the Book of Rates describes this product as a hunter’s horn (Jeger horn) | clearly some kind of a musical instrument, but precise meaning unknown",
       "q": [
         {
-          "raw": "bugle|bewge|de bugle",
+          "raw": "bewge|de bugle",
+          "d": "a bugle; a hunting-horn made of the horn of a wild ox (OED s.v. bugle n.1 2)"
+        },
+        {
+          "ref": "bugle",
           "d": "a bugle; a hunting-horn made of the horn of a wild ox (OED s.v. bugle n.1 2)"
         }
       ],
@@ -55508,7 +55525,8 @@
       ],
       "groups": [
         "Containers & vessels"
-      ]
+      ],
+      "memo": "Unclear whether these should be qualifiers or part of composite concepts. Will need checking. EB 12/08/2026"
     },
     "bottom": {
       "d": "a core on which to wind thread; (also) a skein or ball of thread or yarn (OED s.v. bottom n. and adj. 24)",
@@ -56098,7 +56116,8 @@
       ],
       "groups": [
         "Weapons & armour"
-      ]
+      ],
+      "memo": "These should be merged into the bowstave concept. EB 12/08/2026."
     },
     "bowstring": {
       "d": "the string of a bow",
@@ -56426,14 +56445,6 @@
         {
           "raw": "pro combz",
           "d": "box for storing combs"
-        },
-        {
-          "raw": "combe",
-          "d": "a half gross (72 pieces)"
-        },
-        {
-          "raw": "combes",
-          "d": "a half gross (72 pieces)"
         },
         {
           "raw": "pro diolles",
@@ -57385,6 +57396,11 @@
           "p": "brik",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "brikes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -57912,7 +57928,11 @@
           "ref": "cologne"
         },
         {
-          "raw": "cracche|crache|cracching",
+          "raw": "crache|cracching",
+          "d": "for cratching (scratching); a stable brush"
+        },
+        {
+          "ref": "cracche",
           "d": "for cratching (scratching); a stable brush"
         },
         {
@@ -57936,7 +57956,11 @@
           "d": "for working flax"
         },
         {
-          "raw": "de here|heare|heer|herin|heryn",
+          "raw": "heare|heer|herin|heryn",
+          "d": "hairbrush"
+        },
+        {
+          "ref": "hair",
           "d": "hairbrush"
         },
         {
@@ -58630,7 +58654,7 @@
           "w": 0
         }
       ],
-      "memo": "",
+      "memo": "These will need merging with \"bokerams\" and promoting into the \"buckram\" concept. EB 12/08/2026.",
       "aat": [
         {
           "id": "300253474",
@@ -58646,7 +58670,7 @@
       "q": [
         {
           "d": "of Spanish origin",
-          "raw": "de spaigne"
+          "ref": "spain"
         },
         {
           "d": "made of the skins from the legs of a lamb",
@@ -58662,7 +58686,7 @@
         },
         {
           "d": "from Spain | of Spanish origin",
-          "raw": "spaynysshe"
+          "ref": "spain"
         },
         {
           "d": "of low quality",
@@ -58946,7 +58970,7 @@
         },
         {
           "d": "of Spanish origin",
-          "raw": "spayneshe"
+          "ref": "spain"
         },
         {
           "d": "of low quality, tanned",
@@ -58972,7 +58996,7 @@
         },
         {
           "d": "of Spanish origin",
-          "raw": "spaynysh"
+          "ref": "spain"
         },
         {
           "raw": "heddes",
@@ -59127,6 +59151,41 @@
           "t": "de buge",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "boge parvum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "de boge parvum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bogye pellium",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bogye pellium parvus",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cours bogy",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cours bogye",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bogy peces",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Descriptions and qualifiers will need some sifting here. EB 15/07/2026",
@@ -59141,7 +59200,11 @@
         "Furs, skins & leather"
       ],
       "reviewed": false,
-      "helpWanted": true
+      "helpWanted": true,
+      "related": [
+        "budge shank",
+        "budge head"
+      ]
     },
     "bunde": {
       "d": "General term referring to a person, people, place, or thing for which the identity has not been established. [Source: Getty AAT]",
@@ -60596,10 +60659,6 @@
         {
           "d": "for quails, small",
           "ref": "small"
-        },
-        {
-          "raw": "anguillarum",
-          "d": "cage for eels"
         }
       ],
       "x": [],
@@ -62781,10 +62840,6 @@
         },
         {
           "d": "",
-          "raw": "fistola"
-        },
-        {
-          "d": "",
           "ref": "hemp"
         },
         {
@@ -64188,7 +64243,7 @@
         },
         {
           "d": "made in Essex | from Essex",
-          "raw": "essexe"
+          "ref": "essex"
         },
         {
           "d": "made in Essex | from Essex",
@@ -64231,8 +64286,8 @@
           "ref": "holland"
         },
         {
-          "raw": "de banbery",
-          "d": "cheese manufactured in Banbury (co. Oxford)"
+          "d": "cheese manufactured in Banbury (co. Oxford)",
+          "ref": "de banbery"
         },
         {
           "d": "manufactured in Holland",
@@ -64551,10 +64606,6 @@
         {
           "d": "first quality",
           "raw": "prima"
-        },
-        {
-          "raw": "sugar",
-          "d": "a chest of sugar (3 cwt at 112 lb./cwt)"
         },
         {
           "raw": "pro joynours",
@@ -65701,7 +65752,7 @@
         },
         {
           "d": "bleached",
-          "ref": "blekid"
+          "ref": "bleked"
         },
         {
           "d": "cloth for sifting flour (bolting-cloth)",
@@ -66162,10 +66213,6 @@
           "d": "dyed blue with indigo"
         },
         {
-          "raw": "bokerams",
-          "d": "buckram"
-        },
-        {
           "raw": "canvas",
           "d": "canvas"
         },
@@ -66206,28 +66253,24 @@
           "d": "with broad selvedges (lists), edge woven to prevent ravelling"
         },
         {
-          "raw": "frisadus|fryzado|frizado",
+          "raw": "frisadus|fryzado",
           "d": "frizado, a kind of finished frieze"
         },
         {
-          "raw": "kersey",
-          "d": "kersey, a coarse woollen cloth"
-        },
-        {
-          "raw": "blanket|blanckett|de blanket",
+          "raw": "blanket|de blanket",
           "d": "blanket, a kind of woollen cloth, often white or undyed"
         },
         {
-          "raw": "de berkyn",
-          "d": "place of manufacture unknown"
+          "d": "place of manufacture unknown",
+          "ref": "de berkyn"
         },
         {
           "raw": "kendale|kendalle|de kendale",
           "d": "of Kendal (Westmorland)"
         },
         {
-          "raw": "de haddele",
-          "d": "of Hadleigh, Suffolk"
+          "d": "of Hadleigh, Suffolk",
+          "ref": "de haddele"
         },
         {
           "raw": "in partibus exteris|a partibus exteris",
@@ -67053,12 +67096,12 @@
           ]
         },
         {
-          "raw": "de box",
-          "d": "made of box wood"
+          "d": "made of box wood",
+          "ref": "box"
         },
         {
-          "raw": "de ligno box",
-          "d": "box-wood comb"
+          "d": "box-wood comb",
+          "ref": "box"
         },
         {
           "raw": "ovium rubearum",
@@ -67081,7 +67124,7 @@
           "d": "comb made of (or decorated with) cadas (q.v.)"
         },
         {
-          "raw": "de doione"
+          "ref": "de doione"
         },
         {
           "raw": "with cases"
@@ -67714,10 +67757,6 @@
           "raw": "rosarum"
         },
         {
-          "d": "",
-          "raw": "cheres"
-        },
-        {
           "raw": "prunes"
         },
         {
@@ -67852,7 +67891,7 @@
       "q": [
         {
           "d": "",
-          "raw": "embrodred"
+          "ref": "embroidered"
         },
         {
           "raw": "de baudekino broche cum auro"
@@ -68003,9 +68042,6 @@
         {
           "d": "",
           "ref": "leadweb"
-        },
-        {
-          "raw": "cheyne"
         },
         {
           "raw": "plate",
@@ -68832,7 +68868,7 @@
       "q": [
         {
           "d": "made of tapistry",
-          "raw": "de tapiser"
+          "ref": "tapestry"
         },
         {
           "d": "",
@@ -69937,7 +69973,7 @@
         },
         {
           "d": "made of lead",
-          "raw": "de plumbo"
+          "ref": "de plumbo"
         },
         {
           "d": "made of wood",
@@ -70010,7 +70046,7 @@
           "p": "demdpale"
         },
         {
-          "raw": "lattene"
+          "ref": "latten"
         },
         {
           "raw": "modir perle",
@@ -71140,7 +71176,7 @@
         },
         {
           "d": "crimson in color",
-          "raw": "crymyson"
+          "ref": "crimson"
         },
         {
           "d": "purple in color",
@@ -71260,8 +71296,8 @@
           "raw": "table clothe"
         },
         {
-          "raw": "dieper",
-          "d": "a cloth, usually of linen or hemp, for wiping something dry, especially for wiping the hands, face, or person after washing or bathing. Also formerly more widely, including a table-napkin or other cloth used at meals (OED s.v. towel n.), here made of diaper, a linen fabric (or an inferior fabric of ‘union’ or cotton) woven with a small and simple pattern, formed by the different directions of the thread, with the different reflexions of light from its surface, and consisting of lines crossing diamond-wise, with the spaces variously filled up by parallel lines, a central leaf or dot, etc. (OED s.v. diaper)"
+          "d": "a cloth, usually of linen or hemp, for wiping something dry, especially for wiping the hands, face, or person after washing or bathing. Also formerly more widely, including a table-napkin or other cloth used at meals (OED s.v. towel n.), here made of diaper, a linen fabric (or an inferior fabric of ‘union’ or cotton) woven with a small and simple pattern, formed by the different directions of the thread, with the different reflexions of light from its surface, and consisting of lines crossing diamond-wise, with the spaces variously filled up by parallel lines, a central leaf or dot, etc. (OED s.v. diaper)",
+          "ref": "diaper"
         }
       ],
       "x": [],
@@ -71538,7 +71574,7 @@
         },
         {
           "d": "from Norway",
-          "raw": "norwaie"
+          "ref": "norway"
         },
         {
           "d": "from Norway",
@@ -71565,29 +71601,15 @@
           "ref": "small"
         },
         {
-          "raw": "bord"
-        },
-        {
           "raw": "borde"
-        },
-        {
-          "raw": "bourde"
         },
         {
           "raw": "norden",
           "d": "of Norwegian spruce"
         },
         {
-          "raw": "de fyrre",
-          "d": "made of fir-wood"
-        },
-        {
-          "raw": "burde",
-          "p": "burde"
-        },
-        {
-          "raw": "burdes",
-          "p": "burd"
+          "d": "made of fir-wood",
+          "ref": "fir"
         },
         {
           "raw": "bordes",
@@ -71729,6 +71751,11 @@
           "s": [
             0
           ],
+          "w": 0
+        },
+        {
+          "t": "burdes",
+          "s": [],
           "w": 0
         }
       ],
@@ -72361,8 +72388,8 @@
           "d": "diaper cloth (see main entry)"
         },
         {
-          "raw": "damas",
-          "d": "a twilled linen fabric richly figured in the weaving with designs which show up by opposite reflexions of light from the surface; used chiefly for table-linen (OED s.v. damask II 3b)"
+          "d": "a twilled linen fabric richly figured in the weaving with designs which show up by opposite reflexions of light from the surface; used chiefly for table-linen (OED s.v. damask II 3b)",
+          "ref": "damask"
         },
         {
           "raw": "napkyns damask",
@@ -73867,24 +73894,13 @@
           "ref": "weak"
         },
         {
-          "d": "an inferior kind of fig (OED fig-dote)",
-          "raw": "dodes"
-        },
-        {
           "d": "",
           "raw": "marchauntes"
         },
         {
           "p": "algari",
           "d": "",
-          "raw": "algary"
-        },
-        {
-          "raw": "cheses",
-          "d": "probably the same as above (OED s.v. cheese n1 4b: cheese = conserve of fruit having the consistency or form of cheese)"
-        },
-        {
-          "raw": "figge"
+          "ref": "algary"
         },
         {
           "raw": "ches",
@@ -74658,15 +74674,15 @@
         },
         {
           "d": "of Dordrecht manufacture | manufactured in Dordrecht",
-          "raw": "de durdragh"
+          "ref": "dordrecht"
         },
         {
           "d": "of Dordrecht manufacture | manufactured in Dordrecht",
-          "raw": "de durdraght"
+          "ref": "dordrecht"
         },
         {
           "d": "of Dordrecht manufacture | manufactured in Dordrecht",
-          "raw": "de durdraught"
+          "ref": "dordrecht"
         },
         {
           "d": "manufactured in Flanders | manufactured in Flanders, white in color",
@@ -75200,10 +75216,6 @@
         {
           "raw": "cadas",
           "d": "worsted yarn, crewel; a material (garments etc. made of this yarn); short for caddis ribbon (a worsted tape or binding, used for garters etc.) = cadda ribband (so in E122/79/5 m 3d) (OED s.v. caddis)"
-        },
-        {
-          "raw": "coddes",
-          "d": "meaning unknown"
         },
         {
           "raw": "inkelle",
@@ -76969,132 +76981,6 @@
           ],
           "d_from_id": true,
           "ref": "bak"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacon"
-        },
-        {
-          "p": "bkone",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacone"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "baconis"
-        },
-        {
-          "p": "bkun",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacun"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "d_from_id": true,
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "raw": "bakon"
-        },
-        {
-          "p": "bkone",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bakone"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "bakon",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bokon"
         }
       ],
       "x": [],
@@ -78105,10 +77991,6 @@
         {
           "raw": "pann",
           "d": "fur of the fox, used for a lining to a garment (OED s.v. pane, n.2 1)"
-        },
-        {
-          "raw": "cace",
-          "d": "fox skins stitched together in a rectangular shape (Veale 218)"
         },
         {
           "raw": "furres",
@@ -79219,7 +79101,7 @@
         },
         {
           "d": "curly-furred, curly-haired (MED s.v. crisp adj.)",
-          "raw": "cryspe"
+          "ref": "cryspe"
         },
         {
           "d": "made of squirrel skins, taken out of season",
@@ -79458,10 +79340,6 @@
           "raw": "ultrons"
         },
         {
-          "raw": "cuniculorum",
-          "d": "made of rabbit skins"
-        },
-        {
           "d": "winter squirrel skins, with the grey back (Veale 224) | made of winter squirrel skins, with the grey back (Veale 224)",
           "tokens": [
             {
@@ -79598,8 +79476,8 @@
           "d": "made of the furs of the large wild mountain cat or the smaller wild cat (Veale 218)"
         },
         {
-          "raw": "de bevere",
-          "d": "made of beaver pelts"
+          "d": "made of beaver pelts",
+          "ref": "beaver"
         },
         {
           "raw": "budge",
@@ -79691,9 +79569,6 @@
         {
           "raw": "fox potes",
           "d": "made of the paws of the animal"
-        },
-        {
-          "raw": "bogy heddes"
         },
         {
           "raw": "foyne orlyaunce",
@@ -79894,7 +79769,7 @@
         },
         {
           "d": "of Genoese manufacture",
-          "raw": "de gene"
+          "ref": "genoa"
         },
         {
           "d": "manufactured in Milan",
@@ -80137,8 +80012,8 @@
           ]
         },
         {
-          "raw": "de napes",
-          "d": "fustian manufactured in Naples (OED s.v. fustian n. and a. 1c)"
+          "d": "fustian manufactured in Naples (OED s.v. fustian n. and a. 1c)",
+          "ref": "naples"
         },
         {
           "raw": "jane",
@@ -80362,7 +80237,7 @@
       "d": "logs",
       "q": [
         {
-          "raw": "de box"
+          "ref": "box"
         }
       ],
       "x": [],
@@ -81247,10 +81122,6 @@
         {
           "d": "",
           "raw": "putred"
-        },
-        {
-          "raw": "morter",
-          "d": "mortar for grinding garlic"
         }
       ],
       "x": [],
@@ -82369,7 +82240,11 @@
           ]
         },
         {
-          "raw": "civile|de civile|de sibilia|de siville",
+          "raw": "de sibilia|de siville",
+          "d": "of Seville (Sevilla)"
+        },
+        {
+          "ref": "civile",
           "d": "of Seville (Sevilla)"
         },
         {
@@ -82381,8 +82256,8 @@
           "d": "in the form of berries"
         },
         {
-          "raw": "de babar",
-          "d": "meaning unknown"
+          "d": "meaning unknown",
+          "ref": "de barbory"
         }
       ],
       "x": [
@@ -82865,7 +82740,7 @@
         },
         {
           "d": "garbled; refuse / extraneous matter (OED s.v. garble n.)",
-          "raw": "garbelera"
+          "ref": "garbled"
         }
       ],
       "x": [
@@ -85156,11 +85031,7 @@
     },
     "hedde": {
       "d": "General term referring to a person, people, place, or thing for which the identity has not been established. [Source: Getty AAT]",
-      "q": [
-        {
-          "raw": "barrels"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -85761,7 +85632,7 @@
         },
         {
           "d": "herring with roe",
-          "raw": "full"
+          "ref": "full"
         },
         {
           "d": "hering without roe",
@@ -85836,7 +85707,7 @@
         },
         {
           "d": "with roe",
-          "raw": "full"
+          "ref": "full"
         },
         {
           "d": "herring without roe",
@@ -85847,16 +85718,16 @@
           "ref": "weak"
         },
         {
-          "raw": "de hollandia",
-          "d": "from Holland"
+          "d": "from Holland",
+          "ref": "holland"
         },
         {
           "raw": "soope",
           "d": "meaning unknown"
         },
         {
-          "raw": "fulle",
-          "d": "hering with roe"
+          "d": "hering with roe",
+          "ref": "full"
         },
         {
           "raw": "gres"
@@ -88139,7 +88010,7 @@
         },
         {
           "d": "manufactured in France",
-          "raw": "franse"
+          "ref": "france"
         },
         {
           "d": "manufactured in Spain",
@@ -88203,7 +88074,7 @@
         },
         {
           "d": "iron rods bound together in a bundle (OED s.v. faggot, fagot n. 4)",
-          "raw": "fagott"
+          "ref": "faggot"
         },
         {
           "d": "attested, but probably falsely defined as “?iron for a metal staff” (MED s.v. staf n. 1f), but probably the same as fagott iron",
@@ -88248,10 +88119,6 @@
         {
           "raw": "rose",
           "d": "meaning unknown (OED s.v. rose n.1 and a.1 23a: ‘an iron-glance or hæmatite, occurring in rosette-like groups of tabular crystal found in Switzerland’ is impossible because first attested in the 19th century)"
-        },
-        {
-          "raw": "amis",
-          "d": "meaning unkinown"
         },
         {
           "raw": "ames",
@@ -88930,7 +88797,7 @@
         },
         {
           "d": "manufactured in Cambrai (Kamerijk; cf. cambric, MED s.v. cambric n.)",
-          "raw": "de cambre"
+          "ref": "cambrai"
         },
         {
           "d": "from Valencia",
@@ -88952,7 +88819,11 @@
               "lon": -0.791743312597291
             }
           ],
-          "raw": "de valens|valance"
+          "raw": "valance"
+        },
+        {
+          "ref": "valencia",
+          "d": "from Valencia"
         },
         {
           "d": "from Strasbourg",
@@ -89034,11 +88905,19 @@
           "ref": "old"
         },
         {
-          "raw": "de cirian|cirian|de cire|cire|de sur",
+          "raw": "de cire|de sur",
           "d": "of Syrian manufacture (de sur possibly Soria = Syria, cf. Pegolotti 405)"
         },
         {
-          "raw": "de cortrik|de curtrik",
+          "ref": "cire",
+          "d": "of Syrian manufacture (de sur possibly Soria = Syria, cf. Pegolotti 405)"
+        },
+        {
+          "raw": "de curtrik",
+          "d": "manufactured in Kortrijk (Cortrijk), Flanders"
+        },
+        {
+          "ref": "kortrijk",
           "d": "manufactured in Kortrijk (Cortrijk), Flanders"
         },
         {
@@ -89054,7 +88933,11 @@
           "d": "made of relisaunce, a kind of lightweight (probably lustrous) cloth (MED s.v. relisaunce n.)"
         },
         {
-          "raw": "crimule|cremylle|cremille",
+          "raw": "cremylle|cremille",
+          "d": "cremil — openwork, lace, or fringed border (OED s.v. cremil)"
+        },
+        {
+          "ref": "cremelle",
           "d": "cremil — openwork, lace, or fringed border (OED s.v. cremil)"
         }
       ],
@@ -89438,7 +89321,7 @@
         },
         {
           "d": "manufactured in Winchester",
-          "raw": "de wynchestre"
+          "ref": "winchester"
         },
         {
           "d": "long",
@@ -89987,6 +89870,16 @@
           "t": "karsees",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "carssys",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "carzis",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "Refined 2026-06-16: descriptions consolidated; qualifiers atomised by category (colour, place, dimension, grain); concatenated multi-term forms split. NOTE: reinterpreted bare 'whyt'/'whytt' as white (colour), not Isle of Wight — cf. 'whyt northen', 'devynsheyre whytt' — while 'wyght'/'de wyght'/'de weythe' remain Isle of Wight. Please verify.",
@@ -90013,7 +89906,7 @@
         },
         {
           "d": "a set of kettles (OED s.v. full a., n.3 and adv. B7)",
-          "raw": "full"
+          "ref": "full"
         },
         {
           "d": "not strengthened with a hoop or metal band",
@@ -90134,8 +90027,8 @@
           "d": "a set of kettles, strengthened with a hoop or metal band (MED s.v. bond n.)"
         },
         {
-          "raw": "fulle",
-          "d": "a set of kettles (MED s.v. fulle n. (29))"
+          "d": "a set of kettles (MED s.v. fulle n. (29))",
+          "ref": "full"
         }
       ],
       "x": [],
@@ -91080,7 +90973,11 @@
         },
         {
           "d": "made in Brittany",
-          "raw": "bretten|brettyn|britten|brittene|britayne"
+          "ref": "brittany"
+        },
+        {
+          "ref": "brittany",
+          "d": "made in Brittany"
         },
         {
           "d": "made in Flanders",
@@ -91983,10 +91880,6 @@
           "ref": "rye"
         },
         {
-          "raw": "barellis",
-          "d": "in barrels"
-        },
-        {
           "raw": "bande",
           "d": "band/bond (sense uncertain)"
         },
@@ -91997,14 +91890,6 @@
         {
           "raw": "bonde",
           "d": "band/bond (sense uncertain)"
-        },
-        {
-          "raw": "barrelles",
-          "d": "of barrels"
-        },
-        {
-          "raw": "bowstaves",
-          "d": "of bowstaves (24 bundles of 16 staves)"
         },
         {
           "raw": "dri fat",
@@ -93866,7 +93751,7 @@
         },
         {
           "d": "of Nuremberg manufacture (Cobb 182)",
-          "raw": "norbour"
+          "ref": "nuremberg"
         },
         {
           "d": "for chests",
@@ -93879,10 +93764,6 @@
         {
           "raw": "doble",
           "d": "double-lock (locked by two turns of the key; OED s.v. double-lock)"
-        },
-        {
-          "raw": "button",
-          "d": "meaning uncertain (Cobb 182 '?door latches')"
         },
         {
           "raw": "pro cupbordes|for cupbourdes",
@@ -94102,7 +93983,7 @@
       "q": [
         {
           "d": "",
-          "raw": "alias douglas"
+          "ref": "dowlas"
         }
       ],
       "x": [],
@@ -95008,7 +94889,7 @@
         },
         {
           "d": "the lowest of the four qualities of Dutch madder (from mull = reduced to small particles, dust, rubbish OED mull, n1) | the lowest of the four qualities of Dutch madder (from mull = reduced to small particles, dust, rubbish) (OED mull, n.1)",
-          "raw": "mole"
+          "ref": "mull"
         },
         {
           "d": "the lowest of the four qualities of Dutch madder (from mull = reduced to small particles, dust, rubbish OED mull, n1) | the lowest of the four qualities of Dutch madder (from mull = reduced to small particles, dust, rubbish) (OED mull, n.1)",
@@ -95019,8 +94900,8 @@
           "ref": "mull"
         },
         {
-          "raw": "mulle",
-          "d": "(mulmader) madder of the lowest quality | madder of the lowest quality"
+          "d": "(mulmader) madder of the lowest quality | madder of the lowest quality",
+          "ref": "mull"
         },
         {
           "raw": "molle de",
@@ -95482,7 +95363,11 @@
           "d": "made of furs / peltry"
         },
         {
-          "raw": "furre|blak furre",
+          "raw": "furre",
+          "d": "made of fur"
+        },
+        {
+          "ref": "blak furre",
           "d": "made of fur"
         }
       ],
@@ -96381,14 +96266,11 @@
       "q": [
         {
           "d": "of low quality",
-          "raw": "reffus"
+          "ref": "coarse"
         },
         {
           "d": "",
-          "raw": "tree"
-        },
-        {
-          "raw": "clogges"
+          "ref": "wood"
         }
       ],
       "x": [],
@@ -96674,8 +96556,8 @@
           ]
         },
         {
-          "raw": "de cirpis",
-          "d": "rush mat"
+          "d": "rush mat",
+          "ref": "de cirpis"
         }
       ],
       "x": [],
@@ -98129,6 +98011,11 @@
         },
         {
           "t": "specullorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "speculorum",
           "s": [],
           "w": 0
         }
@@ -99980,10 +99867,18 @@
         },
         {
           "d": "made in Paris",
-          "raw": "parisiensis"
+          "ref": "paris"
         },
         {
-          "raw": "de denaunt|denaunt|de denant",
+          "raw": "denaunt",
+          "d": "made in Dinant"
+        },
+        {
+          "ref": "denaunt",
+          "d": "made in Dinant"
+        },
+        {
+          "ref": "denaunt",
           "d": "made in Dinant"
         }
       ],
@@ -100493,7 +100388,7 @@
           "ref": "small"
         },
         {
-          "raw": "boxes|box",
+          "raw": "box",
           "d": "nest of boxes"
         },
         {
@@ -100607,7 +100502,7 @@
         },
         {
           "d": "",
-          "raw": "dalby"
+          "ref": "dalby"
         },
         {
           "d": "meaning unknown",
@@ -100690,7 +100585,7 @@
       "d": "",
       "q": [
         {
-          "raw": "de frice"
+          "ref": "frise"
         }
       ],
       "x": [],
@@ -101520,7 +101415,7 @@
       "q": [
         {
           "d": "gallon size",
-          "raw": "galoners"
+          "ref": "gallon"
         },
         {
           "d": "two quart size",
@@ -103231,7 +103126,11 @@
           "ref": "small"
         },
         {
-          "raw": "cum perles|perles",
+          "raw": "perles",
+          "d": "set with pearls"
+        },
+        {
+          "ref": "cum perles",
           "d": "set with pearls"
         }
       ],
@@ -105288,7 +105187,11 @@
       "q": [
         {
           "d": "made of horn",
-          "raw": "de cornibus|de cornubus"
+          "ref": "de cornibus"
+        },
+        {
+          "ref": "de cornibus",
+          "d": "made of horn"
         },
         {
           "d": "made of glass",
@@ -105303,7 +105206,7 @@
         },
         {
           "d": "made of cypress",
-          "raw": "de cipresse"
+          "ref": "de cipresse"
         },
         {
           "d": "made of maple wood | made of ivory",
@@ -105340,7 +105243,11 @@
         },
         {
           "d": "made of bone",
-          "raw": "de osse|de ossibus|ossi"
+          "raw": "ossi"
+        },
+        {
+          "ref": "bone",
+          "d": "made of bone"
         },
         {
           "d": "made of tin",
@@ -105388,7 +105295,7 @@
         },
         {
           "d": "made with coral beads",
-          "raw": "de corallo"
+          "ref": "coral"
         },
         {
           "d": "rosary made with bone beads",
@@ -105406,28 +105313,32 @@
           "ref": "black"
         },
         {
-          "raw": "de berille",
-          "d": "made of beryl, a transparent precious stone of a pale-green colour passing into light-blue, yellow, and white; distinguished only by colour from the more precious emerald (OED s.v. beryl A I 1a)"
+          "d": "made of beryl, a transparent precious stone of a pale-green colour passing into light-blue, yellow, and white; distinguished only by colour from the more precious emerald (OED s.v. beryl A I 1a)",
+          "ref": "de berille"
         },
         {
-          "raw": "de aumbre",
-          "d": "made of amber"
+          "d": "made of amber",
+          "ref": "amber"
         },
         {
           "d": "made of coal (probably gete)",
           "ref": "coal"
         },
         {
-          "raw": "de cole|de secolle",
+          "raw": "de secolle",
           "d": "made of jet (MED s.v. col n. (2) 4) | made of sea coal, mineral coal ('coal' in the ordinary modern sense) as distinguished from charcoal (OED s.v. sea-coal 2a)"
         },
         {
-          "raw": "de geet|de jete",
+          "raw": "de jete",
           "d": "made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish"
         },
         {
-          "raw": "de box",
-          "d": "made of boxwood"
+          "ref": "jet",
+          "d": "made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish"
+        },
+        {
+          "d": "made of boxwood",
+          "ref": "box"
         }
       ],
       "x": [],
@@ -107670,7 +107581,12 @@
           "p": "ur"
         },
         {
-          "raw": "de caen|de cane",
+          "raw": "de cane",
+          "d": "Caen stone: A lightish-yellow building-stone; it is at first very soft, but hardens on exposure (OED s.v. Caen-stone)",
+          "p": "dkendkane"
+        },
+        {
+          "ref": "caen",
           "d": "Caen stone: A lightish-yellow building-stone; it is at first very soft, but hardens on exposure (OED s.v. Caen-stone)",
           "p": "dkendkane"
         }
@@ -108057,10 +107973,6 @@
         {
           "d": "small pillow",
           "ref": "small"
-        },
-        {
-          "raw": "ber",
-          "d": "pillow cover or case"
         }
       ],
       "x": [],
@@ -109293,10 +109205,6 @@
           "ref": "large"
         },
         {
-          "d": "the common name of a freshwater fish (Abramis brama) called also Carp-bream, which inhabits lakes and deep water, and is distinguished by its yellowish colour and the high arched form of its back (OED s.v. bream n., cf. MED s.v. breame)",
-          "raw": "breme"
-        },
-        {
           "d": "some sort of salted fish (MED s.v. wabok n.)",
           "raw": "wabbok"
         },
@@ -110491,7 +110399,11 @@
           "ref": "flanders"
         },
         {
-          "raw": "lasing|lasyng|lacyng",
+          "raw": "lacyng",
+          "d": "for lacing (a lacing point)"
+        },
+        {
+          "ref": "lasing",
           "d": "for lacing (a lacing point)"
         },
         {
@@ -112003,7 +111915,11 @@
         },
         {
           "d": "without a cover",
-          "raw": "uncoverd|uncoverde|sine covers"
+          "raw": "sine covers"
+        },
+        {
+          "ref": "uncovered",
+          "d": "without a cover"
         },
         {
           "d": "empty",
@@ -112050,7 +111966,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "confessions"
+          "ref": "confessions"
         },
         {
           "p": "kper",
@@ -112519,7 +112435,11 @@
               "dataset": ""
             }
           ],
-          "raw": "broderd|brodred"
+          "ref": "embroidered"
+        },
+        {
+          "ref": "embroidered",
+          "d": "embroidered"
         },
         {
           "d": "made of silk",
@@ -113396,7 +113316,7 @@
         },
         {
           "d": "",
-          "raw": "de cipresse"
+          "ref": "de cipresse"
         }
       ],
       "x": [],
@@ -119703,7 +119623,11 @@
         },
         {
           "d": "lady's saddle / for women",
-          "raw": "pro mulieribus|pro feminis|feminea cum apparatu"
+          "raw": "pro mulieribus|pro feminis"
+        },
+        {
+          "ref": "womens",
+          "d": "lady's saddle / for women"
         },
         {
           "d": "old",
@@ -120238,7 +120162,7 @@
         },
         {
           "d": "from Seville",
-          "raw": "civilys"
+          "ref": "civile"
         },
         {
           "d": "a kind of saffron (OED s.v. burnikat)",
@@ -120884,12 +120808,16 @@
           "d": "of salt"
         },
         {
-          "raw": "de romeswale|de rumeswale",
+          "d": "from Reimerswaal (Zealand)",
+          "ref": "de romeswale"
+        },
+        {
+          "ref": "de romeswale",
           "d": "from Reimerswaal (Zealand)"
         },
         {
-          "raw": "de burghwage",
-          "d": "from Brouage, opposite la Rochelle"
+          "d": "from Brouage, opposite la Rochelle",
+          "ref": "de burghwage"
         }
       ],
       "x": [],
@@ -123258,8 +123186,8 @@
           "ref": "silk"
         },
         {
-          "raw": "de bermyngham",
-          "d": "manufactured in Birmingham"
+          "d": "manufactured in Birmingham",
+          "ref": "de bermyngham"
         }
       ],
       "x": [],
@@ -125428,10 +125356,6 @@
           "ref": "browderers"
         },
         {
-          "d": "some sort of silk, exact meaning unknown",
-          "raw": "cil"
-        },
-        {
           "d": "from Malaga (Andalusia)",
           "ref": "malaga"
         },
@@ -125485,7 +125409,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "cours facone"
+          "ref": "cours facone"
         },
         {
           "d": "long-stapled silk, raw/low quality",
@@ -125518,7 +125442,11 @@
           "ref": "venice"
         },
         {
-          "raw": "aperte|apertum|appertum|venicie apertum|venicie apertum mesane",
+          "raw": "venicie apertum|venicie apertum mesane",
+          "d": "loose/open silk (from Venice), exact meaning uncertain"
+        },
+        {
+          "ref": "aperti",
           "d": "loose/open silk (from Venice), exact meaning uncertain"
         },
         {
@@ -125737,6 +125665,11 @@
           "t": "sirico",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "cil",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -125947,9 +125880,6 @@
               "ref": "velvet"
             }
           ]
-        },
-        {
-          "raw": "bord"
         }
       ],
       "x": [],
@@ -127931,8 +127861,8 @@
           "ref": "crossbow"
         },
         {
-          "raw": "de box",
-          "d": "stave of box wood"
+          "d": "stave of box wood",
+          "ref": "box"
         },
         {
           "raw": "for billes",
@@ -130445,7 +130375,7 @@
         },
         {
           "d": "of Messina (Sicily)",
-          "raw": "missene"
+          "ref": "messina"
         },
         {
           "d": "",
@@ -130470,12 +130400,6 @@
         {
           "raw": "valance",
           "d": "from Valencia in Spain"
-        },
-        {
-          "raw": "bier"
-        },
-        {
-          "raw": "chest"
         }
       ],
       "x": [],
@@ -131655,8 +131579,8 @@
           "raw": "multonis debilis"
         },
         {
-          "raw": "de sprucia",
-          "d": "of Prussian origin"
+          "d": "of Prussian origin",
+          "ref": "prussia"
         },
         {
           "raw": "multonis in peciis",
@@ -131927,10 +131851,6 @@
         {
           "raw": "verder",
           "d": "verdure; a tapestry depicting foliage or greenery"
-        },
-        {
-          "raw": "banker",
-          "d": "a banker; a tapestry covering for a bench or chair (MED s.v. banker)"
         }
       ],
       "x": [],
@@ -133940,8 +133860,8 @@
           "d": "tick"
         },
         {
-          "raw": "brysell",
-          "d": "made in Brussels"
+          "d": "made in Brussels",
+          "ref": "brussels"
         },
         {
           "raw": "beddes"
@@ -134293,9 +134213,6 @@
           "p": "us",
           "d": "",
           "raw": "hous"
-        },
-        {
-          "raw": "brik"
         }
       ],
       "x": [],
@@ -134720,8 +134637,8 @@
           "ref": "double"
         },
         {
-          "raw": "de frisio",
-          "d": "made of frieze"
+          "d": "made of frieze",
+          "ref": "frise"
         },
         {
           "raw": "satyn velvett brochadyd cum auro",
@@ -135281,7 +135198,7 @@
         },
         {
           "d": "manufactured in Dinant",
-          "raw": "de denaunte"
+          "ref": "denaunt"
         },
         {
           "d": "of low quality",
@@ -135895,11 +135812,11 @@
         },
         {
           "d": "made in Genoa",
-          "raw": "geane"
+          "ref": "genoa"
         },
         {
           "d": "made in Genoa",
-          "raw": "jean"
+          "ref": "genoa"
         },
         {
           "d": "",
@@ -136868,7 +136785,7 @@
         },
         {
           "d": "large, as a packing unit for dry goods",
-          "raw": "mayor"
+          "ref": "large"
         },
         {
           "d": "small, as a packing unit for cloth",
@@ -138270,9 +138187,6 @@
         {
           "raw": "super velvett pirled cum auro",
           "d": "velvet upon velvet, crimson in color, embroidered (OED s.v. purl v.1 1) with gold thread | velvet upon velvet, russet in color. embroidered (OED s.v. purl v.1 1) with gold thread | embroidered (OED s.v. purl v.1 1) with gold thread"
-        },
-        {
-          "raw": "bagg"
         }
       ],
       "x": [],
@@ -138751,7 +138665,7 @@
         },
         {
           "d": "manufactured in Oudenarde in Flanders",
-          "raw": "owtnard"
+          "ref": "oudenarde"
         },
         {
           "d": "of low quality",
@@ -138767,7 +138681,7 @@
         },
         {
           "d": "of low quality | clearly some kind of verdure, but exact meaning unknown",
-          "raw": "cur"
+          "ref": "cur'"
         },
         {
           "d": "decorated with caddis, a worsted yarn, crewel; a material (garments etc. made of this yarn); short for caddis ribbon (a worsted tape or binding, used for garters etc.) (OED s.v. caddis) | made of (or decorated with) caddis (OED caddis1)",
@@ -138805,8 +138719,8 @@
           "ref": "oudenarde"
         },
         {
-          "raw": "de here",
-          "d": "made of made of hair (a very rough material normally used for hats and caps)"
+          "d": "made of made of hair (a very rough material normally used for hats and caps)",
+          "ref": "hair"
         },
         {
           "raw": "cades",
@@ -138822,9 +138736,6 @@
         },
         {
           "raw": "verdur"
-        },
-        {
-          "raw": "banker"
         }
       ],
       "x": [],
@@ -139317,7 +139228,11 @@
         },
         {
           "d": "French",
-          "raw": "francie|frauncie"
+          "ref": "france"
+        },
+        {
+          "ref": "france",
+          "d": "French"
         },
         {
           "d": "Spanish wine (Alicante, hollock, tent)",
@@ -142108,10 +142023,6 @@
           "ref": "norwich"
         },
         {
-          "d": "",
-          "raw": "brode ryssyll"
-        },
-        {
           "d": "of obscure origin; possibly from Rijssel, the Flemish name of Lille. The early forms, and the fact that black and other colours occur earlier and more frequently than red, are against connection with russel in the sense of 'reddish'. A kind of woollen fabric (worsted among other things) formerly used for articles of attire, especially in the 16th century (OED s.v. russel²)",
           "ref": "rijssel"
         },
@@ -144159,11 +144070,7 @@
     },
     "calendars": {
       "d": "a table or chart of the year, or for a mathematical or astronomical table (MED s.v. calender n.) | case for a table or chart of the year, or for a mathematical or astronomical table (MED s.v. calender n.) | calendar, a table showing the division of a given year into its months and days, and referring the days of each month to the days of the week; often also including important astronomical data, and indicating ecclesiastical or other festivals, and other events belonging to individual days (OED s.v. calendar n. 2) | a written calender; an astronomical table (MED s.v. calender) | a table (or pamphlet) showing the division of the year into months and days, often with astronomical data and/or church festivals (notably Easter) and saints’ days (OED s.v. calendar n.)",
-      "q": [
-        {
-          "raw": "cace"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -147140,9 +147047,6 @@
           "p": "arming",
           "d": "battle sword",
           "ref": "arming"
-        },
-        {
-          "raw": "zona"
         }
       ],
       "f": [
@@ -147571,7 +147475,7 @@
           ],
           "d_from_id": true,
           "p": "mkin",
-          "raw": "meikyn"
+          "ref": "mecca"
         },
         {
           "d": "Mecca [AAT place:wd:Q5806]",
@@ -147597,7 +147501,7 @@
           ],
           "d_from_id": true,
           "p": "mkin",
-          "raw": "mekyn"
+          "ref": "mecca"
         },
         {
           "d": "Mecca [AAT place:wd:Q5806]",
@@ -147660,7 +147564,7 @@
               "lon": 76.58333333333333
             }
           ],
-          "raw": "columbyn"
+          "ref": "columbyn"
         },
         {
           "d": "ginger 'from the countryside' a term derived from the name Arab traders active on the west coast of India gave to the 'native' or common ginger (Pegolotti 419, Heyd 601, Day 976); India [AAT place:wd:Q668]",
@@ -148528,6 +148432,16 @@
           "p": "arpartsilur",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "leves argent",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "levez argent",
+          "s": [],
+          "w": 0
         }
       ],
       "d": "Silver beaten out into thin leaf for use in gilding. Silver leaf is about three times as thick as gold leaf because silver is less malleable but the resulting leaf is easier to handle. It requires lacquering or varnishing to prevent tarnishing; for this reason it is often replaced by palladium leaf. In the commerical arts inexpensive aluminum leaf is used to achieve the effect of silver leaf. Silver leaf can also be covered with a golden yellow transparent coating as a substitute for gold. [Source: Getty AAT]",
@@ -149333,132 +149247,6 @@
             }
           ],
           "ref": "bak"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacon"
-        },
-        {
-          "p": "bkone",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacone"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "baconis"
-        },
-        {
-          "p": "bkun",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bacun"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bakon"
-        },
-        {
-          "p": "bkone",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bakone"
-        },
-        {
-          "p": "bkon",
-          "d": "bacon [AAT Q11106]",
-          "ann": [
-            {
-              "start": 0,
-              "end": 0,
-              "typeId": "300010358",
-              "aatId": "Q11106",
-              "aatLabel": "bacon",
-              "label": "baco",
-              "curated": true,
-              "dataset": ""
-            }
-          ],
-          "d_from_id": true,
-          "raw": "bokon"
         }
       ],
       "x": [],
@@ -150843,10 +150631,6 @@
           "p": "kumring"
         },
         {
-          "raw": "bokeram",
-          "d": "buckram [AAT 300253474]"
-        },
-        {
           "d": "hair (material) [AAT 300011814]",
           "ref": "hair"
         },
@@ -151005,7 +150789,7 @@
         "Units, weights & measures",
         "Containers & vessels"
       ],
-      "memo": "\"2 barellis olei de bago\" will need sifting from this set. EB 15/07/2026",
+      "memo": "\"2 barellis olei de bago\" will need sifting from this set. EB 15/07/2026 — \"Bag\" not a qualifier in any of the examples given here. EB 12/08/2026.",
       "reviewed": false,
       "helpWanted": true
     },
@@ -152232,7 +152016,7 @@
         },
         {
           "d": "barrel of large girth, as a packing unit for dry goods",
-          "raw": "magne bounde"
+          "ref": "magne band"
         },
         {
           "d": "a packing unit for dry goods of no particular size",
@@ -152311,15 +152095,15 @@
               "dataset": ""
             }
           ],
-          "raw": "emty"
+          "ref": "empty"
         },
         {
           "raw": "mediis barellis",
           "d": "barrel of large girth, as a packing unit"
         },
         {
-          "raw": "magne bonde",
-          "d": "barrel of large girth, as a packing unit"
+          "d": "barrel of large girth, as a packing unit",
+          "ref": "magne band"
         },
         {
           "raw": "parve bonde",
@@ -152353,8 +152137,8 @@
           "d": "barrel of small girth, as a packing unit for dry goods | barrel of small girth, as a packing unit"
         },
         {
-          "raw": "magno bonde",
-          "d": "of large girth"
+          "d": "of large girth",
+          "ref": "magne band"
         }
       ],
       "x": [],
@@ -152573,7 +152357,8 @@
       ],
       "groups": [
         "Containers & vessels"
-      ]
+      ],
+      "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026"
     },
     "beret": {
       "d": "Soft, flat-topped, visorless caps with a tight-fitting headband; in a military context, worn as an official item of headgear. [Source: Getty AAT]",
@@ -152971,6 +152756,21 @@
           "p": "barg",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "coopers barges",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "copers barges",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "barges for cowpers",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -153552,7 +153352,7 @@
         {
           "p": "kambir",
           "d": "",
-          "raw": "chambyr"
+          "ref": "chambyr"
         }
       ],
       "f": [
@@ -153832,6 +153632,11 @@
         {
           "t": "bast ropys",
           "p": "bstrop",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bast ropes",
           "s": [],
           "w": 0
         }
@@ -154978,7 +154783,11 @@
         },
         {
           "d": "made in York",
-          "raw": "de york|york|eborum"
+          "raw": "york"
+        },
+        {
+          "ref": "york",
+          "d": "made in York"
         },
         {
           "d": "made in Ghent",
@@ -155205,7 +155014,7 @@
         },
         {
           "d": "beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish | beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads",
-          "raw": "geet"
+          "ref": "jet"
         },
         {
           "d": "beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish | beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads",
@@ -155262,7 +155071,7 @@
         },
         {
           "d": "",
-          "raw": "de ossibus"
+          "ref": "bone"
         },
         {
           "d": "wooden beads",
@@ -155332,7 +155141,7 @@
         },
         {
           "d": "made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.)",
-          "raw": "jeet"
+          "ref": "jet"
         },
         {
           "d": "made of wood",
@@ -155386,15 +155195,15 @@
         },
         {
           "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)",
-          "raw": "mistille"
+          "ref": "mistelle"
         },
         {
           "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)",
-          "raw": "mystil"
+          "ref": "mistelle"
         },
         {
           "d": "mixed beads (OED s.v. mystill)",
-          "raw": "mistelyn"
+          "ref": "mistelle"
         },
         {
           "d": "made of wood | wooden beads",
@@ -155402,7 +155211,7 @@
         },
         {
           "d": "made of wood | wooden beads",
-          "raw": "tren"
+          "ref": "wood"
         },
         {
           "d": "made of wood | wooden beads",
@@ -155519,7 +155328,7 @@
         },
         {
           "d": "made of jasper, an opaque variety of colored quartz, usually reddish, yellow or brown (OED s.v. jasper n.1)",
-          "raw": "jesper"
+          "ref": "jasper"
         },
         {
           "d": "made of wood",
@@ -155571,12 +155380,8 @@
           ]
         },
         {
-          "d": "",
-          "raw": "coche"
-        },
-        {
-          "raw": "jete",
-          "d": "beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish | beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads"
+          "d": "beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish | beads made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads",
+          "ref": "jet"
         },
         {
           "d": "made of box wood",
@@ -155596,8 +155401,8 @@
           "raw": "pomaunder"
         },
         {
-          "raw": "jet",
-          "d": "made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads"
+          "d": "made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.) | jet beads",
+          "ref": "jet"
         },
         {
           "raw": "van",
@@ -155620,31 +155425,27 @@
           "ref": "coal"
         },
         {
-          "raw": "mistelle",
-          "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)"
+          "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)",
+          "ref": "mistelle"
         },
         {
           "raw": "mystelle",
           "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)"
         },
         {
-          "raw": "mystille",
-          "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)"
+          "d": "mixed beads (see also mistelle) (OED s.v. mystill) | mixed beads (OED s.v. mystill)",
+          "ref": "mistelle"
         },
         {
           "raw": "spaynesch gete",
           "d": "jet beads of Spanish manufacture"
         },
         {
-          "raw": "amber",
-          "d": "of amber"
-        },
-        {
           "raw": "orange"
         },
         {
-          "raw": "coral",
-          "d": "made of coral"
+          "d": "made of coral",
+          "ref": "coral"
         },
         {
           "d": "made of amber",
@@ -155655,16 +155456,16 @@
           "ref": "amber"
         },
         {
-          "raw": "cristalle",
-          "d": "made of crystal"
+          "d": "made of crystal",
+          "ref": "cristall"
         },
         {
-          "raw": "jasper",
-          "d": "made of jasper, an opaque variety of colored quartz, usually reddish, yellow or brown (OED s.v. jasper n.1)"
+          "d": "made of jasper, an opaque variety of colored quartz, usually reddish, yellow or brown (OED s.v. jasper n.1)",
+          "ref": "jasper"
         },
         {
-          "raw": "giet",
-          "d": "made of jet, a hard, compact, black form of lignite, capable of receiving a brilliant polish (OED s.v. jet-stone, jet n.1) | made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.)"
+          "d": "made of jet, a hard, compact, black form of lignite, capable of receiving a brilliant polish (OED s.v. jet-stone, jet n.1) | made of jet, a hard compact black form of lignite, capable of receiving a brilliant polish (OED s.v. jet n.1 and a.)",
+          "ref": "jet"
         },
         {
           "raw": "giett",
@@ -155679,8 +155480,8 @@
           "ref": "alabaster"
         },
         {
-          "raw": "de box",
-          "d": "made of box wood"
+          "d": "made of box wood",
+          "ref": "box"
         },
         {
           "raw": "in boxes"
@@ -156213,7 +156014,7 @@
         },
         {
           "d": "made of parchment",
-          "raw": "percamenti"
+          "ref": "parchment"
         },
         {
           "d": "probably for use by mendicants",
@@ -156418,10 +156219,6 @@
         {
           "d": "",
           "ref": "skin"
-        },
-        {
-          "d": "belt",
-          "raw": "zonarum"
         },
         {
           "d": "a girdle worn with the alb, to hold the latter in place after it had been tucked or hitched up (MED s.v. tukinge)",
@@ -157582,8 +157379,8 @@
           ]
         },
         {
-          "raw": "lattene",
-          "d": "made of latten"
+          "d": "made of latten",
+          "ref": "latten"
         },
         {
           "d": "made of gold, manufactured in Cologne",
@@ -157613,7 +157410,8 @@
       "groups": [
         "Clothing, costume & accessories",
         "Jewellery & precious stones"
-      ]
+      ],
+      "memo": "Most of these will need merging with brooch (particularly given the latten connection). EB 12/08/2026."
     },
     "beaver": {
       "d": "genus of mammals [Source: Wikidata]",
@@ -157658,10 +157456,6 @@
           "ref": "womb"
         },
         {
-          "d": "beaver testicles (MED s.v. bever n. (1): beferes herthan)",
-          "raw": "ballokes"
-        },
-        {
           "d": "pelts of the belly parts of the beaver",
           "ref": "womb"
         },
@@ -157687,9 +157481,6 @@
         },
         {
           "raw": "cutting"
-        },
-        {
-          "raw": "belle"
         }
       ],
       "f": [
@@ -159869,7 +159660,7 @@
           "label": "buckles (strap accessories)"
         }
       ],
-      "memo": "",
+      "memo": "Should be merged into \"buckle\" concept with breechgirdle concept? EB 12/08/2026.",
       "groups": [
         "Clothing, costume & accessories",
         "Hardware & fasteners"
@@ -160569,14 +160360,6 @@
         {
           "raw": "plates",
           "d": "10 pieces"
-        },
-        {
-          "raw": "bast ropes",
-          "d": "10 ropes"
-        },
-        {
-          "raw": "bowstaves",
-          "d": "16 staves"
         }
       ],
       "x": [],
@@ -160917,18 +160700,6 @@
         },
         {
           "d": "",
-          "raw": "alisaundre"
-        },
-        {
-          "d": "",
-          "raw": "alyssaunder"
-        },
-        {
-          "d": "",
-          "raw": "dalisandre"
-        },
-        {
-          "d": "",
           "ann": [
             {
               "start": 0,
@@ -160976,10 +160747,6 @@
               "ref": "file"
             }
           ]
-        },
-        {
-          "d": "",
-          "raw": "alexandre"
         },
         {
           "d": "",
@@ -161251,7 +161018,7 @@
         {
           "p": "kpers",
           "d": "a board for the use of capmakers, possibly some sort of work-bench",
-          "ref": "cappers"
+          "ref": "cap"
         },
         {
           "p": "kordiners",
@@ -161907,7 +161674,7 @@
         },
         {
           "d": "as night wear",
-          "raw": "nyght"
+          "ref": "night"
         },
         {
           "d": "",
@@ -161949,8 +161716,8 @@
           "d": "made of velvet"
         },
         {
-          "raw": "mylen",
-          "d": "manufactured in Milan"
+          "d": "manufactured in Milan",
+          "ref": "milan"
         }
       ],
       "x": [],
@@ -162356,7 +162123,7 @@
         },
         {
           "d": "printed book (see also boke)",
-          "raw": "impressatus"
+          "ref": "printed"
         },
         {
           "d": "",
@@ -162376,7 +162143,7 @@
         },
         {
           "d": "",
-          "raw": "unbond"
+          "ref": "unbound"
         },
         {
           "d": "",
@@ -162396,7 +162163,7 @@
         },
         {
           "d": "printed book",
-          "raw": "impressatus"
+          "ref": "printed"
         },
         {
           "d": "",
@@ -162420,7 +162187,7 @@
         },
         {
           "d": "printed book",
-          "raw": "prentid"
+          "ref": "printed"
         },
         {
           "d": "printed book",
@@ -162458,7 +162225,7 @@
         {
           "p": "prentid",
           "d": "",
-          "raw": "prentyd"
+          "ref": "printed"
         },
         {
           "p": "prented",
@@ -162911,6 +162678,21 @@
           "t": "bordcloþe",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "table clothis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "table clothes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "table cloth",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -162979,6 +162761,46 @@
           "s": [
             10
           ],
+          "w": 0
+        },
+        {
+          "t": "bord alisaundre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bord alysaundre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bord alizandre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bord alyssaunder",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bord dalisandre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "borde alexandre",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "borde alexander",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "borde alisaundre",
+          "s": [],
           "w": 0
         }
       ],
@@ -163334,10 +163156,6 @@
           "d": "wood for making lamps"
         },
         {
-          "raw": "bedes",
-          "d": "beads (rosary beads) of wood — Cologne 'holzen creuz fur paternoster'"
-        },
-        {
           "raw": "crosses",
           "d": "crosses (for rosaries) of wood"
         }
@@ -163389,10 +163207,6 @@
           "p": "ari",
           "d": "",
           "ref": "gold"
-        },
-        {
-          "raw": "amylle",
-          "d": "made of enamel, with an enamel figure or ornament (MED s.v. amal)"
         },
         {
           "raw": "stylle",
@@ -164276,11 +164090,7 @@
     },
     "breechgirdle": {
       "d": "a girdle or belt worn around the loins to keep up the breeches (OED s.v. breechgirdle)",
-      "q": [
-        {
-          "raw": "bocles"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -164506,16 +164316,6 @@
           "d": "i.e. for bridles",
           "p": "prfren",
           "raw": "pro frenis"
-        },
-        {
-          "p": "brdile",
-          "d": "",
-          "raw": "bridille"
-        },
-        {
-          "p": "brdile",
-          "d": "",
-          "raw": "brydylle"
         }
       ],
       "x": [],
@@ -164612,6 +164412,16 @@
         {
           "t": "bitt",
           "p": "bit",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridell bittes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridle bittes",
           "s": [],
           "w": 0
         }
@@ -164781,8 +164591,8 @@
           "ref": "latten"
         },
         {
-          "raw": "magne band",
-          "d": "of large girth"
+          "d": "of large girth",
+          "ref": "magne band"
         },
         {
           "raw": "parve bonde",
@@ -165016,18 +164826,9 @@
           "raw": "pro brydells"
         },
         {
-          "p": "brdile",
-          "d": "",
-          "raw": "bridile"
-        },
-        {
           "p": "prbrdel",
           "d": "",
           "raw": "pro brydelles"
-        },
-        {
-          "raw": "bridelles",
-          "d": "(bridles; bossys for brydels) one of the metal knobs on each side of the bit of a bridle (OED s.v. boss n.^1 3a)"
         }
       ],
       "x": [],
@@ -165223,7 +165024,7 @@
         },
         {
           "d": "",
-          "raw": "de lyngno"
+          "ref": "wood"
         },
         {
           "d": "small, of low quality",
@@ -165462,7 +165263,7 @@
             }
           ],
           "d_from_id": true,
-          "raw": "de luykes"
+          "ref": "lucca"
         },
         {
           "d": "",
@@ -165540,7 +165341,7 @@
           "ref": "bruges"
         },
         {
-          "raw": "fulle"
+          "ref": "full"
         }
       ],
       "f": [
@@ -165809,7 +165610,7 @@
           ]
         },
         {
-          "raw": "de canape"
+          "ref": "hemp"
         },
         {
           "d": "large and small",
@@ -167426,7 +167227,7 @@
           "ref": "large"
         },
         {
-          "raw": "fulle"
+          "ref": "full"
         }
       ],
       "x": [],
@@ -168545,7 +168346,7 @@
       "d": "Devices for trimming the wicks of candles and lamps to keep the end of the wick even and clean; usually in the form of scissors with one blade bearing a boxlike receptacle to catch the cut-off ends of the charred wick. For scissorlike devices with flat disc-shaped ends used for pinching out a candle flame, use \"douters.\" For cone-shaped devices used to extinguish flames, use \"extinguishers.\" [Source: Getty AAT]",
       "q": [
         {
-          "raw": "latyne"
+          "ref": "latten"
         }
       ],
       "x": [],
@@ -168690,7 +168491,7 @@
           "raw": "wudden"
         },
         {
-          "raw": "de box"
+          "ref": "box"
         },
         {
           "d": "(spoone of alkemie, spones of aulcamyn) alchemy: a substance produced by alchemy; specifically any of various metal alloys made in imitation of gold or resembling it in color, as varieties of brass or latten, sometimes containing arsenic compounds (OED s.v. alchemy 2), especially quote of 1773: J. Buchanan in J. Milton Paradise Lost (new ed.) 128 (note) Alchemy is a mixture of metals of which spoons, &c. are made",
@@ -169351,7 +169152,7 @@
           "ref": "earthenware"
         },
         {
-          "raw": "lattyn"
+          "ref": "latten"
         }
       ],
       "x": [],
@@ -170222,7 +170023,7 @@
         },
         {
           "d": "made of iron",
-          "raw": "wyrone"
+          "ref": "iron"
         },
         {
           "d": "made of tin",
@@ -171762,7 +171563,7 @@
         },
         {
           "d": "unembellished",
-          "raw": "de plana"
+          "ref": "plain"
         },
         {
           "d": "made of knotty wood",
@@ -171785,7 +171586,7 @@
         },
         {
           "d": "made of jasper, a kind of precious stone (OED .s. jasper n.1)",
-          "raw": "de jaspar"
+          "ref": "jasper"
         },
         {
           "d": "",
@@ -171837,7 +171638,7 @@
         },
         {
           "d": "made of crystal",
-          "raw": "cristaline"
+          "ref": "cristall"
         },
         {
           "d": "old",
@@ -171902,7 +171703,7 @@
         },
         {
           "d": "",
-          "raw": "de cornibus"
+          "ref": "de cornibus"
         },
         {
           "d": "",
@@ -171913,7 +171714,7 @@
           "d": "made of crystal"
         },
         {
-          "raw": "de alabastre"
+          "ref": "alabaster"
         },
         {
           "raw": "maple rote"
@@ -172703,7 +172504,7 @@
         },
         {
           "d": "night cap",
-          "raw": "night"
+          "ref": "night"
         },
         {
           "d": "cap worn by priests, unlined",
@@ -172785,9 +172586,6 @@
           "ref": "childrens"
         },
         {
-          "raw": "bondes pro hattes"
-        },
-        {
           "d": "child’s cap",
           "tokens": [
             {
@@ -172803,10 +172601,6 @@
         },
         {
           "raw": "lynnen"
-        },
-        {
-          "raw": "button",
-          "d": "some kind of cap, but exact meaning unknown (OED s.v. button n. 12a and quote of 1606)"
         },
         {
           "raw": "nygth",
@@ -172850,8 +172644,8 @@
           "d": "hairy, shaggy (Latham, Dictionary, s.v. pilosus)"
         },
         {
-          "raw": "de bever",
-          "d": "made of beaver pelts"
+          "d": "made of beaver pelts",
+          "ref": "beaver"
         },
         {
           "raw": "de bever contrefet",
@@ -172860,10 +172654,6 @@
         {
           "raw": "de bever cours",
           "d": "coarse, of low quality"
-        },
-        {
-          "raw": "cuniculorum",
-          "d": "made of rabbit skins"
         },
         {
           "d": "made of beaver pelts",
@@ -174477,11 +174267,7 @@
     },
     "cark": {
       "d": "",
-      "q": [
-        {
-          "raw": "bisor"
-        }
-      ],
+      "q": [],
       "f": [
         {
           "t": "kark",
@@ -175595,6 +175381,11 @@
           "t": "cassiafistule",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "cassa fistola",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "",
@@ -176382,6 +176173,16 @@
           "p": "kdde",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "coddes hedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "coddes hede",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -176715,10 +176516,6 @@
               "ref": "single"
             }
           ]
-        },
-        {
-          "raw": "bokeram",
-          "d": "made of buckram"
         },
         {
           "raw": "de carde",
@@ -177313,8 +177110,8 @@
           "ref": "spain"
         },
         {
-          "raw": "de cheverellis",
-          "d": "made of the skins of roe-bucks | made of the skin of the roe-buck"
+          "d": "made of the skins of roe-bucks | made of the skin of the roe-buck",
+          "ref": "roe"
         },
         {
           "raw": "panni lini",
@@ -181381,8 +181178,8 @@
           "d": "meaning unknown"
         },
         {
-          "raw": "garbeler de",
-          "d": "'garbled' cloves, i.e. refuse, with extraneous matter (OED s.v. garble n.)"
+          "d": "'garbled' cloves, i.e. refuse, with extraneous matter (OED s.v. garble n.)",
+          "ref": "garbled"
         }
       ],
       "f": [
@@ -181567,7 +181364,7 @@
         },
         {
           "d": "manufactured in Ghent",
-          "raw": "gentische"
+          "ref": "gent"
         },
         {
           "d": "manufactured in Holland (see also tela)",
@@ -181946,7 +181743,7 @@
         },
         {
           "d": "unembellished",
-          "raw": "de plana"
+          "ref": "plain"
         },
         {
           "raw": "pro galoches"
@@ -182109,7 +181906,7 @@
           ]
         },
         {
-          "raw": "feltes"
+          "ref": "felt"
         },
         {
           "raw": "de pheltes"
@@ -182356,7 +182153,7 @@
         },
         {
           "d": "made of bone",
-          "raw": "de boon"
+          "ref": "bone"
         },
         {
           "d": "of Prussian manufacture",
@@ -183072,7 +182869,7 @@
         },
         {
           "d": "made of tapestry",
-          "raw": "de tapesterie"
+          "ref": "tapestry"
         },
         {
           "d": "made of tapestry",
@@ -183269,10 +183066,6 @@
           "d": "cushion cloth | cushion cloths 80, 114, 175 (cusshincloes)"
         },
         {
-          "raw": "clothes",
-          "d": "cushion cloth | cushion cloths 80, 114, 175 (cusshincloes)"
-        },
-        {
           "raw": "de aras",
           "d": "cushion cloth made of arras, a kind of figured tapestry, originally made in Arras (MED s.v. arras) | of Arras figured tapestry"
         },
@@ -183285,21 +183078,11 @@
           "d": "made of single serge"
         },
         {
-          "raw": "cosshyn clothes"
-        },
-        {
-          "raw": "clothis",
-          "d": "a cushion case or covering (OED s.v. cushion-cloth)"
-        },
-        {
           "raw": "verder",
           "d": "made of verdure a rich tapestry ornamented with representations of trees and other vegetation (OED 2, s.v. verdure)"
         },
         {
           "raw": "garnysshid with gold and perll"
-        },
-        {
-          "raw": "clothe"
         },
         {
           "d": "made of hair (a very rough material normally used for hats and caps)",
@@ -184372,7 +184155,7 @@
       "q": [
         {
           "d": "",
-          "raw": "ispannie"
+          "ref": "spain"
         },
         {
           "d": "of low quality",
@@ -184450,7 +184233,7 @@
       "q": [
         {
           "d": "lead pipe",
-          "raw": "de plumbo"
+          "ref": "de plumbo"
         }
       ],
       "x": [],
@@ -184850,7 +184633,7 @@
           "w": 0
         }
       ],
-      "memo": "Restructured 2026-06-10: named eel types split into separate entries (stub eel, shaft eel, middle eel, pympernel, kyve eel); cross-cutting qualifiers (salted, fresh, red, low quality, dried, of all sorts, Prussian) duplicated across the type entries. ",
+      "memo": "Restructured 2026-06-10: named eel types split into separate entries (stub eel, shaft eel, middle eel, pympernel, kyve eel); cross-cutting qualifiers (salted, fresh, red, low quality, dried, of all sorts, Prussian) duplicated across the type entries. — This needs to be merged with the concept anguillarum. EB 12/08/2026",
       "sources": [],
       "related": [
         "conger",
@@ -184956,7 +184739,7 @@
           ]
         },
         {
-          "raw": "de corence|de corrence|de correns|de corance|de corauns|de currans|de corans",
+          "raw": "de correns|de corauns|de currans|de corans",
           "d": "currants"
         },
         {
@@ -187065,9 +186848,6 @@
         {
           "raw": "de sarge",
           "d": "made of silk"
-        },
-        {
-          "raw": "bokeram"
         }
       ],
       "x": [],
@@ -187350,12 +187130,12 @@
         },
         {
           "d": "",
-          "raw": "rote"
+          "ref": "red"
         },
         {
           "p": "brankde",
           "d": "",
-          "raw": "braunche de"
+          "ref": "braunche de"
         }
       ],
       "x": [],
@@ -189918,7 +189698,7 @@
         },
         {
           "d": "of Norfolk manufacture",
-          "raw": "northff"
+          "ref": "norfolk"
         },
         {
           "d": "made in Salisbury",
@@ -190053,7 +189833,7 @@
         },
         {
           "d": "made of tapestry",
-          "raw": "de tapseria"
+          "ref": "tapestry"
         },
         {
           "d": "",
@@ -190065,11 +189845,11 @@
         },
         {
           "d": "made in Norfolk",
-          "raw": "de norfolche"
+          "ref": "norfolk"
         },
         {
           "d": "made in Winchester",
-          "raw": "de wynchestre"
+          "ref": "winchester"
         },
         {
           "d": "made in Winchester",
@@ -190188,8 +189968,8 @@
           "d": "of low quality, made from tapestry"
         },
         {
-          "raw": "corce",
-          "d": "coarse, of low quality"
+          "d": "coarse, of low quality",
+          "ref": "coarse"
         },
         {
           "raw": "yperlynges",
@@ -191476,10 +191256,6 @@
           "p": "kpers",
           "d": "",
           "ref": "cooper"
-        },
-        {
-          "raw": "barges",
-          "d": "meaning unknown"
         }
       ],
       "x": [],
@@ -192106,10 +191882,6 @@
         },
         {
           "raw": "de plate"
-        },
-        {
-          "raw": "bokeram",
-          "d": "made of buckram"
         }
       ],
       "x": [],
@@ -192358,6 +192130,36 @@
         },
         {
           "t": "cuschone clothes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cosshyn clothes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cusshin clothis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cusshon clothis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "quysshen clothes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cusshon clothes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "cusshon clothe",
           "s": [],
           "w": 0
         }
@@ -193168,10 +192970,6 @@
         {
           "d": "",
           "ref": "tin"
-        },
-        {
-          "raw": "bere cruses",
-          "d": "earthenware drinking pot for beer"
         }
       ],
       "x": [],
@@ -193770,7 +193568,7 @@
               "curated": true
             }
           ],
-          "raw": "beame"
+          "ref": "beame"
         },
         {
           "d": "of low quality",
@@ -194042,7 +193840,7 @@
               "curated": true
             }
           ],
-          "raw": "duche"
+          "ref": "almain"
         },
         {
           "p": "irman",
@@ -194808,7 +194606,7 @@
       "q": [
         {
           "d": "a kind of hardwood (perhaps boxwood), among other things used by turners, especially for handles of knives, daggers etc. (OED s.v. dudgeon n.1)",
-          "raw": "loges"
+          "ref": "log"
         },
         {
           "p": "prkultel",
@@ -194818,7 +194616,7 @@
         {
           "p": "lodg",
           "d": "",
-          "raw": "lodges"
+          "ref": "log"
         },
         {
           "p": "lodi",
@@ -195889,8 +195687,8 @@
           ]
         },
         {
-          "raw": "dieper",
-          "d": "made of diaper, a linen fabric (or an inferior fabric of ‘union’ or cotton) woven with a small and simple pattern, formed by the different directions of the thread, with the different reflexions of light from its surface, and consisting of lines crossing diamond-wise, with the spaces variously filled up by parallel lines, a central leaf or dot, etc. (OED s.v. diaper n. 1)"
+          "d": "made of diaper, a linen fabric (or an inferior fabric of ‘union’ or cotton) woven with a small and simple pattern, formed by the different directions of the thread, with the different reflexions of light from its surface, and consisting of lines crossing diamond-wise, with the spaces variously filled up by parallel lines, a central leaf or dot, etc. (OED s.v. diaper n. 1)",
+          "ref": "diaper"
         }
       ],
       "x": [],
@@ -196651,6 +196449,11 @@
           "p": "fgdde",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "dodes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -196663,6 +196466,9 @@
       "groups": [
         "Food, spices & comestibles",
         "Plants & plant products"
+      ],
+      "compoundOf": [
+        "fig"
       ]
     },
     "doubler": {
@@ -200052,7 +199858,7 @@
           "ref": "stoneware"
         },
         {
-          "raw": "crede"
+          "ref": "crede"
         }
       ],
       "x": [],
@@ -204444,11 +204250,6 @@
           "p": "ari",
           "d": "a minute quantity of gold, beaten out into an extremely thin sheet, averaging from 3 to 3½ inches square (OED s.v. gold leaf); a minute quantity of gold, beaten out into an extremely thin sheet, averaging from 3 to 31⁄2 inches square (OED s.v. gold leaf)",
           "ref": "gold"
-        },
-        {
-          "p": "arint",
-          "d": "",
-          "raw": "argent"
         }
       ],
       "x": [],
@@ -204678,7 +204479,11 @@
         },
         {
           "d": "for use by women",
-          "raw": "women|womens"
+          "ref": "womens"
+        },
+        {
+          "ref": "womens",
+          "d": "for use by women"
         },
         {
           "raw": "lynnen",
@@ -205855,8 +205660,8 @@
           "ref": "linen"
         },
         {
-          "raw": "felt",
-          "d": "made of felt"
+          "d": "made of felt",
+          "ref": "felt"
         }
       ],
       "x": [],
@@ -207594,8 +207399,8 @@
           ]
         },
         {
-          "raw": "lattyn",
-          "d": "one of the larger and more ornamental beads placed between the decades of ‘aves’ in a rosary (OED s.v. gaud n.1), here made of latten"
+          "d": "one of the larger and more ornamental beads placed between the decades of ‘aves’ in a rosary (OED s.v. gaud n.1), here made of latten",
+          "ref": "latten"
         }
       ],
       "x": [],
@@ -208274,8 +208079,8 @@
           "ref": "small"
         },
         {
-          "raw": "de boxe",
-          "d": "made of box wood"
+          "d": "made of box wood",
+          "ref": "box"
         }
       ],
       "x": [],
@@ -208739,10 +208544,6 @@
         {
           "raw": "spectacles|pro spectacles",
           "d": "for spectacles / eye-glasses"
-        },
-        {
-          "raw": "bedes",
-          "d": "glass beads"
         },
         {
           "raw": "hesons|hessis",
@@ -209240,10 +209041,6 @@
         {
           "raw": "moldes",
           "d": "mould (for casting a gun)"
-        },
-        {
-          "raw": "bottelles",
-          "d": "bottles (sense uncertain)"
         }
       ],
       "aat": [
@@ -209609,7 +209406,7 @@
         },
         {
           "d": "of German manufacture",
-          "raw": "douche"
+          "ref": "almain"
         },
         {
           "d": "made of mail",
@@ -210937,8 +210734,8 @@
           "d": "from Caen"
         },
         {
-          "raw": "de amyas",
-          "d": "from Amiens"
+          "d": "from Amiens",
+          "ref": "de amyas"
         },
         {
           "raw": "picardy|de picarde",
@@ -211833,7 +211630,7 @@
         },
         {
           "d": "for women",
-          "raw": "women"
+          "ref": "womens"
         },
         {
           "d": "a riding hat (OED s.v. pricking 10)",
@@ -211893,10 +211690,14 @@
         },
         {
           "d": "counterfeit",
-          "raw": "countrefetz"
+          "ref": "counterfeit"
         },
         {
-          "raw": "felt|felte|feltt",
+          "d": "felt hat",
+          "ref": "felt"
+        },
+        {
+          "ref": "felt",
           "d": "felt hat"
         },
         {
@@ -211908,15 +211709,23 @@
           "d": "made of bast (bark fibre; MED s.v. bast n.1)"
         },
         {
-          "raw": "de here|heyre|hair",
+          "raw": "heyre|hair",
           "d": "made of hair (cf. here, hat hair)"
         },
         {
-          "raw": "cuniculorum",
-          "d": "made of rabbit skins"
+          "ref": "hair",
+          "d": "made of hair (cf. here, hat hair)"
         },
         {
-          "raw": "copin|copyn|coppyn",
+          "d": "a high-peaked sugar-loaf hat (OED s.v. copintank, copataine)",
+          "ref": "coppyn"
+        },
+        {
+          "ref": "coppyn",
+          "d": "a high-peaked sugar-loaf hat (OED s.v. copintank, copataine)"
+        },
+        {
+          "ref": "coppyn",
           "d": "a high-peaked sugar-loaf hat (OED s.v. copintank, copataine)"
         },
         {
@@ -214693,6 +214502,11 @@
           "t": "bande",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "bondes pro hattes",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -215094,21 +214908,15 @@
         },
         {
           "d": "",
-          "raw": "cordeners"
+          "ref": "cordwainer"
         },
         {
           "d": "coarse hair used to make tent-cloth (MED s.v. telde)",
           "ref": "spain"
         },
         {
-          "raw": "felt",
-          "d": "very rough material for making felt"
-        },
-        {
-          "raw": "brystylles"
-        },
-        {
-          "raw": "banker"
+          "d": "very rough material for making felt",
+          "ref": "felt"
         },
         {
           "raw": "pro hattes|pro hattys|pur hattys",
@@ -215329,9 +215137,6 @@
           "raw": "colerd"
         },
         {
-          "raw": "bagge"
-        },
-        {
           "raw": "lace"
         },
         {
@@ -215339,9 +215144,6 @@
         },
         {
           "raw": "shredes"
-        },
-        {
-          "raw": "of"
         },
         {
           "d": "of various colors",
@@ -217148,7 +216950,7 @@
         },
         {
           "d": "",
-          "raw": "unwrougth"
+          "ref": "unwrought"
         },
         {
           "d": "clearly some kind of worsted inkle, but exact meaning unknown",
@@ -222137,24 +221939,12 @@
           "d": "shaven — a thinner kind than black latten (OED s.v. latten 1b, 3b); also filings"
         },
         {
-          "raw": "batry",
-          "d": "battery (beaten latten)"
-        },
-        {
           "raw": "ring|ringes|ryng",
           "d": "rings made of latten (finger-rings; rings for mail; bag rings)"
         },
         {
-          "raw": "broch|broches",
-          "d": "broaches made of latten"
-        },
-        {
           "raw": "naylles",
           "d": "nails made of latten"
-        },
-        {
-          "raw": "balance|balaunce|ballance",
-          "d": "balances / scales made of latten"
         },
         {
           "raw": "weight",
@@ -222284,7 +222074,11 @@
           "ref": "new"
         },
         {
-          "raw": "galon|galone",
+          "d": "gallon",
+          "ref": "gallon"
+        },
+        {
+          "ref": "gallon",
           "d": "gallon"
         },
         {
@@ -222706,7 +222500,7 @@
         },
         {
           "d": "from Denmark",
-          "raw": "denmarke"
+          "ref": "denmark"
         },
         {
           "d": "coarse, of low quality",
@@ -222725,7 +222519,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "owtnard"
+          "ref": "oudenarde"
         },
         {
           "d": "meaning unknown",
@@ -222737,7 +222531,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "castridge"
+          "ref": "ostrich"
         },
         {
           "d": "meaning unknown",
@@ -223039,7 +222833,7 @@
         },
         {
           "d": "manufactured in milan",
-          "raw": "de mylane"
+          "ref": "milan"
         }
       ],
       "x": [],
@@ -225345,8 +225139,8 @@
           "raw": "porcuum"
         },
         {
-          "raw": "de capitibus",
-          "d": "from the heads"
+          "d": "from the heads",
+          "ref": "de capitibus"
         }
       ],
       "x": [],
@@ -227224,11 +227018,7 @@
     },
     "mull": {
       "d": "meaning unknown | lowest of the four qualities of Dutch madder (from mull = reduced to small particles, dust, rubbish: OED mull, n^1) | madder of the lowest quality",
-      "q": [
-        {
-          "raw": "madder"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -228590,7 +228380,7 @@
         },
         {
           "d": "Spanish",
-          "raw": "spanysshe"
+          "ref": "spain"
         },
         {
           "d": "of Nuremberg (tentative)",
@@ -228602,7 +228392,7 @@
         },
         {
           "d": "of crystal glass",
-          "raw": "cristall"
+          "ref": "cristall"
         },
         {
           "d": "large",
@@ -228685,7 +228475,7 @@
         },
         {
           "d": "full",
-          "raw": "full"
+          "ref": "full"
         },
         {
           "d": "a certain quantity",
@@ -228708,7 +228498,7 @@
           "d": "backed with steel"
         },
         {
-          "raw": "botelle|bottel|botels",
+          "raw": "botelle",
           "d": "bottle"
         },
         {
@@ -228726,10 +228516,6 @@
         {
           "raw": "bord|borde",
           "d": "meaning uncertain"
-        },
-        {
-          "raw": "anglia",
-          "d": "made in England"
         },
         {
           "raw": "beddes",
@@ -230004,7 +229790,7 @@
       "q": [
         {
           "d": "",
-          "raw": "yelowe"
+          "ref": "yellow"
         },
         {
           "d": "red in color",
@@ -232594,7 +232380,11 @@
         },
         {
           "d": "cut from horns",
-          "raw": "de cornibus|scissa de cornibus"
+          "raw": "scissa de cornibus"
+        },
+        {
+          "ref": "de cornibus",
+          "d": "cut from horns"
         },
         {
           "d": "tanned",
@@ -232727,7 +232517,7 @@
         },
         {
           "d": "embroidered",
-          "raw": "enbroderd"
+          "ref": "embroidered"
         },
         {
           "d": "made of leather",
@@ -232833,9 +232623,6 @@
         },
         {
           "raw": "wyer"
-        },
-        {
-          "raw": "bagge"
         },
         {
           "raw": "ryng"
@@ -233422,7 +233209,7 @@
           "ref": "dye"
         },
         {
-          "raw": "comfitz"
+          "ref": "comfitz"
         },
         {
           "d": "cordwain (cordovan leather)",
@@ -233430,7 +233217,7 @@
         },
         {
           "d": "crimped",
-          "raw": "crympyng"
+          "ref": "crympyng"
         },
         {
           "d": "curried (dressed leather)",
@@ -233672,9 +233459,6 @@
         {
           "raw": "canum marinorum|de sealle|de seel|seales",
           "d": "seal-skin"
-        },
-        {
-          "raw": "bollard"
         },
         {
           "raw": "cuttynges of",
@@ -233937,10 +233721,6 @@
         {
           "d": "",
           "ref": "coarse"
-        },
-        {
-          "raw": "banker",
-          "d": "a covering, generally of tapestry, for a bench or a chair (OED s.v. banker1), here decorated with images of pellicans"
         }
       ],
       "x": [],
@@ -234852,13 +234632,7 @@
     },
     "petraria": {
       "d": "denotes precious stones or gems collectively (Latham Word-List s.v. petra)",
-      "q": [
-        {
-          "p": "amale",
-          "d": "amaille means enamel, enamel figure or ornament (MED s.v. amal)",
-          "raw": "amaille"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -237640,8 +237414,8 @@
           "d": "set with (various) stones"
         },
         {
-          "raw": "cum perles",
-          "d": "set with pearls"
+          "d": "set with pearls",
+          "ref": "cum perles"
         },
         {
           "raw": "cum emerawdes",
@@ -238563,7 +238337,7 @@
         },
         {
           "d": "",
-          "raw": "men"
+          "ref": "mens"
         },
         {
           "d": "manufactured in Holland",
@@ -240522,11 +240296,7 @@
     },
     "skiving": {
       "d": "split leather, preserving the grain side (one side is fair leather, the other — the skiving — is grainy and fit for trunk covers etc.) (OED s.v. skiving vbl. n.1)",
-      "q": [
-        {
-          "raw": "bord"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -240850,8 +240620,8 @@
           "ref": "single"
         },
         {
-          "raw": "de norwey",
-          "d": "from Norway"
+          "d": "from Norway",
+          "ref": "norway"
         }
       ],
       "x": [],
@@ -241330,7 +241100,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "bamme"
+          "ref": "bamme"
         },
         {
           "d": "manufactured in Normandy | manufactured in Normandy, white in color",
@@ -241381,11 +241151,11 @@
         },
         {
           "d": "attested in the Book of Rates (Willan 13), but exact meaning unknown | attested, but not defined in the Book of Rates (Willan 13), exact meaning unknown | attested in the Book of Rates (Willan 13)",
-          "raw": "castri"
+          "ref": "castri"
         },
         {
           "d": "attested in the Book of Rates (Willan 13), but exact meaning unknown | attested, but not defined in the Book of Rates (Willan 13), exact meaning unknown | attested in the Book of Rates (Willan 13)",
-          "raw": "nove castri"
+          "ref": "newcastle"
         },
         {
           "d": "attested in the Book of Rates (Willan 13), but exact meaning unknown | attested, but not defined in the Book of Rates (Willan 13), exact meaning unknown | attested in the Book of Rates (Willan 13)",
@@ -243399,7 +243169,7 @@
       "q": [
         {
           "d": "manufactured in Cornwall",
-          "raw": "de cornewaill"
+          "ref": "cornwall"
         }
       ],
       "x": [],
@@ -244791,7 +244561,7 @@
           "raw": "de canvas"
         },
         {
-          "raw": "de frese"
+          "ref": "frise"
         }
       ],
       "x": [],
@@ -245108,11 +244878,7 @@
         },
         {
           "d": "broken tun as an article of commerce",
-          "raw": "confractum"
-        },
-        {
-          "raw": "awmes",
-          "d": "a tun made up of aumes, a measure of Rhein wine equivalent to ⅓ of a dolium, here as a packing unit for dry goods of no particular size (see also dolium)"
+          "ref": "broken"
         },
         {
           "raw": "ponderis",
@@ -246135,7 +245901,7 @@
         },
         {
           "d": "empty, as an article of commerce",
-          "raw": "emty"
+          "ref": "empty"
         }
       ],
       "x": [],
@@ -247441,7 +247207,7 @@
         },
         {
           "d": "from the neck",
-          "raw": "de collis"
+          "ref": "nekke"
         },
         {
           "d": "small cut pieces",
@@ -248303,8 +248069,8 @@
       "d": "the flower-heads of one or another of various plants considered to have anthelmintic properties (i.e. of use against intestinal worms), such as swine's fennel or sulphurwort (OED s.v. wormseed); in particular the dried unexpanded flower-heads of species of Artemisia, produced in Turkestan, used medically against intestinal worms; Levant or Alexandrian wormseed (OED s.v. santonica, Stieda, Venice, 107) (see also pulvis pro vermibus, semen lumbricorum)",
       "q": [
         {
-          "raw": "garbole de",
-          "d": "‘garbled’, i.e. the refuse of wormseed, extraneous matter"
+          "d": "‘garbled’, i.e. the refuse of wormseed, extraneous matter",
+          "ref": "garbled"
         }
       ],
       "f": [
@@ -249339,8 +249105,8 @@
       "d": "felt used by saddlers for stuffing saddles (OED s.v. felt n.1 4, quote of 1611).",
       "q": [
         {
-          "raw": "felt",
-          "d": "felt for stuffing saddles"
+          "d": "felt for stuffing saddles",
+          "ref": "felt"
         }
       ],
       "aat": [
@@ -249744,7 +249510,7 @@
         },
         {
           "d": "drawn or printed on parchment",
-          "raw": "parchemyne"
+          "ref": "parchment"
         },
         {
           "raw": "paper",
@@ -249858,7 +249624,11 @@
         },
         {
           "d": "of lead",
-          "raw": "de plumbo|plumbi"
+          "raw": "plumbi"
+        },
+        {
+          "ref": "de plumbo",
+          "d": "of lead"
         },
         {
           "d": "of tin",
@@ -249939,11 +249709,19 @@
           "raw": "parketes"
         },
         {
-          "raw": "de alabastro|de alablastro|de alabastre|de alabaster",
+          "d": "of alabaster",
+          "ref": "alabaster"
+        },
+        {
+          "ref": "alabaster",
           "d": "of alabaster"
         },
         {
-          "raw": "de plaster|de plastre|of plaster|playster de parice|de plaustro",
+          "raw": "de plastre|of plaster|playster de parice|de plaustro",
+          "d": "of plaster (of Paris)"
+        },
+        {
+          "ref": "de plaster",
           "d": "of plaster (of Paris)"
         },
         {
@@ -249951,16 +249729,16 @@
           "d": "of burnt lime"
         },
         {
-          "raw": "de aumbre",
-          "d": "of amber"
+          "d": "of amber",
+          "ref": "amber"
         },
         {
           "raw": "beate marie|de beata maria|de sancta maria",
           "d": "of the Blessed Virgin Mary"
         },
         {
-          "raw": "de trinite",
-          "d": "of the Trinity"
+          "d": "of the Trinity",
+          "ref": "de trinite"
         },
         {
           "raw": "de jhesu|de jhesus",
@@ -252961,7 +252739,7 @@
       "q": [
         {
           "d": "of Flemish manufacture",
-          "raw": "flemysch"
+          "ref": "flanders"
         }
       ],
       "x": [],
@@ -253230,10 +253008,6 @@
         {
           "raw": "in barres|in barrys|cast in barres",
           "d": "tin cast in bars"
-        },
-        {
-          "raw": "bolles",
-          "d": "tin bowls"
         }
       ],
       "f": [
@@ -253778,7 +253552,11 @@
         },
         {
           "d": "embroidered",
-          "raw": "vertera enbroudata|imbrodred"
+          "raw": "vertera enbroudata"
+        },
+        {
+          "ref": "embroidered",
+          "d": "embroidered"
         },
         {
           "d": "with silver thread",
@@ -255711,11 +255489,19 @@
           "ref": "sweet"
         },
         {
-          "raw": "lampadis|lampedis",
+          "d": "lamp oil",
+          "ref": "lampadis"
+        },
+        {
+          "ref": "lampadis",
           "d": "lamp oil"
         },
         {
-          "raw": "de civile|syvelle",
+          "raw": "syvelle",
+          "d": "from Seville"
+        },
+        {
+          "ref": "civile",
           "d": "from Seville"
         }
       ],
@@ -257616,7 +257402,11 @@
         },
         {
           "d": "altar table (see also tabyl pro altare)",
-          "raw": "auter|awter|pro alter|pro altare|de ligno pro altare|depicta pro uno altari"
+          "raw": "pro alter|pro altare|de ligno pro altare|depicta pro uno altari"
+        },
+        {
+          "ref": "altar",
+          "d": "altar table (see also tabyl pro altare)"
         },
         {
           "d": "tailor's work-table",
@@ -257653,7 +257443,11 @@
           "ref": "prussia"
         },
         {
-          "raw": "alabastre|de alabastre|cum imaginibus de alabastre",
+          "raw": "cum imaginibus de alabastre",
+          "d": "of alabaster (with alabaster figures)"
+        },
+        {
+          "ref": "alabaster",
           "d": "of alabaster (with alabaster figures)"
         },
         {
@@ -257905,14 +257699,6 @@
         {
           "raw": "pellium cuniculorum",
           "d": "made of rabbit skins | made of the belly fur of rabbits"
-        },
-        {
-          "raw": "cuniculorum",
-          "d": "made of rabbit skins"
-        },
-        {
-          "raw": "boge shankes",
-          "d": "made of lambskin with the fur (from the legs of the animal) dressed outward (OED s.v. budge sb.1)"
         },
         {
           "raw": "de martiryns",
@@ -258792,8 +258578,8 @@
           "ref": "small"
         },
         {
-          "raw": "fulle",
-          "d": "meaning unknown"
+          "d": "meaning unknown",
+          "ref": "full"
         }
       ],
       "x": [],
@@ -260095,10 +259881,6 @@
     "seed": {
       "d": "The characteristic reproductive bodies of both angiosperms (flowering plants) and gymnosperms (conifers, cycads, and ginkgos) and the ovary that encloses it. A seed consists of a miniature undeveloped plant (the embryo), which, alone or in the company of stored food for its early development after germination, is surrounded by a protective coat (the testa). Seeds are frequently small in size and suited to perform a wide variety of functions, such as multiplication, perennation (surviving seasons of stress such as winter), dormancy (a state of arrested development), and dispersal.  [Source: Getty AAT]",
       "q": [
-        {
-          "d": "seed of basil",
-          "raw": "basiliconis"
-        },
         {
           "d": "melon seed",
           "raw": "de melone"
@@ -265421,6 +265203,11 @@
             4
           ],
           "w": 0
+        },
+        {
+          "t": "sepboxis",
+          "s": [],
+          "w": 0
         }
       ],
       "groups": [
@@ -265453,8 +265240,8 @@
       "d": "fuller's teasel: the dried prickly flower-head of the fuller's teasel (Dipsacus fullonum), used to raise a nap on cloth (OED s.v. teasel 2a).",
       "q": [
         {
-          "raw": "debilis",
-          "d": "of low quality"
+          "d": "of low quality",
+          "ref": "coarse"
         },
         {
           "d": "trade-name for larger, coarser class of teasel, for the strongest cloth",
@@ -265462,7 +265249,7 @@
         },
         {
           "d": "teasel for capmakers",
-          "ref": "cappers"
+          "ref": "cap"
         },
         {
           "d": "loose (not packed in skyve)",
@@ -266063,6 +265850,16 @@
           "t": "bakon",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "bakone",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bokon",
+          "s": [],
+          "w": 0
         }
       ],
       "groups": [
@@ -266090,7 +265887,7 @@
           "note": "The animal it is made from. A related concept, NOT a type: bacon is not a kind of pig, so this must not sit in `aat`, where the AAT grouping map unions the ancestors of every 300- id and would file bacon under animals."
         }
       ],
-      "memo": "AAT covers no foodstuff here, so the identifier is Wikidata Q11106 (22 Sep 2026); 92 other entries already use Wikidata ids. Related to AAT 300250114 Sus (genus), the animal it comes from."
+      "memo": "AAT covers no foodstuff here, so the identifier is Wikidata Q11106 (22 Sep 2026); 92 other entries already use Wikidata ids. Related to AAT 300250114 Sus (genus), the animal it comes from. — Should me merged with all the different bacons - \"bokon\" Should also not be a qualifier. EB 12/08/2026. — \"Johanne Bacon\" etc. will need to be removed as a qualifier - name confusion. EB 12/08/2026. — Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026. — Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026."
     },
     "mull madder": {
       "d": "mull madder: madder of the lowest quality",
@@ -266842,6 +266639,362 @@
       ],
       "groups": [
         "Units, weights & measures"
+      ]
+    },
+    "bream": {
+      "d": "the common name of a freshwater fish (Abramis brama) called also Carp-bream, which inhabits lakes and deep water, and is distinguished by its yellowish colour and the high arched form of its back (OED s.v. bream n., cf. MED s.v. breame)",
+      "f": [
+        {
+          "t": "bream",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "breme",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "sinceLeftovers": true
+    },
+    "ballance": {
+      "d": "balances / scales made of latten",
+      "f": [
+        {
+          "t": "ballance",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "sinceLeftovers": true
+    },
+    "bridle boss": {
+      "f": [
+        {
+          "t": "bridle boss",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "bridle bosses",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridile boss",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridile booces",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridile bosses",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridel boces",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bosez pro bridelles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bosis pro bridelles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bosses pro bridelles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bosys for brydels",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bosses for bridles",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Bosses, rivets or nails with a large head, for ornament or protection of a bridle.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Hardware & fasteners"
+      ],
+      "sinceLeftovers": true
+    },
+    "bridle bit": {
+      "f": [
+        {
+          "t": "bridle bit",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "bridle bits",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brydylle bit",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brydylle bittes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "brydylle byttes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridile bit",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridille byttes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridelle bittes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bridelle byttes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bittes pro bridilles",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Mouthpieces of bridles.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Tools & equipment"
+      ],
+      "sinceLeftovers": true
+    },
+    "conserve cherry": {
+      "f": [
+        {
+          "t": "conserve cherry",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "conserve cheres",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "conserve cherries",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Cherries preserved as a conserve.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Food, spices & comestibles"
+      ],
+      "sinceLeftovers": true
+    },
+    "cark bisor": {
+      "f": [
+        {
+          "t": "cark bisor",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "kark bisor",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Unknown commodity counted by the cark (4-24-B-0001, 1553: '26 gros cark bisor'); exact meaning unknown.",
+      "q": [],
+      "x": [],
+      "groups": [],
+      "sinceLeftovers": true
+    },
+    "couch bed": {
+      "f": [
+        {
+          "t": "couch bed",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "coche bed",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "coche bedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "coche beddes",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "Couch-bed (4-11-A-0432 '1 coche bed'; 4-10-B-0372 '3 coche beddes').",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Furnishings & household goods"
+      ],
+      "sinceLeftovers": true
+    },
+    "beaver ballok": {
+      "f": [
+        {
+          "t": "beaver ballok",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "bever ballokes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bever ballok",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "beaver ballokes",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "beaver testicles (MED s.v. bever n. (1): beferes herthan); castoreum",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Furs, skins & leather"
+      ],
+      "sinceLeftovers": true
+    },
+    "beer cruse": {
+      "f": [
+        {
+          "t": "beer cruse",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "bere cruses",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bere cruse",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "earthenware drinking pot for beer",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Containers & vessels",
+        "Tools & equipment"
+      ],
+      "sinceLeftovers": true
+    },
+    "budge shank": {
+      "f": [
+        {
+          "t": "budge shank",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "boge shankes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "boge shanke",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "budge shanks",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "shanks (leg skins) of budge; related to budge",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Furs, skins & leather"
+      ],
+      "sinceLeftovers": true,
+      "related": [
+        "budge"
+      ]
+    },
+    "budge head": {
+      "f": [
+        {
+          "t": "budge head",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "bogy heddes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "boge heddes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "budge heads",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "heads (head skins) of budge; related to budge",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Furs, skins & leather"
+      ],
+      "sinceLeftovers": true,
+      "related": [
+        "budge"
       ]
     }
   },

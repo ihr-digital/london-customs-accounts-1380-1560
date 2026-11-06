@@ -1209,9 +1209,9 @@
     "updated": "2026-08-12T11:32:12.714Z"
   },
   "rawqual:alles": {
-    "memo": "\"alle\" here should be part of \"awl blades\" concept. EB 12/08/2026",
+    "memo": "Unknown qualifier of gum EB 04/11/2026.",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T11:36:44.300Z"
+    "updated": "2026-11-04T21:04:31.036Z"
   },
   "rawqual:allesecre": {
     "memo": "Check context here. EB 12/08/2026",
@@ -1270,11 +1270,6 @@
     ],
     "text": "\"in Anglia\" not a qualifier - remove."
   },
-  "rawqual:anguillarum": {
-    "memo": "This needs to be merged with the concept anguillarum. EB 12/08/2026",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T11:48:13.523Z"
-  },
   "rawqual:aperte|apertum|appertum|venicie apertum|venicie apertum mesane": {
     "memo": "Will need merging with \"aperti\" - connected to silk. EB 12/08/2026.",
     "reviewer": "EliotBenbow",
@@ -1295,31 +1290,6 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T12:06:38.074Z"
   },
-  "rawqual:bacon": {
-    "memo": "\"Johanne Bacon\" etc. will need to be removed as a qualifier - name confusion. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:07:57.172Z"
-  },
-  "rawqual:bacone": {
-    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:08:43.717Z"
-  },
-  "rawqual:baconis": {
-    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:08:55.288Z"
-  },
-  "rawqual:bacun": {
-    "memo": "Should be promoted to \"bacon\" concept and merged. Not a qualifier. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:09:04.837Z"
-  },
-  "rawqual:bagg": {
-    "memo": "\"Bag\" not a qualifier in any of the examples given here. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:09:39.658Z"
-  },
   "rawqual:balies": {
     "memo": "Will need checking. Meaning unclear. EB 12/08/2026",
     "reviewer": "EliotBenbow",
@@ -1330,45 +1300,25 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T12:13:34.948Z"
   },
-  "rawqual:bamme": {
-    "memo": "Clearly a qualifier of canvas but meaning unknown according to Jenks. Only seen once in 1513: Lading ID 4-10-B-0575",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:17:26.981Z"
-  },
   "rawqual:band": {
-    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 12/08/2026",
+    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 04/11/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:19:17.677Z"
+    "updated": "2026-11-04T21:16:43.362Z"
   },
   "rawqual:bande": {
-    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 12/08/2026.",
+    "memo": "How to deal with \"large bond\" \"small bond\" technically a qualifier in most cases but also a measure. Very specific to train oil commodity. EB 04/11/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:20:13.840Z"
+    "updated": "2026-11-04T21:17:11.620Z"
   },
   "rawqual:banker": {
     "memo": "Should be merged into \"banker cloths\" concept. EB 12/08/2026.",
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T12:20:36.029Z"
   },
-  "rawqual:barellis": {
-    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:23:13.535Z"
-  },
   "rawqual:barges": {
-    "memo": "\"coopers barges\" are one of the unknown concepts. These will need to be merged into that unknown concept. EB 12/08/2026.",
+    "memo": "\"coopers barges\" are one of the unknown concepts. These will need to be merged into that unknown concept. EB 04/11/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:25:07.281Z"
-  },
-  "rawqual:barrelles": {
-    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:27:16.518Z"
-  },
-  "rawqual:barrels": {
-    "memo": "Most of these should be merged under the barrel weight/unit of measurement. EB 12/08/2026",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:27:19.694Z"
+    "updated": "2026-11-04T21:18:47.763Z"
   },
   "rawqual:basiliconis": {
     "memo": "\"seminis basiliconis\" will need merging into the basil seed concept. EB 12/08/2026",
@@ -1381,14 +1331,14 @@
     "updated": "2026-08-12T12:31:33.013Z"
   },
   "rawqual:bast|baste": {
-    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026.",
+    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026. Looks to be one example of \"bast\" as qualifier for hat - and then missatributed across the corpus. EB 04/11/2026.",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:44:21.477Z"
+    "updated": "2026-11-04T21:22:59.033Z"
   },
   "rawqual:bast|de baste": {
-    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026.",
+    "memo": "Check against bast rope confusion: \"bast ropes\" - concept not qualifier EB 12/08/2026. Names also need to be removed from this qualifier. EB 04/11/2026.",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:44:25.760Z"
+    "updated": "2026-11-04T21:22:17.672Z"
   },
   "rawqual:auter|awter|pro alter|pro altare|de ligno pro altare|depicta pro uno altari": {
     "memo": "Will need sifting/connecting to \"altar\" as a qualifier. See other issue for the complications of this. EB 12/08/2026",
@@ -1400,15 +1350,14 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T12:46:30.376Z"
   },
-  "rawqual:batry": {
-    "memo": "Battery should almost certainly not be a qualifier here. Also \"buttri\" should be decoupled and merged with \"butter/buttery\" concept. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:51:05.583Z"
-  },
   "rawqual:beate marie|de beata maria|de sancta maria": {
     "memo": "See Github issue - will need sifting and merging with \"beate marie.\" EB 12/08/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T12:53:54.560Z"
+    "updated": "2026-11-04T21:26:27.949Z",
+    "text": "Duplicate of \"beate marie\" seen above - remove.",
+    "modes": [
+      "Not a qualifier — remove"
+    ]
   },
   "rawqual:bed": {
     "memo": "Some of these will need sifting as concepts. EB 12/08/2026",
@@ -1465,15 +1414,10 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T13:17:04.637Z"
   },
-  "rawqual:bier": {
-    "memo": "Most of these will need merging into the beer concept. EB 12/08/2026. The attestation to \"sugar\"",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:18:02.999Z"
-  },
   "rawqual:bisor": {
-    "memo": "This should be promote to an unknown concept \"cark bisor\" EB 12/08/2026. Only appears in one cargo in 1553. Lading ID 4-24-B-0001",
+    "memo": "This should be promote to an unknown concept \"cark bisor\" EB 04/11/2026. Only appears in one cargo in 1553. Lading ID 4-24-B-0001",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:22:30.279Z",
+    "updated": "2026-11-04T16:02:05.643Z",
     "modes": [
       "Promote to standalone concept"
     ],
@@ -1491,11 +1435,6 @@
     "modes": [
       "Merge with another qualifier"
     ]
-  },
-  "rawqual:bokon": {
-    "memo": "Should me merged with all the different bacons - \"bokon\" Should also not be a qualifier. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:25:07.372Z"
   },
   "rawqual:blanket|blanckett|de blanket": {
     "memo": "These should be sifted and merged where appropriate. May also be a qualifier in specific places. Create qualifier \"of blanket\"? EB 12/08/2026.",
@@ -1520,11 +1459,6 @@
     "memo": "Most of these will need merging with \"bokerams\" and promoting into the \"buckram\" concept. Then a qualifier of buckram for a qualifier of hats, curtains etc. can be created. EB 12/08/2026.",
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T13:36:35.826Z"
-  },
-  "rawqual:bokerams": {
-    "memo": "These will need merging with \"bokerams\" and promoting into the \"buckram\" concept. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:37:05.860Z"
   },
   "rawqual:bokes": {
     "memo": "The example here is an example of buck skin \"bukes pellibus\" EB 12/08/2026.",
@@ -1554,25 +1488,20 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T13:46:22.627Z"
   },
-  "rawqual:bonette": {
-    "memo": "Unclear whether this is a concept or qualifier. EB 12/08/2026",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:47:57.773Z"
-  },
   "rawqual:bordes": {
     "memo": "Most of these are part of composite concepts and not qualifiers. Will need sifting and merging where appropriate. EB 12/08/2026.",
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T13:52:02.261Z"
   },
   "rawqual:borde": {
-    "memo": "See above \"bord\" problem EB 12/08/2026.",
+    "memo": "See above \"bord\" problem EB 04/11/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:52:25.590Z"
+    "updated": "2026-11-04T21:52:09.115Z"
   },
   "rawqual:borne": {
-    "memo": "Unknown here. Check context. EB 12/08/2026",
+    "memo": "Unknown here. Check context. EB 04/11/2026 - Given that this relates to a damaged entry context is not clear.",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:52:51.483Z"
+    "updated": "2026-11-04T16:03:15.577Z"
   },
   "rawqual:botelle|bottel|botels": {
     "memo": "Unclear whether these should be qualifiers or part of composite concepts. Will need checking. EB 12/08/2026",
@@ -1580,9 +1509,9 @@
     "updated": "2026-08-12T13:53:37.408Z"
   },
   "rawqual:brede": {
-    "memo": "These should be merged into the \"ginger bread\" concept. EB 12/08/2026.",
+    "memo": "These should be merged into the \"ginger bread\" concept. EB 04/011/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T13:57:46.522Z"
+    "updated": "2026-11-04T15:59:11.865Z"
   },
   "qual:bullene": {
     "text": "Merge with \"Bologna\"",
@@ -1597,20 +1526,10 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T14:08:39.968Z"
   },
-  "rawqual:bocles": {
-    "memo": "Should be merged into \"buckle\" concept with breechgirdle concept? EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T14:31:03.351Z"
-  },
   "rawqual:bogy heddes": {
     "memo": "See above for problems with budge. EB 12/08/2026.",
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T14:32:33.916Z"
-  },
-  "rawqual:bowstaves": {
-    "memo": "These should be merged into the bowstave concept. EB 12/08/2026.",
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T14:33:19.024Z"
   },
   "rawqual:bounden": {
     "memo": "Clearly an iron pan of some sort but exact meaning unknown. Imported by London Ironmonger Robert Byfeld. EB 12/08/2026.",
@@ -1631,18 +1550,10 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T14:40:38.898Z"
   },
-  "rawqual:breme": {
-    "text": "Promote to standalone concept: bream",
-    "modes": [
-      "Promote to standalone concept"
-    ],
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T14:48:41.578Z"
-  },
   "rawqual:bridelles": {
-    "memo": "Most of these will need merging with \"bridle boss\" concept. EB 12/08/2026.",
+    "memo": "Most of these will need merging with \"bridle boss\" concept. EB 04/11/2026",
     "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T14:54:42.782Z"
+    "updated": "2026-11-04T15:59:37.297Z"
   },
   "rawqual:bridile": {
     "memo": "Most of these will need merging with \"bridle boss\" concept. EB 12/08/2026.",
@@ -1728,14 +1639,6 @@
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T16:25:19.967Z"
   },
-  "qual:cased": {
-    "text": "",
-    "modes": [
-      "Merge with another qualifier"
-    ],
-    "reviewer": "EliotBenbow",
-    "updated": "2026-08-12T16:26:07.460Z"
-  },
   "qual:cappers": {
     "text": "Merge with cap.",
     "modes": [
@@ -1753,5 +1656,221 @@
     "text": "Merge with \"banner\".",
     "reviewer": "EliotBenbow",
     "updated": "2026-08-12T16:46:49.768Z"
+  },
+  "rawqual:beris": {
+    "memo": "\"Grayne berres\" etc. should be a compound concept. EB 03/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-03T21:12:34.144Z"
+  },
+  "rawqual:blad": {
+    "memo": "\"sword blaades\" should be rendered as a compound concept - not split into a qualifier. EB 03/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-03T21:14:26.246Z"
+  },
+  "bream": {
+    "text": "Promote to standalone concept: bream",
+    "modes": [
+      "Promote to standalone concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-08-12T14:48:41.578Z"
+  },
+  "rawqual:castridge": {
+    "memo": "Either scribal or Stuart error - this should be \"Eastridge\" wool. EB 03/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-03T21:25:38.075Z"
+  },
+  "rawqual:cave": {
+    "memo": "Likely a variant of \"calf skin\" - compound concept. Merge? EB 03/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-03T21:27:23.921Z"
+  },
+  "rawqual:caddes": {
+    "memo": "This needs sifting with the other variants of caddes/caddez/cadez - completely different concepts merged together under these shared spellings. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:08:52.729Z"
+  },
+  "rawqual:caddez": {
+    "memo": "This needs sifting with the other variants of caddes/caddez/cadez - completely different concepts merged together under these shared spellings. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:09:05.490Z"
+  },
+  "rawqual:cadez": {
+    "memo": "This needs sifting with the other variants of caddes/caddez/cadez - completely different concepts merged together under these shared spellings. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:09:08.069Z"
+  },
+  "rawqual:candelstikkes": {
+    "memo": "Note the sample cargo here \"tyn candlylstickes\" will need removing - but the actual qualifier does seem to be canonical. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:10:03.937Z"
+  },
+  "rawqual:carnis": {
+    "memo": "\"carssys\" \"carzis\" are variants of Kersey and should be separated from this and merged into the \"Kersey\" concept. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:31:22.483Z"
+  },
+  "qual:casdok": {
+    "text": "Promote to concept \"casduk\"",
+    "modes": [
+      "Promote to standalone concept"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:32:17.625Z"
+  },
+  "rawqual:casteng": {
+    "memo": "Unknown qualifier. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:33:31.734Z"
+  },
+  "rawqual:cheres": {
+    "memo": "Should be a compound concept - i.e. conserved cherries. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:35:15.824Z"
+  },
+  "rawqual:cheses": {
+    "memo": "Note confusion here between two concepts. Fig cheese and cheese as a regular item. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:35:38.034Z"
+  },
+  "rawqual:cil": {
+    "memo": "Unknown variant of silk. EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:35:58.767Z"
+  },
+  "rawqual:clothe": {
+    "memo": "Should be added to the compound commodity \"cushion cloth\" EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:40:42.235Z"
+  },
+  "rawqual:clothis": {
+    "memo": "Example cargoes should be added to the compound concepts \"banker\" or \"banker cloth\" and \"table cloth\" EB 04/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:41:07.245Z"
+  },
+  "rawqual:coche": {
+    "memo": "Note the confusion in attested between \"bead and bed\" - these should be examples of couch-beds. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:41:50.391Z"
+  },
+  "rawqual:coddes": {
+    "memo": "Note that all sample cargoes refer to \"cod heads\" and should be rendered under that compound concept. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:42:34.091Z"
+  },
+  "rawqual:colerd": {
+    "memo": "Only appears in 1 lading in 1520: Tunnage 4-13-A-0126 [23 Mar 1520]. Jenks does not define in the index. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:44:43.508Z"
+  },
+  "qual:cordeners": {
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T16:55:07.309Z",
+    "text": "Merge with cordwainer."
+  },
+  "rawqual:crude horstaille": {
+    "memo": "Appears in 1 lading in 1445: Tunnage 2-9-C-0067 [22 Nov 1445]: \"De galea Johannis Cappelle patroni 22° die Novembris.\" Defined in index as \"raw silk\" keep as distinct language or fold? EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T17:14:04.783Z"
+  },
+  "rawqual:cuniculorum": {
+    "memo": "Fold into the compound concept \"rabbit skin\" EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T17:16:57.400Z"
+  },
+  "rawqual:dalisandre": {
+    "memo": "Another variant of \"board alisaundre\" see above. These need to be merged into a compound concept. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T17:19:26.396Z"
+  },
+  "qual:de denaunt": {
+    "text": "Merge with \"Denaunt.\"",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T17:26:30.127Z",
+    "modes": [
+      "Merge with another qualifier"
+    ]
+  },
+  "rawqual:cum rubbers": {
+    "memo": "Check the context of these different forms. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T17:46:30.865Z"
+  },
+  "rawqual:de capitibus": {
+    "memo": "This needs some sifting and then promoting to a canonical qualifier. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T18:05:14.409Z"
+  },
+  "rawqual:fistola": {
+    "memo": "This needs grouping and merging with the cassiafistola concept. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T18:23:22.008Z"
+  },
+  "rawqual:angew non dulce": {
+    "memo": "Sift and merge \"non sweet\" non dulcis should probably be a qualifier in its own right. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:06:52.502Z"
+  },
+  "qual:ares": {
+    "text": "Remove and merge with \"arras\" concept.",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:09:11.578Z"
+  },
+  "rawqual:barell": {
+    "memo": "Most of these will need sifting. Set out \"pro barrellis\" as a separate qualifier. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:17:57.351Z"
+  },
+  "rawqual:barrel": {
+    "memo": "Most of these will need sifting. Set out \"pro barrellis\" as a separate qualifier. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:19:14.016Z"
+  },
+  "rawqual:beche": {
+    "memo": "This will need sifting. Remove name \"Beche\" and \"beche bordes\" as compound concept. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:27:34.099Z"
+  },
+  "rawqual:berres": {
+    "memo": "\"Grayne berres\" etc. should be a compound concept. EB 03/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:41:44.378Z"
+  },
+  "rawqual:berris": {
+    "memo": "\"Grayne berres\" etc. should be a compound concept. EB 03/11/2026",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:41:46.450Z"
+  },
+  "rawqual:bord": {
+    "memo": "A bit of a mess. Some of these should be connected as part of the composite concept \"board alexander.\" \"Companyet de la Bord\" should be removed as a name. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:51:57.597Z"
+  },
+  "rawqual:botelle": {
+    "memo": "Not merged into the bottle concept - most of these \"Botelle\" need removing as names. EB 04/11/2026.",
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:57:26.989Z"
+  },
+  "qual:copin": {
+    "text": "Merge with \"coppyn.\"",
+    "modes": [
+      "Merge with another qualifier"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T21:59:35.425Z"
+  },
+  "rawqual:of": {
+    "text": "Not a qualifier - remove.",
+    "modes": [
+      "Not a qualifier — remove"
+    ],
+    "reviewer": "EliotBenbow",
+    "updated": "2026-11-04T22:57:27.324Z"
   }
 }

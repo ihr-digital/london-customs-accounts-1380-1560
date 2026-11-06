@@ -10,7 +10,7 @@
       ],
       "gloss": "Unknown qualifier for untanned leather",
       "memo": "Unknown qualifier for tawed leather. Only appears once in 1450: 2-10-E-0124",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "acres": {
@@ -46,9 +46,15 @@
       "lang": "mul",
       "forms": [
         "alabaster",
-        "alablaster"
+        "alablaster",
+        "alabastre",
+        "de alabastro",
+        "de alabastre",
+        "de alabaster",
+        "de alablastro"
       ],
-      "gloss": "of alabaster "
+      "gloss": "of alabaster ",
+      "memo": "Check the context here. EB 12/08/2026"
     },
     "albertyn": {
       "label": "albertyn",
@@ -58,7 +64,7 @@
       ],
       "gloss": "Unknown qualifier of pellis/pellibus",
       "memo": "Unknown qualifier - undefined by Jenks. EB 12/08/2026. Clearly some kind of skin. Only appears in 1463. Lading ID 3-1-E-0124",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "alchemy": {
@@ -72,6 +78,15 @@
         "alcumye"
       ],
       "gloss": "made of alchemy — a gold-imitation metal alloy (brass/latten); OED s.v. alchemy 2"
+    },
+    "algary": {
+      "label": "algary",
+      "lang": "mul",
+      "forms": [
+        "algary"
+      ],
+      "gloss": "from the Algarve in Portugal.",
+      "memo": "Found in 1 cargo of 1553: Tunnage 4-24-B-0054 [16 Dec 1553]: \"Decimo sexto Decembris\""
     },
     "all sortes": {
       "label": "all sortes",
@@ -89,37 +104,36 @@
         "almayne",
         "almen",
         "almene",
-        "almannie"
-      ],
-      "gloss": "of German (Almain) manufacture"
-    },
-    "almyn": {
-      "label": "Almyn",
-      "lang": "geo",
-      "gloss": "from Almyn",
-      "forms": [
+        "almannie",
+        "de almania",
+        "douche",
+        "duche",
         "almyn"
       ],
-      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+      "gloss": "of German (Almain) manufacture"
     },
     "altar": {
       "label": "altar",
       "lang": "mul",
       "forms": [
-        "auter"
+        "auter",
+        "awter"
       ],
       "gloss": "For an altar. ",
-      "memo": "Check that these should not be merged as part of concepts. EB 12/08/2026"
+      "memo": "Will need sifting/connecting to \"altar\" as a qualifier. See other issue for the complications of this. EB 12/08/2026"
     },
     "amber": {
       "label": "amber",
       "lang": "mul",
       "forms": [
         "ambre",
-        "aumbre"
+        "aumbre",
+        "de aumbre"
       ],
       "gloss": "of amber ",
-      "memo": "Some of these should be amber as a concept rather than a qualifier. Amber as a qualifier should be for amber beads etc. 12/08/2026."
+      "memo": "Some of these should be amber as a concept rather than a qualifier. Amber as a qualifier should be for amber beads etc. 12/08/2026.",
+      "helpWanted": true,
+      "reviewed": false
     },
     "ammoniac": {
       "label": "ammoniac",
@@ -131,7 +145,7 @@
         "armonyake"
       ],
       "gloss": "gum ammoniac (medicinal gum)",
-      "memo": "\"sal armoneak\" and \"gumme armoniac\" should probably be concepts rather than separated qualifiers. "
+      "memo": "\"sal armoneak\" and \"gumme armoniac\" should probably be concepts rather than separated qualifiers. EB 04/11/2026"
     },
     "anjou": {
       "label": "Anjou",
@@ -150,7 +164,9 @@
       "forms": [
         "aperte",
         "aperti",
-        "apperti"
+        "apperti",
+        "apertum",
+        "appertum"
       ],
       "gloss": "open (open-weave, or unwrapped)"
     },
@@ -179,7 +195,7 @@
         "hasPolygon": true,
         "osm_relation": "5631846"
       },
-      "memo": "Gum arabic should probably be a multi-compartment concept rather than concept + qualifier. EB 12/08/2026"
+      "memo": "Gum arabic should probably be a multi-compartment concept rather than concept + qualifier. EB 04/11/2026"
     },
     "archer": {
       "label": "archer",
@@ -206,8 +222,7 @@
         "aries",
         "arrys"
       ],
-      "gloss": "arras, a rich tapestry fabric woven at Arras",
-      "memo": "Should be promoted to concept status and merged with \"Arras\" EB 12/08/2026"
+      "gloss": "arras, a rich tapestry fabric woven at Arras"
     },
     "arming": {
       "label": "arming",
@@ -301,7 +316,16 @@
         "bakkes"
       ],
       "gloss": "fur from the back of the animal",
-      "memo": "\"olei baco\" is will need to be removed from this qualifier set. EB 12/08/2026"
+      "memo": "\"olei baco\" is will need to be removed from this qualifier set. EB 04/11/2026"
+    },
+    "bamme": {
+      "label": "bamme",
+      "lang": "mul",
+      "forms": [
+        "bamme"
+      ],
+      "gloss": "Unknown variant of canvas. ",
+      "memo": "Clearly a qualifier of canvas but meaning unknown according to Jenks. Only seen once in 1513: Lading ID 4-10-B-0575"
     },
     "baras": {
       "label": "baras",
@@ -383,6 +407,14 @@
       ],
       "gloss": "Bay salt, from the Baye de Bourgneuf"
     },
+    "beame": {
+      "label": "beame",
+      "lang": "mul",
+      "forms": [
+        "beame"
+      ],
+      "gloss": "of Bohemian manufacture. "
+    },
     "beatemarie": {
       "label": "beate marie",
       "lang": "mul",
@@ -390,7 +422,7 @@
         "beate marie"
       ],
       "gloss": "of the Virgin Mary ",
-      "memo": "Several of these will need sifting as non qualifiers: \"factore et attornato prioris monasterii beate Marie et sancti Martini Dovorrie\" EB 12/08/2026.",
+      "memo": "Several of these will need sifting as non qualifiers: \"factore et attornato prioris monasterii beate Marie et sancti Martini Dovorrie\" EB 04/11/2026.",
       "helpWanted": true,
       "reviewed": false
     },
@@ -407,10 +439,13 @@
       "label": "beaver",
       "lang": "mul",
       "forms": [
-        "bever"
+        "bever",
+        "de bevere",
+        "bevere",
+        "de bever"
       ],
       "gloss": "",
-      "memo": "Some of these will need sifting as composite concepts. EB 12/08/2026."
+      "memo": "Some of these will need sifting as composite concepts. EB 04/11/2026"
     },
     "bed": {
       "label": "for beds",
@@ -420,7 +455,6 @@
         "lecti"
       ],
       "gloss": "for beds / bed-hangings",
-      "memo": "Some of these will need sifting as concepts - i.e. bedcovers. \"lectis enbroudatis\" etc. \"lectis de worsted.\" EB 12/08/2026",
       "helpWanted": true,
       "reviewed": false
     },
@@ -461,18 +495,9 @@
         "benshille"
       ],
       "gloss": "Type of cloth of an unknown location. ",
-      "memo": "Clearly a type of cloth - location unknown. Jenks does not identify. EB 12/08/2026",
-      "helpWanted": true,
+      "memo": "Clearly a type of cloth - location unknown. Jenks does not identify. EB 04/11/2026",
+      "helpWanted": false,
       "reviewed": false
-    },
-    "berfflete": {
-      "label": "Berfflete",
-      "lang": "geo",
-      "gloss": "from Berfflete",
-      "forms": [
-        "berfflete"
-      ],
-      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
     },
     "berflete": {
       "label": "Berflete",
@@ -482,7 +507,8 @@
         "barflete",
         "berflet",
         "berflete",
-        "berflette"
+        "berflette",
+        "berfflete"
       ],
       "gloss": "from Berflete in Flanders/Zeeland"
     },
@@ -520,8 +546,7 @@
         "hasPolygon": true,
         "osm_relation": "339549"
       },
-      "memo": "\"vicinis ville de Bilbao in comitatu Byskaye\" will need removing from this qualifier. EB 12/08/2026",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "binding": {
@@ -578,19 +603,20 @@
       ],
       "gloss": "blackened — a leather treatment (corium nigratum), distinct from the colour black"
     },
+    "blak furre": {
+      "label": "blak furre",
+      "lang": "mul",
+      "forms": [
+        "blak furre"
+      ],
+      "gloss": "Made of black fur. "
+    },
     "bleked": {
       "label": "bleked",
       "lang": "mul",
       "forms": [
         "bleked",
-        "blekked"
-      ],
-      "gloss": "bleached"
-    },
-    "blekid": {
-      "label": "blekid",
-      "lang": "mul",
-      "forms": [
+        "blekked",
         "bleched",
         "blekid"
       ],
@@ -645,22 +671,15 @@
         "osm_relation": "162798"
       }
     },
-    "bollen": {
-      "label": "Bollen",
-      "lang": "geo",
-      "gloss": "from Bologna",
-      "forms": [
-        "bollen"
-      ],
-      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'bologna' — review/merge in the editor."
-    },
     "bologna": {
       "label": "Bologna",
       "lang": "geo",
       "forms": [
         "bolone",
         "bullen",
-        "bulleyn"
+        "bulleyn",
+        "bollen",
+        "bullene"
       ],
       "gloss": "from Bologna",
       "geo": {
@@ -712,14 +731,17 @@
         "ossis",
         "ossium",
         "boon",
-        "boone"
+        "boone",
+        "de osse",
+        "de boon",
+        "de ossibus"
       ],
       "gloss": "made of bone",
       "aat": {
         "specific": "300011798",
         "label": "bone (material)"
       },
-      "memo": "\"cotille bones\" may need removing as \"cuttle bone\" here. EB 12/08/2026",
+      "memo": "\"cotille bones\" may need removing as \"cuttle bone\" here. EB 04/11/2026",
       "helpWanted": true,
       "reviewed": false
     },
@@ -774,7 +796,7 @@
         "bovini"
       ],
       "gloss": "of cows ",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "bower": {
@@ -785,7 +807,7 @@
       ],
       "gloss": "for the use of bowyers.",
       "memo": "\"Wyllyam Bower\" needs removing here as a name. Bower knives only appear once in 1481. Lading ID 3-5-A-0205",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "box": {
@@ -793,7 +815,10 @@
       "lang": "mul",
       "forms": [
         "box",
-        "boxe"
+        "boxe",
+        "de box",
+        "de ligno box",
+        "de boxe"
       ],
       "gloss": "Made of boxwood "
     },
@@ -836,7 +861,7 @@
         "brak"
       ],
       "gloss": "Cloth of an unknown type/location. ",
-      "memo": "\"brak nailles\" will need removing from this concept. Brak as an unknown example of cloth. Only appears once in 1442: Lading ID 2-8-A-0011 EB 12/08/2026. ",
+      "memo": "\"brak nailles\" will need removing from this concept. Brak as an unknown example of cloth. Only appears once in 1442: Lading ID 2-8-A-0011 EB 04/011/2026",
       "helpWanted": true,
       "reviewed": false
     },
@@ -872,6 +897,14 @@
         "label": "brass (alloy)"
       }
     },
+    "braunche de": {
+      "label": "braunche de",
+      "lang": "mul",
+      "forms": [
+        "braunche de"
+      ],
+      "gloss": "i.e. a larger piece of Coral sometimes used as domestic decorations. "
+    },
     "brazil": {
       "label": "brazil",
       "lang": "mul",
@@ -899,7 +932,7 @@
         "brewing"
       ],
       "gloss": "for brewing ",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "bridgwater": {
@@ -992,7 +1025,9 @@
         "britten",
         "brettyn",
         "breton",
-        "bryttysh"
+        "bryttysh",
+        "bretten",
+        "britayne"
       ],
       "gloss": "from Brittany",
       "geo": {
@@ -1060,7 +1095,8 @@
         "fractus",
         "pell",
         "repp",
-        "sheff"
+        "sheff",
+        "confractum"
       ],
       "gloss": "broken / damaged"
     },
@@ -1120,7 +1156,7 @@
         "hasPolygon": true,
         "osm_relation": "562654"
       },
-      "memo": "Couple of things need sifting from this \"bredes\" needs removing and connecting to \"pax\" as example of paxboards. EB 12/08/2026. ",
+      "memo": "Couple of things need sifting from this \"bredes\" needs removing and connecting to \"pax\" as example of paxboards. EB 04/11/2026",
       "helpWanted": true,
       "reviewed": false
     },
@@ -1180,7 +1216,8 @@
         "brysele",
         "bryselle",
         "brysselle",
-        "brissell"
+        "brissell",
+        "brysell"
       ],
       "gloss": "from City of Brussels",
       "geo": {
@@ -1194,7 +1231,10 @@
         ],
         "hasPolygon": true,
         "osm_relation": "58274"
-      }
+      },
+      "memo": "Note that \"brusshens\" should be removed from this qualifier. EB 04/11/2026",
+      "helpWanted": true,
+      "reviewed": false
     },
     "bryklanz": {
       "label": "bryklanz",
@@ -1214,8 +1254,9 @@
         "bryskhold"
       ],
       "gloss": "Unknown place of origin for cloth. ",
-      "helpWanted": true,
-      "reviewed": false
+      "helpWanted": false,
+      "reviewed": false,
+      "memo": "Remains unknown - EB 04/11/2026"
     },
     "buf": {
       "label": "buff",
@@ -1240,16 +1281,14 @@
       ],
       "gloss": "bugle bead of blown glass "
     },
-    "bullene": {
-      "label": "Bullene",
-      "lang": "geo",
-      "gloss": "from Bullene",
+    "bugle": {
+      "label": "bugle",
+      "lang": "mul",
       "forms": [
-        "bullene"
+        "bugle"
       ],
-      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Possible variant of 'bologna' — review/merge in the editor.",
-      "helpWanted": false,
-      "reviewed": false
+      "gloss": "Bugle - a type of blowing horn and musical instrument. ",
+      "memo": "Made canonical given it's presence as a type of horn. EB 04/11/2026"
     },
     "bumbasyne": {
       "label": "bumbasyne",
@@ -1312,8 +1351,7 @@
         "bocher"
       ],
       "gloss": "for butchers ",
-      "memo": "\"Johanne Bocher\" and \"Henrico Bocher\" etc. will need sifting from this qualifier. EB 12/08/2026",
-      "helpWanted": true,
+      "helpWanted": false,
       "reviewed": false
     },
     "bye": {
@@ -1348,6 +1386,14 @@
       "memo": "Check the logic of including these very diverse terms together seems to be a confusion? EB 12/08/2026",
       "helpWanted": true,
       "reviewed": false
+    },
+    "caen": {
+      "label": "Caen",
+      "lang": "mul",
+      "forms": [
+        "de caen"
+      ],
+      "gloss": "from Caen (stone). "
     },
     "calaber": {
       "label": "calaber",
@@ -1392,7 +1438,8 @@
         "camerik",
         "camery",
         "cameryk",
-        "cameryke"
+        "cameryke",
+        "de cambre"
       ],
       "gloss": "from Cambrai",
       "geo": {
@@ -1446,19 +1493,13 @@
         "cap",
         "cape",
         "cappe",
-        "capper"
+        "capper",
+        "cappers"
       ],
-      "gloss": "cap paper (a grade/size)"
-    },
-    "cappers": {
-      "label": "cappers",
-      "lang": "occ",
-      "forms": [
-        "cappers",
-        "capper"
-      ],
-      "gloss": "for cappers ",
-      "memo": "Peter Capper needs to be removed from this set - the teasels will be for the use of cappers and thus merged in with \"cappers\" EB 12/08/2026"
+      "gloss": "cap paper (a grade/size)",
+      "memo": "\"Petrum Capper\" will need removing from this qualifier as a name. EB 04/11/2026.",
+      "helpWanted": true,
+      "reviewed": false
     },
     "carpynter": {
       "label": "carpynter",
@@ -1488,7 +1529,9 @@
         "casduke",
         "casedoke"
       ],
-      "gloss": "casduk cloth (Westphalian)"
+      "gloss": "casduk cloth (Westphalian)",
+      "helpWanted": true,
+      "reviewed": false
     },
     "cased": {
       "label": "cased",
@@ -1506,7 +1549,8 @@
         "castelle",
         "castile"
       ],
-      "gloss": "obviously some kind of canvas, but exact meaning unknown"
+      "gloss": "obviously some kind of canvas, but exact meaning unknown",
+      "memo": "Note that most of the examples here are caught up as \"Castile soap\" will need sifting and removing. EB 04/11/2026"
     },
     "castile": {
       "label": "Castile soap",
@@ -1518,6 +1562,14 @@
         "castill"
       ],
       "gloss": "Castile soap (fine olive-oil soap)"
+    },
+    "castri": {
+      "label": "castri",
+      "lang": "mul",
+      "forms": [
+        "castri"
+      ],
+      "gloss": "Unknown variant of canvas. "
     },
     "cat": {
       "label": "cat",
@@ -1551,6 +1603,14 @@
         "chambered"
       ],
       "gloss": "with chambers (e.g. a gun with separate chambers)"
+    },
+    "chambyr": {
+      "label": "chambyr",
+      "lang": "mul",
+      "forms": [
+        "chambyr"
+      ],
+      "gloss": "i.e. chamber pots. "
     },
     "champagne": {
       "label": "Champagne",
@@ -1620,6 +1680,17 @@
       ],
       "gloss": "for chopping "
     },
+    "cire": {
+      "label": "cire",
+      "lang": "geo",
+      "forms": [
+        "cire",
+        "de cirian",
+        "cirian"
+      ],
+      "gloss": "Of Syrian origin ",
+      "memo": "i.e. Syrian"
+    },
     "cirian": {
       "label": "Cirian",
       "lang": "geo",
@@ -1644,7 +1715,9 @@
       "gloss": "from Civile",
       "forms": [
         "civile",
-        "civille"
+        "civille",
+        "civilys",
+        "de civile"
       ],
       "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
     },
@@ -1653,7 +1726,8 @@
       "lang": "mul",
       "forms": [
         "cole",
-        "carbonis"
+        "carbonis",
+        "de cole"
       ],
       "gloss": "made of sea-coal "
     },
@@ -1688,7 +1762,9 @@
         "grossum",
         "grossus",
         "refuse",
-        "refutz"
+        "refutz",
+        "reffus",
+        "corce"
       ],
       "gloss": "coarse / of low quality"
     },
@@ -1763,6 +1839,15 @@
         "broader": true
       }
     },
+    "columbyn": {
+      "label": "columbyn",
+      "lang": "geo",
+      "forms": [
+        "columbyn"
+      ],
+      "gloss": "from Quilon or Kolam, on the Malabar coast in Travancore",
+      "memo": "Only appears in one lading in 1401: Petty 2-1-B-0077 [24 Mar 1401]: \"In navi Wysse Jacobson eodem die\""
+    },
     "comfect": {
       "label": "comfect",
       "lang": "mul",
@@ -1770,6 +1855,15 @@
         "comfect"
       ],
       "gloss": "a sweetmeat (dates etc.) preserved in sugar"
+    },
+    "comfitz": {
+      "label": "comfitz",
+      "lang": "mul",
+      "forms": [
+        "comfitz"
+      ],
+      "gloss": "clearly some sort of lambskin, but exact meaning unknown ",
+      "memo": "Only appears in one lading in 1450: Tunnage 2-10-E-0134 [17 Sep 1450]: \"In navi Cornelii Eye eodem die\""
     },
     "comines": {
       "label": "Comines",
@@ -1809,6 +1903,15 @@
         "complett"
       ],
       "gloss": "complete (full suit of armour)"
+    },
+    "confessions": {
+      "label": "confessions",
+      "lang": "mul",
+      "forms": [
+        "confessions"
+      ],
+      "gloss": "clearly some kind of a pot, but exact meaning unknown",
+      "memo": "Only appears in 1 lading in 1472: Petty 3-2-G-0263 [20 Feb 1472]: \"De navi Johannis Sotard eodem die\""
     },
     "constance": {
       "label": "Constance",
@@ -1872,13 +1975,39 @@
       "aat": {
         "specific": "300011020",
         "label": "copper (metal)"
-      }
+      },
+      "memo": "Some confusion here with coopers see for instance \"copers barges\" Will need some more sifting EB 04/11/2026.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "coppyn": {
+      "label": "coppyn",
+      "lang": "mul",
+      "forms": [
+        "coppyn",
+        "copyn",
+        "copin"
+      ],
+      "gloss": "coppyn hats: a kind of hat from the Low Countries, perhaps associated with pilgrims to St James (Eliot Benbow, 7 Oct 2026: 'Coppyn' a diminutive of James/Jacob)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "coral": {
+      "label": "Coral",
+      "lang": "mul",
+      "forms": [
+        "de corallo",
+        "coral"
+      ],
+      "gloss": "Made of coral. "
     },
     "cordwainer": {
       "label": "cordwainer",
       "lang": "occ",
       "forms": [
-        "cordyners"
+        "cordyners",
+        "cordeners"
       ],
       "gloss": "for/used by cordwainers (leather shoemakers)"
     },
@@ -1892,7 +2021,8 @@
         "cornubii",
         "cornych",
         "cornyche",
-        "cornysche"
+        "cornysche",
+        "de cornewaill"
       ],
       "gloss": "from Cornwall",
       "geo": {
@@ -1979,9 +2109,19 @@
         "countrefette",
         "countrefettes",
         "cownterfet",
-        "cowterfet"
+        "cowterfet",
+        "countrefetz"
       ],
-      "gloss": "counterfeit / imitation"
+      "gloss": "counterfeit / imitation - in a metalwork context this can also mean decorated. "
+    },
+    "cours facone": {
+      "label": "cours facone",
+      "lang": "mul",
+      "forms": [
+        "cours facone"
+      ],
+      "gloss": "Qualifier of silk -  meaning unknown",
+      "memo": "Appears in 1 lading in 1513: Petty 4-10-B-0427 [20 May 1513]: \"De navi Cornelii Wygarre eodem die\" EB 04/11/2026"
     },
     "coventry": {
       "label": "Coventry",
@@ -2032,6 +2172,14 @@
       ],
       "gloss": "cattle / ox hide"
     },
+    "cracche": {
+      "label": "cracche",
+      "lang": "mul",
+      "forms": [
+        "cracche"
+      ],
+      "gloss": "Stable brushes - i.e. for brushing horses. "
+    },
     "cream": {
       "label": "cream",
       "lang": "mul",
@@ -2044,12 +2192,22 @@
         "label": "cream (color)"
       }
     },
+    "crede": {
+      "label": "crede",
+      "lang": "mul",
+      "forms": [
+        "crede"
+      ],
+      "gloss": "Unknown qualifier of \"emery\": a coarse variety of corundum, used for polishing metals, stones and glass (OED s.v. emery).",
+      "memo": "Appears in 1 lading in 1495: Tunnage 4-3-B-0320 [25 May 1495]: \"In navi Johannis Jolyfak eodem die\""
+    },
     "cremelle": {
       "label": "cremelle",
       "lang": "mul",
       "forms": [
         "cremelle",
-        "cremelles"
+        "cremelles",
+        "crimule"
       ],
       "gloss": "cotton cloth (OED s.v. cotton n.1 4) with borders, meaning, apparently, open work or lace, or perhaps even a fringe (OED s.v. cremil); however use here indicates a kind of textile, being counted in dozens or individual pieces (cf. MED s.v. crimel n. & adj.)"
     },
@@ -2061,7 +2219,10 @@
         "de crinibus",
         "cremil"
       ],
-      "gloss": "made of cremil — open work, lace, or perhaps a fringe, on textile borders (OED s.v. cremil)"
+      "gloss": "made of cremil — open work, lace, or perhaps a fringe, on textile borders (OED s.v. cremil)",
+      "memo": "This is likely an indexing mistake from Stuart: \"crinibus\" almost certainly refers to \"hair\" - Latin \"crinis\". Hat hair can be seen imported elsewhere in the LCA: https://logeion.uchicago.edu/crinis",
+      "helpWanted": true,
+      "reviewed": false
     },
     "crimson": {
       "label": "crimson",
@@ -2085,13 +2246,24 @@
         "crymsin",
         "crymson",
         "crymsyn",
-        "crymysen"
+        "crymysen",
+        "crymyson"
       ],
       "gloss": "crimson",
       "aat": {
         "specific": "300311345",
         "label": "crimson (color)"
       }
+    },
+    "cristall": {
+      "label": "cristall",
+      "lang": "mul",
+      "forms": [
+        "cristall",
+        "cristaline",
+        "cristalle"
+      ],
+      "gloss": ""
     },
     "croppe": {
       "label": "crop",
@@ -2145,6 +2317,41 @@
       ],
       "gloss": "thin worsted yarn, (according to Bailey) of two threads, used for tapestry and embroidery; also formerly for making fringes, laces, vestments, hosiery, etc. These yarns, being produced in different colors and used in combination in the making of one article, are often spoken of in the plural (OED crewel, n.1)"
     },
+    "crympyng": {
+      "label": "crympyng",
+      "lang": "mul",
+      "forms": [
+        "crympyng"
+      ],
+      "gloss": "Rabbit skins that are ringed, annulated (MED s.v. crimpen v. → crimping (ppl)) ",
+      "memo": "Appears in 1 lading of 1431: Tunnage 2-4-A-0020 [7 Nov 1431]: \"In navi Clais Hamour eodem die\""
+    },
+    "cryspe": {
+      "label": "cryspe",
+      "lang": "mul",
+      "forms": [
+        "cryspe"
+      ],
+      "gloss": "curly-furred, curly-haired (MED s.v. crisp adj.) ",
+      "memo": "Found in 1 cargo in 1428: Tunnage 2-3-A-0215 [10 Oct 1428]: \"In galea …\""
+    },
+    "cum perles": {
+      "label": "cum perles",
+      "lang": "mul",
+      "forms": [
+        "cum perles"
+      ],
+      "gloss": "Set with pearls. "
+    },
+    "cur'": {
+      "label": "cur'",
+      "lang": "mul",
+      "forms": [
+        "cur"
+      ],
+      "gloss": "Some kind of verdure - meaning unknown. ",
+      "memo": "Appears in 1 cargo of 1495: Tunnage 4-3-B-0081 [27 Feb 1495]: \"De navi Roberti Sergeaunt 27° die Februarii\" EB 04/11/2026"
+    },
     "currants": {
       "label": "currants",
       "lang": "mul",
@@ -2153,7 +2360,10 @@
         "corans",
         "coranse",
         "coraunce",
-        "corauns"
+        "corauns",
+        "de corence",
+        "de corrence",
+        "de corance"
       ],
       "gloss": "currants"
     },
@@ -2163,7 +2373,10 @@
       "forms": [
         "cushin"
       ],
-      "gloss": "for cushions"
+      "gloss": "for cushions",
+      "memo": "Merge into the compound concept \"cushion cloth.\" EB 04/11/2026. ",
+      "helpWanted": true,
+      "reviewed": false
     },
     "cute": {
       "label": "cute",
@@ -2217,13 +2430,23 @@
         "osm_relation": "3263726"
       }
     },
+    "dalby": {
+      "label": "dalby",
+      "lang": "mul",
+      "forms": [
+        "dalby"
+      ],
+      "gloss": "Unknown qualifier of net. ",
+      "memo": "Appears in 1 lading in 1507: Petty 4-8-B-0456 [9 Dec 1507]: \"In navi Petri Busse eodem die\" EB 04/11/2026"
+    },
     "damask": {
       "label": "damask",
       "lang": "mul",
       "forms": [
         "damasc",
         "damask",
-        "damaske"
+        "damaske",
+        "damas"
       ],
       "gloss": "made of damask",
       "aat": {
@@ -2251,6 +2474,142 @@
         "osm_relation": "2597485"
       }
     },
+    "de amyas": {
+      "label": "de amyas",
+      "lang": "mul",
+      "forms": [
+        "de amyas"
+      ],
+      "gloss": "From Amiens. ",
+      "memo": "Appears in 1 cargo of 1450: Tunnage 2-10-E-0004 [1 Apr 1450]: \"De navi Johannis Brambyll eodem die\" EB 04/11/2026."
+    },
+    "de banbery": {
+      "label": "de banbery",
+      "lang": "mul",
+      "forms": [
+        "de banbery"
+      ],
+      "gloss": "manufactured in Banbury (co. Oxford)"
+    },
+    "de barbory": {
+      "label": "de barbory",
+      "lang": "mul",
+      "forms": [
+        "de barbory",
+        "de babar"
+      ],
+      "gloss": "From North Africa. "
+    },
+    "de berille": {
+      "label": "de berille",
+      "lang": "mul",
+      "forms": [
+        "de berille"
+      ],
+      "gloss": "made of beryl, a transparent precious stone of a pale-green colour passing into light-blue, yellow, and white; distinguished only by colour from the more precious emerald (OED s.v. beryl A I 1a))"
+    },
+    "de berkyn": {
+      "label": "de berkyn",
+      "lang": "mul",
+      "forms": [
+        "de berkyn"
+      ],
+      "gloss": "Manufactured in Barking (co. Essex) [?]"
+    },
+    "de bermyngham": {
+      "label": "de bermyngham",
+      "lang": "mul",
+      "forms": [
+        "de bermyngham"
+      ],
+      "gloss": "manufactured in Birmingham."
+    },
+    "de burghwage": {
+      "label": "de burghwage",
+      "lang": "mul",
+      "forms": [
+        "de burghwage"
+      ],
+      "gloss": "from Brouage (dép. Charante-Inf.), opposite la Rochelle ",
+      "memo": "Appears in 1 lading of 1450: Tunnage 2-10-E-0001 [1 Apr 1450]: \"De navi Ricardi Scotte primo die Aprilis anno 28°\""
+    },
+    "de cipresse": {
+      "label": "de cipresse",
+      "lang": "mul",
+      "forms": [
+        "de cipresse"
+      ],
+      "gloss": "Made of Cypress wood. "
+    },
+    "de cirpis": {
+      "label": "de cirpis",
+      "lang": "mul",
+      "forms": [
+        "de cirpis"
+      ],
+      "gloss": "Made of russhes (i.e.) a rush mat. ",
+      "memo": "Appears in 1 cargo of 1391: Petty 1-6-A-0387 [13 Jul 1391]: \"De navi Manuellis de Mar 13° die Julii\""
+    },
+    "de cornibus": {
+      "label": "de cornibus",
+      "lang": "mul",
+      "forms": [
+        "de cornibus",
+        "de cornubus"
+      ],
+      "gloss": "Made of horn. "
+    },
+    "de doione": {
+      "label": "de doione",
+      "lang": "mul",
+      "forms": [
+        "de doione"
+      ],
+      "gloss": "Made of a hardwood (perhaps boxwood) (OED s.v. dudgeon)",
+      "memo": "Appears in lading 1 of 1439: Petty 2-6-A-0178 [15 Jul 1439]: \"In navi Willelmi Johansson vocata Godewill de Arnemowth 15 die Julii\""
+    },
+    "de haddele": {
+      "label": "de haddele",
+      "lang": "mul",
+      "forms": [
+        "de haddele"
+      ],
+      "gloss": "From Hadleigh (co. Suffolk)",
+      "memo": "Appears in 1 lading of 1384: Tunnage 1-4-B-0168 [3 Sep 1384]: \"In navi Richardi Moniner eodem die\" [Export]"
+    },
+    "de plaster": {
+      "label": "de plaster",
+      "lang": "mul",
+      "forms": [
+        "de plaster"
+      ],
+      "gloss": "In some cases of Plaster of Paris. \"ymaginibus de plaustro.\" may be examples of pipe-clay figurines imported from the Low Countries in the 15th century. "
+    },
+    "de plumbo": {
+      "label": "de plumbo",
+      "lang": "mul",
+      "forms": [
+        "de plumbo"
+      ],
+      "gloss": "Made of lead. "
+    },
+    "de romeswale": {
+      "label": "de romeswale",
+      "lang": "mul",
+      "forms": [
+        "de romeswale",
+        "de rumeswale"
+      ],
+      "gloss": "From Reimerswaal (Zeeland.) "
+    },
+    "de trinite": {
+      "label": "de trinite",
+      "lang": "mul",
+      "forms": [
+        "de trinite"
+      ],
+      "gloss": "of the Holy Trinity. A controversial image type attacked by Reformers in the 15th and 16th centuries. "
+    },
     "decorated": {
       "label": "decorated",
       "lang": "mul",
@@ -2276,9 +2635,20 @@
       "gloss": "from Denaunt",
       "forms": [
         "denant",
-        "denaunt"
+        "denaunt",
+        "de denant",
+        "de denaunt",
+        "de denaunte"
       ],
       "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+    },
+    "denmark": {
+      "label": "Denmark",
+      "lang": "geo",
+      "forms": [
+        "denmarke"
+      ],
+      "gloss": "From Denmark. "
     },
     "desanctacruce": {
       "label": "de sancta cruce",
@@ -2331,7 +2701,8 @@
       "forms": [
         "diaper",
         "dyaper",
-        "dyapre"
+        "dyapre",
+        "dieper"
       ],
       "gloss": "diaper: small diamond-wise woven pattern",
       "aat": {
@@ -2390,7 +2761,11 @@
         "dordreyght",
         "dordreyt",
         "durdret",
-        "durdright"
+        "durdright",
+        "de durdragh",
+        "dordright",
+        "de durdraght",
+        "de durdraught"
       ],
       "gloss": "from Dordrecht",
       "geo": {
@@ -2589,14 +2964,18 @@
         "stiched",
         "broche",
         "brodred",
-        "broderd"
+        "broderd",
+        "embrodred",
+        "imbrodred",
+        "enbroderd"
       ],
       "gloss": "embroidered",
       "aat": {
         "specific": "300264024",
         "label": "embroidery",
         "broader": true
-      }
+      },
+      "memo": "Will need sifting and merging into \"embroidered\" qualifier. EB 12/08/2026"
     },
     "empty": {
       "label": "empty",
@@ -2609,7 +2988,8 @@
         "vacui",
         "vacuis",
         "vacuum",
-        "vacuus"
+        "vacuus",
+        "emty"
       ],
       "gloss": "empty"
     },
@@ -2668,7 +3048,8 @@
       "lang": "geo",
       "forms": [
         "essex",
-        "essexie"
+        "essexie",
+        "essexe"
       ],
       "gloss": "from Essex",
       "geo": {
@@ -2688,7 +3069,8 @@
       "label": "faggot",
       "lang": "mul",
       "forms": [
-        "fagot"
+        "fagot",
+        "fagott"
       ],
       "gloss": "in faggots (iron rods bundled together)"
     },
@@ -2734,6 +3116,17 @@
         "focheux"
       ],
       "gloss": "made of polecat (fitch) skins"
+    },
+    "felt": {
+      "label": "felt",
+      "lang": "mul",
+      "forms": [
+        "felt",
+        "felte",
+        "feltes",
+        "feltt"
+      ],
+      "gloss": "Made of felt. "
     },
     "ferri": {
       "label": "ferri",
@@ -2813,6 +3206,14 @@
       ],
       "gloss": "fine / high quality"
     },
+    "fir": {
+      "label": "fir",
+      "lang": "mul",
+      "forms": [
+        "de fyrre"
+      ],
+      "gloss": "Made of fir wood. "
+    },
     "fitted": {
       "label": "fitted",
       "lang": "mul",
@@ -2846,7 +3247,8 @@
         "flemyshe",
         "flemysshe",
         "in flandria",
-        "in partibus flandrie"
+        "in partibus flandrie",
+        "flemysch"
       ],
       "gloss": "from County of Flanders",
       "geo": {
@@ -2877,6 +3279,50 @@
         "floribus"
       ],
       "gloss": "decorated with flowers (cum floribus)"
+    },
+    "for baskets": {
+      "label": "for baskets",
+      "lang": "mul",
+      "forms": [
+        "pro baskettis"
+      ],
+      "gloss": "for baskets ('bundellis roddes pro baskettis': basket rods)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for bridles": {
+      "label": "for bridles",
+      "lang": "mul",
+      "forms": [
+        "pro frenis"
+      ],
+      "gloss": "for bridles ('2 bittes pro frenis': bridle bits)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for lamps": {
+      "label": "for lamps",
+      "lang": "mul",
+      "forms": [
+        "lampadis"
+      ],
+      "gloss": "for lamps ('olei lampadis': lamp oil)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
+    },
+    "for moulds": {
+      "label": "for moulds",
+      "lang": "mul",
+      "forms": [
+        "pro moldis"
+      ],
+      "gloss": "for moulds ('petris pro moldis': stones for moulds)",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
     },
     "forlaken": {
       "label": "forlaken",
@@ -2939,7 +3385,8 @@
         "gallica",
         "þe frenche makinge for hanginges",
         "francie",
-        "frauncie"
+        "frauncie",
+        "franse"
       ],
       "gloss": "from France",
       "geo": {
@@ -2978,7 +3425,10 @@
         "frieze",
         "frise",
         "frisii",
-        "fryse"
+        "fryse",
+        "de frisio",
+        "de frice",
+        "de frese"
       ],
       "gloss": "frieze, a rough woollen cloth with a nap"
     },
@@ -2987,9 +3437,10 @@
       "lang": "mul",
       "forms": [
         "ful",
-        "full"
+        "full",
+        "fulle"
       ],
-      "gloss": "a full set/nest (e.g. ful kettylles = a set of kettles)"
+      "gloss": "a full set/nest (e.g. ful kettylles = a set of kettles); in the case of herring a full barrel "
     },
     "fuller": {
       "label": "fuller",
@@ -3009,6 +3460,16 @@
         "furryd"
       ],
       "gloss": "lined or trimmed with fur"
+    },
+    "gallon": {
+      "label": "gallon",
+      "lang": "mul",
+      "forms": [
+        "galon",
+        "galone",
+        "galoners"
+      ],
+      "gloss": "gallon sized."
     },
     "gaming": {
       "label": "gaming",
@@ -3031,7 +3492,10 @@
         "garbelur",
         "garbelura",
         "garbelure",
-        "garble"
+        "garble",
+        "garbelera",
+        "garbeler de",
+        "garbole de"
       ],
       "gloss": "garbled — refuse, with extraneous matter removed"
     },
@@ -3088,7 +3552,10 @@
         "janua",
         "jeane",
         "jene",
-        "jennes"
+        "jennes",
+        "de gene",
+        "jean",
+        "geane"
       ],
       "gloss": "from Genoa",
       "geo": {
@@ -3121,7 +3588,8 @@
         "gentisshe",
         "gentysh",
         "gentyshe",
-        "gentysshe"
+        "gentysshe",
+        "gentische"
       ],
       "gloss": "manufactured in Ghent",
       "geo": {
@@ -3428,7 +3896,8 @@
       "lang": "mul",
       "forms": [
         "heire",
-        "hearre"
+        "hearre",
+        "de here"
       ],
       "gloss": "made of hair (haircloth)"
     },
@@ -3634,7 +4103,8 @@
       "forms": [
         "canabis",
         "canebis",
-        "canibi"
+        "canibi",
+        "de canape"
       ],
       "gloss": "made of hemp",
       "aat": {
@@ -3723,9 +4193,10 @@
         "holond",
         "holonde",
         "holondie",
-        "hoolandes"
+        "hoolandes",
+        "de hollandia"
       ],
-      "gloss": "manufactured in Holland",
+      "gloss": "manufactured or originating in Holland",
       "geo": {
         "id": "Q762943",
         "wikidata": "https://www.wikidata.org/entity/Q762943",
@@ -3895,7 +4366,8 @@
         "jeryne",
         "yron",
         "yrone",
-        "yrons"
+        "yrons",
+        "wyrone"
       ],
       "gloss": "made of iron",
       "aat": {
@@ -3934,6 +4406,29 @@
         "specific": "300011857",
         "label": "ivory (material)"
       }
+    },
+    "jasper": {
+      "label": "jasper",
+      "lang": "mul",
+      "forms": [
+        "jesper",
+        "de jaspar",
+        "jasper"
+      ],
+      "gloss": "Made of jasper. "
+    },
+    "jet": {
+      "label": "Jet",
+      "lang": "mul",
+      "forms": [
+        "jeet",
+        "de geet",
+        "giet",
+        "jet",
+        "jete",
+        "geet"
+      ],
+      "gloss": "Made of jet."
     },
     "jhesu": {
       "label": "of Jesus",
@@ -4017,7 +4512,8 @@
         "curtikes",
         "curtrick",
         "curtrik",
-        "curtryk"
+        "curtryk",
+        "de cortrik"
       ],
       "gloss": "from Kortrijk",
       "geo": {
@@ -4092,7 +4588,8 @@
         "magnus",
         "magne",
         "magno",
-        "grett"
+        "grett",
+        "mayor"
       ],
       "gloss": "large / great",
       "aat": {
@@ -4142,7 +4639,10 @@
         "latton",
         "lattone",
         "lattones",
-        "latyn"
+        "latyn",
+        "lattyn",
+        "lattene",
+        "latyne"
       ],
       "gloss": "made of latten (copper alloy)",
       "aat": {
@@ -4335,6 +4835,15 @@
       ],
       "gloss": "sugar-loaf — refined sugar moulded into a loaf"
     },
+    "log": {
+      "label": "Log",
+      "lang": "mul",
+      "forms": [
+        "loges",
+        "lodges"
+      ],
+      "gloss": "Wooden logs (in this case of doyon.)"
+    },
     "london": {
       "label": "London",
       "lang": "geo",
@@ -4425,7 +4934,8 @@
         "lucca",
         "luka",
         "luke",
-        "lukes"
+        "lukes",
+        "de luykes"
       ],
       "gloss": "from Lucca",
       "geo": {
@@ -4491,6 +5001,17 @@
         "hasPolygon": true,
         "osm_relation": "1629145"
       }
+    },
+    "magne band": {
+      "label": "magne band",
+      "lang": "mul",
+      "forms": [
+        "magne band",
+        "magne bonde",
+        "magne bounde",
+        "magno bonde"
+      ],
+      "gloss": ""
     },
     "mail": {
       "label": "mail",
@@ -4570,7 +5091,9 @@
       "label": "Mecca",
       "lang": "geo",
       "forms": [
-        "maykyn"
+        "maykyn",
+        "meikyn",
+        "mekyn"
       ],
       "gloss": "Mecca — a grade of ginger",
       "geo": {
@@ -4632,7 +5155,8 @@
       "label": "men's",
       "lang": "mul",
       "forms": [
-        "mens"
+        "mens",
+        "men"
       ],
       "gloss": "men's (for men)"
     },
@@ -4658,7 +5182,8 @@
         "messenensis",
         "messyn",
         "mesyn",
-        "myssena"
+        "myssena",
+        "missene"
       ],
       "gloss": "from Messina (Sicily)",
       "geo": {
@@ -4712,7 +5237,9 @@
         "myllene counterfett",
         "myllyn",
         "myllyne",
-        "millene"
+        "millene",
+        "de mylane",
+        "mylen"
       ],
       "gloss": "from Milan",
       "geo": {
@@ -4733,10 +5260,21 @@
       "lang": "mul",
       "forms": [
         "mirror",
-        "myrror",
-        "speculorum"
+        "myrror"
       ],
       "gloss": "for mirrors"
+    },
+    "mistelle": {
+      "label": "mistelle",
+      "lang": "mul",
+      "forms": [
+        "mistelle",
+        "mistille",
+        "mistelyn",
+        "mystil",
+        "mystille"
+      ],
+      "gloss": ""
     },
     "mok": {
       "label": "mok",
@@ -4827,7 +5365,9 @@
       "forms": [
         "mul",
         "molle",
-        "mull"
+        "mull",
+        "mulle",
+        "mole"
       ],
       "gloss": "the lowest of the four grades of Dutch madder"
     },
@@ -4919,7 +5459,8 @@
         "napalles",
         "naples",
         "napull",
-        "napulles"
+        "napulles",
+        "de napes"
       ],
       "gloss": "from Naples",
       "geo": {
@@ -4979,7 +5520,8 @@
         "neckys",
         "nekke",
         "nekkes",
-        "throtes"
+        "throtes",
+        "de collis"
       ],
       "gloss": "neck hide / neck fur"
     },
@@ -5006,7 +5548,8 @@
       "forms": [
         "newcastelle",
         "newcastre",
-        "novi castri"
+        "novi castri",
+        "nove castri"
       ],
       "gloss": "from Newcastle upon Tyne",
       "geo": {
@@ -5044,7 +5587,9 @@
       "lang": "mul",
       "forms": [
         "pro noctibus",
-        "pro nocte"
+        "pro nocte",
+        "nyght",
+        "night"
       ],
       "gloss": "for night / night- (e.g. night-cap)"
     },
@@ -5100,7 +5645,9 @@
         "northfolche",
         "northfolcie",
         "northfolke",
-        "northfolkie"
+        "northfolkie",
+        "de norfolche",
+        "northff"
       ],
       "gloss": "from Norfolk",
       "geo": {
@@ -5146,7 +5693,9 @@
       "label": "Norway",
       "lang": "geo",
       "forms": [
-        "norway"
+        "norway",
+        "de norwey",
+        "norwaie"
       ],
       "gloss": "from Norway",
       "geo": {
@@ -5190,7 +5739,8 @@
         "norborgh",
         "norborough",
         "norborugh",
-        "norburgh"
+        "norburgh",
+        "norbour"
       ],
       "gloss": "of Nuremberg manufacture",
       "geo": {
@@ -5307,7 +5857,8 @@
         "oysteriche",
         "oystredge",
         "oystrege",
-        "oystregge"
+        "oystregge",
+        "castridge"
       ],
       "gloss": "ostrich feather"
     },
@@ -5348,7 +5899,8 @@
         "utnall",
         "utnalle",
         "utnard",
-        "uwtnall"
+        "uwtnall",
+        "owtnard"
       ],
       "gloss": "from Oudenaarde",
       "geo": {
@@ -5461,7 +6013,9 @@
       "forms": [
         "parchement",
         "perchement",
-        "pergameni"
+        "pergameni",
+        "percamenti",
+        "parchemyne"
       ],
       "gloss": "parchment / vellum"
     },
@@ -5484,7 +6038,8 @@
         "paryse",
         "paryshe",
         "peris",
-        "perris"
+        "perris",
+        "parisiensis"
       ],
       "gloss": "from Paris",
       "geo": {
@@ -5600,9 +6155,10 @@
         "playne",
         "playnes",
         "pleine",
-        "plene"
+        "plene",
+        "de plana"
       ],
-      "gloss": "plain velvet"
+      "gloss": "plain or unembellished. "
     },
     "ploy": {
       "label": "ploy",
@@ -5762,7 +6318,10 @@
         "prynted",
         "impressati",
         "impressatum",
-        "printid"
+        "printid",
+        "impressatus",
+        "prentyd",
+        "prentid"
       ],
       "gloss": "printed or stamped (with a pattern)"
     },
@@ -5803,7 +6362,8 @@
         "sprus",
         "spruse",
         "spruse wet",
-        "tela lini spruce"
+        "tela lini spruce",
+        "de sprucia"
       ],
       "gloss": "from Prussia",
       "geo": {
@@ -5992,7 +6552,8 @@
         "rubeorum",
         "rubeum",
         "rubeus",
-        "rubeuss"
+        "rubeuss",
+        "rote"
       ],
       "gloss": "red in color",
       "aat": {
@@ -6147,7 +6708,8 @@
         "rysselle",
         "rysselles",
         "ryssylle",
-        "ryssylles"
+        "ryssylles",
+        "ryssyll"
       ],
       "gloss": "from Lille",
       "geo": {
@@ -6223,7 +6785,8 @@
       "forms": [
         "de roo",
         "roe",
-        "roo"
+        "roo",
+        "de cheverellis"
       ],
       "gloss": "made of the skin of a roe (a small deer, Capreolus capraea)"
     },
@@ -6928,7 +7491,13 @@
         "spaynysche",
         "spaynyshe",
         "taintes",
-        "tent"
+        "tent",
+        "de spaigne",
+        "ispannie",
+        "spanysshe",
+        "spayneshe",
+        "spaynysshe",
+        "spaynysh"
       ],
       "gloss": "from Spain",
       "geo": {
@@ -7078,6 +7647,17 @@
         "storvelynges"
       ],
       "gloss": "from a starved/emaciated animal"
+    },
+    "steel": {
+      "label": "steel",
+      "lang": "mul",
+      "forms": [
+        "stil"
+      ],
+      "gloss": "made of steel ('stil ringes')",
+      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
+      "helpWanted": true,
+      "reviewed": false
     },
     "stendal": {
       "label": "Stendal",
@@ -7300,7 +7880,11 @@
         "tapssery",
         "tapstre",
         "tapstri",
-        "tapstry"
+        "tapstry",
+        "de tapesterie",
+        "de tapiser",
+        "de tapiserie",
+        "de tapseria"
       ],
       "gloss": "made of tapestry",
       "aat": {
@@ -7623,7 +8207,8 @@
         "unbound",
         "unbownd",
         "unbownde",
-        "unbonde"
+        "unbonde",
+        "unbond"
       ],
       "gloss": "unbound (of books)"
     },
@@ -7683,9 +8268,10 @@
       "label": "unwrought",
       "lang": "mul",
       "forms": [
-        "unwrought"
+        "unwrought",
+        "unwrougth"
       ],
-      "gloss": "undressed flax"
+      "gloss": "undressed."
     },
     "utrecht": {
       "label": "Utrecht",
@@ -7747,7 +8333,8 @@
       "label": "Valencia",
       "lang": "geo",
       "forms": [
-        "valence"
+        "valence",
+        "de valens"
       ],
       "gloss": "from Valencia (Province of Valencia)",
       "geo": {
@@ -8053,6 +8640,14 @@
       ],
       "gloss": "wet, damp or moistened; sometimes damaged by damp (madidatis, madefacta)"
     },
+    "wet aqua marina": {
+      "label": "wet aqua marina",
+      "lang": "mul",
+      "forms": [
+        "wet aqua marina"
+      ],
+      "gloss": "Battery damaged by sea water. "
+    },
     "weythe": {
       "label": "Weythe",
       "lang": "geo",
@@ -8060,7 +8655,9 @@
       "forms": [
         "weythe"
       ],
-      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker."
+      "memo": "Promoted from a curator place->provenance mask; set geo via the WHG picker. Most of the sample cargoes need to be removed - packers book English being confused for a commodity. EB 04/11/2026. ",
+      "helpWanted": true,
+      "reviewed": false
     },
     "whipped": {
       "label": "whipped",
@@ -8168,7 +8765,8 @@
         "wyncestria",
         "wyncestrie",
         "wynchestria",
-        "wyntonie"
+        "wyntonie",
+        "de wynchestre"
       ],
       "gloss": "from Winchester",
       "geo": {
@@ -8258,7 +8856,9 @@
       "forms": [
         "pro feminis",
         "womens",
-        "pro mulieribus"
+        "pro mulieribus",
+        "women",
+        "feminea cum apparatu"
       ],
       "gloss": "women's (for women)"
     },
@@ -8274,7 +8874,10 @@
         "treene",
         "wod",
         "wode",
-        "trene"
+        "trene",
+        "de lyngno",
+        "tree",
+        "tren"
       ],
       "gloss": "made of wood",
       "aat": {
@@ -8396,7 +8999,8 @@
       "label": "yellow",
       "lang": "mul",
       "forms": [
-        "yelow"
+        "yelow",
+        "yelowe"
       ],
       "gloss": "yellow in color",
       "aat": {
@@ -8422,7 +9026,8 @@
         "eboracensibus",
         "york",
         "yorke",
-        "eborum"
+        "eborum",
+        "de york"
       ],
       "gloss": "from York",
       "memo": "York (Eboracum); needs WHG geo"
@@ -8486,71 +9091,32 @@
         "osm_relation": "47806"
       }
     },
-    "for bridles": {
-      "label": "for bridles",
+    "dowlas": {
+      "label": "alias dowlas",
       "lang": "mul",
       "forms": [
-        "pro frenis"
+        "alias douglas",
+        "alias dowlas"
       ],
-      "gloss": "for bridles ('2 bittes pro frenis': bridle bits)",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
+      "gloss": "also known as dowlas (a coarse linen cloth); 'lokerams alias douglas'"
     },
-    "for baskets": {
-      "label": "for baskets",
+    "buckram": {
+      "label": "buckram",
       "lang": "mul",
       "forms": [
-        "pro baskettis"
+        "of buckram",
+        "de bokeram"
       ],
-      "gloss": "for baskets ('bundellis roddes pro baskettis': basket rods)",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
+      "gloss": "made of buckram"
     },
-    "for moulds": {
-      "label": "for moulds",
+    "de capitibus": {
+      "label": "of heads",
       "lang": "mul",
       "forms": [
-        "pro moldis"
+        "de capitibus",
+        "capitibus"
       ],
-      "gloss": "for moulds ('petris pro moldis': stones for moulds)",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
-    },
-    "for lamps": {
-      "label": "for lamps",
-      "lang": "mul",
-      "forms": [
-        "lampadis"
-      ],
-      "gloss": "for lamps ('olei lampadis': lamp oil)",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
-    },
-    "steel": {
-      "label": "steel",
-      "lang": "mul",
-      "forms": [
-        "stil"
-      ],
-      "gloss": "made of steel ('stil ringes')",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
-    },
-    "coppyn": {
-      "label": "coppyn",
-      "lang": "mul",
-      "forms": [
-        "coppyn"
-      ],
-      "gloss": "coppyn hats: a kind of hat from the Low Countries, perhaps associated with pilgrims to St James (Eliot Benbow, 7 Oct 2026: 'Coppyn' a diminutive of James/Jacob)",
-      "memo": "Added 7 Oct 2026 from Eliot Benbow's notes on Maria's form gaps.",
-      "helpWanted": true,
-      "reviewed": false
+      "gloss": "made from the heads (of animals), e.g. pieces cut from the heads of oxen"
     }
   }
 }

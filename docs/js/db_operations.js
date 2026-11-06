@@ -1122,6 +1122,23 @@ db.version(122).stores({
     }
 });
 
+// Version 123 -- the whole corpus's goods re-read after the 6 Nov 2026 glossary/qualifier
+// batch (Issue #49 speculorum; Eliot's merges, new concepts and raw-qualifier rulings).
+db.version(123).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v123 — clearing ladings and cargos: corpus goods re-annotated");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v123 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?
