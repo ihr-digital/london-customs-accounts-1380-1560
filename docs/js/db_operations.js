@@ -1139,6 +1139,23 @@ db.version(123).stores({
     }
 });
 
+// Version 124 -- goods re-read after Eliot's Issues #50/#51 (administrative "certain"/"sealed",
+// compound concepts: gingerbread, pomegranate, middlegood, onion seed, stockfish, bell metal ...).
+db.version(124).stores({
+    ladings: "lading_id, customs_year, volume, primary_date, text, customs_type",
+    cargos: "++id, lading_id, cargo",
+    ladingText: "lading_id",
+    provenance: "lading_id"
+}).upgrade(async (trans) => {
+    console.warn("DB v124 — clearing ladings and cargos: corpus goods re-annotated");
+    try {
+        await trans.table("ladings").clear();
+        await trans.table("cargos").clear();
+    } catch (error) {
+        console.error("Error clearing data on v124 upgrade:", error);
+    }
+});
+
 async function checkDbHealth() {
     try {
         // Quick probe: can we query the ladings table?

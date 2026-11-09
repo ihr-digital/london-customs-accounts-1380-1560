@@ -48939,7 +48939,7 @@
             }
           ],
           "d_from_id": true,
-          "raw": "ounz"
+          "ref": "ounz"
         },
         {
           "d": "ounce [AAT Q48013]",
@@ -49009,7 +49009,7 @@
               "dataset": ""
             }
           ],
-          "raw": "onze"
+          "ref": "ounz"
         },
         {
           "d": "",
@@ -52162,14 +52162,14 @@
         {
           "p": "msti",
           "d": "",
-          "raw": "musty"
+          "ref": "musty"
         },
         {
           "raw": "meale"
         },
         {
-          "raw": "in granario",
-          "d": "in the grain-bin in the hold of a ship (Latham, Dictionary s.v. granarium 2)"
+          "d": "in the grain-bin in the hold of a ship (Latham, Dictionary s.v. granarium 2)",
+          "ref": "in garnariis"
         }
       ],
       "x": [],
@@ -52843,7 +52843,7 @@
         },
         {
           "d": "attested in the Book of Rates (Willan 64), but meaning unknown",
-          "raw": "whistling"
+          "ref": "whistling"
         },
         {
           "d": "small",
@@ -55870,7 +55870,7 @@
               "dataset": ""
             }
           ],
-          "raw": "wreke"
+          "ref": "wrack"
         },
         {
           "d": "unfinished",
@@ -55910,7 +55910,7 @@
               "dataset": ""
             }
           ],
-          "raw": "wrek"
+          "ref": "wrack"
         },
         {
           "d": "of low quality",
@@ -56266,7 +56266,7 @@
         },
         {
           "d": "",
-          "raw": "pro combs"
+          "ref": "pro combs"
         },
         {
           "d": "small as an article of commerce",
@@ -57905,11 +57905,11 @@
         },
         {
           "d": "worth a halfpenny",
-          "raw": "halpeney"
+          "ref": "halpeney"
         },
         {
           "d": "worth a penny",
-          "raw": "penny"
+          "ref": "penny"
         },
         {
           "d": "red",
@@ -57928,7 +57928,7 @@
           "ref": "cologne"
         },
         {
-          "raw": "crache|cracching",
+          "raw": "cracching",
           "d": "for cratching (scratching); a stable brush"
         },
         {
@@ -57956,7 +57956,7 @@
           "d": "for working flax"
         },
         {
-          "raw": "heare|heer|herin|heryn",
+          "raw": "herin|heryn",
           "d": "hairbrush"
         },
         {
@@ -59792,7 +59792,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "fetant"
+          "ref": "fetant"
         },
         {
           "d": "",
@@ -62246,11 +62246,11 @@
         },
         {
           "d": "clearly some kind of carpet, but exact meaning unknown",
-          "raw": "turin"
+          "ref": "turin"
         },
         {
           "d": "clearly some kind of carpet, but exact meaning unknown",
-          "raw": "seald"
+          "ref": "seald"
         },
         {
           "d": "clearly some kind of carpet, but exact meaning unknown",
@@ -62317,7 +62317,7 @@
         },
         {
           "d": "manufactured in Doornik/Tournai in Flanders (OED s.v. Tournai)",
-          "raw": "turney"
+          "ref": "tournai"
         },
         {
           "d": "old",
@@ -62325,7 +62325,7 @@
         },
         {
           "d": "clearly some kind of carpet, but exact meaning unknown",
-          "raw": "sealed"
+          "ref": "seald"
         },
         {
           "d": "manufactured in Ghent",
@@ -62363,8 +62363,8 @@
           "d": "clearly some kind of carpet, but meaning unknown"
         },
         {
-          "raw": "seale",
-          "d": "clearly some kind of carpet, but meaning unknown | clearly some kind of carpet, but exact meaning unknown"
+          "d": "clearly some kind of carpet, but meaning unknown | clearly some kind of carpet, but exact meaning unknown",
+          "ref": "seald"
         },
         {
           "raw": "sele",
@@ -62793,6 +62793,31 @@
         },
         {
           "t": "casdoke",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "casduk",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "casduke",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "casdock",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "casedoke",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "casduck",
           "s": [],
           "w": 0
         }
@@ -63983,7 +64008,7 @@
         {
           "d": "",
           "p": "prolstio",
-          "raw": "pro lastagio"
+          "ref": "pro lastagio"
         },
         {
           "raw": "de ynde"
@@ -64255,11 +64280,11 @@
         },
         {
           "d": "from Suffolk",
-          "raw": "suff"
+          "ref": "suffolk"
         },
         {
           "d": "cheese manufactured in Suffolk",
-          "raw": "suthfolke"
+          "ref": "suffolk"
         },
         {
           "d": "",
@@ -65612,7 +65637,7 @@
         },
         {
           "d": "place of manufacture unknown",
-          "raw": "lokerme"
+          "ref": "lokerme"
         },
         {
           "d": "from Mechelen in Brabant",
@@ -65892,7 +65917,7 @@
         },
         {
           "d": "meaning unknown (possibly 'eastern')",
-          "raw": "estern"
+          "ref": "ostrich"
         },
         {
           "d": "napkin or curtain (Low German vorlaken); function uncertain",
@@ -65900,7 +65925,7 @@
         },
         {
           "d": "gosfeldes; place of origin unknown",
-          "raw": "gosfeldes"
+          "ref": "gosfeldes"
         },
         {
           "d": "hauster / houster - a kind of linen cloth (origin uncertain; commonly distinguished from Utrecht)",
@@ -65908,7 +65933,7 @@
         },
         {
           "d": "unidentified term, not localizable",
-          "raw": "iremuter"
+          "ref": "iremuter"
         },
         {
           "d": "uncertain qualifier 'melcory' (meaning unknown)",
@@ -65952,11 +65977,7 @@
         },
         {
           "d": "uncertain qualifier 'utrit' (meaning unknown)",
-          "raw": "utrit"
-        },
-        {
-          "d": "meaning unknown",
-          "raw": "waterlaken"
+          "ref": "utrecht"
         },
         {
           "d": "meaning unknown",
@@ -66190,7 +66211,7 @@
         },
         {
           "d": "for an altar",
-          "raw": "pro altari"
+          "ref": "altar"
         },
         {
           "d": "large",
@@ -66253,7 +66274,7 @@
           "d": "with broad selvedges (lists), edge woven to prevent ravelling"
         },
         {
-          "raw": "frisadus|fryzado",
+          "raw": "fryzado",
           "d": "frizado, a kind of finished frieze"
         },
         {
@@ -67083,7 +67104,7 @@
         },
         {
           "d": "(in pairs)",
-          "raw": "kempster"
+          "ref": "kempster"
         },
         {
           "tokens": [
@@ -67557,7 +67578,7 @@
         },
         {
           "d": "",
-          "raw": "pro navibus"
+          "ref": "pro navibus"
         },
         {
           "d": "large",
@@ -70257,7 +70278,7 @@
         },
         {
           "d": "without a cover",
-          "raw": "sine covers"
+          "ref": "uncovered"
         },
         {
           "d": "made of earthenware",
@@ -72165,7 +72186,7 @@
         },
         {
           "d": "",
-          "raw": "pro navibus"
+          "ref": "pro navibus"
         },
         {
           "d": "made of ivory",
@@ -74609,7 +74630,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "de maldegham"
+          "ref": "de maldegham"
         },
         {
           "d": "manufactured in Prussia",
@@ -74802,7 +74823,7 @@
         },
         {
           "d": "for sails, sail-thread",
-          "raw": "pro veiles|pro velis"
+          "raw": "pro velis"
         },
         {
           "d": "for candlesticks (presumably for candlewicks)",
@@ -75210,8 +75231,8 @@
           "d": "made of worsted, made of worsted yarn"
         },
         {
-          "raw": "riband",
-          "d": "ribbon made of thread (MED s.v. riban n., quote of 1438/9 rybane de filo)"
+          "d": "ribbon made of thread (MED s.v. riban n., quote of 1438/9 rybane de filo)",
+          "ref": "ribbon"
         },
         {
           "raw": "cadas",
@@ -75230,8 +75251,8 @@
           "d": "attested in the Book of Rates: peecing thred (Willan 46), that is piecing thread, i.e. for mending or patching: OED s.v. piecing vbl.n.)"
         },
         {
-          "raw": "de maldyngham",
-          "d": "meaning unknown"
+          "d": "meaning unknown",
+          "ref": "de maldegham"
         },
         {
           "raw": "pro cabulles",
@@ -77978,7 +77999,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "orleans"
+          "ref": "orliaunce"
         },
         {
           "d": "dressed",
@@ -78484,6 +78505,11 @@
         },
         {
           "t": "frezadoes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "frisadus",
           "s": [],
           "w": 0
         }
@@ -79573,9 +79599,6 @@
         {
           "raw": "foyne orlyaunce",
           "d": "meaning of Orlyaunce unknown"
-        },
-        {
-          "raw": "e"
         },
         {
           "raw": "fox wombz",
@@ -80862,6 +80885,11 @@
             46
           ],
           "w": 0
+        },
+        {
+          "t": "galeye",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -81121,7 +81149,7 @@
         },
         {
           "d": "",
-          "raw": "putred"
+          "ref": "putrid"
         }
       ],
       "x": [],
@@ -82240,7 +82268,7 @@
           ]
         },
         {
-          "raw": "de sibilia|de siville",
+          "raw": "de siville",
           "d": "of Seville (Sevilla)"
         },
         {
@@ -84465,6 +84493,21 @@
             46
           ],
           "w": 0
+        },
+        {
+          "t": "hande gunys",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "haund gunes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "haund gonnes",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -85656,7 +85699,7 @@
         },
         {
           "d": "",
-          "raw": "unpakked"
+          "ref": "unpacked"
         },
         {
           "d": "hering without roe",
@@ -86783,10 +86826,6 @@
         {
           "d": "goat horn",
           "ref": "goat"
-        },
-        {
-          "raw": "pro lucernis",
-          "d": "horn for making lanterns"
         }
       ],
       "x": [
@@ -87263,7 +87302,7 @@
         },
         {
           "d": "for boys",
-          "raw": "puerilis"
+          "ref": "childrens"
         },
         {
           "d": "of low quality",
@@ -87326,7 +87365,7 @@
         },
         {
           "d": "pair of women's hose | pair of men's hose",
-          "raw": "pro hominibus"
+          "ref": "mens"
         },
         {
           "d": "made of sheepskin",
@@ -87998,7 +88037,7 @@
         },
         {
           "d": "Hungarian iron",
-          "raw": "hungari"
+          "ref": "honigrye"
         },
         {
           "d": "iron manufactured in Liège (OED s.v. lukes a.) | manufactured in Liège (OED s.v. lukes a.)",
@@ -88827,7 +88866,7 @@
         },
         {
           "d": "from Strasbourg",
-          "raw": "strausborough"
+          "ref": "strasbourg"
         },
         {
           "d": "eastern (meaning unknown)",
@@ -88913,15 +88952,19 @@
           "d": "of Syrian manufacture (de sur possibly Soria = Syria, cf. Pegolotti 405)"
         },
         {
-          "raw": "de curtrik",
-          "d": "manufactured in Kortrijk (Cortrijk), Flanders"
+          "d": "manufactured in Kortrijk (Cortrijk), Flanders",
+          "ref": "kortrijk"
         },
         {
           "ref": "kortrijk",
           "d": "manufactured in Kortrijk (Cortrijk), Flanders"
         },
         {
-          "raw": "de wormes|de wormese",
+          "raw": "de wormese",
+          "d": "manufactured in Worms"
+        },
+        {
+          "ref": "de wormes",
           "d": "manufactured in Worms"
         },
         {
@@ -89934,7 +89977,7 @@
         },
         {
           "d": "for the use of brewers",
-          "raw": "pro brasiatore"
+          "ref": "brewyng"
         },
         {
           "d": "large kettles",
@@ -90961,7 +91004,7 @@
         },
         {
           "d": "made of ribbon",
-          "raw": "rybone"
+          "ref": "ribbon"
         },
         {
           "d": "red",
@@ -91623,6 +91666,11 @@
           "s": [
             12
           ],
+          "w": 0
+        },
+        {
+          "t": "pro lucernis",
+          "s": [],
           "w": 0
         }
       ],
@@ -94865,11 +94913,11 @@
         },
         {
           "d": "madder from Toulouse",
-          "raw": "tolle"
+          "ref": "toulouse"
         },
         {
           "d": ", madder of Toulouse",
-          "raw": "tollouse"
+          "ref": "toulouse"
         },
         {
           "d": "some kind of madder",
@@ -95284,7 +95332,7 @@
         },
         {
           "d": "from Hungary (Veale 219)",
-          "raw": "honigrye"
+          "ref": "honigrye"
         },
         {
           "d": "vetus = old; novum = new",
@@ -99561,6 +99609,11 @@
           "t": "seminis cenappii",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "musterd seed",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -102118,7 +102171,7 @@
       "q": [
         {
           "d": "",
-          "raw": "swete"
+          "ref": "sweet"
         },
         {
           "d": "",
@@ -105325,8 +105378,8 @@
           "ref": "coal"
         },
         {
-          "raw": "de secolle",
-          "d": "made of jet (MED s.v. col n. (2) 4) | made of sea coal, mineral coal ('coal' in the ordinary modern sense) as distinguished from charcoal (OED s.v. sea-coal 2a)"
+          "d": "made of jet (MED s.v. col n. (2) 4) | made of sea coal, mineral coal ('coal' in the ordinary modern sense) as distinguished from charcoal (OED s.v. sea-coal 2a)",
+          "ref": "coal"
         },
         {
           "raw": "de jete",
@@ -108297,11 +108350,6 @@
           "raw": "oylet"
         },
         {
-          "p": "drsing",
-          "d": "a (metal) pin used to fasten together parts of dress (OED s.v. pin n.1 3a quote 1480)",
-          "raw": "dressyng"
-        },
-        {
           "d": "of Flemish manufacture",
           "ref": "flanders"
         },
@@ -108560,6 +108608,16 @@
           "s": [
             18
           ]
+        },
+        {
+          "t": "dressyng pynnes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "dressyng pyn",
+          "s": [],
+          "w": 0
         }
       ],
       "related": [
@@ -109162,7 +109220,7 @@
         },
         {
           "d": "",
-          "raw": "unpacked"
+          "ref": "unpacked"
         },
         {
           "d": "large",
@@ -109206,7 +109264,7 @@
         },
         {
           "d": "some sort of salted fish (MED s.v. wabok n.)",
-          "raw": "wabbok"
+          "ref": "wabbok"
         },
         {
           "d": "very low quality fish",
@@ -109245,8 +109303,8 @@
           "d": "of all sorts"
         },
         {
-          "raw": "wabok",
-          "d": "some sort of salted fish (MED s.v. wabok n.)"
+          "d": "some sort of salted fish (MED s.v. wabok n.)",
+          "ref": "wabbok"
         }
       ],
       "x": [],
@@ -111915,7 +111973,7 @@
         },
         {
           "d": "without a cover",
-          "raw": "sine covers"
+          "ref": "uncovered"
         },
         {
           "ref": "uncovered",
@@ -111982,7 +112040,11 @@
           "d": "cast"
         },
         {
-          "raw": "pro poticarys|pro poticaries|pro potecariis",
+          "raw": "pro poticaries|pro potecariis",
+          "d": "for the use of apothecaries"
+        },
+        {
+          "ref": "pro poticarys",
           "d": "for the use of apothecaries"
         },
         {
@@ -111990,7 +112052,11 @@
           "d": "for treacle"
         },
         {
-          "raw": "pro goldsmythes|pro aurifabris",
+          "raw": "pro aurifabris",
+          "d": "for the use of goldsmiths"
+        },
+        {
+          "ref": "goldsmith",
           "d": "for the use of goldsmiths"
         },
         {
@@ -112327,7 +112393,7 @@
         },
         {
           "d": "for the use of barbers or barber-surgeons",
-          "raw": "pro barbitonsoribus"
+          "ref": "barber"
         },
         {
           "d": "small",
@@ -112571,7 +112637,11 @@
           "raw": "ryng"
         },
         {
-          "raw": "heer|heren",
+          "raw": "heren",
+          "d": "pouch made of animal hair (MED s.v. her n. 3b)"
+        },
+        {
+          "ref": "hair",
           "d": "pouch made of animal hair (MED s.v. her n. 3b)"
         },
         {
@@ -113015,7 +113085,7 @@
         },
         {
           "d": "rusty",
-          "raw": "rusty"
+          "ref": "rusty"
         }
       ],
       "x": [],
@@ -113645,7 +113715,7 @@
       "q": [
         {
           "d": "rotten",
-          "raw": "roton"
+          "ref": "putrid"
         },
         {
           "d": "spoiled/corrupted",
@@ -119587,6 +119657,11 @@
             19
           ],
           "w": 1
+        },
+        {
+          "t": "sacring belles",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -124818,7 +124893,7 @@
         },
         {
           "d": "for nuns",
-          "raw": "nonne"
+          "ref": "nonne"
         },
         {
           "d": "for boys",
@@ -125381,7 +125456,7 @@
         },
         {
           "d": "floss silk, rough silk broken off in winding the cocoons",
-          "raw": "florett"
+          "ref": "florett"
         },
         {
           "d": "made in Bruges",
@@ -128735,6 +128810,26 @@
           "t": "fungias",
           "s": [],
           "w": 0
+        },
+        {
+          "t": "stok piscium",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stok piscibus",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stoke piscium",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stoke piscibus",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -129078,7 +129173,11 @@
         },
         {
           "d": "for boys",
-          "raw": "pro puerilis|pro pueris"
+          "raw": "pro pueris"
+        },
+        {
+          "ref": "childrens",
+          "d": "for boys"
         }
       ],
       "x": [],
@@ -130972,10 +131071,6 @@
         {
           "d": "made of wood",
           "ref": "wood"
-        },
-        {
-          "d": "the men/pieces (meynee)",
-          "raw": "meynee"
         }
       ],
       "x": [],
@@ -131014,6 +131109,11 @@
           "s": [
             16
           ],
+          "w": 0
+        },
+        {
+          "t": "meynee",
+          "s": [],
           "w": 0
         }
       ],
@@ -131556,7 +131656,7 @@
         },
         {
           "d": "in pieces",
-          "raw": "in peciis"
+          "ref": "in peciis"
         },
         {
           "d": "sheep’s tallow",
@@ -131568,7 +131668,7 @@
         },
         {
           "d": "made liquid by heat",
-          "raw": "liquefactum"
+          "ref": "liquefactum"
         },
         {
           "d": "sheep's tallow",
@@ -131576,7 +131676,7 @@
         },
         {
           "d": "of low quality",
-          "raw": "multonis debilis"
+          "ref": "mutton"
         },
         {
           "d": "of Prussian origin",
@@ -131837,7 +131937,11 @@
           "ref": "flanders"
         },
         {
-          "raw": "heare|here",
+          "raw": "here",
+          "d": "made of hair"
+        },
+        {
+          "ref": "hair",
           "d": "made of hair"
         },
         {
@@ -134175,7 +134279,7 @@
         },
         {
           "d": "for chimneys",
-          "raw": "pro chymenes"
+          "ref": "pro chymenes"
         },
         {
           "d": "paving tile",
@@ -134212,7 +134316,7 @@
         {
           "p": "us",
           "d": "",
-          "raw": "hous"
+          "ref": "hous"
         }
       ],
       "x": [],
@@ -139002,7 +139106,7 @@
         },
         {
           "d": "",
-          "raw": "pro navibus"
+          "ref": "pro navibus"
         }
       ],
       "x": [],
@@ -139220,7 +139324,7 @@
         },
         {
           "d": "vin de Poitou",
-          "raw": "peto"
+          "ref": "peto"
         },
         {
           "d": "from Anjou",
@@ -139240,7 +139344,7 @@
         },
         {
           "d": "from Orleans",
-          "raw": "orliance"
+          "ref": "orliaunce"
         },
         {
           "d": "cute: new wine boiled down and sweetened",
@@ -141367,15 +141471,15 @@
       "q": [
         {
           "d": "mouldy (OED s.v. must v.2 1)",
-          "raw": "musted"
+          "ref": "musty"
         },
         {
-          "raw": "in granario",
-          "d": "in the grain-bin in the hold of a ship (Latham, Dictionary s.v. granarium 2)"
+          "d": "in the grain-bin in the hold of a ship (Latham, Dictionary s.v. granarium 2)",
+          "ref": "in garnariis"
         },
         {
-          "raw": "in garneriis",
-          "d": "in the grain bin on a ship"
+          "d": "in the grain bin on a ship",
+          "ref": "in garnariis"
         },
         {
           "raw": "floure"
@@ -141617,10 +141721,14 @@
         },
         {
           "d": "some kind of wire (meaning uncertain; not from the Levant)",
-          "raw": "lavent"
+          "ref": "lavent"
         },
         {
-          "raw": "pirling|purlynge|purling",
+          "raw": "purlynge|purling",
+          "d": "wire to be twisted or spun into cord (OED s.v. pirl v. 1)"
+        },
+        {
+          "ref": "pirling",
           "d": "wire to be twisted or spun into cord (OED s.v. pirl v. 1)"
         }
       ],
@@ -142805,6 +142913,21 @@
           "p": "ansed",
           "s": [],
           "w": 1
+        },
+        {
+          "t": "anys sedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "aunes sedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "aunes sede",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -143666,12 +143789,7 @@
     },
     "awl haft": {
       "d": "the (non-metallic) handle of an awl | the wooden part of an awl | the wooden part, handle of an awl (Cobb 175)",
-      "q": [
-        {
-          "raw": "yren",
-          "d": "awl iron, the iron part of an awl"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -144300,7 +144418,7 @@
             }
           ],
           "d_from_id": true,
-          "raw": "jardyne"
+          "ref": "jardyne"
         },
         {
           "p": "dprunse",
@@ -144348,7 +144466,7 @@
             }
           ],
           "d_from_id": true,
-          "raw": "provens"
+          "ref": "provens"
         },
         {
           "raw": "jordan",
@@ -147636,7 +147754,7 @@
           ],
           "d_from_id": true,
           "p": "mkine",
-          "raw": "makyne"
+          "ref": "mecca"
         },
         {
           "d": "Mecca [AAT place:wd:Q5806]",
@@ -147710,7 +147828,7 @@
           ],
           "d_from_id": true,
           "p": "mkindbil",
-          "raw": "maykyn debilis"
+          "ref": "mecca"
         },
         {
           "d": "small [AAT 300073768]",
@@ -147832,7 +147950,7 @@
               "curated": true
             }
           ],
-          "raw": "verte"
+          "ref": "green"
         },
         {
           "d": "ginger 'from the countryside' a term derived from the name Arab traders active on the west coast of India gave to the 'native' or common ginger (Pegolotti 419, Heyd 601, Day 976); India [AAT place:wd:Q668]",
@@ -148053,6 +148171,36 @@
           "s": [
             29
           ],
+          "w": 0
+        },
+        {
+          "t": "gynger brede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gynger bred",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gynger bread",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gynger breade",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "ginger cakes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "gynger cakes",
+          "s": [],
           "w": 0
         }
       ],
@@ -151492,7 +151640,7 @@
         {
           "p": "prsip",
           "d": "",
-          "raw": "pro shippes"
+          "ref": "pro navibus"
         }
       ],
       "x": [],
@@ -152409,7 +152557,7 @@
               "lon": -5
             }
           ],
-          "raw": "skottyshe"
+          "ref": "scocie"
         }
       ],
       "x": [],
@@ -153303,7 +153451,7 @@
         },
         {
           "d": "for the use of barbers",
-          "raw": "pro barbors"
+          "ref": "barber"
         },
         {
           "d": "unwrought (Latham, Dictionary s.v. crudus 3c)",
@@ -155215,7 +155363,7 @@
         },
         {
           "d": "made of wood | wooden beads",
-          "raw": "tryen"
+          "ref": "wood"
         },
         {
           "d": "small",
@@ -155302,7 +155450,7 @@
         },
         {
           "d": "mixed beads (OED s.v. mystill)",
-          "raw": "mystyldene"
+          "ref": "mistelle"
         },
         {
           "d": "made of glass",
@@ -155570,6 +155718,31 @@
             16
           ],
           "w": 0
+        },
+        {
+          "t": "glasse beddes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "glas beddes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "glass beddes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "glasse beddys",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "glas beddys",
+          "s": [],
+          "w": 0
         }
       ],
       "memo": "This will need merging with \"precularum\" and \"paternoster\" EB 15/07/2026",
@@ -155828,6 +156001,46 @@
           "s": [
             37
           ],
+          "w": 0
+        },
+        {
+          "t": "bell metell",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "belle metelle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bel metell",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bell mettylle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bell metall",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bell metelle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "belle mettelle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "bell mettell",
+          "s": [],
           "w": 0
         }
       ],
@@ -156222,7 +156435,7 @@
         },
         {
           "d": "a girdle worn with the alb, to hold the latter in place after it had been tucked or hitched up (MED s.v. tukinge)",
-          "raw": "tokyng"
+          "ref": "tokyng"
         },
         {
           "d": "small",
@@ -156250,7 +156463,7 @@
         },
         {
           "d": "made of wool",
-          "raw": "wolyne"
+          "ref": "wool"
         },
         {
           "d": "for children",
@@ -157733,6 +157946,26 @@
             1
           ],
           "w": 0
+        },
+        {
+          "t": "markyng yrons",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "markyng yron",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "markyng irnes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "merkyng yron",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -158792,13 +159025,7 @@
     },
     "jug": {
       "d": "Vessels, generally made of earthenware, stoneware or porcelain and often of large capacity, which have a narrow neck and a handle (usually a vertical loop or scroll handle); may sometimes have a pouring lip. [Source: Getty AAT]",
-      "q": [
-        {
-          "d": "",
-          "p": "gale",
-          "raw": "galeye"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -162215,12 +162442,12 @@
         },
         {
           "d": "",
-          "raw": "onbound"
+          "ref": "unbound"
         },
         {
           "p": "prented",
           "d": "",
-          "raw": "prented"
+          "ref": "printed"
         },
         {
           "p": "prentid",
@@ -162230,7 +162457,7 @@
         {
           "p": "prented",
           "d": "",
-          "raw": "prented"
+          "ref": "printed"
         },
         {
           "d": "bound (and, with 'non', unbound: 'libri ligatorum et non ligatorum')",
@@ -163152,10 +163379,6 @@
           "d": "wood for making galoshes"
         },
         {
-          "raw": "pro lucernis",
-          "d": "wood for making lamps"
-        },
-        {
           "raw": "crosses",
           "d": "crosses (for rosaries) of wood"
         }
@@ -163389,11 +163612,11 @@
       "q": [
         {
           "d": "",
-          "raw": "pro combs"
+          "ref": "pro combs"
         },
         {
           "d": "box-wood for making combs",
-          "raw": "pro pectenibus"
+          "ref": "pro combs"
         },
         {
           "raw": "peces for combes"
@@ -164823,12 +165046,12 @@
       "q": [
         {
           "d": "",
-          "raw": "pro brydells"
+          "ref": "for bridles"
         },
         {
           "p": "prbrdel",
           "d": "",
-          "raw": "pro brydelles"
+          "ref": "for bridles"
         }
       ],
       "x": [],
@@ -167885,7 +168108,7 @@
         },
         {
           "d": "meaning unknown",
-          "raw": "toked"
+          "ref": "toked"
         },
         {
           "d": "from Cologne",
@@ -167894,10 +168117,6 @@
         {
           "d": "of French origin",
           "ref": "france"
-        },
-        {
-          "d": "",
-          "raw": "sede"
         },
         {
           "d": "of Cologne origin",
@@ -168173,6 +168392,11 @@
             29
           ],
           "w": 0
+        },
+        {
+          "t": "hempe sede",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -168426,6 +168650,11 @@
             16
           ],
           "w": 0
+        },
+        {
+          "t": "sknoffer",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -168488,7 +168717,7 @@
         {
           "p": "uden",
           "d": "",
-          "raw": "wudden"
+          "ref": "wood"
         },
         {
           "ref": "box"
@@ -169515,12 +169744,12 @@
         },
         {
           "d": "dog collar for greyhounds",
-          "raw": "pro leporariis"
+          "ref": "pro leporariis"
         },
         {
           "p": "prolporari",
           "d": "for a greyhound",
-          "raw": "pro leporariis"
+          "ref": "pro leporariis"
         },
         {
           "d": "necklet, collar for hoods",
@@ -170010,10 +170239,6 @@
           "ref": "large"
         },
         {
-          "d": "",
-          "raw": "sknoffer"
-        },
-        {
           "d": "small",
           "ref": "small"
         },
@@ -170036,7 +170261,7 @@
         {
           "p": "uden",
           "d": "",
-          "raw": "wudden"
+          "ref": "wood"
         },
         {
           "raw": "de cristalle",
@@ -171650,7 +171875,7 @@
         },
         {
           "d": "made of tin",
-          "raw": "tennyne"
+          "ref": "tin"
         },
         {
           "d": "made of tin",
@@ -172292,7 +172517,7 @@
         },
         {
           "d": "made of scarlet cloth",
-          "raw": "skarelet"
+          "ref": "scarlet"
         },
         {
           "d": "dyed",
@@ -172600,7 +172825,7 @@
           "raw": "borde"
         },
         {
-          "raw": "lynnen"
+          "ref": "linen"
         },
         {
           "raw": "nygth",
@@ -173074,8 +173299,8 @@
           "ref": "tanned"
         },
         {
-          "raw": "scissis",
-          "d": "slit"
+          "d": "slit",
+          "ref": "scissis"
         }
       ],
       "x": [],
@@ -173144,12 +173369,7 @@
     },
     "shallot": {
       "d": "Edible rounded bulbs of Allium cepa, which consist of fleshy concentric leaf-bases. Onions have a strong pungent flavour and smell, and vary in color from white to yellow and dark red, and are used as a culinary vegetable throughout the world, eaten raw, cooked, or pickled. [Source: Getty AAT] | edible bulb of the shallot plant (Allium cepa var. aggregatum); for the plant use Q193498 [Source: Wikidata]",
-      "q": [
-        {
-          "d": "",
-          "raw": "sede"
-        }
-      ],
+      "q": [],
       "x": [],
       "f": [
         {
@@ -173639,10 +173859,6 @@
       "d": "the small fruits of the umbelliferous plant Carum Carui, commonly called ‘caraway-seeds’. Being aromatic and carminative, they are used in cakes, sweetmeats, etc., and yield a volatile oil (OED s.v. caraway)",
       "q": [
         {
-          "d": "",
-          "raw": "sede"
-        },
-        {
           "raw": "sedes"
         }
       ],
@@ -173701,6 +173917,21 @@
           "s": [
             36
           ],
+          "w": 0
+        },
+        {
+          "t": "caraway sede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "caraway sedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "carraway seedes",
+          "s": [],
           "w": 0
         }
       ],
@@ -176959,7 +177190,7 @@
         },
         {
           "d": "",
-          "raw": "knyth"
+          "ref": "knyth"
         },
         {
           "d": "",
@@ -177095,7 +177326,7 @@
         },
         {
           "d": "",
-          "raw": "venic"
+          "ref": "venice"
         },
         {
           "d": "manufactured in Venice",
@@ -177590,6 +177821,16 @@
         },
         {
           "t": "carbone",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "see coles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "see colis",
           "s": [],
           "w": 0
         }
@@ -180877,7 +181118,7 @@
         },
         {
           "d": "two-penny nail",
-          "raw": "peny"
+          "ref": "penny"
         },
         {
           "d": "",
@@ -180935,7 +181176,7 @@
         {
           "p": "prona",
           "d": "",
-          "raw": "pro navibus"
+          "ref": "pro navibus"
         },
         {
           "p": "feri",
@@ -181372,11 +181613,11 @@
         },
         {
           "d": "cloth of Hasbrough is attested in the Book of Rates and identified by its editor as being manufactured in Hazebrouck (Willan 35)",
-          "raw": "hasbarow"
+          "ref": "hazebrouck"
         },
         {
           "d": "attested in the Book of Rates (Willan 35)",
-          "raw": "isyngham"
+          "ref": "isyngham"
         },
         {
           "d": "damaged by damp",
@@ -182161,7 +182402,7 @@
         },
         {
           "d": "secured with three iron bands",
-          "raw": "triplicatus"
+          "ref": "triplicatus"
         },
         {
           "d": "of Cyprus manufacture, as an article of commerce",
@@ -183752,7 +183993,7 @@
         },
         {
           "d": "",
-          "raw": "pro pictoribus"
+          "ref": "pro pictoribus"
         },
         {
           "raw": "diversi",
@@ -186058,11 +186299,11 @@
         },
         {
           "d": "clearly some kind of a counter, but exact meaning unknown",
-          "raw": "dubbil"
+          "ref": "double"
         },
         {
           "d": "meaning unknown | clearly some kind of counter, but exact meaning unknown",
-          "raw": "dobulle"
+          "ref": "double"
         },
         {
           "d": "clearly some kind of counter, but exact meaning unknown",
@@ -189453,7 +189694,7 @@
         },
         {
           "d": "made of tapestry | made of old tapestry",
-          "raw": "tapserie"
+          "ref": "tapestry"
         },
         {
           "d": "made of tapestry | made of old tapestry",
@@ -191714,7 +191955,7 @@
         },
         {
           "d": "tools for a carpenter",
-          "raw": "pro karpynters"
+          "ref": "carpynter"
         },
         {
           "p": "kpers",
@@ -193218,7 +193459,11 @@
           "ref": "crossbow"
         },
         {
-          "raw": "steel|stile|de stile",
+          "raw": "steel|de stile",
+          "d": "made of steel"
+        },
+        {
+          "ref": "steel",
           "d": "made of steel"
         }
       ],
@@ -193468,7 +193713,7 @@
         },
         {
           "d": "a knife which can be folded up",
-          "raw": "foldyng"
+          "ref": "foldyng"
         },
         {
           "d": "knife with an ivory clasp, small",
@@ -193696,7 +193941,7 @@
               "curated": true
             }
           ],
-          "raw": "roone"
+          "ref": "rouen"
         },
         {
           "p": "kulen",
@@ -193961,9 +194206,9 @@
           "d": "with a gilt sheath"
         },
         {
-          "raw": "rone",
           "d": "manufactured in Rouen",
-          "p": "rone"
+          "p": "rone",
+          "ref": "rouen"
         },
         {
           "raw": "german",
@@ -194611,7 +194856,7 @@
         {
           "p": "prkultel",
           "d": "",
-          "raw": "pro cultellis"
+          "ref": "pro cultellis"
         },
         {
           "p": "lodg",
@@ -194636,7 +194881,7 @@
         {
           "p": "laes",
           "d": "",
-          "raw": "lages"
+          "ref": "log"
         },
         {
           "raw": "loge",
@@ -194826,7 +195071,7 @@
         },
         {
           "d": "",
-          "raw": "quyltyd"
+          "ref": "quilted"
         },
         {
           "p": "arming",
@@ -202662,7 +202907,11 @@
           "d": "pheasant feather"
         },
         {
-          "raw": "pro fleccheris|pur flecchers|pro flecchers",
+          "raw": "pur flecchers|pro flecchers",
+          "d": "for arrow-makers (fletchers)"
+        },
+        {
+          "ref": "pro flechers",
           "d": "for arrow-makers (fletchers)"
         },
         {
@@ -204426,11 +204675,11 @@
         },
         {
           "d": "for the use of shearmen | shearman's shears",
-          "raw": "sharman"
+          "ref": "shearmen"
         },
         {
           "d": "for the use of shearmen | shearman's shears",
-          "raw": "sherman"
+          "ref": "shearmen"
         },
         {
           "d": "for barbers",
@@ -204486,12 +204735,12 @@
           "d": "for use by women"
         },
         {
-          "raw": "lynnen",
-          "d": "clearly some kind of shears or scissors, somehow connected with working linen, but exact meaning unknown"
+          "d": "clearly some kind of shears or scissors, somehow connected with working linen, but exact meaning unknown",
+          "ref": "linen"
         },
         {
-          "raw": "pro goldsmythes",
-          "d": "for the use of goldsmiths"
+          "d": "for the use of goldsmiths",
+          "ref": "goldsmith"
         },
         {
           "raw": "recte",
@@ -207225,11 +207474,6 @@
         {
           "d": "",
           "ref": "old"
-        },
-        {
-          "p": "serten",
-          "d": "certain",
-          "raw": "serten"
         }
       ],
       "x": [],
@@ -208595,7 +208839,7 @@
         },
         {
           "d": "a halfpenny glass",
-          "raw": "halpeny"
+          "ref": "halpeney"
         }
       ],
       "aat": [
@@ -208662,7 +208906,7 @@
         },
         {
           "d": "",
-          "raw": "pro flechers"
+          "ref": "pro flechers"
         },
         {
           "p": "sdlers",
@@ -210738,11 +210982,19 @@
           "ref": "de amyas"
         },
         {
-          "raw": "picardy|de picarde",
+          "raw": "de picarde",
           "d": "from Picardy"
         },
         {
-          "raw": "the ile of assorns|the ile of surrey|de insula de surr|de insula de surie|de surre",
+          "ref": "picardy",
+          "d": "from Picardy"
+        },
+        {
+          "raw": "the ile of surrey|de insula de surr|de insula de surie|de surre",
+          "d": "from the Azores (the 'ile of Surr/Surrey' = Terceira; Jones 724, 963; formerly mis-read as Syria/the Levant)"
+        },
+        {
+          "ref": "the ile of assorns",
           "d": "from the Azores (the 'ile of Surr/Surrey' = Terceira; Jones 724, 963; formerly mis-read as Syria/the Levant)"
         },
         {
@@ -210750,8 +211002,8 @@
           "d": "florey: a blue pigment of the scum collected from the woad/indigo dye-vat (OED s.v. florey)"
         },
         {
-          "raw": "in garnariis",
-          "d": "stored in the grain-bin in the ship's hold (Latham s.v. granarium 2)"
+          "d": "stored in the grain-bin in the ship's hold (Latham s.v. granarium 2)",
+          "ref": "in garnariis"
         }
       ],
       "x": [
@@ -211626,7 +211878,7 @@
         },
         {
           "d": "for harvest-workers",
-          "raw": "pro hervestmen"
+          "ref": "pro hervestmen"
         },
         {
           "d": "for women",
@@ -215095,7 +215347,7 @@
         },
         {
           "d": "for cushions",
-          "raw": "pro quyshins"
+          "ref": "cushin"
         },
         {
           "d": "",
@@ -217889,7 +218141,7 @@
           "ref": "basan"
         },
         {
-          "raw": "shepeskins|shepe lether|pellium ovile",
+          "raw": "shepe lether|pellium ovile",
           "d": "made of sheepskin"
         }
       ],
@@ -217994,7 +218246,7 @@
         {
           "p": "prfemina",
           "d": "",
-          "raw": "pro femina"
+          "ref": "womens"
         }
       ],
       "x": [],
@@ -221237,7 +221489,7 @@
       "q": [
         {
           "d": "leash for a greyhound",
-          "raw": "pro leporariis"
+          "ref": "pro leporariis"
         }
       ],
       "x": [],
@@ -226811,6 +227063,11 @@
             19
           ],
           "w": 0
+        },
+        {
+          "t": "materos",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -228431,7 +228688,7 @@
         },
         {
           "d": "gilt",
-          "raw": "gilte"
+          "ref": "gilt"
         },
         {
           "d": "counterfeit / imitation",
@@ -228463,7 +228720,7 @@
         },
         {
           "d": "for ships",
-          "raw": "pro navibus"
+          "ref": "pro navibus"
         },
         {
           "d": "meaning uncertain (fire?)",
@@ -228476,10 +228733,6 @@
         {
           "d": "full",
           "ref": "full"
-        },
-        {
-          "d": "a certain quantity",
-          "raw": "sertayne"
         },
         {
           "d": "broken",
@@ -228516,10 +228769,6 @@
         {
           "raw": "bord|borde",
           "d": "meaning uncertain"
-        },
-        {
-          "raw": "beddes",
-          "d": "glass beads"
         }
       ],
       "x": [],
@@ -228873,6 +229122,36 @@
             43
           ],
           "w": 0
+        },
+        {
+          "t": "mydle good",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "mydel good",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "mydill good",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "mydle gudde",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "midle goodes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "midle good",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -229105,7 +229384,11 @@
           "ref": "single"
         },
         {
-          "raw": "lynnen|lynyn",
+          "raw": "lynyn",
+          "d": "made of linen cloth"
+        },
+        {
+          "ref": "linen",
           "d": "made of linen cloth"
         },
         {
@@ -230176,6 +230459,36 @@
         },
         {
           "t": "unnyon seede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "oynet sede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "onyon sedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "onyon seede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "onyon seedes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "onyet seede",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "ounyan sede",
           "s": [],
           "w": 0
         }
@@ -232548,7 +232861,7 @@
         },
         {
           "d": "Prussian purse",
-          "raw": "prus"
+          "ref": "prussia"
         },
         {
           "d": "small",
@@ -232855,9 +233168,6 @@
         {
           "d": "green pea",
           "ref": "green"
-        },
-        {
-          "raw": "e"
         }
       ],
       "x": [],
@@ -233237,7 +233547,7 @@
         },
         {
           "d": "for archers",
-          "raw": "pro bowers"
+          "ref": "archer"
         },
         {
           "d": "for gloves",
@@ -233372,7 +233682,7 @@
         },
         {
           "d": "of Scottish origin",
-          "raw": "scocie"
+          "ref": "scocie"
         },
         {
           "d": "taken in season",
@@ -238333,7 +238643,7 @@
         },
         {
           "d": "black shirt (OED raven n.1 (a.) 4)",
-          "raw": "reven"
+          "ref": "black"
         },
         {
           "d": "",
@@ -239988,7 +240298,7 @@
         },
         {
           "d": "for making knife handles (knife scales)",
-          "raw": "pro cultellis"
+          "ref": "pro cultellis"
         }
       ],
       "x": [],
@@ -241006,10 +241316,6 @@
         {
           "d": "of Prussian manufacture",
           "ref": "prussia"
-        },
-        {
-          "d": "",
-          "raw": "materos"
         },
         {
           "d": "bleached",
@@ -242304,9 +242610,6 @@
         {
           "d": "",
           "ref": "ferri"
-        },
-        {
-          "raw": "yren"
         }
       ],
       "x": [],
@@ -242508,6 +242811,36 @@
           "s": [
             6
           ],
+          "w": 0
+        },
+        {
+          "t": "stirop yrens",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stirop yren",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "styrop yrens",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "styrop yren",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stirrup irons",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "stirrup iron",
+          "s": [],
           "w": 0
         }
       ],
@@ -243540,16 +243873,12 @@
           "ref": "foxcase"
         },
         {
-          "d": "(gaming) men - see tablemen",
-          "raw": "meynee"
-        },
-        {
           "raw": "cum ymagine|cum ymaginibus|cum parvis ymaginibus|cum parva ymagine|cum imagine|images|imagery",
           "d": "with a (painted) image; a votive tablet"
         },
         {
-          "raw": "de plastre",
-          "d": "of alabaster"
+          "d": "of alabaster",
+          "ref": "de plaster"
         }
       ],
       "related": [
@@ -244534,6 +244863,41 @@
           "s": [
             4
           ],
+          "w": 0
+        },
+        {
+          "t": "tennes balles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tennes balle",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tenes ballis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tenes bawles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tennis bawles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tennis balles",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "tennys ballys",
+          "s": [],
           "w": 0
         }
       ],
@@ -247211,7 +247575,11 @@
         },
         {
           "d": "small cut pieces",
-          "raw": "parve pecie scisse|pecie parve scisse|pecie scisse|in peciis"
+          "raw": "parve pecie scisse|pecie parve scisse|pecie scisse"
+        },
+        {
+          "ref": "in peciis",
+          "d": "small cut pieces"
         },
         {
           "d": "and of oxen",
@@ -248904,6 +249272,31 @@
             11
           ],
           "w": 0
+        },
+        {
+          "t": "wymbles yrnes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wymbelle yrons",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wymbelle yrens",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wymbulle yrens",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "wymbelle yron",
+          "s": [],
+          "w": 0
         }
       ],
       "d": "the iron part / bit of an instrument for boring (a gimlet, auger or brace) (OED s.v. wimble).",
@@ -249266,12 +249659,7 @@
         }
       ],
       "d": "an astringent bole, of fatty consistence and reddish colour, obtained from Lemnos; formerly esteemed as a medicine and antidote; sphragide, also known as terra Lemnia (OED s.v. terra sigillata)",
-      "q": [
-        {
-          "d": "sealed (terra sigillata)",
-          "raw": "sigillata"
-        }
-      ],
+      "q": [],
       "aat": [
         {
           "id": "300404880",
@@ -249692,7 +250080,7 @@
         },
         {
           "d": "of St John the Evangelist",
-          "raw": "sancti johannis evangeliste"
+          "ref": "sancti johannis evangeliste"
         },
         {
           "d": "of Cyprus manufacture",
@@ -249717,7 +250105,7 @@
           "d": "of alabaster"
         },
         {
-          "raw": "de plastre|of plaster|playster de parice|de plaustro",
+          "raw": "of plaster|playster de parice|de plaustro",
           "d": "of plaster (of Paris)"
         },
         {
@@ -249912,7 +250300,7 @@
       "q": [
         {
           "d": "moldy, moist and fetid",
-          "raw": "musty"
+          "ref": "musty"
         },
         {
           "d": "meal consisting of mixed grains",
@@ -251308,6 +251696,31 @@
         },
         {
           "t": "pomis granatis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pomis garnettis",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pomis garnette",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pomes garnades",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pomorum granatorum",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "pomergarnates",
           "s": [],
           "w": 0
         }
@@ -256437,6 +256850,21 @@
             18
           ],
           "w": 0
+        },
+        {
+          "t": "persour yrens",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "persour yren",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "piercer irons",
+          "s": [],
+          "w": 0
         }
       ],
       "aat": [
@@ -257402,7 +257830,7 @@
         },
         {
           "d": "altar table (see also tabyl pro altare)",
-          "raw": "pro alter|pro altare|de ligno pro altare|depicta pro uno altari"
+          "raw": "pro altare|de ligno pro altare|depicta pro uno altari"
         },
         {
           "ref": "altar",
@@ -258172,7 +258600,7 @@
         },
         {
           "d": "old",
-          "raw": "owld"
+          "ref": "old"
         }
       ],
       "x": [],
@@ -260578,7 +261006,7 @@
         },
         {
           "d": "for painters",
-          "raw": "pro pictoribus"
+          "ref": "pro pictoribus"
         },
         {
           "d": "for tailors",
@@ -266996,6 +267424,53 @@
       "related": [
         "budge"
       ]
+    },
+    "waterlaken": {
+      "d": "Type of cloth with an unknown localisation.",
+      "f": [
+        {
+          "t": "waterlaken",
+          "s": [],
+          "w": 1
+        }
+      ],
+      "sinceLeftovers": true
+    },
+    "hand basket": {
+      "f": [
+        {
+          "t": "hand basket",
+          "s": [],
+          "w": 1
+        },
+        {
+          "t": "hand baskett",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "hand baskettes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "hand basketes",
+          "s": [],
+          "w": 0
+        },
+        {
+          "t": "hande baskettes",
+          "s": [],
+          "w": 0
+        }
+      ],
+      "d": "A basket small enough to be carried in the hand, as distinct from the larger baskets used as containers; sold by the dozen.",
+      "q": [],
+      "x": [],
+      "groups": [
+        "Containers & vessels"
+      ],
+      "sinceLeftovers": true
     }
   },
   "qa_identifiers": {
