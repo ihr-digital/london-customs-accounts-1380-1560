@@ -15,15 +15,15 @@ visualisations.
 
 | Resource | Count |
 |---|---|
-| Ladings | 33,742 across 46 account-book files (Volumes I–IV) |
-| Set aside, not parsed | 8,142 paragraphs that are not cargo records (statements of account, editorial notes, fragments) |
-| Glossary concepts | 2,453, attested by 19,424 spellings, in 35 AAT-derived groupings |
-| Distinct forename spellings | 5,474 in the published annotations (22 September) |
-| Distinct surname spellings | 36,118 in the published annotations (22 September) |
-| Cargos | 215,810, carrying 321,170 commodity rows |
-| Person mentions | 248,475 (22 September); persons now in 120,099 groups |
+| Ladings | 34,702 across 47 account-book files (references I-4 to IV-26), including IV-26, the butler's accounts of the New Customs on alien wine, 1378–1487 |
+| Set aside, not parsed | 8,871 paragraphs that are not cargo records (statements of account, editorial notes, fragments) |
+| Glossary concepts | 2,474, attested by 19,938 spellings, in 35 subject groupings (see [Commodity Groupings](commodity-groupings.md)) |
+| Distinct forename spellings | 5,702 in the annotated cargos |
+| Distinct surname spellings | 37,191 in the annotated cargos |
+| Cargos | 216,794, carrying about 320,500 commodity rows |
+| Person groups | 121,101 (exact name within a temporal window, plus the merchants of the 16th-century "in navi" cargos) |
 
-Measured from the published data on 30 September 2026, except where a row says otherwise. The ladings and cargos rose on 30 September when about 3,800 cargos the transcription parser had silently dropped were restored (see the tagging plan); the person groups rose when the merchants and shipmasters in them, and in the 16th-century "in navi" cargos, were given person records.
+Measured from the committed data files on 17 November 2026: the lading files (`docs/data/ladings/`), the discarded paragraphs (`docs/data/discarded/`), the glossary (`docs/data/glossary_data.json`), the cargo records (`docs/data/records/`) and the person index (`docs/data/persons.json.gz`). The cargo and lading counts include about 3,800 cargos the transcription parser had silently dropped and that were restored on 30 September 2026. The figures change as the edition is corrected.
 
 ## Using the site
 
@@ -36,8 +36,11 @@ Measured from the published data on 30 September 2026, except where a row says o
 
 ## What's in the rest of this documentation
 
-- **[Pipeline](pipeline.md)** — the Python scripts that turn Word documents into JSON, in run order.
-- **[Glossary Editor](glossary-editor.md)** — the primary daily-use curation tool for the commodity glossary.
+- **[Pipeline](pipeline.md)** — the Python scripts that turn Word documents (and, for IV-26, a PDF) into JSON, in run order.
+- **[Concept, Qualifier & Leftover Review](concept-review-tool.md)** — the live curation tool for the commodity glossary. (The older [Glossary Editor](glossary-editor.md) is retired; its page is kept for reference.)
+- **[Commodity Groupings](commodity-groupings.md)** and **[Rationalising the Qualifiers](qualifier-rationalisation.md)** — how concepts are grouped and how qualifiers are being controlled; **[Why Glossary Curation Is Slow](glossary-curation-complexity.md)** explains the effort involved.
 - **[Name Matching](name-matching.md)** — how forenames, surnames, and persons are clustered and reconciled.
-- **[Data Model](data-model.md)** — entry fields, qualifier structure, external identifier conventions.
+- **[The Editorial Indices](editorial-index-rebuild.md)** — how the editors' printed indices were turned into the place and ship gazetteer.
+- **[Data Model](data-model.md)** — repository layout, glossary entry fields, qualifier structure, cargo records, external identifier conventions.
 - **[Linked Data API](linked-data.md)** — JSON-LD output, namespaces, and per-entity endpoints.
+- **[Editing these pages](contributing.md)** — for project staff.

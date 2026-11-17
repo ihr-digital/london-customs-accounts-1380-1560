@@ -1,12 +1,13 @@
 # Glossary Curation
 
-> **Where things stand (June 2026)**
+> **Where things stand** (written June 2026; the counts of concepts, forms and cargos
+> refreshed on 17 November 2026, the coverage percentage not)
 >
-> *Done so far.* The glossary has been consolidated into ~2,400 concepts, each
+> *Done so far.* The glossary has been consolidated into 2,474 concepts, each
 > with its attested spellings gathered as forms and tagged by source volume.
 > Concepts are being aligned to the Getty AAT controlled vocabulary and grouped
 > into AAT-derived subject groupings (which supersede the older hand-assigned
-> categories). The whole corpus of ~210,000 cargo descriptions has been
+> categories). The whole corpus of 216,794 cargos has been
 > automatically annotated against the glossary — commodities, units/containers
 > and qualifiers tagged and linked back to concepts — and is browsable in the
 > public glossary and the cargo explorer.
@@ -261,9 +262,10 @@ Taking the "pelts" concept from raw to clean involved, in sequence:
 6. finally merging a near-duplicate parent concept and re-keying the result,
    then confirming no source volume had been lost anywhere.
 
-That is *one* concept family. The glossary holds 3,333 headwords (7,387
-including variant forms) across 22 commodity categories. The arithmetic of
-why this takes time is not complicated.
+That is *one* concept family. The glossary holds 2,474 concepts (19,938
+attested spellings between them) in 35 subject groupings, after the
+consolidation that this note describes. The arithmetic of why this takes time
+is not complicated.
 
 ## What it means for planning
 
@@ -300,7 +302,7 @@ companion note *Commodity Groupings* describes the scheme in full.
 ### Reading the groupings back into the accounts
 
 The point of a clean, AAT-aligned glossary is to **annotate the cargo records**:
-to recognise, in 212,000 cargo descriptions, which words name a commodity, which
+to recognise, in some 217,000 cargos, which words name a commodity, which
 name a unit or package, and which are qualifiers (colour, origin, treatment,
 quality). This is hard for the same reasons the entries were hard — the same
 spelling appears in dozens of forms; qualifiers pile up in any order and on
@@ -328,9 +330,9 @@ is identical; the surrounding commodities tip the balance. This is exactly the
 kind of judgement the cohesion check is meant to make automatically, and
 spot-testing it on real cargos is part of the routine adjustment work.
 
-Done this way the matcher accounts for around 92% of the content words across
-the whole corpus — some 899,000 of 977,000 — and fully annotates nearly three
-cargos in every four. (Coverage runs higher still in the earlier, more
+Done this way the matcher accounted (when last measured, in June 2026) for around 92% of
+the content words across the whole corpus — some 899,000 of 977,000 — and fully
+annotated nearly three cargos in every four. (Coverage runs higher still in the earlier, more
 formulaic volumes.) The remaining words are where the scholarship concentrates.
 
 ### Closing the gap: reviewing the near-misses

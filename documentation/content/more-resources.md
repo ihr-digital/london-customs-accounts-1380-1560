@@ -1,14 +1,16 @@
 # The More menu
 
-Four companion resources, each opening in its own page, plus this documentation.
+Four companion resources, each opening in its own page, plus this documentation
+and a Getting Started guide.
 
 ## Glossary
 
-The commodity glossary: **3,333 headwords** (7,387 including variant forms)
-across 22 categories.
+The commodity glossary: **2,474 concepts**, with 19,938 attested spellings
+(forms) between them, in 35 subject groupings.
 
 - **Search** terms, variant forms, or descriptions.
-- **Filter by grouping** to see one commodity family at a time.
+- **Filter by grouping** to see one commodity family at a time (the groupings
+  are described in [Commodity Groupings](commodity-groupings.md)).
 - **Grouping Overview** — what each family contains.
 - **Temporal Analysis** — how a commodity's appearances are distributed over time.
 - **Grouping Relationships** — how families relate to one another.

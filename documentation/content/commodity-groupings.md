@@ -4,9 +4,9 @@ A briefing note on how the glossary's commodities are sorted into broad
 subject groupings — what the groupings are, how they are derived, and why
 they replace the project's original ("Jenks") commodity categories.
 
-The short version: every one of the 2,417 curated commodity concepts now
-carries one or more **groupings** derived automatically from the Getty *Art &
-Architecture Thesaurus* (AAT). A concept can sit in several groupings at once
+The short version: the curated commodity concepts (2,474 at 17 November 2026; all but
+four carry a grouping) now each carry one or more **groupings** derived automatically
+from the Getty *Art & Architecture Thesaurus* (AAT). A concept can sit in several groupings at once
 (a metal cooking-pot is both *Metals* and *Containers*), and the groupings are
 computed from each concept's AAT ancestry rather than assigned by hand. This
 gives a consistent, vocabulary-aligned, multi-faceted way to browse and
@@ -15,7 +15,10 @@ analyse the glossary that the older flat categories could not.
 ## What a grouping is
 
 A grouping is a coarse subject heading — *Textiles & cloth*, *Weapons &
-armour*, *Medicines & drugs*, and so on. There are 33 of them. They are not
+armour*, *Medicines & drugs*, and so on. There are 33 AAT-derived groupings (listed
+below); the file currently also holds two stray strings that no AAT rule produces
+(*Food, drink & provisions* on four entries, *Metals & metalware* on one), so a count
+of the distinct values in `groups` gives 35. They are not
 stored as free choices: each grouping is defined by one or more **root
 concepts** in the Getty AAT, and a glossary concept belongs to the grouping
 whenever one of those roots appears among its AAT ancestors.
@@ -37,8 +40,8 @@ grouping's roots?", the groupings are:
   vocabulary, so the dataset can be aligned with other AAT-indexed resources.
 
 :::{note}
-The groupings are *facet tags*, not a partition. 645 of the 2,417 concepts
-(27%) belong to two or more groupings; the average is 1.3 groupings per
+The groupings are *facet tags*, not a partition. 651 of the 2,474 concepts
+(26%) belong to two or more groupings; the average is 1.3 groupings per
 concept.
 :::
 
@@ -60,7 +63,7 @@ multi-valued. It is in three other respects:
    alone held 707 entries (nearly a quarter of the glossary) and `household
    goods` 509, while `wine` held 2 and `nuts` 7. The big buckets were too
    coarse to support analysis; the catch-alls absorbed anything awkward. The
-   AAT groupings, by contrast, cover every concept (100%), with an explicit,
+   AAT groupings, by contrast, cover (nearly) every concept, with an explicit,
    honestly-labelled *Unidentified* grouping for the curation backlog rather
    than an `unknown` bucket mixed in among the subject headings.
 
@@ -85,31 +88,31 @@ index.
 
 ## The 33 groupings
 
-Sizes count multi-membership (a concept in two groupings is counted in both).
+Sizes count multi-membership (a concept in two groupings is counted in both) and are measured from `glossary_data.json` on 17 November 2026.
 "Anchored on" lists the principal AAT root concepts that define each grouping.
 
 | Grouping | Concepts | Anchored on (AAT roots) |
 |---|---:|---|
-| Tools & equipment | 315 | equipment; tools |
-| Textiles & cloth | 221 | textile materials; cloth; fibre & fibre products |
-| Units, weights & measures | 217 | weights and measures; size/dimensions |
-| Clothing, costume & accessories | 212 | costume; costume components; personal accessories |
-| Containers & vessels | 189 | containers (receptacles); container components |
-| Food, spices & comestibles | 184 | food; spices; beverages; herbs; grain; seed |
-| Weapons & armour | 149 | edged/projectile/firearm/percussive weapons; armor; components |
+| Tools & equipment | 317 | equipment; tools |
+| Textiles & cloth | 241 | textile materials; cloth; fibre & fibre products |
+| Units, weights & measures | 224 | weights and measures; size/dimensions |
+| Clothing, costume & accessories | 214 | costume; costume components; personal accessories |
+| Containers & vessels | 191 | containers (receptacles); container components |
+| Food, spices & comestibles | 187 | food; spices; beverages; herbs; grain; seed |
+| Weapons & armour | 152 | edged/projectile/firearm/percussive weapons; armor; components |
 | Plants & plant products | 124 | plant material; plant components; nonwoody plants |
-| Minerals, stone & chemicals | 117 | mineral; inorganic material; rock |
-| Furnishings & household goods | 108 | furnishings (works) |
-| Furs, skins & leather | 107 | pelts; fur; hide; skin; leather |
+| Minerals, stone & chemicals | 116 | mineral; inorganic material; rock |
+| Furnishings & household goods | 111 | furnishings (works) |
+| Furs, skins & leather | 115 | pelts; fur; hide; skin; leather |
 | Medicines & drugs | 83 | medicines (material); drugs; ointment |
 | Visual works & writing | 72 | visual works; information artifacts |
-| Fish | 67 | fish (meat); fish (animals) |
-| Metals & ores (material) | 65 | metal |
-| Live animals, birds & livestock | 60 | Vertebrata; Aves; Mammalia; living organisms |
-| Hardware & fasteners | 56 | fasteners |
-| Animal materials (horn, hair, bone) | 54 | horn; hair; keratinous material; bone |
+| Fish | 70 | fish (meat); fish (animals) |
+| Metals & ores (material) | 64 | metal |
+| Live animals, birds & livestock | 63 | Vertebrata; Aves; Mammalia; living organisms |
+| Hardware & fasteners | 58 | fasteners |
+| Animal materials (horn, hair, bone) | 57 | horn; hair; keratinous material; bone |
 | Wood & wood products | 53 | wood (plant material); boards |
-| Dyestuffs, pigments & mordants | 49 | dye; colorant; pigments; mordant |
+| Dyestuffs, pigments & mordants | 51 | dye; colorant; pigments; mordant |
 | Ecclesiastical & religious objects | 33 | religious/liturgical/devotional objects; ecclesiastical vestments; religious fixtures; incense |
 | Jewellery & precious stones | 31 | gems; gemstone; precious & semiprecious stone; jewelry |
 | Musical instruments | 31 | musical instruments; chordophone/aerophone components; bells |
@@ -122,7 +125,7 @@ Sizes count multi-membership (a concept in two groupings is counted in both).
 | Cosmetics & toiletries | 4 | cosmetics; toiletries; perfume |
 | Transport & vehicles | 3 | vehicles (transportation) |
 | Explosives & gunpowder | 2 | gunpowder; propellant |
-| Unidentified | 412 | unidentified (information indicator) |
+| Unidentified | 406 | unidentified (information indicator) |
 
 The smallest groupings (Building materials, Cosmetics, Transport, Explosives,
 Naval stores) are deliberately fine-grained. They were added so that a handful
@@ -157,9 +160,9 @@ make the result accurate:
   narrower roots (*ecclesiastical vestments*, *liturgical objects*, *incense*)
   so the grouping stays clean.
 
-A small number of concepts (about 200) whose AAT identifier does not descend
+A number of concepts whose AAT identifier does not descend
 from any grouping root are assigned to their nearest grouping by hand. The
-*Unidentified* grouping (412 concepts) is not a failure of the scheme: these
+*Unidentified* grouping (406 concepts) is not a failure of the scheme: these
 carry the AAT placeholder *unidentified (information indicator)* and represent
 the precision-curation backlog — commodities not yet pinned to a specific
 concept.
@@ -169,19 +172,21 @@ concept.
 - **On each glossary entry** — a `groups` field listing the entry's groupings,
   in `docs/data/glossary_data.json`. The self-describing `key_mappings` block
   records `groups` → `groupings`.
-- **As a standalone map** — `AAT_GROUPING_MAP.json` holds the full
+- **As a standalone map** — `AAT_GROUPING_MAP.json` (at the repository root) holds the
   `concept → [groupings]` mapping plus a `_meta` block documenting the model
   and every grouping's AAT root and exclude ids, so the scheme is reproducible.
+  The file was last regenerated in June 2026 (2,417 concepts); the `groups` field
+  on the entries is the authority, and the map should be regenerated after AAT edits.
 - **In the Linked Data API** — each commodity's JSON-LD document carries its
   groupings under `groups` (`mlca:grouping`), generated by
   `process/generate_jsonld.py`.
 
 The groupings are the project's primary subject index, replacing the legacy
-categories throughout the public glossary and the curation editor. Because they
-are derived rather than authored, neither tool lets a curator edit grouping
-membership: the public glossary and the editor both *display* and *filter* by
-groupings, but the membership itself is recomputed from the AAT ancestry on the
-repository (re-run after AAT-curation passes).
+categories throughout the public glossary, the main site's filters and the curation
+tool. Because they are derived rather than authored, no tool lets a curator edit
+grouping membership: the public glossary, the main site and the concept review tool
+*display* and *filter* by groupings, but the membership itself is recomputed from
+the AAT ancestry on the repository (re-run after AAT-curation passes).
 
 The grouping set is intended to align, in due course, with HECTOR (Historical
 Economic Commodities: Terminologies, Ontologies, & Rates), the project's

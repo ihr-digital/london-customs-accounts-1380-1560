@@ -48,6 +48,14 @@ your change and wait a couple of minutes for the site to rebuild.
 That's it — within a couple of minutes the site rebuilds and your edit
 goes live.
 
+:::{note}
+The build treats Sphinx **warnings as errors** (`sphinx-build -W`), so a broken
+internal link or anchor, a malformed table, or a new page missing from the
+`toctree` (see below) stops the whole site from being republished until it is
+fixed. If your edit does not appear, check the workflow run's log on the
+repository's *Actions* tab.
+:::
+
 ## Adding a new page
 
 1. Open the
@@ -92,7 +100,9 @@ The GitHub Pages workflow then:
 
 1. Runs **pandoc** over each Word document.
 2. Writes the converted Markdown to
-   `documentation/content/<filename>.md` (lower-cased, hyphenated).
+   `documentation/content/<filename>.md` (lower-cased, spaces turned into hyphens,
+any character other than letters, digits and hyphens dropped: `Customs Officers.docx`
+becomes `customs-officers.md`, but `customs_officers.docx` becomes `customsofficers.md`).
 3. Extracts any embedded images into
    `documentation/_static/media/<filename>/`.
 4. Deletes the original `.docx` from `_drafts/`.

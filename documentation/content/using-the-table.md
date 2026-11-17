@@ -121,8 +121,8 @@ it. ↑/↓ move, **Enter** chooses, **Esc** closes.
 **Years** — the two selectors set the range. The arrow between them reverses the
 sort order.
 
-**Accounts** — wool, tunnage, petty, miscellaneous, and beneath them imports,
-exports, or both.
+**Accounts** — wool, tunnage, petty, miscellaneous and wine (the butler's accounts
+of the customs on alien wine, IV-26), and beneath them imports, exports, or both.
 
 ### Advanced
 

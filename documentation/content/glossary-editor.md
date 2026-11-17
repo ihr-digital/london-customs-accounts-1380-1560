@@ -8,13 +8,22 @@
 > reference.
 
 The glossary editor (`glossary-editor.html`) was the primary daily-use
-curation tool for the commodity glossary (~3,333 headwords). It is a
+curation tool for the commodity glossary (about 3,333 headwords in the pre-clean
+glossary it edited; the current glossary holds 2,474 concepts). It was a
 self-contained SPA persisting state in IndexedDB (via Dexie) and syncing to
-GitHub via API.
+GitHub via API. Its script, `docs/js/glossary-editor.js`, and stylesheet are
+now dead code that nothing loads: read them for how a mechanism used to work,
+but never edit them expecting an effect. The AAT picker (`js/aat-picker.js`)
+and its IndexedDB cache (`js/aat-db.js`) are still live, in the concept review
+tool. The current entry model is in [Data Model](data-model.md#glossary-entries).
 
-## Entry data model
+## Entry data model (as the retired editor saw it)
 
-Each glossary entry (keyed by headword in `state.glossary.entries`) has:
+Each glossary entry (keyed by headword in `state.glossary.entries`) had the fields below.
+Since then the legacy `c` categories have been removed from every entry (replaced by
+AAT-derived `groups`), the per-form `v` counts and most `p` phonetics have gone, and `q`
+qualifiers now reference a shared store (`{ref}`, `{tokens}`, `{raw}`); the current model
+is in [Data Model](data-model.md#glossary-entries).
 
 | Field | Type | Description |
 |---|---|---|
@@ -145,7 +154,9 @@ categories" toggle), and qualifier-type filter.
 
 ## JSON-LD output
 
-`generate_jsonld.py` emits per-entry JSON-LD documents with:
+`generate_jsonld.py` emits per-entry JSON-LD documents (the current list, including the
+SKOS mapping relations and the withheld uncertain/suggested identifiers, is on the
+[Linked Data API](linked-data.md) page). At the time of the editor they carried:
 
 - AAT commodity types as AAT URIs
 - Materials as AAT URIs under `schema:material`

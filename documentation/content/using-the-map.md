@@ -3,7 +3,8 @@
 **[Open the Map](https://ihr-digital.github.io/london-customs-accounts-1380-1560/?view=map)** — opens in the site itself.
 
 The Map shows the **corpus gazetteer**: every place the accounts name that can
-be placed — 235 of them — drawn from the editors' own indices.
+be placed (249 entries in the gazetteer file, London included) — drawn from the editors' own indices
+(see [The Editorial Indices](editorial-index-rebuild.md)).
 
 ## The key
 
@@ -16,8 +17,8 @@ the current zoom.
 | Layer | |
 |---|---|
 | **London** | a crown, always shown. Every voyage in the corpus touches it, so it has no switch. |
-| **Places named in the accounts** | one disc per place, **sized by how often the accounts name it**. Calais is named 1,970 times; most places once or twice. |
-| **Regions named in the accounts** | sixteen rows are areas rather than ports, drawn as outlines. Where possible the outline is **dated to the period** — the Kingdom of Portugal 1415–1801, not modern Portugal. |
+| **Places named in the accounts** | one disc per place, **sized by how often the accounts name it**. Calais is named about 1,970 times; most places once or twice. |
+| **Regions named in the accounts** | rows that are areas rather than ports (eight at present) are drawn as outlines. Each outline is **dated to the period** and shown only where a boundary overlaps the place's own attested years — the Kingdom of Portugal 1415–1801, not modern Portugal. |
 | **Customs hierarchy, 1565** | a later administrative geography: head ports (drawn larger), the ports belonging to them and their creeks, with a dashed arc from each place to its head, as the Exchequer commissioners returned them (TNA E 159/350). The returns as they survive do not reach Wales, and Chester's members are not among them; the rest of the coast is covered in full. **Off by default.** |
 | **Inland navigation** | navigable waterways. |
 | **Water, c.1500** | the coastline and inland water of the period. |

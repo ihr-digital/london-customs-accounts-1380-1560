@@ -1,9 +1,9 @@
 # Concept, Qualifier & Leftover Review Tool
 
-`glossary-concepts.html` is a focused, **restricted** review tool — a companion to
-the full [Glossary Editor](glossary-editor.md). Where the full editor exposes
-every field, this one deliberately narrows the surface to the high-value review
-tasks and is safe to hand to collaborators. A segmented control in the header
+`glossary-concepts.html` is the **live** glossary curation tool. It replaced the
+full [Glossary Editor](glossary-editor.md), which is retired. Where that editor
+exposed every field, this one deliberately narrows the surface to the high-value
+review tasks and is safe to hand to collaborators. A segmented control in the header
 switches it between three modes — **Concepts**, **Qualifiers** and
 **Leftovers** — that share one list pane, one detail pane, and one GitHub push.
 
@@ -52,7 +52,7 @@ tagged with it. The tool loads a committed count file
 (`docs/data/concept_attestation.json`, produced by
 `python -m process.commodity_parser.attestation`) so attestation is known
 independently of whether this browser has cached any cargos. In Concepts mode a
-**Hide unattested** filter (defaulting **on**) removes the ~200 reference-only
+**Hide unattested** filter (defaulting **on**) removes the reference-only
 headwords that never occur as goods, and unattested concepts carry a grey **∅**
 badge when shown. The Sample-cargos panel uses the same data to distinguish a
 genuinely unattested concept ("no cargo in the corpus is tagged with this
@@ -75,7 +75,7 @@ straight into the text.
 Edits the canonical qualifier store (`docs/data/qualifiers.json`) produced by the
 [qualifier rationalisation](qualifier-rationalisation.md). For each canonical:
 its **label** (chosen from the attested forms, or a new one), its **kind**
-(general / place / occupation), its **attested forms** (added/removed as chips),
+(general / place / occupation, stored as `lang`: `mul` / `geo` / `occ`), its **attested forms** (added/removed as chips),
 its **AAT concept** (reusing the picker), its **geographic identifier** (shown
 with point coordinates; removable), and a **description** with the same toolset as
 Concepts. Up to ten **sample cargos** are shown with the qualifier highlighted.

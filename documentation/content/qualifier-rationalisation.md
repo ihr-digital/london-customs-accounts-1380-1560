@@ -128,8 +128,9 @@ The first themed batches were scoped to **Textiles & cloth**; the sweep above
 extended the rationalisation across **all** commodity categories. The all-category
 proposer clusters proved noticeably noisier — several garbage super-clusters
 (*brok* = broken+skin+leather, *kors* = coarse+large+weak+refuse, *rau* =
-raw+rough+otter) had to be caught and unpicked by hand. The vocabulary now stands
-at **~384 canonicals**; the remaining ~430 single-attestation one-offs are left to
+raw+rough+otter) had to be caught and unpicked by hand. At that stage the vocabulary
+stood at **~384 canonicals** (later batches have taken `docs/data/qualifiers.json` to 654
+at 17 November 2026); the remaining ~430 single-attestation one-offs were left to
 migrate as raw forms rather than forced into false lemmas.
 
 ### Migration and prune
@@ -149,6 +150,9 @@ old annotations under-counted qualifiers — the very thing this work fixes. Run
 spellings** — speculative or never-reached forms (*childrens cappes*, *cloth of*,
 *of the dedly syns*) that match no cargo — while keeping the 947 attested raw
 survivors. Because they never matched, no further reannotation was needed.
+
+(These are the counts at migration. On 17 November 2026 the glossary's `q` lists held
+4,546 `{ref}`, 821 `{tokens}` and 1,303 `{raw}` items across 1,005 entries.)
 
 Finally, every consumer was repointed through a single shared resolver
 (`docs/js/qualifiers.js` for the browser, an equivalent reader in
@@ -175,13 +179,15 @@ candidate's coordinates and looking at where the dot actually landed exposed
 (and, for historical territories, to the period polity: the *County* of Holland,
 the *Duchy* of Brabant, the *County* of Flanders, the *Kingdom* of England).
 
-Geometry is collected into a single file,
-`docs/data/qualifier_places.geojson`: a **point** for every place (Wikidata
+Geometry was first collected into a single file,
+`docs/data/qualifier_places.geojson` (since removed when the map was rebuilt on a
+new basemap; the position now lives on each canonical's `geo` as a `point`, a
+`hasPolygon` flag and, where there is one, an `osm_relation` id): a **point** for every place (Wikidata
 `P625`, with the WHG centroid as a fallback) and a **polygon** wherever the place
 carries an OpenStreetMap relation (Wikidata `P402`, fetched by exact id so there
 is no name-ambiguity). Modern regions and towns yield polygons; the older
 polities (which have no OSM relation) keep a representative point. 81 of the 99
-places carry a polygon.
+places carried a polygon.
 
 ```{image} ../_static/qualifier_places_map.png
 :alt: Map of the provenance places referenced by glossary qualifiers

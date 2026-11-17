@@ -5,13 +5,14 @@ here, or press **Tour** in the site's top right-hand corner for a two-minute gui
 
 This page is for researchers who want to **find things in the customs accounts**: a
 commodity, a merchant, goods from a place, a period. Each section is one task, done in a
-few steps. Counts quoted below were true on 29 September 2026; they change as the edition
-is corrected.
+few steps. The totals of ladings and cargos quoted here were measured on 17 November 2026;
+the counts in the example searches (for instance *wax · 957 ladings*) were measured on
+29 September 2026 and will have drifted. All of them change as the edition is corrected.
 
 ## Before you start: the first visit
 
-The first time you open the site, your browser downloads the whole corpus (about 33,500
-ladings and 212,000 cargos). This takes **a few minutes**; the tour runs meanwhile.
+The first time you open the site, your browser downloads the whole corpus (about 34,700
+ladings and 216,800 cargos). This takes **a few minutes**; the tour runs meanwhile.
 It happens once: later visits start at once, and the site then works without a
 connection. If the table stays empty, wait for the progress bar to finish.
 
@@ -95,8 +96,8 @@ At the head of the table:
 
 - **Years** — choose a first and last customs year. Ladings the accounts leave undated
   are held back; a note under the table says how many, and shows them if you ask.
-- **Accounts** — wool, tunnage, petty, miscellaneous; and beneath them, imports,
-  exports, or both.
+- **Accounts** — wool, tunnage, petty, miscellaneous and wine (the butler's accounts of
+  the customs on alien wine, IV-26); and beneath them, imports, exports, or both.
 - **Kinds of goods** — broad groups (textiles, spices, metals…), drawn from the Getty Art
   & Architecture Thesaurus: search for them in the box, or browse them all under
   **Advanced**.

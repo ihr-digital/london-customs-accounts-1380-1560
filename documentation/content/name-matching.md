@@ -1,16 +1,18 @@
 # Name Matching
 
 Name matching reconciles variant spellings of forenames, surnames, and full
-persons across 33,742 ladings. The current architecture is the result of
+persons across the 34,702 ladings of the edition. The current architecture is the result of
 thirteen experiments — see `NAME_CLUSTERING_STRATEGIES.md` in the repository
 for the full history.
 
 ## Architecture overview
 
-- **Forenames:** 5,632 unique forms → 1,283 groups via DMNES seeds +
-  Symphonym + FAISS + logistic regression.
-- **Surnames:** 37,693 forms with 245,712 scored neighbour edges; three FAISS
-  indices (plain, patronymic, particle-prefixed).
+- **Forenames:** 5,702 distinct spellings in the annotated cargos → 1,283
+  curated groups via DMNES seeds + Symphonym + FAISS + logistic regression.
+- **Surnames:** 40,046 forms in the surname graph, with 358,000 scored neighbour
+  edges; three FAISS indices (plain: 31,363 forms; particle-prefixed: 6,481;
+  patronymic: 2,202).
+- **Persons:** 121,101 person groups (`docs/data/persons.json.gz`).
 - **Patronymics** detected by consonant-skeleton suffix `-sn`.
 - **Particle names** detected by regex
   `^(van|de|del|den|der|le|la|atte?)\s+`.
@@ -43,7 +45,13 @@ are formed **automatically** (exact forename + surname + status, split on a
   existing pids are never renumbered.
 - `build_name_index.py` turns the dataset into the browser artefacts
   `name_index.json.gz` (per-group metadata + neighbours) and
-  `name_lading_index.json.gz` (pid → ladings).
+  `name_lading_index.json.gz` (pid → ladings). It then runs `build_person_files.py`,
+  which splits these into what the site actually loads: `persons.json.gz` (every
+  person with their ladings) and `person_neighbours/NNN.json.gz` (each person's
+  top-30 neighbours, sharded by `pid % 256`).
+- To change pids alone on the *committed* ladings, `restamp_person_ids.py`
+  re-stamps them from the dataset and accepts only pid-field changes;
+  `attach_person_ids.py` reads the (possibly stale) `.json` intermediates.
 
 > **Reproducibility caveat.** The dataset
 > `person_reconciliation_dataset_compressed.json[.gz]` is a **local, untracked
@@ -58,10 +66,17 @@ are formed **automatically** (exact forename + surname + status, split on a
 
 - **Epitran** → IPA transcription (lazy-loaded singleton)
 - **PanPhon** → articulatory feature vectors (sparse, 64-dim default)
-- **Symphonym v7** → BiLSTM phonetic embeddings (128-dim), GPU auto-detect
+- **Symphonym** → BiLSTM phonetic embeddings (128-dim). Since 30 October 2026 the
+  name pipeline (surname graph, scorers, person neighbours) embeds with **Symphonym
+  v8**, the ONNX model the browser itself loads (`docs/symphonym/symphonym.onnx`),
+  through `process/symphonym_v8.py`. Before that it ran on the repository's own v7
+  checkpoint (`process/symphonym/`, GPU auto-detect) while the browser could load
+  only v8, so the scorers were being served vectors they were not trained on.
+  `symphonym_v8.py` refuses to run unless the model checksums match and a golden
+  fixture passes; it needs the system `python3` with `onnxruntime` and `anyascii`.
 
-Load via `from process.symphonym import load_embedder` or
-`from process.helpers.phonetic import ...`.
+The v7 loader is still available as `from process.symphonym import load_embedder`;
+the other helpers are in `from process.helpers.phonetic import ...`.
 
 ## What was rejected
 
@@ -76,8 +91,8 @@ arrived at after thirteen experiments. Key rejections:
 - Direct Symphonym cosine thresholding (good recall, poor precision — many
   unrelated names > 0.90)
 
-Superseded scripts were removed: `cluster_persons.py`,
-`label_forename_clusters.py`, `suggest_pairs.py`,
+Superseded scripts were moved out of the pipeline into `process/_archive/`:
+`cluster_persons.py`, `label_forename_clusters.py`, `suggest_pairs.py`,
 `cluster_pairs_from_scorer.py`, `run_pair_clustering_sample.py`,
 `label_name_pairs.py`.
 

@@ -14,9 +14,9 @@ change is measured to be worth.
 `docs/data/index.json` (committed 2025-08-04) held 372 place groups, of which one —
 labelled `Almannia` — held **360 alias forms**: Antwerp, Bristol, Calais, Cologne,
 Danzig, London, Spain and the Tower of London in a single "place", alongside junk
-tokens and one whole cargo line. It is published: `index.json`, `index_places.tsv`
-and `index_ships.tsv` are absent from `TOOL_DATA` in `publish_ihr.py`, so they ship
-to the IHR repo and are served on Pages.
+tokens and one whole cargo line. It was a published artefact: `index.json`,
+`index_places.tsv` and `index_ships.tsv` are listed in `TOOL_DATA` in `publish_ihr.py`,
+so they ship to the IHR repository as well as being served on Pages.
 
 Measured against the corpus, **71.2% of all 6,796 place annotations in lading
 labels resolved into that one bucket.** Coverage to a meaningless answer is not
@@ -98,6 +98,10 @@ against known points: Tower of London TQ 336806 → 51.5085 N, −0.0763 E).
 
 ## What it is worth, measured
 
+The table gives the figures as measured at the rebuild. The IV-26 indices and later
+curation have moved them since: on 17 November 2026 `index.json` held 396 place groups
+and 1,251 ship groups.
+
 | | committed `index.json` | rebuilt |
 |---|---|---|
 | place groups | 372 | 411 |
@@ -144,8 +148,8 @@ existing annotation, not an index problem.
 | `docs/data/index_gazetteer.json` | the merged gazetteer: identifications, grid references, disjunctions, coordinates, volumes, ships |
 | `docs/data/index_places_lp.tsv` | Linked Places TSV for WHG (see below) |
 | `docs/data/index_places.tsv` | the human curation surface, `Merge_Into` column preserved |
-| `docs/data/index_ship_attestations.json` | ship, skipper, home port, pages, per entry — 7,531 entries, 7,474 with a skipper |
-| `docs/data/index_ship_pages.json` | page-level ship/skipper table, 37 volumes — supersedes the four `deindexed.json` |
+| `docs/data/index_ship_attestations.json` | ship, skipper, home port, pages, per entry — 7,531 entries, 7,474 with a skipper at the rebuild; 8,243 and 7,502 on 17 November 2026, after IV-26's ship indices (from the PDF) were added |
+| `docs/data/index_ship_pages.json` | page-level ship/skipper table, 37 volumes at the rebuild (38 now) — supersedes the four `deindexed.json` |
 | `docs/data/index_build_report.json` | everything the build could not do confidently |
 
 Before this, `grep -rn "skipper"` returned only `deindex.py`: skipper names were
@@ -240,10 +244,10 @@ real polygons, the county must be resolved by identifier, never by name.
 
 ## Still open
 
-- **Whether these artefacts should stay published.** `index.json`,
-  `index_places.tsv` and `index_ships.tsv` are served today; the new files are not
-  yet in `TOOL_DATA` either way. That is a decision about what the advisory board
-  should see, not an engineering one.
+- **Whether these artefacts should stay published.** All of the files in the Outputs
+  table are now in `TOOL_DATA` in `publish_ihr.py`, so they are included in the IHR
+  snapshot. Whether the advisory board should see them is a decision about what to
+  show, not an engineering one.
 - **Three place names remain genuinely ambiguous** and are refused rather than
   guessed: `Orewelle` (Orewell/Orwell), `de Port` (Oporto/Porto), and
   `strictus de Marrocke`. They are candidates for the `Merge_Into` column.
