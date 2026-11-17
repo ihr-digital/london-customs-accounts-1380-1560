@@ -35,13 +35,13 @@ Planned contents:
 
 ### Scale of the dataset
 
-Measured from the data published here on 5 October 2026:
+Measured from the data published here on 17 November 2026:
 
-- **33,742** ladings across **46** account-book files (Volumes I–IV), holding **215,810** cargos
-- **320,915** commodity rows in the cargo records, every one carrying a Getty AAT or Wikidata identifier
-- **2,455** glossary concepts, attested by **19,634** spellings, in **35** subject groupings derived from Getty AAT
-- **267,408** person mentions grouped into **120,099** groups for identity matching
-- **40,401** distinct surname spellings and **6,120** distinct forename spellings in the published annotations
+- **34,702** ladings across **47** account-book files (Volumes I–IV, including the 1378–1487 alien-wine accounts), holding **216,794** cargos
+- **320,526** commodity rows in the cargo records, every one carrying a Getty AAT or Wikidata identifier
+- **2,474** glossary concepts, attested by **19,938** spellings, in **35** subject groupings derived from Getty AAT
+- **268,575** person mentions grouped into **121,101** groups for identity matching
+- **40,977** distinct surname spellings and **6,261** distinct forename spellings in the published annotations
 
 ## Project team
 
